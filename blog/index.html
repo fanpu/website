@@ -48,6 +48,11 @@ pagination:
     {% assign categories = post.categories | join: "" %}
 
     <li>
+      <div class="row">
+        <div class="col-sm-6">
+        <img width="100%" class="preview z-depth-1 rounded" src="{{ post.cover | prepend: '/assets/img/posts/' | relative_url }}">
+        </div>
+        <div class="col-sm-6">
       <h3>
         {% if post.redirect == blank %}
           <!-- <a class="post-title" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> -->
@@ -91,6 +96,9 @@ pagination:
               {% endfor %}
           {% endif %}
     </p>
+
+        </div>
+      </div>
     </li>
 
     {% endfor %}

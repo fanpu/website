@@ -12,6 +12,7 @@ group :jekyll_plugins do
     gem 'jekyll-sitemap'
     gem 'jekyll-link-attributes'
     gem 'jekyll-twitter-plugin'
+    gem 'jekyll-toc'
     gem 'jemoji'
     gem 'mini_racer'
     gem 'unicode_utils'

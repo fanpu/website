@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Incoming Linux Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>. <a href='https://www.cs.cmu.edu/'>CMU SCS</a> Class of 2022. Currently located in Pittsburgh, PA, USA. 
+subtitle: Incoming Linux Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>. <a href='https://www.cs.cmu.edu/'>CMU SCS</a> Class of 2022, MSCS Class of 2023. Currently located in Pittsburgh, PA, USA. 
 
 profile:
   align: right
@@ -11,7 +11,7 @@ profile:
   address: >
 
 news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
@@ -29,9 +29,8 @@ work and what guarantees we can extract out of them, borrowing tools from
 theoretical computer science and mathematics.
 My eventual goal is to build a startup
 in AI/ML using the things that I've learnt.
-
 My other academic interests include
-complexity theory and mathematical analysis.
+complexity theory, programming language theory, and mathematics.
 
 In my free time, I enjoy bouldering, running, 
 reading textbooks, watching anime,
@@ -50,6 +49,9 @@ that I have not worked with.
 
 I recently earned a Technician amateur radio license, and my callsign is 
 [KC3UFE](https://www.fccbulletin.com/callsign/?q=KC3UFE).
+
+This blog was originally started on 24 June 2018, although
+it has taken many forms since then.
 
 <!--
 Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.

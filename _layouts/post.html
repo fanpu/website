@@ -13,6 +13,8 @@ layout: default
 </style>
 {% endif %}
 
+{% include scripts/mathjax_macros.html %}
+
 <div class="post">
 
   <header class="post-header">
@@ -39,8 +41,16 @@ layout: default
     </p>
   </header>
 
+  {%- if page.cover %}
+      <img style="width: 100%; height: 400px; object-fit: cover" class="preview z-depth-1 rounded" 
+      src="{{ page.cover | prepend: '/assets/img/posts/' | relative_url }}">
+    <div class="caption">
+        {{ page.cover_description}}
+    </div>
+  {% endif %}
+
   <article class="post-content">
-    {{ content }}
+    {{ content | toc }}
   </article>
 
   {%- if site.disqus_shortname and page.disqus_comments -%}
