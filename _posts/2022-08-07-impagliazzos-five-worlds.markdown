@@ -5,11 +5,18 @@ tags: [theory, code]
 cover: denali.jpg
 cover_preview: denali.avif
 cover_description: Denali National Park, Alaska
+description: >
+    Most people have probably heard of the P = NP? problem in some shape or
+    form, which asks whether the class of languages decidable in deterministic
+    polynomial time is the same as the class of languages decidable in
+    non-deterministic polynomial time. However, there are also
+    several other interesting classes of intermediate possibilities that can arise
+    if it was the case that P != NP, as this post explores.
 class: post-template
 navigation: True
 author: fanpu
 toc: true 
-comments: true
+giscus_comments: true
 ---
 Most people have probably heard of the $$\P = \NP?$$ problem in some shape or
 form, which asks whether the class of languages decidable in deterministic
