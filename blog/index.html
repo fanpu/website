@@ -5,7 +5,7 @@ pagination:
   enabled: true
   collection: posts
   permalink: /page/:num/
-  per_page: 5
+  per_page: 20
   sort_field: date
   sort_reverse: true
   trail:
@@ -49,13 +49,13 @@ pagination:
     {% assign tags = post.tags | join: "" %}
     {% assign categories = post.categories | join: "" %}
 
-    {% assign image_url = post.cover | prepend: '/assets/img/posts/' | relative_url %}
+    {% assign image_url = post.cover_preview | prepend: '/assets/img/posts/' | relative_url %}
 
     <li>
       <div class="row">
         <div class="col-sm-6">
           <a href="{{ post.url | prepend: site.url }}">
-            {% include figure.html path=image_url alt="post.cover" width="100%"
+            {% include figure.html path=image_url width="100%"
             height="240px" class="preview z-depth-1 rounded" %}
           </a>
         <!-- <img 

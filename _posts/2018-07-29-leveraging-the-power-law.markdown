@@ -1,12 +1,23 @@
 ---
 layout: post
-tags: [software engineering, startup, productivity]
-cover: assets/images/posts/drama.avif
+tags: [software engineering, general, startup]
+cover: drama.jpg
+cover_preview: drama.avif
+caption: Carnegie Mellon School of Drama
 class: post-template
 navigation: True
 author: fanpu
 toc: true
 comments: true
+description: >
+    It was three years ago that I was introduced the concept of the "power law"
+    in Peter Thiel's book, Zero to One. Thiel states that "We don't live in a
+    normal world, we live under a power law. Exponential equations describe
+    severely unequal distributions". This, in effect, is very similar to the
+    80/20 rule that I discussed in my previous post, and observations of such a
+    distribution can be found ranging from income distributions to the fact that
+    the best venture capital fund investments grow to a value that eclipses the
+    rest of their portfolios combined. 
 ---
 It was three years ago that I was introduced the concept of the "power law" in Peter Thiel's book, [Zero to One: Notes on Startups, Or How To Build The Future](http://zerotoonebook.com/). Thiel stated that "We don't live in a normal world, we live under a power law. Exponential equations describe severely unequal distributions". This, in effect, is very similar to the 80/20 rule that I discussed in my previous post, and observations of such a distribution can be found ranging from income
 distributions to the fact that the best venture capital fund investments grow to a value that eclipses the rest of their portfolios combined. The power law is extremely unintuitive for humans as we are accustomed to seeing things in a linear fashion. However, we ignore the power law at our own peril. A single outlier performs much better than a large average sample combined, and it is precisely the power law that we must understand in order to unlock this phenomenom. However, I will not go into
@@ -44,7 +55,3 @@ experimenting with different learning methods to see what works best. Personally
 ### In short...
 The effects of compounding are both scary and exciting. Leverage it early and leverage it often, and seek to find ways to increase the exponent so that it compounds ever faster. In the book [Delivering Happiness](http://deliveringhappiness.com/), Zappos CEO Tony Hsieh says "Think about what it means to improve just 1% per day and build upon that every single day. Doing so has a dramatic effect and will make us 37x better, not 365% (3.65x) better, at the end of the year". While 37x might seem
 slightly exaggerated, the effects of compounding cannot be understated. I hope this post has been insightful and I would be glad to hear your comments below!
-
-
-
-

@@ -26,6 +26,7 @@
       {% if include.alt %}alt="{{ include.alt }}"{% endif %} 
       {% if include.title %}title="{{ include.title }}"{% endif %} 
       {% if include.zoomable %}data-zoomable{% endif %}
+      style="object-fit: cover"
       onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
     />
 
