@@ -49,12 +49,19 @@ pagination:
     {% assign tags = post.tags | join: "" %}
     {% assign categories = post.categories | join: "" %}
 
+    {% assign image_url = post.cover | prepend: '/assets/img/posts/' | relative_url %}
+
     <li>
       <div class="row">
         <div class="col-sm-6">
-        <img 
+          <a href="{{ post.url | prepend: site.url }}">
+            {% include figure.html path=image_url alt="post.cover" width="100%"
+            height="240px" class="preview z-depth-1 rounded" %}
+          </a>
+        <!-- <img 
           style="width: 100%; height: 240px; object-fit: cover"
           class="preview z-depth-1 rounded" src="{{ post.cover | prepend: '/assets/img/posts/' | relative_url }}">
+        -->
         </div>
         <div class="col-sm-6">
       <h3>
