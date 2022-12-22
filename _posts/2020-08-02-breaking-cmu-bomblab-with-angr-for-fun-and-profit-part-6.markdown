@@ -1,16 +1,22 @@
 ---
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 6"
 layout: post
-tags: [rev, ctf]
-cover: assets/images/posts/lake_placid.avif
+tags: [rev, ctf, code]
+cover: lake_placid.jpg
+cover_preview: lake_placid.avif
+caption: Lake Placid, New York, USA
 class: post-template
 navigation: True
 author: fanpu
 toc: true
 comments: true
+description: >
+    We tackle Part 6 of this series on cracking CMU's Bomblab with Angr!
 ---
 
-Hello from Part 6 of this series on cracking CMU's Bomblab with Angr. If you are new here, I would recommend starting with part 1 [here](breaking-cmu-bomblab-with-angr-for-fun-and-profit).
+Hello from Part 6 of this series on cracking CMU's Bomblab with Angr. If you are
+new here, I would recommend starting with part 1
+[here]({% post_url 2020-07-30-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-1 %}).
 
 ### Phase 6
 
@@ -358,4 +364,6 @@ Congratulations! You've defused the bomb!
 
 It worked! We've come a long way and you should be proud of yourselves. If any of you actually solved this before (wink wink 15-213 students), you would remember how long this phase took, where you would slowly realise that you were dealing with a linked list and then you probably had to graph out the pointers in the linked list to figure out what their relationships were, but Angr solved it without us having to be aware of what is happening at all!
 
-Thanks for reading thus far, and I hope to see you again for the last and final phase - the Secret Phase, which you can find [here](breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-7)!
+Thanks for reading thus far, and I hope to see you again for the last and final
+phase - the Secret Phase, which you can find
+[here]({% post_url 2020-08-02-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-7 %}).

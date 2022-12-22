@@ -1,16 +1,22 @@
 ---
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 3"
 layout: post
-tags: [rev, ctf]
-cover: assets/images/posts/lily_mountain.avif
+tags: [rev, ctf, code]
+cover: lily_mountain.jpg
+cover_preview: lily_mountain.avif
+caption: View from Lily Mountain Trail, Rocky Mountain National Park, Colorado, USA
 class: post-template
 navigation: True
 author: fanpu
 toc: true
 comments: true
+description: >
+    We're back now with Part 3 of this series on cracking CMU's Bomblab using Angr!
 ---
 
-We're back now with Part 3 of this series on cracking CMU's Bomblab using Angr! If you are new, I would recommend starting with part 1 [here](breaking-cmu-bomblab-with-angr-for-fun-and-profit).
+We're back now with Part 3 of this series on cracking CMU's Bomblab using Angr!
+If you are new, I would recommend starting with Part 1
+[here]({% post_url 2020-07-30-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-1 %}).
 
 ### Phase 3
 
@@ -217,4 +223,6 @@ Halfway there!
 {% endraw %}
 {% endhighlight %}
 
-Nice, it worked, and this was pretty fast too given how similar it was to phase 2! You can continue to Part 4 [here](breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-4)
+Nice, it worked, and this was pretty fast too given how similar it was to phase
+2! You can continue to Part 4
+[here]({% post_url 2020-08-02-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-4 %}).

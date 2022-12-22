@@ -1,16 +1,24 @@
 ---
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 2"
 layout: post
-tags: [rev, ctf]
-cover: assets/images/posts/emerald_lake.avif
+tags: [rev, ctf, code]
+cover: emerald_lake.jpg
+cover_preview: emerald_lake.avif
+description: Emerald Lake, Rocky Mountain National Park, Colorado, USA
 class: post-template
 navigation: True
 author: fanpu
 toc: true
 comments: true
+description: >
+    This is Part 2 of the series on cracking CMU's Bomblab using Angr,
+    where we solve Phase 2 by pushing symbolic values onto the stack to 
+
 ---
 
-Welcome to Part 2 of this series on cracking CMU's Bomblab using Angr! If you are new, I would recommend starting with part 1 [here](breaking-cmu-bomblab-with-angr-for-fun-and-profit).
+Welcome to Part 2 of this series on cracking CMU's Bomblab using Angr! If you
+are new, I would recommend starting with part 1
+[here]({% post_url 2020-07-30-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-1 %}).
 
 ### Phase 2
 
@@ -256,6 +264,11 @@ That's number 2.  Keep going!
 {% endraw %}
 {% endhighlight %}
 
-Awesome! We got the solution without even having to deal with the headache of figuring what Phase 2 is actually doing. While Phase 1 was relatively trivial and Angr solving it was probably not really impressive, this is something that should be making you excited now! :) 
+Awesome! We got the solution without even having to deal with the headache of
+figuring what Phase 2 is actually doing. While Phase 1 was relatively trivial
+and Angr solving it was probably not really impressive, this is something that
+should be making you excited now! :) 
 
-Thanks for reading, and I hope you've enjoyed the journey so far. You can go straight to the next part [here](breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-3).
+Thanks for reading, and I hope you've enjoyed the journey so far. You can go
+straight to the next part
+[here]({% post_url 2020-08-01-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-3 %}).

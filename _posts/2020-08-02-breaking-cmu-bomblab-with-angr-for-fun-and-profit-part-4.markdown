@@ -2,15 +2,21 @@
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 4"
 layout: post
 tags: [rev, ctf]
-cover: assets/images/posts/erie.avif
+cover: erie.jpg
+cover_preview: erie.avif
+caption: Lake Erie, Erie, Pennsylvania, USA
 class: post-template
 navigation: True
 author: fanpu
 toc: true
 comments: true
+description: >
+    Part 4 of cracking CMU's Bomblab using Angr!
 ---
 
-Welcome back to Part 4 of cracking CMU's Bomblab using Angr! If you just stumbled upon this, I would recommend starting with part 1 [here](breaking-cmu-bomblab-with-angr-for-fun-and-profit).
+Welcome back to Part 4 of cracking CMU's Bomblab using Angr! If you just
+stumbled upon this, I would recommend starting with part 1
+[here]({% post_url 2020-07-30-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-1 %}).
 
 ### Phase 4
 
@@ -180,4 +186,6 @@ So you got that one.  Try this one.
 {% endraw %}
 {% endhighlight %}
 
-Easy peasy lemon squeezy! This took basically no effort at all. You can continue on to Part 5 [here](breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-5).
+Easy peasy lemon squeezy! This took basically no effort at all. You can continue
+on to Part 5 
+[here]({% post_url 2020-08-02-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-5 %}).

@@ -2,26 +2,58 @@
 title: "Pink Floyd and Alienation"
 layout: post
 tags: [general]
-cover: assets/images/posts/dark_side_of_the_moon.avif
+cover: dark_side_of_the_moon.jpg
+cover_preview: dark_side_of_the_moon.avif
+caption: Studio album cover of The Dark Side of the Moon (1973), Pink Floyd
 class: post-template
 navigation: True
 author: fanpu
 toc: true
 comments: true
+description: >
+    In this post, I talk about how themes of alienation pervades the music of
+    the English rock band Pink Floyd. Pink Floyd is one of the greatest bands in
+    popular music history, achieving international commercial success and
+    widespread influence in subsequent musical developments. They formed in
+    London in 1965 to humble beginnings as a student group, 
+    and comprises Syd Barrett (guitar and lead vocals), Nick Mason (drums),
+    Roger Waters (bass guitar, vocals), and Richard Wright (keyboard, vocals). 
 ---
 
-In this post, I talk about how themes of alienation pervades the music of the English rock band Pink Floyd. Pink Floyd is one of the greatest bands in popular music history, achieving international commercial success and widespread influence in subsequent musical developments. They formed in London in 1965 to humble beginnings as a student group, 
-and comprises Syd Barrett (guitar and lead vocals), Nick Mason (drums), Roger Waters (bass guitar, vocals), and Richard Wright (keyboard, vocals). 
+In this post, I talk about how themes of alienation pervades the music of the
+English rock band Pink Floyd. Pink Floyd is one of the greatest bands in popular
+music history, achieving international commercial success and widespread
+influence in subsequent musical developments. They formed in London in 1965 to
+humble beginnings as a student group, and comprises Syd Barrett (guitar and lead
+vocals), Nick Mason (drums), Roger Waters (bass guitar, vocals), and Richard
+Wright (keyboard, vocals). 
 
-Their music is marked by instrumentation and ambience, and has a psychedelic overtone to it, leading people to credit them as the innovators of the genres of progressive rock as well as psychedelic rock. Alan Parsons, an audio engineer who also helped to craft The Beatles' Abbey Road and Let It Be, said that "The Floyd were, by their very nature, audio experimentalists... The Floyd and the Beatles have a lot in common in that respect - and they both worked in the greatest studios with some of the greatest engineers" (Harris). 
+Their music is marked by instrumentation and ambience, and has a psychedelic
+overtone to it, leading people to credit them as the innovators of the genres of
+progressive rock as well as psychedelic rock. Alan Parsons, an audio engineer
+who also helped to craft The Beatles' Abbey Road and Let It Be, said that "The
+Floyd were, by their very nature, audio experimentalists... The Floyd and the
+Beatles have a lot in common in that respect - and they both worked in the
+greatest studios with some of the greatest engineers" (Harris). 
 
-Their popular success, having sold over 250 million records worldwide, can be attributed by their innovative musical methods of delivering deep and resonating messages to their audiences, with their songs and lyrics often referencing societal and relatable personal issues. They are personally my favorite rock band of all time, as I am endlessly enchanted by their unique musical style and deep lyrical meaning. In fact, there are many recurring themes throughout their songs, and the one which stands out the most is the concept of alienation. To be "alienated is to be cut off, or estranged, from something or someone with which one should be connected" (Resich). Alienation can be broadly categorized into the following categories:
+Their popular success, having sold over 250 million records worldwide, can be
+attributed by their innovative musical methods of delivering deep and resonating
+messages to their audiences, with their songs and lyrics often referencing
+societal and relatable personal issues. They are personally my favorite rock
+band of all time, as I am endlessly enchanted by their unique musical style and
+deep lyrical meaning. In fact, there are many recurring themes throughout their
+songs, and the one which stands out the most is the concept of alienation. To be
+"alienated is to be cut off, or estranged, from something or someone with which
+one should be connected" (Resich). Alienation can be broadly categorized into
+the following categories:
 
 - Alienation from Labor
 - Alienation as Absence
 - Alienation as Disunity
 
-In this post, I will explore these three categories of alienation as they have appeared in their songs, and see how it reflects societal and political issues of that time, many of which are still relevant today.
+In this post, I will explore these three categories of alienation as they have
+appeared in their songs, and see how it reflects societal and political issues
+of that time, many of which are still relevant today.
 
 ## Alienation from Labor
 > We don't need no education, <br>

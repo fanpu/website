@@ -1,13 +1,24 @@
 ---
 title:  "UIUCTF20 Accounting Accidents Pwn Writeup"
 layout: post
-tags: [pwn, CTF]
-cover: assets/images/posts/tallac_journey.avif
+tags: [pwn, CTF, code]
+cover: tallac_journey.jpg
+cover_preview: tallac_journey.avif
+caption: View on the way to the summit of Mount Tallac, Lake Tahoe, California, USA
 class: post-template
 navigation: True
 author: fanpu
 toc: true
 comments: true
+description: >
+  UIUCTF20 was a really fun Animal Crossing themed CTF that ran from July 17-19
+  2020. While I have not played the game before, I somewhat knew what it was about
+  from watching Youtubers play it, and also from memes about the turnip stock
+  market. 
+
+  Our team PPP came in third place, which went above my expectations as most
+  people playing were relatively new and I am quite happy with the result. Now, on
+  to the writeup!
 ---
 
 UIUCTF20 was a really fun Animal Crossing themed CTF that ran from July 17-19 2020. While I have not played the game before, I somewhat knew what it was about from watching Youtubers play it, and also from memes about the turnip stock market. 

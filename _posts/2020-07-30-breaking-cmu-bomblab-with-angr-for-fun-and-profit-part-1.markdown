@@ -1,16 +1,38 @@
 ---
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 1"
 layout: post
-tags: [rev, ctf]
-cover: assets/images/posts/arapaho.avif
+tags: [rev, ctf, code]
+cover: arapaho.jpg
+cover_preview: arapaho.avif
+caption: Arapaho Glacier, Roosevelt National Forest, Colorado, USA
 class: post-template
 navigation: True
 author: fanpu
 toc: true
 comments: true
+description: >
+    I have recently been learning about Angr, a binary analysis
+    framework developed by UC Santa Barbara and Arizona State University. It caught
+    my eye because of its versatility and utility in reverse engineering binaries
+    whose disassembly and decompilation are hard to understand manually. Oftentimes,
+    it is simply due to the fact that it was compiled from newer or relatively less
+    popular languages like Rust or Haskell, where the state of currently publicly
+    available decompilers leaves much to be desired. Angr's ability to perform
+    symbolic execution therefore allows us to blackbox certain functionality within
+    the program (or even the entire program) by attempting to find the right input
+    for a desired output.
 ---
 
-I have recently been learning about [Angr](https://angr.io/), a binary analysis framework developed by UC Santa Barbara and Arizona State University. It caught my eye because of its versatility and utility in reverse engineering binaries whose disassembly and decompilation are hard to understand manually. Oftentimes, it is simply due to the fact that it was compiled from newer or relatively less popular languages like Rust or Haskell, where the state of currently publicly available decompilers leaves much to be desired. Angr's ability to perform symbolic execution therefore allows us to blackbox certain functionality within the program (or even the entire program) by attempting to find the right input for a desired output.
+I have recently been learning about [Angr](https://angr.io/), a binary analysis
+framework developed by UC Santa Barbara and Arizona State University. It caught
+my eye because of its versatility and utility in reverse engineering binaries
+whose disassembly and decompilation are hard to understand manually. Oftentimes,
+it is simply due to the fact that it was compiled from newer or relatively less
+popular languages like Rust or Haskell, where the state of currently publicly
+available decompilers leaves much to be desired. Angr's ability to perform
+symbolic execution therefore allows us to blackbox certain functionality within
+the program (or even the entire program) by attempting to find the right input
+for a desired output.
 
 ### But what is symbolic execution anyway?
 Do you recall when you had to first begin manipulating symbols in math class during elementary school? Yes, algebra! Symbolic execution can be thought of as manipulating symbols in order to derive certain constraints. These constraints can then be solved by a Satisfiability Modulo Theories (SMT) solver like [Z3](https://github.com/Z3Prover/z3). 
@@ -521,4 +543,4 @@ Phase 1 defused. How about the next one?
 {% endraw %}
 {% endhighlight %}
 
-Awesome! I hope you have enjoyed the first part of this series and that it was helpful to you :). You can continue on to the second part [here](breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-2).
+Awesome! I hope you have enjoyed the first part of this series and that it was helpful to you :). You can continue on to the second part [here]({% post_url 2020-07-31-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-2 %}).

@@ -1,13 +1,18 @@
 ---
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 7"
 layout: post
-tags: [rev, ctf]
-cover: assets/images/posts/campton.avif
+tags: [rev, ctf, code]
+cover: campton.jpg
+cover_preview: campton.avif
+caption: Campton, New Hampshire, USA. We went skiing in the area.
 class: post-template
 navigation: True
 author: fanpu
 toc: true
 comments: true
+description:
+    The final part of cracking CMU's Bomblab with Angr, where
+    we crack the secret phase together!
 ---
 
 Welcome to the final part of cracking CMU's Bomblab with Angr. If you are new here, I would recommend starting with part 1 [here](breaking-cmu-bomblab-with-angr-for-fun-and-profit).

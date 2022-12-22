@@ -1,16 +1,22 @@
 ---
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 5"
 layout: post
-tags: [rev, ctf]
-cover: assets/images/posts/niagara_falls.avif
+tags: [rev, ctf, code]
+cover: niagara_falls.jpg
+cover_preview: niagara_falls.avif
+caption: Niagara Falls, New York, USA
 class: post-template
 navigation: True
 author: fanpu
 toc: true
 comments: true
+description:
+    Part 5 on cracking CMU's Bomblab with Angr, where we solve Phase 5 together!
 ---
 
-This is Part 5 on cracking CMU's Bomblab with Angr. If you just stumbled upon this, I would recommend starting with part 1 [here](breaking-cmu-bomblab-with-angr-for-fun-and-profit).
+This is Part 5 on cracking CMU's Bomblab with Angr. If you just stumbled upon
+this, I would recommend starting with part 1
+[here]({% post_url 2020-07-30-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-1 %}).
 
 ### Phase 5
 
@@ -202,4 +208,6 @@ Good work!  On to the next...
 {% endraw %}
 {% endhighlight %}
 
-Looks like it worked! Thanks for reading so far, and I hope you enjoyed it! You can continue on to Part 6 [here](breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-6).
+Looks like it worked! Thanks for reading so far, and I hope you enjoyed it! You can continue on to Part 6 
+[here]({% post_url
+2020-08-02-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-6 %}).
