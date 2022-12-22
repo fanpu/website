@@ -27,7 +27,7 @@ felt like I could definitely do much better.
 
 
 {% include figure.html path="/assets/img/posts/old_look.png" width="100%"
-class="z-depth-0" %}
+class="z-depth-1" %}
 <div class="caption">
 A screengrab of how the old blog looked.
 </div>
@@ -55,7 +55,7 @@ Some readers may also know that my website is also ported on Carnegie Mellon's w
 Finally, I checked that Google Analytics and Disqus was working, and that everything was rendering properly. I also resized some of the larger images with ImageMagick in order to decrease load time and save bandwidth.
 
 {% include figure.html path="/assets/img/posts/new_look.png" width="100%"
-class="z-depth-0" %}
+class="z-depth-1" %}
 <div class="caption">
   New design which is much more aesthetic now!
 </div>
