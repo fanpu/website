@@ -4,7 +4,7 @@ layout: post
 tags: [complexity-theory, computer-science]
 cover: denali.jpg
 cover_preview: denali.avif
-cover_description: Denali National Park, Alaska
+caption: Denali National Park, Alaska
 description: >
     Most people have probably heard of the P = NP? problem in some shape or
     form, which asks whether the class of languages decidable in deterministic

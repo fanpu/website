@@ -1,7 +1,6 @@
 ---
 layout: post
-tags: [DevOps, code]
-cover: rsync.jpg
+tags: [code]
 cover_preview: rsync.avif
 description: >
   Static site generators like Jekyll makes it easy to

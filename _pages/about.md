@@ -21,7 +21,7 @@ Science in 2022 at CMU as well. I have been involved in the open-source
 programming assignment auto-grading platform
 [Autolab](https://autolabproject.com/) since 2018.  I currently serve as the
 Masters Student Liaison for the [Singapore Students
-Association](https://cmussa.org/). I also used to frequently play
+Association](https://cmussa.org/). I also used to play
 Capture-The-Flag (CTF) competitions with [PPP](https://pwning.net/).
 
 I am broadly interested in rigorously proving why machine learning techniques
