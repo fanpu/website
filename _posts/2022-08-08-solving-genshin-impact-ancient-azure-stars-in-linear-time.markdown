@@ -10,6 +10,20 @@ navigation: True
 author: fanpu
 toc: true 
 comments: true
+description: >
+    It is summer yet again, and miHoYo has blessed us with the Summertime Odyssey
+    event that explores the (often dark and painful) backstories of the cast
+    comprising Kazuha, Xinyan, Fischl, and Mona, back on the setting of the Golden
+    Apple Archipelago.
+
+    One puzzle that I found interesting from a computational perspective was a major
+    part of Mona's questline Ancient Azure Stars, which is the main topic of this
+    post. In this puzzle, you are given a pattern that resembles a constellation
+    that you need to imitate. The puzzle is interesting because even though its mechanics
+    allows for an exponential search space (and also multiple possible solutions),
+    clever algorithmic techniques can speed up finding a valid solution to almost
+    linear time. This post is meant to be accessible to people with only some
+    exposure to algorithms, and takes things step by step.
 ---
 It is summer yet again, and miHoYo has blessed us with the *Summertime Odyssey*
 event that explores the (often dark and painful) backstories of the cast
@@ -33,8 +47,12 @@ exposure to algorithms, and takes things step by step.
 The premise is relatively simple: somewhere in the room (perhaps towards the
 roof), a target constellation is shown, such as the following:
 
-![Genshin Impact Ancient Azure Starts Puzzle
-1](/assets/images/posts/genshin-puzzle-1.avif){: width="100%"}
+{% include figure.html 
+    path="/assets/img/posts/genshin-puzzle-1.avif"
+    width="400px"
+    class="z-depth-1"
+    caption="A target constellation to achieve"
+%}
 
 There are several devices on the ground, initially all inactive, that will
 project a beam of light when activated, which is achieved by hitting it.
@@ -46,13 +64,22 @@ Your job is to rotate and activate the right devices such that the pattern
 formed by the beams corresponds to the desired target constellation. For
 the previous example, we have the following solution:
 
-![Genshin Impact Ancient Azure Starts Puzzle 1](/assets/images/posts/genshin-puzzle-1-solved.avif){: width="100%"}
+{% include figure.html 
+    path="/assets/img/posts/genshin-puzzle-1-solved.avif"
+    width="400px"
+    class="z-depth-1"
+    caption="A solved configuration of the previous puzzle"
+%}
 
 The puzzles seem to get progressively harder, with an increasing number of stars
 in the constellations, and an exponentially growing state space. Or do they?
 
-![Genshin Impact Ancient Azure Starts Puzzle
-3](/assets/images/posts/genshin-puzzle-3.avif){: width="100%"}
+{% include figure.html 
+    path="/assets/img/posts/genshin-puzzle-3.avif"
+    width="400px"
+    class="z-depth-1"
+    caption="A constellation with many more stars"
+%}
 
 ## An Algorithmic Perspective
 
@@ -119,9 +146,14 @@ the best achievable bound, since we certainly must examine all the inputs which
 already takes $$O(n)$$ time for the algorithm. It certainly looks like Mona will
 be speeding through these puzzles in no time after all!
 
-![Genshin Impact Mona](/assets/images/posts/mona_end.avif){: width="100%"}
+{% include figure.html 
+    path="/assets/img/posts/mona_end.avif"
+    width="400px"
+    class="z-depth-1"
+    caption="Mona looking dapper as always."
+%}
 
 Dear readers, let me know if you enjoyed this post in the comments below, and
 feel free to drop suggestions for future topics!
 
-*Banner picture: Mona Megistus, Genshin Impact. Copyrights and/or trademarks of any character and/or image used belong to miHoYo.*
+*Copyrights and/or trademarks of any character and/or image used belong to miHoYo.*

@@ -401,7 +401,7 @@ The tree is being sorted by price. `getBalance` returns the difference in height
 While doing so, I also reversed the structure of the node, with the offsets and datatypes given below:
 {% include figure.html 
   path="/assets/img/screenshots/accounting_accident_node_struct.png" 
-  width="70%"
+  width="400px"
   class="z-depth-1" 
   caption="Reversed node struct"
 %}
@@ -459,7 +459,7 @@ I then inserted the same nodes in order to [VisuAlgo](https://visualgo.net/bn/bs
 
 {% include figure.html 
   path="assets/img/screenshots/accounting_accident_avl_2.png" 
-  width="80%"
+  width="400px"
   class="z-depth-1" 
   caption="AVL tree after insertion"
 %}
@@ -472,7 +472,7 @@ The tree initially before any of our custom nodes are inserted looks like the fo
 
 {% include figure.html 
   path="assets/img/screenshots/accounting_accident_avl_3.png" 
-  width="80%"
+  width="400px"
   class="z-depth-1" 
   caption="AVL tree before any nodes are inserted"
 %}
@@ -481,7 +481,7 @@ For 25 to be the root, intuition tells us that we need to make the left part of 
 
 {% include figure.html 
   path="assets/img/screenshots/accounting_accident_avl_4.png" 
-  width="80%"
+  width="400px"
   class="z-depth-1" 
   caption="AVL tree after inserting 26 and 27"
 %}
@@ -492,7 +492,7 @@ This is the unintuitive part, because what we were really doing is to give some 
 
 {% include figure.html 
   path="assets/img/screenshots/accounting_accident_avl_5.png" 
-  width="80%"
+  width="400px"
   class="z-depth-1" 
   caption="AVL tree after inserting 21"
 %}
@@ -501,7 +501,7 @@ Now we have node 25 at a rather sweet spot. Finally, let's cause a rotation at 3
 
 {% include figure.html 
   path="assets/img/screenshots/accounting_accident_avl_6.png" 
-  width="80%"
+  width="400px"
   class="z-depth-1" 
   caption="AVL tree after inserting 22"
 %}

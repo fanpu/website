@@ -57,7 +57,12 @@ The two interesting algorithms implemented for SAT solving are DPLL and unit pro
 
 ### DPLL
 
-![DPLL algorithm](/assets/images/screenshots/dpll_algo.png){: width="100%"}
+{% include figure.html 
+    path="/assets/img/screenshots/dpll_algo.png"
+    width="700px"
+    class="z-depth-1"
+    caption="DPLL algorithm pseudocode"
+%}
 
 The DPLL algorithm works as follows: at every step, it chooses a variable to assign, and also chooses what value to first try assigning it. Whenever it makes such a voluntary assignment (i.e not forced), a new decision level is created. A decision level contains all the current assignments, and the variable that created the decision level. In our code, this is handled by the $$\texttt{Assignment}$$ class, and the $$\texttt{assignment_stack}$$ keeps track of the decision levels.
 
@@ -76,7 +81,12 @@ To this end, we introduce the idea of watched literals introduced by Moskewicz e
 
 Another benefit of using watched literals is that during backtracking, our constraints can only be relaxed (i.e our variables can be unassigned but never assigned), and therefore we do not need to update them. 
 
-![Unit propagation algorithm](/assets/images/screenshots/unit_propagation_algo.png){: width="100%"}
+{% include figure.html 
+    path="/assets/img/screenshots/unit_propagation_algo.png"
+    width="700px"
+    class="z-depth-1"
+    caption="Unit propagation algorithm pseudocode"
+%}
 
 In the unit propagation algorithm given above, we go through each of the vars that is now false as a result of previous assignments, and look at all the clauses watching them, and try to maintain the invariant that each clause is watching at least one non-False variable. If this is not possible and the other variable $$y$$ being watched is an unknown, we then know we can force it to be true. If $$y$$ is already assigned, then we have a conflict, and backtracking is inevitable.
 
@@ -90,7 +100,12 @@ The SAT solving framework provides flexibility for changing the heuristics used 
 
 The results are given below:
 
-![SAT solver heuristic comparisons](/assets/images/screenshots/sat_solver_heuristic_results.png){: width="100%"}
+{% include figure.html 
+    path="/assets/img/screenshots/sat_solver_heuristic_results.png"
+    width="400px"
+    class="z-depth-1"
+    caption="SAT solver heuristic comparisons"
+%}
 
 It is surprising that the random strategy runs much slower than the default strategy and the majority strategy. It is also surprising that the default naive strategy actually performs the best in this case, even though intuitively the majority strategy should perform better. A possible explanation for this behavior is that the majority strategy is a greedy strategy, and therefore random SAT instances could be resistant to greedy strategies.
 
