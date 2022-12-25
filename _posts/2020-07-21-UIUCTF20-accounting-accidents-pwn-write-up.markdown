@@ -401,7 +401,7 @@ The tree is being sorted by price. `getBalance` returns the difference in height
 While doing so, I also reversed the structure of the node, with the offsets and datatypes given below:
 {% include figure.html 
   path="/assets/img/screenshots/accounting_accident_node_struct.png" 
-  width="60%"
+  width="70%"
   class="z-depth-1" 
   caption="Reversed node struct"
 %}
@@ -457,7 +457,12 @@ ATM Repairs: 50
 
 I then inserted the same nodes in order to [VisuAlgo](https://visualgo.net/bn/bst) (click on the AVL tree button on the header), which is a great website created by Dr. Steven Halim for visualizing algorithms and data structures. By the way, if you are interested in competitive programming, I would highly recommend his book Competitive Programming 4 which was just released a few days ago on July 19. I found the 3rd edition of the book invaluable when I did competitive programming in high school, and the knowledge basically tided me through most of the algorithm classes in college. You can find more information about his book [here](https://cpbook.net/) (no, I am not receiving commission for this, nor was I asked to do this, I just really liked his book).
 
-![AVL tree after insertion](/assets/images/screenshots/accounting_accident_avl_2.png)
+{% include figure.html 
+  path="assets/img/screenshots/accounting_accident_avl_2.png" 
+  width="80%"
+  class="z-depth-1" 
+  caption="AVL tree after insertion"
+%}
 
 We see that the above picture has 2 and 1 when taking only left subtrees, and 30, 40, and 50 when only taking the right subtrees, just as what was being output by the binary. Nice!
 
@@ -465,22 +470,41 @@ So now, our final challenge is to insert four nodes such that the node with our 
 
 The tree initially before any of our custom nodes are inserted looks like the following:
 
-![AVL tree after insertion, 1](/assets/images/screenshots/accounting_accident_avl_3.png)
+{% include figure.html 
+  path="assets/img/screenshots/accounting_accident_avl_3.png" 
+  width="80%"
+  class="z-depth-1" 
+  caption="AVL tree before any nodes are inserted"
+%}
 
 For 25 to be the root, intuition tells us that we need to make the left part of the tree heavier and eventually force node 25 to bubble up. The way we'll do this, however, is not so intuitive. We first want to force 25 to make a rotation upwards. This can be done by giving it more children. We insert nodes with values 26 and 27:
 
-![AVL tree after insertion, 2](/assets/images/screenshots/accounting_accident_avl_4.png)
+{% include figure.html 
+  path="assets/img/screenshots/accounting_accident_avl_4.png" 
+  width="80%"
+  class="z-depth-1" 
+  caption="AVL tree after inserting 26 and 27"
+%}
 
 "WHATTT?!", I hear you say. Did we just make things worse, since node 25 is in an even lower position now?
 
 This is the unintuitive part, because what we were really doing is to give some nodes to the right subtree of 20. Now, we insert node 21, which forces the node at 20 to undergo a rotation:
 
-![AVL tree after insertion, 3](/assets/images/screenshots/accounting_accident_avl_5.png)
-
+{% include figure.html 
+  path="assets/img/screenshots/accounting_accident_avl_5.png" 
+  width="80%"
+  class="z-depth-1" 
+  caption="AVL tree after inserting 21"
+%}
 
 Now we have node 25 at a rather sweet spot. Finally, let's cause a rotation at 30 by causing one of its child to increase in height. We can grow the height of the subtree rooted at 20 by either adding something less than 10, or something between 21 or 25. Let's go with adding 22:
 
-![AVL tree after insertion, 4](/assets/images/screenshots/accounting_accident_avl_6.png)
+{% include figure.html 
+  path="assets/img/screenshots/accounting_accident_avl_6.png" 
+  width="80%"
+  class="z-depth-1" 
+  caption="AVL tree after inserting 22"
+%}
 
 We did it!
 

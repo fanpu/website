@@ -1,0 +1,10 @@
+<div class="{{ include.type | downcase }}">
+    <div class="theorem-title">{{ include.type  | capitalize }}
+        {% if include.name %}
+            ({{ include.name }})
+        {% endif %}
+    </div>
+    <div class="theorem-contents">
+        {{ include.statement }}
+    </div>
+</div>
