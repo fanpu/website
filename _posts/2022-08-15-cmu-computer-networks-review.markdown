@@ -2,12 +2,18 @@
 title: "CMU 15-441/641 Computer Networks Course Review"
 layout: post
 tags: [course-review, code]
-cover: mojave_national_preserve.avif
+cover: mojave_national_preserve.jpg
 cover_preview: mojave_national_preserve.avif
+caption: Mojave National Preserve, California, USA
 class: post-template
 navigation: True
 author: fanpu
 toc: true
+description: >
+    Computer Networks is one of the lesser-known systems classes at Carnegie Mellon
+    that turned out to be surprisingly fun and informative. In this post I'll talk
+    about the projects and content covered, followed by my own thoughts on the
+    usefulness on the class and who should take it.
 ---
 
 Computer Networks is one of the lesser-known systems classes at Carnegie Mellon
@@ -61,9 +67,12 @@ checkpoint solo. Since I had already written load balancers twice, once for
 15-319 Cloud Computing and once for 15-440 Distributed Systems, I also chose to
 do the same.
 
-<!-- {% include figure.html file="/assets/images/posts/networks_p3.avif"
-description="Relationship between the proxy and the load balancer, taken from
-the writeup" %} -->
+{% include figure.html 
+    path="/assets/img/posts/networks_p3.avif"
+    width="400px"
+    class="z-depth-1"
+    caption="Relationship between the proxy and the load balancer, taken from the writeup"
+%}
 
 The relationship between the adaptive bitrate proxy and the load balancer is
 given in the graph above.
@@ -80,8 +89,12 @@ smoothing.  Finally, you will also investigate how the proxy performs with
 multiple clients in terms of link utilization, fairness, and smoothness in a
 Docker environment with simulated network conditions.
 
-<!-- {% include figure.html file="/assets/images/posts/big_buck_bunny.avif"
-description="A still from Big Buck Bunny" %} -->
+{% include figure.html 
+    path="assets/img/posts/big_buck_bunny.avif"
+    width="400px"
+    class="z-depth-1"
+    caption="A still from Big Buck Bunny"
+%}
 
 You will probably watch [Big Buck
 Bunny](https://www.youtube.com/watch?v=YE7VzlLtp-4) many many times while

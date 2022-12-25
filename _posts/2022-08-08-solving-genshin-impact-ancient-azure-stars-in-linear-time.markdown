@@ -2,7 +2,9 @@
 title: "Solving Genshin Impact's Ancient Azure Stars quest in Linear Time"
 layout: post
 tags: [general, code]
-cover: assets/images/posts/mona.avif
+cover: mona.jpg
+cover_preview: mona.avif
+caption: Mona in the event domain, Genshin Impact
 class: post-template
 navigation: True
 author: fanpu
