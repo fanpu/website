@@ -2,12 +2,29 @@
 title: "Against Government Scholarships"
 layout: post
 tags: [general]
-cover: assets/images/posts/yosemite_waterfall.avif
+cover: yosemite_waterfall.jpg
+cover_preview: yosemite_waterfall.avif
+caption: Vernal Falls, Yosemite National Park, California, USA
 class: post-template
 navigation: True
 author: fanpu
 toc: true
 comments: true
+description: >
+    Over the past few years, I've received numerous questions about studying abroad
+    and whether it is advisable to take a government scholarship to do so from my
+    juniors.  Having witnessed firsthand the early career trajectories of many
+    scholars and non-scholars alike, and having heard their different perspectives,
+    I feel like now I have a good understanding of the concerns at hand to answer
+    this question confidently. 
+
+    This post is targeted towards Singaporean junior college students debating
+    whether they should take on a scholarship from the government to pursue a
+    fully-paid education abroad. 
+
+    In this post, I will consider both the pros and cons of taking a scholarship.
+    The relevance of some of the points is highly dependent on your current
+    situation, so ultimately you must still make your value judgment.
 ---
 
 Over the past few years, I've received numerous questions about studying abroad and whether it is advisable to take a government scholarship to do so from my juniors. 

@@ -399,7 +399,12 @@ node * insert(node *node,int price,char *item_name)
 The tree is being sorted by price. `getBalance` returns the difference in height between the left and right child. `leftRotate` and `rightRotate` was a bit involved and I did not bother reversing them, as it is probably what it says it does.
 
 While doing so, I also reversed the structure of the node, with the offsets and datatypes given below:
-![Reversed node struct](/assets/images/screenshots/accounting_accident_node_struct.png)
+{% include figure.html 
+  path="/assets/img/screenshots/accounting_accident_node_struct.png" 
+  width="60%"
+  class="z-depth-1" 
+  caption="Reversed node struct"
+%}
 
 The fields are as we would expect.
 

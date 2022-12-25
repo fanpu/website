@@ -13,6 +13,7 @@ group :jekyll_plugins do
     gem 'jekyll-link-attributes'
     gem 'jekyll-twitter-plugin'
     gem 'jekyll-toc'
+    gem "jekyll-pdf-embed"
     gem 'jemoji'
     gem 'mini_racer'
     gem 'unicode_utils'

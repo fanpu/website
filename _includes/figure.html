@@ -1,7 +1,6 @@
 {%- assign img_path = include.path | remove: ".jpg" | remove: ".jpeg" | remove: ".png" | remove: ".tiff" -%}
 
 <figure>
-
   <picture>
     {% if site.imagemagick.enabled %}
     {% for i in site.imagemagick.widths -%}
@@ -14,9 +13,9 @@
     {% endif %}
 
     <!-- Fallback to the original file -->
-    <img 
+    <img
       src="{{ include.path | relative_url }}"
-      {% if include.class %}class="{{ include.class }}"{% endif %}  
+      {% if include.class %}class="{{ include.class }} center"{% endif %}  
       {% if include.width %}width="{{ include.width }}"{% else %}width="auto"{% endif %} 
       {% if include.height %}height="{{ include.height }}"{% else %}height="auto"{% endif %} 
       {% if include.min-width %}min-width="{{ include.min-width }}"{% endif %} 
@@ -33,5 +32,4 @@
   </picture>
 
   {%- if include.caption -%}<figcaption class="caption">{{ include.caption }}</figcaption>{%- endif %}
-
 </figure>
