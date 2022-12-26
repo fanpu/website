@@ -25,10 +25,34 @@ A lot of inspiration for this page came from [Wan Shen's CMU course review page]
 This page was recently updated on 11/9/2022 to help students decide the classes
 they may want to take ahead of course registration week.
 
+For ease of navigation, I've
+
+| Computer Science Theory           |
+|-----------------------------------|
+| [15-859 CC Algorithms for Big Data](#course15859CC) |
+| [15-859 OO Randomness in Computation](#course15859OO) |
+{: .table .table-bordered .table-hover .table-sm }
+
+| Machine Learning/AI |
+|-----------------------------------|
+| [10-708 Probablistic Graphical Models](#course10708) |
+| [15-784 Foundations of Cooperative AI](#course15784) |
+| [10-617 Intermediate Deep Learning](#course10617) |
+{: .table .table-bordered .table-hover .table-sm }
+
+
+| Systems                                  |
+|------------------------------------------|
+| 15-330 Introduction to Computer Security |
+{: .table .table-striped }
+
 ---
 
+<!-- {::options parse_block_html="true" /} -->
+
 ### Fall 2022
-- &#11088; 15-859 CC &nbsp; **[Algorithms for Big Data](https://www.cs.cmu.edu/~dwoodruf/teaching/15859-fall22/index.html)**, [David Woodruff](http://www.cs.cmu.edu/~dwoodruf/)
+{: .first-course-item #course15859CC } 
+- &#11088; 15-859 CC &nbsp; **[Algorithms for Big Data](https://www.cs.cmu.edu/~dwoodruf/teaching/15859-fall22/index.html)**, [David Woodruff](http://www.cs.cmu.edu/~dwoodruf/) 
 
   Woodruff is one of the giants in sketching and numerical linear algebra, having developed many of its most important algorithms.
   There is even a sklearn function called the [Clarkson-Woodruff transform](https://docs.scipy.org/doc/scipy/reference/generated/scipy.linalg.clarkson_woodruff_transform.html) that is named after him.
@@ -45,6 +69,7 @@ they may want to take ahead of course registration week.
   taxing, so bring snacks or caffeine if needed.
 
 - &#10084;&#65039; 15-859 OO &nbsp; **[Randomness in Computation](https://www.cs.cmu.edu/~praveshk/randomness.html)**, [Pravesh Kothari](https://www.cs.cmu.edu/~praveshk/)
+  {: .course-item #course15859OO } 
 
   I had limited exposure to most of the topics in this course (mostly from
   Theorist's Toolkit 15-751, Graduate Complexity Theory 15-855, and Graph Theory
@@ -60,6 +85,7 @@ they may want to take ahead of course registration week.
   are reasonable and the workload is on the lighter side.
 
 - &#11088; 10-708 &nbsp; **[Probablistic Graphical Models](https://andrejristeski.github.io/10708-F22/)**, [Andrej Risteski](https://www.andrew.cmu.edu/user/aristesk/)
+  {: .course-item #course10708 } 
   
   This class has a reputation of being one of the hardest ML classes, but I
   think it is actually an excellent class that is very well-taught, so I hope
@@ -79,15 +105,22 @@ they may want to take ahead of course registration week.
   to date with the state-of-the-art in this field.
 
 - 15-784 &nbsp; **[Foundations of Cooperative AI](https://www.cs.cmu.edu/~15784/)**, [Vincent Conitzer](https://www.cs.cmu.edu/~conitzer/), [Caspar Oesterheld](https://www.andrew.cmu.edu/user/coesterh/), [Tuomas Sandholm](https://www.cs.cmu.edu/~sandholm/)
+  {: .course-item #course15784 } 
 
-  I did not enjoy this course as much as I would have liked for several reasons.
-  The way that the content was presented was relatively hand-wavey, the slides
-  are not very organized, and there are many slides which are essentially
-  summaries of papers that the professors wrote, which made it too high-level to
-  be able to concretely understand anything. That said, the course is being
-  offered for the first time, so it will probably improve in subsequent iterations.
+  This course covered many topics in AI which are typically not covered in a
+  machine learning course, such as normal and extensive form games, various
+  forms of equilibriums in games, solving for such equilibriums, learning in
+  games (regret matching), decision theories, and mechanism design.
+  In fact, a lot of it comes from economic theory.
+  
+  The content was interesting, but I did not enjoy this course as much as I
+  would have liked because the way that the content was presented was
+  relatively hand-wavey, trading depth for breadth. That said, the course is
+  being offered for the first time, so it will probably improve in subsequent
+  iterations.
 
 - 10-617 &nbsp; **[Intermediate Deep Learning](https://rsalakhucmu.github.io/10417-22/)**, [Ruslan Salakhutdinov](https://www.cs.cmu.edu/~rsalakhu/)
+  {: .course-item #course10617 } 
 
   Ruslan is one of the household names in the machine learning community (he
   invented the Dropout technique to prevent overfitting which is now standard in
@@ -115,18 +148,29 @@ they may want to take ahead of course registration week.
   theoretical.
  
 - 10-703 &nbsp; **[Deep Reinforcement Learning](https://cmudeeprl.github.io/703website_f22/)**, [Katerina Fragkiadaki](https://www.cs.cmu.edu/~katef/)
-
-  After the middle of the semester, I found it pretty hard to focus and
-  understand what is going on in the class. I also frequently found it hard to
-  understand the professor's explanations, and she speaks very quickly. I think
-  a big reason for my confusion is that the class assumes that you have done the
-  paper readings before each lecture (my workload meant it was infeasible for me
-  to do that), and so I gained very little from lecture.  So please avoid my
-  mistake and do your readings before the lecture if you take this class!
+  {: .course-item #course10703 } 
   
-  The homework for this class is really fun as you get to implement reinforcement learning
-  algorithms for agents in various OpenAI Gym environments. All assignments are
-  done in groups of up to 3, so remember to grab a friend or two if you're taking this class.
+  The first half of the course follows the standard Sutton and Barto
+  textbook pretty closely, but the second half discusses topics 
+  and techniques that are relatively state-of-the-art (think within the last
+  3 years). As such, there is not really any reference material other
+  than the papers that those techniques were based on. 
+
+  There are usually 2-4 papers that are compulsory readings 
+  which are assigned to be read before every lecture. 
+  Unfortunately I was a bad student and did not read them beforehand,
+  and so after the middle of the semester once the content went
+  beyond any standard textbooks, I found it pretty hard to focus and
+  understand what is going on in the class, and took very little out
+  of lecture. Eventually I had to rewatch them after reading
+  through the papers again to be able to properly appreciate it. So if you
+  taking this class, please avoid my mistake and do your readings before the
+  lecture to save time in the long run!
+  
+  The homework for this class is really fun as you get to implement
+  reinforcement learning algorithms for agents in various OpenAI Gym
+  environments. All assignments are done in groups of up to 3, so remember to
+  grab a friend or two if you're taking this class.
   
 - 21-651 &nbsp; **General Topology**, [Florian Frick](https://www.math.cmu.edu/~ffrick/)
 
