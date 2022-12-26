@@ -40,10 +40,9 @@ outdoors.
 I grew up in my hometown Singapore before moving to the US for college. I try
 to go back and visit once a year.
 
-Feel free to reach out to me at 
-fzeng[dot]andrew[dot]cmu[dot]edu. Unfortunately,
-I am unable to provide referrals for people
-that I have not worked with.
+Feel free to reach out to me at fzeng[dot]andrew[dot]cmu[dot]edu.
+Unfortunately, I am unable to provide referrals for people that I have not
+worked with.
 
 I recently earned a Technician amateur radio license, and my callsign is 
 [KC3UFE](https://www.fccbulletin.com/callsign/?q=KC3UFE).

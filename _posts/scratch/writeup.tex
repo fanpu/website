@@ -1,0 +1,155 @@
+% You should title the file with a .tex extension (hw1.tex, for example)
+\documentclass[11pt]{article}
+% \usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{listings} %For code in appendix
+\lstset{
+    basicstyle=\ttfamily,
+    mathescape
+}
+\usepackage{wasysym}
+\usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{pdfpages}
+\usepackage{float}
+\usepackage{fancyhdr}
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{xcolor}
+\usepackage{mathtools}
+\usepackage{amstext} % for \text macro
+\usepackage{array}   % for \newcolumntype macro
+% \usepackage{algorithm}
+% \usepackage{algpseudocode}
+% \usepackage[full]{complexity}
+\newcolumntype{L}{>{$}l<{$}} % math-mode version of "l" column type
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+
+% \usepackage{hyperref}
+% \hypersetup{
+%     colorlinks=true,
+%     linkcolor=blue,
+%     filecolor=magenta,
+%     urlcolor=cyan,
+% }
+\usepackage{CSTheoryToolkitCMUStyle}
+\newcommand{\bigzero}{\mbox{\normalfont\Large\bfseries 0}}
+\newcommand{\bigone}{\mbox{\normalfont\Large\bfseries 1}}
+\newcommand{\mM}{\mathbf{M}}
+\newcommand{\mA}{\mathbf{A}}
+\newcommand{\mS}{\mathbf{S}}
+\newcommand{\rvline}{\hspace*{-\arraycolsep}\vline\hspace*{-\arraycolsep}}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{mystyle}{
+    backgroundcolor=\color{backcolour},
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,
+    breaklines=true,
+    captionpos=b,
+    keepspaces=true,
+    numbers=left,
+    numbersep=5pt,
+    showspaces=false,
+    showstringspaces=false,
+    showtabs=false,
+    tabsize=2
+}
+
+\lstset{style=mystyle}
+
+\oddsidemargin0cm
+\topmargin-2cm     %I recommend adding these three lines to increase the
+\textwidth16.5cm   %amount of usable space on the page (and save trees)
+\textheight23.5cm
+
+\newcommand{\question}[2] {\vspace{.25in} \hrule\vspace{0.5em}
+    \noindent{\bf #1: #2} \vspace{0.5em}
+    \hrule \vspace{.10in}}
+\renewcommand{\part}[1] {\vspace{.10in} {\bf (#1)}}
+
+\newcommand{\myname}{Fan Pu Zeng}
+\newcommand{\myandrew}{fzeng@andrew.cmu.edu}
+\newcommand{\myhwnum}{1}
+
+\setlength{\parindent}{0pt} \setlength{\parskip}{5pt plus 1pt}
+
+\pagestyle{fancyplain}
+\lhead{\fancyplain{}{\textbf{HW\myhwnum}}}      % Note the different brackets!
+\rhead{\fancyplain{}{\myname\\ \myandrew}}
+\chead{\fancyplain{}{Scratch Pad}}
+
+\newcommand{\clearthin}{\usefont{\encodingdefault}{ClearSans-TLF}{thin}{n}}
+\newcommand{\definequantifier}[3]{%1 = command, #2 = h or v, #3 = letter
+    \if #2h%
+        \DeclareRobustCommand{#1}{\scalebox{-1}[1]{\text{\clearthin#3}}}%
+    \else
+        \DeclareRobustCommand{#1}{\raisebox{\depth}{\scalebox{1}[-1]{\text{\clearthin#3}}}}%
+    \fi
+}
+
+\DeclareMathOperator*{\argmax}{arg\,max}
+\DeclareMathOperator*{\argmin}{arg\,min}
+
+\allowdisplaybreaks
+
+% Add rulers for algorithm2e
+\RestyleAlgo{ruled}
+\SetKwComment{Comment}{/* }{ */}
+
+\newcommand{\nnz}[1]{\mathtt{nnz}(#1)}
+
+
+\begin{document}
+
+% \includepdf[pages=-]{hw10_handwritten.pdf}
+
+\medskip                        % Skip a "medium" amount of space
+% (latex determines what medium is)
+% Also try: \bigskip, \littleskip
+
+\thispagestyle{plain}
+\begin{center}                  % Center the following lines
+    {\Large 15-859 Algorithms for Big Data Assignment \myhwnum} \\
+    \myname \\
+    \myandrew \\
+\end{center}
+
+\question{1}{Scratcy Scratch}
+
+\begin{align*}
+    \nabla_\theta \E_{\tau \sim P_\theta(\tau)} [R(\tau)]
+     & = \nabla_\theta \sum\limits_\tau P_\theta(\tau) R(\tau)                \\
+     & = \sum\limits_\tau \nabla_\theta  P_\theta(\tau) R(\tau) \tag{uh oh..} \\
+\end{align*}
+
+\begin{align*}
+    \sum\limits_\tau \nabla_\theta  P_\theta(\tau) R(\tau)
+     & = \sum\limits_\tau \frac{ P_\theta(\tau) }{ P_\theta(\tau) } \nabla_\theta  P_\theta(\tau) R(\tau)  \\
+     & = \sum\limits_\tau P_\theta(\tau) \frac{ \nabla_\theta  P_\theta(\tau)  }{ P_\theta(\tau) } R(\tau) \\
+     & = \sum\limits_\tau P_\theta(\tau) \nabla_\theta  \log  P_\theta(\tau) R(\tau)                       \\
+     & = \E_{\tau \sim P_\theta(\tau)} \left[ \nabla_\theta  \log  P_\theta(\tau) R(\tau)  \right]         \\
+     & \approx \frac{1}{N} \sum\limits_{i=1}^N \nabla_\theta  \log  P_\theta(\tau_i) R(\tau_i)             \\
+\end{align*}
+
+\begin{align*}
+    \nabla_\theta  \log  P_\theta(\tau)
+     & = \nabla_\theta  \log  \left[
+        \prod_{t=0}^H P(s_{t+1} \mid s_t, a_t) \cdot \pi_\theta (a_t \mid s_t),
+    \right]                          \\
+     & = \nabla_\theta  \left[
+        \sum\limits_{t=0}^H \log P(s_{t+1} \mid s_t, a_t) + \log \pi_\theta (a_t \mid s_t)
+        \right] \\
+     & = \nabla_\theta \sum\limits_{t=0}^H \log \pi_\theta (a_t \mid s_t) \tag{first term does not depend on $\theta$, becomes zero} \\
+     & = \sum\limits_{t=0}^H \nabla_\theta \log \pi_\theta (a_t \mid s_t) \\
+\end{align*}
+
+\end{document}
