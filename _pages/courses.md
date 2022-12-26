@@ -25,30 +25,66 @@ A lot of inspiration for this page came from [Wan Shen's CMU course review page]
 This page was recently updated on 11/9/2022 to help students decide the classes
 they may want to take ahead of course registration week.
 
-For ease of navigation, I've
+For ease of navigation, I've also categorized the classes that I've taken into
+the areas that they fall under, so you can just access the ones that
+you might be interested in directly.
 
-| Computer Science Theory           |
-|-----------------------------------|
-| [15-859 CC Algorithms for Big Data](#course15859CC) |
+| Computer Science Theory                               |
+|-------------------------------------------------------|
+| [15-859 CC Algorithms for Big Data](#course15859CC)   |
 | [15-859 OO Randomness in Computation](#course15859OO) |
+| [15-751 A Theorist's Toolkit](#course15751)           |
 {: .table .table-bordered .table-hover .table-sm }
 
-| Machine Learning/AI |
-|-----------------------------------|
+| Machine Learning/AI                                  |
+|------------------------------------------------------|
 | [10-708 Probablistic Graphical Models](#course10708) |
 | [15-784 Foundations of Cooperative AI](#course15784) |
-| [10-617 Intermediate Deep Learning](#course10617) |
+| [10-617 Intermediate Deep Learning](#course10617)    |
+| [10-725 Convex Optimization](#course10725)           |
 {: .table .table-bordered .table-hover .table-sm }
 
 
 | Systems                                  |
 |------------------------------------------|
 | 15-330 Introduction to Computer Security |
-{: .table .table-striped }
+{: .table .table-bordered .table-hover .table-sm }
+
+| Programming Language Theory                                           |
+|-----------------------------------------------------------------------|
+| [15-819 Advanced Topics in Programming Language Theory](#course15819) |
+| [15-312 Foundations of Programming Languages](#course15312)           |
+{: .table .table-bordered .table-hover .table-sm }
+
+| Graphics |
+|------------------------------------------|
+| [16-385 Computer Vision](#course16385)           |
+{: .table .table-bordered .table-hover .table-sm }
+
+| Mathematics                             |
+|-----------------------------------------|
+| [21-651 General Topology](#course21651) |
+| [21-355 Principles of Real Analysis I](#course21355) |
+| [21-484 Graph Theory](#course21484) |
+{: .table .table-bordered .table-hover .table-sm }
+
+| Computer Science - Other                                    |
+|-------------------------------------------------------------|
+| [17-603 Communication for Software Leaders I](#course17603) |
+| [15-604 Immigration Course](#course15604)                   |
+{: .table .table-bordered .table-hover .table-sm }
+
+| General Education |
+|-------------------------------------------------------------|
+| [70-350 Acting for Business](#course70350) |
+{: .table .table-bordered .table-hover .table-sm }
 
 ---
 
 <!-- {::options parse_block_html="true" /} -->
+### Spring 2023 (Intended)
+- 10-716 &nbsp; **[Advanced Machine Learning: Theory and Methods](https://www.cs.cmu.edu/~pradeepr/716/)**, [	Pradeep Ravikumar](http://www.cs.cmu.edu/~pradeepr/) 
+- 36-709 &nbsp; **Advanced Statistical Theory I**, [Matey Neykov](https://mateyneykov.com/) 
 
 ### Fall 2022
 {: .first-course-item #course15859CC } 
@@ -173,6 +209,7 @@ For ease of navigation, I've
   grab a friend or two if you're taking this class.
   
 - 21-651 &nbsp; **General Topology**, [Florian Frick](https://www.math.cmu.edu/~ffrick/)
+  {: .course-item #course21651 } 
 
   This class generalizes many concepts that is taught in an undergraduate
   analysis course from metric spaces in $$\mathbb{R}^n$$ to arbitrary
@@ -184,23 +221,50 @@ For ease of navigation, I've
   I found very beautiful.
 
 - 17-603 &nbsp; **Communications for Software Leaders I**, [Dominick (Nick) Frollini](https://www.linkedin.com/in/frollini/)
+  {: .course-item #course17603 } 
 
   This course felt like an MBA class. It is a required class for Masters of Software
   Engineering (MSE) students, and one thing that I did not expect was how much
   the course was geared towards international students (i.e there was quite some
   emphasis on what is appropriate for US customs and norms), which is 
   understandable as most of the MSE students taking the class are international.
-  I found the segments about how to give oral presentations useful, but did not
-  gain as much from other topics, in particular those concerning written
-  communication.
+
+  I found the segments about how to give oral presentations useful, especially
+  the many tips and things to take note of when presenting.
+  However, I don't think I gained as much from other topics, such as those
+  concerning written communication.
 
 - 15-604 &nbsp; **Immigration Course**, [Dave Eckhardt](https://www.cs.cmu.edu/~davide/)
-
+  {: .course-item #course15604 } 
+  
+  Every Monday night, the entire MSCS cohort will gather for this course, where
+  Dave will talk about topics ranging from classes to grad school to things to
+  do in Pittsburgh. It's usually pretty funny because Dave has a great sense of
+  humor, but many of the sessions are also not critically useful so
+  attendance does being tapering off in the middle of the semester once
+  people start getting busy with school. 
+  
 Units: 90
+
+This was a really heavy semester for me, mainly because I had to juggle 4 group
+projects  (Deep Learning, Probabilistic Graphical Models, Cooperative AI,
+Algorithms for Big Data) simultaneously starting from the midpoint of the
+semester, and all of them were significant course undertakings which are
+anywhere between 30-50% of the final course grade. This is still with
+homeworks from all of these classes also being due concurrently,
+with the exception of Algorithms for Big Data. 
+
+Fortunately, all the projects turned out relatively well and I was pretty happy
+with them, but it definitely took a toll on my physical and mental health. I
+ended up only mostly talking to my project groupmates over the last two weeks
+of school when all the projects were due. It would probably be wise to learn
+from my mistake and make sure that you don't have too many classes with
+significant course projects on your schedule to avoid such a situation.
 
 ### Spring 2022
 - &#11088; 10-725 &nbsp; **Convex Optimization**, [Yuanzhi
 Li](https://www.andrew.cmu.edu/user/yuanzhil/)
+  {: .course-item #course10725 } 
 
   I did not enjoy 10-701 as it covered a lot of content, but did not go into much detail about many topics,
   and I felt like there was no true understanding and everything was very hand-wavey. That
@@ -229,6 +293,7 @@ Li](https://www.andrew.cmu.edu/user/yuanzhil/)
 - &#11088; 15-751 **[A Theorist's
 Toolkit](https://www.youtube.com/playlist?list=PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX)**,
 [Ryan O'Donnell](http://www.cs.cmu.edu/~odonnell/)
+  {: .course-item #course15751 } 
 
   This class aims to prepare students for doing theoretical computer science (TCS)
   research in the future. It covers a wide range of topics that frequently crop up in
@@ -246,6 +311,7 @@ Toolkit](https://www.youtube.com/playlist?list=PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pn
 
 - &#10084;&#65039; 15-312 **Foundations of Programming Languages**, [Jan
 Hoffmann](https://www.cs.cmu.edu/~janh/)
+  {: .course-item #course15312 } 
 
   The programming portion of the homework is the most fun part of this class.
   You will get to write typecheckers and implement the dynamics of various
@@ -256,6 +322,7 @@ Hoffmann](https://www.cs.cmu.edu/~janh/)
 
 - &#10084;&#65039; 21-355 **Principles of Real Analysis I**, [Robin
 Neumayer](https://www.math.cmu.edu/~rneumaye/)
+  {: .course-item #course21355 } 
   
   It is true that different sections of math classes taught by different
   professors are run like entirely different classes, so your experience with
@@ -277,6 +344,7 @@ Neumayer](https://www.math.cmu.edu/~rneumaye/)
 
 - &#10084;&#65039; 21-484 **Graph Theory**, [Wesley
 Pegden](https://www.math.cmu.edu/~wes/)
+  {: .course-item #course21484 } 
 
   The class was quite fast-paced and many times I felt quite lost during the
   longer proofs (some of them took multiple classes to prove). I definitely had
@@ -294,6 +362,7 @@ Pegden](https://www.math.cmu.edu/~wes/)
 
 - 15-819 **Advanced Topics in Programming Language Theory**, [Robert
 Harper](http://www.cs.cmu.edu/~rwh/)
+  {: .course-item #course15819 } 
 
   The class covered many advanced topics in PL theory where there isn't much
   publicly available resources on, so when I got confused during lecture
@@ -312,6 +381,7 @@ Harper](http://www.cs.cmu.edu/~rwh/)
 
 - 16-385 **[Computer Vision](http://16385.courses.cs.cmu.edu/spring2022/)**,
 [Matthew O'Toole](http://www.cs.cmu.edu/~motoole2/)
+  {: .course-item #course16385 } 
 
   I took this class as a follow-up to Computer Graphics (15-462).  Many computer
   vision techniques covered will abuse linear algebra heavily, so if you were
@@ -323,13 +393,25 @@ Harper](http://www.cs.cmu.edu/~rwh/)
 
 - 18-358 **[Introduction to Amateur Radio](https://tomzajdel.com/ece358/)**,
 [Tom Zajdel (AI6CU)](https://tomzajdel.com/)
+  {: .course-item #course16385 } 
 
-  To be very honest I was a pretty bad student for this course. Given the 
-  workload of my other classes, I had to skip many lectures and only studied
-  extensively for the FCC licensing exam, because passing the exam
-  is the only requirement for passing the class.
+  This is a pass/fail mini-course, where the only requirement for passing the
+  class is to obtain at least a Technician amateur radio license. 
+
+  To be very honest I was a pretty bad student for this course. Given the
+  workload of my other classes, I skipped more than a few lectures and only
+  studied extensively for the FCC licensing exam, a
+  
+  It was definitely a cool class, and we were also provided handheld radios and
+  taught how to operate them to listen in on Buggy Net over [Spring
+  Carnival](https://www.cmu.edu/engage/alumni/events/campus/spring-carnival/index.html)
+  pretty early on. I was manning SSA's booth for a few hours during then, and
+  used the chance to hear the Buggy Net operators announcing the start of each
+  race, and live updates on when which buggy crossed a certain junction.
+
 
 - 70-350 **Acting for Business**, Evelyn Pierce
+  {: .course-item #course70350 } 
 
 Units: 93
 
@@ -356,8 +438,7 @@ O'Donnell](http://www.cs.cmu.edu/~odonnell/)
   Recordings from a past offering of the course can be found on this [Youtube
   playlist](https://youtube.com/playlist?list=PLm3J0oaFux3YL5qLskC6xQ24JpMwOAeJz).
 
-- &#11088; 15-641 [**Computer Networks**](https://computer-networks.github.io/fa21/), [Peter Steenkiste
-](http://www.cs.cmu.edu/~prs/)
+- &#11088; 15-641 [**Computer Networks**](https://computer-networks.github.io/fa21/), [Peter Steenkiste](http://www.cs.cmu.edu/~prs/)
 
   I dedicated an [entire post]({% post_url
   2022-08-15-cmu-computer-networks-review %}) to review this course. Trust me,
