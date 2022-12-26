@@ -43,7 +43,7 @@ the agent no longer receives any rewards:
 
 Formally, we want to maximize the expected rewards for our policy over the trajectories
 that it visits. A trajectory $$\tau$$ is defined as state-action pairs
-$$\tau = (s_0, a_0, s_1, a_1, \dots, s_H)$$, where $$H$$ is horizon of the trajectory,
+$$\tau = (s_0, a_0, s_1, a_1, \dots, s_H, a_H, s_{H+1})$$, where $$H$$ is horizon of the trajectory,
 i.e the duration until the episode is terminated, and $$s_t, a_t$$ are the states and actions
 performed at each time step $$t$$.
 
@@ -113,12 +113,12 @@ where we can use $$ \frac{1}{N} \sum\limits_{i=1}^N \nabla_\theta  \log  P_\thet
 to the true expectation as our number of trajectory samples $$N$$ increases.
 
 We can compute $$\nabla_\theta  \log  P_\theta(\tau_i)$$ for each sampled trajectory $$\tau_i$$,
-and then take their average. This can be done as follows, writing $$\tau$$
-instead of $$\tau_i$$ to simplify notation:
+and then take their average. This can be done as follows:
 
 $$
 \begin{align*}
-    \nabla_\theta  \log  P_\theta(\tau)
+    \nabla_\theta  \log  P_\theta(\tau_i)
+     & = \nabla_\theta  \log  P_\theta(s_0, a_0, \dots, s_H, a_H, s_{H+1}) \\
      & = \nabla_\theta  \log  \left[
         \prod_{t=0}^H P(s_{t+1} \mid s_t, a_t) \cdot \pi_\theta (a_t \mid s_t),
     \right]                          \\
@@ -129,6 +129,7 @@ $$
      & = \sum\limits_{t=0}^H \nabla_\theta \log \pi_\theta (a_t \mid s_t),\\
 \end{align*}
 $$
+
 where the last expression is easily computable for models such as neural
 networks since it is end-to-end differentiable.
 
