@@ -543,4 +543,6 @@ Phase 1 defused. How about the next one?
 {% endraw %}
 {% endhighlight %}
 
-Awesome! I hope you have enjoyed the first part of this series and that it was helpful to you :). You can continue on to the second part [here]({% post_url 2020-07-31-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-2 %}).
+Awesome! I hope you have enjoyed the first part of this series and that it was
+helpful to you :). You can continue on to the second part [here]({% post_url
+2020-07-31-breaking-cmu-bomblab-with-angr-for-fun-and-profit-part-2 %}).

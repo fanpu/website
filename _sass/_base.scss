@@ -21,6 +21,10 @@ table {
   }
 }
 
+a strong {
+  color: var(--global-theme-color);
+}
+
 a, table.table a {
   color: var(--global-theme-color);
   &:hover {
