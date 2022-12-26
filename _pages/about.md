@@ -32,15 +32,13 @@ in AI/ML using the things that I've learnt.
 My other academic interests include
 complexity theory, programming language theory, and mathematics.
 
-In my free time, I enjoy bouldering, running, 
-reading textbooks, watching anime,
-and playing Genshin Impact. If I have an extended
-break I enjoy traveling, especially hiking
-and exploring the great outdoors.
+In my free time, I enjoy bouldering, running, reading textbooks, watching
+anime, playing Genshin Impact, and cosplaying at anime conventions. If I have
+an extended break I enjoy traveling, especially hiking and exploring the great
+outdoors.
 
-I grew up in my hometown Singapore before moving
-to the US for college. I try to go back and visit 
-once a year.
+I grew up in my hometown Singapore before moving to the US for college. I try
+to go back and visit once a year.
 
 Feel free to reach out to me at 
 fzeng[dot]andrew[dot]cmu[dot]edu. Unfortunately,
