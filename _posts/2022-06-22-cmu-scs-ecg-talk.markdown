@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     Last week, I had the wonderful opportunity to participate in Hwa Chong's
     Undergrad Alumni Forum to share my experiences studying at Carnegie Mellon's

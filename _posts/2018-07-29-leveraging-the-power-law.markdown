@@ -8,7 +8,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     It was three years ago that I was introduced the concept of the "power law"
     in Peter Thiel's book, Zero to One. Thiel states that "We don't live in a

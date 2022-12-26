@@ -8,7 +8,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     I have been using a multiple monitor setup on my Linux system for a long
     time, and one thing that always annoyed me was that the default monitor

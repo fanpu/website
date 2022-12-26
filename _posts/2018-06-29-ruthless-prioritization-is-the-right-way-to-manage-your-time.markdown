@@ -6,7 +6,7 @@ cover_preview: saleswhale/saleswhale_team_photo_fun_resize.avif
 class: post-template
 navigation: True
 author: fanpu
-comments: true
+giscus_comments: true
 description: >
     Last week I had the good fortune of having a one-on-one session with
     Gabriel, the CEO of Saleswhale.  As I rarely have

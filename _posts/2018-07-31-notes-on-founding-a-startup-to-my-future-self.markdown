@@ -8,7 +8,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description:
     This post is addressed to my future self, who (hopefully) would found a
     startup of his own someday. This is my last week at

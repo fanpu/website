@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
   UIUCTF20 was a really fun Animal Crossing themed CTF that ran from July 17-19
   2020. While I have not played the game before, I somewhat knew what it was about

@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true 
-comments: true
+giscus_comments: true
 description: >
     The graph minor theorem, also known as the Robertson–Seymour theorem, is
     generally regarded as the most important result in graph theory. In this post

@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     Over the past few years, I've received numerous questions about studying abroad
     and whether it is advisable to take a government scholarship to do so from my

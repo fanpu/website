@@ -9,6 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
+giscus_comments: true
 description: >
     Computer Networks is one of the lesser-known systems classes at Carnegie Mellon
     that turned out to be surprisingly fun and informative. In this post I'll talk

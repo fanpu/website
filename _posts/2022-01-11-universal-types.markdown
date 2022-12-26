@@ -8,7 +8,7 @@ caption: Crystal Lake, Mammoth Lakes Basin, California, USA
 class: post-template
 navigation: True
 author: fanpu
-comments: true
+giscus_comments: true
 description: >
     Universal types are very useful for performing generic programming, which
     allows you to use the same code over different types. For instance, the C++ STL

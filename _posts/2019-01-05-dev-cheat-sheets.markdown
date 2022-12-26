@@ -8,7 +8,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     Today I created a new tab for my blog, 'Dev Cheat Sheets'. This page will
     contain common commmand line commands that I use often. I have a habit of simply

@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     Many machine learning algorithms have been shown to be susceptible to
     adversarial examples. For example, image classification neural networks can

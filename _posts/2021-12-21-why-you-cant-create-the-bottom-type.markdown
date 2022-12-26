@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     If you've used any sort of object-oriented language, you may be familiar with the notion but not the name of the top-level type \(\top\). For instance, in Java, the `Object` class forms the root of the class hierarchy, and similarly, in Python, all objects inherit from `object`. 
     Analogously, there is also a bottom-level type \(\bot\),

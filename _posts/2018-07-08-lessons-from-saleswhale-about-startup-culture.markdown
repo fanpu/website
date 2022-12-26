@@ -8,7 +8,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     08 July marks 8 months since I started working in Saleswhale (08 November
     2017), and also the last month that I will be here before enrolling in

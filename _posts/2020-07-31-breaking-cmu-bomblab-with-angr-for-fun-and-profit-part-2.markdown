@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     This is Part 2 of the series on cracking CMU's Bomblab using Angr,
     where we solve Phase 2 by pushing symbolic values onto the stack to 

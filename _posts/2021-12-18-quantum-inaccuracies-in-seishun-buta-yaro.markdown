@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     I finished watching Seishun Buta Yaro (Rascal Does Not Dream of Bunny Girl
     Senpai) recently, and really enjoyed the anime. It explored themes of finding

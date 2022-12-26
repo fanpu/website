@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     We're back now with Part 3 of this series on cracking CMU's Bomblab using Angr!
 ---

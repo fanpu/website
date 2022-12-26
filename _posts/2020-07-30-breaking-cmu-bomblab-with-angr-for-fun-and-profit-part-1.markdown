@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     I have recently been learning about Angr, a binary analysis
     framework developed by UC Santa Barbara and Arizona State University. It caught

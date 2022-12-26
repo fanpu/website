@@ -8,7 +8,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
   My Jekyll blog has been on the default
   minima theme since its inception. It was

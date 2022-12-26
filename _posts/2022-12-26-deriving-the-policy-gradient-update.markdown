@@ -8,6 +8,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
+giscus_comments: true
 description: >
     Reinforcement learning algorithms that learn a policy (as opposed to implicit policy
     methods like \(\epsilon\)-greedy) optimize their policies by
@@ -52,13 +53,15 @@ This can be formalized as the following objective:
 $$
 \begin{align}
      & \max_\theta \E_{\tau \sim P_\theta(\tau)} [R(\tau)] \\
-   = & \max_\theta \sum\limits_\tau P_\theta(\tau) R(\tau),
+   = & \max_\theta \sum\limits_\tau P_\theta(\tau) R(\tau) \\
+   = & \max_\theta U(\theta),
 \end{align}
 $$
 
 where $$\tau$$ refers to a trajectory of state-action pairs, $$P_\theta(\tau)$$
 denotes the probability of experiencing trajectory $$\tau$$ under policy $$\theta$$,
-and $$R(\tau)$$ is the reward under trajectory $$\tau$$.
+and $$R(\tau)$$ is the reward under trajectory $$\tau$$,
+and $$U(\theta)$$ is shorthand for the expression for brevity.
 
 The probability of $$P_\theta(\tau)$$ is given by the following:
 
@@ -109,6 +112,17 @@ $$
 \end{align*}
 $$
 
+<!-- $$
+\begin{align*}
+    & \sum\limits_\tau \nabla_\theta  P_\theta(\tau) R(\tau)
+    &= \sum\limits_\tau \frac{ P_\theta(\tau) }{ P_\theta(\tau) } \nabla_\theta  P_\theta(\tau) R(\tau) \tag{multiplying by 1} \\
+    &= \sum\limits_\tau P_\theta(\tau) \frac{ \nabla_\theta  P_\theta(\tau)  }{ P_\theta(\tau) } R(\tau) \tag{rearranging} \\
+    &= \sum\limits_\tau P_\theta(\tau) \nabla_\theta  \log  P_\theta(\tau) R(\tau) \tag{$\frac{d}{dx} \log f(x) = \frac{f'(x)}{f(x)} $} \\
+    &= \E_{\tau \sim P_\theta(\tau)} \left[ \nabla_\theta  \log  P_\theta(\tau) R(\tau)  \right] \\
+    &\approx \frac{1}{N} \sum\limits_{i=1}^N \nabla_\theta  \log  P_\theta(\tau_i) R(\tau_i), \\
+\end{align*}
+$$ -->
+
 where we can use $$ \frac{1}{N} \sum\limits_{i=1}^N \nabla_\theta  \log  P_\theta(\tau_i) R(\tau_i) $$ as our estimator, which converges
 to the true expectation as our number of trajectory samples $$N$$ increases.
 
@@ -125,13 +139,27 @@ $$
      & = \nabla_\theta  \left[
         \sum\limits_{t=0}^H \log P(s_{t+1} \mid s_t, a_t) + \log \pi_\theta (a_t \mid s_t)
         \right] \\
-     & = \nabla_\theta \sum\limits_{t=0}^H \log \pi_\theta (a_t \mid s_t) \tag{first term does not depend on $\theta$, becomes zero} \\
+     & = \nabla_\theta \sum\limits_{t=0}^H \log \pi_\theta (a_t \mid s_t) \\
+     & \qquad \qquad \text{(first term does not depend on $\theta$, becomes zero)} \\
      & = \sum\limits_{t=0}^H \nabla_\theta \log \pi_\theta (a_t \mid s_t),\\
 \end{align*}
 $$
 
 where the last expression is easily computable for models such as neural
 networks since it is end-to-end differentiable.
+
+With the approximate gradient
+$$\nabla_\theta U(\theta)$$
+in hand, we can now perform our policy gradient update as
+
+$$
+\begin{align*}
+    \theta_{\mbox{new}} = \theta_{\mbox{old}} + \alpha \nabla_\theta U(\theta),
+\end{align*}
+$$
+
+for some choice of step size $$\alpha$$.
+
 
 ## Takeaways
 In this post, we saw from first principles how taking the gradients
@@ -149,6 +177,26 @@ estimator, after the popular REINFORCE algorithm.
 One limitation of this approach is that it requires $$\pi_\theta$$ to be
 differentiable. However, given how most RL models rely on neural networks,
 this is not a significant restriction.
+
+Choosing the right step size $$\alpha$$ is actually not straightforward.
+It is different from the offline supervised-learning context, where
+you can use methods like AdaGrad or RMSProp which adaptively
+chooses a learning rate for you, and even if the learning rate
+was not optimal it just takes more iterations to converge.
+On the other hand, in reinforcement learning,
+a learning rate that is too small results in inefficient use
+of trajectory samples as they cannot be trivially re-used
+since it depends on your current policy, and a learning
+rate that is too large can result in the policy becoming bad,
+which is difficult to recover from since future trajectories
+would also become bad. 
+
+We will discuss three important methods to
+choose an appropriate step size in a future post: Natural Policy Gradients,
+Proximal Policy Optimization (PPO), and Trust Region Policy Optimization
+(TRPO). Hope to see you around!
+
+*I would like to express my thanks to [Jun Yu Tan](https://jytan.net/about/) for proofreading this article and providing valuable suggestions*.
 
 ## References
 - [Carnegie Mellon University 10-703 Deep Reinforcement Learning and Control Course Slides](https://cmudeeprl.github.io/703website_f22/lectures/)

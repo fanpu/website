@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description:
     The final part of cracking CMU's Bomblab with Angr, where
     we crack the secret phase together!

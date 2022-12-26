@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     In this post, I talk about how themes of alienation pervades the music of
     the English rock band Pink Floyd. Pink Floyd is one of the greatest bands in

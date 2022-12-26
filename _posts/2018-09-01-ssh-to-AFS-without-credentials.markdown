@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description:
   This is the first part of a 2-part guide on how you can SSH to the Andrew File
   System without keying in your credentails, as well as mounting the Andrew File

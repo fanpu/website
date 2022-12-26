@@ -9,7 +9,7 @@ class: post-template
 navigation: True
 author: fanpu
 toc: true
-comments: true
+giscus_comments: true
 description: >
     In this post, we study the first deep reinforcement learning model that was
     successfully able to learn control policies directly from high dimensional

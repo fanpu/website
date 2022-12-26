@@ -8,6 +8,7 @@ navigation: True
 author: fanpu
 toc: true
 published: false
+giscus_comments: true
 ---
 
 Senior spring is a time of opportunity.  You would have cleared most of your
