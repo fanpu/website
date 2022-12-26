@@ -3,7 +3,7 @@ title: "Reinforcement Learning Policy Optimization: Deriving the Policy Gradient
 layout: post
 tags: [machine-learning, code]
 cover: denali_horseshoe_lake.jpg
-caption: Valley of Fire State Park, Overton, Nevada, USA
+caption: Horseshoe Lake Trail, Denali National Park and Preserve, Alaska, USA
 class: post-template
 navigation: True
 author: fanpu
@@ -196,7 +196,8 @@ choose an appropriate step size in a future post: Natural Policy Gradients,
 Proximal Policy Optimization (PPO), and Trust Region Policy Optimization
 (TRPO). Hope to see you around!
 
-*I would like to express my thanks to [Jun Yu Tan](https://jytan.net/about/) for proofreading this article and providing valuable suggestions*.
+*I would like to express my thanks to [Jun Yu Tan](https://jytan.net/about/)
+for proofreading this article and for providing valuable suggestions*.
 
 ## References
 - [Carnegie Mellon University 10-703 Deep Reinforcement Learning and Control Course Slides](https://cmudeeprl.github.io/703website_f22/lectures/)
