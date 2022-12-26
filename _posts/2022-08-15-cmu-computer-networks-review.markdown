@@ -1,7 +1,7 @@
 ---
 title: "CMU 15-441/641 Computer Networks Course Review"
 layout: post
-tags: [course-review, code]
+tags: [courses, code]
 cover: mojave_national_preserve.jpg
 cover_preview: mojave_national_preserve.avif
 caption: Mojave National Preserve, California, USA
@@ -279,7 +279,7 @@ help your career prospects, you can't go too wrong with this class.
 This post is written as part of a collection of posts to help shed light on some
 of CMU's less well-known classes that I found interesting and useful, in hopes
 of encouraging more people to consider taking them. Check out the [Course
-Reviews]( {% link _pages/about.md %}) page for more.
+Reviews]( {% link _pages/courses.md %}) page for more.
 
 
 I hope you found this post useful! Feel free to ask any questions in the
