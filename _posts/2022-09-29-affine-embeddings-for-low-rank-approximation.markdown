@@ -3,7 +3,7 @@ title: "Solving Low Rank Approximation Efficiently via Affine Embeddings"
 layout: post
 tags: [theory, machine-learning]
 cover: poo_poo_point.jpg
-cover_preview: poo_poo_point.jpg
+cover_preview: poo_poo_point.avif
 caption: Poo Poo Point, Cougar Mountains, Washington, USA
 class: post-template
 navigation: True
