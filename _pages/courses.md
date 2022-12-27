@@ -17,6 +17,10 @@ COVID-19 pandemic.
 Courses with a &#11088; are those that I found transformative,
 and those with a &#10084;&#65039; are those that I personally enjoyed a lot.
 
+I don't really write much the more popular introductory or required
+courses, since there's already a lot of word about it on the street and there
+isn't much for me to add which already hasn't been said.
+
 Feel free to ask any questions about the courses at CMU, including those that I
 have not taken, in the comments section below.
 
@@ -25,28 +29,35 @@ A lot of inspiration for this page came from [Wan Shen's CMU course review page]
 This page was recently updated on 11/9/2022 to help students decide the classes
 they may want to take ahead of course registration week.
 
+## Class Categories
+
 For ease of navigation, I've also categorized the classes that I've taken into
 the areas that they fall under, so you can just access the ones that
 you might be interested in directly.
 
-| Computer Science Theory                               |
-|-------------------------------------------------------|
-| [15-859 CC Algorithms for Big Data](#course15859CC)   |
-| [15-859 OO Randomness in Computation](#course15859OO) |
-| [15-751 A Theorist's Toolkit](#course15751)           |
+| Computer Science Theory                                         |
+|-----------------------------------------------------------------|
+| [15-859 CC Algorithms for Big Data](#course15859CC)             |
+| [15-859 OO Randomness in Computation](#course15859OO)           |
+| [15-751 A Theorist's Toolkit](#course15751)                     |
+| [15-459 Quantum Computation](#course15459)                      |
+| [15-356 Introduction to Cryptography](#course15356)             |
+| [15-855 Graduate Computational Complexity Theory](#course15855) |
 {: .table .table-bordered .table-hover .table-sm }
 
-| Machine Learning/AI                                  |
+| Machine Learning & AI                                  |
 |------------------------------------------------------|
 | [10-708 Probablistic Graphical Models](#course10708) |
 | [15-784 Foundations of Cooperative AI](#course15784) |
 | [10-617 Intermediate Deep Learning](#course10617)    |
 | [10-725 Convex Optimization](#course10725)           |
+| [16-385 Computer Vision](#course16385)           |
 {: .table .table-bordered .table-hover .table-sm }
 
-
-| Systems                                  |
+| Computer Systems                                  |
 |------------------------------------------|
+| [15-641 Computer Networks](#course15641) |
+| [18-746 Storage Systems](#course18746) |
 | 15-330 Introduction to Computer Security |
 {: .table .table-bordered .table-hover .table-sm }
 
@@ -54,11 +65,7 @@ you might be interested in directly.
 |-----------------------------------------------------------------------|
 | [15-819 Advanced Topics in Programming Language Theory](#course15819) |
 | [15-312 Foundations of Programming Languages](#course15312)           |
-{: .table .table-bordered .table-hover .table-sm }
-
-| Graphics |
-|------------------------------------------|
-| [16-385 Computer Vision](#course16385)           |
+| [15-317 Constructive Logic](#course15317)           |
 {: .table .table-bordered .table-hover .table-sm }
 
 | Mathematics                             |
@@ -70,6 +77,7 @@ you might be interested in directly.
 
 | Computer Science - Other                                    |
 |-------------------------------------------------------------|
+| [15-462 Computer Graphics](#course15462)           |
 | [17-603 Communication for Software Leaders I](#course17603) |
 | [15-604 Immigration Course](#course15604)                   |
 {: .table .table-bordered .table-hover .table-sm }
@@ -77,11 +85,65 @@ you might be interested in directly.
 | General Education |
 |-------------------------------------------------------------|
 | [70-350 Acting for Business](#course70350) |
+| [84-380 US Grand Strategy](#course84380) |
 {: .table .table-bordered .table-hover .table-sm }
 
 ---
 
 <!-- {::options parse_block_html="true" /} -->
+## Reverse Chronological Order
+
+<!-- <div markdown="1">
+   My text with **markdown** syntax
+</div>
+<p>
+  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+    Link with href
+  </a>
+  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    Button with data-bs-target
+  </button>
+</p>
+<div class="collapse" id="collapseExample">
+  <div class="card card-body">
+    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
+  </div>
+</div>
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingOne">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        Accordion Item #1
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingTwo">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+        Accordion Item #2
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header" id="flush-headingThree">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Accordion Item #3
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
+    </div>
+  </div>
+</div> -->
+
+
 ### Spring 2023 (Intended)
 - 10-716 &nbsp; **[Advanced Machine Learning: Theory and Methods](https://www.cs.cmu.edu/~pradeepr/716/)**, [	Pradeep Ravikumar](http://www.cs.cmu.edu/~pradeepr/) 
 - 36-709 &nbsp; **Advanced Statistical Theory I**, [Matey Neykov](https://mateyneykov.com/) 
@@ -261,10 +323,12 @@ of school when all the projects were due. It would probably be wise to learn
 from my mistake and make sure that you don't have too many classes with
 significant course projects on your schedule to avoid such a situation.
 
+---
+
 ### Spring 2022
+  {: .first-course-item #course10725 } 
 - &#11088; 10-725 &nbsp; **Convex Optimization**, [Yuanzhi
 Li](https://www.andrew.cmu.edu/user/yuanzhil/)
-  {: .course-item #course10725 } 
 
   I did not enjoy 10-701 as it covered a lot of content, but did not go into much detail about many topics,
   and I felt like there was no true understanding and everything was very hand-wavey. That
@@ -415,7 +479,10 @@ Harper](http://www.cs.cmu.edu/~rwh/)
 
 Units: 93
 
+---
+
 ### Fall 2021
+  {: .first-course-item #course15459 } 
 - &#10084;&#65039; 15-459 [**Quantum
 Computation**](https://youtube.com/playlist?list=PLm3J0oaFux3YL5qLskC6xQ24JpMwOAeJz),
 [Ryan
@@ -439,6 +506,7 @@ O'Donnell](http://www.cs.cmu.edu/~odonnell/)
   playlist](https://youtube.com/playlist?list=PLm3J0oaFux3YL5qLskC6xQ24JpMwOAeJz).
 
 - &#11088; 15-641 [**Computer Networks**](https://computer-networks.github.io/fa21/), [Peter Steenkiste](http://www.cs.cmu.edu/~prs/)
+  {: .course-item #course15641 } 
 
   I dedicated an [entire post]({% post_url
   2022-08-15-cmu-computer-networks-review %}) to review this course. Trust me,
@@ -447,6 +515,7 @@ O'Donnell](http://www.cs.cmu.edu/~odonnell/)
   already have a lot of systems experience.
   
 - 15-317 [**Constructive Logic**](http://www.cs.cmu.edu/~crary/317-f21/), [Karl Crary](http://www.cs.cmu.edu/~crary/)
+  {: .course-item #course15317 } 
 
   It can be hard to see how this class is relevant without subsequently taking
   other PL classes. I found the theoretical foundations gained from this course
@@ -455,6 +524,7 @@ O'Donnell](http://www.cs.cmu.edu/~odonnell/)
   is more immediately applicable.
 
 - 15-356 [**Introduction to Cryptography**](https://www.cs.cmu.edu/~15356-f21/), [Elaine Shi](http://elaineshi.com/)
+  {: .course-item #course15356 } 
 
   I found the class relatively easy as I had already taken 15-330 prior to this, and so I only started seeing
   new content near the middle of the course. The last part of the course covers
@@ -464,6 +534,7 @@ O'Donnell](http://www.cs.cmu.edu/~odonnell/)
   that it went faster and covered more content like lattice-based and post-quantum cryptography.
 
 - 15-462 [**Computer Graphics**](http://15462.courses.cs.cmu.edu/fall2021/), [Keenan Crane](http://www.cs.cmu.edu/~kmcrane/)
+  {: .course-item #course15462 } 
 
   The course assignments are pretty fun. and there's many moments of instant
   gratification, such as when you see your ray tracer paint a beautiful image
@@ -487,6 +558,7 @@ O'Donnell](http://www.cs.cmu.edu/~odonnell/)
 Ganger](http://users.ece.cmu.edu/~ganger/), [George
 Amvrosiadis](http://users.ece.cmu.edu/~gamvrosi/), [Huaicheng
 Li](https://huaicheng.github.io/)
+  {: .course-item #course18746 } 
 
   During the first lecture, the professor talked about NAND flash alll the way
   down to the gory details about how it is implemented with MOSFET cells, and
@@ -518,6 +590,7 @@ Li](https://huaicheng.github.io/)
   and storage systems (Google BigTable) that big tech companies use works.
 
 - 84-380 **US Grand Strategy**, Andrew Stravers
+  {: .course-item #course84380 } 
 
   As someone who is interested in history and geopolitics I really liked this
   class. It offers a critical and balanced examination of past US foreign policy
@@ -529,7 +602,10 @@ Li](https://huaicheng.github.io/)
 
 Units: 75
 
+---
+
 ### Spring 2021
+  {: .first-course-item #course15855 } 
 - &#11088; 15-855 [**Graduate Computational Complexity
 Theory**](https://youtube.com/playlist?list=PLm3J0oaFux3b8Gg1DdaJOzYNsaXYLAOKH),
 [Ryan O'Donnell](http://www.cs.cmu.edu/~odonnell/)
@@ -549,6 +625,7 @@ Theory**](https://youtube.com/playlist?list=PLm3J0oaFux3b8Gg1DdaJOzYNsaXYLAOKH),
 
 - &#10084;&#65039; 21-301 [**Combinatorics**](https://www.math.cmu.edu/~jmackey/math301/syll.html),
 [John Mackey](https://scholar.google.com/citations?user=uOCVq1cAAAAJ&hl=en)
+  {: .course-item #course21301 } 
 
   I loved 15-151 (Concepts in Mathematics) and after that class I swore that if
   Mackey ever taught another class, I will take it for sure. Mackey is just as
