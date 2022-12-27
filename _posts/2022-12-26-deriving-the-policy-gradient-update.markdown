@@ -90,7 +90,7 @@ $$
 \begin{align*}
     \nabla_\theta \E_{\tau \sim P_\theta(\tau)} [R(\tau)]
      & = \nabla_\theta \sum\limits_\tau P_\theta(\tau) R(\tau) \\
-     & = \sum\limits_\tau \nabla_\theta  P_\theta(\tau) R(\tau) \tag{uh oh...}\\
+     & = \sum\limits_\tau \nabla_\theta  P_\theta(\tau) R(\tau) & \text{(uh oh...)}\\
 \end{align*}
 $$
 
@@ -105,24 +105,13 @@ Instead, the trick is to multiply by 1 on the left:
 $$
 \begin{align*}
     \sum\limits_\tau \nabla_\theta  P_\theta(\tau) R(\tau)
-    &= \sum\limits_\tau \frac{ P_\theta(\tau) }{ P_\theta(\tau) } \nabla_\theta  P_\theta(\tau) R(\tau) \tag{multiplying by 1} \\
-    &= \sum\limits_\tau P_\theta(\tau) \frac{ \nabla_\theta  P_\theta(\tau)  }{ P_\theta(\tau) } R(\tau) \tag{rearranging} \\
-    &= \sum\limits_\tau P_\theta(\tau) \nabla_\theta  \log  P_\theta(\tau) R(\tau) \tag{$\frac{d}{dx} \log f(x) = \frac{f'(x)}{f(x)} $} \\
+    &= \sum\limits_\tau \frac{ P_\theta(\tau) }{ P_\theta(\tau) } \nabla_\theta  P_\theta(\tau) R(\tau) & \text{(multiplying by 1)} \\
+    &= \sum\limits_\tau P_\theta(\tau) \frac{ \nabla_\theta  P_\theta(\tau)  }{ P_\theta(\tau) } R(\tau) & \text{(rearranging)} \\
+    &= \sum\limits_\tau P_\theta(\tau) \nabla_\theta  \log  P_\theta(\tau) R(\tau) & \text{($\frac{d}{dx} \log f(x) = \frac{f'(x)}{f(x)} $)} \\
     &= \E_{\tau \sim P_\theta(\tau)} \left[ \nabla_\theta  \log  P_\theta(\tau) R(\tau)  \right] \\
     &\approx \frac{1}{N} \sum\limits_{i=1}^N \nabla_\theta  \log  P_\theta(\tau_i) R(\tau_i), \\
 \end{align*}
 $$
-
-<!-- $$
-\begin{align*}
-    & \sum\limits_\tau \nabla_\theta  P_\theta(\tau) R(\tau)
-    &= \sum\limits_\tau \frac{ P_\theta(\tau) }{ P_\theta(\tau) } \nabla_\theta  P_\theta(\tau) R(\tau) \tag{multiplying by 1} \\
-    &= \sum\limits_\tau P_\theta(\tau) \frac{ \nabla_\theta  P_\theta(\tau)  }{ P_\theta(\tau) } R(\tau) \tag{rearranging} \\
-    &= \sum\limits_\tau P_\theta(\tau) \nabla_\theta  \log  P_\theta(\tau) R(\tau) \tag{$\frac{d}{dx} \log f(x) = \frac{f'(x)}{f(x)} $} \\
-    &= \E_{\tau \sim P_\theta(\tau)} \left[ \nabla_\theta  \log  P_\theta(\tau) R(\tau)  \right] \\
-    &\approx \frac{1}{N} \sum\limits_{i=1}^N \nabla_\theta  \log  P_\theta(\tau_i) R(\tau_i), \\
-\end{align*}
-$$ -->
 
 where we can use $$ \frac{1}{N} \sum\limits_{i=1}^N \nabla_\theta  \log  P_\theta(\tau_i) R(\tau_i) $$ as our estimator, which converges
 to the true expectation as our number of trajectory samples $$N$$ increases.
