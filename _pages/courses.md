@@ -91,7 +91,7 @@ you might be interested in directly.
 | [21-301 Combinatorics](#course21301)                                 |
 | [15-259 Probability and Computing](#course15259)                     |
 | [15-260 Statistics and Computing](#course15260)                      |
-| [15-268 Multi-dimensional Calculus](#course21268)                    |
+| [21-268 Multi-dimensional Calculus](#course21268)                    |
 | [21-241 Matrices and Linear Transformations](#course21241)           |
 | [21-122 Integration and Approximation](#course21122)                 |
 | [21-120 Differential and Integral Calculus](#course21120)            |
