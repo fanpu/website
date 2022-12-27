@@ -2,3 +2,19 @@
 \nabla_\theta \E_{\tau \sim P(\tau; \theta)} [R(\tau)]
 & = 
 \end{align*}
+
+\begin{align}
+      & \min _{\text {rank-}k\, X}\left\|X S A-A(S A)^{-} S
+    A\right\|_{\mathrm{F}}^{2}                                                                                                                               \\
+    = & \min _{\text {rank}-k\, X}\left\|X U \Sigma
+    V^{\top}-A(S A)^{-} U \Sigma V^{\top}\right\|_{\mathrm{F}}^{2}
+      & \text{(substituting SVD representation of $S$)}                                                                                                      \\
+    = & \min _{\text
+        {rank}-k\, X}\left\|\left(X U \Sigma-A(S A)^{-} U \Sigma\right)
+    V^{\top}\right\|_{\mathrm{F}}^{2}                                                                                                                        \\
+    = & \min _{\text
+        {rank}-k\, X}\left\|X U \Sigma-A(S A)^{-} U \Sigma
+    \right\|_{\mathrm{F}}^{2}
+      & \text{($V^\top$ is orthonormal and does not change norm)}                                                                                            \\
+    = & \min _{\text {rank-k } Y}\left\|Y - A (SA)^- U \Sigma\right\|_{F}^{2}. & \text{(change of variables from $X$ to $Y$, since $U\Sigma$ has full rank)} \\
+\end{align}

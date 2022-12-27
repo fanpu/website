@@ -1,5 +1,5 @@
 ---
-title: "Solving Low Rank Approximation Efficiently via Affine Embeddings"
+title: "Efficient Low Rank Approximation via Affine Embeddings"
 layout: post
 tags: [theory, machine-learning]
 cover: poo_poo_point.jpg
