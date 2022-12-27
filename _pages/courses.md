@@ -24,68 +24,105 @@ isn't much for me to add which already hasn't been said.
 Feel free to ask any questions about the courses at CMU, including those that I
 have not taken, in the comments section below.
 
-A lot of inspiration for this page came from [Wan Shen's CMU course review page](https://wanshenl.me/courses/reviews/).
+Inspiration for this page came from [Wan Shen's CMU course review page](https://wanshenl.me/courses/reviews/).
 
 This page was recently updated on 11/9/2022 to help students decide the classes
 they may want to take ahead of course registration week.
 
-## Class Categories
+## Category
 
 For ease of navigation, I've also categorized the classes that I've taken into
 the areas that they fall under, so you can just access the ones that
 you might be interested in directly.
 
-| Computer Science Theory                                         |
-|-----------------------------------------------------------------|
-| [15-859 CC Algorithms for Big Data](#course15859CC)             |
-| [15-859 OO Randomness in Computation](#course15859OO)           |
-| [15-751 A Theorist's Toolkit](#course15751)                     |
-| [15-459 Quantum Computation](#course15459)                      |
-| [15-356 Introduction to Cryptography](#course15356)             |
-| [15-855 Graduate Computational Complexity Theory](#course15855) |
+| Computer Science Theory & Algorithms                                          |
+|-------------------------------------------------------------------------------|
+| [15-859 CC Algorithms for Big Data](#course15859CC)                           |
+| [15-859 OO Randomness in Computation](#course15859OO)                         |
+| [15-855 Graduate Computational Complexity Theory](#course15855)               |
+| [15-751 A Theorist's Toolkit](#course15751)                                   |
+| [15-459 Quantum Computation](#course15459)                                    |
+| [15-455 Undergraduate Computational Complexity Theory](#course15455)          |
+| [15-451 Algorithm Design and Analysis](#course15451)                          |
+| [15-356 Introduction to Cryptography](#course15356)                           |
+| [15-354 Computation and Discrete Math](#course15354)                          |
+| [15-210 Parallel and Sequential Data Structures and Algorithms](#course15210) |
+| [15-251 Great Ideas in Theoretical Computer Science](#course15251)            |
 {: .table .table-bordered .table-hover .table-sm }
 
-| Machine Learning & AI                                  |
-|------------------------------------------------------|
-| [10-708 Probablistic Graphical Models](#course10708) |
-| [15-784 Foundations of Cooperative AI](#course15784) |
-| [10-617 Intermediate Deep Learning](#course10617)    |
-| [10-725 Convex Optimization](#course10725)           |
-| [16-385 Computer Vision](#course16385)           |
+| Machine Learning & AI                                          |
+|----------------------------------------------------------------|
+| [10-708 Probablistic Graphical Models](#course10708)           |
+| [10-703 Deep Reinforcement Learning and Control](#course10703) |
+| [10-725 Convex Optimization](#course10725)                     |
+| [10-617 Intermediate Deep Learning](#course10617)              |
+| [10-701 Introduction to Machine Learning](#course10701)        |
+| [15-784 Foundations of Cooperative AI](#course15784)           |
+| [16-385 Computer Vision](#course16385)                         |
 {: .table .table-bordered .table-hover .table-sm }
 
-| Computer Systems                                  |
-|------------------------------------------|
-| [15-641 Computer Networks](#course15641) |
-| [18-746 Storage Systems](#course18746) |
-| 15-330 Introduction to Computer Security |
+| Computer Systems                                                   |
+|--------------------------------------------------------------------|
+| [15-410 Operating Systems Design and Implementation](#course15410) |
+| [15-411 Compiler Design](#course15411)                             |
+| [15-641 Computer Networks](#course15641)                           |
+| [15-445 Database Systems](#course15445)                            |
+| [18-746 Storage Systems](#course18746)                             |
+| [15-319 Cloud Computing](#course15319)                             |
+| [15-440 Distributed Systems](#course15440)                         |
+| [15-330 Introduction to Computer Security](#course15330)           |
+| [15-213 Introduction to Computer Systems](#course15213)            |
 {: .table .table-bordered .table-hover .table-sm }
 
 | Programming Language Theory                                           |
 |-----------------------------------------------------------------------|
 | [15-819 Advanced Topics in Programming Language Theory](#course15819) |
 | [15-312 Foundations of Programming Languages](#course15312)           |
-| [15-317 Constructive Logic](#course15317)           |
+| [15-317 Constructive Logic](#course15317)                             |
+| [15-150 Principles of Functional Programming](#course15150)           |
+| [98-317 StuCo: Type Theory (Hype for Types)](#course98317)            |
 {: .table .table-bordered .table-hover .table-sm }
 
-| Mathematics                             |
-|-----------------------------------------|
-| [21-651 General Topology](#course21651) |
-| [21-355 Principles of Real Analysis I](#course21355) |
-| [21-484 Graph Theory](#course21484) |
+| Mathematics                                                          |
+|----------------------------------------------------------------------|
+| [21-651 General Topology](#course21651)                              |
+| [21-355 Principles of Real Analysis I](#course21355)                 |
+| [21-484 Graph Theory](#course21484)                                  |
+| [21-301 Combinatorics](#course21301)                                 |
+| [15-259 Probability and Computing](#course15259)                     |
+| [15-260 Statistics and Computing](#course15260)                      |
+| [15-268 Multi-dimensional Calculus](#course21268)                    |
+| [21-241 Matrices and Linear Transformations](#course21241)           |
+| [21-122 Integration and Approximation](#course21122)                 |
+| [21-120 Differential and Integral Calculus](#course21120)            |
+| [15-151 Mathematical Foundations for Computer Science](#course15151) |
 {: .table .table-bordered .table-hover .table-sm }
 
-| Computer Science - Other                                    |
-|-------------------------------------------------------------|
-| [15-462 Computer Graphics](#course15462)           |
-| [17-603 Communication for Software Leaders I](#course17603) |
-| [15-604 Immigration Course](#course15604)                   |
+| Computer Science - Other                                            |
+|---------------------------------------------------------------------|
+| [15-462 Computer Graphics](#course15462)                            |
+| [15-300 Research and Innovation in Computer Science](#course15300) |
+| [17-603 Communication for Software Leaders I](#course17603)         |
+| [15-122 Principles of Imperative Computation*](#course15122)        |
+| [15-604 Immigration Course](#course15604)                           |
+| [07-128 First Year Immigration Course](#course07128)                |
+| [07-131 Great Practical Ideas in Computer Science](#course07131)    |
 {: .table .table-bordered .table-hover .table-sm }
 
-| General Education |
-|-------------------------------------------------------------|
-| [70-350 Acting for Business](#course70350) |
-| [84-380 US Grand Strategy](#course84380) |
+| General Education, Stucos, Others                                                     |
+|---------------------------------------------------------------------------------------|
+| [33-228 Electronics I](#course33228)                                                  |
+| [70-350 Acting for Business](#course70350)                                            |
+| [84-380 US Grand Strategy](#course84380)                                              |
+| [85-102 Introduction to Psychology](#course85102)                                     |
+| [79-396 Music and Society in 19th and 20th Century Europe and the U.S.](#course79396) |
+| [80-100 Introduction to Philosophy](#course80100)                                     |
+| [76-107 Writing about Data](#course76106)                                             |
+| [76-106 Writing about Literature and Art](#course76106)                               |
+| [69-151 Introduction to Yoga](#course69151)                                           |
+| [98-242 StuCo: Introduction to Esoteric Programming Languages](#course98242)          |
+| [98-212 StuCo: Competitive Computer Security](#course98212)                           |
+| [98-349 StuCo: Design and Analysis of Logic Puzzle Games](#course98349)               |
 {: .table .table-bordered .table-hover .table-sm }
 
 ---
@@ -96,57 +133,17 @@ you might be interested in directly.
 <div markdown="1">
    My text with **markdown** syntax
 </div>
-<p>
-  <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-    Link with href
-  </a>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
-    Button with data-bs-target
-  </button>
-</p>
-<div class="collapse" id="collapseExample">
-  <div class="card card-body">
-    Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user activates the relevant trigger.
-  </div>
-</div>
-
-<div class="accordion accordion-flush" id="accordionFlushExample">
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingOne">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-        Accordion Item #1
-      </button>
-    </h2>
-    <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingTwo">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
-        Accordion Item #2
-      </button>
-    </h2>
-    <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
-    </div>
-  </div>
-  <div class="accordion-item">
-    <h2 class="accordion-header" id="flush-headingThree">
-      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
-        Accordion Item #3
-      </button>
-    </h2>
-    <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
-      <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the third item's accordion body. Nothing more exciting happening here in terms of content, but just filling up the space to make it look, at least at first glance, a bit more representative of how this would look in a real-world application.</div>
-    </div>
-  </div>
-</div>
 
 
 ### Spring 2023 (Intended)
 - 10-716 &nbsp; **[Advanced Machine Learning: Theory and Methods](https://www.cs.cmu.edu/~pradeepr/716/)**, [	Pradeep Ravikumar](http://www.cs.cmu.edu/~pradeepr/) 
 - 36-709 &nbsp; **Advanced Statistical Theory I**, [Matey Neykov](https://mateyneykov.com/) 
+- 15-859 II &nbsp; **Special Topics in Cryptography**, 
+[Aayush Jain](https://sites.google.com/view/aayushjain/home)
+- 21-650 &nbsp; **Introduction to Functional Analysis**, [Giovanni Leoni
+](https://www.cmu.edu/math/people/faculty/leoni.html) 
+- 15-618 &nbsp; **Parallel Computer Architecture and Programming**, [Zhihao Jia
+](https://www.cs.cmu.edu/~zhihaoj2/), [Brian Railing](http://www.cs.cmu.edu/~bpr/)
 
 ### Fall 2022
 {: .first-course-item #course15859CC } 
@@ -245,7 +242,7 @@ you might be interested in directly.
   on Kaggle datasets), whereas 10-417/617 is more
   theoretical.
  
-- 10-703 &nbsp; **[Deep Reinforcement Learning](https://cmudeeprl.github.io/703website_f22/)**, [Katerina Fragkiadaki](https://www.cs.cmu.edu/~katef/)
+- 10-703 &nbsp; **[Deep Reinforcement Learning and Control](https://cmudeeprl.github.io/703website_f22/)**, [Katerina Fragkiadaki](https://www.cs.cmu.edu/~katef/)
   {: .course-item #course10703 } 
   
   The first half of the course follows the standard Sutton and Barto
@@ -645,6 +642,7 @@ Theory**](https://youtube.com/playlist?list=PLm3J0oaFux3b8Gg1DdaJOzYNsaXYLAOKH),
   perfect GPA.
 
 - &#10084;&#65039; 85-102 **Introduction to Psychology**, Kody Manke
+  {: .course-item #course85102 } 
   
   My view of psychology was pretty misguided (think Sigmund Freud, Carl Jung)
   before coming into this class, and it ended up being one of my favorite geneds.
@@ -652,10 +650,10 @@ Theory**](https://youtube.com/playlist?list=PLm3J0oaFux3b8Gg1DdaJOzYNsaXYLAOKH),
   to many social phenomenom that I encounter in daily life, such as stereotype
   threat and priming.
 
-- 10-701 [**Introduction to Machine
-Learning**](https://www.cs.cmu.edu/~aarti/Class/10701_Spring21/index.html),
+- 10-701 [**Introduction to Machine Learning**](https://www.cs.cmu.edu/~aarti/Class/10701_Spring21/index.html),
 [Geoff Gordon](http://www.cs.cmu.edu/~ggordon/), [Aarti
 Singh](http://www.cs.cmu.edu/~aarti/)
+  {: .course-item #course10701 } 
 
   I did not really enjoy this class, and felt that it tried to cover too much
   too quickly, which led to a very shallow and surface-level understanding of
@@ -674,6 +672,7 @@ Singh](http://www.cs.cmu.edu/~aarti/)
   challenging option.
   
 - 15-354 [**Computation and Discrete Math**](https://www.cs.cmu.edu/~sutner/CDM/index.html), [Klaus Sutner](https://www.cs.cmu.edu/~sutner/index.html)
+  {: .course-item #course15354 } 
 
   Klaus has a reputation of trying to add abstract algebra in everything that he
   teaches. This was definitely true in his trademark class Computation and
@@ -691,6 +690,7 @@ Singh](http://www.cs.cmu.edu/~aarti/)
 - 15-440 [**Distributed Systems**](https://www.andrew.cmu.edu/course/15-440/),
 [Mahadev Satyanarayanan](http://www.cs.cmu.edu/~satya/), [Padmanabhan
 Pillai](https://www.andrew.cmu.edu/user/pspillai/)
+  {: .course-item #course15440 } 
 
   Having already taken 15-410 (Operating Systems) which covers many concurrency
   and cache coherence concepts, 15-319 (Cloud Computing) which has an entire
@@ -703,13 +703,17 @@ Pillai](https://www.andrew.cmu.edu/user/pspillai/)
   that you are planning to take.
 
 - 98-242 **StuCo: Introduction to Esoteric Programming Languages**, [Ari Cohn](https://wafflecohn.github.io/), Jonathan Loungani
+  {: .course-item #course98242 } 
 
 Units: 69
+
+---
 
 ### Fall 2020
 - &#10084;&#65039; 15-411 [**Compiler
 Design**](https://www.cs.cmu.edu/afs/cs/academic/class/15411-f20/www/), [Seth
 Goldstein](http://www.cs.cmu.edu/~seth/)
+  {: .first-course-item #course15411 } 
   
   Compilers is the other "star" systems class in CMU apart from OS.  The best
   part of the course were the labs by far.  They are done in groups of 2, and
@@ -805,6 +809,7 @@ Goldstein](http://www.cs.cmu.edu/~seth/)
 
 - &#11088; 15-455 **Undergraduate Complexity Theory**, [Venkatesan Guruswami
 ](https://people.eecs.berkeley.edu/~venkatg/), [Jonathan Mosheiff](https://www.cs.bgu.ac.il/~mosheiff/)
+  {: .course-item #course15455 } 
 
   I really enjoyed 15-251 Great Theoretical Ideas in Computer Science under
   Venkat, and decided to take this class with him as well. Undergraduate
@@ -827,6 +832,7 @@ Goldstein](http://www.cs.cmu.edu/~seth/)
   playlist](https://www.youtube.com/playlist?list=PLm3J0oaFux3YL5vLXpzOyJiLtqLp6dCW2).
   
 - &#10084;&#65039; 15-445 [**Database Systems**](https://15445.courses.cs.cmu.edu/), [Andy Pavlo](http://www.cs.cmu.edu/~pavlo/)
+  {: .course-item #course15445 } 
 
   Andy's lectures are a whole lot of fun, and it is hard to not be fired up by
   his enthusiasm and energy for databases. You will get to build the major
@@ -841,6 +847,7 @@ Goldstein](http://www.cs.cmu.edu/~seth/)
 - 15-300 **Research and Innovation in Computer Science**, [Bogdan
 Vasilescu](https://bvasiles.github.io/), [Jonathan
 Aldrich](https://www.cs.cmu.edu/~./aldrich/)
+  {: .course-item #course15300 } 
 
   The goal of this class is to encourage undergraduates to contact professors
   and get into research. However, from what I saw people who already started
@@ -852,6 +859,7 @@ Aldrich](https://www.cs.cmu.edu/~./aldrich/)
 - 98-212 StuCo: [**Competitive Computer Security**]({% link
 /assets/notes/98_212_Stuco_Syllabus.pdf %}), [Chris
 Lambert](https://github.com/cslamber)
+  {: .course-item #course98212 } 
 
   This was a great class on popular cyber-security Capture-The-Flag (CTF)
   topics. The depth of the topics covered go beyond introductory pretty quickly,
@@ -862,8 +870,10 @@ Units: 48
 
 I dropped 15-312 Foundations of Programming Languages in the middle of the semester, as UCT ended up taking much more time than I anticipated, and so that I could spend more time on compilers.
 
+---
 
 ### Spring 2020
+{: .first-course-item #course15410 } 
 - &#11088; 15-410 [**Operating Systems Design and Implementation**](https://www.cs.cmu.edu/~410/), [Dave Eckhardt](http://www.cs.cmu.edu/~davide/), [Brian Railing](http://www.cs.cmu.edu/~bpr/), [Dave O'Hallaron](http://www.cs.cmu.edu/~droh/)
   
   This is probably the most "famous" systems class at CMU.
@@ -882,6 +892,7 @@ I dropped 15-312 Foundations of Programming Languages in the middle of the semes
   I will probably write a dedicated, separate post for this class someday.
 
 - 15-259 [**Probability and Computing**](https://www.cs.cmu.edu/~harchol/PnC/class.html)
+  {: .course-item #course15259 } 
   
   Mor is absolutely amazing at teaching and in maintaining student's interest
   during classes. She will give out chocolates in class if you answer a
@@ -901,6 +912,7 @@ I dropped 15-312 Foundations of Programming Languages in the middle of the semes
   classical randomized algorithms, and Markov Chains.
 
 - 15-260 Statistics and Computing
+  {: .course-item #course15260 } 
 
   This class is offered as a mini, meant to accompany 15-259 Probability and
   Computing. It allows CS students to satisfy satistics requirement for some ML
@@ -908,6 +920,7 @@ I dropped 15-312 Foundations of Programming Languages in the middle of the semes
   statistic course.
 
 - 15-451 [**Algorithm Design and Analysis**](http://www.cs.cmu.edu/~15451-s20/), [Danny Sleator](http://www.cs.cmu.edu/~sleator/), [David Woodruff](http://www.cs.cmu.edu/~dwoodruf/)
+  {: .course-item #course15451 } 
 
   This is the main algorithms class of CMU, and Danny Sleator and Splay Trees
   (which he invented) are the heart of it. Since students are expected to have
@@ -925,6 +938,7 @@ I dropped 15-312 Foundations of Programming Languages in the middle of the semes
   class.
 
 - 33-228 [**Electronics I**](http://www-meg.phys.cmu.edu/physics_33228/), [Jeffrey Peterson](https://www.cmu.edu/physics/people/faculty/peterson.html), [Ben Hunt](https://www.cmu.edu/physics/people/faculty/hunt.html), [Simranjeet Singh](https://www.cmu.edu/physics/people/faculty/singh.html)
+  {: .course-item #course33228 } 
 
   I took this class to satisfy my lab requirement. I personally thought
   that this is the best class for the lab requirement for CS majors, since it
@@ -936,6 +950,7 @@ I dropped 15-312 Foundations of Programming Languages in the middle of the semes
   debugging hardware is on a whole new level.
 
 - 79-396 **Music and Society in 19th and 20th Century Europe and the U.S.**, [Naum Kats](https://www.cmu.edu/dietrich/modlang/about-us/filter/adjunct/naum-kats.html)
+  {: .course-item #course79396 } 
 
   This was a relatively low-stress and fun class, where each week you would
   watch a live play, musical, or orchestral concert, and also visit art
@@ -946,7 +961,10 @@ I dropped 15-312 Foundations of Programming Languages in the middle of the semes
 
 Units: 61
 
+---
+
 ### Fall 2019
+{: .first-course-item #course15319 } 
 - &#10084;&#65039; 15-319 **Cloud Computing**
 
   [This post by Lisa
@@ -964,6 +982,7 @@ Units: 61
   throughput of a distributed web service in the cloud.
   
 - 15-330 **Introduction to Computer Security**, [Bryan Parno](https://www.andrew.cmu.edu/user/bparno/)
+  {: .course-item #course15330 } 
 
   Bryan is a great lecturer, and the course is divided into 3 portions: binary
   exploitation, cryptography, and web security. I took this course because I
@@ -980,6 +999,7 @@ Units: 61
   of fundamental security concepts.
 
 - 15-210 [**Parallel and Sequential Data Structures and Algorithms**](https://www.diderot.one/courses/44)
+  {: .course-item #course15210 } 
 
   I found the course okay, some portions were interesting but
   I don't remember being very excited by any topic in particular. I already
@@ -987,6 +1007,7 @@ Units: 61
   in high school, so it was relatively easy.
 
 - 21-268 **Multi-dimensional Calculus**, [Jack Schaeffer](https://www.cmu.edu/math/people/faculty/schaeffer-j.html)
+  {: .course-item #course21268 } 
 
   This is the honors version of 21-259 Calculus in Three Dimensions, and I would
   recommend mathematically strong students take this (or 21-269 Vector
@@ -994,16 +1015,29 @@ Units: 61
   and is more rigorous.
 
 - 69-151 **Introduction to Yoga**
+  {: .course-item #course69151 } 
 
   Took this for fun because I attended a lot of free yoga classes at the office while I was interning at Asana.
 
 - 98-349 **StuCo: Design and Analysis of Logic Puzzle Games**
+  {: .course-item #course98349 } 
 
 Units: 52
 
-I dropped 21-373 Algebraic Structures in the last week of classes.
+I dropped 21-373 Algebraic Structures in the last week of classes, as the
+professor who was a visiting postdoc was really poor at teaching (i.e
+forgetting proofs halfway, seems very unprepared for classes, homework and exam
+questions drastically different from what was covered in class),
+and I thought I was going to get a B in the class. In hindsight grades
+don't really matter and I should have stuck through, but ensuring that you
+learn under a good professor is also really important. The experience made me
+avoid math classes for a while as I wanted to make sure any future math class I took
+was taught by a good professor.
+
+---
 
 ### Spring 2019
+{: .first-course-item #course15251 } 
 - &#10084;&#65039; 15-251 [**Great Ideas in Theoretical Computer Science**](http://www.cs.cmu.edu/~15251/), [Venkatesan Guruswami](https://people.eecs.berkeley.edu/~venkatg/), [Vipul Goyal](https://www.cs.cmu.edu/~goyal/)
 
   The class was very well-taught and structured.  Homeworks are done in the form
@@ -1012,8 +1046,12 @@ I dropped 21-373 Algebraic Structures in the last week of classes.
   that all students fully understand the proofs that they write up.
 
 - 15-150 [**Principles of Functional Programming**](http://www.cs.cmu.edu/~15150/)
+  {: .course-item #course15150 } 
+  
+  Functions are values!
 
 - 15-213 [**Introduction to Computer Systems**](https://www.cs.cmu.edu/~213/), [Seth Goldstein](http://www.cs.cmu.edu/~seth/), [Brandon Lucia](https://brandonlucia.com/)
+  {: .course-item #course15213 } 
 
   This class unlocks all other systems classes, and many classes also have this
   as a requirement to ensure that students have had experience implementing
@@ -1022,16 +1060,19 @@ I dropped 21-373 Algebraic Structures in the last week of classes.
   useful in your future career as a software engineer.
   
 - 21-122 **Integration and Approximation**, [Eric Baer](http://www.stat.uchicago.edu/~ebaer/)
+  {: .course-item #course21122 } 
 
   I liked his lectures, although Eric is now at UChicago.
 
 - 21-241 **Matrices and Linear Transformations**, [Irina Gheorghiciuc
 ](https://www.cmu.edu/math/people/faculty/gheorghiciuc.html)
+  {: .course-item #course21241 } 
 
   I personally liked Irina's to-the-point, no-nonsense teaching style.
   Her lectures are quite clear and interesting.
 
 - 98-317 [**StuCo: Type Theory (Hype for Types)**](https://hypefortypes.github.io/S19/), Jeanne Luning Prak, [Vijay Ramamurthy](https://vijayramamurthy.com/), [Chris Grossack](https://grossack.site/), [Charles Yuan](https://people.csail.mit.edu/chenhuiy/)
+  {: .course-item #course98317 } 
   
   We were given a crash course of SML in the first week, as everything else
   in the course depended on that, and it was required for the weekly homework. I
@@ -1046,8 +1087,10 @@ I dropped 21-373 Algebraic Structures in the last week of classes.
 
 Units: 57
 
+---
 
 ### Fall 2018
+{: .first-course-item #course15151 } 
 - &#10084;&#65039; 15-151 [**Mathematical Foundations for Computer Science**](https://www.math.cmu.edu/~jmackey/151_128/welcome.html), [John Mackey](https://www.cmu.edu/math/people/faculty/mackey.html)
 
   It is said that the best predictor of a student's success is how well
@@ -1064,11 +1107,13 @@ Units: 57
   lecture.
 
 - 15-122 [**Principles of Imperative Computation**](https://www.cs.cmu.edu/~15122/)
+  {: .course-item #course15122 } 
 
   I was quite bored during lecture as I already knew most of the content
   due to my competitive programming background. The assignments were still pretty cool though.
 
 - 21-120 **Differential and Integral Calculus**
+  {: .course-item #course21120 } 
 
   I could not transfer AP credit from A-Level H2 Mathematics as the SEAB course code
   changed while I was serving National Service as they modified the syllabus and
@@ -1084,15 +1129,18 @@ Units: 57
   is perhaps the only silver lining of taking this class.
   
 - 76-106 **Writing about Literature and Art**
+  {: .course-item #course76106 } 
 
   I enjoyed the assigned readings of literature from different cultures,
   and the class discussions were also quite engaging. 
 
 - 76-107 **Writing about Data**
+  {: .course-item #course76107 } 
 
   Found this class relatively dry, and most of the content seemed obvious and boring.
 
 - 80-100 **Introduction to Philosophy**
+  {: .course-item #course80100 } 
   
   I had some prior interest and experience with philosophy (read a lot of 
   philosophy books during my time in the army), and found this a
@@ -1102,20 +1150,41 @@ Units: 57
   beyond freshmen year.
 
 - 07-131 **Great Practical Ideas in Computer Science**
+  {: .course-item #course07131 } 
 
   Teaches you the tools of the trade like Git, Vim, etc.
-  You'll be able to work much more effectively
+  You'll be able to work much more effectively and save a lot of time
   if you master these skills early.
 
 - 15-051 Discrete Math Primer
+  {: .course-item #course15051 } 
+
+  This is a course that CS majors take over the summer to gain some foundations
+  in discrete math before starting college to prepare them for 15-151.
+
 - 99-101 Computing at Carnegie Mellon
+  {: .course-item #course99101 } 
+
+  This is another online course that can be taken over the summer before the
+  semester, to familiarize yourself with CMU's computing resources and tools,
+  and how to avoid getting into trouble such as torrenting movies on campus.
+
 - 07-128 First Year Immigration Course
+  {: .course-item #course07128 } 
+
+  A weekly session during the first semester where our first-year advisor 
+  [Jacobo Carrasquel](http://www.cs.cmu.edu/~jxc/home.html) and the
+  Associate Dean for Undergraduates [Tom Cortina](https://www.cs.cmu.edu/~tcortina/)
+  talks to us about the various things happening at CMU SCS, and the opportunities
+  available to us. One of the most useful parts of this class is how they got
+  professors from each of the 7 departments within the School of Computer Science
+  to talk to us about their research areas, and the problems that they work on daily.
+  It gives you a pretty good overview of the research that is being done across
+  the broad, and where to look if you have specific interests.
 
 Units: 55
 
 Most of the last few courses are just orientation courses that are not real classes with actual workload.
-
-
 
 
 ---
@@ -1157,4 +1226,10 @@ First-year students are not permitted to overload.
 ### What are StuCos?
 *Student Taught Courses* (StuCos) are low-stress classes taught by other fellow students. They are pass/fail, and are always 3 units each. These are usually fun and interesting topics, such as lockpicking, stand-up comedy, esoteric programming languages, etc.
 
-<br>
+### Special Topics Courses
+The Computer Science Department offers Special Topics in Theory courses,
+numbered 15-859. The section numbers differentiate the specific course.
+For instance, 15-859 CC is Algorithms for Big Data. 
+
+These are irregularly-offered courses targeted at people intending to pursue
+research in the field. 
