@@ -125,31 +125,124 @@
 
 \question{1}{Scratcy Scratch}
 
+\begin{proof}
+    Hello!
+    \begin{align*}
+        \parens{a} \\
+        \braces{b} \\
+        \bracks{c} \\
+    \end{align*}
+\end{proof}
+
 \begin{align*}
-    \nabla_\theta \E_{\tau \sim P_\theta(\tau)} [R(\tau)]
-     & = \nabla_\theta \sum\limits_\tau P_\theta(\tau) R(\tau)                \\
-     & = \sum\limits_\tau \nabla_\theta  P_\theta(\tau) R(\tau) \tag{uh oh..} \\
+    \abs{ \Pr \left[ S \leq u \right] - \Pr \left[ Z \leq u \right] }
+    \leq \mbox{const} \cdot \beta,
+\end{align*}
+where the exact constant depends on the proof, with the best known constant
+being $.5600$, and
+$\beta = \sum\limits_{i=1}^n \E \left[ \abs{X_i}^3 \right]$.
+
+\begin{align*}
+    Z_n = \frac{\sqrt{n} \left( \overline{X}_n - \mu \right)}{\sigma}
 \end{align*}
 
 \begin{align*}
-    \sum\limits_\tau \nabla_\theta  P_\theta(\tau) R(\tau)
-     & = \sum\limits_\tau \frac{ P_\theta(\tau) }{ P_\theta(\tau) } \nabla_\theta  P_\theta(\tau) R(\tau)  \\
-     & = \sum\limits_\tau P_\theta(\tau) \frac{ \nabla_\theta  P_\theta(\tau)  }{ P_\theta(\tau) } R(\tau) \\
-     & = \sum\limits_\tau P_\theta(\tau) \nabla_\theta  \log  P_\theta(\tau) R(\tau)                       \\
-     & = \E_{\tau \sim P_\theta(\tau)} \left[ \nabla_\theta  \log  P_\theta(\tau) R(\tau)  \right]         \\
-     & \approx \frac{1}{N} \sum\limits_{i=1}^N \nabla_\theta  \log  P_\theta(\tau_i) R(\tau_i)             \\
+    \E \left[ e^{tX} \right]
 \end{align*}
 
 \begin{align*}
-    \nabla_\theta  \log  P_\theta(\tau)
-     & = \nabla_\theta  \log  \left[
-        \prod_{t=0}^H P(s_{t+1} \mid s_t, a_t) \cdot \pi_\theta (a_t \mid s_t),
-    \right]                          \\
-     & = \nabla_\theta  \left[
-        \sum\limits_{t=0}^H \log P(s_{t+1} \mid s_t, a_t) + \log \pi_\theta (a_t \mid s_t)
-        \right] \\
-     & = \nabla_\theta \sum\limits_{t=0}^H \log \pi_\theta (a_t \mid s_t) \tag{first term does not depend on $\theta$, becomes zero} \\
-     & = \sum\limits_{t=0}^H \nabla_\theta \log \pi_\theta (a_t \mid s_t) \\
+    M(0) & = \E \left[ e^{tX} \right] \Big|_{t=0} \\
+         & = \E \left[ 1 \right]                  \\
+         & = 1
 \end{align*}
+
+\begin{align*}
+    M(t) & = \E \left[ e^{tX} \right]
+         & = \E \left[ 1 \right]      \\
+         & = 1
+\end{align*}
+
+\begin{align*}
+    M^{(k)}(0) & = \frac{d^k}{dt^k} \E \left[ e^{tX} \right] \Big|_{t=0} \\
+               & = \frac{d^k}{dt^k} \E \left[ e^{tX} \right] \Big|_{t=0} \\
+\end{align*}
+
+\begin{align*}
+    M^{(k)}(t) & = \frac{d^k}{dt^k} \E \left[ e^{tX} \right]                      \\
+               & = \frac{d}{dt} \E \left[ X^{k-1} e^{tX} \right] & \text{(by IH)} \\
+               & = \frac{d}{dt} \int f(x) x^{k-1} e^{tx} \; dx                    \\
+               & = \int \frac{d}{dt} f(x) x^{k-1} e^{tx} \; dx                    \\
+               & = \int f(x) x^{k} e^{tx} \; dx                                   \\
+               & = \E \left[ X^{k} e^{tX} \right].
+\end{align*}
+
+\begin{align*}
+    % A_i = \frac{X_i - \mu}{\sigma}
+    Z_n = \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n A_i
+\end{align*}
+
+\begin{align*}
+    \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n A_i
+     & = \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n \frac{X_i - \mu}{\sigma} \\
+     & = \sqrt{n} \sum\limits_{i=1}^n \frac{X_i - \mu}{ n \sigma}        \\
+     & = \sqrt{n} \frac{\overline{X}_n - \mu}{ \sigma}                   \\
+     & = Z_n.
+\end{align*}
+
+\begin{align*}
+    M_{Z_n}(t) & = \E \left[ e^{t Z_n} \right]                                                                                                   \\
+               & = \E \left[ \exp\left(t \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n A_i \right) \right] & \text{(by equivalent definition of $Z_n$)} \\
+               & = \prod_{i=1}^n \E \left[ \exp\left( \frac{t}{\sqrt{n}} A_i \right) \right]        & \text{(by independence of $A_i$'s)}        \\
+               & = \prod_{i=1}^n M_{A_i}(t/\sqrt{n})                                                & \text{(definition of $M_{A_i}$)}           \\
+               & = M_{A_i}(t/\sqrt{n} )^n .
+\end{align*}
+
+\begin{align*}
+    f(x) = \sum\limits_{n=0}^\infty \frac{f^{(n)(a)}}{n!}(x-a)^n
+\end{align*}
+
+\begin{align*}
+    f(x) = \sum\limits_{n=0}^\infty \frac{f^{(n)(a)}}{n!}(x-a)^n
+\end{align*}
+
+Our first three moments are
+\begin{align*}
+    M_{A_i}(0)                 & = \E \left[ e^{t A_i} \right] \Big|_{t=0}                                                                                                                 \\
+                               & = \E \left[ 1 \right]                                                                                                                                     \\
+                               & = 1,                                                                                                                                                      \\
+    M_{A_i}^\prime(0)          & = \E \left[ A_i \right]                                                       & \text{(by the $k$th moment property proved previously)}                   \\
+                               & = 0,                                                                                                                                                      \\
+    M_{A_i}^{\prime \prime}(0) & = \E \left[ A_i^2 \right]                                                     & \text{(by the $k$th moment property proved previously)}                   \\
+                               & = \E \left[ A_i^2 \right] - \E \left[ A_i \right]^2 + \E \left[ A_i \right]^2                                                                             \\
+                               & = \Var(A_i) + \E \left[ A_i \right]^2                                         & \text{($\Var(A_i) = \E \left[ A_i^2 \right] - \E \left[ A_i \right]^2 $)} \\
+                               & = 1 + 0                                                                                                                                                   \\
+                               & = 1.
+\end{align*}
+
+\begin{align*}
+    M_{A_i}(t/\sqrt{n}) & \approx M_{A_i}(0) + M_{A_i}^\prime(0) + M_{A_i}^{\prime \prime}(0) \frac{t^2}{2n} \\
+                        & = 1 + 0 + \frac{t^2}{2n}                                                           \\
+                        & = 1 + \frac{t^2}{2n}                                                               \\
+\end{align*}
+
+\begin{align*}
+    M_{Z_n}(t) & = M_{A_i}(t/\sqrt{n})^n                                                                                       \\
+               & \approx \left( 1 + \frac{t^2}{2n}  \right)^n                                                                  \\
+               & \to e^{t^2/2}.                               & \text{(by identity $\lim_{n \to \infty} (1 + x/n)^n \to e^x$)}
+\end{align*}
+
+\begin{align*}
+    M_{Z} & = \E \left[ e^{tZ} \right]                                                                                                \\
+          & = \int f_Z(x) e^{tx} \; dx                                                                                                \\
+          & = \int \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}x^2} e^{tx} \; dx                 & \text{(subst. pdf of standard Gaussian)} \\
+          & = \int \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}x^2 + tx} \; dx                                                              \\
+          & = \int \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}(x - t)^2 + \frac{1}{2}t^2} \; dx & \text{(completing the square)}           \\
+          & = e^{\frac{1}{2}t^2} \int \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}(x - t)^2 } \; dx & \text{($e^{\frac{1}{2}t^2}$ does not depend on $x$)}           \\
+          & = e^{\frac{1}{2}t^2} \cdot  1 \\
+          & = e^{\frac{1}{2}t^2},
+\end{align*}
+where the second last step comes from the fact that
+$$\frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}(x - t)^2 }$$ is a probability distribution of a Gaussian with mean $$t$$ and variance 1, 
+and therefore the integral integrates to 1.
 
 \end{document}

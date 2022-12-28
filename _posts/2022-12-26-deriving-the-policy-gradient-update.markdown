@@ -20,6 +20,7 @@ description: >
     the policy gradient update from scratch, and show how it can be approximated
     by sampling sufficiently many trajectories.
 ---
+
 Reinforcement learning algorithms that learn a policy (as opposed to implicit policy
 methods like $$\epsilon$$-greedy) optimize their policies by
 updating their policies in the direction of the gradient. However, 

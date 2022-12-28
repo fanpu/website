@@ -127,13 +127,11 @@ you might be interested in directly.
 
 ---
 
-<!-- {::options parse_block_html="true" /} -->
 ## Reverse Chronological Order
 
-<div markdown="1">
+<!-- <div markdown="1">
    My text with **markdown** syntax
-</div>
-
+</div> -->
 
 ### Spring 2023 (Intended)
 - 10-716 &nbsp; **[Advanced Machine Learning: Theory and Methods](https://www.cs.cmu.edu/~pradeepr/716/)**, [	Pradeep Ravikumar](http://www.cs.cmu.edu/~pradeepr/) 
