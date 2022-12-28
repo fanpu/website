@@ -314,7 +314,7 @@ relative error is actually very large, and therefore is not as helpful.
 I hope this article has been helpful!
 
 *I would like to express my thanks to [Albert Gao](https://adbforlife.github.io/)
-for proofreading this article and for providing valuable suggestions*.
+for reviewing this article and for providing valuable suggestions*.
 
 ### References
 - Rosenthal, J. S. (2016). A first look at rigorous probability theory. World Scientific. 

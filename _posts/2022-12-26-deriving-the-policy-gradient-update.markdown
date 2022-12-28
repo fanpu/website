@@ -188,7 +188,7 @@ Proximal Policy Optimization (PPO), and Trust Region Policy Optimization
 (TRPO). Hope to see you around!
 
 *I would like to express my thanks to [Jun Yu Tan](https://jytan.net/about/)
-for proofreading this article and for providing valuable suggestions*.
+for reviewing this article and for providing valuable suggestions*.
 
 ## References
 - [Carnegie Mellon University 10-703 Deep Reinforcement Learning and Control Course Slides](https://cmudeeprl.github.io/703website_f22/lectures/)
