@@ -1,5 +1,5 @@
 ---
-title: "A Concise Proof of the Central Limit Theorem, and Its Actually Useful Counterpart, the Berry-Esseen Theorem"
+title: "A Concise Proof of the Central Limit Theorem, and Its Actually Useful Version, the Berry-Esseen Theorem"
 layout: post
 tags: [math, machine-learning]
 cover: maine.JPG
@@ -11,6 +11,14 @@ author: fanpu
 toc: true
 giscus_comments: true
 description: >
+    The Central Limit Theorem is widely used in statistics and machine learning,
+    as it allows us to assume that given enough samples, the mean of the samples
+    will follow a normal distribution. This holds even if the samples come
+    from a distribution that is not normally distributed.
+    In this post, we prove the Central Limit Theorem, and then take a look
+    at the Berry-Esseen Theorem, which actually provides a quantitative bound
+    on the convergence of the distribution and can therefore be actually used in
+    deriving theoretical bounds.
 ---
 
 The Central Limit Theorem is widely used in statistics and machine learning,
