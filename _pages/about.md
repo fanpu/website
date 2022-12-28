@@ -49,8 +49,12 @@ I recently earned a Technician amateur radio license, and my callsign is
 
 This blog was originally started on 24 June 2018, although it has taken many
 forms since then. I write about things that I find interesting, and which might
-be helpful for other people. Do let me know if you have article suggestions.
-All banner pictures on the blog are taken by yours truly.
+be helpful for other people, with the goal that people learn something
+new when they read my posts. I also try to have my posts reviewed by
+my friends who are experts in an area whenever possible to ensure that
+everything is factually accurate. Do let me know if you have any article
+suggestions. All banner pictures on the blog are taken by yours truly!
+
 
 <!--
 Put your address / P.O. box / other info right below your picture. You can also disable any these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
