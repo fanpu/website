@@ -53,7 +53,7 @@ definition of convergence of probability distributions:
 
 Note that the requirement that it only holds for points of continuity is not superfluous, as there
 can be distributions that converge but disagree in value at points of discontinuities
-(i.e take $$ X_n = N(0, 1/n) $$ and $$ X $$ to be the point mass at 1, they converge but their CDF take different values at $$ t=0 $$).
+(i.e take $$ X_n = N(0, 1/n) $$ and $$ X $$ to be the point mass at 0, they converge but their CDF take different values at $$ t=0 $$).
 
 The Central Limit Theorem can then be stated in the following form (there are many other equivalent statements):
 
@@ -75,6 +75,8 @@ The Central Limit Theorem can then be stated in the following form (there are ma
 
 There are several ways of proving the Central Limit Theorem. 
 The proof that we will explore today relies on the methods of moments.
+An alternative measure-theoretic version of the proof relies on Lévy's
+Continuity Theorem, and makes use of convolutions and Fourier transforms.
 
 Our goal is to show that $$ Z_n $$ converges in distribution to $$ Z \sim N(0,
 1) $$. To do so, we will show that all the moments of $$ Z_n $$ converges to
@@ -152,7 +154,7 @@ Now cue the theorem that ties things together:
   statement="
   Suppose that \( X \) is determined by its moments. Let \( X_n \) be a sequence of
   distributions, such that \( \int f_{X_n}(x) x^k \; dx \) is finite for all \( n, k \in \N \),
-  and such that \( \lim_{n \to \infty} \int f_{X_n}(x) x^k \; dx = \int f_{X_n}(x) x^k \; dx \)
+  and such that \( \lim_{n \to \infty} \int f_{X_n}(x) x^k \; dx = \int f_{X}(x) x^k \; dx \)
   for each \( k \in \N \). Then \( X_n \) converges in distribution to \( X \).
   "
 %}
