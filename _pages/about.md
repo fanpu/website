@@ -17,20 +17,20 @@ social: true  # includes social icons at the bottom of the page
 
 Hello! I am Fan Pu, currently a M.S in Computer Science student at Carnegie
 Mellon University (CMU), having recently completed my Bachelor's in Computer
-Science in 2022 at CMU as well. I have been involved in the open-source
+Science in 2022 at CMU as well. I have been actively involved in the open-source
 programming assignment auto-grading platform
-[Autolab](https://autolabproject.com/) since 2018.  I currently serve as the
-Masters Student Liaison for the [Singapore Students
+[Autolab](https://autolabproject.com/) since 2018. 
+I currently serve as the Masters Student Liaison for the [Singapore Students
 Association](https://cmussa.org/). I also used to play
 Capture-The-Flag (CTF) competitions with [PPP](https://pwning.net/).
+I have previously interned at [Jane Street](https://www.janestreet.com/),
+[Meta](https://about.meta.com/), [Asana](https://asana.com/), and [Saleswhale](https://www.saleswhale.com/) (acquired 2022).
 
 I am broadly interested in rigorously proving why machine learning techniques
 work and what guarantees we can extract out of them, borrowing tools from
-theoretical computer science and mathematics.
-My eventual goal is to build a startup
-in AI/ML using the things that I've learnt.
-My other academic interests include
-complexity theory, programming language theory, and mathematics.
+theoretical computer science and mathematics. My eventual goal is to build a
+startup in AI/ML using the things that I've learnt, for the betterment of
+humanity. 
 
 In my free time, I enjoy bouldering, running, reading textbooks, watching
 anime, playing Genshin Impact, and cosplaying at anime conventions. If I have
