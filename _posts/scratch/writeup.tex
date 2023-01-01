@@ -2,6 +2,8 @@
 \documentclass[11pt]{article}
 % \usepackage{tikz}
 \usepackage{amsmath}
+\usepackage{blindtext}
+\usepackage{multicol}
 \usepackage{listings} %For code in appendix
 \lstset{
     basicstyle=\ttfamily,
@@ -125,126 +127,102 @@
 
 \question{1}{Scratcy Scratch}
 
-\begin{proof}
-    Hello!
+\begin{align*}
+    T = \left\{ (x, \sin \frac{1}{x}) : x \in (0, 1] \right\} \cup \left\{ \left( 0, 0 \right) \right\}
+\end{align*}
+
+\begin{align*}
+    T = \{(x, \sin \frac{1}{x} ) : x \in (0, 1] \} \cup \{ ( 0, 0 ) \}                                               \\
+    T = \left\{ \left( x, \sin \frac{1}{x} \right) : x \in (0, 1] \right\} \cup \left\{ \left( 0, 0 \right) \right\} \\
+    T = \braces*{ \parens*{ x, \sin \frac{1}{x} } : x \in (0, 1] } \cup \braces*{ \parens*{ 0, 0 }}                  \\
+\end{align*}
+
+
+
+
+\begin{align*}
+    \left( \frac{1}{x} \right)           \\
+    \left[ \frac{1}{x} \right]           \\
+    \left\{ \frac{1}{x} \right\}         \\
+    \left\| \frac{1}{x} \right\|         \\
+    \lvert \frac{1}{x} \rvert            \\
+    \left\| \frac{1}{x} \right\|         \\
+    \left\lceil \frac{1}{x} \right\rceil \\
+\end{align*}
+
+\newpage
+
+\begin{multicols}{2}
+    We denote the historical trajectory as
+    ${ \tau=\left(s_1, a_1, \ldots, a_{t-1}, s_t\right) }$
+    and action-observation history $(\mathrm{AOH})$ for
+    player $i$ as
+    ${ \tau^i=\left(\Omega^i\left(s_1\right), a_1, \ldots, a_{t-1}, \Omega^i\left(s_t\right)\right) }$,
+    which encodes the trajectory from player $i$ 's point of view.
+
+    \blindtext\blindtext
     \begin{align*}
-        \parens{a} \\
-        \braces{b} \\
-        \bracks{c} \\
+        X & = \left( X_1, ..., X_n \right)   & \text{(using ``...'')}                 & \\
+        X & = \left( X_1, \dots, X_n \right) & \text{(using ``\textbackslash dots'')} &
     \end{align*}
+\end{multicols}
+
+``Hello World!''
+
+\textit{Problem: Show that if $(x_n)_n$ converges to $x$ in the usual sense, then
+$\lim_{n \to \infty} x_n = \lim_{\mathcal{F}} x_n$.}
+
+Suppose that $(x_n)_n$ converges to $x$. We show that this $x$ is also the
+$\mathcal{F}$-limit of $(x_n)_n$.
+
+\begin{proof}
+Take any $\varepsilon$. Then we know that for some large enough $N$, if $n \geq N$, then
+$x_n \in B_\varepsilon(x)$. Since every non-principal ultrafilter on $\N$ contains
+$\mathcal{F}_\infty$, then $\mathcal{F}$ also contains $ \left\{ n : n \geq N \right\} $,
+since the complement is finite. Therefore since filters are closed upwards, any
+sequence items $x_n$ with $n < N$ that happen to fall in the ball around $x$, i.e, $x_n \in B_\varepsilon(x)$
+is also contained in some filter element, so $\left\{  n \in \N : \lvert x_n - x \rvert < \varepsilon \right\} \in \mathcal{F}$, as desired.
+
 \end{proof}
 
-\begin{align*}
-    \abs{ \Pr \left[ S \leq u \right] - \Pr \left[ Z \leq u \right] }
-    \leq \mbox{const} \cdot \beta,
-\end{align*}
-where the exact constant depends on the proof, with the best known constant
-being $.5600$, and
-$\beta = \sum\limits_{i=1}^n \E \left[ \abs{X_i}^3 \right]$.
+\begin{proof}
+    Take any $\varepsilon$. Then we know that for some large enough $N$, if $n \geq N$, then
+    $x_n \in B_\varepsilon(x)$. Since every non-principal ultrafilter on $\N$ contains
+    $\mathcal{F}_\infty$, then $\mathcal{F}$ also contains $ \left\{ n : n \geq N \right\} $,
+    since the complement is finite. Therefore since filters are closed upwards, any
+    sequence items $x_n$ with $n < N$ that happen to fall in the ball around $x$,
+    i.e, $x_n \in B_\varepsilon(x)$
+    is also contained in some filter element, so 
+    $\left\{  n \in \N : \lvert x_n - x \rvert < \varepsilon \right\} \in \mathcal{F}$,
+    as desired. \qedhere
 
-\begin{align*}
-    Z_n = \frac{\sqrt{n} \left( \overline{X}_n - \mu \right)}{\sigma}
-\end{align*}
+    % Extra newline here!
+\end{proof}
 
-\begin{align*}
-    \E \left[ e^{tX} \right]
-\end{align*}
+$$P(X) = \int P(X \mid z; \theta) P(z) dz.$$
 
-\begin{align*}
-    M(0) & = \E \left[ e^{tX} \right] \Big|_{t=0} \\
-         & = \E \left[ 1 \right]                  \\
-         & = 1
-\end{align*}
+$$P(X) = \int xyz dx.$$
 
-\begin{align*}
-    M(t) & = \E \left[ e^{tX} \right]
-         & = \E \left[ 1 \right]      \\
-         & = 1
-\end{align*}
+\section{A}
 
-\begin{align*}
-    M^{(k)}(0) & = \frac{d^k}{dt^k} \E \left[ e^{tX} \right] \Big|_{t=0} \\
-               & = \frac{d^k}{dt^k} \E \left[ e^{tX} \right] \Big|_{t=0} \\
-\end{align*}
+% \begin{definition}
+%     A sequence $(x_n)_n : \mathbbm{N} \to X$ is a Cauchy sequence if 
+%     $\forall \epsilon > 0, \exists \, N \in \mathbbm{N}$ such that 
+%     $\forall \, n, m \geq N, \, d \left( x_n, x_m \right) < \epsilon$.
+% \end{definition}
 
-\begin{align*}
-    M^{(k)}(t) & = \frac{d^k}{dt^k} \E \left[ e^{tX} \right]                      \\
-               & = \frac{d}{dt} \E \left[ X^{k-1} e^{tX} \right] & \text{(by IH)} \\
-               & = \frac{d}{dt} \int f(x) x^{k-1} e^{tx} \; dx                    \\
-               & = \int \frac{d}{dt} f(x) x^{k-1} e^{tx} \; dx                    \\
-               & = \int f(x) x^{k} e^{tx} \; dx                                   \\
-               & = \E \left[ X^{k} e^{tX} \right].
-\end{align*}
+\begin{definition}[Using \textbackslash mathbb]
+    A sequence $(x_n)_n : \mathbb{N} \to X$ is a Cauchy sequence if 
+    ${\forall \varepsilon > 0, \exists \, N \in \mathbb{N}}$ such that 
+    ${\forall \, n, m \geq N, \, d \left( x_n, x_m \right) < \varepsilon}$.
+\end{definition}
 
-\begin{align*}
-    % A_i = \frac{X_i - \mu}{\sigma}
-    Z_n = \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n A_i
-\end{align*}
+\begin{definition}[Using \textbackslash mathbbm]
+    A sequence $(x_n)_n : \mathbbm{N} \to X$ is a Cauchy sequence if 
+    ${\forall \varepsilon > 0, \exists \, N \in \mathbbm{N}}$ such that 
+    ${\forall \, n, m \geq N, \, d \left( x_n, x_m \right) < \varepsilon}$.
+\end{definition}
 
-\begin{align*}
-    \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n A_i
-     & = \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n \frac{X_i - \mu}{\sigma} \\
-     & = \sqrt{n} \sum\limits_{i=1}^n \frac{X_i - \mu}{ n \sigma}        \\
-     & = \sqrt{n} \frac{\overline{X}_n - \mu}{ \sigma}                   \\
-     & = Z_n.
-\end{align*}
 
-\begin{align*}
-    M_{Z_n}(t) & = \E \left[ e^{t Z_n} \right]                                                                                                   \\
-               & = \E \left[ \exp\left(t \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n A_i \right) \right] & \text{(by equivalent definition of $Z_n$)} \\
-               & = \prod_{i=1}^n \E \left[ \exp\left( \frac{t}{\sqrt{n}} A_i \right) \right]        & \text{(by independence of $A_i$'s)}        \\
-               & = \prod_{i=1}^n M_{A_i}(t/\sqrt{n})                                                & \text{(definition of $M_{A_i}$)}           \\
-               & = M_{A_i}(t/\sqrt{n} )^n .
-\end{align*}
-
-\begin{align*}
-    f(x) = \sum\limits_{n=0}^\infty \frac{f^{(n)(a)}}{n!}(x-a)^n
-\end{align*}
-
-\begin{align*}
-    f(x) = \sum\limits_{n=0}^\infty \frac{f^{(n)(a)}}{n!}(x-a)^n
-\end{align*}
-
-Our first three moments are
-\begin{align*}
-    M_{A_i}(0)                 & = \E \left[ e^{t A_i} \right] \Big|_{t=0}                                                                                                                 \\
-                               & = \E \left[ 1 \right]                                                                                                                                     \\
-                               & = 1,                                                                                                                                                      \\
-    M_{A_i}^\prime(0)          & = \E \left[ A_i \right]                                                       & \text{(by the $k$th moment property proved previously)}                   \\
-                               & = 0,                                                                                                                                                      \\
-    M_{A_i}^{\prime \prime}(0) & = \E \left[ A_i^2 \right]                                                     & \text{(by the $k$th moment property proved previously)}                   \\
-                               & = \E \left[ A_i^2 \right] - \E \left[ A_i \right]^2 + \E \left[ A_i \right]^2                                                                             \\
-                               & = \Var(A_i) + \E \left[ A_i \right]^2                                         & \text{($\Var(A_i) = \E \left[ A_i^2 \right] - \E \left[ A_i \right]^2 $)} \\
-                               & = 1 + 0                                                                                                                                                   \\
-                               & = 1.
-\end{align*}
-
-\begin{align*}
-    M_{A_i}(t/\sqrt{n}) & \approx M_{A_i}(0) + M_{A_i}^\prime(0) + M_{A_i}^{\prime \prime}(0) \frac{t^2}{2n} \\
-                        & = 1 + 0 + \frac{t^2}{2n}                                                           \\
-                        & = 1 + \frac{t^2}{2n}                                                               \\
-\end{align*}
-
-\begin{align*}
-    M_{Z_n}(t) & = M_{A_i}(t/\sqrt{n})^n                                                                                       \\
-               & \approx \left( 1 + \frac{t^2}{2n}  \right)^n                                                                  \\
-               & \to e^{t^2/2}.                               & \text{(by identity $\lim_{n \to \infty} (1 + x/n)^n \to e^x$)}
-\end{align*}
-
-\begin{align*}
-    M_{Z} & = \E \left[ e^{tZ} \right]                                                                                                \\
-          & = \int f_Z(x) e^{tx} \; dx                                                                                                \\
-          & = \int \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}x^2} e^{tx} \; dx                 & \text{(subst. pdf of standard Gaussian)} \\
-          & = \int \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}x^2 + tx} \; dx                                                              \\
-          & = \int \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}(x - t)^2 + \frac{1}{2}t^2} \; dx & \text{(completing the square)}           \\
-          & = e^{\frac{1}{2}t^2} \int \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}(x - t)^2 } \; dx & \text{($e^{\frac{1}{2}t^2}$ does not depend on $x$)}           \\
-          & = e^{\frac{1}{2}t^2} \cdot  1 \\
-          & = e^{\frac{1}{2}t^2},
-\end{align*}
-where the second last step comes from the fact that
-$$\frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}(x - t)^2 }$$ is a probability distribution of a Gaussian with mean $$t$$ and variance 1, 
-and therefore the integral integrates to 1.
-
-\beta = 1/\poly(n)
 
 \end{document}
