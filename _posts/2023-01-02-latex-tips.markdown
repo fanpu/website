@@ -1,7 +1,7 @@
 ---
-title: "The Art of LaTeX: Common Mistakes and Tips for Typesetting Beautiful, Delightful Proofs"
+title: "The Art of LaTeX: Common Mistakes, and Advice for Typesetting Beautiful, Delightful Proofs"
 layout: post
-tags: [code]
+tags: [code, general]
 cover: ubin_pond.jpg
 cover_preview: ubin_pond.jpg
 caption: Pulau Ubin, Singapore
@@ -11,21 +11,32 @@ author: fanpu
 toc: true
 giscus_comments: true
 description: >
-# hidden: true
+    When was the first time you had to use LaTeX?
+    If you are like most people, it was probably suddenly forced upon you during
+    your first math or CS class where you had to start writing proofs, with minimal
+    guidance on how to get started.
+    Unfortunately, this meant that while many people have good operational knowledge
+    of LaTeX, there are still many small mistakes and
+    best practices which are not followed, which are not corrected by TAs
+    as they are either not severe enough to warrant a note, or perhaps even the TAs themselves
+    are not aware of them.
+    <br><br>
+    In this post, we cover some common mistakes that are made by LaTeX
+    practitioners (even in heavily cited papers), and how to address them.
 ---
 
 When was the first time you had to use [LaTeX](https://www.latex-project.org/)?
 If you are like most people, it was probably suddenly forced upon you during
 your first math or CS class where you had to start writing proofs, with minimal
-guidance on how to get started other than something along the lines of``hey,
+guidance on how to get started other than something along the lines of "hey,
 check out this link on how to get things setup, and here are some basic
-commands, now go wild!''.
+commands, now go wild!".
 
 Unfortunately, this meant that while many people have good operational knowledge
-of LaTeX and can get the job done, very often there are still many small mistakes and
-best practices which are not followed, and which are often not corrected by TAs
-as they are either not severe enough to warrant a note, or oftentimes even the TAs themselves
-are not aware of it.
+of LaTeX and can get the job done, there are still many small mistakes and
+best practices which are not followed, which are not corrected by TAs
+as they are either not severe enough to warrant a note, or perhaps even the TAs themselves
+are not aware of them.
 
 In this post, we cover some common mistakes that are made by LaTeX
 practitioners (even in heavily cited papers), and how to address them. This
