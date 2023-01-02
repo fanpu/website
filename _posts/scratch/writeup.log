@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.22)  2 JAN 2023 02:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.22)  3 JAN 2023 02:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -730,32 +730,69 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Underfull \hbox (badness 10000) in paragraph at lines 156--162
+<example-image-b.pdf, id=23, 321.2pt x 240.9pt>
+File: example-image-b.pdf Graphic file (type pdf)
+<use example-image-b.pdf>
+Package pdftex.def Info: example-image-b.pdf  used on input line 156.
+(pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
+<example-image-a.pdf, id=24, 321.2pt x 240.9pt>
+File: example-image-a.pdf Graphic file (type pdf)
+<use example-image-a.pdf>
+Package pdftex.def Info: example-image-a.pdf  used on input line 161.
+(pdftex.def)             Requested size: 321.19922pt x 240.8994pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 167--173
 []\OT1/cmr/m/n/10.95 We de-note the his-tor-i-cal tra-jec-tory
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 156--162
+Underfull \hbox (badness 10000) in paragraph at lines 167--173
 \OT1/cmr/m/n/10.95 as $[]$ and action-
  []
 
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 167.
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 182.
 (/usr/share/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 167.
-LaTeX Font Info:    Trying to load font information for U+bbm on input line 180.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 182.
+
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 25.16252pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.16252pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-13.16252pt}.
+
+[2 </usr/share/texmf-dist/tex/latex/mwe/example-image-b.pdf>]
+LaTeX Font Info:    Trying to load font information for U+bbm on input line 195.
  (/usr/share/texmf-dist/tex/latex/bbm-macros/ubbm.fd
 File: ubbm.fd 1999/03/15 V 1.2 Font definition for bbm font - TH
 )
-Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 214.
-LaTeX Font Info:    Trying to load font information for U+bbold on input line 215.
+Package hyperref Info: bookmark level for unknown definition defaults to 0 on input line 241.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <8> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 242.
+
+
+LaTeX Font Warning: Font shape `U/wasy/b/n' in size <6> not available
+(Font)              Font shape `U/wasy/m/n' tried instead on input line 242.
+
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <8> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 242.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <6> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 242.
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 25.16252pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.16252pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-13.16252pt}.
+
+[3 </usr/share/texmf-dist/tex/latex/mwe/example-image-a.pdf>]
+LaTeX Font Info:    Trying to load font information for U+bbold on input line 280.
  (/usr/share/texmf-dist/tex/latex/bbold/Ubbold.fd)
-Overfull \hbox (6.04295pt too wide) in paragraph at lines 215--218
-[]\OT1/cmr/bx/n/10.95 Definition 1.1 \OT1/cmr/m/n/10.95 (Us-ing \OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95 mathbb)\OT1/cmr/bx/n/10.95 . []\OT1/cmr/m/n/10.95 A se-quence $(\OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95 )[] : \U/bbold/m/n/10.95 N \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 X$ \OT1/cmr/m/n/10.95 is a Cauchy se-quence if $[]$
- []
-
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 25.16252pt, for example:
@@ -763,35 +800,23 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-13.16252pt}.
 
-[2]
-Overfull \hbox (18.02707pt too wide) in paragraph at lines 221--224
-[]\OT1/cmr/bx/n/10.95 Definition 1.2 \OT1/cmr/m/n/10.95 (Us-ing \OMS/cmsy/m/n/10.95 n\OT1/cmr/m/n/10.95 mathbbm)\OT1/cmr/bx/n/10.95 . []\OT1/cmr/m/n/10.95 A se-quence $(\OML/cmm/m/it/10.95 x[]\OT1/cmr/m/n/10.95 )[] : \U/bbm/m/n/10.95 N \OMS/cmsy/m/n/10.95 ! \OML/cmm/m/it/10.95 X$ \OT1/cmr/m/n/10.95 is a Cauchy se-quence if $[]$
- []
-
-
-Package fancyhdr Warning: \headheight is too small (12.0pt): 
-(fancyhdr)                Make it at least 25.16252pt, for example:
-(fancyhdr)                \setlength{\headheight}{25.16252pt}.
-(fancyhdr)                You might also make \topmargin smaller to compensate:
-(fancyhdr)                \addtolength{\topmargin}{-13.16252pt}.
-
-[3] (./writeup.aux)
+[4] (./writeup.aux)
 Package rerunfilecheck Info: File `writeup.out' has not changed.
 (rerunfilecheck)             Checksum: 1AC6931FA8CCAB0B5B9B4C457E2FC790;48.
  ) 
 Here is how much of TeX's memory you used:
- 20016 strings out of 478238
- 335826 string characters out of 5850455
- 641502 words of memory out of 5000000
- 37910 multiletter control sequences out of 15000+600000
- 477093 words of font info for 62 fonts, out of 8000000 for 9000
+ 20085 strings out of 478238
+ 336947 string characters out of 5850455
+ 641697 words of memory out of 5000000
+ 37956 multiletter control sequences out of 15000+600000
+ 479881 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,12n,105p,385b,479s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/fanpu/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on writeup.pdf (3 pages, 131651 bytes).
+ 102i,12n,105p,385b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/fanpu/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss17.pfb>
+Output written on writeup.pdf (4 pages, 187814 bytes).
 PDF statistics:
- 91 PDF objects out of 1000 (max. 8388607)
- 66 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 25 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 129 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 12 named destinations out of 1000 (max. 500000)
+ 35 words of extra memory for PDF output out of 10000 (max. 10000000)
 

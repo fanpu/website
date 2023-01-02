@@ -1,5 +1,5 @@
 ---
-title: "LaTeX-ing Like Your Grades Depended On It: Common Mistakes and Tips for Typesetting Beautiful, Delightful Proofs"
+title: "The Art of LaTeX: Common Mistakes and Tips for Typesetting Beautiful, Delightful Proofs"
 layout: post
 tags: [code]
 cover: ubin_pond.jpg
@@ -11,7 +11,7 @@ author: fanpu
 toc: true
 giscus_comments: true
 description: >
-hidden: true
+# hidden: true
 ---
 
 When was the first time you had to use [LaTeX](https://www.latex-project.org/)?
@@ -27,8 +27,9 @@ best practices which are not followed, and which are often not corrected by TAs
 as they are either not severe enough to warrant a note, or oftentimes even the TAs themselves
 are not aware of it.
 
-In this post, we cover some common mistakes that are made by LaTeX practitioners.
-This post assumes that the reader has some working knowledge of LaTeX.
+In this post, we cover some common mistakes that are made by LaTeX
+practitioners (even in heavily cited papers), and how to address them. This
+post assumes that the reader has some working knowledge of LaTeX.
 
 ### Typesetting as a Form of Art
 It is important to get into the right mindset whenever you typeset a
@@ -50,8 +51,15 @@ typechecking of statically typed languages to ensure that mistakes in your
 expressions can be caught at compile-time.
 
 ### Common Mistakes, and How To Fix Them
-In this section, we take a look at common mistakes that people make, and how they 
-can be avoided or fixed.
+In the following section, we take a look at common mistakes that people make,
+and how they can be avoided or fixed. We cover style mistakes first, since the
+ideas behind them are more general. All the screenshotted examples come from
+peer-reviewed papers that have been published to top conferences, so they are
+definitely very common mistakes and you shouldn't feel bad for making them.
+The important thing is that you are aware of them now so that your style
+will gradually improve over time.
+
+### Style Mistakes
 
 #### Paired Delimiters
 Parenthesis, brackets, and pipes are examples of delimiters that are used to mark the start
@@ -101,14 +109,13 @@ Some of them are given below:
 | `\left( \frac{1}{x} \right)   `         | $$ \left( \frac{1}{x} \right)    $$         |
 | `\left[ \frac{1}{x} \right]   `         | $$ \left[ \frac{1}{x} \right]    $$         |
 | `\left\{ \frac{1}{x} \right\} `         | $$ \left\{ \frac{1}{x} \right\}  $$         |
-| `\left\| \frac{1}{x} \right\| `         | $$ \left\| \frac{1}{x} \right\|  $$         |
-| `\lvert \frac{1}{x} \rvert    `         | $$ \lvert \frac{1}{x} \rvert     $$         |
-| `\left\| \frac{1}{x} \right\| `         | $$ \left\| \frac{1}{x} \right\|  $$         |
+| `\left\lvert \frac{1}{x} \right\lvert ` | $$ \left\lvert \frac{1}{x} \right\rvert  $$ |
 | `\left\lceil \frac{1}{x} \right\rceil ` | $$ \left\lceil \frac{1}{x} \right\rceil  $$ |
 {: .table .table-bordered .table-sm }
 
 In fact, to make things even simpler and more readable, you can declare paired delimiters 
-for use based on the `mathtools` package:
+for use based on the `mathtools` package, with the following commands due to
+[Ryan O'Donnell](http://www.cs.cmu.edu/~odonnell/):
 
 {% highlight latex %}
 % Make sure you include \usepackage{mathtools}
@@ -193,6 +200,26 @@ to stay on the same line:
     class="z-depth-1"
     caption="Expressions that brace together stays together"
 %}
+
+#### Non-breaking space with `~`
+When referencing figures and equations, you want the text and number (i.e Figure 10) to end up on the same line.
+This is a negative example, where the region underlined in red shows how it was split up:
+
+{% include figure.html 
+    path="/assets/img/posts/latex-mistakes/figure-truncated.png"
+    width="500px"
+    class="z-depth-1"
+    caption='The phrase "Figure 2" was truncated in half'
+%}
+
+To remedy this, add a `~` after `Figure`, which LaTeX interprets as a non-breaking space:
+
+{% highlight latex %}
+We evaluated the policy periodically during training by testing it without exploration noise.
+Figure~\ref{fig:env-perf} shows the performance curve for a selection of environments. 
+{% endhighlight %}
+
+This would ensure that "Figure 2" always appears together.
 
 #### Expressions Should Be Punctuated Like Sentences
 Your document is meant to be read, and it should follow the rules and structures
@@ -356,7 +383,7 @@ the following table:
 | `\,`               | Thin space |
 {: .table .table-bordered .table-sm }
 
-So our new expression now looks like
+So our new expression now looks like:
 
 {% highlight latex %}
 P(X) = \int xyz \, dx
@@ -366,7 +393,146 @@ $$P(X) = \int xyz \, dx,$$
 
 which is much more readable.
 
+
 #### `align*` Environment for Multiline Equations
+When using the `align*` environment, make sure that your ampersands `&` appear before the
+symbol that you are aligning against. This ensures that you get the correct spacing.
+
+For instance, the following is wrong, where the `&` appears after the `=`:
+
+{% highlight latex %}
+\begin{align*}
+    \nabla_{\mu} (\mathbb{E}_{x\sim q_{\mu}} f(x))  = & \nabla_{\mu} \int_x f(x) q_{\mu}(x) dx                                     \\
+                                                    = & \int_x f(x) (\nabla_{\mu} \log q_{\mu}(x))  q_{\mu}(x) dx                  \\
+                                                    = & \mathbb{E}_{x \sim q_{\mu}} \left(f(x) \nabla_{\mu} \log q_{\mu}(x)\right)
+\end{align*}
+{% endhighlight %}
+
+$$
+\begin{align*}
+    \nabla_{\mu} (\mathbb{E}_{x\sim q_{\mu}} f(x))  = & \nabla_{\mu} \int_x f(x) q_{\mu}(x) dx                                     \\
+                                                    = & \int_x f(x) (\nabla_{\mu} \log q_{\mu}(x))  q_{\mu}(x) dx                  \\
+                                                    = & \mathbb{E}_{x \sim q_{\mu}} \left(f(x) \nabla_{\mu} \log q_{\mu}(x)\right)
+\end{align*}
+$$
+
+This is because there is too little spacing after the `=` sign on each line, which feels very cramped.
+Putting the `&` before the `=` is correct:
+
+{% highlight latex %}
+\begin{align*}
+    \nabla_{\mu} (\mathbb{E}_{x\sim q_{\mu}} f(x)) & = \nabla_{\mu} \int_x f(x) q_{\mu}(x) dx                                     \\
+                                                   & =  \int_x f(x) (\nabla_{\mu} \log q_{\mu}(x))  q_{\mu}(x) dx                 \\
+                                                   & = \mathbb{E}_{x \sim q_{\mu}} \left(f(x) \nabla_{\mu} \log q_{\mu}(x)\right)
+\end{align*}
+{% endhighlight %}
+
+$$
+\begin{align*}
+    \nabla_{\mu} (\mathbb{E}_{x\sim q_{\mu}} f(x)) & = \nabla_{\mu} \int_x f(x) q_{\mu}(x) dx                                     \\
+                                                   & =  \int_x f(x) (\nabla_{\mu} \log q_{\mu}(x))  q_{\mu}(x) dx                 \\
+                                                   & = \mathbb{E}_{x \sim q_{\mu}} \left(f(x) \nabla_{\mu} \log q_{\mu}(x)\right)
+\end{align*}
+$$
+
+The spacing is much more comfortable now.
+
+#### Using Macros to Avoid Mistakes
+Macros, defined using the `\newcommand` command, is commonly used to alias
+commonly-used expressions to save on typing effort. However, they can also be used
+to help to catch mistakes when typesetting grammatically structured things.
+
+For instance, when expressing types and terms in programming language theory, 
+there is often a lot of nested syntactical structure, which could make it easy
+to make mistakes.  Consider the following proof:
+
+{% include figure.html 
+    path="/assets/img/posts/latex-mistakes/macros.png"
+    width="600px"
+    class="z-depth-1"
+    caption="A proof with a lot of syntactical structure"
+%}
+
+The details are unimportant, but it is clear that it is easy to miss a letter here
+or a term there in the proof, given how cumbersome the notation is.
+To avoid this, I used the following macros, due to [Robert Harper](http://www.cs.cmu.edu/~rwh/):
+
+{% highlight latex %}
+{% raw %}
+\newcommand{\inval}[2]{\in^{(#1)}_\mathsf{val} #2}
+\newcommand{\foldex}[2]{\mathsf{fold}_{#1}(#2)}
+\newcommand{\recty}[2]{\mathsf{rec}(#1.#2)}
+\newcommand{\Subst}[3]{\sqbracks{{#1}\mathord{/}{#2}}{#3}}
+{% endraw %}
+{% endhighlight %}
+
+And the source for the proof looks like the following:
+
+{% highlight latex %}
+We check that anti-monotonicity continues to hold for recursive types,
+by showing that if $m \leq n$, then
+$$\foldex{X.A}{V} \inval{n}{\recty{X}{A}} \text{ implies } \foldex{X.A}{V} \inval{m}{\recty{X}{A}}. $$
+
+\begin{proof}
+We proceed by induction on $n$. 
+When $n=0$, the result is trivial, so consider $n \geq 0$, with the intent to prove it for $n+1$.
+
+Let $m \leq n + 1$, and assume
+$\foldex{X.A}{V} \inval{n+1}{\recty{X}{A}}$. If $m = n + 1$ or $m=0$, we are trivially done, so let $0 < m < n+1$.
+
+We want to show that
+$\foldex{X.A}{V} \inval{m}{\recty{X}{A}}$.
+By definition of step-indexed logical relations~(SILR), it suffices to show
+$V \inval{m-1}{\Subst{\recty{X}{A}}{X}{A}}$.
+
+Since $\foldex{X.A}{V} \inval{n+1}{\recty{X}{A}}$, by definition of SILR,
+$V \inval{n}{\Subst{\recty{X}{A}}{X}{A}}$.
+
+By IH on $V \inval{n}{\Subst{\recty{X}{A}}{X}{A}}$,
+we also know $V \inval{m-1}{\Subst{\recty{X}{A}}{X}{A}}$.
+
+But then by definition of SILR,
+$\foldex{X.A}{V} \inval{m}{\recty{X}{A}}$, as desired. \qedhere
+\end{proof}
+{% endhighlight %}
+
+It is definitely still not the most pleasant thing to read, but at least now you
+will be less likely to miss an argument or forget to close a parenthesis.
+
+### Command Mistakes
+We now look at some mistakes that arise from using the wrong commands.
+
+#### Math Operators
+Instead of `sin (x)` $$(sin(x))$$ or `log (x)` $$(log (x))$$, use `\sin (x)` $$(\sin (x))$$
+and `\log (x)` $$(\log (x))$$. The idea extends to many other common math functions.
+These are math operators that will de-italicize the commands
+and also take care of the appropriate math-mode spacing between characters:
+
+| `O(n log n)` | $$O(n log n)$$ |
+| `O(n \log n)` | $$O(n \log n)$$ |
+{: .table .table-sm }
+
+Many times there is a math operator that you need to use repeatedly, but which does
+not come out of the box. You can define custom math operators with
+the `\DeclareMathOperator` command. For instance, here are some commonly used in probability:
+
+{% highlight latex %}
+\DeclareMathOperator*{\Pr}{\mathbf{Pr}}
+\DeclareMathOperator*{\E}{\mathbf{E}}
+\DeclareMathOperator*{\Ex}{\mathbf{E}}
+\DeclareMathOperator*{\Var}{\mathbf{Var}}
+\DeclareMathOperator*{\Cov}{\mathbf{Cov}}
+\DeclareMathOperator*{\stddev}{\mathbf{stddev}}
+{% endhighlight %}
+
+Then you can use it as follows:
+
+{% highlight latex %}
+\Pr \left[ X \geq a \right] \leq \frac{\Ex[X]}{a}
+{% endhighlight %}
+
+$$\Pr \left[ X \geq a \right] \leq \frac{\Ex[X]}{a}$$
+
 
 #### Double quotes
 This is more of a rookie mistake since it's visually very obvious something is
@@ -418,9 +584,13 @@ Using `\varepsilon` makes the reader feel much more at peace:
     caption='"\varepsilon" is usually what should be used'
 %}
 
+Similarly, people tend to get lazy and mix up `\phi, \Phi, \varphi` ($$\phi, \Phi, \varphi$$),
+since they are "about the same".  Details matter!
+
 #### Sets: `mathbbm` Instead Of `mathbb`
 For sets like $$\mathbb{N}$$, you should use `\mathbbm{N}` instead of `mathbb{N}`. See the
-difference for yourself, using the same example as the previous section:
+difference in how the rendering of the set of natural numbers
+$$\mathbb{N}$$ differs, using the same example as the previous section:
 
 {% include figure.html 
     path="/assets/img/posts/latex-mistakes/mathbbm.png"
@@ -432,7 +602,7 @@ difference for yourself, using the same example as the previous section:
 `mathbbm` causes the symbols to be bolded, which is what you want.
 
 #### Dots
-`...`  and `\dots` are different. See the difference for yourself:
+`...`  and `\dots` are different. See the difference:
 
 {% highlight latex %}
 X = \left( X_1, ..., X_n \right)
@@ -449,19 +619,61 @@ X = \left( X_1, \dots, X_n \right)
 When using "...", the spacing between each dot, and between the final dot
 and the comma character is wrong. Always use "\dots".
 
-### Mid
+#### Summation and Product
+When writing summation or products of terms, use `\sum` and `\prod` instead of `\Sigma` and `\Pi`. This helps to handle the
+relative positioning of the limits properly, and is much more idiomatic to read
+from the raw script:
 
-### Angle Brackets
+| Raw LaTeX            | Rendered                  |
+|----------------------|---------------------------|
+| `\Sigma_{i=1}^n X_i` | $$  \Sigma_{i=1}^n X_i $$ |
+| `\sum_{i=1}^n X_i`   | $$  \sum_{i=1}^n X_i $$   |
+| `\Pi_{i=1}^n X_i`    | $$  \Pi_{i=1}^n X_i $$    |
+| `\prod_{i=1}^n X_i`  | $$  \prod_{i=1}^n X_i $$  |
+{: .table .table-bordered .table-sm }
 
-### Math Operators
 
-### `\textnormal`
+#### Multiplication
+To denote multiplication, use `\cdot` or `times` instead of `*`. See the difference below
+in the equation:
 
-### Non-breaking space with `~`
+{% include figure.html 
+    path="/assets/img/posts/latex-mistakes/multiplication.png"
+    width="600px"
+    class="z-depth-1"
+    caption='Use "\cdot" looks much better than "*"'
+%}
+
+#### Mid
+For set builder notation or conditional probability, use `\mid` instead of the pipe `|`.
+This helps to handle the spacing between the terms properly:
+
+| Raw LaTeX                                                                 | Rendered                                                                    |
+|---------------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| `p(\mathbf{z}, \mathbf{x}) = p(\mathbf{z}) p(\mathbf{z} | \mathbf{z})`    | $$p(\mathbf{z}, \mathbf{x}) = p(\mathbf{z}) p(\mathbf{z} \| \mathbf{z})$$    |
+| `p(\mathbf{z}, \mathbf{x}) = p(\mathbf{z}) p(\mathbf{z} \mid \mathbf{z})` | $$p(\mathbf{z}, \mathbf{x}) = p(\mathbf{z}) p(\mathbf{z} \mid \mathbf{z})$$ |
+{: .table .table-bordered .table-sm }
 
 
+#### Angle Brackets
+When writing vectors, use the `\langle` and `\rangle` instead of the keyboard angle brackets:
 
-$$
-    Hello!
-    \hfill \square
-$$
+| Raw LaTeX              | Rendered                   |
+|------------------------|----------------------------|
+| `<u, v>`               | $$<u, v>$$                 |
+| `\langle u, v \rangle` | $$ \langle u, v \rangle $$ |
+{: .table .table-bordered .table-sm }
+
+### Conclusion
+That was a lot, and I hope it has been a helpful read! 
+I will continue updating this post in the future as and when I feel like
+there are other important things which should be noted which I missed.
+
+I would like to thank my friend [Zack Lee](https://github.com/zack-lee) for reviewing this
+article and for providing valuable suggestions.
+I would also like to express my thanks to [Ryan
+O'Donnell](http://www.cs.cmu.edu/~odonnell/), and my 15-751 A Theorist's Toolkit
+TAs [Tim Hsieh](https://jthsieh.github.io/) and [Emre
+Yolcu](https://www.cs.cmu.edu/~eyolcu/) for helping me realize a lot of the
+style-related LaTeX issues mentioned in this post, many of which I made
+personally in the past.

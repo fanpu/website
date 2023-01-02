@@ -315,7 +315,7 @@ relative error is actually very large, and therefore is not as helpful.
 
 I hope this article has been helpful!
 
-*I would like to express my thanks to [Albert Gao](https://adbforlife.github.io/)
+*I would like to express my thanks to my friend [Albert Gao](https://adbforlife.github.io/)
 for reviewing this article and for providing valuable suggestions*.
 
 ### References

@@ -152,6 +152,17 @@
 
 \newpage
 
+\begin{figure}
+    \includegraphics{example-image-b}
+    \caption{Landing/Login Page Example}
+    \label{fig:env-gg}
+\end{figure}
+\begin{figure}
+    \includegraphics{example-image-a}
+    \caption{Landing/Login Page Example}
+    \label{fig:env-perf}
+\end{figure}
+
 \begin{multicols}{2}
     We denote the historical trajectory as
     ${ \tau=\left(s_1, a_1, \ldots, a_{t-1}, s_t\right) }$
@@ -159,6 +170,10 @@
     player $i$ as
     ${ \tau^i=\left(\Omega^i\left(s_1\right), a_1, \ldots, a_{t-1}, \Omega^i\left(s_t\right)\right) }$,
     which encodes the trajectory from player $i$ 's point of view.
+
+    We evaluated the policy periodically during training by testing it without exploration noise.
+    Figure~\ref{fig:env-perf} shows the performance curve for a selection of environments. We also report
+    results with components of our algorithm.
 
     \blindtext\blindtext
     \begin{align*}
@@ -170,18 +185,18 @@
 ``Hello World!''
 
 \textit{Problem: Show that if $(x_n)_n$ converges to $x$ in the usual sense, then
-$\lim_{n \to \infty} x_n = \lim_{\mathcal{F}} x_n$.}
+    $\lim_{n \to \infty} x_n = \lim_{\mathcal{F}} x_n$.}
 
 Suppose that $(x_n)_n$ converges to $x$. We show that this $x$ is also the
 $\mathcal{F}$-limit of $(x_n)_n$.
 
 \begin{proof}
-Take any $\varepsilon$. Then we know that for some large enough $N$, if $n \geq N$, then
-$x_n \in B_\varepsilon(x)$. Since every non-principal ultrafilter on $\N$ contains
-$\mathcal{F}_\infty$, then $\mathcal{F}$ also contains $ \left\{ n : n \geq N \right\} $,
-since the complement is finite. Therefore since filters are closed upwards, any
-sequence items $x_n$ with $n < N$ that happen to fall in the ball around $x$, i.e, $x_n \in B_\varepsilon(x)$
-is also contained in some filter element, so $\left\{  n \in \N : \lvert x_n - x \rvert < \varepsilon \right\} \in \mathcal{F}$, as desired.
+    Take any $\varepsilon$. Then we know that for some large enough $N$, if $n \geq N$, then
+    $x_n \in B_\varepsilon(x)$. Since every non-principal ultrafilter on $\N$ contains
+    $\mathcal{F}_\infty$, then $\mathcal{F}$ also contains $ \left\{ n : n \geq N \right\} $,
+    since the complement is finite. Therefore since filters are closed upwards, any
+    sequence items $x_n$ with $n < N$ that happen to fall in the ball around $x$, i.e, $x_n \in B_\varepsilon(x)$
+    is also contained in some filter element, so $\left\{  n \in \N : \lvert x_n - x \rvert < \varepsilon \right\} \in \mathcal{F}$, as desired.
 
 \end{proof}
 
@@ -192,7 +207,7 @@ is also contained in some filter element, so $\left\{  n \in \N : \lvert x_n - x
     since the complement is finite. Therefore since filters are closed upwards, any
     sequence items $x_n$ with $n < N$ that happen to fall in the ball around $x$,
     i.e, $x_n \in B_\varepsilon(x)$
-    is also contained in some filter element, so 
+    is also contained in some filter element, so
     $\left\{  n \in \N : \lvert x_n - x \rvert < \varepsilon \right\} \in \mathcal{F}$,
     as desired. \qedhere
 
@@ -211,18 +226,67 @@ $$P(X) = \int xyz dx.$$
 %     $\forall \, n, m \geq N, \, d \left( x_n, x_m \right) < \epsilon$.
 % \end{definition}
 
-\begin{definition}[Using \textbackslash mathbb]
-    A sequence $(x_n)_n : \mathbb{N} \to X$ is a Cauchy sequence if 
-    ${\forall \varepsilon > 0, \exists \, N \in \mathbb{N}}$ such that 
-    ${\forall \, n, m \geq N, \, d \left( x_n, x_m \right) < \varepsilon}$.
+% \begin{definition}[Using \textbackslash mathbb]
+%     A sequence $(x_n)_n : \mathbb{N} \to X$ is a Cauchy sequence if 
+%     ${\forall \varepsilon > 0, \exists \, N \in \mathbb{N}}$ such that 
+%     ${\forall \, n, m \geq N, \, d \left( x_n, x_m \right) < \varepsilon}$.
+% \end{definition}
+
+% \begin{definition}[Using \textbackslash mathbbm]
+%     A sequence $(x_n)_n : \mathbbm{N} \to X$ is a Cauchy sequence if 
+%     ${\forall \varepsilon > 0, \exists \, N \in \mathbbm{N}}$ such that 
+%     ${\forall \, n, m \geq N, \, d \left( x_n, x_m \right) < \varepsilon}$.
+% \end{definition}
+
+\begin{definition}[Using *]
+    A distribution on matrices $\bS \in \R^{k \times n}$ has the $\left( \varepsilon, \delta, \ell \right)$-JL
+    moment property if for all $x \in \R^n$ with $\lvert x \rvert_2 = 1$,
+    $$ \Ex_{\bS} \left\lvert \left\lvert \bS x \right\rvert_2^2 - 1 \right\rvert^\ell \leq \varepsilon^\ell * \delta. $$
 \end{definition}
 
-\begin{definition}[Using \textbackslash mathbbm]
-    A sequence $(x_n)_n : \mathbbm{N} \to X$ is a Cauchy sequence if 
-    ${\forall \varepsilon > 0, \exists \, N \in \mathbbm{N}}$ such that 
-    ${\forall \, n, m \geq N, \, d \left( x_n, x_m \right) < \varepsilon}$.
+\begin{definition}[Using \textbackslash cdot]
+    A distribution on matrices $\bS \in \R^{k \times n}$ has the $\left( \varepsilon, \delta, \ell \right)$-JL
+    moment property if for all $x \in \R^n$ with $\lvert x \rvert_2 = 1$,
+    $$ \Ex_{\bS} \left\lvert \left\lvert \bS x \right\rvert_2^2 - 1 \right\rvert^\ell \leq \varepsilon^\ell \cdot \delta. $$
 \end{definition}
 
+$ \mathbf{Pr} \left[ X \geq a \right] \leq \frac{\mathbf{E}[X]}{a}$
 
+$ x\Gr_{X} \left[ X \geq a \right] \leq \frac{\mathbf{E}[X]}{a}$
+
+$ x\Hr_{X} \left[ X \geq a \right] \leq \frac{\mathbf{E}[X]}{a}$
+
+$ \Ex_{X \sim} \left[ X \geq a \right] \leq \frac{\mathbf{E}[X]}{a}$
+
+
+$p(\bz, \bx) = p(\bz) p(\bx \mid \bz)$
+
+$p(\bz, \bx) = p(\bz) p(\bx | \bz)$
+
+$KL \left( P \; \middle\| \; Q \right)$
+
+$KL \left( P \; \middle\| \; Q \right)$
+
+
+We evaluated the policy periodically during training by testing it without exploration noise.
+Figure~\ref{fig:env-perf} shows the performance curve for a selection of environments.
+
+$$\sum_{i=1}^n$$
+
+\begin{align*}
+    \nabla_{\mu} (\mathbb{E}_{x\sim q_{\mu}} f(x)) & = \nabla_{\mu} \int_x f(x) q_{\mu}(x) dx                                     \\
+                                                   & =  \int_x f(x) (\nabla_{\mu} \log q_{\mu}(x))  q_{\mu}(x) dx                 \\
+                                                   & = \mathbb{E}_{x \sim q_{\mu}} \left(f(x) \nabla_{\mu} \log q_{\mu}(x)\right)
+\end{align*}
+
+\begin{align*}
+    \nabla_{\mu} (\mathbb{E}_{x\sim q_{\mu}} f(x))  = & \nabla_{\mu} \int_x f(x) q_{\mu}(x) dx                                     \\
+                                                    = & \int_x f(x) (\nabla_{\mu} \log q_{\mu}(x))  q_{\mu}(x) dx                  \\
+                                                    = & \mathbb{E}_{x \sim q_{\mu}} \left(f(x) \nabla_{\mu} \log q_{\mu}(x)\right)
+\end{align*}
+
+$ \Pr \left[ X \geq a \right] \leq \frac{\Ex[X]}{a}$
+
+$$\phi, \Phi, \varphi$$ ,
 
 \end{document}

@@ -187,7 +187,7 @@ choose an appropriate step size in a future post: Natural Policy Gradients,
 Proximal Policy Optimization (PPO), and Trust Region Policy Optimization
 (TRPO). Hope to see you around!
 
-*I would like to express my thanks to [Jun Yu Tan](https://jytan.net/about/)
+*I would like to express my thanks to my friend [Jun Yu Tan](https://jytan.net/about/)
 for reviewing this article and for providing valuable suggestions*.
 
 ## References
