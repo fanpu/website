@@ -3,7 +3,7 @@ title: "The Art of LaTeX: Common Mistakes, and Advice for Typesetting Beautiful,
 layout: post
 tags: [code, general]
 cover: ubin_pond.jpg
-cover_preview: ubin_pond.jpg
+cover_preview: ubin_pond.avif
 caption: Pulau Ubin, Singapore
 class: post-template
 navigation: True

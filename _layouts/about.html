@@ -48,6 +48,10 @@ layout: default
             <!-- Selected papers -->
             {%- include selected_papers.html %}
           {%- endif %}
+          {% if page.selected_posts -%}
+            <!-- Selected blog posts -->
+            {%- include selected_posts.html %}
+          {%- endif %}
           {%- if page.social %}
           <!-- Social -->
           <div class="social">
