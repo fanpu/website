@@ -281,12 +281,27 @@ $$\sum_{i=1}^n$$
 
 \begin{align*}
     \nabla_{\mu} (\mathbb{E}_{x\sim q_{\mu}} f(x))  = & \nabla_{\mu} \int_x f(x) q_{\mu}(x) dx                                     \\
-                                                    = & \int_x f(x) (\nabla_{\mu} \log q_{\mu}(x))  q_{\mu}(x) dx                  \\
-                                                    = & \mathbb{E}_{x \sim q_{\mu}} \left(f(x) \nabla_{\mu} \log q_{\mu}(x)\right)
+    =                                                 & \int_x f(x) (\nabla_{\mu} \log q_{\mu}(x))  q_{\mu}(x) dx                  \\
+    =                                                 & \mathbb{E}_{x \sim q_{\mu}} \left(f(x) \nabla_{\mu} \log q_{\mu}(x)\right)
 \end{align*}
 
 $ \Pr \left[ X \geq a \right] \leq \frac{\Ex[X]}{a}$
 
 $$\phi, \Phi, \varphi$$ ,
+
+\begin{theorem}[Gibbs Variational Principle] \label{thm:gibbs}
+    Let $p(\mathbf{z}, \mathbf{x})$ be a joint distribution over latent variables and observables. Then,
+    $$p(\mathbf{z} \mid \mathbf{x}) = \argmax_{q(\mathbf{z} \mid \mathbf{x}) : \mbox{ distribution over } \mathbf{z}}$$
+\end{theorem}
+
+\renewcommand{\bA}{\boldsymbol{A}}
+$$\min_x \lvert \bA x - b \rvert_2^2$$
+
+$$\boldsymbol{M}$$
+
+\newcommand{\dotprod}[2]{\langle #1, #2 \rangle}
+\renewcommand{\bu}{\boldsymbol{u}}
+\renewcommand{\bv}{\boldsymbol{v}}
+$$\left\lvert \dotprod{\bu}{\bv} \right\rvert^2 \leq \dotprod{\bu}{\bu} \cdot \dotprod{\bv}{\bv}$$
 
 \end{document}

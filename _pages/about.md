@@ -33,10 +33,9 @@ theoretical computer science and mathematics. My eventual goal is to build a
 startup in AI/ML using the things that I've learnt, for the betterment of
 humanity. 
 
-In my free time, I enjoy bouldering, running, reading textbooks, watching
-anime, playing Genshin Impact, and cosplaying at anime conventions. If I have
-an extended break I enjoy traveling, especially hiking and exploring the great
-outdoors.
+In my free time, I enjoy bouldering, running, learning new things, watching
+anime, playing Genshin Impact, and cosplaying. If I have an extended break I
+enjoy traveling, especially hiking and exploring the great outdoors.
 
 I grew up in my hometown Singapore before moving to the US for college. I try
 to go back and visit once a year.

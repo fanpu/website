@@ -160,6 +160,99 @@ solution](https://tex.stackexchange.com/questions/1742/automatic-left-and-right-
 floating around on StackExchange that relies on a custom command that makes auto-resizing
 the default, but it's still a far cry from a parsimonious solution.
 
+#### Macros for Saving Time and Preventing Mistakes
+Macros can be defined using the `\newcommand` command.
+The basic syntax is `\newcommand{command_name}{command_definition}.
+For instance, it might get tiring to always type `\boldsymbol{A}`
+to refer to a matrix $$\boldsymbol{A}$$, so you can use the following macro:
+
+{% highlight latex %}
+% Macro
+\newcommand{\bA}{\boldsymbol{A}}
+
+$$\min_x \lvert \bA x - b \rvert_2^2$$
+{% endhighlight %}
+
+$$\min_x \left\lvert \boldsymbol{A} x - b \right\rvert_2^2$$
+
+Macros can also take arguments to be substituted within the definition.
+This is done by adding a `[n]` argument after your command name,
+where `n` is the number of arguments that it should take. You can then
+reference the positional arguments using `#1, #2,` and so on.
+Here, we create a `\dotprod` macro that takes two arguments:
+
+{% highlight latex %}
+% Macros
+\newcommand{\dotprod}[2]{\langle #1, #2 \rangle}
+\newcommand{\bu}{\boldsymbol{u}}
+\newcommand{\bv}{\boldsymbol{v}}
+
+$$\left\lvert \dotprod{\bu}{\bv} \right\rvert^2 \leq \dotprod{\bu}{\bu} \cdot \dotprod{\bv}{\bv}$$
+{% endhighlight %}
+
+$$\left\lvert \dotprod{\bu}{\bv} \right\rvert^2 \leq \dotprod{\bu}{\bu} \cdot \dotprod{\bv}{\bv}$$
+
+Macros are incredibly helpful as they help to save time, and ensure that our
+notation is consistent. However, they can also be used to help to catch
+mistakes when typesetting grammatically structured things.
+
+For instance, when expressing types and terms in programming language theory, 
+there is often a lot of nested syntactical structure, which could make it easy
+to make mistakes.  Consider the following proof:
+
+{% include figure.html 
+    path="/assets/img/posts/latex-mistakes/macros.png"
+    width="600px"
+    class="z-depth-1"
+    caption="A proof with a lot of syntactical structure"
+%}
+
+The details are unimportant, but it is clear that it is easy to miss a letter here
+or a term there in the proof, given how cumbersome the notation is.
+To avoid this, I used the following macros, due to [Robert Harper](http://www.cs.cmu.edu/~rwh/):
+
+{% highlight latex %}
+{% raw %}
+\newcommand{\inval}[2]{\in^{(#1)}_\mathsf{val} #2}
+\newcommand{\foldex}[2]{\mathsf{fold}_{#1}(#2)}
+\newcommand{\recty}[2]{\mathsf{rec}(#1.#2)}
+\newcommand{\Subst}[3]{\sqbracks{{#1}\mathord{/}{#2}}{#3}}
+{% endraw %}
+{% endhighlight %}
+
+And the source for the proof looks like the following:
+
+{% highlight latex %}
+We check that anti-monotonicity continues to hold for recursive types,
+by showing that if $m \leq n$, then
+$$\foldex{X.A}{V} \inval{n}{\recty{X}{A}} \text{ implies } \foldex{X.A}{V} \inval{m}{\recty{X}{A}}. $$
+
+\begin{proof}
+We proceed by induction on $n$. 
+When $n=0$, the result is trivial, so consider $n \geq 0$, with the intent to prove it for $n+1$.
+
+Let $m \leq n + 1$, and assume
+$\foldex{X.A}{V} \inval{n+1}{\recty{X}{A}}$. If $m = n + 1$ or $m=0$, we are trivially done, so let $0 < m < n+1$.
+
+We want to show that
+$\foldex{X.A}{V} \inval{m}{\recty{X}{A}}$.
+By definition of step-indexed logical relations~(SILR), it suffices to show
+$V \inval{m-1}{\Subst{\recty{X}{A}}{X}{A}}$.
+
+Since $\foldex{X.A}{V} \inval{n+1}{\recty{X}{A}}$, by definition of SILR,
+$V \inval{n}{\Subst{\recty{X}{A}}{X}{A}}$.
+
+By IH on $V \inval{n}{\Subst{\recty{X}{A}}{X}{A}}$,
+we also know $V \inval{m-1}{\Subst{\recty{X}{A}}{X}{A}}$.
+
+But then by definition of SILR,
+$\foldex{X.A}{V} \inval{m}{\recty{X}{A}}$, as desired. \qedhere
+\end{proof}
+{% endhighlight %}
+
+It is definitely still not the most pleasant thing to read, but at least now you
+will be less likely to miss an argument or forget to close a parenthesis.
+
 #### Non-breaking lines
 Expressions which are logically a single unit should stay on the same line, instead
 of being split apart mid-sentence. Cue the following bad example from another paper:
@@ -248,9 +341,9 @@ Consider the following example that does not use punctuation:
 %}
 
 In the region highlighted in red, the expressions do not carry any punctuation at all,
-and by the end of the last equation (Equation 15), I am almost out of breathe trying
+and by the end of the last equation (Equation 15), I am almost out of breath trying
 to process all of the information. In addition, it does not end in a full stop, which
-does not give me an affordance to take a break, which makes it a very tiring read mentally.
+does not give me an affordance to take a break mentally until the next paragraph.
 
 Instead, commas should be added after each expression where the expression does not terminate,
 and the final equation should be ended by a full stop. Here is a good example of punctuation
@@ -400,7 +493,7 @@ So our new expression now looks like:
 P(X) = \int xyz \, dx
 {% endhighlight %}
 
-$$P(X) = \int xyz \, dx,$$
+$$P(X) = \int xyz \, dx$$
 
 which is much more readable.
 
@@ -448,67 +541,6 @@ $$
 
 The spacing is much more comfortable now.
 
-#### Using Macros to Avoid Mistakes
-Macros, defined using the `\newcommand` command, is commonly used to alias
-commonly-used expressions to save on typing effort. However, they can also be used
-to help to catch mistakes when typesetting grammatically structured things.
-
-For instance, when expressing types and terms in programming language theory, 
-there is often a lot of nested syntactical structure, which could make it easy
-to make mistakes.  Consider the following proof:
-
-{% include figure.html 
-    path="/assets/img/posts/latex-mistakes/macros.png"
-    width="600px"
-    class="z-depth-1"
-    caption="A proof with a lot of syntactical structure"
-%}
-
-The details are unimportant, but it is clear that it is easy to miss a letter here
-or a term there in the proof, given how cumbersome the notation is.
-To avoid this, I used the following macros, due to [Robert Harper](http://www.cs.cmu.edu/~rwh/):
-
-{% highlight latex %}
-{% raw %}
-\newcommand{\inval}[2]{\in^{(#1)}_\mathsf{val} #2}
-\newcommand{\foldex}[2]{\mathsf{fold}_{#1}(#2)}
-\newcommand{\recty}[2]{\mathsf{rec}(#1.#2)}
-\newcommand{\Subst}[3]{\sqbracks{{#1}\mathord{/}{#2}}{#3}}
-{% endraw %}
-{% endhighlight %}
-
-And the source for the proof looks like the following:
-
-{% highlight latex %}
-We check that anti-monotonicity continues to hold for recursive types,
-by showing that if $m \leq n$, then
-$$\foldex{X.A}{V} \inval{n}{\recty{X}{A}} \text{ implies } \foldex{X.A}{V} \inval{m}{\recty{X}{A}}. $$
-
-\begin{proof}
-We proceed by induction on $n$. 
-When $n=0$, the result is trivial, so consider $n \geq 0$, with the intent to prove it for $n+1$.
-
-Let $m \leq n + 1$, and assume
-$\foldex{X.A}{V} \inval{n+1}{\recty{X}{A}}$. If $m = n + 1$ or $m=0$, we are trivially done, so let $0 < m < n+1$.
-
-We want to show that
-$\foldex{X.A}{V} \inval{m}{\recty{X}{A}}$.
-By definition of step-indexed logical relations~(SILR), it suffices to show
-$V \inval{m-1}{\Subst{\recty{X}{A}}{X}{A}}$.
-
-Since $\foldex{X.A}{V} \inval{n+1}{\recty{X}{A}}$, by definition of SILR,
-$V \inval{n}{\Subst{\recty{X}{A}}{X}{A}}$.
-
-By IH on $V \inval{n}{\Subst{\recty{X}{A}}{X}{A}}$,
-we also know $V \inval{m-1}{\Subst{\recty{X}{A}}{X}{A}}$.
-
-But then by definition of SILR,
-$\foldex{X.A}{V} \inval{m}{\recty{X}{A}}$, as desired. \qedhere
-\end{proof}
-{% endhighlight %}
-
-It is definitely still not the most pleasant thing to read, but at least now you
-will be less likely to miss an argument or forget to close a parenthesis.
 
 ### Command Mistakes
 We now look at some mistakes that arise from using the wrong commands.
@@ -599,7 +631,8 @@ Similarly, people tend to get lazy and mix up `\phi, \Phi, \varphi` ($$\phi, \Ph
 since they are "about the same".  Details matter!
 
 #### Sets: `mathbbm` Instead Of `mathbb`
-For sets like $$\mathbb{N}$$, you should use `\mathbbm{N}` instead of `mathbb{N}`. See the
+For sets like $$\mathbb{N}$$, you should use `\mathbbm{N}`
+(from `bbm` package) instead of `mathbb{N}` (from `amssymb`). See the
 difference in how the rendering of the set of natural numbers
 $$\mathbb{N}$$ differs, using the same example as the previous section:
 
@@ -674,6 +707,14 @@ When writing vectors, use the `\langle` and `\rangle` instead of the keyboard an
 | `<u, v>`               | $$<u, v>$$                 |
 | `\langle u, v \rangle` | $$ \langle u, v \rangle $$ |
 {: .table .table-bordered .table-sm }
+
+#### Labels
+Use `\label` to label your figures, equations, tables, and so on, and reference them using `\ref`, instead of hardcoding the number. 
+For instance, `\label{fig:myfig}` and `\ref{fig:myfig}`.
+Including the type of the object in the tag helps to keep track
+of what it is and ensures that you are referencing it correctly, i.e
+making sure you write `Figure \ref{fig:myfig}` instead of accidentally saying
+something like `Table \ref{fig:myfig}`.
 
 ### Conclusion
 That was a lot, and I hope it has been a helpful read! 

@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1672684231 "/home/fanpu/website/_posts/scratch/writeup.tex" "writeup.pdf" "writeup" 1672684231
+["pdflatex"] 1672727379 "/home/fanpu/website/_posts/scratch/writeup.tex" "writeup.pdf" "writeup" 1672727380
   "/home/fanpu/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk" 1642751075 7808 5c669c7a818be95ecd802871862dc841 ""
-  "/home/fanpu/website/_posts/scratch/writeup.tex" 1672684230 10485 c92c44ef834f413f71f9e6c385a7a4fa ""
+  "/home/fanpu/website/_posts/scratch/writeup.tex" 1672727379 11102 f1fbf4b9c9a2c65603e750849ac81f8a ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1650183167 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1650183167 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -180,10 +180,10 @@
   "/usr/share/texmf-dist/web2c/texmf.cnf" 1650183167 39911 2da6c67557ec033436fe5418a70a8a61 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1669131904 4408072 42ceaa83bae76aebad711d3f3dd7f55f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1669131894 2927663 fa2869cf5adfc65d9fa35f3d89d70588 ""
-  "CSTheoryToolkitCMUStyle.sty" 1672679148 8811 f61bbe5764473c801d56874241709ab5 ""
-  "writeup.aux" 1672684231 1967 34ab7e3ce1a5ff4340d42502adfec928 "pdflatex"
-  "writeup.out" 1672684231 48 1ac6931fa8ccab0b5b9b4c457e2fc790 "pdflatex"
-  "writeup.tex" 1672684230 10485 c92c44ef834f413f71f9e6c385a7a4fa ""
+  "CSTheoryToolkitCMUStyle.sty" 1672727238 8813 5e4717c7c6c2f73142cbbd67b67d823f ""
+  "writeup.aux" 1672727380 2346 abb0c40a0e5d1e9d3c966d366360a450 "pdflatex"
+  "writeup.out" 1672727380 48 1ac6931fa8ccab0b5b9b4c457e2fc790 "pdflatex"
+  "writeup.tex" 1672727379 11102 f1fbf4b9c9a2c65603e750849ac81f8a ""
   (generated)
   "writeup.aux"
   "writeup.log"

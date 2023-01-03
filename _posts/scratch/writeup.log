@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.22)  3 JAN 2023 02:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Arch Linux) (preloaded format=pdflatex 2022.11.22)  3 JAN 2023 14:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -793,6 +793,8 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 [3 </usr/share/texmf-dist/tex/latex/mwe/example-image-a.pdf>]
 LaTeX Font Info:    Trying to load font information for U+bbold on input line 280.
  (/usr/share/texmf-dist/tex/latex/bbold/Ubbold.fd)
+Package hyperref Info: bookmark level for unknown theorem defaults to 0 on input line 292.
+
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 25.16252pt, for example:
@@ -800,23 +802,31 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 (fancyhdr)                You might also make \topmargin smaller to compensate:
 (fancyhdr)                \addtolength{\topmargin}{-13.16252pt}.
 
-[4] (./writeup.aux)
+[4]
+
+Package fancyhdr Warning: \headheight is too small (12.0pt): 
+(fancyhdr)                Make it at least 25.16252pt, for example:
+(fancyhdr)                \setlength{\headheight}{25.16252pt}.
+(fancyhdr)                You might also make \topmargin smaller to compensate:
+(fancyhdr)                \addtolength{\topmargin}{-13.16252pt}.
+
+[5] (./writeup.aux)
 Package rerunfilecheck Info: File `writeup.out' has not changed.
 (rerunfilecheck)             Checksum: 1AC6931FA8CCAB0B5B9B4C457E2FC790;48.
  ) 
 Here is how much of TeX's memory you used:
- 20085 strings out of 478238
- 336947 string characters out of 5850455
- 641697 words of memory out of 5000000
- 37956 multiletter control sequences out of 15000+600000
+ 20092 strings out of 478238
+ 337070 string characters out of 5850455
+ 641773 words of memory out of 5000000
+ 37960 multiletter control sequences out of 15000+600000
  479881 words of font info for 72 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,12n,105p,385b,478s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/fanpu/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk></usr/share/texmf-dist/fonts/type1/public/bbold-type1/bbold10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmss17.pfb>
-Output written on writeup.pdf (4 pages, 187814 bytes).
+Output written on writeup.pdf (5 pages, 194468 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 95 compressed objects within 1 object stream
- 12 named destinations out of 1000 (max. 500000)
+ 137 PDF objects out of 1000 (max. 8388607)
+ 101 compressed objects within 2 object streams
+ 15 named destinations out of 1000 (max. 500000)
  35 words of extra memory for PDF output out of 10000 (max. 10000000)
 
