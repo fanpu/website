@@ -42,7 +42,7 @@ In this post, we cover some common mistakes that are made by LaTeX
 practitioners (even in heavily cited papers), and how to address them. This
 post assumes that the reader has some working knowledge of LaTeX.
 
-### Typesetting as a Form of Art
+## Typesetting as a Form of Art
 It is important to get into the right mindset whenever you typeset a
 document. You are not simply ``writing'' a document - you are crafting a work
 of art that combines both the precision and creativity of your logical
@@ -61,7 +61,7 @@ to fix when you discover them later on. There are ways to replicate the strict
 typechecking of statically typed languages to ensure that mistakes in your
 expressions can be caught at compile-time.
 
-### Common Mistakes, and How To Fix Them
+## Common Mistakes, and How To Fix Them
 In the following section, we take a look at common mistakes that people make,
 and how they can be avoided or fixed. We cover style mistakes first, since the
 ideas behind them are more general. All the screenshotted examples come from
@@ -70,9 +70,11 @@ definitely very common mistakes and you shouldn't feel bad for making them.
 The important thing is that you are aware of them now so that your style
 will gradually improve over time.
 
-### Style Mistakes
+## Style Mistakes
+We take a look at style mistakes, which impairs reader understanding,
+and makes it easy to commit other sorts of errors.
 
-#### Paired Delimiters
+### Paired Delimiters
 Parenthesis, brackets, and pipes are examples of delimiters that are used to mark the start
 and end of formula expressions. As they come in pairs, a common mistake is accidentally 
 leaving out the closing delimiter, especially for nested expressions. Even if you don't
@@ -160,7 +162,7 @@ solution](https://tex.stackexchange.com/questions/1742/automatic-left-and-right-
 floating around on StackExchange that relies on a custom command that makes auto-resizing
 the default, but it's still a far cry from a parsimonious solution.
 
-#### Macros for Saving Time and Preventing Mistakes
+### Macros for Saving Time and Preventing Mistakes
 Macros can be defined using the `\newcommand` command.
 The basic syntax is `\newcommand{command_name}{command_definition}.
 For instance, it might get tiring to always type `\boldsymbol{A}`
@@ -253,7 +255,7 @@ $\foldex{X.A}{V} \inval{m}{\recty{X}{A}}$, as desired. \qedhere
 It is definitely still not the most pleasant thing to read, but at least now you
 will be less likely to miss an argument or forget to close a parenthesis.
 
-#### Non-breaking lines
+### Non-breaking lines
 Expressions which are logically a single unit should stay on the same line, instead
 of being split apart mid-sentence. Cue the following bad example from another paper:
 
@@ -305,7 +307,7 @@ to stay on the same line:
     caption="Expressions that brace together stays together"
 %}
 
-#### Non-breaking space with `~`
+### Non-breaking space with `~`
 When referencing figures and equations, you want the text and number (i.e Figure 10) to end up on the same line.
 This is a negative example, where the region underlined in red shows how it was split up:
 
@@ -325,7 +327,7 @@ Figure~\ref{fig:env-perf} shows the performance curve for a selection of environ
 
 This would ensure that "Figure 2" always appears together.
 
-#### Expressions Should Be Punctuated Like Sentences
+### Expressions Should Be Punctuated Like Sentences
 Your document is meant to be read, and it should follow the rules and structures
 of English (or whichever language you are writing in). This means that
 mathematical expressions should also be punctuated appropriately, which
@@ -377,7 +379,7 @@ is common when you are trying to fit the page limit for conference submissions:
     caption="Appropriate use of punctuation when multiple equations are on a single line"
 %}
 
-#### The `proof` environment
+### The `proof` environment
 The `proof` environment from the `amsthm` package is great for signposting to your readers
 where a proof starts and ends. For instance, consider how it is used in the following example:
 
@@ -411,7 +413,7 @@ $\mathcal{F}$-limit of $(x_n)_n$.
 This will helpfully highlight the start of your argument with *"Proof"*, and
 terminate it with a square that symbolizes QED.
 
-#### Terminate Proofs with Explicit `\qedhere`
+### Terminate Proofs with Explicit `\qedhere`
 
 Consider the same example as previously, but now you accidentally added an additional
 newline before the closing `\end{proof}`, which happens pretty often:
@@ -456,7 +458,7 @@ to always appear on the line that it appears after:
 
 We would then get the same result as before originally, when we did not have the extra newline.
 
-#### Spacing
+### Spacing
 Spacing matters a lot in readability, as it helps to separate logical components.
 For instance, the following example fails to add spacing before the differential
 of the variable $$dz$$:
@@ -498,7 +500,7 @@ $$P(X) = \int xyz \, dx$$
 which is much more readable.
 
 
-#### `align*` Environment for Multiline Equations
+### `align*` Environment for Multiline Equations
 When using the `align*` environment, make sure that your ampersands `&` appear before the
 symbol that you are aligning against. This ensures that you get the correct spacing.
 
@@ -542,10 +544,10 @@ $$
 The spacing is much more comfortable now.
 
 
-### Command Mistakes
+## Command Mistakes
 We now look at some mistakes that arise from using the wrong commands.
 
-#### Math Operators
+### Math Operators
 Instead of `sin (x)` $$(sin(x))$$ or `log (x)` $$(log (x))$$, use `\sin (x)` $$(\sin (x))$$
 and `\log (x)` $$(\log (x))$$. The idea extends to many other common math functions.
 These are math operators that will de-italicize the commands
@@ -577,7 +579,7 @@ Then you can use it as follows:
 $$\Pr \left[ X \geq a \right] \leq \frac{\Ex[X]}{a}$$
 
 
-#### Double quotes
+### Double quotes
 This is more of a rookie mistake since it's visually very obvious something is
 wrong. Double quotes don't work the way you would expect:
 
@@ -605,7 +607,7 @@ This allows it to know which side to orient the ticks:
 Unfortunately I had to demonstrate this with a screenshot since MathJax only
 performs math-mode typesetting, but this is an instance of text-mode typesetting.
 
-#### Epsilons
+### Epsilons
 This is a common mistake due to laziness. Many times, people use `\epsilon` ($$\epsilon$$)
 when they really meant to write `\varepsilon` ($$\varepsilon$$). For instance, in analysis
 this is usually the case, and therefore writing `\epsilon` results in a very uncomfortable
@@ -630,7 +632,7 @@ Using `\varepsilon` makes the reader feel much more at peace:
 Similarly, people tend to get lazy and mix up `\phi, \Phi, \varphi` ($$\phi, \Phi, \varphi$$),
 since they are "about the same".  Details matter!
 
-#### Sets: `mathbbm` Instead Of `mathbb`
+### Sets: `mathbbm` Instead Of `mathbb`
 For sets like $$\mathbb{N}$$, you should use `\mathbbm{N}`
 (from `bbm` package) instead of `mathbb{N}` (from `amssymb`). See the
 difference in how the rendering of the set of natural numbers
@@ -645,7 +647,7 @@ $$\mathbb{N}$$ differs, using the same example as the previous section:
 
 `mathbbm` causes the symbols to be bolded, which is what you want.
 
-#### Dots
+### Dots
 `...`  and `\dots` are different. See the difference:
 
 {% highlight latex %}
@@ -663,7 +665,7 @@ X = \left( X_1, \dots, X_n \right)
 When using "...", the spacing between each dot, and between the final dot
 and the comma character is wrong. Always use "\dots".
 
-#### Summation and Product
+### Summation and Product
 When writing summation or products of terms, use `\sum` and `\prod` instead of `\Sigma` and `\Pi`. This helps to handle the
 relative positioning of the limits properly, and is much more idiomatic to read
 from the raw script:
@@ -677,7 +679,7 @@ from the raw script:
 {: .table .table-bordered .table-sm }
 
 
-#### Multiplication
+### Multiplication
 To denote multiplication, use `\cdot` or `times` instead of `*`. See the difference below
 in the equation:
 
@@ -688,7 +690,7 @@ in the equation:
     caption='Use "\cdot" looks much better than "*"'
 %}
 
-#### Mid
+### Mid
 For set builder notation or conditional probability, use `\mid` instead of the pipe `|`.
 This helps to handle the spacing between the terms properly:
 
@@ -699,7 +701,7 @@ This helps to handle the spacing between the terms properly:
 {: .table .table-bordered .table-sm }
 
 
-#### Angle Brackets
+### Angle Brackets
 When writing vectors, use the `\langle` and `\rangle` instead of the keyboard angle brackets:
 
 | Raw LaTeX              | Rendered                   |
@@ -708,7 +710,7 @@ When writing vectors, use the `\langle` and `\rangle` instead of the keyboard an
 | `\langle u, v \rangle` | $$ \langle u, v \rangle $$ |
 {: .table .table-bordered .table-sm }
 
-#### Labels
+### Labels
 Use `\label` to label your figures, equations, tables, and so on, and reference them using `\ref`, instead of hardcoding the number. 
 For instance, `\label{fig:myfig}` and `\ref{fig:myfig}`.
 Including the type of the object in the tag helps to keep track
@@ -716,7 +718,7 @@ of what it is and ensures that you are referencing it correctly, i.e
 making sure you write `Figure \ref{fig:myfig}` instead of accidentally saying
 something like `Table \ref{fig:myfig}`.
 
-### Conclusion
+## Conclusion
 That was a lot, and I hope it has been a helpful read! 
 I will continue updating this post in the future as and when I feel like
 there are other important things which should be noted which I missed.
