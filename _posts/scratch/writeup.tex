@@ -304,4 +304,25 @@ $$\boldsymbol{M}$$
 \renewcommand{\bv}{\boldsymbol{v}}
 $$\left\lvert \dotprod{\bu}{\bv} \right\rvert^2 \leq \dotprod{\bu}{\bu} \cdot \dotprod{\bv}{\bv}$$
 
+
+\begin{align*}
+    p(\mbox{Disease} \mid \mbox{Symptoms})
+     & = \frac{p(\mbox{Disease}, \mbox{Symptoms})}{p(\mbox{Symptoms})} \\
+     & = \frac{p(\mbox{Disease}, \mbox{Symptoms})}{\sum_{\mbox{Disease}^\prime \in \mbox{Diseases}}p(\mbox{Disease}^\prime, \mbox{Symptoms})} \\
+\end{align*}
+
+\begin{align*}
+    \frac{1}{\mathcal{Z}(\theta)}\exp \left( \sum_{\substack{i, j \in [n] \\ i \neq j}} x_i x_j \theta_{ij} + \sum_{i \in [n]} x_i \theta_i \right),
+\end{align*}
+
+\begin{align*}
+    \mathcal{Z}(\theta) = \sum_{\bx \in \left\{ \pm 1 \right\}^n} p(\theta, \bx)
+\end{align*}
+
+Let $p(\bz, \bx)$ be a joint distribution ovre latent variables $\bz$ and
+observables $\bx$. Then
+$$ p(\bz \mid \bx) = \argmax_{ q(\bz \mid \bx) : \text{distribution over } \bz } H(q(\bz \mid \bx)) + \E_{\bz \sim q()} $$
+
+
+    <a href="{%- post_url {{ project.redirect_internal }} -%}">
 \end{document}

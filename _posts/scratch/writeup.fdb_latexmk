@@ -1,7 +1,7 @@
 # Fdb version 3
-["pdflatex"] 1672727379 "/home/fanpu/website/_posts/scratch/writeup.tex" "writeup.pdf" "writeup" 1672727380
+["pdflatex"] 1672741302 "/home/fanpu/website/_posts/scratch/writeup.tex" "writeup.pdf" "writeup" 1672741302
   "/home/fanpu/.texlive/texmf-var/fonts/pk/ljfour/public/bbm/bbm10.657pk" 1642751075 7808 5c669c7a818be95ecd802871862dc841 ""
-  "/home/fanpu/website/_posts/scratch/writeup.tex" 1672727379 11102 f1fbf4b9c9a2c65603e750849ac81f8a ""
+  "/home/fanpu/website/_posts/scratch/writeup.tex" 1672741301 11865 7725b5480e933c79570610f8e7c7dc8c ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1650183167 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1650183167 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/share/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1650183167 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -57,6 +57,7 @@
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1650183167 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1650183167 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1650183167 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb" 1650183167 32587 1788b0c1c5b39540c96f5e42ccd6dae8 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1650183167 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb" 1650183167 37944 359e864bd06cde3b1cf57bb20757fb06 ""
   "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmmib8.pfb" 1650183167 35479 892d27442ef9ef29ce1ee57aa0e8a665 ""
@@ -181,9 +182,9 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1669131904 4408072 42ceaa83bae76aebad711d3f3dd7f55f ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1669131894 2927663 fa2869cf5adfc65d9fa35f3d89d70588 ""
   "CSTheoryToolkitCMUStyle.sty" 1672727238 8813 5e4717c7c6c2f73142cbbd67b67d823f ""
-  "writeup.aux" 1672727380 2346 abb0c40a0e5d1e9d3c966d366360a450 "pdflatex"
-  "writeup.out" 1672727380 48 1ac6931fa8ccab0b5b9b4c457e2fc790 "pdflatex"
-  "writeup.tex" 1672727379 11102 f1fbf4b9c9a2c65603e750849ac81f8a ""
+  "writeup.aux" 1672741302 2346 abb0c40a0e5d1e9d3c966d366360a450 "pdflatex"
+  "writeup.out" 1672741302 48 1ac6931fa8ccab0b5b9b4c457e2fc790 "pdflatex"
+  "writeup.tex" 1672741301 11865 7725b5480e933c79570610f8e7c7dc8c ""
   (generated)
   "writeup.aux"
   "writeup.log"
