@@ -2,9 +2,9 @@
 title: "Graphical Bayesian Networks with Topic Modeling Priors for Predicting Asset Covariances"
 layout: post
 tags: [machine-learning, project]
-cover: valley_of_fire.JPG
-cover_preview: valley_of_fire.JPG
-caption: Valley of Fire State Park, Nevada, USA
+cover: rainier.jpg
+cover_preview: rainier.avif
+caption: Mount Rainier, Mount Rainier National Park, Washington, USA
 class: post-template
 navigation: True
 author: fanpu

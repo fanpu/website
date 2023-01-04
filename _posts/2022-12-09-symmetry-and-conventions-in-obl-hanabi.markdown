@@ -3,7 +3,7 @@ title: "Analysis of Symmetry and Conventions in Off-Belief Learning (OBL) in Han
 layout: post
 tags: [machine-learning, project]
 cover: boston.JPG
-cover_preview: boston.JPG
+cover_preview: boston.avif
 caption: Boston, Massachusetts, USA
 class: post-template
 navigation: True
