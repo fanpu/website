@@ -35,7 +35,8 @@ humanity.
 
 In my free time, I enjoy bouldering, running, learning new things, watching
 anime, playing Genshin Impact, and cosplaying. If I have an extended break I
-enjoy traveling, especially hiking and exploring the great outdoors.
+enjoy traveling, especially hiking and exploring the great outdoors. Most of
+the banner pictures on my blog posts were taken during these hikes.
 
 I grew up in my hometown Singapore before moving to the US for college. I try
 to go back and visit once a year.
