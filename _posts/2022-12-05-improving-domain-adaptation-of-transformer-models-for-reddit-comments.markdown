@@ -11,42 +11,44 @@ author: fanpu
 toc: true
 giscus_comments: true
 description: >
-  We improve upon the recent success of large language models based on the trans-
-  former architecture by investigating and showing several methods that have em-
-  pirically improved its performance in domain adaptation. We use a pre-trained
-  GPT-2 model and perform fine-tuning on 5 different subreddits, and use different
-  methods of ordering the training data based on our priors about the input to see how
-  this affects the prediction quality of the trained model. We propose a new metric
-  for evaluating causal language modeling tasks called APES (Average Perplexity
-  Evaluation for Sentences) to address the limitations of existing metrics, and apply
-  them to our results. Our results are evaluated against both LSTM and GPT-2
-  baselines.
+  We improve upon the recent success of large language models based on the
+  transformer architecture by investigating and showing several methods that
+  have empirically improved its performance in domain adaptation. We use a
+  pre-trained GPT-2 model and perform fine-tuning on 5 different subreddits,
+  and use different methods of ordering the training data based on our priors
+  about the input to see how this affects the prediction quality of the trained
+  model. We propose a new metric for evaluating causal language modeling tasks
+  called APES (Average Perplexity Evaluation for Sentences) to address the
+  limitations of existing metrics, and apply them to our results. Our results
+  are evaluated against both LSTM and GPT-2 baselines.
 ---
 
 ### Summary
-We improve upon the recent success of large language models based on the trans-
-former architecture by investigating and showing several methods that have em-
-pirically improved its performance in domain adaptation. We use a pre-trained
-GPT-2 model and perform fine-tuning on 5 different subreddits, and use different
-methods of ordering the training data based on our priors about the input to see how
-this affects the prediction quality of the trained model. We propose a new metric
-for evaluating causal language modeling tasks called APES (Average Perplexity
-Evaluation for Sentences) to address the limitations of existing metrics, and apply
-them to our results. Our results are evaluated against both LSTM and GPT-2
-baselines
+We improve upon the recent success of large language models based on the
+transformer architecture by investigating and showing several methods that
+have empirically improved its performance in domain adaptation. We use a
+pre-trained GPT-2 model and perform fine-tuning on 5 different subreddits,
+and use different methods of ordering the training data based on our priors
+about the input to see how this affects the prediction quality of the trained
+model. We propose a new metric for evaluating causal language modeling tasks
+called APES (Average Perplexity Evaluation for Sentences) to address the
+limitations of existing metrics, and apply them to our results. Our results
+are evaluated against both LSTM and GPT-2 baselines.
 
-There have been many exciting breakthroughts in language generation models in recent years. From
-the simple n-gram model that has been studied since the early 20th century, to the introduction of
-neural language models that utilizes word embeddings at the turn of the century (2001), in the
-past few years we saw the development of powerful language models such as Word2Vec (2013),
-Transformer (2017), BERT (2018), GPT (2018), GPT-3 (2020). Such models have already beaten
-humans in accuracy in tasks such as reading comprehension, and have displayed high levels of
-fluency in language-generation tasks. These successes can be attributed to the great strides taken in
-Deep Learning, the increase in computational resources, and the proliferation of publicly available
-datasets and benchmarks.
+There have been many exciting breakthroughts in language generation models in
+recent years. From the simple n-gram model that has been studied since the
+early 20th century, to the introduction of neural language models that utilizes
+word embeddings at the turn of the century (2001), in the past few years we saw
+the development of powerful language models such as Word2Vec (2013),
+Transformer (2017), BERT (2018), GPT (2018), GPT-3 (2020). Such models have
+already beaten humans in accuracy in tasks such as reading comprehension, and
+have displayed high levels of fluency in language-generation tasks. These
+successes can be attributed to the great strides taken in Deep Learning, the
+increase in computational resources, and the proliferation of publicly
+available datasets and benchmarks.
 
-We aim to replicate and build upon existing work in causal language models by investigating and
-answering the following research questions in this paper:
+We aim to replicate and build upon existing work in causal language models by
+investigating and answering the following research questions in this paper:
 
 1. Can we improve the performance of domain adaptation of transformer language
    models by various methods of ordering the inputs seen at training time,

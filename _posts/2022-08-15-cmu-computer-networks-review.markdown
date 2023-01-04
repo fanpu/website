@@ -52,7 +52,7 @@ improve on both throughput and Jain's Fairness Index (for fairness when multiple
 connections connect on the same link) as compared to TCP Reno.
 
 {% include figure.html 
-    path="/assets/img/posts/tcp_reno_state_diagram.png"
+    path="/assets/img/posts/tcp_reno_state_diagram.avif"
     width="400px"
     class="z-depth-1"
     caption="TCP Reno Congestion Control State Diagram"
