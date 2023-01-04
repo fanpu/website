@@ -6,7 +6,7 @@ subtitle: Incoming Linux Engineer at <a href='https://www.janestreet.com/'>Jane 
 
 profile:
   align: right
-  image: fun_pic.jpg
+  image: fun_pic.avif
   image_circular: false # crops the image to make it circular
   address: >
 

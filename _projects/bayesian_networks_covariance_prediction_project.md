@@ -7,8 +7,8 @@ description: >
   effectiveness of Bayesian networks in predicting the covariance matrix of
   financial assets (specifically a subset of the S&P 500), evaluated against
   Heterogeneous Autoregressive (HAR) models.
-img: assets/img/posts/valley_of_fire.JPG
-importance: 1
+img: assets/img/posts/rainier.avif
+importance: 2
 category: machine-learning
 redirect_internal: _posts/2022-12-13-graphical-bayesian-network-for-predicting-asset-covariances.markdown
 ---
