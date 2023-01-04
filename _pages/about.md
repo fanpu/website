@@ -26,6 +26,7 @@ Association](https://cmussa.org/). I also used to play
 Capture-The-Flag (CTF) competitions with [PPP](https://pwning.net/).
 I have previously interned at [Jane Street](https://www.janestreet.com/),
 [Meta](https://about.meta.com/), [Asana](https://asana.com/), and [Saleswhale](https://www.saleswhale.com/) (acquired 2022).
+This semester (Spring 2023), I will be a TA for 10-708 Probabilistic Graphical Models.
 
 I am broadly interested in rigorously proving why machine learning techniques
 work and what guarantees we can extract out of them, borrowing tools from
