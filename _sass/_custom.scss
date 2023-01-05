@@ -42,12 +42,24 @@
     background-color: $red-color;
 }
 
+.badge.pl-theory {
+    background-color: $pink-color;
+}
+
 .badge.machine-learning {
     background-color: $pink-color;
 }
 
 .badge.graphics {
     background-color: $green-color-lime;
+}
+
+.badge.math {
+    background-color: $cyan-color;
+}
+
+.badge.statistics {
+    background-color: $grey-color;
 }
 
 .badge.undergraduate {
@@ -63,7 +75,11 @@
 }
 
 .badge.theory:after {
-    content: "Theory";
+    content: "Computer Science Theory";
+}
+
+.badge.pl-theory:after {
+    content: "Programming Language Theory";
 }
 
 .badge.machine-learning:after {
@@ -72,6 +88,14 @@
 
 .badge.graphics:after {
     content: "Graphics";
+}
+
+.badge.math:after {
+    content: "Mathematics";
+}
+
+.badge.statistics:after {
+    content: "Statistics";
 }
 
 .badge.undergraduate:after {

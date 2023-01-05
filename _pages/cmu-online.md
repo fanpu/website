@@ -53,5 +53,12 @@ Please let me know if there are any dead links, or if you spot an error with the
 ### Computer Science Theory
 {% include cmu_course_table.html courses=site.data.cmu_online.theory_courses %}
 
+---
+
 ### Computer Graphics
 {% include cmu_course_table.html courses=site.data.cmu_online.graphics_courses %}
+
+---
+
+### Mathematics and Statistics
+{% include cmu_course_table.html courses=site.data.cmu_online.math_courses %}

@@ -28,7 +28,6 @@ ml_courses:
       image classification and segmentation, recurrent networks and
       self-attention models for sequential tasks such as language modeling, and
       generative models for image generation.
-
     youtube_playlist_id: PLGzYMymX8amNyGPuJ35YWdq59eQ5jYCZ1
     semester: Fall 2022
     instructors: 
@@ -38,6 +37,63 @@ ml_courses:
         website: https://tqchen.com/
     tags:
       - undergraduate
+      - machine-learning
+
+  - name: 10-701 Introduction to Machine Learning
+    url: http://www.cs.cmu.edu/~bapoczos/Classes/ML10715_2015Fall/
+    description: >
+      Machine Learning is concerned with computer programs that automatically
+      improve their performance through experience (e.g., programs that learn to
+      recognize human faces, recommend music and movies, and drive autonomous
+      robots). This course covers the theory and practical algorithms for
+      machine learning from a variety of perspectives. We cover topics such as
+      Linear Regression, SVMs, Neural Networks, Graphical Models, Clustering,
+      etc. Programming assignments include hands-on experiments with various
+      learning algorithms. This course is designed to give a PhD-level student a
+      thorough grounding in the methodologies, technologies, mathematics and
+      algorithms currently needed by people who do research in machine learning.
+    youtube_playlist_id: PLsWN0V-b507g7dbQTUvFkKZEqdHR5Fh4P
+    semester: Fall 2020
+    instructors: 
+      - name: Ziv Bar-Joseph
+        website: https://www.cs.cmu.edu/~zivbj/
+      - name: Eric P. Xing
+        website: https://www.cs.cmu.edu/~epxing/
+    tags:
+      - undergraduate
+      - machine-learning
+
+  - name: 10-715 Advanced Introduction to Machine Learning
+    url: http://www.cs.cmu.edu/~bapoczos/Classes/ML10715_2015Fall/
+    description: >
+      The rapid improvement of sensory techniques and processor speed, and the
+      availability of inexpensive massive digital storage, have led to a growing
+      demand for systems that can automatically comprehend and mine massive and
+      complex data from diverse sources. Machine Learning is becoming the
+      primary mechanism by which information is extracted from Big Data, and a
+      primary pillar that Artificial Intelligence is built upon.
+      <br>
+      <br>
+      This course is designed for Ph.D. students whose primary field of study is
+      machine learning, or who intend to make machine learning methodological
+      research a main focus of their thesis. It will give students a thorough
+      grounding in the algorithms, mathematics, theories, and insights needed to
+      do in-depth research and applications in machine learning. The topics of
+      this course will in part parallel those covered in the general graduate
+      machine learning course (10-701), but with a greater emphasis on depth in
+      theory and algorithms. The course will also include additional advanced
+      topics such as RKHS and representer theory, Bayesian nonparametrics,
+      additional material on graphical models, manifolds and spectral graph
+      theory, reinforcement learning and online learning, etc.
+    youtube_playlist_id: PL4YhK0pT0ZhWBzSBkMGzpnPw6sf6Ma0IX
+    semester: Fall 2015
+    instructors: 
+      - name: Barnabas Poczos
+        website: http://www.cs.cmu.edu/~bapoczos/
+      - name: Alex Smola
+        website: http://alex.smola.org/
+    tags:
+      - graduate
       - machine-learning
 
   - name: 11-485/785 Introduction to Deep Learning
@@ -470,6 +526,33 @@ theory_courses:
       - graduate
       - theory
 
+  - name: 15-819 Homotopy Type Theory
+    url: http://www.cs.cmu.edu/~rwh/courses/hott/
+    description: >
+      This is a graduate research seminar on Homotopy Type Theory (HoTT), a
+      recent enrichment of Intuitionistic Type Theory (ITT) to include
+      "higher-dimensional" types. The dimensionality of a type refers to the
+      structure of its paths, the constructive witnesses to the equality of
+      pairs of elements of a type, which themselves form a type, the identity
+      type. In general a type is infinite dimensional in the sense that it
+      exhibits non-trivial structure at all dimensions: it has elements, paths
+      between elements, paths between paths, and so on to all finite levels.
+      Moreover, the paths at each level exhibit the algebraic structure of a
+      (higher) groupoid, meaning that there is always the "null path" witnessing
+      reflexivity, the "inverse" path witnessing symmetry, and the
+      "concatenation" of paths witnessing transitivity such that group-like laws
+      hold "up to higher homotopy". Specifically, there are higher-dimensional
+      paths witnessing the associative, unital, and inverse laws for these
+      operations. Altogether this means that a type is a weak ∞-groupoid.
+    youtube_playlist_id: PL1-2D_rCQBarjdqnM21sOsx09CtFSVO6Z
+    semester: Fall 2012
+    instructors: 
+      - name: Robert Harper
+        website: http://www.cs.cmu.edu/~rwh/
+    tags:
+      - graduate
+      - pl-theory
+
 graphics_courses:
   - name: 15-462/662 Computer Graphics
     url: http://15462.courses.cs.cmu.edu
@@ -527,3 +610,91 @@ graphics_courses:
     tags:
       - undergraduate
       - graphics
+
+math_courses:
+  - name: 21-228 Discrete Mathematics Computer Graphics
+    url: https://www.math.cmu.edu/~ploh/2021-228.shtml
+    description: >
+      Combinatorics, which concerns the study of discrete structures such as
+      sets and networks, is as ancient as humanity's ability to count. Yet
+      although in the beginning, combinatorial problems were solved by pure
+      ingenuity, today that alone is not enough. A rich variety of powerful
+      methods have been developed, often drawing inspiration from other fields
+      such as probability, analysis, algorithms, and even algebra and topology.
+      <br>
+      <br>
+      This course provides a general introduction to this beautiful subject.
+      Students will learn both classical methods for clever counting, as well as
+      how to apply more modern methods to analyze recursions and sequences.
+      Students will also learn fundamental techniques in graph theory.
+      Throughout the course, students will encounter novel challenges that blur
+      the lines between combinatorics and other subjects, such as number theory,
+      probability, and geometry, so that they develop the skills to creatively
+      combine seeming disparate areas of mathematics.
+      <br>
+      <br>
+      This course is structured around challenge. Lecture topics are hand-picked
+      to reflect the rather advanced ability level of the general CMU student,
+      and consequently, much of the curriculum sequence is original. Homework
+      and exam problems are particularly difficult, and require creative
+      problem-solving rather than application of learned techniques. To
+      encourage students to truly develop these skills, collaboration is
+      encouraged on homework, and exams (which are non-collaborative) will be
+      open-notes.
+    youtube_playlist_id: PLgTkKBA6LRqYuuQ-LboerRblBoD_q_eUM
+    video_note: Note that videos in the playlist are in reverse chronological order.
+    semester: Sping 2021
+    instructors: 
+      - name: Po-Shen Loh 
+        website: https://www.poshenloh.com/
+    tags:
+      - undergraduate
+      - math
+
+  - name: 21-738 Extremal Combinatorics
+    url: https://www.math.cmu.edu/~ploh/2022-738.shtml
+    description: >
+      This is one of the core graduate courses in advanced combinatorial
+      methods, for the Algorithms, Combinatorics, and Optimization program at
+      CMU. As such, it will be a rigorous and challenging introduction to
+      extremal combinatorics, aimed to provide the necessary background for
+      cutting-edge research in this area. Typical problems concern the maximum
+      or minimum values attained by common graph parameters over certain
+      interesting families of combinatorial objects.  
+      <br>
+      <br>
+      Extremal results are not only interesting in their own right, but are also
+      useful in applications because sometimes one can already draw valuable
+      conclusions from the combinatorial basis of a problem with deeper
+      mathematical structure. In that case, the most easily accessible
+      graph-theoretical properties are often the values of the graph parameters,
+      such as the number of edges, diameter, size of the largest set of pairwise
+      non-adjacent vertices, etc.  It is therefore useful to understand what
+      other properties are already implied once certain graph parameters lie in
+      certain ranges.
+    youtube_playlist_id: PLgTkKBA6LRqaGKITvQS1QuIBoEbOVwFTm
+    video_note: Note that videos in the playlist are in reverse chronological order.
+    semester: Spring 2022
+    instructors: 
+      - name: Po-Shen Loh 
+        website: https://www.poshenloh.com/
+    tags:
+      - graduate
+      - math
+
+  - name: 36-705 Intermediate Statistics
+    url: https://www.stat.cmu.edu/~larry/=stat705/
+    description: >
+      This course covers the fundamentals of theoretical statistics. Topics
+      include: probability inequalities, point and interval estimation, minimax
+      theory, hypothesis testing, data reduction, convergence concepts, Bayesian
+      inference, nonparametric statistics, bootstrap resampling, VC dimension,
+      prediction and model selection. 
+    youtube_playlist_id: PL_Ig1a5kxu55KBWM3Su6-K352gQJcmEZd
+    semester: Fall 2016
+    instructors: 
+      - name: Larry Wasserman
+        website: http://www.stat.cmu.edu/~larry
+    tags:
+      - graduate
+      - statistics
