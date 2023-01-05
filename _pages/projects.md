@@ -4,7 +4,7 @@ title: projects
 permalink: /projects/
 description: A collection of some projects that I've worked on
 nav: true
-nav_order: 2
+nav_order: 10
 # display_categories: [machine-learning, cs]
 horizontal: false
 ---
