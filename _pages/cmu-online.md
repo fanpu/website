@@ -8,6 +8,7 @@ navigation: true
 nav_order: 10
 toc: true
 ---
+Education and knowledge should be accessible to anyone who is willing to learn.
 There are many great course offerings from the top-ranked Computer Science
 program in Carnegie Mellon University whose lectures are available on the public
 domain. The purpose of this page is to curate these courses, so people can learn
@@ -24,15 +25,26 @@ Classes that require significant background and which are less accessible will
 have a <span class="badge rounded-pill graduate"> </span> tag.
 
 Some courses are only publicly available on Panopto instead of Youtube, in which
-case I provided a link to the Panopto playlist. It can be more conducive to use
-Panopto than Youtube in some cases due to the ability to customize speaker and
-presentation view.
+case I provided a link to the Panopto playlist. Don't feel too sad that this is
+the case, because it can be more conducive to use Panopto than Youtube due to
+the ability to customize speaker and presentation view.
 
 Within each category, the courses are not ordered in any particular
 way that is indicative of difficulty or the order in which they
 should be considered. Consider them to be arbitrary.
 
-Please let me know if there are any dead links, or if you spot an error with the page.
+Please let me know if there are any dead links, or if you spot an error with the
+page. In addition, if there are courses that I missed which might be useful for
+others, you can either modify the [relevant data file
+here](https://github.com/fanpu/website/blob/master/_data/cmu_online.yml) and
+make a pull request, or let me know via email. I will very much appreciate it!
+
+The list of courses available publicly is heavily skewed towards which
+departments or faculty members make their lecture recordings publicly available,
+and therefore omits a lot of classes that Computer Science majors in CMU tend to
+take. In particular, courses from the following departments in the School of
+Computer Science are either not present, or severely under-represented:
+Human-Computer Interaction,
 
 *The contents on this page is personally curated and is not endorsed by or reflects the views of CMU.*
 
@@ -55,10 +67,38 @@ Please let me know if there are any dead links, or if you spot an error with the
 
 ---
 
+### Programming Language Theory
+Unfortunately, there are not a lot of publicly available programming language
+(PL) theory lectures. However, [Robert Harper](http://www.cs.cmu.edu/~rwh/) and
+[Jan Hoffmann](https://www.cs.cmu.edu/~janh/), staples of the PL scene in CMU,
+both frequently give lectures for the [Oregon Programming Languages Summer
+School](https://www.cs.uoregon.edu/research/summerschool/) that are much smaller
+in scope than what is covered in a comparable full-semester course in CMU, but
+still goes through many key ideas nonetheless.  Therefore, I have also decided
+to include these resources than not have anything, which would be a shame as
+CMU is a powerhouse in PL after all.
+
+Why are so many courses titled 15-819? This is because the course number
+is a catch-all for advanced topics in PL theory, so while the course name
+is the same, the content can vary.
+
+{% include cmu_course_table.html courses=site.data.cmu_online.pl_courses %}
+
+---
+
 ### Computer Graphics
 {% include cmu_course_table.html courses=site.data.cmu_online.graphics_courses %}
 
 ---
 
+### Robotics
+{% include cmu_course_table.html courses=site.data.cmu_online.robotics_courses %}
+
+---
 ### Mathematics and Statistics
+In general, the math department does not record any of their lectures, so
+this portion is pretty dry. However, it was worth having it just
+to include [Po-Shen Loh](https://www.poshenloh.com/)'s lectures.
+He coaches the USA IMO team and is a very engaging teacher.
+
 {% include cmu_course_table.html courses=site.data.cmu_online.math_courses %}

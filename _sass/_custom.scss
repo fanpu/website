@@ -50,6 +50,14 @@
     background-color: $pink-color;
 }
 
+.badge.ai {
+    background-color: $pink-color-light;
+}
+
+.badge.data-science {
+    background-color: $light-cyan-color;
+}
+
 .badge.graphics {
     background-color: $green-color-lime;
 }
@@ -60,6 +68,10 @@
 
 .badge.statistics {
     background-color: $grey-color;
+}
+
+.badge.robotics {
+    background-color: $orange-color;
 }
 
 .badge.undergraduate {
@@ -86,6 +98,14 @@
     content: "Machine Learning";
 }
 
+.badge.ai:after {
+    content: "Artificial Intelligence";
+}
+
+.badge.data-science:after {
+    content: "Data Science";
+}
+
 .badge.graphics:after {
     content: "Graphics";
 }
@@ -96,6 +116,10 @@
 
 .badge.statistics:after {
     content: "Statistics";
+}
+
+.badge.robotics:after {
+    content: "Robotics";
 }
 
 .badge.undergraduate:after {
