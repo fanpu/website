@@ -344,7 +344,7 @@ ml_courses:
         website: http://www.cs.cmu.edu/~zbr/
     tags:
       - graduate
-      - ai
+      - artificial-intelligence
 
   - name: CMU AI Seminar
     url: http://www.cs.cmu.edu/~aiseminar/
@@ -355,7 +355,7 @@ ml_courses:
     youtube_channel_link: https://www.youtube.com/@cmuaiseminar1950
     semester: Ongoing
     tags:
-      - ai
+      - artificial-intelligence
 
 systems_courses:
   - name: 15-213/513 Introduction to Computer Systems
