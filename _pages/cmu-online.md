@@ -7,12 +7,18 @@ nav: true
 navigation: true
 nav_order: 10
 toc: true
+giscus_comments: true
 ---
 Education and knowledge should be accessible to anyone who is willing to learn.
 There are many great course offerings from the top-ranked Computer Science
 program in Carnegie Mellon University whose lectures are available on the public
 domain. The purpose of this page is to curate these courses, so people can learn
 from the best professors in the world without the hefty college price tag.
+I hope that this resource will be helpful for both people currently in industry
+aiming to improve their knowledge, current students to make course decisions
+or to do self-learning, and even prospective students to get a taste of what
+a CMU education looks like. In addition to courses, I have also included links
+to weekly seminar series which are held by various research groups.
 
 Courses which are accessible to undergraduates will have a
 <span class="badge rounded-pill undergraduate"> </span> tag.
@@ -31,7 +37,7 @@ the ability to customize speaker and presentation view.
 
 Within each category, the courses are not ordered in any particular
 way that is indicative of difficulty or the order in which they
-should be considered. Consider them to be arbitrary.
+should be taken. Consider it to be arbitrary.
 
 Please let me know if there are any dead links, or if you spot an error with the
 page. In addition, if there are courses that I missed which might be useful for
@@ -43,10 +49,10 @@ The list of courses available publicly is heavily skewed towards which
 departments or faculty members make their lecture recordings publicly available,
 and therefore omits a lot of classes that Computer Science majors in CMU tend to
 take. In particular, courses from the following departments in the School of
-Computer Science are either not present, or severely under-represented:
-Human-Computer Interaction,
+Computer Science are not present: Computational Biology, Human-Computer
+Interaction, Institute for Software Research.
 
-*The contents on this page is personally curated and is not endorsed by or reflects the views of CMU.*
+*The contents on this page is personally curated and does not reflects the views of CMU or SCS, and is also not endorsed by either parties.*
 
 ---
 

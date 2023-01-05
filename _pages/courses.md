@@ -7,12 +7,15 @@ nav: true
 navigation: true
 nav_order: 5
 toc: true
+giscus_comments: true
 ---
 
 Here I share my thoughts on the courses that I took at Carnegie Mellon
 University. Note that my experiences with some of these courses can be highly
 dependent on the professors, or due to the impact of virtual classes during the
-COVID-19 pandemic.
+COVID-19 pandemic. Do also check out the [CMU Online page]( {% link
+_pages/cmu-online.md %} ) for a curation of courses whose lectures
+and course content are publicly available.
 
 Courses with a &#11088; are those that I found transformative,
 and those with a &#10084;&#65039; are those that I personally enjoyed a lot.
