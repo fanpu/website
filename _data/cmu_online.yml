@@ -1,0 +1,529 @@
+ml_courses:
+  - name: 10-414/714 Deep Learning Systems, Algorithms and Implementation
+    url: https://dlsyscourse.org/
+    description: >
+      Deep learning methods have revolutionized a number of fields in Artificial
+      Intelligence and Machine Learning in recent years. The widespread adoption
+      of deep learning methods have in no small part been driven by the
+      widespread availability of easy-to-use deep learning systems, such as
+      PyTorch and TensorFlow. But despite their widespread availability and use,
+      it is much less common for students to get involved with the internals of
+      these libraries, to understand how they function at a fundamental level.
+      But understanding these libraries deeply will help you make better use of
+      their functionality, and enable you to develop or extend these libraries
+      when needed to fit your own custom use cases in deep learning.
+      <br>
+      <br>
+      The goal of this course is to provide students an understanding and
+      overview of the “full stack” of deep learning systems, ranging from the
+      high-level modeling design of modern deep learning systems, to the basic
+      implementation of automatic differentiation tools, to the underlying
+      device-level implementation of efficient algorithms. Throughout the
+      course, students will design and build from scratch a complete deep
+      learning library, capable of efficient GPU-based operations, automatic
+      differentiation of all implemented functions, and the necessary modules to
+      support parameterized layers, loss functions, data loaders, and
+      optimizers. Using these tools, students will then build several
+      state-of-the-art modeling methods, including convolutional networks for
+      image classification and segmentation, recurrent networks and
+      self-attention models for sequential tasks such as language modeling, and
+      generative models for image generation.
+
+    youtube_playlist_id: PLGzYMymX8amNyGPuJ35YWdq59eQ5jYCZ1
+    semester: Fall 2022
+    instructors: 
+      - name: Zico Kolter
+        website: https://zicokolter.com/
+      - name: Tianqi Chen
+        website: https://tqchen.com/
+    tags:
+      - undergraduate
+      - machine-learning
+
+  - name: 11-485/785 Introduction to Deep Learning
+    url: https://deeplearning.cs.cmu.edu/
+    description: >
+      "Deep Learning" systems, typified by deep neural networks, are increasingly
+      taking over all the AI tasks, ranging from language understanding, speech
+      and image recognition, to machine translation, planning, and even game
+      playing and autonomous driving. As a result, expertise in deep learning is
+      fast changing from an esoteric desirable to a mandatory prerequisite in many
+      advanced academic settings, and a large advantage in the industrial job
+      market.
+      
+      In this course we will learn about the basics of deep neural networks, and
+      their applications to various AI tasks. By the end of the course, it is
+      expected that students will have significant familiarity with the subject,
+      and be able to apply Deep Learning to a variety of tasks. They will also be
+      positioned to understand much of the current literature on the topic and
+      extend their knowledge through further study.
+    youtube_playlist_id: PLp-0K3kfddPxRmjgjm0P1WT6H-gTqE8j9
+    semester: Fall 2022
+    instructors: 
+      - name: Bhiksha Raj
+        website: http://mlsp.cs.cmu.edu/people/bhiksha/
+      - name: Rita Singh
+        website: http://mlsp.cs.cmu.edu/people/rsingh/index.html
+    tags:
+      - undergraduate
+      - machine-learning
+
+  - name: 10-703 Deep Reinforcement Learning & Control
+    url: https://cmudeeprl.github.io/703website_f22
+    description: >
+      This course will cover latest advances in Reinforcement Learning and
+      Imitation learning. This is a fast developing research field and an
+      official textbook is available only for about one forth of the course
+      material. The rest will be taught from recent research papers. This course
+      brings together many disciplines of Artificial Intelligence to show how to
+      develop intelligent agent that can learn to sense the world and learn to
+      act imitating others or maximizing sparse rewards Particular focus will be
+      given in incorporating visual sensory input and learning suitable visual
+      state representations.
+    panopto_link: https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=ee5794a2-cb54-4edc-836b-aefc01023243
+    semester: Fall 2022
+    instructors: 
+      - name: Katerina Fragkiadaki
+        website: https://www.cs.cmu.edu/~katef/
+    tags:
+      - graduate
+      - machine-learning
+
+  - name: 10-708 Probabilistic Graphical Models
+    url: https://www.cs.cmu.edu/~epxing/Class/10708-20/
+    description: >
+      Many of the problems in artificial intelligence, statistics, computer
+      systems, computer vision, natural language processing, and computational
+      biology, among many other fields, can be viewed as the search for a coherent
+      global conclusion from local information. The probabilistic graphical
+      models' framework provides a unified view for this wide range of problems,
+      enabling efficient inference, decision-making, and learning in problems with
+      a very large number of attributes and huge datasets. This graduate-level
+      course will provide you with a strong foundation for both applying graphical
+      models to complex problems and for addressing core research topics in
+      graphical models. The class will cover classical families of undirected and
+      directed graphical models (i.e. Markov Random Fields and Bayesian Networks),
+      modern deep generative models, as well as topics in graph neural networks
+      and causal inference. It will also cover the necessary algorithmic toolkit,
+      including variational inference and Markov Chain Monte Carlo methods.
+      Students entering the class should have a pre-existing working knowledge of
+      probability, statistics, and algorithms, though the class has been designed
+      to allow students with a strong mathematical background to catch up and
+      fully participate.
+    youtube_playlist_id: PLoZgVqqHOumTqxIhcdcpOAJOOimrRCGZn
+    semester: Spring 2020
+    instructors: 
+      - name: Eric P. Xing
+        website: https://www.cs.cmu.edu/~epxing/
+    tags:
+      - graduate
+      - machine-learning
+
+  - name: 10-725 Convex Optimization
+    url: https://www.andrew.cmu.edu/user/yuanzhil/cov.html
+    description: >
+      Convex optimization was an extremely useful tool in Machine Learning,
+      capable of solving many real-world problems efficiently, such as linear
+      regression, logistic regression, linear programming, SDP programming etc.
+      However, in modern machine learning, as the non-convex neural networks
+      growing to be the dominating models in this field, principles developed in
+      traditional convex optimization are now becoming insufficient.
+      <br>
+      <br>
+      In these lectures, you will see a convex optimization course that hasn't been
+      taught (or close to being taught) anywhere else: This newly designed course
+      spans the old topics in convex optimization such as Gradient Descent, Stochastic
+      Gradient Descent, Mirror Descent, Accelerated Gradient Descent, Interior Point
+      Method, and making connections all the way to optimizations topics in deep
+      learning, such as Neural Tangent Kernel, Scheduled Learning Rate, Momentums,
+      Batch normalization and Linear Reinforcement Learning.
+      <br>
+      <br>
+      In the end of the course, you will have a sense about the spirit of convex
+      optimization, and how it can still be applied to other real-world problems that
+      are not convex at all.
+    panopto_link: https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=35028909-68d2-46be-b0d8-af020148d304
+    semester: Fall 2022
+    instructors: 
+      - name: Yuanzhi Li
+        website: https://www.andrew.cmu.edu/user/yuanzhil/
+    tags:
+      - graduate
+      - machine-learning
+
+  - name: 11-777 Multi-Modal Machine Learning
+    url: https://cmu-multicomp-lab.github.io/mmml-course/fall2020/
+    description: >
+      Multimodal machine learning (MMML) is a vibrant multi-disciplinary
+      research field which addresses some of the original goals of artificial
+      intelligence by integrating and modeling multiple communicative
+      modalities, including linguistic, acoustic, and visual messages. With the
+      initial research on audio-visual speech recognition and more recently with
+      language & vision projects such as image and video captioning, this
+      research field brings some unique challenges for multimodal researchers
+      given the heterogeneity of the data and the contingency often found
+      between modalities. This course will teach fundamental mathematical
+      concepts related to MMML including multimodal alignment and fusion,
+      heterogeneous representation learning and multistream temporal modeling.
+      We will also review recent papers describing state-of-the-art
+      probabilistic models and computational algorithms for MMML and discuss the
+      current and upcoming challenges.
+      
+      The course will present the fundamental mathematical concepts in machine
+      learning and deep learning relevant to the five main challenges in
+      multimodal machine learning: (1) multimodal representation learning, (2)
+      translation & mapping, (3) modality alignment, (4) multimodal fusion and
+      (5) co-learning. These include, but not limited to, multimodal
+      auto-encoder, deep canonical correlation analysis, multi-kernel learning,
+      attention models and multimodal recurrent neural networks. The course will
+      also discuss many of the recent applications of MMML including multimodal
+      affect recognition, image and video captioning and cross-modal multimedia
+      retrieval.
+    youtube_playlist_id: PLTLz0-WCKX616TjsrgPr2wFzKF54y-ZKc
+    semester: Fall 2020
+    instructors: 
+      - name: Louis-Philippe Morency
+        website: https://www.cs.cmu.edu/~morency/
+    tags:
+      - graduate
+      - machine-learning
+
+  - name: 11-711 Advanced NLP
+    url: http://phontron.com/class/anlp2021/
+    description: >
+      Many of the problems in artificial intelligence, statistics, computer
+      systems, computer vision, natural language processing, and computational
+      biology, among many other fields, can be viewed as the search for a coherent
+      global conclusion from local information. The probabilistic graphical
+      models' framework provides a unified view for this wide range of problems,
+      enabling efficient inference, decision-making, and learning in problems with
+      a very large number of attributes and huge datasets. This graduate-level
+      course will provide you with a strong foundation for both applying graphical
+      models to complex problems and for addressing core research topics in
+      graphical models. The class will cover classical families of undirected and
+      directed graphical models (i.e. Markov Random Fields and Bayesian Networks),
+      modern deep generative models, as well as topics in graph neural networks
+      and causal inference. It will also cover the necessary algorithmic toolkit,
+      including variational inference and Markov Chain Monte Carlo methods.
+    youtube_playlist_id: PLoZgVqqHOumTqxIhcdcpOAJOOimrRCGZn
+    semester: Fall 2022
+    instructors: 
+      - name: Graham Neubig
+        website: http://phontron.com/
+      - name: Robert E. Frederking
+        website: https://www.cs.cmu.edu/~ref/
+    tags:
+      - graduate
+      - machine-learning
+
+  - name: 10-605/805 Machine Learning with Large Datasets
+    url: http://curtis.ml.cmu.edu/w/courses/index.php/Machine_Learning_with_Large_Datasets_10-605_in_Fall_2016
+    description: >
+      Large datasets are difficult to work with for several reasons. They are
+      difficult to visualize, and it is difficult to understand what sort of
+      errors and biases are present in them. They are computationally expensive
+      to process, and often the cost of learning is hard to predict - for
+      instance, and algorithm that runs quickly in a dataset that fits in memory
+      may be exorbitantly expensive when the dataset is too large for memory.
+      Large datasets may also display qualitatively different behavior in terms
+      of which learning methods produce the most accurate predictions.
+      
+      This course is intended to provide a student practical knowledge of, and
+      experience with, the issues involving large datasets. Among the issues
+      considered are: scalable learning techniques, such as streaming machine
+      learning techniques; parallel infrastructures such as map-reduce;
+      practical techniques for reducing the memory requirements for learning
+      methods, such as feature hashing and Bloom filters; and techniques for
+      analysis of programs in terms of memory, disk usage, and (for parallel
+      methods) communication complexity.
+    youtube_playlist_id: PL4YhK0pT0ZhUoBI-V2AvitMrE133iAKs3
+    semester: Fall 2016
+    instructors: 
+      - name: William Cohen
+        website: http://www.cs.cmu.edu/~wcohen/
+    tags:
+      - undergraduate
+      - machine-learning
+
+
+systems_courses:
+  - name: 15-213/513 Introduction to Computer Systems
+    url: https://www.cs.cmu.edu/~213/
+    description: >
+      The Introduction to Computer Systems course provides a programmer's view of
+      how computer systems execute programs, store information, and communicate.
+      It enables students to become more effective programmers, especially in
+      dealing with issues of performance, portability and robustness. It also
+      serves as a foundation for courses on compilers, networks, operating
+      systems, and computer architecture, where a deeper understanding of
+      systems-level issues is required. Topics covered include: machine-level code
+      and its generation by optimizing compilers, performance evaluation and
+      optimization, computer arithmetic, memory organization and management,
+      networking technology and protocols, and supporting concurrent computation.
+    youtube_playlist_id: PLQ5cMeVTtiJkUilq92Cw9D6RhAJhPJ_JX
+    semester: Fall 2015
+    instructors: 
+      - name: Randal E. Bryant
+        website: https://www.cs.cmu.edu/~bryant/
+      - name: David R. O'Hallaron
+        website: http://www.cs.cmu.edu/~droh/
+    tags:
+      - undergraduate
+      - computer-systems
+
+  - name: 15-445/645 Database Systems
+    url: https://15445.courses.cs.cmu.edu/fall2022/
+    description: >
+      This course is on the design and implementation of database management
+      systems. Topics include data models (relational, document, key/value),
+      storage models (n-ary, decomposition), query languages (SQL, stored
+      procedures), storage architectures (heaps, log-structured), indexing (order
+      preserving trees, hash tables), transaction processing (ACID, concurrency
+      control), recovery (logging, checkpoints), query processing (joins, sorting,
+      aggregation, optimization), and parallel architectures (multi-core,
+      distributed). Case studies on open-source and commercial database systems
+      are used to illustrate these techniques and trade-offs. The course is
+      appropriate for students that are prepared to flex their strong systems
+      programming skills.
+    youtube_playlist_id: PLSE8ODhjZXjaKScG3l0nuOiDTTqpfnWFf
+    semester: Fall 2022
+    instructors: 
+      - name: Andy Pavlo
+        website: http://www.cs.cmu.edu/~pavlo/
+    tags:
+      - undergraduate
+      - computer-systems
+
+  - name: 15-721 Advanced Database Systems
+    url: https://15721.courses.cs.cmu.edu/spring2018/
+    description: >
+      This course is a comprehensive study of the internals of modern database
+      management systems. It will cover the core concepts and fundamentals of the
+      components that are used in both high-performance transaction processing
+      systems (OLTP) and large-scale analytical systems (OLAP). The class will
+      stress both efficiency and correctness of the implementation of these ideas.
+      All class projects will be in the context of a real in-memory, multi-core
+      database system. The course is appropriate for graduate students in software
+      systems and for advanced undergraduates with dirty systems programming
+      skills.
+    youtube_playlist_id: PLSE8ODhjZXjYplQRUlrgQKwIAV3es0U6t
+    semester: Spring 2018
+    instructors: 
+      - name: Andy Pavlo
+        website: http://www.cs.cmu.edu/~pavlo/
+    tags:
+      - graduate
+      - computer-systems
+
+  - name: 15-418/618 Parallel Computer Architecture and Programming
+    url: https://www.cs.cmu.edu/~213/
+    description: >
+      From smart phones, to multi-core CPUs and GPUs, to the world's largest
+      supercomputers, parallel processing is ubiquitous in modern computing. The
+      goal of this course is to provide a deep understanding of the fundamental
+      principles and engineering trade-offs involved in designing modern parallel
+      computing systems as well as to teach parallel programming techniques
+      necessary to effectively utilize these machines. Because writing good
+      parallel programs requires an understanding of key machine performance
+      characteristics, this course will cover hardware design and how that affects
+      software design.
+    panopto_link: https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=f62c2297-de88-4e63-aff2-06641fa25e98
+    semester: Spring 2016
+    instructors: 
+      - name: Kayvon Fatahalian
+        website: http://graphics.stanford.edu/~kayvonf/
+      - name: Randal E. Bryant
+        website: https://www.cs.cmu.edu/~bryant/
+    tags:
+      - undergraduate
+      - computer-systems
+
+theory_courses:
+  - name: 15-251 Great Ideas in Theoretical Computer Science
+    url: https://www.cs251.com/
+    description: >
+      This course is about how to use theoretical ideas to formulate and solve
+      problems in computer science. It integrates mathematical material with
+      general problem solving techniques and computer science applications.
+      Examples are drawn from algorithms, complexity theory, game theory,
+      probability theory, graph theory, automata theory, algebra, cryptography,
+      and combinatorics. Assignments involve both mathematical proofs and
+      programming. 
+    youtube_playlist_id: PLm3J0oaFux3aafQm568blS9blxtA_EWQv
+    semester: Spring 2016
+    instructors: 
+      - name: Ryan O'Donnell
+        website: https://www.cs.cmu.edu/~odonnell/
+    tags:
+      - undergraduate
+      - theory
+
+  - name: 15-455 Undergraduate Complexity Theory
+    url: https://www.cs.cmu.edu/~odonnell/15455-s17/
+    description: >
+      The course will overlap significantly with "Part 3: Complexity" of Sipser's
+      textbook. Topics will include models of computation (Turing Machines,
+      circuits, ...), time and space complexity; hierarchy theorems by
+      diagonalization; P vs. NP; theorems of Ladner, Mahaney, Savitch,
+      Immerman-Szelepcsényi; randomized computation; and, the polynomial-time
+      hierarchy. We will also cover some non-traditional topics of current
+      research interest, such as the Exponential Time Hypothesis, Feige's
+      Hypothesis, and fine-grained complexity.
+    youtube_playlist_id: PLm3J0oaFux3YL5vLXpzOyJiLtqLp6dCW2
+    semester: Spring 2017
+    instructors: 
+      - name: Ryan O'Donnell
+        website: https://www.cs.cmu.edu/~odonnell/
+    tags:
+      - undergraduate
+      - theory
+
+  - name: 15-459 Quantum Computation
+    url: https://www.cs.cmu.edu/~odonnell/quantum18/
+    description: >
+      This course will be an introduction to quantum computation and quantum
+      information theory, from the perspective of theoretical computer science.
+      Topics include: Qubit operations, multi-qubit systems, p=artial
+      measurements, entanglement, quantum teleportation and quantum money,
+      quantum circuit model, Deutsch-Jozsa and Simons algorithm, number theory
+      and Shors Algorithm, Grovers Algorithm, quantum complexity theory,
+      limitations and current practical developments.
+    youtube_playlist_id: PLm3J0oaFux3YL5qLskC6xQ24JpMwOAeJz
+    semester: Fall 2018
+    instructors: 
+      - name: Ryan O'Donnell
+        website: https://www.cs.cmu.edu/~odonnell/
+    tags:
+      - undergraduate
+      - theory
+
+  - name: 15-855 Graduate Complexity Theory
+    url: http://www.cs.cmu.edu/~odonnell/complexity17/
+    description: >
+      The overarching goal is for students to learn the foundational aspects of
+      structural complexity theory developed in the period 1970–2010. Students
+      should learn the foundational relationships between time, space, and
+      nondeterminism in computational complexity. Students will learn about
+      circuit classes, how they relate to uniform models of computation, tools
+      for proving circuit lower bounds, and also reasons why proving lower
+      bounds are difficult. Students will be exposed to the pervasive role of
+      randomness in complexity theory, even in the proof of purely deterministic
+      results. By the end of the course, students will be able to study and
+      contribute to cutting-edge research in computational complexity theory
+    youtube_playlist_id: PLm3J0oaFux3b8Gg1DdaJOzYNsaXYLAOKH
+    semester: Fall 2017
+    instructors: 
+      - name: Ryan O'Donnell
+        website: https://www.cs.cmu.edu/~odonnell/
+    tags:
+      - graduate
+      - theory
+    prerequisites:
+      - 15-445 Undergraduate Complexity Theory
+
+  - name: 15-751 Theory Toolkit
+    url: https://www.cs.cmu.edu/~odonnell/toolkit20
+    description: >
+      The goal of this class is to provide students with the tools needed to be
+      able to read and participate in contemporary research in theoretical
+      computer science. The main focus will be on learning fundamental CS Theory
+      concepts and mathematical tools. Students should learn to apply basic
+      techniques in asymptotic and probabilistic analysis. They should gain
+      familiarity and comfort with a wide variety of tools in theoretical computer
+      science, including analysis of Boolean functions, error-correcting codes,
+      pseudorandomness, graph expansion, information theory, and communication
+      complexity. They will learn applications of linear programming and
+      semidefinite programming in constraint satisfaction problems, with a view
+      from proof complexity. They will also be exposed to different computational
+      intractability assumptions, and learn how they are applied.  A secondary
+      focus of the course will be developing good practices in mathematical
+      writing and good research habits. A goal for the students will be to improve
+      their facility with LaTeX and their ability to write clear correct proofs.
+    youtube_playlist_id: PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX
+    semester: Spring 2020
+    instructors: 
+      - name: Ryan O'Donnell
+        website: https://www.cs.cmu.edu/~odonnell/
+    tags:
+      - graduate
+      - theory
+
+  - name: 15-859S Analysis of Boolean Functions
+    url: https://www.cs.cmu.edu/~odonnell/aobf12/
+    description: >
+      Boolean functions are perhaps the most basic object of
+      study in theoretical computer science. They also arise in several other
+      areas of mathematics, including combinatorics (graph theory, extremal
+      combinatorics, additive combinatorics), metric and Banach spaces,
+      statistical physics, and mathematical social choice. In this course we will
+      study Boolean functions via their Fourier transform and other analytic
+      methods. Highlights will include applications in property testing, social
+      choice, learning theory, circuit complexity, pseudorandomness, constraint
+      satisfaction problems, additive combinatorics, hypercontractivity, Gaussian
+      geometry, random graph theory, and probabilistic invariance principles.
+    youtube_playlist_id: PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX
+    semester: Fall 2012
+    instructors: 
+      - name: Ryan O'Donnell
+        website: https://www.cs.cmu.edu/~odonnell/
+    tags:
+      - graduate
+      - theory
+
+graphics_courses:
+  - name: 15-462/662 Computer Graphics
+    url: http://15462.courses.cs.cmu.edu
+    description: >
+      This course provides a comprehensive introduction to computer graphics. It
+      focuses on fundamental concepts and techniques, and their cross-cutting
+      relationship to multiple problem domains in graphics (rendering,
+      animation, geometry, imaging). Topics include: sampling, aliasing,
+      interpolation, rasterization, geometric transformations, parameterization,
+      visibility, compositing, filtering, convolution, curves & surfaces,
+      geometric data structures, subdivision, meshing, spatial hierarchies, ray
+      tracing, radiometry, reflectance, light fields, geometric optics, Monte
+      Carlo rendering, importance sampling, camera models, high-performance ray
+      tracing, differential equations, time integration, numerical
+      differentiation, physically-based animation, optimization, numerical
+      linear algebra, inverse kinematics, Fourier methods, data fitting,
+      example-based synthesis
+    youtube_playlist_id: PL9_jI1bdZmz2emSh0UQ5iOdT2xRHFHL7E
+    semester: Fall 2020
+    instructors: 
+      - name: Keenan Crane
+        website: https://www.cs.cmu.edu/~kmcrane/
+    tags:
+      - undergraduate
+      - graphics
+
+  - name: 15-458/858 Discrete Differential Geometry
+    url: https://brickisland.net/DDGSpring2022/
+    description: >
+      This course focuses on three-dimensional geometry processing, while
+      simultaneously providing a first course in traditional differential
+      geometry. Our main goal is to show how fundamental geometric concepts
+      (like curvature) can be understood from complementary computational and
+      mathematical points of view. This dual perspective enriches understanding
+      on both sides, and leads to the development of practical algorithms for
+      working with real-world geometric data. Along the way we will revisit
+      important ideas from calculus and linear algebra, putting a strong
+      emphasis on intuitive, visual understanding that complements the more
+      traditional formal, algebraic treatment. The course provides essential
+      mathematical background as well as a large array of real-world examples
+      and applications. It also provides a short survey of recent developments
+      in digital geometry processing and discrete differential geometry. Topics
+      include: curves and surfaces, curvature, connections and parallel
+      transport, exterior algebra, exterior calculus, Stokes’ theorem,
+      simplicial homology, de Rham cohomology, Helmholtz-Hodge decomposition,
+      conformal mapping, finite element methods, and numerical linear algebra.
+      Applications include: approximation of curvature, curve and surface
+      smoothing, surface parameterization, vector field design, and computation
+      of geodesic distance.
+    youtube_playlist_id: PL9_jI1bdZmz0hIrNCMQW1YmZysAiIYSSS
+    semester: Spring 2021
+    instructors: 
+      - name: Keenan Crane
+        website: https://www.cs.cmu.edu/~kmcrane/
+    tags:
+      - undergraduate
+      - graphics

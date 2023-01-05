@@ -13,3 +13,71 @@
 .course-item {
     padding-top: 3.5rem;
 }
+
+/* Nathan Lam
+   June 2, 2017
+   Add this css for responsive embedded videos in your .css file. */
+
+.embed-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.embed-container iframe, .embed-container object, .embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.badge.computer-systems {
+    background-color: $blue-color;
+}
+
+.badge.theory {
+    background-color: $red-color;
+}
+
+.badge.machine-learning {
+    background-color: $pink-color;
+}
+
+.badge.graphics {
+    background-color: $green-color-lime;
+}
+
+.badge.undergraduate {
+    background-color: $green-color;
+}
+
+.badge.graduate {
+    background-color: $purple-color;
+}
+
+.badge.computer-systems:after {
+    content: "Computer Systems";
+}
+
+.badge.theory:after {
+    content: "Theory";
+}
+
+.badge.machine-learning:after {
+    content: "Machine Learning";
+}
+
+.badge.graphics:after {
+    content: "Graphics";
+}
+
+.badge.undergraduate:after {
+    content: "Undergraduate";
+}
+
+.badge.graduate:after {
+    content: "Graduate";
+}
