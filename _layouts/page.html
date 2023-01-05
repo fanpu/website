@@ -13,5 +13,7 @@ layout: default
           <article>
             {{ content | toc }}
           </article>
-
+          {%- if site.giscus.repo and page.giscus_comments -%}
+            {% include giscus.html %}
+          {%- endif -%}
         </div>
