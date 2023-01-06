@@ -39,6 +39,95 @@ ml_courses:
       - undergraduate
       - machine-learning
 
+  - name: 11-711 Advanced NLP
+    url: http://phontron.com/class/anlp2021/
+    description: >
+      Natural language processing technology attempts to model human language
+      with computers, tackling a wide variety of problems from automatic
+      translation to question answering. CS11-711 Advanced Natural Language
+      Processing (at Carnegie Mellon University's Language Technology Institute)
+      is an introductory graduate-level course on natural language processing
+      aimed at students who are interested in doing cutting-edge research in the
+      field. In it, we describe fundamental tasks in natural language processing
+      such as syntactic, semantic, and discourse analysis, as well as methods to
+      solve these tasks. The course focuses on modern methods using neural
+      networks, and covers the basic modeling and learning algorithms required
+      therefore. The class culminates in a project in which students attempt to
+      reimplement and improve upon a research paper in a topic of their
+      choosing.
+    youtube_playlist_id: PL8PYTP1V4I8D0UkqW2fEhgLrnlDW9QK7z
+    semester: Fall 2022
+    instructors: 
+      - name: Graham Neubig
+        website: http://phontron.com/
+      - name: Robert E. Frederking
+        website: https://www.cs.cmu.edu/~ref/
+    tags:
+      - graduate
+      - machine-learning
+
+  - name: 10-708 Probabilistic Graphical Models
+    url: https://www.cs.cmu.edu/~epxing/Class/10708-20/
+    description: >
+      Many of the problems in artificial intelligence, statistics, computer
+      systems, computer vision, natural language processing, and computational
+      biology, among many other fields, can be viewed as the search for a coherent
+      global conclusion from local information. The probabilistic graphical
+      models' framework provides a unified view for this wide range of problems,
+      enabling efficient inference, decision-making, and learning in problems with
+      a very large number of attributes and huge datasets. This graduate-level
+      course will provide you with a strong foundation for both applying graphical
+      models to complex problems and for addressing core research topics in
+      graphical models. The class will cover classical families of undirected and
+      directed graphical models (i.e. Markov Random Fields and Bayesian Networks),
+      modern deep generative models, as well as topics in graph neural networks
+      and causal inference. It will also cover the necessary algorithmic toolkit,
+      including variational inference and Markov Chain Monte Carlo methods.
+      Students entering the class should have a pre-existing working knowledge of
+      probability, statistics, and algorithms, though the class has been designed
+      to allow students with a strong mathematical background to catch up and
+      fully participate.
+    youtube_playlist_id: PLoZgVqqHOumTqxIhcdcpOAJOOimrRCGZn
+    semester: Spring 2020
+    instructors: 
+      - name: Eric P. Xing
+        website: https://www.cs.cmu.edu/~epxing/
+    tags:
+      - graduate
+      - machine-learning
+
+  - name: 10-725 Convex Optimization
+    url: https://www.andrew.cmu.edu/user/yuanzhil/cov.html
+    description: >
+      Convex optimization was an extremely useful tool in Machine Learning,
+      capable of solving many real-world problems efficiently, such as linear
+      regression, logistic regression, linear programming, SDP programming etc.
+      However, in modern machine learning, as the non-convex neural networks
+      growing to be the dominating models in this field, principles developed in
+      traditional convex optimization are now becoming insufficient.
+      <br>
+      <br>
+      In these lectures, you will see a convex optimization course that hasn't been
+      taught (or close to being taught) anywhere else: This newly designed course
+      spans the old topics in convex optimization such as Gradient Descent, Stochastic
+      Gradient Descent, Mirror Descent, Accelerated Gradient Descent, Interior Point
+      Method, and making connections all the way to optimizations topics in deep
+      learning, such as Neural Tangent Kernel, Scheduled Learning Rate, Momentums,
+      Batch normalization and Linear Reinforcement Learning.
+      <br>
+      <br>
+      In the end of the course, you will have a sense about the spirit of convex
+      optimization, and how it can still be applied to other real-world problems that
+      are not convex at all.
+    panopto_link: https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=35028909-68d2-46be-b0d8-af020148d304
+    semester: Fall 2022
+    instructors: 
+      - name: Yuanzhi Li
+        website: https://www.andrew.cmu.edu/user/yuanzhil/
+    tags:
+      - graduate
+      - machine-learning
+
   - name: 10-701 Introduction to Machine Learning
     url: http://www.cs.cmu.edu/~bapoczos/Classes/ML10715_2015Fall/
     description: >
@@ -145,68 +234,6 @@ ml_courses:
       - graduate
       - machine-learning
 
-  - name: 10-708 Probabilistic Graphical Models
-    url: https://www.cs.cmu.edu/~epxing/Class/10708-20/
-    description: >
-      Many of the problems in artificial intelligence, statistics, computer
-      systems, computer vision, natural language processing, and computational
-      biology, among many other fields, can be viewed as the search for a coherent
-      global conclusion from local information. The probabilistic graphical
-      models' framework provides a unified view for this wide range of problems,
-      enabling efficient inference, decision-making, and learning in problems with
-      a very large number of attributes and huge datasets. This graduate-level
-      course will provide you with a strong foundation for both applying graphical
-      models to complex problems and for addressing core research topics in
-      graphical models. The class will cover classical families of undirected and
-      directed graphical models (i.e. Markov Random Fields and Bayesian Networks),
-      modern deep generative models, as well as topics in graph neural networks
-      and causal inference. It will also cover the necessary algorithmic toolkit,
-      including variational inference and Markov Chain Monte Carlo methods.
-      Students entering the class should have a pre-existing working knowledge of
-      probability, statistics, and algorithms, though the class has been designed
-      to allow students with a strong mathematical background to catch up and
-      fully participate.
-    youtube_playlist_id: PLoZgVqqHOumTqxIhcdcpOAJOOimrRCGZn
-    semester: Spring 2020
-    instructors: 
-      - name: Eric P. Xing
-        website: https://www.cs.cmu.edu/~epxing/
-    tags:
-      - graduate
-      - machine-learning
-
-  - name: 10-725 Convex Optimization
-    url: https://www.andrew.cmu.edu/user/yuanzhil/cov.html
-    description: >
-      Convex optimization was an extremely useful tool in Machine Learning,
-      capable of solving many real-world problems efficiently, such as linear
-      regression, logistic regression, linear programming, SDP programming etc.
-      However, in modern machine learning, as the non-convex neural networks
-      growing to be the dominating models in this field, principles developed in
-      traditional convex optimization are now becoming insufficient.
-      <br>
-      <br>
-      In these lectures, you will see a convex optimization course that hasn't been
-      taught (or close to being taught) anywhere else: This newly designed course
-      spans the old topics in convex optimization such as Gradient Descent, Stochastic
-      Gradient Descent, Mirror Descent, Accelerated Gradient Descent, Interior Point
-      Method, and making connections all the way to optimizations topics in deep
-      learning, such as Neural Tangent Kernel, Scheduled Learning Rate, Momentums,
-      Batch normalization and Linear Reinforcement Learning.
-      <br>
-      <br>
-      In the end of the course, you will have a sense about the spirit of convex
-      optimization, and how it can still be applied to other real-world problems that
-      are not convex at all.
-    panopto_link: https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=35028909-68d2-46be-b0d8-af020148d304
-    semester: Fall 2022
-    instructors: 
-      - name: Yuanzhi Li
-        website: https://www.andrew.cmu.edu/user/yuanzhil/
-    tags:
-      - graduate
-      - machine-learning
-
   - name: 11-777 Multi-Modal Machine Learning
     url: https://cmu-multicomp-lab.github.io/mmml-course/fall2020/
     description: >
@@ -240,34 +267,6 @@ ml_courses:
     instructors: 
       - name: Louis-Philippe Morency
         website: https://www.cs.cmu.edu/~morency/
-    tags:
-      - graduate
-      - machine-learning
-
-  - name: 11-711 Advanced NLP
-    url: http://phontron.com/class/anlp2021/
-    description: >
-      Many of the problems in artificial intelligence, statistics, computer
-      systems, computer vision, natural language processing, and computational
-      biology, among many other fields, can be viewed as the search for a coherent
-      global conclusion from local information. The probabilistic graphical
-      models' framework provides a unified view for this wide range of problems,
-      enabling efficient inference, decision-making, and learning in problems with
-      a very large number of attributes and huge datasets. This graduate-level
-      course will provide you with a strong foundation for both applying graphical
-      models to complex problems and for addressing core research topics in
-      graphical models. The class will cover classical families of undirected and
-      directed graphical models (i.e. Markov Random Fields and Bayesian Networks),
-      modern deep generative models, as well as topics in graph neural networks
-      and causal inference. It will also cover the necessary algorithmic toolkit,
-      including variational inference and Markov Chain Monte Carlo methods.
-    youtube_playlist_id: PLoZgVqqHOumTqxIhcdcpOAJOOimrRCGZn
-    semester: Fall 2022
-    instructors: 
-      - name: Graham Neubig
-        website: http://phontron.com/
-      - name: Robert E. Frederking
-        website: https://www.cs.cmu.edu/~ref/
     tags:
       - graduate
       - machine-learning
