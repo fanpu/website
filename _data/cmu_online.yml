@@ -83,10 +83,6 @@ ml_courses:
       modern deep generative models, as well as topics in graph neural networks
       and causal inference. It will also cover the necessary algorithmic toolkit,
       including variational inference and Markov Chain Monte Carlo methods.
-      Students entering the class should have a pre-existing working knowledge of
-      probability, statistics, and algorithms, though the class has been designed
-      to allow students with a strong mathematical background to catch up and
-      fully participate.
     youtube_playlist_id: PLoZgVqqHOumTqxIhcdcpOAJOOimrRCGZn
     semester: Spring 2020
     instructors: 
@@ -129,7 +125,7 @@ ml_courses:
       - machine-learning
 
   - name: 10-701 Introduction to Machine Learning
-    url: http://www.cs.cmu.edu/~bapoczos/Classes/ML10715_2015Fall/
+    url: https://www.cs.cmu.edu/~epxing/Class/10701-20/
     description: >
       Machine Learning is concerned with computer programs that automatically
       improve their performance through experience (e.g., programs that learn to

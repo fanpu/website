@@ -57,18 +57,33 @@ Interaction, Institute for Software Research.
 ---
 
 ### Machine Learning
+The machine learning courses in this section generally assumes working knowledge
+of probability, statistics, calculus, and linear algebra. 
+10-701 Introduction to Machine Learning or 10-715 Advanced Introduction to
+Machine Learning are the recommended pre-requisites
+for most of these courses if you do not have taken any prior machine learning classes.
+Both of these introductory courses are also available in the table below.
 
 {% include cmu_course_table.html courses=site.data.cmu_online.ml_courses %}
 
 ---
 
 ### Computer Systems
+15-213 Introduction to Computer Systems is a required course for all CS majors in CMU,
+and is the pre-requisite for all subsequent systems classes. It is a good place to start
+if you are new to computer systems. In most other universities, this class is usually
+referred to as an operating systems class.
 
 {% include cmu_course_table.html courses=site.data.cmu_online.systems_courses %}
 
 ---
 
 ### Computer Science Theory
+15-251 Great Ideas in Theoretical Computer Science is the introductory CS theory
+class taken by CS majors in their first year, and would be a good place to start
+if you are new to CS theory. All subsequent theory classes assumes knowledge from
+15-251.
+
 {% include cmu_course_table.html courses=site.data.cmu_online.theory_courses %}
 
 ---
@@ -88,6 +103,11 @@ Why are so many courses titled 15-819? This is because the course number
 is a catch-all for advanced topics in PL theory, so while the course name
 is the same, the content can vary.
 
+15-312 Foundations of Programming Languages is the introductory class
+of the PL track, and would be a good place to start. The other introductory PL
+class 15-317 Constructive Logic unfortunately does not have any publicly
+available lectures.
+
 {% include cmu_course_table.html courses=site.data.cmu_online.pl_courses %}
 
 ---
@@ -105,6 +125,6 @@ is the same, the content can vary.
 In general, the math department does not record any of their lectures, so
 this portion is pretty dry. However, it was worth having it just
 to include [Po-Shen Loh](https://www.poshenloh.com/)'s lectures.
-He coaches the USA IMO team and is a very engaging teacher.
+He coaches the USA IMO team and is well-loved by his students.
 
 {% include cmu_course_table.html courses=site.data.cmu_online.math_courses %}
