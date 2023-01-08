@@ -164,7 +164,7 @@ the default, but it's still a far cry from a parsimonious solution.
 
 ### Macros for Saving Time and Preventing Mistakes
 Macros can be defined using the `\newcommand` command.
-The basic syntax is `\newcommand{command_name}{command_definition}.
+The basic syntax is `\newcommand{command_name}{command_definition}`.
 For instance, it might get tiring to always type `\boldsymbol{A}`
 to refer to a matrix $$\boldsymbol{A}$$, so you can use the following macro:
 
