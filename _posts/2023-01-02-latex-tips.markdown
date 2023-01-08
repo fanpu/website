@@ -44,7 +44,7 @@ post assumes that the reader has some working knowledge of LaTeX.
 
 ## Typesetting as a Form of Art
 It is important to get into the right mindset whenever you typeset a
-document. You are not simply ``writing'' a document - you are crafting a work
+document. You are not simply "writing" a document &mdash; you are crafting a work
 of art that combines both the precision and creativity of your logical
 thinking, as well as the elegance of a beautifully typeset writing. The amount
 of attention and care you put into the presentation is indicative of the amount
