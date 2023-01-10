@@ -12,13 +12,14 @@ giscus_comments: true
 Education and knowledge should be accessible to anyone who is willing to learn.
 There are many great course offerings from the top-ranked Computer Science
 program in Carnegie Mellon University whose lectures are available on the public
-domain. The purpose of this page is to curate these courses, so people can learn
+domain. The purpose of this page is to curate these courses, so people can self-study and learn
 from the best professors in the world without the hefty college price tag.
 I hope that this resource will be helpful for both people currently in industry
 aiming to improve their knowledge, current students to make course decisions
 or to do self-learning, and even prospective students to get a taste of what
 a CMU education looks like. In addition to courses, I have also included links
-to weekly seminar series which are held by various research groups.
+to weekly seminar series which are held by various research groups
+for people interested in getting closer to state-of-the-art developments.
 
 Courses which are accessible to undergraduates will have a
 <span class="badge rounded-pill undergraduate"> </span> tag.
