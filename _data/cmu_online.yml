@@ -572,6 +572,28 @@ theory_courses:
       - graduate
       - theory
 
+  - name: >
+         15-859GG Proofs vs Algorithms: The Sum-of-Squares Method
+    url: http://www.cs.cmu.edu/~praveshk/sosseminar/sosseminar.html
+    description: >
+      This seminar examines the sum-of-squares method with an emphasis on
+      recent developments and open directions for research. We will cover use
+      of this method in designing algorithms for both worst-case optimization
+      problems such as Max-Cut and Coloring and average-case problems arising
+      in machine learning and algorithmic statistics such as learning mixtures
+      of Gaussians and robust statistics. We will also cover techniques for
+      proving lower-bounds on this method and its connection to restricted
+      algorithmic frameworks such as Statistical Query Model, the Low-Degree
+      Likelihood Ratio Method and Extended Formulations.
+    youtube_playlist_id: PL3NB_Sd9CrX-6CeApf12demgpe2PO4k8c
+    semester: Fall 2020
+    instructors: 
+      - name: Pravesh Kothari
+        website: http://www.cs.cmu.edu/~praveshk/
+    tags:
+      - graduate
+      - theory
+
   - name: 15-859S Analysis of Boolean Functions
     url: https://www.cs.cmu.edu/~odonnell/aobf12/
     description: >
