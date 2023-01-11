@@ -869,7 +869,7 @@ robotics_courses:
       - graduate
       - robotics
 
-  - name: 16-715 Advanced Robot Dynamics and Simulation
+  - name: 16-745 Optimal Control and Reinforcement Learning
     url: https://github.com/Optimal-Control-16-745
     description: >
       This is a course about how to make robots move through and interact with
