@@ -144,6 +144,9 @@ you might be interested in directly.
 - 21-650 &nbsp; **Introduction to Functional Analysis**, [Giovanni Leoni](https://www.cmu.edu/math/people/faculty/leoni.html) 
 - 21-329 &nbsp; **Set Theory**, Benjamin Siskind
 - 17-604 &nbsp; **Communications for Software Leaders II**, [Dominick (Nick) Frollini](https://www.linkedin.com/in/frollini/)
+
+TA: [10-708 Probabilistic Graphical Models](https://andrejristeski.github.io/10708-S23/)
+
 ### Fall 2022
 {: .first-course-item #course15859CC } 
 - &#11088; 15-859 CC &nbsp; **[Algorithms for Big Data](https://www.cs.cmu.edu/~dwoodruf/teaching/15859-fall22/index.html)**, [David Woodruff](http://www.cs.cmu.edu/~dwoodruf/) 
