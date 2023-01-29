@@ -136,16 +136,14 @@ you might be interested in directly.
    My text with **markdown** syntax
 </div> -->
 
-### Spring 2023 (Intended)
+### Spring 2023
 - 10-716 &nbsp; **[Advanced Machine Learning: Theory and Methods](https://www.cs.cmu.edu/~pradeepr/716/)**, [	Pradeep Ravikumar](http://www.cs.cmu.edu/~pradeepr/) 
+- 15-712 &nbsp; **[Advanced Operating Systems and Distributed Systems](https://www.cs.cmu.edu/~15712/)**, [Phil Gibbons](http://www.cs.cmu.edu/~gibbons/)
 - 36-709 &nbsp; **Advanced Statistical Theory I**, [Matey Neykov](https://mateyneykov.com/) 
-- 15-859 II &nbsp; **Special Topics in Cryptography**, 
-[Aayush Jain](https://sites.google.com/view/aayushjain/home)
-- 21-650 &nbsp; **Introduction to Functional Analysis**, [Giovanni Leoni
-](https://www.cmu.edu/math/people/faculty/leoni.html) 
-- 15-618 &nbsp; **Parallel Computer Architecture and Programming**, [Zhihao Jia
-](https://www.cs.cmu.edu/~zhihaoj2/), [Brian Railing](http://www.cs.cmu.edu/~bpr/)
-
+- 36-708 &nbsp; **[The ABCDE of Statistical Methods in Machine Learning](https://36708.github.io/)**, [Aaditya Ramdas](https://www.stat.cmu.edu/~aramdas/) 
+- 21-650 &nbsp; **Introduction to Functional Analysis**, [Giovanni Leoni](https://www.cmu.edu/math/people/faculty/leoni.html) 
+- 21-329 &nbsp; **Set Theory**, Benjamin Siskind
+- 17-604 &nbsp; **Communications for Software Leaders II**, [Dominick (Nick) Frollini](https://www.linkedin.com/in/frollini/)
 ### Fall 2022
 {: .first-course-item #course15859CC } 
 - &#11088; 15-859 CC &nbsp; **[Algorithms for Big Data](https://www.cs.cmu.edu/~dwoodruf/teaching/15859-fall22/index.html)**, [David Woodruff](http://www.cs.cmu.edu/~dwoodruf/) 

@@ -1,7 +1,7 @@
 ---
 title:  "UIUCTF20 Accounting Accidents Pwn Writeup"
 layout: post
-tags: [pwn, CTF, code]
+tags: [pwn, ctf, code]
 cover: tallac_journey.jpg
 cover_preview: tallac_journey.avif
 caption: View on the way to the summit of Mount Tallac, Lake Tahoe, California, USA
