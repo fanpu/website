@@ -11,7 +11,7 @@ description: > # the ">" symbol means to ignore newlines until "footer_text:"
   Homepage
 footer_text: >
   Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-keywords: fanpu, fanpu-zeng, zengfanpu, fan-pu, zeng-fan-pu, CMU, carnegie-mellon, machine-learning, ml, theory
+keywords: fanpu, fanpu-zeng, fzeng, zengfanpu, fan-pu, zeng-fan-pu, CMU, carnegie-mellon, machine-learning, ml, theory, courses, course-reviews, computer-science, CS, SCS
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: favicon_new.ico️  # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
