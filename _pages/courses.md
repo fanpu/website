@@ -153,12 +153,11 @@ you might be interested in directly.
 - 36-708 &nbsp; **[The ABCDE of Statistical Methods in Machine Learning](https://36708.github.io/)**, [Aaditya Ramdas](https://www.stat.cmu.edu/~aramdas/)
   {: .course-item #course36708 }
 
-- 21-640 &nbsp; **Introduction to Functional Analysis**, [Giovanni Leoni](https://www.cmu.edu/math/people/faculty/leoni.html)
-
 - 21-329 &nbsp; **Set Theory**, Benjamin Siskind
   {: .course-item #course36708 }
 
 - 17-604 &nbsp; **Communications for Software Leaders II**, [Dominick (Nick) Frollini](https://www.linkedin.com/in/frollini/)
+  {: .course-item #course17604 }
 
 I TA'd for [10-708 Probabilistic Graphical
 Models](https://andrejristeski.github.io/10708-S23/) under [Andrej
