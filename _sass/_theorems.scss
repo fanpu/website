@@ -1,7 +1,7 @@
 $theorem-padding-top: 20px;
 $theorem-padding-bottom: 20px;
 
-.theorem, .lemma, .proposition, .corollary, .definition, .conjecture {
+.theorem, .lemma, .proposition, .corollary, .definition, .conjecture, .example {
   box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
   position: relative;
   margin: 0.9765em 0;
@@ -177,4 +177,31 @@ $theorem-padding-bottom: 20px;
   margin-right: 0.75rem;
   font-weight: 400;
   color: #ff9100;
+}
+
+.example {
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
+  position: relative;
+  margin: 0.9765em 0;
+  padding: 0 0.75rem;
+  border-left: 0.25rem solid #E91E63;
+
+  border-radius: 0.125rem;
+  overflow: auto;
+}
+.example .theorem-title {
+  margin: 0 -0.75rem;
+  border-bottom: 0.1rem solid rgba(68, 138, 255, 0.1);
+  background-color: rgba(248, 187, 208, 0.3);
+  font-weight: 700;
+  display: block;
+  font-size: 1em;
+  color:  #E91E63;
+
+  padding: 0.5rem 0 0.5rem 0.75rem;
+}
+.example .theorem-title::before {
+  margin-right: 0.75rem;
+  font-weight: 400;
+  color: #E91E63;
 }
