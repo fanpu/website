@@ -2,9 +2,9 @@
 title: "Why Study Computer Systems"
 layout: post
 tags: [general, cmu]
-cover: ubin_mangrove.jpg
-cover_preview: ubin_mangrove.jpg
-caption: Chek Jawa Wetlands, Pulau Ubin, Singapore
+cover: stoa_acropolis.jpg
+cover_preview: stoa_acropolis.jpg
+caption: The Stoa of [???] and the Acropolis. Athens, Greece
 class: post-template
 navigation: True
 author: fanpu
