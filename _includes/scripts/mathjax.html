@@ -2,9 +2,8 @@
   <!-- MathJax -->
   <script type="text/javascript">
     window.MathJax = {
-      tex: {
-        tags: 'ams'
-      },
+      loader: {load: ['[tex]/mathtools']},
+      tex: {packages: {'[+]': ['mathtools', 'ams']}},
       options: {
         renderActions: {
           addMenu: []
