@@ -176,6 +176,7 @@ to truly understand the material and know how to apply it.  The other
 requirement for the course is fundamentals in topology, i.e first half of 21-640 General
 Topology which I took the previous semester.
 
+Reviews for this semester will be updated soon :)
 
 ### Fall 2022
 
