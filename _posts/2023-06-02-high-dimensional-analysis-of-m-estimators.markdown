@@ -21,7 +21,7 @@ description: >
     The goal of this blog post is to provide the sufficient background for
     understanding the proof of this result, followed by a walkthrough of the
     proof itself.
-hidden: false
+hidden: true
 ---
 $$
     \newcommand{\rcal}{\mathcal{R}}
@@ -753,3 +753,19 @@ and also derive new results on low-rank matrix estimation using the nuclear
 norm, minimax-optimal rates for noisy matrix completion, and noisy matrix
 decomposition. The reader is encouraged to refer to \cite{paper}
 for more details on the large number of corrollaries of Theorem \ref{thm:1}.
+
+# Slides
+A condensed slide deck that introduces the key ideas of the post, but without
+any of the proofs is provided below.
+
+{% pdf "/assets/presentations/A-Unified-Framework-For-High-Dimensional-Analysis-Of-M-Estimators.pdf" no_link %}
+
+# Citations
+- Negahban, S., Yu, B., Wainwright, M. J., and Ravikumar, P. [A unified
+framework for high-dimensional analysis of m-estimators with decomposable
+regularizers](https://proceedings.neurips.cc/paper_files/paper/2009/file/dc58e3a306451c9d670adcd37004f48f-Paper.pdf).
+In Bengio, Y., Schuurmans, D., Lafferty, J., Williams, C., and Culotta, A.
+(eds.), Advances in Neural Information Processing Systems, volume 22. Curran
+Associates, Inc., 2009. 
+URL https://proceedings.neurips.cc/paper_files/paper/2009/file/dc58e3a306451c9d670adcd37004f48f-Paper.pdf.
+
