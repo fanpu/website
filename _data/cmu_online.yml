@@ -422,7 +422,7 @@ systems_courses:
       - computer-systems
 
   - name: 15-418/618 Parallel Computer Architecture and Programming
-    url: https://www.cs.cmu.edu/~213/
+    url: https://www.cs.cmu.edu/~418/
     description: >
       From smart phones, to multi-core CPUs and GPUs, to the world's largest
       supercomputers, parallel processing is ubiquitous in modern computing. The
