@@ -32,6 +32,10 @@ highlight_theme_dark: native    # https://github.com/jwarby/jekyll-pygments-them
 # repo color theme
 repo_theme_light: default       # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
 repo_theme_dark: dark           # https://github.com/anuraghazra/github-readme-stats/blob/master/themes/README.md
+repo_trophies:
+  enabled: false
+  theme_light: flat    # https://github.com/ryo-ma/github-profile-trophy
+  theme_dark: gitdimmed  # https://github.com/ryo-ma/github-profile-trophy
 
 # -----------------------------------------------------------------------------
 # RSS Feed
@@ -78,11 +82,15 @@ orcid_id: # your ORCID ID
 medium_username: # your Medium username
 quora_username: # your Quora username
 publons_id: # your ID on Publons
+lattes_id: # your ID on Lattes (Brazilian Lattes CV)
+osf_id: # your OSF ID
 research_gate_profile: # your profile on ResearchGate
+scopus_id: # your profile on Scopus
 blogger_url: # your blogger URL
 work_url: # work page URL
 keybase_username: # your keybase user name
 wikidata_id: # your wikidata id
+wikipedia_id: # your wikipedia id (Case sensitive)
 dblp_url: # your DBLP profile url
 stackoverflow_id: # your stackoverflow id
 kaggle_id: # your kaggle id
@@ -92,10 +100,11 @@ pinterest_id: # your pinterest id
 unsplash_id: # your unsplash id
 instagram_id: # your instagram id
 facebook_id: # your facebook id
+youtube_id: # your youtube channel id (youtube.com/@<youtube_id>)
 discord_id: # your discord id (18-digit unique numerical identifier)
 
 contact_note: >
-  The best way to reach me is via email. My Twitter DMs are open as well.
+  You can even add a little note about which of these is the best way to reach you.
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification
@@ -119,6 +128,10 @@ permalink: /blog/:year/:title/
 # Pagination
 pagination:
   enabled: true
+
+related_blog_posts:
+  enabled: true
+  max_related: 5
 
 # Giscus comments (RECOMMENDED)
 # Follow instructions on https://giscus.app/ to setup for your repo to fill out
@@ -161,8 +174,15 @@ collections:
     output: true
     permalink: /projects/:path/
 
-news_scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-news_limit: # 5 # leave blank to include all the news in the `_news` folder
+announcements:
+  enabled: true
+  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
+  limit: 7 # leave blank to include all the news in the `_news` folder
+
+latest_posts:
+  enabled: true
+  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
+  limit: 7 # leave blank to include all the blog posts
 
 # -----------------------------------------------------------------------------
 # Jekyll settings
@@ -200,11 +220,13 @@ plugins:
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-imagemagick
+  - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
   - jekyll/scholar
   - jekyll-sitemap
   - jekyll-link-attributes
+  - jekyll-toc
   - jekyll-twitter-plugin
   - jemoji
 
@@ -270,6 +292,10 @@ scholar:
 
   query: "@*"
 
+badges: # Display different badges for your publications
+  altmetric_badge: true # Altmetric badge (https://www.altmetric.com/products/altmetric-badges/)
+  dimensions_badge: true # Dimensions badge (https://badge.dimensions.ai/)
+
 # Filter out certain bibtex entry keywords used internally from the bib output
 filtered_bibtex_keywords: [abbr, abstract, arxiv, bibtex_show, html, pdf, selected, supp, blog, code, poster, slides, website, preview, altmetric]
 
@@ -294,8 +320,9 @@ external_links:
 # Responsive WebP Images
 # -----------------------------------------------------------------------------
 
+# [TODO fanpu: review this]
 imagemagick:
-  enabled: false # enables responsive images for your site (recomended, see https://github.com/alshedivat/al-folio/issues/537)
+  enabled: true # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
   widths:
     - 480
     - 800
@@ -351,6 +378,8 @@ bootstrap:
   integrity:
     css: "sha256-DF7Zhf293AJxJNTmh5zhoYYIMs2oXitRfBjY+9L//AY="
     js: "sha256-fgLAgv7fyCGopR/gBNq2iW3ZKIdqIcyshnUULC4vex8="
+bootstrap-table:
+  version: "1.21.4"
 fontawesome:
   version: "5.15.4"
   integrity: "sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4="
@@ -368,5 +397,5 @@ mdb:
     css: "sha256-jpjYvU3G3N6nrrBwXJoVEYI/0zw8htfFnhT9ljN3JJw="
     js: "sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA="
 medium_zoom:
-  version: "1.0.6"
-  integrity: "sha256-EdPgYcPk/IIrw7FYeuJQexva49pVRZNmt3LculEr7zM="
+  version: "1.0.8"
+  integrity: "sha256-7PhEpEWEW0XXQ0k6kQrPKwuoIomz8R8IYyuU1Qew4P8="

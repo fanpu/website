@@ -1,5 +1,6 @@
-source 'http://rubygems.org'
+source 'https://rubygems.org'
 group :jekyll_plugins do
+    gem 'classifier-reborn'
     gem 'jekyll'
     gem 'jekyll-archives'
     gem 'jekyll-diagrams'
@@ -20,6 +21,6 @@ group :jekyll_plugins do
     gem 'webrick'
 end
 group :other_plugins do
-    gem 'httparty'
     gem 'feedjira'
+    gem 'httparty'
 end

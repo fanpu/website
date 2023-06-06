@@ -13,6 +13,7 @@ profile:
 news: true  # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
 selected_posts : true # includes a list of posts marked as "selected={true}"
+latest_posts: false # includes a list of the newest posts
 social: true  # includes social icons at the bottom of the page
 ---
 

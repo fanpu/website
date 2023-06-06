@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     activesupport (6.1.7)
       concurrent-ruby (~> 1.0, >= 1.0.2)
@@ -16,6 +16,9 @@ GEM
     citeproc-ruby (1.1.14)
       citeproc (~> 1.0, >= 1.0.9)
       csl (~> 1.6)
+    classifier-reborn (2.3.0)
+      fast-stemmer (~> 1.0)
+      matrix (~> 0.4)
     colorator (1.1.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
@@ -30,6 +33,7 @@ GEM
       http_parser.rb (~> 0)
     eventmachine (1.2.7)
     execjs (2.8.1)
+    fast-stemmer (1.0.2)
     feedjira (3.2.1)
       loofah (>= 2.3.1)
       sax-machine (>= 1.0)
@@ -118,6 +122,7 @@ GEM
     loofah (2.19.1)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
+    matrix (0.4.2)
     mercenary (0.4.0)
     mime-types (3.4.1)
       mime-types-data (~> 3.2015)
@@ -161,6 +166,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  classifier-reborn
   feedjira
   httparty
   jekyll
