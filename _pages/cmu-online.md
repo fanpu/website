@@ -1,7 +1,7 @@
 ---
 layout: page
 permalink: /cmu-online/
-title: cmu online
+title: CMU Online
 description: Publicly Accessible CMU Courses
 nav: true
 navigation: true

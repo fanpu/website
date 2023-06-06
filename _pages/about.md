@@ -1,6 +1,6 @@
 ---
 layout: about
-title: about
+title: About
 permalink: /
 subtitle: Incoming Linux Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>. <a href='https://www.cs.cmu.edu/'>CMU SCS</a> Class of 2022, MSCS Class of 2023. Currently located in New York, NY, USA. 
 
