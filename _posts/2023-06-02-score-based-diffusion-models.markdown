@@ -678,26 +678,25 @@ diversity of applicable modalities.
 
 # References
 - Austin, J., Johnson, D. D., Ho, J., Tarlow, D., and van den Berg, R. 
-[Structured denoising diffusion models in discrete state-spaces.](https://arxiv.org/abs/2107.03006) CoRR, abs/2107.03006, 2021. URL https://arxiv.org/abs/2107.03006.
+[Structured denoising diffusion models in discrete state-spaces.](https://arxiv.org/abs/2107.03006) CoRR, abs/2107.03006, 2021.
 - Cao, H., Tan, C., Gao, Z., Chen, G., Heng, P.-A., and Li, S. Z. 
-A survey on generative diffusion model, 2022.
+[A survey on generative diffusion model](https://arxiv.org/abs/2209.02646), 2022.
 - Ho, J., Jain, A., and Abbeel, P.  [Denoising diffusion probabilistic
 models](https://arxiv.org/abs/2006.11239).  CoRR, abs/2006.11239, 2020. URL
 https://arxiv.org/abs/2006.11239.
-- Hyva ̈rinen, A. [Estimation of non-normalized statistical models by score matching](http://jmlr.org/papers/v6/hyvarinen05a.html). Journal of Machine Learning Research, 6(24):695–709, 2005. URL http://jmlr.org/papers/v6/hyvarinen05a.html.
+- Hyva ̈rinen, A. [Estimation of non-normalized statistical models by score matching](http://jmlr.org/papers/v6/hyvarinen05a.html). Journal of Machine Learning Research, 6(24):695–709, 2005.
 - Lopes, R. G., Fenu, S., and Starner, T. [Data-free knowledge distillation for deep neural networks](http://arxiv.org/abs/1710.07535). CoRR, abs/1710.07535,
-2017. URL http://arxiv.org/abs/1710.07535.
-- Salimans, T. and Ho, J. [Progressive distillation for fast sampling of diffusion models](https://arxiv.org/abs/2202.00512). CoRR, abs/2202.00512, 2022. URL https://arxiv.org/abs/2202.00512.
+2017.
+- Salimans, T. and Ho, J. [Progressive distillation for fast sampling of diffusion models](https://arxiv.org/abs/2202.00512). CoRR, abs/2202.00512, 2022.
 - Song, Y. and Ermon, S. 
 [Generative modeling by estimating gradients of the data distribution](http://arxiv.org/abs/1907.05600). CoRR, abs/1907.05600, 2019.
-URL http://arxiv.org/abs/1907.05600.
 - Song, Y., Garg, S., Shi, J., and Ermon, S. 
 [Sliced score matching: A scalable approach to density and score estimation](http://arxiv.org/abs/1905.07088). CoRR,
 abs/1905.07088, 2019. URL http://arxiv.org/abs/1905.07088.
 - Song, Y., Sohl-Dickstein, J., Kingma, D. P., Kumar, A., Ermon, S., and Poole,
 B. [Score-based generative modeling through stochastic differential
-equations](https://arxiv.org/abs/2011.13456). ICLR, abs/1907.05600, 2021. URL https://arxiv.org/abs/2011.13456.
-- Vahdat, A., Kreis, K., and Kautz, J. Score-based generative modeling in latent space, 2021.
-- Welling, M. and Teh, Y. W. Bayesian learning via stochastic gradient langevin dynamics. In Proceedings of the 28th International Conference on International Conference on Machine Learning, ICML’11, pp. 681–688, Madison, WI, USA, 2011. Omnipress. ISBN 9781450306195.
-- Zhang, H., Feng, R., Yang, Z., Huang, L., Liu, Y., Zhang, Y., Shen, Y., Zhao, D., Zhou, J., and Cheng, F. Dimensionality- varying diffusion process, 2022.
-- Zheng, H., He, P., Chen, W., and Zhou, M. Truncated diffusion probabilistic models and diffusion-based adversarial auto-encoders, 2022.
+equations](https://arxiv.org/abs/2011.13456). ICLR, abs/1907.05600, 2021.
+- Vahdat, A., Kreis, K., and Kautz, J. [Score-based generative modeling in latent space](https://arxiv.org/abs/2106.05931), 2021.
+- Welling, M. and Teh, Y. W. [Bayesian learning via stochastic gradient langevin dynamics](https://dl.acm.org/doi/10.5555/3104482.3104568). In Proceedings of the 28th International Conference on International Conference on Machine Learning, ICML’11, pp. 681–688, Madison, WI, USA, 2011. Omnipress. ISBN 9781450306195.
+- Zhang, H., Feng, R., Yang, Z., Huang, L., Liu, Y., Zhang, Y., Shen, Y., Zhao, D., Zhou, J., and Cheng, F. [Dimensionality-varying diffusion process](https://arxiv.org/abs/2211.16032), 2022.
+- Zheng, H., He, P., Chen, W., and Zhou, M. [Truncated diffusion probabilistic models and diffusion-based adversarial auto-encoders](https://arxiv.org/abs/2202.09671), 2022.
