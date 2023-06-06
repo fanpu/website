@@ -666,15 +666,25 @@ to draw samples, successive work has done well in addressing these limitations
 to make score matching on diffusion models a viable contender to displace
 GANs as the state-of-the-art for generative modeling. 
 
-Our experiments in this post help to provide empirical context to the theoretical results we have derived. Most notably, we have shown how annealing is an essential part of sampling via Langevin dynamics.
+Our experiments in this blog post help to provide empirical context to the theoretical results we have derived. Most notably, we have shown how annealing is an essential part of sampling via Langevin dynamics.
 
 Finally, we discuss some future directions that can help to improve
 the viability of using score-based diffusion models, which includes improving
 its computational cost in both training and sampling and increasing the
 diversity of applicable modalities.
 
-# Acknowledgements
+# Citation
 
+```
+@article{zeng2023diffusion,
+  title   = {Score-Based Diffusion Models},
+  author  = {Fan Pu Zeng and Owen Wang},
+  journal = {fanpu.io},
+  year    = {2023},
+  month   = {Jun},
+  url     = {https://fanpu.io/blog/2023/score-based-diffusion-models/}
+}
+```
 
 # References
 - Austin, J., Johnson, D. D., Ho, J., Tarlow, D., and van den Berg, R. 
