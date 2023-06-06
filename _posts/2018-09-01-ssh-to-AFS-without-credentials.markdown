@@ -2,7 +2,7 @@
 layout: post
 tags: [DevOps, code]
 title: SSH to Andrew File System (AFS) Without Credentials
-cover: lawn.jpg
+cover: lawn.avif
 cover_preview: lawn.avif
 caption: The Cut at Carnegie Mellon University. Added a nostalgic filter for fun.
 class: post-template

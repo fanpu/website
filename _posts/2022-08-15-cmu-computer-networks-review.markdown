@@ -2,7 +2,7 @@
 title: "CMU 15-441/641 Computer Networks Course Review"
 layout: post
 tags: [courses, code]
-cover: mojave_national_preserve.jpg
+cover: mojave_national_preserve.avif
 cover_preview: mojave_national_preserve.avif
 caption: Mojave National Preserve, California, USA
 class: post-template

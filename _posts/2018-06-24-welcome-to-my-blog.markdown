@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [general, code]
-cover: marina.jpg
+cover: marina.avif
 cover_preview: marina.avif
 caption: Marina Bay area, Singapore
 description: >

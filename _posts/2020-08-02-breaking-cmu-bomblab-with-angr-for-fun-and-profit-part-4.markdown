@@ -2,7 +2,7 @@
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 4"
 layout: post
 tags: [rev, ctf]
-cover: erie.jpg
+cover: erie.avif
 cover_preview: erie.avif
 caption: Lake Erie, Erie, Pennsylvania, USA
 class: post-template

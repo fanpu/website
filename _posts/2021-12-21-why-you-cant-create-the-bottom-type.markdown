@@ -2,7 +2,7 @@
 title: "Why you can't create a value with the Bottom type (and why it's still useful)"
 layout: post
 tags: [code, pl-theory]
-cover: coyote_valley.jpg
+cover: coyote_valley.avif
 cover_preview: coyote_valley.avif
 caption: Coyote Valley Trail, Rocky Mountain National Park, Colorado, USA
 class: post-template

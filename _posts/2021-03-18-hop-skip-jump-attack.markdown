@@ -2,7 +2,7 @@
 title: "HopSkipJumpAttack: An Efficient Adversarial Attack against Machine Learning Algorithms"
 layout: post
 tags: [machine-learning]
-cover: sulphur_springs.jpg
+cover: sulphur_springs.avif
 cover_preview: sulphur_springs.avif
 caption: Hot Creek Geologic Site, Mammoth Lakes, California, USA
 class: post-template

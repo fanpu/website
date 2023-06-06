@@ -2,7 +2,7 @@
 title: "Pink Floyd and Alienation"
 layout: post
 tags: [general]
-cover: dark_side_of_the_moon.jpg
+cover: dark_side_of_the_moon.avif
 cover_preview: dark_side_of_the_moon.avif
 caption: Studio album cover of The Dark Side of the Moon (1973), Pink Floyd
 class: post-template

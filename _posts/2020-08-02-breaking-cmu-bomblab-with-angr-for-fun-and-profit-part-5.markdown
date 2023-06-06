@@ -2,7 +2,7 @@
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 5"
 layout: post
 tags: [rev, ctf, code]
-cover: niagara_falls.jpg
+cover: niagara_falls.avif
 cover_preview: niagara_falls.avif
 caption: Niagara Falls, New York, USA
 class: post-template

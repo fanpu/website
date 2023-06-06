@@ -2,7 +2,7 @@
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 6"
 layout: post
 tags: [rev, ctf, code]
-cover: lake_placid.jpg
+cover: lake_placid.avif
 cover_preview: lake_placid.avif
 caption: Lake Placid, New York, USA
 class: post-template
@@ -166,7 +166,7 @@ $ r2 bomb
 
 Now output the disassembly with `pdf`, which stands for Print Disassemble Function:
 
-![Disassembly graph of phase_6](/assets/images/screenshots/phase_6_r2.png)
+![Disassembly graph of phase_6](/assets/images/screenshots/phase_6_r2.avif)
 
 You can see the lines on the left going up and down. Those represents the jumps that can be taken. We also see that there are some obvious blocks in the structure. My original intuition was that the address at 0x00401158 seemed like a pretty good place to split the blocks, since it just finished a bunch of complicated logic in the first half and it looked like a natural transition point. Let's see how this looks like in code:
 

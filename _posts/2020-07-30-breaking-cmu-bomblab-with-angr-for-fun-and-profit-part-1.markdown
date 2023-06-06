@@ -2,7 +2,7 @@
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 1"
 layout: post
 tags: [rev, ctf, code]
-cover: arapaho.jpg
+cover: arapaho.avif
 cover_preview: arapaho.avif
 caption: Arapaho Glacier, Roosevelt National Forest, Colorado, USA
 class: post-template

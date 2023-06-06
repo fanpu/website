@@ -2,7 +2,7 @@
 title: "Efficient Low Rank Approximation via Affine Embeddings"
 layout: post
 tags: [theory, machine-learning, math]
-cover: poo_poo_point.jpg
+cover: poo_poo_point.avif
 cover_preview: poo_poo_point.avif
 caption: Poo Poo Point, Cougar Mountains, Washington, USA
 class: post-template
@@ -124,7 +124,7 @@ Think of $$SA$$ as taking a small number of linear combinations of $$A$$,
 where each row of $$S$$ is picking a random linear combination of all the rows of $$A$$, i.e points in $$\mathbb{R}^d$$:
 
 {% include figure.html 
-  path="/assets/img/posts/low-rank-approx-intuition-matrix.png" 
+  path="/assets/img/posts/low-rank-approx-intuition-matrix.avif" 
   width="200px"
   class="z-depth-0" 
 %}

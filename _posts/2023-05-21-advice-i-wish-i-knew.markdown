@@ -2,8 +2,8 @@
 title: "Advice I Wish I Knew As A Freshmen"
 layout: post
 tags: [general, cmu]
-cover: ubin_mangrove.jpg
-cover_preview: ubin_mangrove.jpg
+cover: ubin_mangrove.avif
+cover_preview: ubin_mangrove.avif
 caption: Chek Jawa Wetlands, Pulau Ubin, Singapore
 class: post-template
 navigation: True

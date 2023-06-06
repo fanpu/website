@@ -2,8 +2,8 @@
 title: "A Friendly Tutorial to Variational Inference: Introduction and "
 layout: post
 tags: [code, general]
-cover: ubin_mangrove.jpg
-cover_preview: ubin_mangrove.jpg
+cover: ubin_mangrove.avif
+cover_preview: ubin_mangrove.avif
 caption: Chek Jawa Wetlands, Pulau Ubin, Singapore
 class: post-template
 navigation: True

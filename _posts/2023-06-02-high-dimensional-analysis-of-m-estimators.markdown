@@ -2,8 +2,8 @@
 title: "A Unified Framework for High-Dimensional Analysis of M-Estimators with Decomposable Regularizers: A Guided Walkthrough"
 layout: post
 tags: [machine-learning, statistics]
-cover: dionysus_delphi.jpg
-cover_preview: dionysus_delphi.jpg
+cover: dionysus_delphi.avif
+cover_preview: dionysus_delphi.avif
 caption: Theatre of Dionysus at Delphi, Greece
 class: post-template
 navigation: True
@@ -304,7 +304,7 @@ and the following example highlights one such case.
 ## Role of Decomposability
 
 {% include figure.html 
-    path="/assets/img/posts/high-dimensional-analysis-of-m-estimators/c_illust.png"
+    path="/assets/img/posts/high-dimensional-analysis-of-m-estimators/c_illust.avif"
     width="500px"
     class="z-depth-1"
     caption="
@@ -390,7 +390,7 @@ like what is shown in Figure \ref{fig:cone}(b).
 ## Restricted Strong Convexity (RSC) of the Loss Function
 
 {% include figure.html 
-    path="/assets/img/posts/high-dimensional-analysis-of-m-estimators/curvature.png"
+    path="/assets/img/posts/high-dimensional-analysis-of-m-estimators/curvature.avif"
     width="500px"
     class="z-depth-1"
     caption="

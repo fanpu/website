@@ -2,7 +2,7 @@
 title: "The Delightful Consequences of the Graph Minor Theorem"
 layout: post
 tags: [math, theory]
-cover: kenai_fjords_glacier.jpg
+cover: kenai_fjords_glacier.avif
 cover_preview: kenai_fjords_glacier.avif
 caption: Exit Glacier, Kenai Fjords National Park, Alaska, USA
 class: post-template
@@ -45,7 +45,7 @@ new vertex \(w\) that still preserves the old adjacencies but eliminates
 duplicate edges.
 
 {% include figure.html 
-  path="assets/img/posts/edge_contraction.png" 
+  path="assets/img/posts/edge_contraction.avif" 
   width="300px"
   class="z-depth-1" 
   caption="Edge contraction between \(u\) and \(v\) to obtain \(w\)"

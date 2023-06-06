@@ -2,7 +2,7 @@
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 3"
 layout: post
 tags: [rev, ctf, code]
-cover: lily_mountain.jpg
+cover: lily_mountain.avif
 cover_preview: lily_mountain.avif
 caption: View from Lily Mountain Trail, Rocky Mountain National Park, Colorado, USA
 class: post-template

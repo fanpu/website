@@ -70,7 +70,7 @@ they are posted. It will actually turn out that this won't be strictly necessary
 ### A Day in the Life
 The calendar below outlines what a normal week looks like.
 
-![What my weekly calendar looks like](/assets/images/posts/cmu_week_calendar.png){: width="100%"}
+![What my weekly calendar looks like](/assets/images/posts/cmu_week_calendar.avif){: width="100%"}
 
 Here's what my routine looks like.
 

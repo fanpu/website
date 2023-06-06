@@ -2,7 +2,7 @@
 title: "Playing Atari using Deep Reinforcement Learning"
 layout: post
 tags: [machine-learning]
-cover: devils_postpile.jpg
+cover: devils_postpile.avif
 cover_preview: devils_postpile.avif
 caption: Devils Postpile National Monument, Mammoth Lakes, California, USA
 class: post-template

@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [software engineering, startup]
-cover: saleswhale/saleswhale_offsite_resize.jpg
+cover: saleswhale/saleswhale_offsite_resize.avif
 cover_preview: saleswhale/saleswhale_offsite_resize.avif
 caption: Saleswhale offsite!
 class: post-template

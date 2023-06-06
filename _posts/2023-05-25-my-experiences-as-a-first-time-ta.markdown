@@ -2,8 +2,8 @@
 title: "My Experiences as a First-Time TA in CMU"
 layout: post
 tags: [general, teaching, cmu]
-cover: parthenon_diag.jpg
-cover_preview: parthenon_diag.jpg
+cover: parthenon_diag.avif
+cover_preview: parthenon_diag.avif
 caption: The Parthenon of the Acropolis in Athens, Attica, Greece
 class: post-template
 navigation: True

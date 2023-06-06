@@ -2,7 +2,7 @@
 title: "Impagliazzo's Five Worlds, or The Computational (Im)Possibilities of The World That We Live In"
 layout: post
 tags: [complexity-theory, computer-science]
-cover: denali.jpg
+cover: denali.avif
 cover_preview: denali.avif
 caption: Denali National Park, Alaska
 description: >

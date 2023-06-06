@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [software engineering, general, startup]
-cover: drama.jpg
+cover: drama.avif
 cover_preview: drama.avif
 caption: Carnegie Mellon School of Drama
 class: post-template

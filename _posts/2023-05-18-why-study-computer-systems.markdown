@@ -2,8 +2,8 @@
 title: "Why Study Computer Systems"
 layout: post
 tags: [general, cmu]
-cover: stoa_acropolis.jpg
-cover_preview: stoa_acropolis.jpg
+cover: stoa_acropolis.avif
+cover_preview: stoa_acropolis.avif
 caption: The Stoa of [???] and the Acropolis. Athens, Greece
 class: post-template
 navigation: True

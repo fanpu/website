@@ -2,7 +2,7 @@
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 2"
 layout: post
 tags: [rev, ctf, code]
-cover: emerald_lake.jpg
+cover: emerald_lake.avif
 cover_preview: emerald_lake.avif
 description: Emerald Lake, Rocky Mountain National Park, Colorado, USA
 class: post-template

@@ -2,7 +2,7 @@
 title: "Against Government Scholarships"
 layout: post
 tags: [general]
-cover: yosemite_waterfall.jpg
+cover: yosemite_waterfall.avif
 cover_preview: yosemite_waterfall.avif
 caption: Vernal Falls, Yosemite National Park, California, USA
 class: post-template

@@ -2,7 +2,7 @@
 title: "Writing a DPLL SAT Solver"
 layout: post
 tags: [code]
-cover: tallac.jpg
+cover: tallac.avif
 cover_preview: tallac.avif
 caption: View from summit of Mt Tallac, Lake Tahoe, California, USA
 class: post-template
@@ -59,7 +59,7 @@ The two interesting algorithms implemented for SAT solving are DPLL and unit pro
 ### DPLL
 
 {% include figure.html 
-    path="/assets/img/screenshots/dpll_algo.png"
+    path="/assets/img/screenshots/dpll_algo.avif"
     width="700px"
     class="z-depth-1"
     caption="DPLL algorithm pseudocode"
@@ -83,7 +83,7 @@ To this end, we introduce the idea of watched literals introduced by Moskewicz e
 Another benefit of using watched literals is that during backtracking, our constraints can only be relaxed (i.e our variables can be unassigned but never assigned), and therefore we do not need to update them. 
 
 {% include figure.html 
-    path="/assets/img/screenshots/unit_propagation_algo.png"
+    path="/assets/img/screenshots/unit_propagation_algo.avif"
     width="700px"
     class="z-depth-1"
     caption="Unit propagation algorithm pseudocode"
@@ -102,7 +102,7 @@ The SAT solving framework provides flexibility for changing the heuristics used 
 The results are given below:
 
 {% include figure.html 
-    path="/assets/img/screenshots/sat_solver_heuristic_results.png"
+    path="/assets/img/screenshots/sat_solver_heuristic_results.avif"
     width="400px"
     class="z-depth-1"
     caption="SAT solver heuristic comparisons"

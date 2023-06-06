@@ -2,8 +2,8 @@
 title: "Policy Gradient Methods: Natural Policy Gradients, PPO, TRPO"
 layout: post
 tags: [machine-learning, code]
-cover: red_rock.jpg
-cover_preview: red_rock.jpg
+cover: red_rock.avif
+cover_preview: red_rock.avif
 caption: Valley of Fire State Park, Overton, Nevada, USA
 class: post-template
 navigation: True
