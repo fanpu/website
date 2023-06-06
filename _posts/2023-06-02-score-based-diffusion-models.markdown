@@ -33,7 +33,6 @@ $$
     \newcommand{\score}{\nabla_\bx \log \pdata}
     \newcommand{\bov}{\bar{\beta}}
 $$
-
 *Joint work with [Owen Wang](https://www.linkedin.com/in/owen-wang/).*
 
 There has recently been a flurry of work in score-based
@@ -57,7 +56,8 @@ probability density function.  This allows it to avoid computing the partition
 function completely.
 
 One of the first such approaches that rely on using score-matching to
-perform generative modeling does so by generating new samples via Langevin dynamics \cite{generative-modeling-by-estimating-gradients}.
+perform generative modeling does so by generating new samples via Langevin
+dynamics [(Song & Ermon, 2019)](https://arxiv.org/abs/1907.05600).
 A key observation
 is that naively applying score-matching is that the model of score function will
 be inaccurate in areas of low density with respect to the data distribution,
@@ -67,7 +67,8 @@ which provides
 additional training signal and increases the dimensionality
 of the data.
 
-The next major step introduced in \cite{generative-modeling-sde}
+The next major step introduced in 
+[(Song et al., 2021)](https://arxiv.org/abs/2011.13456)
 is to perturb the data using a diffusion process
 which is a form of a stochastic differential equation (SDEs).
 The SDE is then reversed using annealed Langevin dynamics
@@ -83,8 +84,7 @@ diffusion steps to be taken during the generative process.
 # Survey of Results
 
 We will be primarily focusing on the paper
-``Generative Modeling by Estimating Gradients of the Data Distribution''
-\cite{generative-modeling-by-estimating-gradients}.
+[Generative Modeling by Estimating Gradients of the Data Distribution (Song & Ermon, 2019)](https://arxiv.org/abs/1907.05600).
 
 In this section, we provide the necessary background, provide
 derivations for important results,
@@ -196,15 +196,21 @@ $$
 
 However, the main problem here is that we do not know
 $$\nabla_\bx \log \pdata$$, since it depends on knowing
-what $$\pdata$$ is. \cite{estimation-non-normalized-score-matching}
+what $$\pdata$$ is. 
+
+[(Hyvärinen, 2005)](http://jmlr.org/papers/v6/hyvarinen05a.html)
 showed that Equation \ref{eq:score-matching-target-fisher-div}
 is equivalent to Equation \ref{eq:score-matching-target} below:
+
+$$
 \begin{align} \label{eq:score-matching-target}
     \argmin_\theta \frac{1}{2} \E_{\pdata} \left[
         \tr \left( \nabla_\bx \stx \right) +
         \frac{1}{2} \| \stx \|_2^2
         \right].
 \end{align}
+$$
+
 We can now compute this using Monte Carlo methods by sampling from $$\pdata$$,
 since it only depends on knowing $$\stx$$.
 
@@ -214,7 +220,7 @@ It is computationally difficult to compute the trace term
 $$\tr \left( \nabla_\bx \stx \right)$$
 in Equation \ref{eq:score-matching-target} when $$\bx$$ is high-dimensional.
 This motivates another alternative cheaper approach for score matching,
-called sliced score matching \cite{sliced-score-matching}.
+called sliced score matching [(Song et al., 2019)](http://arxiv.org/abs/1905.07088).
 
 In sliced score matching, we sample random vectors from some distribution $$\pv$$ (such as the
 multivariate standard Gaussian) in order to optimize an analog of the Fisher Divergence:
@@ -240,17 +246,18 @@ Now note
 
 $$
 \begin{align}
--\E_{\pv} \E_{\pdata}\left[(\bv^T \stx )(\bv^T \sdx) \right] &= -\E_{\pv} \int \left[(\bv^T \stx )(\bv^T \sdx)  \pdata d\bx\right]\\
-&= -\E_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\log \pdata)\pdata d\bx\right] \\
-&= -\E_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\pdata)d\bx\right] \\
-&= -\E_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\pdata)d\bx\right] \\
-&= -\E_{\pv}  \left[\sum_{i}\int(\bv^T \stx )(v_i\frac{\partial \pdata}{\partial x_i})d\bx\right] \\
-&= \E_{\pv}  \left[\int \bv^T\stx\bv \cdot \pdata d\bx\right] \\
-&= \E_{\pv}\E_{\pdata}\left[\bv^T\stx\bv \right]
+ & -\E_{\pv} \E_{\pdata}\left[(\bv^T \stx )(\bv^T \sdx) \right] \\
+=& -\E_{\pv} \int \left[(\bv^T \stx )(\bv^T \sdx)  \pdata d\bx\right]\\
+=& -\E_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\log \pdata)\pdata d\bx\right] \\
+=& -\E_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\pdata)d\bx\right] \\
+=& -\E_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\pdata)d\bx\right] \\
+=& -\E_{\pv}  \left[\sum_{i}\int(\bv^T \stx )(v_i\frac{\partial \pdata}{\partial x_i})d\bx\right] \\
+=& \E_{\pv}  \left[\int \bv^T\stx\bv \cdot \pdata d\bx\right] \\
+=& \E_{\pv}\E_{\pdata}\left[\bv^T\stx\bv \right]
 \end{align}
 $$
 
-where [TODO FIX] line 16 is obtained by applying multivariate integration by
+where line 16 is obtained by applying multivariate integration by
 parts. This finally yields the equivalent objective:
 
 $$
@@ -269,8 +276,9 @@ $$
 
 where for each data point $$\bx_i$$ we draw $$M$$ projection vectors from $$\pv$$.
 
-\cite{sliced-score-matching} showed that under some regularity conditions, sliced score matching 
-is an asymptotically consistent estimator:
+[(Song et al., 2019)](http://arxiv.org/abs/1905.07088) showed that under some
+regularity conditions, sliced score matching is an asymptotically consistent
+estimator:
 
 $$
 \begin{align}
@@ -308,7 +316,8 @@ where $$\bz_t \sim \mathcal{N}(0, I)$$. The addition of the Gaussian noise is re
 the process simply converges to the nearest mode instead of converging to a stationary distribution.
 
 It can be shown that as $$\epsilon \to 0$$ and $$T \to \infty$$, we have that the distribution
-of the process $$\xt_T$$ converges to $$\pdata$$ \cite{langevin}.
+of the process $$\xt_T$$ converges to $$\pdata$$ 
+[(Welling & Teh, 2011)](https://dl.acm.org/doi/10.5555/3104482.3104568).
 
 ## Challenges of Langevin Dynamics
 Langevin dynamics does not perform well with multi-modal distributions with poor conductance,
@@ -329,7 +338,8 @@ The second problem is that the estimator in Equation \ref{eq:score-matching-targ
 the support of $$\pdata$$ is that of the whole space.
 
 In order to increase the dimension of the data to match that of the ambient space,
-\cite{estimation-non-normalized-score-matching} proposed injecting small amounts of Gaussian
+[(Hyvärinen, 2005)](http://jmlr.org/papers/v6/hyvarinen05a.html)
+proposed injecting small amounts of Gaussian
 noise into the data, such that now the data distribution has full support.
 As long as the perturbation is sufficiently small ($$\mathcal{N}(0, 0.0001)$$ was used in their paper),
 it is almost indistinguishable to humans.
@@ -379,7 +389,7 @@ $$
 \end{align}
 $$
 
-## Score-Based Generative Modeling through Stochastic Differential Equations \cite{generative-modeling-sde}
+## Score-Based Generative Modeling through Stochastic Differential Equations [(Song et al., 2021)](https://arxiv.org/abs/2011.13456)
 
 We can extend the idea of having a finite number of noise scales
 to having an infinite continuous number of such noise scales by modeling the
@@ -432,18 +442,20 @@ $$
 
 ### Score-based Generative Modeling Techniques
 
-\cite{generative-modeling-sde} covers two score-based generative models that uses SDEs to 
+[(Song et al., 2021)](https://arxiv.org/abs/2011.13456) covers two score-based generative models that uses SDEs to 
 perform generative modeling.
 The first is called score matching with Langevin dynamics (SMLD), which performs score estimation
 at different noise scales and then performs sampling using Langevin dynamics with decreasing
 noise scales. 
-The second is denoising diffusion probabilistic modeling (DDPM) \cite{ddpm},
+The second is denoising diffusion probabilistic modeling (DDPM) 
+
+[(Ho et al., 2020)](https://arxiv.org/abs/2006.11239),
 which uses a parameterized Markov chain that is trained with a re-weighted
 variant of the evidence lower bound (ELBO), which is an instance of variational
 inference. The Markov chain is trained to reverse the noise diffusion process,
 which then allows sampling from the chain using standard Markov Chain Monte Carlo techniques.
 
-\cite{generative-modeling-sde} shows that SMLD and DDPM actually corresponds to 
+[(Song et al., 2021)](https://arxiv.org/abs/2011.13456) shows that SMLD and DDPM actually corresponds to 
 discretizations of the Variance Exploding (VE) and Variance Preserving (VP) SDEs, which
 is the focus of the next two section. We believe expanding on this will be illuminating as
 it highlights the connections between
@@ -499,7 +511,7 @@ where the approximation comes from the second degree Taylor expansion of $$\sqrt
 This process thus has bounded variance since $$\beta_i$$ is bounded.
 
 # Experiments
-We conduct the following preliminary series of experiments, based on released work by \cite{generative-modeling-by-estimating-gradients}.
+We conduct the following preliminary series of experiments, based on released work by [(Song & Ermon, 2019)](https://arxiv.org/abs/1907.05600).
 
 ## Investigating the manifold hypothesis
 
@@ -576,40 +588,43 @@ As mentioned previously in this paper, the main draw of
 score-based diffusion models is that it has shown to be capable of generating impressive
 high-quality samples that is on-par with the state-of-the-art with GANs.
 We hence focus on its limitations and how they might be overcome, drawing 
-from work in \cite{survey-generative-diffusion-model}.
+from work in [(Cao et al., 2022)](https://arxiv.org/abs/2209.02646).
 
 ## Computation Cost
 A common refrain of score-based diffusion model is the high computational
 complexity in both training and sampling. This is because it requires 
 thousands of small diffusion steps in order to ensure that the forward
 and reverse SDEs hold in their approximations
-\cite{truncated-diffusion-models}. If the diffusion steps are too large,
+[(Zheng et al., 2022)](https://arxiv.org/abs/2202.09671).
+If the diffusion steps are too large,
 then the Gaussian noise assumption may not hold, resulting in poor score
 estimates.
-% of computing the score function at each step of the diffusion process,
-This makes it significantly more expensive than other generative methods like GANs and VAEs.
-To this end, there are some directions being explored to improve its computation cost.
+This makes it significantly more expensive than other generative methods like
+GANs and VAEs.  To this end, there are some directions being explored to improve
+its computation cost.
 
-The first technique seeks to reduce the number of sampling steps required by
-a method known as knowledge distillation \cite{data-free-knowledge-distillation}.
-In knowledge distillation, knowledge is transferred from a larger and more complex model (called
-the teacher), to one that is smaller and simpler (called the student).
-This technique has found success in other domains such as image classification, and
-has also been shown to result in improvements in diffusion models \cite{distillation-sampling}.
-It would be interesting to see how far we can take this optimization.
+The first technique seeks to reduce the number of sampling steps required by a
+method known as knowledge distillation [(Lopes et al., 2017)](http://arxiv.org/abs/1710.07535).
+In knowledge distillation, knowledge is transferred from a larger and more
+complex model (called the teacher), to one that is smaller and simpler (called
+the student).  This technique has found success in other domains such as image
+classification, and has also been shown to result in improvements in diffusion
+models 
+[(Salimans & Ho, 2022)](https://arxiv.org/abs/2202.00512). It would be interesting to see how far we
+can take this optimization.
 
-Another technique known as truncated diffusion probabilistic modeling (TDPM) \cite{truncated-diffusion-models}.
+Another technique known as truncated diffusion probabilistic modeling (TDPM)
+[(Zheng et al., 2022)](https://arxiv.org/abs/2202.09671).
 In this approach, instead of considering the diffusion process until it becomes pure noise,
 the process is stopped once it reaches a hidden noisy-data distribution that 
 can be learnt by an auto-encoder by adversarial training. Then in order to produce
 samples, a sample is first drawn from the learnt noisy-data distribution,
 before being passed through the reverse-SDE diffusion steps.
 
-It also suffers from poor explainability
-and interpretability, but this is a common problem across
-other generative models.
+It also suffers from poor explainability and interpretability, but this is a
+common problem across other generative models.
 
-\cite{generative-modeling-sde} also notes that it is currently difficult to tune
+[(Song et al., 2021)](https://arxiv.org/abs/2011.13456) also notes that it is currently difficult to tune
 the myriad of hyperparameters introduced by the choice of noise levels and specific
 samplers chosen, and new methods to automatically select and tune these hyperparameters
 would make score-based diffusion models more easily deployable in practice.
@@ -617,21 +632,23 @@ would make score-based diffusion models more easily deployable in practice.
 ## Modality Diversity
 Diffusion models have mostly only seen applications for generating image data,
 and its potential for generating other data modalities has not been as thoroughly 
-investigated. \cite{denoising-discrete} introduces 
-Discrete Denoising Diffusion Probabilistic Models (D3PMs), which develops a diffusion
-process for corrupting text data into noise. It would be
-interesting to see how well diffusion models can be stretched
-to perform compared to state-of-the-art transformer models in text generation.
+investigated.
+[(Austin et al., 2021)](https://arxiv.org/abs/2107.03006) introduces 
+Discrete Denoising Diffusion Probabilistic Models (D3PMs), which develops a
+diffusion process for corrupting text data into noise. It would be interesting
+to see how well diffusion models can be stretched to perform compared to
+state-of-the-art transformer models in text generation.
 
 ## Dimensionality Reduction
-Dimensionality reduction is another technique that can be used to speed up training and sampling speeds
-of diffusion models.
+Dimensionality reduction is another technique that can be used to speed up
+training and sampling speeds of diffusion models.
 Diffusion models are typically trained directly in data space.
-\cite{score-based-latent-space} instead proposes for them
-to be trained in latent space, which results in dimensionality
-reduction in the representation learnt, and also potentially
+[(Vahdat et al., 2021)](https://arxiv.org/abs/2106.05931)
+instead proposes for them to be trained in latent space, which results in
+dimensionality reduction in the representation learnt, and also potentially
 increases the expressiveness of the framework.
-In a similar vein, \cite{dimensionality-varying-diffusion-process}
+In a similar vein, 
+[(Zhang et al., 2022)](https://arxiv.org/abs/2211.16032)
 argues that due to redundancy in spatial data, it is not necessary
 to learn in data space, and instead proposes a 
 dimensionality-varying diffusion process (DVDP), where
@@ -649,13 +666,12 @@ to draw samples, successive work has done well in addressing these limitations
 to make score matching on diffusion models a viable contender to displace
 GANs as the state-of-the-art for generative modeling. 
 
-Our experiments in this paper help to provide empirical context to the theoretical results we have derived. Most notably, we have shown how annealing is an essential part of sampling via Langevin dynamics.
+Our experiments in this post help to provide empirical context to the theoretical results we have derived. Most notably, we have shown how annealing is an essential part of sampling via Langevin dynamics.
 
 Finally, we discuss some future directions that can help to improve
-the viability of using score-based diffusion models, which 
-includes improving its computational cost in both
-training and sampling and increasing
-the diversity of applicable modalities.
+the viability of using score-based diffusion models, which includes improving
+its computational cost in both training and sampling and increasing the
+diversity of applicable modalities.
 
 # Acknowledgements
 

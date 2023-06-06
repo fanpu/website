@@ -5,16 +5,6 @@
     \newcommand{\nnz}[1]{\mbox{nnz}(#1)}
     \newcommand{\dotprod}[2]{\langle #1, #2 \rangle}
 
-    \DeclareMathOperator*{\Pr}{\mathbf{Pr}}
-    \DeclareMathOperator*{\E}{\mathbf{E}}
-    \DeclareMathOperator*{\Ex}{\mathbf{E}}
-    \DeclareMathOperator*{\Var}{\mathbf{Var}}
-    \DeclareMathOperator*{\Cov}{\mathbf{Cov}}
-    \DeclareMathOperator*{\stddev}{\mathbf{stddev}}
-    \DeclareMathOperator{\littlesum}{{\textstyle \sum}}
-    \DeclareMathOperator{\littleprod}{{\textstyle \prod}}
-    \DeclareMathOperator*{\avg}{avg}
-
     % environments
     \declaretheorem[numberwithin=section]{theorem}
     \declaretheorem[sibling=theorem]{lemma}
@@ -40,7 +30,7 @@
     % probability type operators
     \let\Pr\relax
     \DeclareMathOperator*{\Pr}{\mathbf{Pr}}
-    \DeclareMathOperator*{\E}{\mathbf{E}}
+    \newcommand{\E}{\mathbb{E}}
     \DeclareMathOperator*{\Ex}{\mathbf{E}}
     \DeclareMathOperator*{\Var}{\mathbf{Var}}
     \DeclareMathOperator*{\Cov}{\mathbf{Cov}}

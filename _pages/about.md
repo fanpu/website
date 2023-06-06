@@ -2,7 +2,7 @@
 layout: about
 title: about
 permalink: /
-subtitle: Incoming Linux Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>. <a href='https://www.cs.cmu.edu/'>CMU SCS</a> Class of 2022, MSCS Class of 2023. Currently located in Pittsburgh, PA, USA. 
+subtitle: Incoming Linux Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>. <a href='https://www.cs.cmu.edu/'>CMU SCS</a> Class of 2022, MSCS Class of 2023. Currently located in New York, NY, USA. 
 
 profile:
   align: right
@@ -19,7 +19,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hello! I am Fan Pu, having recently completed both my M.S and B.S in Computer
 Science in Carnegie Mellon University (CMU). I am currently enjoying
-my summer break before starting work full-time in August.
+my summer break before I start work full-time in August.
 
 At CMU, I was actively involved in the open-source programming assignment
 auto-grading platform [Autolab](https://autolabproject.com/) from 2018-2023. I
@@ -47,7 +47,8 @@ during these hikes.
 I grew up in my hometown Singapore before moving to the US for college. I try
 to go back and visit once a year.
 
-Feel free to reach out to me at fzeng[dot]andrew[dot]cmu[dot]edu.
+Feel free to reach out to me at fzeng[at]alumni[dot]cmu[dot]edu. I am happy to
+chat and share any of my experiences.
 Unfortunately, I am unable to provide referrals for people that I have not
 worked with.
 
