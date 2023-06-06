@@ -8,7 +8,8 @@ caption: Oia, Santorini, Greece
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     Score-based diffusion models are a promising direction for generative

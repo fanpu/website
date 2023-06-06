@@ -8,7 +8,8 @@ caption: Mount Rainier, Mount Rainier National Park, Washington, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
   Covariance matrix prediction is a long-standing challenge in modern portfolio

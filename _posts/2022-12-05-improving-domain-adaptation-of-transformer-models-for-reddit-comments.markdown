@@ -8,7 +8,8 @@ caption: Skyline Loop Trail, Mount Rainier National Park, Washington, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
   We improve upon the recent success of large language models based on the

@@ -8,7 +8,8 @@ caption: A still from Seishun Buta Yaro
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     I finished watching Seishun Buta Yaro (Rascal Does Not Dream of Bunny Girl

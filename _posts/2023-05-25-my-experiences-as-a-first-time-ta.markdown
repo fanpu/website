@@ -8,7 +8,8 @@ caption: The Parthenon of the Acropolis in Athens, Attica, Greece
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     This semester was the first time that I was a teaching assistant (TA) for a class,

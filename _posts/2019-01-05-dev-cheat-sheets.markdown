@@ -7,7 +7,8 @@ caption: CMU College of Engineering and Wean Hall
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     Today I created a new tab for my blog, 'Dev Cheat Sheets'. This page will

@@ -8,7 +8,8 @@ caption: The Cut at Carnegie Mellon University. Added a nostalgic filter for fun
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description:
   This is the first part of a 2-part guide on how you can SSH to the Andrew File

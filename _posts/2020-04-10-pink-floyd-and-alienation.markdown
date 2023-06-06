@@ -8,7 +8,8 @@ caption: Studio album cover of The Dark Side of the Moon (1973), Pink Floyd
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     In this post, I talk about how themes of alienation pervades the music of

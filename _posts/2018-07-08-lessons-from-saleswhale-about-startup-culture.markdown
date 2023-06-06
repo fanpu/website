@@ -7,7 +7,8 @@ caption: Saleswhale goes to laser tag!
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     08 July marks 8 months since I started working in Saleswhale (08 November

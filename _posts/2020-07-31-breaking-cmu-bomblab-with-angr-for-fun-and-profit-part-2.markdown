@@ -8,7 +8,8 @@ description: Emerald Lake, Rocky Mountain National Park, Colorado, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     This is Part 2 of the series on cracking CMU's Bomblab using Angr,

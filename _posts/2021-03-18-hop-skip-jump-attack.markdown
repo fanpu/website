@@ -8,7 +8,8 @@ caption: Hot Creek Geologic Site, Mammoth Lakes, California, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     Many machine learning algorithms have been shown to be susceptible to

@@ -1,12 +1,13 @@
 ---
 layout: page
 permalink: /courses/
-title: cmu course reviews
-description: Reviews and Recommendations for Computer Science and Math Classes
+title: CMU Course Reviews
+description: Reviews and Recommendations for Computer Science and Math Courses at CMU
 nav: true
 navigation: true
 nav_order: 5
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 ---
 
@@ -32,7 +33,7 @@ Inspiration for this page came from [Wan Shen's CMU course review page](https://
 This page was recently updated on 11/9/2022 to help students decide the classes
 they may want to take ahead of course registration week.
 
-## Category
+## Categories
 
 For ease of navigation, I've also categorized the classes that I've taken into
 the areas that they fall under, so you can just access the ones that

@@ -6,7 +6,8 @@ description: Publicly Accessible CMU Courses
 nav: true
 navigation: true
 nav_order: 10
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 ---
 Education and knowledge should be accessible to anyone who is willing to learn.

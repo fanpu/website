@@ -6,7 +6,8 @@ cover: assets/images/posts/oxford.avif
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 published: false
 giscus_comments: true
 ---

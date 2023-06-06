@@ -8,7 +8,8 @@ caption: Mona in the event domain, Genshin Impact
 class: post-template
 navigation: True
 author: fanpu
-toc: true 
+toc:
+  sidebar: left 
 giscus_comments: true
 description: >
     It is summer yet again, and miHoYo has blessed us with the Summertime Odyssey

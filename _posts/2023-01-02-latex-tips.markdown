@@ -8,7 +8,8 @@ caption: Pulau Ubin, Singapore
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+    sidebar: left
 giscus_comments: true
 description: >
     When was the first time you had to use LaTeX?

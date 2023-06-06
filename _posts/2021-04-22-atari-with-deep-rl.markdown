@@ -8,7 +8,8 @@ caption: Devils Postpile National Monument, Mammoth Lakes, California, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     In this post, we study the first deep reinforcement learning model that was

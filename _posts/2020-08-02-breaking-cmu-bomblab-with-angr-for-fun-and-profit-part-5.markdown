@@ -8,7 +8,8 @@ caption: Niagara Falls, New York, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description:
     Part 5 on cracking CMU's Bomblab with Angr, where we solve Phase 5 together!

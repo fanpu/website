@@ -7,7 +7,8 @@ caption: Carnegie Mellon School of Drama
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     It was three years ago that I was introduced the concept of the "power law"

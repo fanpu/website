@@ -8,7 +8,8 @@ caption: View from Skyline Loop Trail, Mount Rainier National Park, Washington, 
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
    Given a fixed input for a search problem, pseudo-deterministic algorithms

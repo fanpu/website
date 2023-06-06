@@ -8,7 +8,8 @@ caption: View on the way to the summit of Mount Tallac, Lake Tahoe, California, 
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
   UIUCTF20 was a really fun Animal Crossing themed CTF that ran from July 17-19

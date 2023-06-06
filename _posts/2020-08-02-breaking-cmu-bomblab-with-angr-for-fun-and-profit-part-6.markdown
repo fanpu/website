@@ -8,7 +8,8 @@ caption: Lake Placid, New York, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     We tackle Part 6 of this series on cracking CMU's Bomblab with Angr!

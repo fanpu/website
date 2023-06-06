@@ -8,7 +8,8 @@ caption: Chek Jawa Wetlands, Pulau Ubin, Singapore
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
 hidden: true

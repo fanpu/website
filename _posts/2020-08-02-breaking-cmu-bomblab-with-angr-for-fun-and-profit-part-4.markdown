@@ -8,7 +8,8 @@ caption: Lake Erie, Erie, Pennsylvania, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     Part 4 of cracking CMU's Bomblab using Angr!

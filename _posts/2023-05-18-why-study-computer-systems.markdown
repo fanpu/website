@@ -8,7 +8,8 @@ caption: The Stoa of [???] and the Acropolis. Athens, Greece
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
 hidden: true

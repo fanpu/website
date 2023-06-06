@@ -8,7 +8,8 @@ caption: View from summit of Mt Tallac, Lake Tahoe, California, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     Boolean satisfiability (SAT) solvers have played an important role in

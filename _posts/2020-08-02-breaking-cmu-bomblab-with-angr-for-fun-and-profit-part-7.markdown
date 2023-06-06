@@ -8,7 +8,8 @@ caption: Campton, New Hampshire, USA. We went skiing in the area.
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description:
     The final part of cracking CMU's Bomblab with Angr, where

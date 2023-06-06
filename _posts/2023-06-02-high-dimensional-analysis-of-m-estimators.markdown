@@ -8,7 +8,8 @@ caption: Theatre of Dionysus at Delphi, Greece
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     This post provides a gentle walkthrough of the paper

@@ -8,7 +8,8 @@ caption: Exit Glacier, Kenai Fjords National Park, Alaska, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true 
+toc:
+  sidebar: left 
 giscus_comments: true
 description: >
     The graph minor theorem, also known as the Robertson–Seymour theorem, is

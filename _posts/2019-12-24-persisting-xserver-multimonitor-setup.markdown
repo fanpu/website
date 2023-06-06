@@ -7,7 +7,8 @@ caption: The Fence in front of Hunt Library at Carnegie Mellon University
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     I have been using a multiple monitor setup on my Linux system for a long

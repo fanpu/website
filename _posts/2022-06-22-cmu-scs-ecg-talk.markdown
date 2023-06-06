@@ -8,7 +8,8 @@ caption: Arapaho Lakes, Arapaho and Roosevelt National Forests, Colorado, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     Last week, I had the wonderful opportunity to participate in Hwa Chong's

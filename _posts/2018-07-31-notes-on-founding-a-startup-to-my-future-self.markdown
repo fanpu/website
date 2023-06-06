@@ -7,7 +7,8 @@ caption: Saleswhale offsite!
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description:
     This post is addressed to my future self, who (hopefully) would found a

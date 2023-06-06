@@ -15,7 +15,8 @@ description: >
 class: post-template
 navigation: True
 author: fanpu
-toc: true 
+toc:
+  sidebar: left 
 giscus_comments: true
 ---
 Most people have probably heard of the $$\P = \NP?$$ problem in some shape or

@@ -8,7 +8,8 @@ caption: Boston, Massachusetts, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
   Hanabi has been proposed as the new frontier for developing strategies in

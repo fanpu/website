@@ -8,7 +8,8 @@ caption: Arapaho Glacier, Roosevelt National Forest, Colorado, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     I have recently been learning about Angr, a binary analysis

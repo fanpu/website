@@ -8,7 +8,8 @@ caption: Vernal Falls, Yosemite National Park, California, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     Over the past few years, I've received numerous questions about studying abroad

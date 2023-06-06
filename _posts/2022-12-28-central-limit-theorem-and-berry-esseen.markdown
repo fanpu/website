@@ -8,7 +8,8 @@ caption: Acadia National Park, Maine, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     The Central Limit Theorem is widely used in statistics and machine learning,

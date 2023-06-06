@@ -8,7 +8,8 @@ caption: Horseshoe Lake Trail, Denali National Park and Preserve, Alaska, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     Reinforcement learning algorithms that learn a policy (as opposed to implicit policy

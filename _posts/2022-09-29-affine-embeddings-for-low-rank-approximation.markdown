@@ -8,7 +8,8 @@ caption: Poo Poo Point, Cougar Mountains, Washington, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 giscus_comments: true
 description: >
     Suppose you have a \(n \times d\) matrix \(A\), where both dimensions are large.

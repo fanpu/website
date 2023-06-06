@@ -8,7 +8,8 @@ caption: Valley of Fire State Park, Overton, Nevada, USA
 class: post-template
 navigation: True
 author: fanpu
-toc: true
+toc:
+  sidebar: left
 description: >
 hidden: true
 ---
