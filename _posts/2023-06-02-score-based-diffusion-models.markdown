@@ -33,7 +33,7 @@ $$
     \newcommand{\bov}{\bar{\beta}}
 $$
 
-# Introduction
+*Joint work with [Owen Wang](https://www.linkedin.com/in/owen-wang/).*
 
 There has recently been a flurry of work in score-based
 diffusion models as part of the broader area of generative models.
@@ -50,12 +50,10 @@ to make the partition function tractable, or otherwise relies on
 approximations with surrogate losses that may be inaccurate,
 and the latter suffers from training instability and mode collapse.
 
-Score-based diffusion models try to address the cons of both
-approaches, and
-instead, use
-score-matching to learn a model of the gradient of the log of the probability density function.
-This allows it to avoid computing the partition function
-completely.
+Score-based diffusion models try to address the cons of both approaches, and
+instead, use score-matching to learn a model of the gradient of the log of the
+probability density function.  This allows it to avoid computing the partition
+function completely.
 
 One of the first such approaches that rely on using score-matching to
 perform generative modeling does so by generating new samples via Langevin dynamics \cite{generative-modeling-by-estimating-gradients}.
@@ -76,7 +74,7 @@ in order to recover the generative process, where the reversal
 process makes use of score matching.
 
 Other recent refinements that have been proposed include
-re-casting the objective as a Schr\"{o}dinger bridge problem,
+re-casting the objective as a Schrödinger bridge problem,
 which is an entropy-regularized optimal transport problem.
 The advantage of this approach is that it allows for fewer
 diffusion steps to be taken during the generative process.
@@ -659,7 +657,7 @@ training and sampling and increasing
 the diversity of applicable modalities.
 
 # Acknowledgements
-Joint work with Owen Wang for the final course project of [10-716 Advanced Machine Learning: Theory and Methods](https://www.cs.cmu.edu/~pradeepr/716/).
+
 
 # References
 - Austin, J., Johnson, D. D., Ho, J., Tarlow, D., and van den Berg, R. 
