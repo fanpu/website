@@ -6,7 +6,6 @@ cover: niagara_falls.avif
 cover_preview: niagara_falls.avif
 caption: Niagara Falls, New York, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

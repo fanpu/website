@@ -6,7 +6,6 @@ cover: rainier.avif
 cover_preview: rainier.avif
 caption: Mount Rainier, Mount Rainier National Park, Washington, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

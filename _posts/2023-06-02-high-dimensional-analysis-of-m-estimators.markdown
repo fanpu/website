@@ -6,7 +6,6 @@ cover: dionysus_delphi.avif
 cover_preview: dionysus_delphi.avif
 caption: Theatre of Dionysus at Delphi, Greece
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

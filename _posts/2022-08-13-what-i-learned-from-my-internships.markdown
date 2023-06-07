@@ -4,7 +4,6 @@ layout: post
 tags: [general]
 cover: assets/images/posts/oxford.avif
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

@@ -6,7 +6,6 @@ cover: arapaho-lake.avif
 cover_preview: arapaho-lake.avif
 caption: Arapaho Lakes, Arapaho and Roosevelt National Forests, Colorado, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

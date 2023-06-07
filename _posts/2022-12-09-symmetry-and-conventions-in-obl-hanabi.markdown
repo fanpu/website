@@ -6,7 +6,6 @@ cover: boston.avif
 cover_preview: boston.avif
 caption: Boston, Massachusetts, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

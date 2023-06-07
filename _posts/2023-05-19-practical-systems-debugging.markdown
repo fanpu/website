@@ -6,7 +6,6 @@ cover: theatre_of_dionysus.avif
 cover_preview: theatre_of_dionysus.avif
 caption: Chek Jawa Wetlands, Pulau Ubin, Singapore
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

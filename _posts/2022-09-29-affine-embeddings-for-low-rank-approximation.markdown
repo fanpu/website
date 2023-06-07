@@ -6,7 +6,6 @@ cover: poo_poo_point.avif
 cover_preview: poo_poo_point.avif
 caption: Poo Poo Point, Cougar Mountains, Washington, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

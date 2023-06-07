@@ -6,7 +6,6 @@ cover: tallac_journey.avif
 cover_preview: tallac_journey.avif
 caption: View on the way to the summit of Mount Tallac, Lake Tahoe, California, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

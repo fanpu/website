@@ -6,7 +6,6 @@ cover: lawn.avif
 cover_preview: lawn.avif
 caption: The Cut at Carnegie Mellon University. Added a nostalgic filter for fun.
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

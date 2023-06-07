@@ -5,7 +5,6 @@ cover: drama.avif
 cover_preview: drama.avif
 caption: Carnegie Mellon School of Drama
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

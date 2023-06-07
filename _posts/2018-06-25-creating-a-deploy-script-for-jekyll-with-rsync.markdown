@@ -8,7 +8,6 @@ description: >
   a suitable deployment method. I will share about my thought process and the
   best approach I found for tackling this problem.
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

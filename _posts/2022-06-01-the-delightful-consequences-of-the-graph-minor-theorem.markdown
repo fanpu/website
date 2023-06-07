@@ -6,7 +6,6 @@ cover: kenai_fjords_glacier.avif
 cover_preview: kenai_fjords_glacier.avif
 caption: Exit Glacier, Kenai Fjords National Park, Alaska, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left 

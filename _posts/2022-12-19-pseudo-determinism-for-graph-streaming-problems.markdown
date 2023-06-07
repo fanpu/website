@@ -6,7 +6,6 @@ cover: rainier_top.avif
 cover_preview: rainier_top.avif
 caption: View from Skyline Loop Trail, Mount Rainier National Park, Washington, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

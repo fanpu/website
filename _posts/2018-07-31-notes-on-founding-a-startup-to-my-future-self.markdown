@@ -5,7 +5,6 @@ cover: saleswhale/saleswhale_offsite_resize.avif
 cover_preview: saleswhale/saleswhale_offsite_resize.avif
 caption: Saleswhale offsite!
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

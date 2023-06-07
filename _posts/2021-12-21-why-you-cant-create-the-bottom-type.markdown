@@ -6,7 +6,6 @@ cover: coyote_valley.avif
 cover_preview: coyote_valley.avif
 caption: Coyote Valley Trail, Rocky Mountain National Park, Colorado, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

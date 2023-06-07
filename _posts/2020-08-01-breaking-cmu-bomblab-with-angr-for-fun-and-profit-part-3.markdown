@@ -6,7 +6,6 @@ cover: lily_mountain.avif
 cover_preview: lily_mountain.avif
 caption: View from Lily Mountain Trail, Rocky Mountain National Park, Colorado, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

@@ -6,7 +6,6 @@ cover: arapaho.avif
 cover_preview: arapaho.avif
 caption: Arapaho Glacier, Roosevelt National Forest, Colorado, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

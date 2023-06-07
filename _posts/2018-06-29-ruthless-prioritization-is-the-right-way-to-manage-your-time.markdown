@@ -4,7 +4,6 @@ tags: [general, startup]
 cover: saleswhale/saleswhale_team_photo_fun_resize.avif
 cover_preview: saleswhale/saleswhale_team_photo_fun_resize.avif
 class: post-template
-navigation: True
 author: fanpu
 giscus_comments: true
 description: >

@@ -6,7 +6,6 @@ cover: sulphur_springs.avif
 cover_preview: sulphur_springs.avif
 caption: Hot Creek Geologic Site, Mammoth Lakes, California, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

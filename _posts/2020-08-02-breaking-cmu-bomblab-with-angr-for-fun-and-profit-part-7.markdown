@@ -6,7 +6,6 @@ cover: campton.avif
 cover_preview: campton.avif
 caption: Campton, New Hampshire, USA. We went skiing in the area.
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

@@ -6,7 +6,6 @@ cover: lake_placid.avif
 cover_preview: lake_placid.avif
 caption: Lake Placid, New York, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

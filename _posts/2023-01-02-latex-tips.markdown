@@ -6,7 +6,6 @@ cover: ubin_pond.avif
 cover_preview: ubin_pond.avif
 caption: Pulau Ubin, Singapore
 class: post-template
-navigation: True
 author: fanpu
 toc:
     sidebar: left

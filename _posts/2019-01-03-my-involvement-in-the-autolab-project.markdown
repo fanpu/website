@@ -4,7 +4,6 @@ tags: [general, CMU, code]
 title: My Involvement in the Autolab Project
 cover_preview: autolab.avif
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

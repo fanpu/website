@@ -6,7 +6,6 @@ cover: emerald_lake.avif
 cover_preview: emerald_lake.avif
 description: Emerald Lake, Rocky Mountain National Park, Colorado, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

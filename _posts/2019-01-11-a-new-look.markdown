@@ -5,7 +5,6 @@ cover: wean_hall.avif
 cover_preview: wean_hall.avif
 caption: Doherty Hall and Wean Hall, Carnegie Mellon University
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

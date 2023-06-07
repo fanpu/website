@@ -6,7 +6,6 @@ cover: red_rock.avif
 cover_preview: red_rock.avif
 caption: Valley of Fire State Park, Overton, Nevada, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

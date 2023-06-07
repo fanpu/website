@@ -6,7 +6,6 @@ cover: fallingwater.avif
 cover_preview: fallingwater.avif
 caption: Fallingwater, designed by Frank Lloyd Wright. Laurel Highlands, Pennsylvania, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

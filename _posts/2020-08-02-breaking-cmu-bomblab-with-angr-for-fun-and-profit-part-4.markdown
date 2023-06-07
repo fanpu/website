@@ -6,7 +6,6 @@ cover: erie.avif
 cover_preview: erie.avif
 caption: Lake Erie, Erie, Pennsylvania, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

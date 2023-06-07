@@ -7,7 +7,6 @@ caption: Marina Bay area, Singapore
 description: >
     It has been a while since I had intended to start my own technical blog. The idea began seriously floating in my mind after my one-on-one with my senior colleague Javier in Saleswhale. Starting a technical blog was one of the valuable pieces of advice that he gave to me, and it was something that he regretted not doing earlier. 
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

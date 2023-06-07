@@ -6,7 +6,6 @@ cover: stoa_acropolis.avif
 cover_preview: stoa_acropolis.avif
 caption: The Stoa of [???] and the Acropolis. Athens, Greece
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

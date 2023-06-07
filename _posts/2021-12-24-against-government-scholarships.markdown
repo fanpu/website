@@ -6,7 +6,6 @@ cover: yosemite_waterfall.avif
 cover_preview: yosemite_waterfall.avif
 caption: Vernal Falls, Yosemite National Park, California, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

@@ -4,7 +4,6 @@ permalink: /courses/
 title: CMU Course Reviews
 description: Reviews and Recommendations for Computer Science and Math Courses at CMU
 nav: true
-navigation: true
 nav_order: 5
 toc:
   sidebar: left

@@ -6,7 +6,6 @@ cover: parthenon_diag.avif
 cover_preview: parthenon_diag.avif
 caption: The Parthenon of the Acropolis in Athens, Attica, Greece
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

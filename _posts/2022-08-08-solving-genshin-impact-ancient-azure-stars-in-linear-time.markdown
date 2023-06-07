@@ -6,7 +6,6 @@ cover: mona.avif
 cover_preview: mona.avif
 caption: Mona in the event domain, Genshin Impact
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left 

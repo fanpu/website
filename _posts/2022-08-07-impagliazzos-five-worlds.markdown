@@ -13,7 +13,6 @@ description: >
     several other interesting classes of intermediate possibilities that can arise
     if it was the case that P != NP, as this post explores.
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left 

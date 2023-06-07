@@ -4,7 +4,6 @@ layout: post
 tags: [code]
 cover: assets/images/posts/tahoe.avif
 class: post-template
-navigation: True
 author: fanpu
 ---
 

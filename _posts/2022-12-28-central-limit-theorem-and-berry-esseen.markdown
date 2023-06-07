@@ -6,7 +6,6 @@ cover: maine.avif
 cover_preview: maine.avif
 caption: Acadia National Park, Maine, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

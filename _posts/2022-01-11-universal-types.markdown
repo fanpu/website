@@ -6,7 +6,6 @@ cover: horse_lake_2.avif
 cover_preview: horse_lake_2.avif
 caption: Crystal Lake, Mammoth Lakes Basin, California, USA
 class: post-template
-navigation: True
 author: fanpu
 giscus_comments: true
 description: >

@@ -6,7 +6,6 @@ cover: tallac.avif
 cover_preview: tallac.avif
 caption: View from summit of Mt Tallac, Lake Tahoe, California, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

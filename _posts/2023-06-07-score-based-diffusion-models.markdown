@@ -6,7 +6,6 @@ cover: santorini_oia_2.avif
 cover_preview: santorini_oia_2.avif
 caption: Oia, Santorini, Greece
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

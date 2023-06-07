@@ -6,7 +6,6 @@ cover: bunny_senpai.avif
 cover_preview: bunny_senpai.avif
 caption: A still from Seishun Buta Yaro
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left

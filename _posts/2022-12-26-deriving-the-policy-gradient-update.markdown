@@ -6,7 +6,6 @@ cover: denali_horseshoe_lake.avif
 cover_preview: denali_horseshoe_lake.avif
 caption: Horseshoe Lake Trail, Denali National Park and Preserve, Alaska, USA
 class: post-template
-navigation: True
 author: fanpu
 toc:
   sidebar: left
