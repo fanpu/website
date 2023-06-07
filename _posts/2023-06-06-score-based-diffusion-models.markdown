@@ -19,7 +19,7 @@ description: >
     centered around the line of results developed in (Song & Ermon, 2019),
     analyze the current strengths and limitations of score-based diffusion
     models, and discuss possible future directions that can address its
-    drawbacks. 
+    drawbacks. Joint work with Owen Wang.
 hidden: false
 ---
 $$

@@ -1082,6 +1082,13 @@ was taught by a good professor.
 
 ---
 
+### Summer 2019
+
+I spent a wonderful summer interning at [Asana](https://asana.com/) in San Francisco as a Software
+Engineering intern on the Infrastructure Management Team.  My mentor and I
+became great friends, and we still regularly keep in touch many years on.
+
+---
 ### Spring 2019
 
 {: .first-course-item #course15251 }
