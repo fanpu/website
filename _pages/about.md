@@ -62,3 +62,23 @@ new when they read them. I try to have my posts reviewed by
 friends who are knowledgeable in an area whenever possible to ensure that
 what is presented is factually accurate. Do let me know if you have any article
 suggestions. All banner pictures on the blog are taken by yours truly!
+
+## Starred Blog Posts
+Some of my more popular posts that might be of interest:
+
+**General**
+- [The Art of LaTeX: Common Mistakes, and Advice for Typesetting Beautiful, Delightful Proofs]({% post_url   2023-01-02-latex-tips %})
+- [Against Government Scholarships]({% post_url
+2021-12-24-against-government-scholarships %})
+- [Notes On Founding A Startup To My Future Self]({% post_url
+2018-07-31-notes-on-founding-a-startup-to-my-future-self %})
+
+**CMU**
+- [CMU 15-441/641 Computer Networks Course Review]({% post_url 2022-08-15-cmu-computer-networks-review %})
+- [My Sharing at the Hwa Chong Undergrad Alumni Forum]({% post_url 
+2022-06-22-cmu-scs-ecg-talk %}), i.e. why study Computer Science at CMU
+
+**Technical Posts**
+- [Score-Based Diffusion Models]({% post_url 2023-06-07-score-based-diffusion-models %})
+- [The Delightful Consequences of the Graph Minor Theorem]({% post_url 2022-06-01-the-delightful-consequences-of-the-graph-minor-theorem %})
+- [Universal types, and your type checker doesn't suck as much as you think]({% post_url 2022-01-11-universal-types %})
