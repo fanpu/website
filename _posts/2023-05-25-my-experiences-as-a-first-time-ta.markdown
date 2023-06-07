@@ -30,7 +30,7 @@ description: >
     I hope that this post will shed light on and provide a more complete picture of
     the TA experience for those who may be thinking about it, especially as TA culture
     is a really big thing in the School of Computer Science in CMU.
-hidden: true
+published: false
 ---
 This semester was the first time that I was a teaching assistant (TA) for a
 class, which was for [10-708 Probabilistic Graphical

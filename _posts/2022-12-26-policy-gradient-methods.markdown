@@ -11,7 +11,7 @@ author: fanpu
 toc:
   sidebar: left
 description: >
-hidden: true
+published: false
 ---
 Policy gradient methods are a class of reinforcement learning techniques
 that aims to optimize some policy $$\pi_\theta$$ parameterized by its

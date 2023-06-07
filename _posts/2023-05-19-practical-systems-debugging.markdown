@@ -12,7 +12,7 @@ toc:
   sidebar: left
 giscus_comments: true
 description: >
-hidden: true
+published: false
 ---
 
 Given the scale and complexity of the systems that we work with today, unless we

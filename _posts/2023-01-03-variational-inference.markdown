@@ -12,7 +12,7 @@ toc:
   sidebar: left
 giscus_comments: true
 description: >
-hidden: true
+published: false
 ---
 
 In Bayesian inference, a common task is to approximate the posterior of a

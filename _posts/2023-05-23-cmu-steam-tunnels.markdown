@@ -12,7 +12,7 @@ toc:
   sidebar: left
 giscus_comments: true
 description: >
-hidden: true
+published: false
 ---
 
 # TODO: find photos

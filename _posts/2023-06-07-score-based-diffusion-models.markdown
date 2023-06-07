@@ -20,7 +20,6 @@ description: >
     analyze the current strengths and limitations of score-based diffusion
     models, and discuss possible future directions that can address its
     drawbacks. Joint work with Owen Wang.
-hidden: false
 ---
 $$
     \newcommand{\pdata}{p_{\text{data}}(\bx)}
