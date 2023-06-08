@@ -10,7 +10,7 @@ author: fanpu
 toc:
   sidebar: left
 giscus_comments: true
-published: false
+# published: false
 description: >
 ---
 
@@ -26,15 +26,86 @@ previous two times being 15-330 Introduction to Computer Security
 in Fall 2019 and [15-410 Operating System Design and Implementation](https://www.cs.cmu.edu/~410/)
 in Spring 2020.
 
-This class exceeded my expectations significantly. I thought it was just going
-to be a paper reading class (not that I had been in one of such classes
-before, but it just did not sound very interesting and felt like something
-I could do by myself asynchronously after I graduate) and therefore was quite
-hesitant to take it at first. However, I found my original choice of systems
-class this semester (15-618) to fulfill my graduation requirements to be
-a bit too slow-paced and simple as I already had exposure to most of 
-the topics from other system classes that has overlaps with it.
+# Overall Impression
+This class exceeded my expectations significantly.
+I found it especially meaningful and apt since this was my last systems class before I
+graduate, and the topics and discussions from class helped to unify all the
+systems concepts that I had learnt from previous classes into a nice package
+informed by common underlying principles: from distributed systems, to
+networking, databases, filesystems, operating systems, and even machine learning
+systems. 
 
+# Why I Took The Class
+I had to take a systems class this semester to fulfill my graduation
+requirements for the MSCS program. I initially did include this class in my
+shortlist of systems classes to take, but then thought it was just going to be a
+paper reading class (not that I had been in one of such classes before, but it
+just did not sound very interesting and felt like something I could do by myself
+asynchronously after I graduate) and therefore was quite hesitant to take it.
+
+As such, during registration week I settled on [15-618 Parallel Computer Architecture and
+Programming](https://www.cs.cmu.edu/~418/),
+since it included topics on GPU programming that aligned with my current
+interests in machine learning. However, I did not feel like the class was
+sufficiently challenging for me after the first lecture, as it was a bit too
+slow-paced and simple for my liking as I already had exposure to most of the
+topics from other system classes that I had taken. I decided to switch
+to 15-712, and I knew immediately that it was the right class for me after the
+first lecture. 
+
+In a sense, this class was a hidden gem and I was really glad that I ended up
+taking it.
+
+# The First Lecture
+The first lecture went through 2 "Wisdom Papers", which no one was expected
+to have read yet as it was the first class. You can refer
+to the [slides here](https://www.cs.cmu.edu/~15712/lectures/01-intro.pdf) if you are curious.
+
+The first paper, [Mythical Man-Month: Essays on Software
+Engineering](https://www.cs.cmu.edu/~15712/papers/mythicalmanmonth00fred.pdf)
+is a book by Turing-award winner Fred Brooks. It is about many of his observations
+and principles on software engineering based on his own vast experiences. What
+really brought it home to me was that a couple of them were also things that I
+had some suspicions about previously, but never really thought it was universally
+applicable, and thought they were simply artifacts of the way I approached things.
+
+For instance, one of the principles is "Plan to Throw One Away", meaning that
+one should first build a worthwhile system in a short amount of time, and then
+re-build a better second version with the benefit of hindsight. This is because
+one would end up having to re-build the system anyway after being confronted
+with change and feedback, and also due to the following observation on program
+maintenance:
+
+> "Program maintenance is an entropy-increasing
+> process, and even its most skillful execution only
+> delays the subsidence of the system into unfixable
+> obsolescence"
+
+This had many parallels with my own experiences. For instance, my group ended up
+having 4 major re-writes of our kernel during 15-410, and I also did a complete
+re-write of my CloudFS filesystem for my 18-746 project. Similarly, many of my
+internship projects were also re-writes and improvements on design of existing
+systems that had accumulated too much technical debt. It does seem
+a lot more reasonable to plan for this eventual change to begin with.
+
+The paper also contained a lot of other great advice, such as the
+importance of conceptual integrity to separate architecture
+from implementation, structuring a team in a "surgical" fashion to drive software
+development where the best programmer leads the most critical development
+work like a surgeon and directs others on the other aspects, and of
+course the famous Brook's law:
+
+> “Adding manpower to a late
+> software project makes it later”
+
+The second paper, [You and Your
+Research](https://www.cs.cmu.edu/~15712/papers/hamming86.pdf) by Richard Hamming
+(of Hamming code fame)
+
+
+
+
+## Class Structure
 There are three main components to the class. 
 
 1.  Before each lecture, the class is assigned a paper to read, and a paper summary to be submitted.
@@ -67,11 +138,6 @@ knowledge that I learned in previous systems classes, and it was cool to see
 how decades ago many of these ideas that were once unappreciated or heavily
 criticized now form the bedrock of many of the systems that we use today.
 
-I found it especially meaningful since this was my last systems class before I
-graduate, and the discussions during class helped to unify everything that
-I had learnt into a nice package informed by common underlying principles:
-from distributed systems, to networking, databases, filesystems, operating
-systems, and even machine learning systems. 
 
 As a seminar-based class, one of the most surprising things for me was how fun
 and valuable the class discussions were.  It was especially enlightening to
@@ -139,6 +205,11 @@ breadth and depth of projects presented during the final presentation. I
 cannot recommend this course enough to anyone who has the sufficient
 pre-requisites, which will allow them to truly appreciate the content in the
 class.
+
+# Who Is Suitable For The Class
+When I took the class, all the students were either Masters or Ph.D. students.
+However, strong undergraduates with sufficient systems background would
+also do well in the class.
 
 # Acknowledgements
 I would like to express my gratitude to [Albert
