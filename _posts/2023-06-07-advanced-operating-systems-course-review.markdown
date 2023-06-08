@@ -57,7 +57,7 @@ In a sense, this class was a hidden gem and I was really glad that I ended up
 taking it.
 
 # The First Lecture
-The first lecture went through 2 "Wisdom Papers", which no one was expected
+The first lecture went through 2 Wisdom Papers, which no one was expected
 to have read yet as it was the first class. You can refer
 to the [slides here](https://www.cs.cmu.edu/~15712/lectures/01-intro.pdf) if you are curious.
 
@@ -100,45 +100,148 @@ course the famous Brook's law:
 
 The second paper, [You and Your
 Research](https://www.cs.cmu.edu/~15712/papers/hamming86.pdf) by Richard Hamming
-(of Hamming code fame)
+(of Hamming code fame), talks about how to become a great scientist. 
+The following two slides gives a good sense of the spirit of the paper:
+
+{% include figure.html 
+    path="/assets/img/posts/adv_os/slide_1.avif"
+    width="400px"
+    class="z-depth-1"
+    caption="How to be a Great Scientist (1)"
+%}
+
+{% include figure.html 
+    path="/assets/img/posts/adv_os/slide_2.avif"
+    width="400px"
+    class="z-depth-1"
+    caption="How to be a Great Scientist (2)"
+%}
+
+I mention the first lecture and the two papers that were discussed here not
+simply because they were interesting, but because they helped to set the tone
+and expectations for the rest of the semester going forward. The message is clear: this is going to be a practical and useful class that will help you on your journey to becoming great systems designers and researchers.
+
+# Course Structure
+There are three main components to the class: paper summaries,
+projects, and exams.
+
+## 1. Paper Summaries
+Before each lecture, the class is assigned a required reading and an optional reading. A paper summary of the required reading must be submitted before
+the class, which will discuss both readings. 
+
+The paper summary will contain 3 things: 
+1. The 3 most important things in the paper, 
+2. 1 most glaring deficiency of the paper (even highly celebrated papers have faults!), 
+3. A conclusion on how you will use lessons from this paper to inform you on how
+you will build systems in the future.
+
+It took me on average 2-4 hours to read each paper and around 15 minutes for the summary.
+
+The lectures for this class are front-loaded, meaning that during the first
+two-thirds of the semester, you will meet 3 times a week for 80 minutes each,
+while there will be no lectures at all during the final third of the semester,
+and so "on average" throughout the semester you will meet twice a week. This is so that
+students have enough knowledge and content to begin working on their course
+projects early on in the semester.
+
+There will be 3 short breaks in each lecture, where all students will get into
+breakout groups and share and discuss among themselves one of the prompts
+for the paper based on their paper summaries. Afterwards, all groups
+are invited to share what they thought.
+
+Reading and writing the paper summaries are the only "homework" you will get in
+this class.
+
+## 2. Course Project
+There is also a semester-long course project with a significant systems
+component in groups of three. This will begin in earnest after a third of the
+semester, and all the project groups met with Phil and the TA Val once every two
+weeks.  The deliverables include a project proposal, an interim report, a final
+presentation, and a final report. The course project will be the
+largest constituent of your final grade.
+
+## 3. Midterms
+Finally, there are two midterm exams, which are taken during class time.
+The first is taken in the middle of the semester, and the second is taken
+after all lectures have concluded.
+
+Each midterm will cover content from a shortlisted selection of 10
+of the required readings. There will be 9 questions on the midterm,
+which covers 9 of the 10 papers, and you are only required to answer 7 of
+the problems.
+
+The course staff will also provide two past year exams to practice on, though
+some of the readings may have changed since. 
+
+It admittedly does seem quite daunting to have to study and be familiar with 10
+papers spanning very different topics. I did not have time to actually re-read
+all 10 papers to prepare for the midterm, and so the way I prepared was to go
+through all the lecture slides again, re-read the most important sections of the
+paper, and skim through the rest. Afterward, I attempted the past exams to fill
+in any gaps that I may have missed. This strategy allowed me to do fairly well
+on the exam.
+
+# Course Structure
+
+The class us on a whirlwind tour through many [SIGOPS
+Hall of Fame papers](https://www.sigops.org/awards/hof/), which the award
+description states was "instituted in 2005 to recognize the most influential
+Operating Systems papers that were published at least ten years in the past".
+Reading through the papers helped to consolidate a lot of the knowledge that I
+learned in previous systems classes, and it was cool to see how decades ago many
+of these ideas that were once unappreciated or heavily criticized now form the
+bedrock of many of the systems that we use today.
+
+In addition to the Hall of Fame papers, there were also several relatively
+recent papers that the course staff thought were conceptually interesting
+and promising.
+
+The following sections will go through each of the modules,
+the required papers that you will read (refer to the [course website](https://www.cs.cmu.edu/~15712/syllabus.html)
+if you are also interested in the optional papers), and some of my thoughts on
+them so you have a pretty good idea of what to expect. An interesting thing to
+note is that the scope of all the papers will touch almost all the systems
+classes that are offered at CMU.
+
+## Part 1: Concurrency, Ordering, Races
+- [Implementing Remote Procedure Calls (Birrell'84), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/birrell84.pdf) - introduced the now-standard design of RPC calls with interfaces and caller/callee stubs for distributed communication.
+- [Time, Clocks, and the Ordering of Events in a Distributed System (Lamport'78),	SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/lamport78.pdf) - introduced Lamport clocks, the foundation for ordering distributed systems today
+- [Distributed Snapshots: Determining Global States of Distributed Systems (Chandy'85), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/chandy85.pdf) - how to snapshot a consistent global state in a distributed system
+- [Efficient Scalable Thread-Safety-Violation Detection (Li'19), SOSP'19 best paper](https://www.cs.cmu.edu/~15712/papers/li19.pdf) - using active testing to discover and reproduce concurrency bugs
+
+## Part 2: File Systems and Disks
+- [A Fast File System for UNIX (McKusick'84), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/mckusick84.pdf) - addresses many of the problems
+of the original Unix filesystem by introducing the Fast File System (FFS),
+and many of its ideas are now staple in modern filesystems like the Linux `ext*` filesystems
+- [Scale and Performance in a Distributed File System (Howard'88), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/howard88.pdf) - introduces the Andrew File System (AFS) that significantly improved on NFS in terms of scalability. AFS was developed at CMU and is still widely used today.
+- [The Design and Implementation of a Log-Structured File System (Rosenblum'92), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/rosenblum92.pdf) - 
+introduced log-structured filesystems that support high write throughput which addresses the problem of disk traffic being dominated by slow writes
+on traditional filesystems
+- [A Case for Redundant Arrays of Inexpensive Disks (RAID) (Patterson'88), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/patterson88.pdf) - introduced RAID, solved problem of how to get cheap fault tolerance
+
+## Part 3: Transactions and Databases
+- [On Optimistic Methods for Concurrency Control (Kung'81), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/kung81.pdf) - introduced optimistic concurrency control, now standard in many database environments
+with low contention and high throughput requirements
+- [Concurrency Control and Recovery (Franklin'97)](https://www.cs.cmu.edu/~15712/papers/franklin97.pdf) - survey paper on concurrency
+control and recovering from crashes in database systems (write-ahead logging, ARIES)
+
+## Part 4: Fault Tolerance
+- [Paxos (Lamport'01), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/paxos-simple.pdf) - simplified version of his original theatrical [The Part-Time Parliament](https://www.cs.cmu.edu/~15712/papers/part-time-parliament.pdf) paper that was mostly ignored, introduced how to get replicated logs
+among unreliable (but not Byzantine) nodes
+- [Practical Byzantine Fault Tolerance (Castro'99)](https://www.cs.cmu.edu/~15712/papers/castro99.pdf) - distributed consensus but in the
+presence of Byzantine faults (i.e a fraction of the nodes can collude and behave maliciously)
+
+## Part 5: OS Kernels and Virtual Machines
+- [Microkernels (Liedtke'95), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/liedtke95.pdf) - the first demonstration of an
+efficient microkernel designed with a very extreme minimality principle,
+where as much OS functionality is moved outside of the microkernel
+as possible, including even its memory manager, pagers, device drivers, software TLBs, etc.
+- [seL4: Formal Verification of an OS Kernel]
 
 
+# My Thoughts
 
-
-## Class Structure
-There are three main components to the class. 
-
-1.  Before each lecture, the class is assigned a paper to read, and a paper summary to be submitted.
-    In the paper summary, you'll write about the 3 most important things in the paper, 1 most
-    glaring deficiency of the paper (even highly celebrated papers have faults!), and a conclusion
-    on how you will use lessons from this paper to inform you on how you will build systems in the future.
-    It took me on average 2-4 hours to read each paper and around 15 minutes for the summary.
-
-    The lectures for this class are front-loaded, meaning that during the first
-    two-thirds of the semester, you will meet 3 times a week for 80 minutes each,
-    while there will be no lectures at all during the final third of the semester,
-    and so "on average" throughout the semester you will meet twice a week. This is so that
-    students have enough knowledge and content to begin working on their course
-    projects early on in the semester.
-
-2.  A semester-long course project with a significant systems component in
-    groups of three. This will begin in earnest after a third of the semester,
-    and all the project groups met with Phil and the TA Val once every two weeks.
-    The deliverables include a project proposal, an interim report, a final
-    presentation, and a final report.
-
-3.  Two midterm exams, which are taken during class time.
-
-The first half of the class took us on a whirlwind tour through many [SIGOPS Hall
-of Fame papers](https://www.sigops.org/awards/hof/), which the award description
-states was "instituted in 2005 to recognize the most influential Operating
-Systems papers that were published at least ten years in the past".
-Reading through the papers helped to consolidate a lot of the
-knowledge that I learned in previous systems classes, and it was cool to see
-how decades ago many of these ideas that were once unappreciated or heavily
-criticized now form the bedrock of many of the systems that we use today.
-
-
+## Class Discussion
 As a seminar-based class, one of the most surprising things for me was how fun
 and valuable the class discussions were.  It was especially enlightening to
 hear the comments of Ph.D. students who are working in systems and other fields
@@ -151,14 +254,16 @@ problems with the paper that I had completely not even thought of.
 However, one thing that made me sad was that attendance in class
 started to fall after the halfway point of the semester. This
 included quite a few of the students who used to give very insightful
-and interesting responses, and so the diversity of perspectives of the
+and interesting responses and so the diversity of perspectives of the
 discussions as a whole suffered.
-While attendance is not graded or required, actively participating in the
-discussions and being engaged in lecture is one of the most valuable
+
+While attendance is not strictly enforced, actively participating in the
+discussions and being engaged in lectures is one of the most valuable
 takeaways from this class, and positively impacts not just you but also
 your classmates, and so I would strongly encourage anyone interested in the
 class to attend all the lectures that you can.
 
+## Tribal Knowledge
 Another aspect of the class that I really appreciated was how Phil taught us a
 lot of the spirit and tribal knowledge of doing CS research. These were often
 presented as off-hand remarks while presenting the context or background of a
@@ -173,6 +278,7 @@ valuable wisdom as they are not things that you can pick up easily yourself
 from reading past papers or books. In fact, it almost felt as if I had my own
 Ph.D. advisor at times, who sprinkled trinkles of advice each class.
 
+## Personal Attention for Projects
 I also really appreciated the personal attention that Phil and Val gave to us
 by meeting with us every other week for our course projects. 
 This is especially so if you consider that many advisors already have trouble
