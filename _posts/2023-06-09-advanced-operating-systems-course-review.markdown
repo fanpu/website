@@ -1,7 +1,7 @@
 ---
 title: "CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review"
 layout: post
-tags: [courses, systems]
+tags: [courses, cmu, systems]
 cover: santorini_church.avif
 cover_preview: santorini_church.avif
 caption: Three Bells of Fira, Thera, Greece
@@ -10,8 +10,14 @@ author: fanpu
 toc:
   sidebar: left
 giscus_comments: true
-# published: false
 description: >
+  15-712 Advanced Operating Systems and Distributed Systems was an excellent
+  seminar-based graduate course that took us on a whirlwind tour through many of
+  the most seminal SigOps Hall of Fame papers across several systems domains. It
+  will prepare you to be a great systems designer and researcher.  In this post,
+  I will share my experience in the class, the course structure and content,
+  what I thought were the key takeaways, and who this class would be suitable
+  for.
 ---
 
 This semester (Spring 2023), I took [15-712 Advanced Operating Systems and
@@ -181,7 +187,7 @@ paper, and skim through the rest. Afterward, I attempted the past exams to fill
 in any gaps that I may have missed. This strategy allowed me to do fairly well
 on the exam.
 
-# Course Structure
+# Course Content
 
 The class us on a whirlwind tour through many [SIGOPS
 Hall of Fame papers](https://www.sigops.org/awards/hof/), which the award
@@ -196,12 +202,12 @@ In addition to the Hall of Fame papers, there were also several relatively
 recent papers that the course staff thought were conceptually interesting
 and promising.
 
-The following sections will go through each of the modules,
+The following sections will go through each of the modules and
 the required papers that you will read (refer to the [course website](https://www.cs.cmu.edu/~15712/syllabus.html)
-if you are also interested in the optional papers), and some of my thoughts on
-them so you have a pretty good idea of what to expect. An interesting thing to
-note is that the scope of all the papers will touch almost all the systems
-classes that are offered at CMU.
+if you are also interested in the optional papers), and a short description
+of what the paper is about so you can get a pretty good sense of what is
+covered. A cool thing to note is that the scope of all the papers will
+touch almost all the systems classes offered at CMU.
 
 ## Part 1: Concurrency, Ordering, Races
 - [Implementing Remote Procedure Calls (Birrell'84), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/birrell84.pdf) - introduced the now-standard design of RPC calls with interfaces and caller/callee stubs for distributed communication.
@@ -236,10 +242,47 @@ presence of Byzantine faults (i.e a fraction of the nodes can collude and behave
 efficient microkernel designed with a very extreme minimality principle,
 where as much OS functionality is moved outside of the microkernel
 as possible, including even its memory manager, pagers, device drivers, software TLBs, etc.
-- [seL4: Formal Verification of an OS Kernel]
+- [seL4: Formal Verification of an OS Kernel (Klein'09), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/klein09.pdf) - first paper to perform a formal, machine-checked verification of a microkernel using the Isabelle/HOL theorem prover
+- [Memory Resource Management in VMware ESX Server (Waldspurger'02), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/waldspurger02.pdf) - introduced many great ideas for hypervisor memory management, like memory ballooning, idle tax, and transparent page sharing that are now commonplace in modern virtual machines
+- [The Scalable Commutativity Rule: Designing Scalable Software for Multicore Processors (Clements'15), SOSP'13 best paper](https://www.cs.cmu.edu/~15712/papers/clements15.pdf) - addresses
+the problem of deciding whether there exists a scalable implementation (with respect to number of processors) of a program based on a restricted form of commutativity of the interfaces that it uses
+called SIM commutativity (**S**tate-dependent, **I**nterface-based, **M**onotonic)
+- [The Multikernel: A new OS architecture for scalable multicore systems (Baumann'09), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/baumann09.pdf) - solves the problem 
+of modern operating systems not being able to take advantage of the current trend of increasing core counts due to the inherent limitations of the shared-memory kernel design,
+by instead re-framing the OS as a distributed system split among different cores with event-driven execution, replicated state, and a hardware-neutral structure
 
+## Part 6: Big Data Systems
+- [Dynamo: Amazon’s Highly Available Key-value Store (DeCandia'07), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/decandia07.pdf) - the secret behind how
+Amazon can support very high availability with eventual consistency due to
+extreme business requirements (i.e users should never fail to add an item to
+their shopping carts), by incorporating established techniques like consistent
+hashing, sloppy quorums, gossip-based membership protocols, etc
+- [Spanner: Google’s Globally-Distributed Database (Corbett'12), SigOps HoF paper](https://www.cs.cmu.edu/~15712/papers/corbett12.pdf) - built using lessons
+from [Google Bigtable](https://cloud.google.com/bigtable), Spanner powers Google as their globally replicated transactional database system 
+with 5 nines of availability with several novel ideas like TrueTime to quantify uncertainty in wall clock time and distributed transactions
+- [Pollux: Co-adaptive Cluster Scheduling for Goodput-Optimized Deep Learning (Qiao'21), OSDI'21 best paper](https://www.cs.cmu.edu/~15712/papers/qiao21.pdf) -
+introduces a new notion of goodput that combines throughput and statistical efficiency to evaluate the performance of schedulers for training deep learning systems, 
+with a practical implementation that optimizes both cluster-wide and per-job parameters called Pollux
 
-# My Thoughts
+## Part 7: Emerging Platforms
+- [LineFS: Efficient SmartNIC Offload of a Distributed File System with Pipeline Parallelism (Kim'21), SOSP'21 best paper](https://www.cs.cmu.edu/~15712/papers/kim21.pdf) - optimizing the performance of distributed file systems (DFS) by decomposing DFS operations into pipelined stages and offloading networked stages to a SmartNIC asynchronously
+
+# Workload
+The class has a moderate workload for a systems class. Expect to spend 10-12 hours 
+a week on the readings and paper summaries while lectures are ongoing, probably
+a couple more hours once the projects get into motion midway through the
+semester, and for it to consume a significant portion of your existence in the
+last two weeks before the final presentations.
+
+It is a far less demanding and stressful class than the legendary [15-410/605
+Operating System Design and Implementation](https://www.cs.cmu.edu/~410/) class, 
+so don't let the "advanced" in the course title scare you off from taking this class.
+After all, most people taking this class are Ph.D. students who have their
+own research to work on and can't exactly spend all their time on courses,
+unlike undergraduates.
+
+# Takeaways From The Class
+Here are my thoughts on the key takeaways from the class.
 
 ## Class Discussion
 As a seminar-based class, one of the most surprising things for me was how fun
@@ -265,18 +308,29 @@ class to attend all the lectures that you can.
 
 ## Tribal Knowledge
 Another aspect of the class that I really appreciated was how Phil taught us a
-lot of the spirit and tribal knowledge of doing CS research. These were often
-presented as off-hand remarks while presenting the context or background of a
-paper, and provided insight into the zeitgeist of the time, the motivations
-and challenges that the paper authors faced, and what the authors went on to
-do in the future based on the impact (or lack of impact at that time)
-of their work.
+lot of the spirit and tribal knowledge of doing CS research during his lively
+lectures. These were often presented as off-hand remarks while presenting the
+context or background of a paper, and provided insight into the zeitgeist of the
+time, the motivations and challenges that the paper authors faced, and what the
+authors went on to do in the future based on the impact (or lack of impact at
+that time) of their work.
 
 As someone who has not done a long-term research project with a faculty member
 but am thinking about possibly doing a Ph.D. in the future, all of these were
-valuable wisdom as they are not things that you can pick up easily yourself
+very valuable wisdom which are not things that you can pick up easily yourself
 from reading past papers or books. In fact, it almost felt as if I had my own
-Ph.D. advisor at times, who sprinkled trinkles of advice each class.
+advisor at times.
+
+## Witness the Evolution of Systems Research
+As you read through the papers, you almost feel as if you are being put into the
+driver's seat and can see how systems research has matured and evolved over the
+past few decades. Seminal papers of the past tackled the most
+general problems, although many of them lacked implementations or proper benchmarks
+that would surely be grounds to be red-flagged and rejected from any systems
+conference today. Many of the more recent papers strive to anticipate and build
+for future changes in the computation landscape, have solid replicable
+implementations and evaluations, and are a lot more careful about anticipating
+and providing rebuttals for criticisms. 
 
 ## Personal Attention for Projects
 I also really appreciated the personal attention that Phil and Val gave to us
@@ -284,16 +338,35 @@ by meeting with us every other week for our course projects.
 This is especially so if you consider that many advisors already have trouble
 meeting their own Ph.D. students for an hour a week, whereas in this case the
 course staff dedicated half an hour every two weeks for every single group in
-the class (there were around 10), which was true dedication.
+the class (there were around 10), which I thought was some real dedication.
 I will admit that I did not live up to my end of the bargain by spending
 as much time on the project as I would have wanted to (compared to when I took 15-410).
-This is due to a combination of high workloads from other classes, the fact 
-that we faced a few unexpected issues when working on the project that forced us
-to return to the drawing boards several times, and how it was hard to get
-everyone's schedules aligned to work on things as my project partners were also
-very busy with their own research.
+One could always give excuses for anything so you don't have to listen to mine,
+but if I had to reflect on it, it was due to a combination of high
+workloads from other classes, the fact that this was not the highest priority for
+the members in our group (my project partners were both quite busy with
+their own research and I was busy with other classes), and some unexpected
+obstacles in our project that forced us back to the drawing boards a few times
+(our project interim report was drastically different from our initial
+proposal).
 
-Our course project was on automatic optimal scheduling of data in dynamic neural
+## Fantastic Course Staff
+Phil is a really good lecturer. He is very clear, the class pacing is great, and
+the lecture slides are polished. He is very approachable and respectful
+towards students, and puts in great effort to give a good and satisfying answer
+to every question. 
+
+Feedback for projects is prompt (there was no feedback for the paper summaries),
+and the midterms were graded fairly quickly. 
+
+Overall it is clear that the class is pedagogically mature and has benefited
+from many rounds of feedback during past iterations.  It is rich in content,
+is accessible and yet challenging to students from a wide range of backgrounds,
+and will prepare one well for building systems in the future, be it in 
+academia or industry.
+
+# Our Course Project, and Reflections
+Our course project was on the automated optimal scheduling of data in dynamic neural
 networks over heterogeneous GPUs for inference tasks in a pipeline-parallelism
 fashion. This means that when a model is too large to fit on a single GPU
 but instead has to be distributed across multiple GPUs, we aim to solve the problem
@@ -304,29 +377,46 @@ segments of the network. We built a system called `DynPartition`,
 a reinforcement-learning based scheduler that uses Deep-Q Learning to learn
 the optimal way of performing this split.
 
-We had some positive results but with some caveats 
-thought it was a great experience working with PhD students and other smarter
-people and to have learnt from them. It was also really cool to see the
-breadth and depth of projects presented during the final presentation. I
-cannot recommend this course enough to anyone who has the sufficient
-pre-requisites, which will allow them to truly appreciate the content in the
-class.
+{% include figure.html 
+    path="/assets/img/posts/adv_os/presentation.avif"
+    width="400px"
+    class="z-depth-1"
+    caption="Giving our final project presentation in the Panther Hollow conference room at CIC"
+%}
+
+We had some positive empirical results on our benchmarks, but will require
+additional future work to verify the generality of these results. Overall, I
+thought it was a great experience working with PhD students and to learn from
+their working styles and approach to solving problems. It was also really cool
+to see the breadth and depth of projects presented by the other teams during the
+final presentation, which was structured like a conference.
 
 # Who Is Suitable For The Class
+I cannot recommend this course enough to anyone who has sufficient
+background and have an interest in building systems, or systems research.
+
+You should be sufficiently prepared for the class if you have taken
+[15-410 Operating System Design and Implementation](https://www.cs.cmu.edu/~410/),
+or any other equivalent rigorous operating systems design class in your undergraduate college.
+Most papers draw heavily on low-level concepts from operating systems and assume
+that the reader is familiar with them, and therefore familiarity with these ideas
+is critical to understanding the papers.
+
+I don't feel any of the other classes are as critical, as any new concepts can
+be picked up relatively easily. For instance, a good grasp of considerations
+involved in operating systems design means that it's not too hard to also
+understand the challenges involved in filesystems or virtual machine design.
+Having taken other classes would definitely still help to make the papers more
+approachable though. For instance, the Pollux paper was not very approachable for
+people who did not have prior exposure to machine learning systems, which led to the
+course staff deciding not to include that as one of the papers tested for the
+second midterm.
+
 When I took the class, all the students were either Masters or Ph.D. students.
-However, strong undergraduates with sufficient systems background would
-also do well in the class.
+Strong undergraduates with sufficient background would also definitely do well
+in the class.
 
-# Acknowledgements
+# Acknowledgments
 I would like to express my gratitude to [Albert
-Gao](https://adbforlife.github.io/) who took the class together with me for
-helping to proofread this article. Shoutout to [Abigale
-Kim](https://abigalekim.github.io/) as well for taking the class together with
-Albert and I, where we formed a lively discussion group every class and made
-many memories.
-
-I would also like to thank my project groupmates [Vivswan
-Shah](https://vivswan.github.io/) and [Yudong
-Liu](https://www.linkedin.com/in/yudong-liu-510929205/), both of whom have far
-more research experience than me and allowed me to learn many things from
-working with them.
+Gao](https://adbforlife.github.io/) for helping to proofread this article. He
+took the class together with me in the same semester.
