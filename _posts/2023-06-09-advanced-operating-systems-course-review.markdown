@@ -418,5 +418,5 @@ in the class.
 
 # Acknowledgments
 I would like to express my gratitude to [Albert
-Gao](https://adbforlife.github.io/) for helping to proofread this article. He
-took the class together with me in the same semester.
+Gao](https://adbforlife.github.io/) and [Abigale Kim](https://abigalekim.github.io/) for helping to proofread this article. Both of them
+took the class with me this semester.
