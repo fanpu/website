@@ -147,9 +147,9 @@ you might be interested in directly.
 - 15-712 &nbsp; **[Advanced Operating Systems and Distributed Systems](https://www.cs.cmu.edu/~15712/)**, [Phil Gibbons](http://www.cs.cmu.edu/~gibbons/)
   {: .course-item #course15712 }
 
-  I really liked this class and felt that there wasn't enough information (there
-  wasn't any at all actually) about this course online, so I wrote a dedicated
-  post for it, which will be published soon.
+  I really liked this class and felt that there wasn't enough information about
+  this course online by people who have taken it, so I wrote a dedicated
+  post for it: [CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review]({% post_url 2023-06-09-advanced-operating-systems-course-review %})
 
 - 36-709 &nbsp; **Advanced Statistical Theory I**, [Matey Neykov](https://mateyneykov.com/)
   {: .course-item #course36709 }
@@ -162,6 +162,16 @@ you might be interested in directly.
 
 - 17-604 &nbsp; **Communications for Software Leaders II**, [Dominick (Nick) Frollini](https://www.linkedin.com/in/frollini/)
   {: .course-item #course17604 }
+
+  The highlight of this class were 3 different mock negotiation scenarios
+  that you had to roleplay and perform
+  I really enjoyed the negotiation exercises
+  in particular, they were very exciting and put me in the shoes of roles that I
+  would have never imagined playing them before. Nick is a very enthusiastic
+  teacher, his lectures are very clear and well-paced, and it's clear he has
+  done this so many times that it's almost like a rehearsed performance that
+  flows so smoothly. Thanks for a great semester!
+
 
 I TA'd for [10-708 Probabilistic Graphical
 Models](https://andrejristeski.github.io/10708-S23/) under [Andrej
