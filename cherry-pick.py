@@ -2,6 +2,30 @@
 import subprocess
 import sys
 import re
+import os
+import json
+
+# File to store skipped commits
+SKIPPED_COMMITS_FILE = os.path.join(os.path.dirname(__file__), '.cherry-pick-skipped.json')
+
+def load_skipped_commits():
+    """Load previously skipped commits from disk"""
+    try:
+        if os.path.exists(SKIPPED_COMMITS_FILE):
+            with open(SKIPPED_COMMITS_FILE, 'r') as f:
+                skipped = json.load(f)
+                return set(skipped)
+    except Exception as e:
+        print(f"Warning: Could not load skipped commits: {e}")
+    return set()
+
+def save_skipped_commits(skipped_commits):
+    """Save skipped commits to disk"""
+    try:
+        with open(SKIPPED_COMMITS_FILE, 'w') as f:
+            json.dump(list(skipped_commits), f)
+    except Exception as e:
+        print(f"Warning: Could not save skipped commits: {e}")
 
 def get_unique_commits():
     """Get commits that exist in upstream/main but not in the current branch"""
@@ -43,9 +67,24 @@ def auto_resolve_conflicts():
             subprocess.run(["git", "add", file], check=True)
             print(f"Auto-resolved {file} (kept upstream version)")
 
+def is_commit_empty():
+    """Check if there are any changes staged for commit"""
+    try:
+        result = subprocess.run(["git", "diff", "--cached", "--quiet"])
+        # Return True if there are no changes (exit code 0)
+        return result.returncode == 0
+    except subprocess.CalledProcessError:
+        return False
+
 def cherry_pick_commits(commits):
     """Cherry-pick each commit in order until we hit a conflict"""
+    skipped_commits = load_skipped_commits()  # Load previously skipped commits
+    
     for commit in commits:
+        if commit in skipped_commits:
+            print(f"Skipping previously empty commit: {commit}")
+            continue
+            
         try:
             print(f"Cherry-picking commit: {commit}")
             subprocess.run(["git", "cherry-pick", commit], check=True)
@@ -77,9 +116,16 @@ def cherry_pick_commits(commits):
                 print("\nOnce resolved, run this script again to continue with remaining commits")
                 sys.exit(0)
             else:
-                # All conflicts were auto-resolved, continue cherry-picking
-                subprocess.run(["git", "cherry-pick", "--continue"], check=True)
-                print("All conflicts auto-resolved, continuing...")
+                # Check if the commit would be empty after resolution
+                if is_commit_empty():
+                    print(f"Commit {commit} would be empty after conflict resolution - skipping")
+                    subprocess.run(["git", "cherry-pick", "--skip"], check=True)
+                    skipped_commits.add(commit)  # Remember this commit was skipped
+                    save_skipped_commits(skipped_commits)  # Save to disk
+                else:
+                    # All conflicts were auto-resolved, continue cherry-picking
+                    subprocess.run(["git", "cherry-pick", "--continue"], check=True)
+                    print("All conflicts auto-resolved, continuing...")
                 continue
 
 def main():
