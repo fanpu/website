@@ -391,7 +391,7 @@ their working styles and approach to solving problems. It was also really cool
 to see the breadth and depth of projects presented by the other teams during the
 final presentation, which was structured like a conference.
 
-# Who Is Suitable For The Class
+# Is This Class Suitable For Me?
 I cannot recommend this course enough to anyone who has sufficient
 background and have an interest in building systems, or systems research.
 
