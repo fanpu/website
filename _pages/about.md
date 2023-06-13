@@ -74,6 +74,7 @@ Some of my more popular posts that might be of interest:
 2018-07-31-notes-on-founding-a-startup-to-my-future-self %})
 
 **CMU**
+- [CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review]({% post_url 2022-06-09-advanced-operating-systems-course-review %})
 - [CMU 15-441/641 Computer Networks Course Review]({% post_url 2022-08-15-cmu-computer-networks-review %})
 - [My Sharing at the Hwa Chong Undergrad Alumni Forum]({% post_url 
 2022-06-22-cmu-scs-ecg-talk %}), i.e. why study Computer Science at CMU
