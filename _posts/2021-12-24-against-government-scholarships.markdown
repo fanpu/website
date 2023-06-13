@@ -333,4 +333,7 @@ problem of scholars breaking their bonds, which not only is unfair for those who
 needed them and were denied the opportunity, but also wastes time and money for
 both them and the government.
 
+Remember, a scholarship is not free. When you take a scholarship,
+you give up your own freedom and the ability to chart your own future.
+
 *Banner picture: A waterfall along Half Dome Trail, Yosemite National Park*
