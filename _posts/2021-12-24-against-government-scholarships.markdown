@@ -148,6 +148,24 @@ occasions, my friends told me they already felt safer knowing they were being
 escorted by a military-trained man while we were walking through some sketchy
 streets in the US.
 
+## But They Were So Nice To Me
+I personally benefited a lot from programs organized by agencies that
+offer scholarships. For instance, the DSTA Young Defence Scientists Programme (YDSP)
+provided me with opportunities to do research attachments with DSTA and DSO
+researchers, and to also gain exposure to topics like cryptography and AI
+in their World of Science lecture series program. I also received a lot of swag
+from them, like folders and notebooks. I am very grateful to them for all of these
+opportunities, which I am sure is doing a great deal to shape the future of
+Singapore's technology leaders. However, I know that I am best poised to serve
+the world not in DSTA but elsewhere.
+
+Similarly, regardless of how much you benefited from various outreach programmes
+by these agencies, keep in mind that at the end of the day this is still your
+career and that you are not obliged to join them. If you want to show your gratitude,
+think about where you will be best poised to contribute to the future development
+of our country and the world, and if the agency is actually still the best place
+to do that.
+
 ## Complacency and Diminished Drive
 This is not something that people think about immediately, but knowing that you
 are bonded to a scholarship after graduation for the next 6 years brings about a
