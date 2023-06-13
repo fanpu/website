@@ -67,14 +67,14 @@ suggestions. All banner pictures on the blog are taken by yours truly!
 Some of my more popular posts that might be of interest:
 
 **General**
-- [The Art of LaTeX: Common Mistakes, and Advice for Typesetting Beautiful, Delightful Proofs]({% post_url   2023-01-02-latex-tips %})
+- [The Art of LaTeX: Common Mistakes, and Advice for Typesetting Beautiful, Delightful Proofs]({% post_url 2023-01-02-latex-tips %})
 - [Against Government Scholarships]({% post_url
 2021-12-24-against-government-scholarships %})
 - [Notes On Founding A Startup To My Future Self]({% post_url
 2018-07-31-notes-on-founding-a-startup-to-my-future-self %})
 
 **CMU**
-- [CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review]({% post_url 2022-06-09-advanced-operating-systems-course-review %})
+- [CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review]({% post_url 2023-06-09-advanced-operating-systems-course-review %})
 - [CMU 15-441/641 Computer Networks Course Review]({% post_url 2022-08-15-cmu-computer-networks-review %})
 - [My Sharing at the Hwa Chong Undergrad Alumni Forum]({% post_url 
 2022-06-22-cmu-scs-ecg-talk %}), i.e. why study Computer Science at CMU
