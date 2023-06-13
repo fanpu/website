@@ -110,7 +110,7 @@ you might be interested in directly.
 | ------------------------------------------------------------------ |
 | [15-462 Computer Graphics](#course15462)                           |
 | [15-300 Research and Innovation in Computer Science](#course15300) |
-| [17-603 Communication for Software Leaders II](#course17604)       |
+| [17-604 Communication for Software Leaders II](#course17604)       |
 | [17-603 Communication for Software Leaders I](#course17603)        |
 | [15-122 Principles of Imperative Computation\*](#course15122)      |
 | [15-604 Immigration Course](#course15604)                          |
@@ -160,18 +160,67 @@ you might be interested in directly.
 - 21-329 &nbsp; **Set Theory**, Benjamin Siskind
   {: .course-item #course36708 }
 
+  I initially got interested in this class as quite a couple of theorem from my
+  other classes appealed to important results from set theory, such as Zorn's
+  Lemma for proving Tychonoff's theorem. Since set theory is such a foundational
+  topic in mathematics, I decided to take it to satisfy my own intellectual
+  curiosity.
+
+  This course covered all the chapters in [A Course on Set Theory](https://www.cambridge.org/core/books/course-on-set-theory/9E65D5D9CA561CA2D87F91B21B0D117D)
+  apart from 6, i.e ZFC, order, cardinality, trees, and filters and ideals.
+  It starts fairly slowly, and speeds up towards the latter of the second
+  half. I could see some parallels between set theory and type theory
+  initially in the more constructive concepts, but they soon began to differ
+  greatly due to the heavy use of non-constructive methods
+  in the proofs of set theory.
+  
+  The most interesting topic for me was the development of trees and Baire
+  spaces, which led to the study of games and determinacy,
+  with the consequence that sets which are determined have certain nice
+  properties.
+
+  The course was taught by Benny, a postdoctoral associate teaching the class
+  for the first time, so it was expected that there would be a few rough edges.
+  Benny cares about the class, is passionate about the course content (he
+  does research in model theory and descriptive set theory), and responds to
+  emails and clarifications fairly promptly.
+
+  I think the course could have been paced faster at the start. It was also
+  challenging to read the lecturer's handwriting sometimes. I felt there was
+  significant time pressure for the exams (similar to [21-301
+  Combinatorics](#course21301)), though the homeworks were quite reasonable.
+
 - 17-604 &nbsp; **Communications for Software Leaders II**, [Dominick (Nick) Frollini](https://www.linkedin.com/in/frollini/)
   {: .course-item #course17604 }
 
-  The highlight of this class were 3 different mock negotiation scenarios
-  that you had to roleplay and perform
-  I really enjoyed the negotiation exercises
-  in particular, they were very exciting and put me in the shoes of roles that I
-  would have never imagined playing them before. Nick is a very enthusiastic
-  teacher, his lectures are very clear and well-paced, and it's clear he has
-  done this so many times that it's almost like a rehearsed performance that
-  flows so smoothly. Thanks for a great semester!
+  The highlight of this follow-up class to 
+  [17-603 Communication for Software Leaders I](#course17603) are the mock
+  negotiation in-class exercises that we had to prepare and role-play for.
+  Prior to each mock negotiation, we were provided with case
+  materials developed by the
+  [Kellogg](https://www.kellogg.northwestern.edu/) MBA program that contains
+  important private information specific to our role, which must
+  be kept secret.
+  We then planned out our negotiation strategy before class, possibly with
+  other people in the same faction so as to present a unified front
+  against the other parties during negotiation.
 
+  The mock negotiations were really exciting as they put us in the shoes
+  of roles as diverse as CEOs, government officials, hardware designers,
+  or even fishermen. You will have specific instructions on
+  the kind of personality traits, negotiation style, and cultural
+  customs that your role will have. I really indulged myself in this,
+  especially since I took [70-350 Acting for Business](#course70350)
+  not too long ago. The outcome of the negotiations will directly
+  affect your grades, so these are really high-stakes, high-pressure
+  situations that you will be put into. It was extremely fun and
+  entertaining.
+
+  Nick is a very passionate teacher with clear and well-paced lectures.
+  It's obvious he has done this so many times that it's almost
+  like a rehearsed performance. In my opinion, if you are already
+  planning to take [17-603](#course17603), then you must take
+  this course as well since the mock negotiations were so much fun.
 
 I TA'd for [10-708 Probabilistic Graphical
 Models](https://andrejristeski.github.io/10708-S23/) under [Andrej
