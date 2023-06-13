@@ -219,33 +219,39 @@ if it helps with your mental health, but you need to remember that first and for
 your goal is to obtain a quality education.
 
 ## Unrealized Earning Potential
-This section is biased towards tech. I don't know the exact
-numbers of how much government agencies are paying, but it's going to pale in
-comparison to the private sector overseas. GovTech does a bit better as they try
-to peg their compensation to industry levels, although you really want to be
-positioned at a company that is the market leader in setting salaries instead.
+This section is relevant if you intend to work in the tech sector.
+I am not very familiar with industry rates for other sectors, and will
+refrain from commenting.
 
-If you are studying in the US, you can expect to get at least USD 150k annual
-total compensation pre-tax if you manage to land an entry-level role at most
-fast-growing unicorns or FAANG companies. If you can rise to become one of the
-best among your batch, you can expect double that amount. Check out
+According to [this post](https://blog.seedly.sg/civil-service-salary/),
+the starting salary for civil servants will be around 4-5.5k SGD in base pay,
+and 1-3 months in bonuses. While GovTech does a bit better as they try
+to peg their compensation to baseline industry levels.,
+you really want to be positioned at a company that is the market leader in
+setting salaries instead.
+
+If you are going to be based in the US, you can expect to get around 200k USD
+annual pre-tax total compensation if you land an entry-level role at
+fast-growing unicorns or big tech companies like FAANG. 
+If you can rise to become one of the best among your batch, you can expect
+double that amount at more selective firms. Check out
 [levels.fyi](https://levels.fyi) if you want more specific data. 
 
-You will be leveled every few years with generous pay bumps, and you should
-become a senior engineer by your sixth year (most people should be there by
-their fourth year).  In contrast, if you took a scholarship you have only just
-completed your bond, and depending on your specific agency, you may not have
-gained a lot of relevant industry experience if your future plan is to return
-to industry.
+In industry, you will be leveled every few years with generous pay bumps, and
+you should become a senior engineer by your sixth year (most people should be
+there by their fourth year). In contrast, if you took a scholarship you have
+only just completed your bond, and depending on your specific agency, you may
+not have gained a lot of relevant industry experience if your future plan is to
+return to industry.
 
-As such, with six years of industry work, not only will you have no problems
-paying off student loans, you will have the opportunity to work with and learn
-from the best and brightest in the world, gain a lot of relevant experience and
-exposure, make a lot of valuable professional connections, and have a secure
-financial base from which you can decide your next career step. In tech, six
-years is a long time. People stay for only two to three years on average at a
-company, so you may have already worked at two or three companies by the time
-you are done.
+As such, after six years in industry, not only will you be able to
+pay off your student loans, but you will also have the opportunity to work with and
+learn from the best and brightest in the world, gain a lot of relevant
+experience and exposure, make a lot of valuable professional connections, and
+have a secure financial base from which you can decide your next career step. In
+tech, six years is a long time. People stay for only two to three years on
+average at a company, so you may have already worked at two or three companies
+by the time you are done.
 
 On the other hand, if you take on a scholarship, you will almost be in your
 thirties by the time you are done with your bond. It can be challenging to make
@@ -253,14 +259,14 @@ headway into the industry now if your prior job experiences and taskings are not
 relevant, which may be something that is out of your control.  It is also a
 problem if your agency is in a sensitive area like defense because you cannot
 share about the work that you have done. There are also a lot of "bad habits"
-that you may pick up from bureaucratic government agencies (if you know you
-know), which can cause companies to believe that you are not a good cultural fit
-and overlook your candidacy. Finally, I don't mean to sound ageist, but when you
-are in your thirties with no industry experience on your belt and you are
-competing against much younger and hungrier fresh college graduates for jobs,
-the odds are not really in your favor. This fact may encourage scholars to
-continue staying in their jobs out of fear of competition, and before you know
-it, you've spent your entire career there.
+that you may pick up from bureaucratic government agencies which can cause
+companies to believe that you are not a good cultural fit and overlook your
+candidacy. Finally, I don't mean to sound ageist, but when you are in your
+thirties with no industry experience on your belt and you are competing against
+much younger and hungrier fresh college graduates for jobs, the odds are not
+really in your favor. This fact may encourage scholars to continue staying in
+their jobs out of fear of competition, and before you know it, you've spent your
+entire career there.
 
 ## Blocked from Achieving Your Fullest Potential
 You want the option to go to where your work matters most and where you can make
@@ -274,6 +280,19 @@ this can be seen as a form of market inefficiency. A scholarship
 could thus prevent you from doing all the great things that you could otherwise
 achieved.
 
+Imagine graduating from college and reaching the peak of your intellectual
+development, having been equipped with the knowledge and skills to make a
+difference in the world, and then having to spend the next six years at a
+bureaucratic job that will most likely not make the best use of your talents,
+resulting in intellectual stagnation and perhaps even regression. Your working
+environment will likely not be anywhere as stimulating and challenging. Instead
+of solving hard problems, you will be playing office politics and counting down
+the days before you are eligible for the next promotion. There is an implicit
+glass ceiling and pre-determined career progression rate depending on which
+scholarship you held. When one feels like they can no longer make an impact
+and influence their trajectories, quiet quitting begins. Is this
+really the best way to start a career?
+
 ## A Big Life Decision You Are Probably Not Ready To Make Yet
 The prefrontal cortex, which is the area of our brain in charge of planning and
 making important life decisions, does not mature fully until we are 25. 
@@ -282,9 +301,9 @@ at such an early age what you are going to do for the next 10 years of your
 life. Most people are not so lucky to have figured out who they are and what
 they want to do by then. 
 It is much better to keep your options open and know that you are limited only
-by your own volition.
+by how big you dream.
 
-# Final Remarks
+# Concluding Remarks
 There are good reasons on both sides on whether you should take a scholarship.
 My goal is not to discourage people from considering them, but to provide a
 fuller picture of what happens down the road if you decide to go down either
