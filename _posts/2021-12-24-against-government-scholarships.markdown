@@ -28,7 +28,7 @@ description: >
     your unique circumstances.
 ---
 
-*This post was updated on 12 June 2023 to include some new perspectives and
+*This post was updated on 14 June 2023 to include some new perspectives and
 information I've had
 since the post was originally written, and to use a more nuanced tone.*
 
