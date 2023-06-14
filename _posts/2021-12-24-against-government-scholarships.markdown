@@ -28,8 +28,9 @@ description: >
     your unique circumstances.
 ---
 
-*This post was updated on 12 June 2023 to include some new perspectives I've had
-since the post was originally written, and to use a more nuanced tone*
+*This post was updated on 12 June 2023 to include some new perspectives and
+information I've had
+since the post was originally written, and to use a more nuanced tone.*
 
 Over the past few years, I've received numerous questions about studying abroad
 and whether it is advisable to take a government scholarship to do so from my
@@ -271,20 +272,20 @@ tech, six years is a long time. People stay for only two to three years on
 average at a company, so you may have already worked at two or three companies
 by the time you are done.
 
-On the other hand, if you take on a scholarship, you will almost be in your
-thirties by the time you are done with your bond. It can be challenging to make
-headway into the industry now if your prior job experiences and taskings are not
-relevant, which may be something that is out of your control.  It is also a
-problem if your agency is in a sensitive area like defense because you cannot
-share about the work that you have done. There are also a lot of "bad habits"
-that you may pick up from bureaucratic government agencies which can cause
-companies to believe that you are not a good cultural fit and overlook your
-candidacy. Finally, I don't mean to sound ageist, but when you are in your
-thirties with no industry experience on your belt and you are competing against
-much younger and hungrier fresh college graduates for jobs, the odds are not
-really in your favor. This fact may encourage scholars to continue staying in
-their jobs out of fear of competition, and before you know it, you've spent your
-entire career there.
+## Poor Exit Opportunities
+If you take on a scholarship, you will almost be in your thirties by the time
+you are done with your bond. It can be challenging to make headway into the
+industry now if your prior job experiences and taskings are not relevant, which
+may be something that is out of your control. It is also a problem if your
+agency is in a sensitive area like defense because you cannot share about the
+work that you have done. There are also a lot of "bad habits" that you may pick
+up from bureaucratic government agencies which can cause companies to believe
+that you are not a good cultural fit and overlook your candidacy. Finally, I
+don't mean to sound ageist, but when you are in your thirties with no industry
+experience on your belt and you are competing against much younger and hungrier
+fresh college graduates for jobs, the odds are not really in your favor. This
+fact may encourage scholars to continue staying in their jobs out of fear of
+competition, and before you know it, you've spent your entire career there.
 
 ## Blocked from Achieving Your Fullest Potential
 You want the option to go to where your work matters most and where you can make
@@ -295,15 +296,15 @@ environment is not conducive for your career goals. The same cannot be said when
 you are bonded to an agency, where institutional delineations and red tape
 means you are very much resigned to your fate. From an economic standpoint,
 this can be seen as a form of market inefficiency. A scholarship
-could thus prevent you from doing all the great things that you could otherwise
-achieved.
+could thus prevent you from doing all the great things that you could otherwise achieve.
 
+## Intellectual Stagnation
 Imagine graduating from college and reaching the peak of your intellectual
 development, having been equipped with the knowledge and skills to make a
 difference in the world, and then having to spend the next six years at a
-bureaucratic job that will most likely not make the best use of your talents,
+bureaucratic job that hardly makes use of your technical skills and talents,
 resulting in intellectual stagnation and perhaps even regression. Your working
-environment will likely not be anywhere as stimulating and challenging. Instead
+environment will not be very stimulating and challenging. Instead
 of solving hard problems, you will be playing office politics and counting down
 the days before you are eligible for the next promotion. There is an implicit
 glass ceiling and pre-determined career progression rate depending on which
@@ -321,8 +322,52 @@ they want to do by then.
 It is much better to keep your options open and know that you are limited only
 by how big you dream.
 
-# Concluding Remarks
-There are good reasons on both sides on whether you should take a scholarship.
+# Bond Breaking
+If you still think a scholarship is the right choice for you, it will also be
+helpful to consider the process of bond breaking in the scenario that you change
+your mind halfway.
+
+There are two main components to bond breaking: liquidated damages, and exit
+interviews. It will be a recurring theme that PSC, which is generally considered
+to the most "prestigious" scholarship, is structurally designed to be as hard
+for you to break their bond as possible, so really think it through seriously
+before you accept a bond from them in particular.
+
+In the past, scholarship agencies would buy newspaper ads to "name and shame"
+bond breakers. However, this practice has stopped as bond-breaking has become
+more prevalent.
+
+## Liquidated Damages
+You will be provided with an itemized list of every expense incurred in relation to your scholarship. This will include tuition, allowance, flights,
+scholarship award ceremonies and events, internship pay, and many others. If you
+are a PSC scholar, they will also have organized a whole series of summer events
+and camps for you before you enroll in college that you will have to pay back for,
+so expect the damages to be even higher.
+
+You will have to pay 10% annual compounded interest for these damages, which is
+significantly higher than most student loans from banks which are around 5% APY.
+This means that you should break your bond as soon as possible if you
+have some feeling you would already do it eventually.
+
+Whether you can pay back the damages in lump-sum or installments depends
+on the specific scholarship. If you decide to pay it back in installments,
+it will still be subject to 10% APY. PSC does not allow you to pay
+in installments, so you will be forced to repay all damages upfront.
+This could be prohibitive depending on your financial situation.
+
+## Exit Interviews
+There will also be a series of exit interviews to understand why you
+decided to break your bond. During the exit interviews, they will try to
+convince you to stay, and possibly offer other roles within their
+organization to see if you might be interested.
+
+PSC also has an infamous guilt-trip exit interview, where a professional
+psychologist will interrogate you and try to make you feel like a terrible human
+being for having made this decision. Some scholars will leave that interview in
+tears.
+
+# Final Remarks
+There are good reasons on both sides for whether you should take a scholarship.
 My goal is not to discourage people from considering them, but to provide a
 fuller picture of what happens down the road if you decide to go down either
 path. My wish is for this post to help improve the overall efficiency of the
@@ -330,10 +375,10 @@ scholarship system, by encouraging people who have legitimate reasons for a
 scholarship to have confidence in their decision to pursue them, and for those
 who are uncertain to think about it again. This helps to alleviate the rampant
 problem of scholars breaking their bonds, which not only is unfair for those who
-needed them and were denied the opportunity, but also wastes time and money for
-both them and the government.
+needed them and were denied the opportunity to study overseas, but wastes both their and the government's time and money.
 
 Remember, a scholarship is not free. When you take a scholarship,
-you give up your own freedom and the ability to chart your own future.
+you give up your freedom and the ability to chart your future.
+Whether this is a good trade depends on your unique circumstances.
 
 *Banner picture: A waterfall along Half Dome Trail, Yosemite National Park*
