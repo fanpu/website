@@ -18,4 +18,4 @@ for f in p.rglob("*"):
         if f.suffix in image_exts:
             new_path = f.with_suffix(target_suffix)
             print(new_path)
-            os.system(f"convert {f} {new_path}")
+            os.system(f"convert {f} -resize 1024\> {new_path}")
