@@ -567,7 +567,7 @@ $$
     \geq & \langle  \nabla \lcal (\ts), \Delta \rangle + \kl \| \Delta \|^2 - \tl^2(\ts) + \lambda_n \left\{
     \rcal(\Delta_{\mocalp}) - \rcal(\Delta_{\mocal}) - 2 \rcal(\ts_{\mcal^{\perp}})
     \right\} \\
-    & \qquad \text{(by Lemma 3 in [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731))}.
+    & \qquad \text{(by Lemma 3)}.
     \label{thm-deriv:1}
 \end{align}
 $$
@@ -580,7 +580,7 @@ $$
 \begin{align}
     | \langle  \nabla \lcal (\ts), \Delta \rangle |
     \leq                                             & \rs(\nabla \lcal(\ts)) \rcal(\Delta) & \text{(Cauchy-Schwarz using dual norms \( \rcal \) and \( \rs \))} \\
-    \leq                                             & \frac{\lambda_n}{2} \rcal(\Delta) & \text{([Theorem 1](#thm-1) assumption: \( \lambda_n \geq 2 \rs (\nabla \lcal(\ts)) \))},
+    \leq                                             & \frac{\lambda_n}{2} \rcal(\Delta) & \text{Theorem 1 assumption: \( \lambda_n \geq 2 \rs (\nabla \lcal(\ts)) \))},
 \end{align}
 $$
 
