@@ -51,7 +51,7 @@
     {% if page.cover_preview %}
     <meta name="twitter:card"  content="summary_large_image">
     {% assign twitter_image_url = page.cover_preview | prepend: '/assets/img/posts/' | relative_url %}
-    <meta name="twitter:image" content="{{ twitter_image_url }}">
+    <meta name="twitter:image" content="{{ site.url }}/{{ twitter_image_url }}">
 
     {% else %}
     <meta name="twitter:card"  content="summary">
