@@ -45,7 +45,7 @@
     {% if page.cover %}
     <meta name="twitter:card"  content="summary_large_image">
     {% assign twitter_image_url = page.cover | prepend: '/assets/img/posts/' | relative_url %}
-    <meta name="og:image" content="https://cdn.cms-twdigitalassets.com/content/dam/blog-twitter/official/universal-assets/Generic_BlogShare.jpg.twimg.768.jpg">
+    <meta name="og:image" content="{{ site.url }}{{ twitter_image_url }}">
 
     {% else %}
     <meta name="twitter:card"  content="summary">
