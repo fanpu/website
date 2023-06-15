@@ -354,7 +354,7 @@ This is given in the following result, which is known as Lemma 1 in [(Negahban e
 Recall from the [Projections Section](#projections) that
 $$\Delta_{\mocalp}$$ represents the projection of $$\Delta$$ onto $$\mocalp$$, and similarly
 for the other quantities.
-Due to space constraints we are unable to prove Lemma \ref{lemma:1} in this survey,
+Due to space constraints we are unable to prove [Lemma 1](#lemma-1) in this survey,
 but it is very important in the formulation of restricted strong convexity, and in proving
 [Theorem 1](#thm-1).
 
@@ -461,7 +461,7 @@ This leads us to the definition of restricted strong convexity:
   "
 %}
 
-We only need to consider error terms $$\Delta \in \ctriplet$$, since Lemma \ref{lemma:1}
+We only need to consider error terms $$\Delta \in \ctriplet$$, since [Lemma 1](#lemma-1)
 guarantees us that the error term will only lie in that set.
 
 In many statistical models, restricted strong convexity holds with $$\tl = 0$$, however, it is required in more general settings, such as generalized linear models.
@@ -761,8 +761,9 @@ decomposition. The reader is encouraged to refer to [(Negahban et al., 2009)](ht
 for more details on the large number of corrollaries of [Theorem 1](#thm-1).
 
 # Slides
-A condensed slide deck that introduces the key ideas of the post, but without
-any of the proofs is provided below.
+A condensed slide deck that introduces the key ideas of the decomposability of
+the regularizer, and restricted strong convexity for the purposes of motivating
+[Theorem 1](#thm-1) is provided below.
 
 {% pdf "/assets/presentations/A-Unified-Framework-For-High-Dimensional-Analysis-Of-M-Estimators.pdf" no_link %}
 
