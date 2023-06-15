@@ -21,7 +21,7 @@ description: >
     The goal of this blog post is to provide the sufficient background for
     understanding the proof of this result, followed by a walkthrough of the
     proof itself.
-published: false
+published: true
 ---
 $$
     \newcommand{\rcal}{\mathcal{R}}
@@ -391,7 +391,7 @@ like what is shown in Figure \ref{fig:cone}(b).
 # Restricted Strong Convexity (RSC) of the Loss Function
 
 {% include figure.html 
-    path="/assets/img/posts/high-dimensional-analysis-of-m-estimators/curvature.avif"
+    path="/assets/img/posts/high-dimensional-analysis-of-m-estimators/c_illust.avif"
     width="500px"
     class="z-depth-1"
     caption="
