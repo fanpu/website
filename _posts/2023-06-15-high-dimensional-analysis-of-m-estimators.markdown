@@ -88,7 +88,7 @@ If we add a regularization term $$\rcal$$ to penalize complexity of the model, s
     \that \in \argmin_\theta \sum_{i=1}^n \rho(x_i, \theta) + \lambda \rcal(\theta).
 \end{align}
 
-{% include theorem.html 
+{% include theorem.md 
   type="example"
   name="Lasso Program"
   statement="
@@ -104,7 +104,7 @@ If we add a regularization term $$\rcal$$ to penalize complexity of the model, s
 
 ## Dual Norms
 
-{% include theorem.html 
+{% include theorem.md 
   type="definition"
   name="Dual Norms"
   statement="
@@ -118,7 +118,7 @@ If we add a regularization term $$\rcal$$ to penalize complexity of the model, s
   "
 %}
 
-{% include theorem.html 
+{% include theorem.md 
   type="example"
   name="\(\ell_1\) and \(\ell_\infty\) norms are dual norms"
   statement="
@@ -156,7 +156,7 @@ condition will hold with certain parameters.
 
 The subspace compatibility constant is defined as follows:
 
-{% include theorem.html 
+{% include theorem.md 
   type="definition"
   name="Subspace Compatibility Constant"
   statement="
@@ -235,7 +235,7 @@ of low-rank matrices and nuclear norms where it could be possible that $$\mcal$$
 
 Now we can introduce the property of decomposability:
 
-{% include theorem.html 
+{% include theorem.md 
   type="definition"
   name="Regularizer Decomposability"
   statement="
@@ -267,7 +267,7 @@ $$\theta^*$$.
 There are many natural contexts that admit regularizers which are decomposable with respect to subspaces,
 and the following example highlights one such case.
 
-{% include theorem.html 
+{% include theorem.md 
   type="example"
   name="\( s \)-sparse Vectors"
   statement="
@@ -308,10 +308,11 @@ and the following example highlights one such case.
     path="/assets/img/posts/high-dimensional-analysis-of-m-estimators/c_illust.avif"
     width="500px"
     class="z-depth-1"
+    num=1
     caption="
         A visualization of \( \ctriplet \).  The shaded area represents the set
-        \( \ctriplet \), i.e all values of \( \theta \) that satisfies the inequality in
-        Equation \ref{eq:c}. 
+        \( \ctriplet \), i.e all values of \( \theta \) that satisfies the inequality of
+        the set in Lemma 1. 
     "
 %}
 
@@ -319,29 +320,33 @@ Decomposability is important because it allows us to bound the error of the esti
 This is given in the following result, which is known as Lemma 1 in [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731):
 
 
-{% include theorem.html 
+{% include theorem.md
   type="lemma"
-  name="Lemma 1 in [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731)"
+  name="Lemma 1 in 
+  <a href='https://arxiv.org/abs/1010.2731'>
+    (Negahban et al., 2009)
+  </a>"
+  id="lemma-1"
   statement="
     Suppose that \( \lcal \) is a convex and differentiable function, and consider
     any optimal solution \( \that \) to the optimization problem
     with a strictly positive regularization parameter satisfying
 
     $$
-    \begin{align}
+    \begin{align*}
         \lambda_n \geq 2 \rcal^* (\nabla \lcal (\ts; Z_1^n)).
-    \end{align}
+    \end{align*}
     $$
 
     Then for any pair \( (\mcal, \mocalp) \) over which \( \rcal \) is decomposable,
     the error \( \hd = \thatlambda - \ts  \) belongs to the set
 
     $$
-    \begin{align} \label{eq:c}
+    \begin{align*} \label{eq:c}
         \C(\mcal, \mocalp; \ts) \coloneqq \left\{  \Delta \in \R^p \mid
         \rcal(\Delta_{\mocalp}) \leq 3 \rcal (\Delta_{\mocal}) + 4 \rcal (\ts_{\mcalp})
         \right\}.
-    \end{align}
+    \end{align*}
     $$
   "
 %}
@@ -353,7 +358,7 @@ Due to space constraints we are unable to prove Lemma \ref{lemma:1} in this surv
 but it is very important in the formulation of restricted strong convexity, and in proving
 [Theorem 1](#thm-1).
 
-Figure \ref{fig:cone} provides a visualization of $$\ctriplet$$ in $$\R^3$$ in the
+[Figure 1](#fig-1) provides a visualization of $$\ctriplet$$ in $$\R^3$$ in the
 sparse vectors setting. In this case, $$S = \left\{ 3 \right\}$$ with $$|S|=1$$,
 and so the projection of $$\Delta$$ onto the model subspace only has non-zero
 values on the third coordinate, and its orthogonal complement is where the third
@@ -366,13 +371,13 @@ $$
 \end{align}
 $$
 
-The vertical axis of Figure \ref{fig:cone} denotes the third coordinate,
+The vertical axis of [Figure 1](#fig-1) denotes the third coordinate,
 and the horizontal plane denotes the first two coordinates.
 The shaded area
 represents the set $$\ctriplet$$, i.e all values of $$\theta$$ that satisfies the inequality
-in Equation \ref{eq:c}.
+of the set in [Lemma 1](#lemma-1).
 
-Figure \ref{fig:cone}(a) shows the special case
+[Figure 1(a)](#fig-1) shows the special case
 when $$\ts \in \mcal$$. In this scenario, $$\rcal (\ts_{\mcalp}) = 0$$, and so
 
 $$
@@ -386,14 +391,15 @@ which is a cone.
 
 However, in the general setting where $$\ts \not\in \mcal$$,
 then $$\rcal (\ts_{\mcalp}) > 0$$, and the set $$\ctriplet$$ will become a star-shaped set
-like what is shown in Figure \ref{fig:cone}(b).
+like what is shown in [Figure 1(b)](#fig-1).
 
 # Restricted Strong Convexity (RSC) of the Loss Function
 
 {% include figure.html 
-    path="/assets/img/posts/high-dimensional-analysis-of-m-estimators/c_illust.avif"
+    path="/assets/img/posts/high-dimensional-analysis-of-m-estimators/curvature.avif"
     width="500px"
     class="z-depth-1"
+    num=2
     caption="
         An illustration of the role of curvature in guaranteeing that
         \( \hd = \thatlambda - \ts \) is small when \( \lcal(\thatlambda) - \lcal(\ts) \) is small.
@@ -406,10 +412,10 @@ However, the convergence in loss by itself is insufficient to also ensure
 the convergence in parameters, $$\hd = \thatlambda - \ts$$. Instead, it also
 depends on the curvature of the loss function $$\lcal$$.
 
-Figure \ref{fig:curvature} illustrates the importance of curvature.
-In Figure \ref{fig:curvature}(a), $$\lcal$$ has high curvature, and so
+[Figure 2](#fig-2) illustrates the importance of curvature.
+In [Figure 2(a)](#fig-2), $$\lcal$$ has high curvature, and so
 having a small $$d\lcal$$ also implies a small $$\hd$$. On the other hand,
-in Figure \ref{fig:curvature}(b), $$\lcal$$ has an almost flat landscape
+in [Figure 2(b)](#fig-2), $$\lcal$$ has an almost flat landscape
 near $$\thatlambda$$, and hence even when $$d \lcal$$ is small,
 $$\hd$$ could still be large.
 
@@ -442,15 +448,15 @@ a neighborhood of $$\ts$$. This is because we are enforcing a lower bound on its
 
 This leads us to the definition of restricted strong convexity:
 
-{% include theorem.html 
+{% include theorem.md 
   type="definition"
   name="Restricted Strong Convexity"
   statement="
     The loss function satisfies a \( \textit{restricted strong convexity}\) (RSC)
     condition with curvature \( \kl > 0 \) and tolerance function \( \tl \) if
-    \begin{align}
+    \begin{align*}
         \delta \lcal(\Delta, \ts) \geq \kl \| \Delta \|^2 - \tl^2(\ts)
-    \end{align}
+    \end{align*}
     for all \( \Delta \in \ctriplet \).
   "
 %}
@@ -473,7 +479,7 @@ restricted strong convexity of the loss function (G2).
         The loss function $$\lcal$$ is convex and differentiable, and satisfies restricted strong convexity
         with curvature $$\kl$$ and tolerance $$\tl$$.
 
-{% include theorem.html 
+{% include theorem.md 
   type="theorem"
   name="Bounds for General Models"
   num="1 in (Negahban et al., 2009)"
@@ -484,34 +490,34 @@ restricted strong convexity of the loss function (G2).
     based on a strictly positive positive regularization constant
     \( \lambda_n \geq 2 \rs (\nabla \lcal (\ts)) \). Then any optimal solution
     \( \thatlambda \) to the convex program (\ref{eq:opt}) satisfies the bound
-    \begin{align}
+    \begin{align*}
         \| \thatlambda - \ts \|^2 \leq 9 \frac{\lambda_n^2}{\kl^2} \Psi^2(\mocal)
         + \frac{\lambda_n}{\kl} \left( 2 \tl^2 (\ts) + 4 \rcal (\ts_{\mcal^{\perp}}) \right).
-    \end{align}
+    \end{align*}
   "
 %}
 
 We will rely on the following lemmas that will be stated without proof due to space constraints:
 
-{% include theorem.html 
+{% include theorem.md 
   type="lemma"
   name="Deviation Inequalities"
   num="3 in (Negahban et al., 2009)"
   statement="
     For any decomposable regularizer and \( p \)-dimensional
     vectors \( \ts \) and \( \Delta \), we have
-    \begin{align}
+    \begin{align*}
         \rcal(\ts + \Delta) - \rcal(\ts) \geq
         \rcal(\Delta_{\mocalp}) - \rcal(\Delta_{\mocal}) - 2 \rcal(\ts_{\mcal^{\perp}}).
-    \end{align}
+    \end{align*}
     Moreover, as long as \( \lambda_n \geq 2 \rs (\nabla \lcal(\ts)) \) and \( \lcal \) is convex, we have
-    \begin{align}
+    \begin{align*}
         \lcal(\ts + \Delta) - \lcal(\ts) \geq - \frac{\lambda_n}{2} [\rcal(\Delta_{\mocal}) + \rcal(\Delta_{\mocalp})].
-    \end{align}
+    \end{align*}
   "
 %}
 
-{% include theorem.html 
+{% include theorem.md 
   type="lemma"
   num="4 in (Negahban et al., 2009)"
   statement="
@@ -522,8 +528,8 @@ We will rely on the following lemmas that will be stated without proof due to sp
 
 Note that this was similar to our previous analysis on restricted strong
 convexity where we only really need to consider error terms restricted to
-\( \ctriplet \) due to Lemma \ref{lemma:1}.  Therefore, it suffices to show
-\( \fcal(\Delta) > 0 \) to obtain a bound on \( \| \hd \| = \| \thatlambda - \ts\| \), 
+$$ \ctriplet $$ due to [Lemma 1](#lemma-1).  Therefore, it suffices to show
+$$ \fcal(\Delta) > 0 $$ to obtain a bound on $$ \| \hd \| = \| \thatlambda - \ts\| $$, 
 which completes the proof of Theorem 1.
 
 Define $$\fcal : \R^p \to \R$$ by

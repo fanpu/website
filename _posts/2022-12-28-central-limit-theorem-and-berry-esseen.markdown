@@ -37,7 +37,7 @@ converges in distribution to a standard normal. We first need to introduce the
 definition of convergence of probability distributions:
 
 
-{% include theorem.html 
+{% include theorem.md 
   type="definition"
   name="Convergence in Distribution"
   statement="
@@ -57,7 +57,7 @@ can be distributions that converge but disagree in value at points of discontinu
 
 The Central Limit Theorem can then be stated in the following form (there are many other equivalent statements):
 
-{% include theorem.html 
+{% include theorem.md 
   type="theorem"
   name="Central Limit Theorem"
   statement="
@@ -86,7 +86,7 @@ the respective moments of $$ Z $$.
 The moments of a random variable can be obtained from its moment-generating function (MGF),
 defined as follows:
 
-{% include theorem.html 
+{% include theorem.md 
   type="definition"
   name="Moment Generating Function"
   statement="
@@ -124,7 +124,7 @@ Substituting $$t=0$$ gives us the desired result.
 Distributions are determined uniquely by its moments under certain conditions. This is made precise
 in the following theorem:
 
-{% include theorem.html 
+{% include theorem.md 
   type="theorem"
   name="Sufficient Condition for Distribution to be Determined by Moments"
   statement="
@@ -148,7 +148,7 @@ recurrence must also be finite. So our standard normal is determined by its mome
 #### Method of Moments
 Now cue the theorem that ties things together:
 
-{% include theorem.html 
+{% include theorem.md 
   type="theorem"
   name="Method of Moments"
   statement="
@@ -277,7 +277,7 @@ The Berry-Esseen theorem solves this limitation by also providing explicit error
 This was proved independently by Andrew Berry and Carl-Gustav Esseen in the 40s,
 and the statement goes as follows:
 
-{% include theorem.html 
+{% include theorem.md 
   type="theorem"
   name="Berry-Esseen"
   statement="

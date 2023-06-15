@@ -1,6 +1,9 @@
 {%- assign img_path = include.path | remove: ".jpg" | remove: ".jpeg" | remove: ".png" | remove: ".tiff" | remove: ".avif" -%}
 
-<figure>
+<figure
+    {% if include.num %}
+      id="fig-{{ include.num }}"
+    {% endif %}>
   <picture>
     {% if site.imagemagick.enabled %}
     {% for i in site.imagemagick.widths -%}

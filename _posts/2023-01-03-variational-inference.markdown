@@ -89,7 +89,7 @@ and some easier to compute distribution $$Q$$, by modifying the
 The name variational inference comes from the calculus of variations, which uses
 small perturbations to find maxima/minimas of functionals.
 
-{% include theorem.html 
+{% include theorem.md 
   type="theorem"
   name="Gibbs Variational Principle"
   statement="
