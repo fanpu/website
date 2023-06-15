@@ -42,12 +42,6 @@
     <meta name="twitter:creator" content="@{{ page.author }}">
     <meta name="og:title"   content="{{ page.title }}">
 
-    {% if page.description %}
-    <meta name="og:description" content="{{ page.description }}">
-    {% else %}
-    <meta name="og:description" content="{{ site.description }}">
-    {% endif %}
-
     {% if page.cover %}
     <meta name="twitter:card"  content="summary_large_image">
     {% assign twitter_image_url = page.cover | prepend: '/assets/img/posts/' | relative_url %}
@@ -57,4 +51,11 @@
     <meta name="twitter:card"  content="summary">
     <meta name="og:image" content="{{ site.title_image }}">
     {% endif %}
+
+    {% if page.description %}
+    <meta name="og:description" content="{{ page.description }}">
+    {% else %}
+    <meta name="og:description" content="{{ site.description }}">
+    {% endif %}
+
     <!-- end of Twitter cards -->
