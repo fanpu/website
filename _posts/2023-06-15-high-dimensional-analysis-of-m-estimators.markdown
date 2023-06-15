@@ -12,7 +12,7 @@ toc:
 giscus_comments: true
 description: >
     This post provides a gentle walkthrough of the paper
-    ``A Unified Framework for High-Dimensional Analysis of \( M \)-Estimators with Decomposable Regularizers''
+    "A Unified Framework for High-Dimensional Analysis of \( M \)-Estimators with Decomposable Regularizers"
     by Negahban, Ravikumar, Wainwright, and Yu.
     The main result of the paper proves that the \( \ell_2 \)
     difference between any regularized \(M\)-estimator and its true parameter can
@@ -21,7 +21,7 @@ description: >
     The goal of this blog post is to provide the sufficient background for
     understanding the proof of this result, followed by a walkthrough of the
     proof itself.
-published: false
+published: true
 ---
 $$
     \newcommand{\rcal}{\mathcal{R}}
@@ -45,8 +45,6 @@ $$
     \newcommand{\kbb}{\mathbb{K}}
 $$
 
-TODO: on page 16 of the slides, change the 2 to s for the second equation
-
 # Introduction
 
 In high-dimensional statistical inference, it is common for the number of
@@ -59,7 +57,7 @@ Examples of such constraints that have been well-studied include
 linear regression with sparsity constraints, estimation of structured covariance
 or inverse covariance matrices, graphical model selection, sparse principal
 component analysis (PCA), low-rank matrix estimation, matrix decomposition problems
-and estimation of sparse additive nonparametric models \cite{paper}.
+and estimation of sparse additive nonparametric models [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731).
 
 In recent years, there has been a flurry of work on each of these individual specific cases.
 However, the authors of the paper in discussion poses the question of whether there is a way
@@ -68,7 +66,7 @@ and answers it in the affirmative. They showed that it is possible to bound
 the squared difference between any regularized $$M$$-estimator and its true
 parameter by (1) the decomposability of the regularization function, and (2)
 restricted strong convexity of the loss function. We will call this the "main theorem"
-in the remainder of the blog post, and this is referred to as ``Theorem 1'' in $$\cite{paper}$$.
+in the remainder of the blog post, and this is referred to as "Theorem 1" in [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731).
 
 In the remainder of the paper, we will develop the tools necessary to deeply
 understand and prove the result. Notation used will be consistent with the
@@ -80,7 +78,7 @@ In this section, we develop some of the necessary background and notation to bui
 
 ## Regularized $$M$$-estimators
 
-$$M$$-estimators ($$M$$ for ``maximum likelihood-type'') are solutions that minimize the sum of loss functions $$\rho$$:
+$$M$$-estimators ($$M$$ for "maximum likelihood-type") are solutions that minimize the sum of loss functions $$\rho$$:
 \begin{align}
     \that \in \argmin_\theta \sum_{i=1}^n \rho(x_i, \theta).
 \end{align}
@@ -145,6 +143,7 @@ Well, to see that \( \rs(v) \leq \| v \|_\infty \), observe that
              & = \| v \|_\infty,
         \end{align*}
         hence we have equality.
+
   "
 %}
 
@@ -161,19 +160,20 @@ The subspace compatibility constant is defined as follows:
   type="definition"
   name="Subspace Compatibility Constant"
   statement="
-    For any subspace \( \mcal \) of \( \R^p \), the \textit{subspace compatibility constant}
+    For any subspace \( \mcal \) of \( \R^p \), the \(\textit{subspace compatibility constant}\)
     with respect to the pair \( (\rcal, \| \cdot \|) \) is given by
-    \begin{align}
+
+    $$
         \varPsi (\mcal) \coloneqq \sup_{u \in \mcal \setminus \left\{ 0 \right\}} \frac{\rcal(u)}{\| u \|}.
-    \end{align}
-  "
+    $$
+    "
 %}
 
 It can be thought of as the Lipschitz constant of the regularizer with respect to the error norm
 restricted to values in $$\mcal$$,
 by considering the point where it can vary the most.
 
-## Projections [TODO check label] \label{sec:projection}
+## Projections
 Define the projection operator
 \begin{align}
     \Pi_{\mcal}(u) \coloneqq \argmin_{v \in \mcal} \| u - v \|
@@ -240,10 +240,12 @@ Now we can introduce the property of decomposability:
   name="Regularizer Decomposability"
   statement="
       Given a pair of subspaces \( \mcal \sse \mocal \), a norm-based regularizer
-    \( \rcal \) is \textit{decomposable} with respect to \( (\mocal, \mocalp) \) if
-    \begin{align}
+    \( \rcal \) is \(\textit{decomposable}\) with respect to \( (\mocal, \mocalp) \) if
+
+    $$
         \rcal(\theta + \gamma) = \rcal(\theta) + \rcal(\gamma)
-    \end{align}
+    $$
+
     for all \( \theta \in \mcal \) and \( \gamma \in \mocalp \).
   "
 %}
@@ -274,26 +276,26 @@ and the following example highlights one such case.
     we can define our model subspace \( \mcal \) as
 
     \[
-    \begin{align}
+    \begin{align*}
         \mcal(S) \coloneqq \left\{ \theta \in \R^p \mid \theta_j = 0 \quad \forall j \not\in S \right\},
-    \end{align}
+    \end{align*}
     \]
 
     i.e all the vectors in \( \R^p \) that only has support in \( S \). In this case, \( \mcal = \mocal \),
     and our orthogonal complement \( \mocalp \) is just
 
     \[
-    \begin{align}
+    \begin{align*}
         \mocalp(S) \coloneqq \left\{ \gamma \in \R^p \mid \gamma_j = 0 \quad \forall j \in S \right\}.
-    \end{align}
+    \end{align*}
     \]
 
     Then this setup is decomposable:
 
     \[
-    \begin{align}
+    \begin{align*}
         \| \theta + \gamma \|_1 = \| \theta_S + \gamma_{S^c} \|_1 = \| \theta_S \|_1 + \| \gamma_{S^c} \| = \| \theta \|_1 + \| \gamma \|_1
-    \end{align}
+    \end{align*}
     \] 
 
     by the Pythagorean theorem.
@@ -314,12 +316,12 @@ and the following example highlights one such case.
 %}
 
 Decomposability is important because it allows us to bound the error of the estimator.
-This is given in the following result, which is known as Lemma 1 in \cite{paper}:
+This is given in the following result, which is known as Lemma 1 in [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731):
 
 
 {% include theorem.html 
   type="lemma"
-  name="Lemma 1 in \cite{paper}"
+  name="Lemma 1 in [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731)"
   statement="
     Suppose that \( \lcal \) is a convex and differentiable function, and consider
     any optimal solution \( \that \) to the optimization problem
@@ -344,12 +346,12 @@ This is given in the following result, which is known as Lemma 1 in \cite{paper}
   "
 %}
 
-Recall from Section \ref{sec:projection} that
+Recall from the [Projections Section](#projections) that
 $$\Delta_{\mocalp}$$ represents the projection of $$\Delta$$ onto $$\mocalp$$, and similarly
 for the other quantities.
 Due to space constraints we are unable to prove Lemma \ref{lemma:1} in this survey,
 but it is very important in the formulation of restricted strong convexity, and in proving
-Theorem \ref{thm:1}.
+[Theorem 1](#thm-1).
 
 Figure \ref{fig:cone} provides a visualization of $$\ctriplet$$ in $$\R^3$$ in the
 sparse vectors setting. In this case, $$S = \left\{ 3 \right\}$$ with $$|S|=1$$,
@@ -386,7 +388,7 @@ However, in the general setting where $$\ts \not\in \mcal$$,
 then $$\rcal (\ts_{\mcalp}) > 0$$, and the set $$\ctriplet$$ will become a star-shaped set
 like what is shown in Figure \ref{fig:cone}(b).
 
-## Restricted Strong Convexity (RSC) of the Loss Function
+# Restricted Strong Convexity (RSC) of the Loss Function
 
 {% include figure.html 
     path="/assets/img/posts/high-dimensional-analysis-of-m-estimators/curvature.avif"
@@ -444,7 +446,7 @@ This leads us to the definition of restricted strong convexity:
   type="definition"
   name="Restricted Strong Convexity"
   statement="
-    The loss function satisfies a \textit{restricted strong convexity} (RSC)
+    The loss function satisfies a \( \textit{restricted strong convexity}\) (RSC)
     condition with curvature \( \kl > 0 \) and tolerance function \( \tl \) if
     \begin{align}
         \delta \lcal(\Delta, \ts) \geq \kl \| \Delta \|^2 - \tl^2(\ts)
@@ -456,11 +458,9 @@ This leads us to the definition of restricted strong convexity:
 We only need to consider error terms $$\Delta \in \ctriplet$$, since Lemma \ref{lemma:1}
 guarantees us that the error term will only lie in that set.
 
-In many statistical models, restricted strong convexity holds with $$\tl = 0$$,
-however it is required in more general settings, such as generalized linear models.
+In many statistical models, restricted strong convexity holds with $$\tl = 0$$, however, it is required in more general settings, such as generalized linear models.
 
-## Proof of Theorem 1 [TODO check] \label{sec:thm1-proof}
-
+# Proof of Theorem 1 
 We can now state and prove the main result of the paper.
 This will hold under the decomposability of the regularizer (G1), and the
 restricted strong convexity of the loss function (G2).
@@ -477,6 +477,7 @@ restricted strong convexity of the loss function (G2).
   type="theorem"
   name="Bounds for General Models"
   num="1 in (Negahban et al., 2009)"
+  id="thm-1"
   statement="
       Under conditions (G1) and (G2),
     consider the convex optimization problem (\ref{eq:opt})
@@ -560,7 +561,7 @@ $$
     \geq & \langle  \nabla \lcal (\ts), \Delta \rangle + \kl \| \Delta \|^2 - \tl^2(\ts) + \lambda_n \left\{
     \rcal(\Delta_{\mocalp}) - \rcal(\Delta_{\mocal}) - 2 \rcal(\ts_{\mcal^{\perp}})
     \right\} \\
-    & \qquad \text{(by Lemma 3 in \cite{paper})}.
+    & \qquad \text{(by Lemma 3 in [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731))}.
     \label{thm-deriv:1}
 \end{align}
 $$
@@ -573,7 +574,7 @@ $$
 \begin{align}
     | \langle  \nabla \lcal (\ts), \Delta \rangle |
     \leq                                             & \rs(\nabla \lcal(\ts)) \rcal(\Delta) & \text{(Cauchy-Schwarz using dual norms \( \rcal \) and \( \rs \))} \\
-    \leq                                             & \frac{\lambda_n}{2} \rcal(\Delta) & \text{(Theorem \ref{thm:1} assumption: \( \lambda_n \geq 2 \rs (\nabla \lcal(\ts)) \))},
+    \leq                                             & \frac{\lambda_n}{2} \rcal(\Delta) & \text{([Theorem 1](#thm-1) assumption: \( \lambda_n \geq 2 \rs (\nabla \lcal(\ts)) \))},
 \end{align}
 $$
 
@@ -704,7 +705,7 @@ $$
 \end{align}
 $$
 
-In \cite{paper}, they were able to show an upper bound of
+In [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731), they were able to show an upper bound of
 
 $$
 \begin{align}
@@ -721,7 +722,7 @@ term on the $$\tl^2(\ts)$$ term. It may be due to an overly coarse
 bound on my end applied in Equation \ref{eq:coarse-bound}, but it
 is still unclear to me how the $$\lambda_n$$ term can be produced.
 
-With Equation \ref{eq:ub}, we can hence apply Lemma 4 in \cite{paper}
+With Equation \ref{eq:ub}, we can hence apply Lemma 4 in [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731)
 to obtain the desired result that
 
 $$
@@ -734,25 +735,24 @@ $$
 This concludes the proof.
 
 # Conclusion
-
-In the proof of Theorem \ref{thm:1} in Section \ref{sec:thm1-proof}, we saw how
+In the [proof of Theorem 1](#proof-of-theorem-1), we saw how
 the bound is derived from the two key ingredients of the decomposability
 of the regularizer, and restricted strong convexity of the loss function.
 The decomposability of the regularizer allowed us to ensure that the
 error vector $$\hd$$ will stay in the set $$\ctriplet$$. This condition
-is then required in Lemma 4 of \cite{paper}, which allows us
+is then required in Lemma 4 of [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731), which allows us
 to bound $$\| \hd \|$$ given that $$\fcal(\Delta) > 0$$. In one of the
 steps where we were lower bounding $$\fcal(\Delta)$$ in the proof,
 we made use of the properties of restricted strong convexity.
 
-Theorem \ref{thm:1} provides a family of bounds for each decomposable
+[Theorem 1](#thm-1) provides a family of bounds for each decomposable
 regularizer under the choice of $$(\mcal, \mocalp)$$.
-The authors of \cite{paper} were able to use
-Theorem \ref{thm:1} to rederive both existing known results,
+The authors of [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731) were able to use
+[Theorem 1](#thm-1) to rederive both existing known results,
 and also derive new results on low-rank matrix estimation using the nuclear
 norm, minimax-optimal rates for noisy matrix completion, and noisy matrix
-decomposition. The reader is encouraged to refer to \cite{paper}
-for more details on the large number of corrollaries of Theorem \ref{thm:1}.
+decomposition. The reader is encouraged to refer to [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731)
+for more details on the large number of corrollaries of [Theorem 1](#thm-1).
 
 # Slides
 A condensed slide deck that introduces the key ideas of the post, but without
