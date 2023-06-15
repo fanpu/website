@@ -1,4 +1,9 @@
-<div class="{{ include.type | downcase }}">
+<div class="{{ include.type | downcase }}"
+    {% if include.id %}
+    id="{{ include.id }}"
+    {% endif %}
+
+>
     <div class="theorem-title">{{ include.type  | capitalize }}
         {% if include.num %}
             {{ include.num }}
