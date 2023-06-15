@@ -3,7 +3,7 @@ title: "CMU 15-712 Advanced Operating Systems and Distributed Systems Course Rev
 layout: post
 tags: [courses, cmu, systems]
 cover: santorini_church.avif
-cover_preview: santorini_church.avif
+cover_preview: santorini_church.jpg
 caption: Three Bells of Fira, Thera, Greece
 class: post-template
 author: fanpu
