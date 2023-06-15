@@ -7,6 +7,7 @@ nav: true
 nav_order: 10
 # display_categories: [machine-learning, cs]
 horizontal: false
+published: false
 ---
 
 <!-- pages/projects.md -->
