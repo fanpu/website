@@ -3,7 +3,7 @@ title: "CMU 15-712 Advanced Operating Systems and Distributed Systems Course Rev
 layout: post
 tags: [courses, cmu, systems]
 cover: santorini_church.avif
-cover_preview: santorini_church.jpg
+cover_preview: santorini_church.avif
 caption: Three Bells of Fira, Thera, Greece
 class: post-template
 author: fanpu
@@ -11,13 +11,12 @@ toc:
   sidebar: left
 giscus_comments: true
 description: >
-  15-712 Advanced Operating Systems and Distributed Systems was an excellent
-  seminar-based graduate course that took us on a whirlwind tour through many of
-  the most seminal SigOps Hall of Fame papers across several systems domains. It
-  will prepare you to be a great systems designer and researcher.  In this post,
-  I will share my experience in the class, the course structure and content,
-  what I thought were the key takeaways, and who this class would be suitable
-  for.
+  This was an excellent seminar-based graduate course that took us on a
+  whirlwind tour through many of the most seminal SigOps Hall of Fame papers
+  across several systems domains. It will prepare you to be a great systems
+  designer and researcher. In this post, I will share my experience in the
+  class, the course structure and content, what I thought were the biggest
+  takeaways, and who this class might be suitable for.
 ---
 
 This semester (Spring 2023), I took [15-712 Advanced Operating Systems and
