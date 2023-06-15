@@ -40,21 +40,21 @@
     <!-- Twitter cards -->
     <meta name="twitter:site"    content="@{{ site.twitter_username }}">
     <meta name="twitter:creator" content="@{{ page.author }}">
-    <meta name="twitter:title"   content="{{ page.title }}">
+    <meta name="og:title"   content="{{ page.title }}">
 
     {% if page.description %}
-    <meta name="twitter:description" content="{{ page.description }}">
+    <meta name="og:description" content="{{ page.description }}">
     {% else %}
-    <meta name="twitter:description" content="{{ site.description }}">
+    <meta name="og:description" content="{{ site.description }}">
     {% endif %}
 
     {% if page.cover %}
     <meta name="twitter:card"  content="summary_large_image">
     {% assign twitter_image_url = page.cover | prepend: '/assets/img/posts/' | relative_url %}
-    <meta name="twitter:image" content="http://graphics8.nytimes.com/images/2012/02/19/us/19whitney-span/19whitney-span-articleLarge.jpg">
+    <meta name="og:image" content="https://cdn.cms-twdigitalassets.com/content/dam/blog-twitter/official/universal-assets/Generic_BlogShare.jpg.twimg.768.jpg">
 
     {% else %}
     <meta name="twitter:card"  content="summary">
-    <meta name="twitter:image" content="{{ site.title_image }}">
+    <meta name="og:image" content="{{ site.title_image }}">
     {% endif %}
     <!-- end of Twitter cards -->
