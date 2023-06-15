@@ -48,9 +48,9 @@
     <meta name="twitter:description" content="{{ site.description }}">
     {% endif %}
 
-    {% if page.cover_preview %}
+    {% if page.cover %}
     <meta name="twitter:card"  content="summary_large_image">
-    {% assign twitter_image_url = page.cover_preview | prepend: '/assets/img/posts/' | relative_url %}
+    {% assign twitter_image_url = page.cover | prepend: '/assets/img/posts/' | relative_url %}
     <meta name="twitter:image" content="{{ site.url }}{{ twitter_image_url }}">
 
     {% else %}
