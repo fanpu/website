@@ -1,10 +1,10 @@
 ---
-title: "College Application FAQ WIP"
+title: "Advice for US College Applications"
 layout: post
-tags: [general, college]
-cover: dionysus_delphi.avif
-cover_preview: dionysus_delphi.avif
-caption: Theatre of Dionysus at Delphi, Greece
+tags: [college]
+cover: hwachong.avif
+cover_preview: hwachong.avif
+caption: Hwa Chong Institution, Singapore
 class: post-template
 author: fanpu
 toc:
@@ -33,6 +33,7 @@ application and definitively say that there were some critical deciding factors?
 - probably already repeated a bunch of times by your school college admission counsellors, but here for completeness
 
 ## Making Use of Opportunities
+Show 
 
 ## Not Where You Start, But Where You Finish
 
