@@ -22,16 +22,8 @@ description: >
 This semester (Spring 2023), I took [15-712 Advanced Operating Systems and
 Distributed Systems](https://www.cs.cmu.edu/~15712/) under professor [Phil
 Gibbons](http://www.cs.cmu.edu/~gibbons/) and his TA and also PhD advisee [Val
-Choung](http://nicebowlofsoup.com/). This was the first time I took
-a class under Phil (he usually teaches either this class or [15-745 Optimizing
-Compilers for Modern
-Architectures](http://www.cs.cmu.edu/afs/cs/academic/class/15745-s19/www/)),
-and interestingly enough this was the third time Val was my TA, the 
-previous two times being 15-330 Introduction to Computer Security
-in Fall 2019 and [15-410 Operating System Design and Implementation](https://www.cs.cmu.edu/~410/)
-in Spring 2020.
+Choung](http://nicebowlofsoup.com/). 
 
-# Overall Impression
 This class exceeded my expectations significantly.
 I found it especially meaningful and apt since this was my last systems class before I
 graduate, and the topics and discussions from class helped to unify all the
@@ -39,27 +31,6 @@ systems concepts that I had learnt from previous classes into a nice package
 informed by common underlying principles: from distributed systems, to
 networking, databases, filesystems, operating systems, and even machine learning
 systems. 
-
-# Why I Took The Class
-I had to take a systems class this semester to fulfill my graduation
-requirements for the MSCS program. I initially did include this class in my
-shortlist of systems classes to take, but then thought it was just going to be a
-paper reading class (not that I had been in one of such classes before, but it
-just did not sound very interesting and felt like something I could do by myself
-asynchronously after I graduate) and therefore was quite hesitant to take it.
-
-As such, during registration week I settled on [15-618 Parallel Computer Architecture and
-Programming](https://www.cs.cmu.edu/~418/),
-since it included topics on GPU programming that aligned with my current
-interests in machine learning. However, I did not feel like the class was
-sufficiently challenging for me after the first lecture, as it was a bit too
-slow-paced and simple for my liking as I already had exposure to most of the
-topics from other system classes that I had taken. I decided to switch
-to 15-712, and I knew immediately that it was the right class for me after the
-first lecture. 
-
-In a sense, this class was a hidden gem and I was really glad that I ended up
-taking it.
 
 # The First Lecture
 The first lecture went through 2 Wisdom Papers, which no one was expected
@@ -126,65 +97,6 @@ I mention the first lecture and the two papers that were discussed here not
 simply because they were interesting, but because they helped to set the tone
 and expectations for the rest of the semester going forward. The message is clear: this is going to be a practical and useful class that will help you on your journey to becoming great systems designers and researchers.
 
-# Course Structure
-There are three main components to the class: paper summaries,
-projects, and exams.
-
-## 1. Paper Summaries
-Before each lecture, the class is assigned a required reading and an optional reading. A paper summary of the required reading must be submitted before
-the class, which will discuss both readings. 
-
-The paper summary will contain 3 things: 
-1. The 3 most important things in the paper, 
-2. 1 most glaring deficiency of the paper (even highly celebrated papers have faults!), 
-3. A conclusion on how you will use lessons from this paper to inform you on how
-you will build systems in the future.
-
-It took me on average 2-4 hours to read each paper and around 15 minutes for the summary.
-
-The lectures for this class are front-loaded, meaning that during the first
-two-thirds of the semester, you will meet 3 times a week for 80 minutes each,
-while there will be no lectures at all during the final third of the semester,
-and so "on average" throughout the semester you will meet twice a week. This is so that
-students have enough knowledge and content to begin working on their course
-projects early on in the semester.
-
-There will be 3 short breaks in each lecture, where all students will get into
-breakout groups and share and discuss among themselves one of the prompts
-for the paper based on their paper summaries. Afterwards, all groups
-are invited to share what they thought.
-
-Reading and writing the paper summaries are the only "homework" you will get in
-this class.
-
-## 2. Course Project
-There is also a semester-long course project with a significant systems
-component in groups of three. This will begin in earnest after a third of the
-semester, and all the project groups met with Phil and the TA Val once every two
-weeks.  The deliverables include a project proposal, an interim report, a final
-presentation, and a final report. The course project will be the
-largest constituent of your final grade.
-
-## 3. Midterms
-Finally, there are two midterm exams, which are taken during class time.
-The first is taken in the middle of the semester, and the second is taken
-after all lectures have concluded.
-
-Each midterm will cover content from a shortlisted selection of 10
-of the required readings. There will be 9 questions on the midterm,
-which covers 9 of the 10 papers, and you are only required to answer 7 of
-the problems.
-
-The course staff will also provide two past year exams to practice on, though
-some of the readings may have changed since. 
-
-It admittedly does seem quite daunting to have to study and be familiar with 10
-papers spanning very different topics. I did not have time to actually re-read
-all 10 papers to prepare for the midterm, and so the way I prepared was to go
-through all the lecture slides again, re-read the most important sections of the
-paper, and skim through the rest. Afterward, I attempted the past exams to fill
-in any gaps that I may have missed. This strategy allowed me to do fairly well
-on the exam.
 
 # Course Content
 
@@ -265,20 +177,6 @@ with a practical implementation that optimizes both cluster-wide and per-job par
 
 ## Part 7: Emerging Platforms
 - [LineFS: Efficient SmartNIC Offload of a Distributed File System with Pipeline Parallelism (Kim'21), SOSP'21 best paper](https://www.cs.cmu.edu/~15712/papers/kim21.pdf) - optimizing the performance of distributed file systems (DFS) by decomposing DFS operations into pipelined stages and offloading networked stages to a SmartNIC asynchronously
-
-# Workload
-The class has a moderate workload for a systems class. Expect to spend 10-12 hours 
-a week on the readings and paper summaries while lectures are ongoing, probably
-a couple more hours once the projects get into motion midway through the
-semester, and for it to consume a significant portion of your existence in the
-last two weeks before the final presentations.
-
-It is a far less demanding and stressful class than the legendary [15-410/605
-Operating System Design and Implementation](https://www.cs.cmu.edu/~410/) class, 
-so don't let the "advanced" in the course title scare you off from taking this class.
-After all, most people taking this class are Ph.D. students who have their
-own research to work on and can't exactly spend all their time on courses,
-unlike undergraduates.
 
 # Takeaways From The Class
 Here are my thoughts on the key takeaways from the class.
@@ -363,6 +261,80 @@ from many rounds of feedback during past iterations.  It is rich in content,
 is accessible and yet challenging to students from a wide range of backgrounds,
 and will prepare one well for building systems in the future, be it in 
 academia or industry.
+# Course Structure
+There are three main components to the class: paper summaries,
+projects, and exams.
+
+## 1. Paper Summaries
+Before each lecture, the class is assigned a required reading and an optional reading. A paper summary of the required reading must be submitted before
+the class, which will discuss both readings. 
+
+The paper summary will contain 3 things: 
+1. The 3 most important things in the paper, 
+2. 1 most glaring deficiency of the paper (even highly celebrated papers have faults!), 
+3. A conclusion on how you will use lessons from this paper to inform you on how
+you will build systems in the future.
+
+It took me on average 2-4 hours to read each paper and around 15 minutes for the summary.
+
+The lectures for this class are front-loaded, meaning that during the first
+two-thirds of the semester, you will meet 3 times a week for 80 minutes each,
+while there will be no lectures at all during the final third of the semester,
+and so "on average" throughout the semester you will meet twice a week. This is so that
+students have enough knowledge and content to begin working on their course
+projects early on in the semester.
+
+There will be 3 short breaks in each lecture, where all students will get into
+breakout groups and share and discuss among themselves one of the prompts
+for the paper based on their paper summaries. Afterwards, all groups
+are invited to share what they thought.
+
+Reading and writing the paper summaries are the only "homework" you will get in
+this class.
+
+## 2. Course Project
+There is also a semester-long course project with a significant systems
+component in groups of three. This will begin in earnest after a third of the
+semester, and all the project groups met with Phil and the TA Val once every two
+weeks.  The deliverables include a project proposal, an interim report, a final
+presentation, and a final report. The course project will be the
+largest constituent of your final grade.
+
+## 3. Midterms
+Finally, there are two midterm exams, which are taken during class time.
+The first is taken in the middle of the semester, and the second is taken
+after all lectures have concluded.
+
+Each midterm will cover content from a shortlisted selection of 10
+of the required readings. There will be 9 questions on the midterm,
+which covers 9 of the 10 papers, and you are only required to answer 7 of
+the problems.
+
+The course staff will also provide two past year exams to practice on, though
+some of the readings may have changed since. 
+
+It admittedly does seem quite daunting to have to study and be familiar with 10
+papers spanning very different topics. I did not have time to actually re-read
+all 10 papers to prepare for the midterm, and so the way I prepared was to go
+through all the lecture slides again, re-read the most important sections of the
+paper, and skim through the rest. Afterward, I attempted the past exams to fill
+in any gaps that I may have missed. This strategy allowed me to do fairly well
+on the exam.
+
+# Workload
+The class has a moderate workload for a systems class. Expect to spend 10-12 hours 
+a week on the readings and paper summaries while lectures are ongoing, probably
+a couple more hours once the projects get into motion midway through the
+semester, and for it to consume a significant portion of your existence in the
+last two weeks before the final presentations.
+
+It is a far less demanding and stressful class than the legendary [15-410/605
+Operating System Design and Implementation](https://www.cs.cmu.edu/~410/) class, 
+so don't let the "advanced" in the course title scare you off from taking this class.
+After all, most people taking this class are Ph.D. students who have their
+own research to work on and can't exactly spend all their time on courses,
+unlike undergraduates.
+
 
 # Our Course Project, and Reflections
 Our course project was on the automated optimal scheduling of data in dynamic neural
@@ -414,6 +386,27 @@ second midterm.
 When I took the class, all the students were either Masters or Ph.D. students.
 Strong undergraduates with sufficient background would also definitely do well
 in the class.
+
+# Why I Took This Class
+I had to take a systems class this semester to fulfill my graduation
+requirements for the MSCS program. I initially did include this class in my
+shortlist of systems classes to take, but then thought it was just going to be a
+paper reading class (not that I had been in one of such classes before, but it
+just did not sound very interesting and felt like something I could do by myself
+asynchronously after I graduate) and therefore was quite hesitant to take it.
+
+As such, during registration week I settled on [15-618 Parallel Computer Architecture and
+Programming](https://www.cs.cmu.edu/~418/),
+since it included topics on GPU programming that aligned with my current
+interests in machine learning. However, I did not feel like the class was
+sufficiently challenging for me after the first lecture, as it was a bit too
+slow-paced and simple for my liking as I already had exposure to most of the
+topics from other system classes that I had taken. I decided to switch
+to 15-712, and I knew immediately that it was the right class for me after the
+first lecture. 
+
+In a sense, this class was a hidden gem and I was really glad that I ended up
+taking it.
 
 # Acknowledgments
 I would like to express my gratitude to [Albert
