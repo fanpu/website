@@ -157,14 +157,49 @@ you might be interested in directly.
 - 36-708 &nbsp; **[The ABCDE of Statistical Methods in Machine Learning](https://36708.github.io/)**, [Aaditya Ramdas](https://www.stat.cmu.edu/~aramdas/)
   {: .course-item #course36708 }
 
+  I initially did not notice this course, as I thought ABCDE meant just the basics.
+  However, what the course is actually about is a journey through various
+  methods in statistical machine learning, viewed from the following lens:
+  - **A**lgorithm design principles,
+  - **B**ias-variance trade-off,
+  - **C**omputational and memory considerations, **C**alibration, **C**onformal prediction,
+  - **D**ata analysis,
+  - **E**xplainability and interpretability.
+
+  Aaditya is really clear, and he will re-iterate the important
+  points many times throughout the class, sometimes too many times in my opinion,
+  which was fine but it would also be good to learn more content instead.  I
+  also heard from some other students that he is one of the best lecturers in
+  the stats department.
+  
+  Most of the class is on non-parametric methods, covering
+  techniques like nearest neighbor methods, distribution-free predictive inference,
+  calibration, decision trees, bagging, random forests, stacking, boosting,
+  reproducing kernel Hilbert spaces (RKHS), kernel methods like kernel
+  ridge regression and kernel PCA, Shapley values, spectral PCA,
+  and some basic deep learning topics like deep PCA.
+
+  I found the class very practical and helpful, and learned a lot as someone
+  with no data science and practical machine learning background. This was
+  especially from the many discussions on which techniques were suitable for
+  which contexts, according to the ABCDE methodology.
+  
+  A lot of the topics in this course were familiar to other students who came
+  from a traditional stats background, and I feel like you might get bored in
+  this class if you already have a pretty solid stats foundation. Otherwise, 
+  there is a lot you'll learn.
+
+  The midterms and homework were both relatively chill. Homework included both
+  theoretical derivations, and also experiments on datasets using methods
+  learned in class.
+
 - 21-329 &nbsp; **Set Theory**, Benjamin Siskind
   {: .course-item #course36708 }
 
-  I initially got interested in this class as quite a couple of theorem from my
+  I initially got interested in this class as quite a couple of theorems from my
   other classes appealed to important results from set theory, such as Zorn's
-  Lemma for proving Tychonoff's theorem. Since set theory is such a foundational
-  topic in mathematics, I decided to take it to satisfy my own intellectual
-  curiosity.
+  Lemma used for proving Tychonoff's theorem. Since set theory is such a foundational
+  topic in mathematics, I wanted to take it to satisfy my curiosity.
 
   This course covered all the chapters in [A Course on Set Theory](https://www.cambridge.org/core/books/course-on-set-theory/9E65D5D9CA561CA2D87F91B21B0D117D)
   apart from 6, i.e ZFC, order, cardinality, trees, and filters and ideals.
@@ -225,23 +260,31 @@ you might be interested in directly.
 I TA'd for [10-708 Probabilistic Graphical
 Models](https://andrejristeski.github.io/10708-S23/) under [Andrej
 Risteski](https://www.andrew.cmu.edu/user/aristesk/) this semester.
+It was a fun experience and not as stressful as I had feared. Being
+able to lead 2 of the recitations was one of the highlights of my semester.
 
-I dropped 21-640 Functional Analysis halfway through the semester, as this
-iteration of the course offering depended on knowledge of content from 21-720 Measure Theory and Integration
-in order to motivate and develop many of the more interesting applications in the subject.
-I was trying to binge-watch [recorded
-lecture](https://www.math.cmu.edu/~gautam/sj/teaching/2020-21/720-measure/lectures.html)
-videos from a past offering of
-Measure Theory and
-Integration](https://www.math.cmu.edu/~gautam/sj/teaching/2020-21/720-measure/lectures.html)
-taught by Gautam Iyer during the Covid semester in the first month of the semester,
-which helped for a few weeks but eventually was still insufficient 
-as you really had to also work through all the homework in order
-to truly understand the material and know how to apply it.  The other
-requirement for the course is fundamentals in topology, i.e. first half of 21-640 General
-Topology which I took the previous semester.
+I also continued staying in an advisory role for
+[Autolab](https://autolabproject.com/), being generally quite hands-off.
 
-Reviews for this semester will be updated soon :)
+This semester was rather risky for me because I did not have the necessary
+prerequisites for over half of my classes. I was missing
+[36-705 Intermediate Statistics](https://www.stat.cmu.edu/~larry/=stat705/)
+for [10-716](#course10716), [36-708](#course36708), [36-709](#course36709), 
+and missing [21-720 Measure Theory and Integration](https://www.math.cmu.edu/~gautam/sj/teaching/2022-23/720-measure/) for [21-640]. 
+It was also a difficult and tiring process to get into [36-709](#course36709) as
+the class was a required stats Ph.D. course that was generally very full, and
+they had no reservations for CS majors. I ended up reading through some of the
+lecture notes of [36-705](https://www.stat.cmu.edu/~larry/=stat705/)
+over the winter break before the semester began to insure against the worst-case
+scenario.
+
+I ended up dropping 21-640 Functional Analysis halfway through the semester
+as it became increasingly difficult to do (and even understand) the homework without
+the necessary measure theory background.
+While 21-720 was not listed as a prerequisite
+on SIO for this course, it was announced as such (along with [21-640 General
+Topology](#course21640)) by the instructor during the first class, so as to
+motivate and develop many of the more interesting applications in the subject.
 
 ### Fall 2022
 
