@@ -170,7 +170,8 @@ They are relieved that they are freed from the rat race, spend their semesters
 enjoying themselves, and their summers traveling around. They will
 most likely not have any compelling financial reasons to break their bond and
 end up as a mediocre-performing civil servant.
-This is okay since you fulfilled your duty as a scholar.
+This is good since you fulfilled your duty, and we also
+need good workers on top of good leaders in the civil service.
 
 If you think you are the second type, re-consider
 if a scholarship is right for you.
@@ -435,7 +436,8 @@ needed them and were denied the opportunity to study overseas, but wastes both t
 
 Remember, a scholarship is not free and it is not designed with your best
 interests in mind. When you take a scholarship, you give up your freedom and the
-ability to chart your future.  Whether this is a good trade depends on your
-unique circumstances.
+ability to chart your future. It is now the government's prerogative to decide
+how to best utilize you as a human resource.  Whether this is a good trade
+depends on your unique circumstances.
 
 *Banner picture: A waterfall along Half Dome Trail, Yosemite National Park*
