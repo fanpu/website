@@ -13,23 +13,29 @@ giscus_comments: true
 description: >
 published: false
 ---
-
-# TODO fanpu: check all TODOs before publishing
-
 Computer systems is the art and science of designing and building performant,
 reliable, and secure systems. The remarkable development of computer systems has
 brought about the third industrial revolution and created the greatest economic
 opportunities of our times. 
-From operating systems, to compilers that form the genesis of all our software,
-to the Internet and distributed systems powering services that we rely on daily,
-it is hard to imagine any aspect of our lives that has not been transformed in
-one way or another due to computer systems. 
 
-In this post, I talk about why one should study Computer Systems.
-The context of the post is specifically targeted at underclassmen studying
-Computer Science at Carnegie Mellon University deciding which concentration to
-pursue as part of their degree requirements, but the underlying ideas and
+From operating systems that run all our software, to compilers that lay the
+foundation of all our programs, and even the Internet and distributed systems
+powering services that we rely on daily, it is hard to imagine any aspect of our
+lives that has not been transformed in one way or another due to computer
+systems. 
+
+In this post, I discuss why one should study Computer Systems.
+
+
+The context of the post is targeted at undergraduates studying
+Computer Science at Carnegie Mellon University, where
+a common 
+
+ wondering which concentration to
+pursue as part of their degree requirements. but 
+the underlying ideas and
 principles are general and will be helpful regardless of your background.
+
 
 ## The Computer Systems Concentration
 This section will briefly introduce the Computer Systems concentration, and what

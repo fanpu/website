@@ -1,5 +1,5 @@
 ---
-title: "Advice for US College Applications"
+title: "Tips for US College Applications"
 layout: post
 tags: [college]
 cover: hwachong.avif
@@ -33,6 +33,10 @@ application and definitively say that there were some critical deciding factors?
 - probably already repeated a bunch of times by your school college admission counsellors, but here for completeness
 
 ## Making Use of Opportunities
+Due to the large diversity in applicant backgrounds (and in particular for
+international applicants), admission counselors will consider your application in
+the context of your specific background. This means that while 
+
 Show 
 
 ## Not Where You Start, But Where You Finish
