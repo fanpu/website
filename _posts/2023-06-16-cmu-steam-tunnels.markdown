@@ -164,8 +164,7 @@ Hammerschlag radio tower:
   width="400px"
   class="z-depth-1" 
   caption="The Hammerschlag tower, which houses the Carnegie Tech Radio Club
-  (W3VC) and contains both repeaters and transmitters. WRCT 88.3FM is broadcast
-  from this tower."
+  (W3VC) and contains both repeaters and transmitters."
 %}
 
 {% include figure.html 
@@ -187,7 +186,9 @@ they opened an open-air cafe here. It has pretty nice panoramic views of the ent
 
 And that's it for the tour!
 
-# Acknowledgements
-I would like to thank [SLICE](https://www.cmu.edu/student-affairs/slice/) for organizing this trip, and my friend [Justin
+# Acknowledgments
+I would like to thank [SLICE](https://www.cmu.edu/student-affairs/slice/) for organizing this trip, my friend [Justin
 Sun](https://www.linkedin.com/in/justin-sun-92b691169/) who also went on this
-little adventure with me for proofreading this post.
+little adventure with me for proofreading this post, and [Joey Li](https://www.linkedin.com/in/joseph-x-li/)
+for pointing out a mistake in the post, where I previously erroneously claimed
+that WRCT 88.3FM was also broadcast from Hammerschlag tower.
