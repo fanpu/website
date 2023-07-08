@@ -521,6 +521,27 @@ theory_courses:
       - undergraduate
       - theory
 
+  - name: 15-850 Advanced Algorithms
+    url: http://www.cs.cmu.edu/~15850/
+    description: >
+      An intensive graduate course on the design and analysis of algorithms. This
+      course is primarily aimed at graduate and advanced undergraduate students
+      interested in doing research in theoretical computer science. It is more
+      specialized and in-depth than the graduate level Algorithms in the Real
+      World course (15-750), and the undergraduate/masters' level Algorithms
+      course (15-451/651). We will cover advanced algorithmic ideas (some
+      classical, some very recent), and the theory behind it (theorems, proofs).
+      For topics that were covered in 451/750, the goal is to cover advanced
+      content, proofs, and new techniques.
+    panopto_link: https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%2253c58248-7fd4-4f71-8774-af85013a570a%22
+    semester: Spring 2023
+    instructors: 
+      - name: Anupam Gupta
+        website: http://www.cs.cmu.edu/~anupamg/
+    tags:
+      - graduate
+      - theory
+
   - name: 15-855 Graduate Complexity Theory
     url: http://www.cs.cmu.edu/~odonnell/complexity17/
     description: >
