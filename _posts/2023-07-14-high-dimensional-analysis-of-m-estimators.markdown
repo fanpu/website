@@ -765,7 +765,7 @@ the regularizer, and restricted strong convexity for the purposes of motivating
 {% pdf "/assets/presentations/A-Unified-Framework-For-High-Dimensional-Analysis-Of-M-Estimators.pdf" no_link %}
 
 # Acknowledgments
-I would like to thank my friend [Josh
+I would like to thank my dear friend [Josh
 Abrams](https://www.linkedin.com/in/josh-abrams-78a4a6134/)
 for helping to review and provide valuable suggestions for this post!
 
