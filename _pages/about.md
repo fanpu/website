@@ -38,7 +38,7 @@ theoretical computer science and mathematics. My eventual goal is to build a
 startup in AI/ML using the things that I've learnt, for the betterment of
 humanity. 
 
-In my free time, I enjoy bouldering, running, learning new things, writing new
+In my free time, I enjoy bouldering, K-pop dancing, running, reading and learning new things, writing 
 things for my blog, and watching anime. I used to do sprint canoe competitively.
 If I have an extended break I enjoy traveling, especially hiking and exploring
 the great outdoors. Most of the banner pictures on my blog posts were taken
