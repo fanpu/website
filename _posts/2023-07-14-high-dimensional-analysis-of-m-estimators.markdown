@@ -93,7 +93,7 @@ If we add a regularization term $$\rcal$$ to penalize complexity of the model, s
   name="Lasso Program"
   statement="
     The Lasso program is an example of a regularized \( M \)-estimator, where a
-    \( \ell_1 \) regurization penalty is applied:
+    \( \ell_1 \) regularization penalty is applied:
     $$
         \that \in \argmin_{\theta \in \R^d} \left\{
         \frac{1}{2n} \| y - \bX \theta \|_2^2 + \lambda_n \| \theta \|_1
@@ -160,7 +160,7 @@ The subspace compatibility constant is defined as follows:
   type="definition"
   name="Subspace Compatibility Constant"
   statement="
-    For any subspace \( \mcal \) of \( \R^p \), the \(\textit{subspace compatibility constant}\)
+    For any subspace \( \mcal \) of \( \R^p \), the <i>subspace compatibility constant</i>
     with respect to the pair \( (\rcal, \| \cdot \|) \) is given by
 
     $$
@@ -240,7 +240,7 @@ Now we can introduce the property of decomposability:
   name="Regularizer Decomposability"
   statement="
       Given a pair of subspaces \( \mcal \sse \mocal \), a norm-based regularizer
-    \( \rcal \) is \(\textit{decomposable}\) with respect to \( (\mocal, \mocalp) \) if
+    \( \rcal \) is <i>decomposable</i> with respect to \( (\mocal, \mocalp) \) if
 
     $$
         \rcal(\theta + \gamma) = \rcal(\theta) + \rcal(\gamma)
@@ -354,7 +354,7 @@ This is given in the following result, which is known as Lemma 1 in [(Negahban e
 Recall from the [Projections Section](#projections) that
 $$\Delta_{\mocalp}$$ represents the projection of $$\Delta$$ onto $$\mocalp$$, and similarly
 for the other quantities.
-Due to space constraints we are unable to prove Lemma \ref{lemma:1} in this survey,
+Due to space constraints, we are unable to prove Lemma [Lemma 1](#lemma-1) in this survey,
 but it is very important in the formulation of restricted strong convexity, and in proving
 [Theorem 1](#thm-1).
 
@@ -452,7 +452,7 @@ This leads us to the definition of restricted strong convexity:
   type="definition"
   name="Restricted Strong Convexity"
   statement="
-    The loss function satisfies a \( \textit{restricted strong convexity}\) (RSC)
+    The loss function satisfies a <i>restricted strong convexity</i> (RSC)
     condition with curvature \( \kl > 0 \) and tolerance function \( \tl \) if
     \begin{align*}
         \delta \lcal(\Delta, \ts) \geq \kl \| \Delta \|^2 - \tl^2(\ts)
@@ -678,8 +678,8 @@ To find such a sufficiently large $$\| \Delta \|$$, write
 $$
 \begin{align}
     a & = \kl,                                                     \\
-    b & = -\frac{3\lambda_n}{2} \varPsi (\mocal),                  \\
-    c & = -\tau_{\lcal}^2 (\ts) - 2 \lambda_n \rcal(\ts_{\mcalp}), \\
+    b & = \frac{3\lambda_n}{2} \varPsi (\mocal),                  \\
+    c & = \tau_{\lcal}^2 (\ts) + 2 \lambda_n \rcal(\ts_{\mcalp}), \\
 \end{align}
 $$
 
@@ -688,7 +688,7 @@ such that we have
 $$
 \begin{align}
     \fcal (\Delta)
-        & \geq a \| \Delta \|^2 + b \| \Delta \| + c.
+        & \geq a \| \Delta \|^2 - b \| \Delta \| - c.
 \end{align}
 $$
 
@@ -697,17 +697,12 @@ Then the square of the rightmost intercept is given by the squared quadratic for
 $$
 \begin{align}
     \| \Delta \|^2
-        & = \left( \frac{-b + \sqrt{b^2 - 4ac}}{2a} \right)^2                                                 \\
-        & = \frac{b^2 - 2b\sqrt{b^2 - 4ac} + b^2 - 4ac}{4a^2}                                                 \\
-        & = \frac{b^2 - 2ac - b\sqrt{b^2 - 4ac}}{2a^2}                                                        \\
-        & \leq \frac{b^2 - 2ac}{2a^2}         \label{eq:coarse-bound}                                         \\
-        & = \frac{b^2}{2a^2} - \frac{c}{a}                                                                    \\
-        & = \frac{9 \lambda_n^2 \varPsi (\mocal)}{8 \kl^2}
-    + \frac{ \tau_{\lcal}^2 (\ts) + 2 \lambda_n \rcal(\ts_{\mcalp}) }{\kl} & \text{(Substituting in \(a, b, c\))} \\
-        & \leq \frac{9 \lambda_n^2 \varPsi (\mocal)}{\kl^2} +
-    \frac{1}{\kl} \left\{
-    2\tau_{\lcal}^2 (\ts) + 4 \lambda_n \rcal(\ts_{\mcalp})
-    \right\}.
+        & = \left( \frac{-(-b) + \sqrt{b^2 - 4a(-c)}}{2a} \right)^2                                                 \\
+        & = \left( \frac{b + \sqrt{b^2 + 4ac}}{2a} \right)^2                                                 \\
+        & \leq \left( \frac{\sqrt{b^2 + 4ac}}{a} \right)^2 & \text{($b \leq \sqrt{b^2 + 4ac}$)}                                              \label{eq:coarse-bound}  \\
+        & = \frac{b^2 + 4ac}{a^2}                                                 \\
+        & = \frac{9 \lambda_n^2 \varPsi^2 (\mocal)}{4 \kl^2}
+    + \frac{ 4 \tau_{\lcal}^2 (\ts) + 8 \lambda_n \rcal(\ts_{\mcalp}) }{\kl}. & \text{(Substituting in \(a, b, c\))} \\
 \end{align}
 $$
 
@@ -716,17 +711,19 @@ In [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731), they were able to
 $$
 \begin{align}
     \| \Delta \|^2
-        & \leq \frac{9 \lambda_n^2 \varPsi (\mocal)}{\kl^2} +
+        & \leq \frac{9 \lambda_n^2 \varPsi^2 (\mocal)}{\kl^2} +
     \frac{\lambda_n}{\kl} \left\{
     2\tau_{\lcal}^2 (\ts) + 4 \rcal(\ts_{\mcalp})
     \right\}, \label{eq:ub}
 \end{align}
 $$
 
-but I am unsure about how they managed to place the $$\lambda_n$$
-term on the $$\tl^2(\ts)$$ term. It may be due to an overly coarse
+but I did not manage to figure out how they managed to produce a $$\lambda_n$$
+term beside the $$\tl^2(\ts)$$ term. All other differences are just 
+constant factors. It may be due to an overly coarse
 bound on my end applied in Equation \ref{eq:coarse-bound}, but it
-is still unclear to me how the $$\lambda_n$$ term can be produced.
+is unclear to me how the $$\lambda_n$$ term can be applied on only
+the $$\tl^2(\ts)$$ term without affecting the $$\rcal(\ts_{\mcalp})$$ term.
 
 With Equation \ref{eq:ub}, we can hence apply Lemma 4 in [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731)
 to obtain the desired result that
