@@ -768,13 +768,6 @@ norm, minimax-optimal rates for noisy matrix completion, and noisy matrix
 decomposition. The reader is encouraged to refer to [(Negahban et al., 2009)](https://arxiv.org/abs/1010.2731)
 for more details on the large number of corrollaries of [Theorem 1](#thm-1).
 
-# Slides
-A condensed slide deck that introduces the key ideas of the decomposability of
-the regularizer, and restricted strong convexity for the purposes of motivating
-[Theorem 1](#thm-1) is provided below.
-
-{% pdf "/assets/presentations/A-Unified-Framework-For-High-Dimensional-Analysis-Of-M-Estimators.pdf" no_link %}
-
 # Acknowledgments
 I would like to thank my dear friend [Josh
 Abrams](https://www.linkedin.com/in/josh-abrams-78a4a6134/)
