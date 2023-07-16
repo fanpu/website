@@ -774,7 +774,7 @@ Abrams](https://www.linkedin.com/in/josh-abrams-78a4a6134/)
 for helping to review and provide valuable suggestions for this post!
 
 # Citations
-- Negahban, S., Yu, B., Wainwright, M. J., and Ravikumar, P. [A unified
+1. Negahban, S., Yu, B., Wainwright, M. J., and Ravikumar, P. [A unified
 framework for high-dimensional analysis of m-estimators with decomposable
 regularizers](https://proceedings.neurips.cc/paper_files/paper/2009/file/dc58e3a306451c9d670adcd37004f48f-Paper.pdf).
 In Bengio, Y., Schuurmans, D., Lafferty, J., Williams, C., and Culotta, A.
