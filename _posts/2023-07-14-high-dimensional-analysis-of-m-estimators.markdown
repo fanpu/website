@@ -11,16 +11,27 @@ toc:
   sidebar: left
 giscus_comments: true
 description: >
-    This post provides a gentle walkthrough of the paper
+    Imagine doing high-dimensional statistical inference,
+    but instead of repeatedly studying different settings with specific
+    low-dimensional constraints (such as linear
+    regression with sparsity constraints, or estimation
+    of structured covariance matrices), there is a
+    method for performing a unified analysis using appropriate
+    notions. 
+    <br>
+    <br>
+    Well, you're in luck!
     'A Unified Framework for High-Dimensional Analysis of \( M \)-Estimators with Decomposable Regularizers'
-    by Negahban, Ravikumar, Wainwright, and Yu.
-    The main result of the paper proves that the \( \ell_2 \)
+    by Negahban, Ravikumar, Wainwright, and Yu
+    shows that the \( \ell_2 \)
     difference between any regularized \(M\)-estimator and its true parameter can
-    be bounded if the regularization function is decomposabile, and the loss
+    be bounded if the regularization function is decomposable, and the loss
     function satisfies restricted strong convexity.
-    The goal of this blog post is to provide the sufficient background for
-    understanding the proof of this result, followed by a walkthrough of the
-    proof itself.
+    <br>
+    <br>
+    The goal of this post is to provide intuition for the result
+    and develop sufficient background for understanding the proof of this
+    result, followed by a walkthrough of the proof itself.
 published: true
 ---
 $$
