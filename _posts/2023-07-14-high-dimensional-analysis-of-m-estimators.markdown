@@ -1,7 +1,7 @@
 ---
 title: "A Unified Framework for High-Dimensional Analysis of M-Estimators with Decomposable Regularizers: A Guided Walkthrough"
 layout: post
-tags: [machine-learning, statistics]
+tags: [statistics, machine-learning]
 cover: dionysus_delphi.avif
 cover_preview: dionysus_delphi.avif
 caption: Theatre of Dionysus at Delphi, Greece
