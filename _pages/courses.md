@@ -38,6 +38,8 @@ For ease of navigation, I've also categorized the classes that I've taken into
 the areas that they fall under, so you can just access the ones that
 you might be interested in directly.
 
+### Computer Science Theory & Algorithms                                          
+
 | Computer Science Theory & Algorithms                                          |
 | ----------------------------------------------------------------------------- |
 | [15-859 CC Algorithms for Big Data](#course15859CC)                           |
@@ -53,6 +55,10 @@ you might be interested in directly.
 | [15-251 Great Ideas in Theoretical Computer Science](#course15251)            |
 {: .table .table-bordered .table-hover .table-sm }
 
+<br>
+
+### Machine Learning, Statistics, and Artificial Intelligence
+
 | Machine Learning & AI                                                       |
 | --------------------------------------------------------------------------- |
 | [10-716 Advanced Machine Learning: Theory and Methods](#course10716)        |
@@ -66,6 +72,10 @@ you might be interested in directly.
 | [15-784 Foundations of Cooperative AI](#course15784)                        |
 | [16-385 Computer Vision](#course16385)                                      |
 {: .table .table-bordered .table-hover .table-sm }
+
+<br>
+
+### Computer Systems
 
 | Computer Systems                                                          |
 | ------------------------------------------------------------------------- |
@@ -81,6 +91,10 @@ you might be interested in directly.
 | [15-213 Introduction to Computer Systems](#course15213)                   |
 {: .table .table-bordered .table-hover .table-sm }
 
+<br>
+
+### Programming Language Theory
+
 | Programming Language Theory                                           |
 | --------------------------------------------------------------------- |
 | [15-819 Advanced Topics in Programming Language Theory](#course15819) |
@@ -89,6 +103,10 @@ you might be interested in directly.
 | [15-150 Principles of Functional Programming](#course15150)           |
 | [98-317 StuCo: Type Theory (Hype for Types)](#course98317)            |
 {: .table .table-bordered .table-hover .table-sm }
+
+<br>
+
+### Mathematics
 
 | Mathematics                                                          |
 | -------------------------------------------------------------------- |
@@ -106,6 +124,10 @@ you might be interested in directly.
 | [15-151 Mathematical Foundations for Computer Science](#course15151) |
 {: .table .table-bordered .table-hover .table-sm }
 
+<br>
+
+### Computer Science - Others
+
 | Computer Science - Other                                           |
 | ------------------------------------------------------------------ |
 | [15-462 Computer Graphics](#course15462)                           |
@@ -118,7 +140,11 @@ you might be interested in directly.
 | [07-131 Great Practical Ideas in Computer Science](#course07131)   |
 {: .table .table-bordered .table-hover .table-sm }
 
-| General Education, Stucos, Others                                                     |
+<br>
+
+### General Education, StuCos, Others
+
+| General Education, StuCos, Others                                                     |
 | ------------------------------------------------------------------------------------- |
 | [33-228 Electronics I](#course33228)                                                  |
 | [70-350 Acting for Business](#course70350)                                            |
@@ -143,6 +169,47 @@ you might be interested in directly.
 {: .first-course-item #course10716 }
 
 - 10-716 &nbsp; **[Advanced Machine Learning: Theory and Methods](https://www.cs.cmu.edu/~pradeepr/716/)**, [ Pradeep Ravikumar](http://www.cs.cmu.edu/~pradeepr/)
+
+  This was my favorite class this semester. It felt like a natural
+  continuation of [10-708 Probabilistic Graphical Models](#course10708),
+  with a strong focus on understanding the theory of how many non-parametric
+  modern machine learning techniques work. It is very much a math and theory
+  course and can get pretty dense at times, but it is also very rewarding.
+  
+  Since there does not appear to be much information online about the specific
+  content covered, I'll try to summarize them here.
+
+  1. Statistical decision theory: this was mostly a quick recap,
+  since it was covered in the pre-requisite class 36-705. 
+  If you did not take 36-705, it'll be helpful to learn/review
+  Bayesian estimators, and Bayesian and minimax risk as it'll
+  be used throughout the course.
+  2. Nonparametric Bayesian methods: the Dirichlet process for CDF estimation,
+  Dirichlet process mixture for density estimation, 
+  and the Gaussian process for estimating a regression function
+  3. Nonparametric Density Estimation: histograms, kernel density estimators,
+  series estimators. A key result is how the kernel estimator is minimax-optimal
+  over many classes of loss functions and function spaces.
+  4. Nonparametric Regression: partition estimators, spline estimators,
+  basis/dictionary series estimators, k-NN regression,
+  smoothing kernel regression estimators, Reproducing Kernel Hilbert Space (RKHS) regression estimators, wavelets
+  5. Nonparametric Classification: contrasting
+  classification error between parametric vs nonparametric models, 
+  minimax rates of convergence for classification vs regression
+  for different function classes of distributions
+  6. Nonparametric Greedy & Boosting: Orthogonal Greedy Algorithm,
+  Greedy Coordinate Descent (i.e boosting), Adaboost,
+  functional gradient descent
+  7. Optimal Transport
+  8. Deep Density Estimation
+  9. Deep Representation Learning and Kernels
+  10. Dimensionality Reduction & Manifolds
+  11. Clustering
+  12. Learning & Games
+  13. Causality
+  14. Random Forests and Kernels
+
+  
 
 - 15-712 &nbsp; **[Advanced Operating Systems and Distributed Systems](https://www.cs.cmu.edu/~15712/)**, [Phil Gibbons](http://www.cs.cmu.edu/~gibbons/)
   {: .course-item #course15712 }
@@ -318,8 +385,8 @@ motivate and develop many of the more interesting applications in the subject.
   and applicable. The course was offered for the first time this semester, so there
   were a few rough edges (i.e in the proof of Cheeger's inequality he initially
   did not want to prove it in terms of the Laplacian of the graph to avoid
-  introducing new concepts and notation, but doing so ended up being more confusing
-  than helpful), but overall it is quite a good class. The homework problems
+  introducing unnecessary concepts and notation, but doing so ended up being more confusing
+  than helpful), but overall it is an excellent class. The homework problems
   are reasonable and the workload is on the lighter side.
 
 - &#11088; 10-708 &nbsp; **[Probablistic Graphical Models](https://andrejristeski.github.io/10708-F22/)**, [Andrej Risteski](https://www.andrew.cmu.edu/user/aristesk/)
