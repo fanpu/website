@@ -35,14 +35,14 @@ semester.
 I am broadly interested in rigorously proving why machine learning techniques
 work and what guarantees we can extract out of them, borrowing tools from
 theoretical computer science and mathematics. My eventual goal is to build a
-startup in AI/ML using the things that I've learnt, for the betterment of
-humanity. 
+startup in AI/ML using the things that I've learnt, for the betterment of <s>humanity</s> the world. 
 
 In my free time, I enjoy bouldering, K-pop dancing, running, reading and learning new things, writing 
 things for my blog, and watching anime. I used to do sprint canoe competitively.
 If I have an extended break I enjoy traveling, especially hiking and exploring
 the great outdoors. Most of the banner pictures on my blog posts were taken
-during these hikes.
+during these hikes. My favorite classroom in CMU is GHC 4303 and my favorite
+spot is the Autolab room, GHC 9126.
 
 I grew up in my hometown Singapore before moving to the US for college. I try
 to go back and visit once a year.
@@ -80,6 +80,7 @@ Some of my more popular posts that might be of interest:
 2022-06-22-cmu-scs-ecg-talk %}), i.e. why study Computer Science at CMU
 
 **Technical Posts**
+- [A Unified Framework for High-Dimensional Analysis of M-Estimators with Decomposable Regularizers: A Guided Walkthrough]({% post_url 2023-07-14-high-dimensional-analysis-of-m-estimators %})
 - [Score-Based Diffusion Models]({% post_url 2023-06-07-score-based-diffusion-models %})
 - [The Delightful Consequences of the Graph Minor Theorem]({% post_url 2022-06-01-the-delightful-consequences-of-the-graph-minor-theorem %})
 - [Universal types, and your type checker doesn't suck as much as you think]({% post_url 2022-01-11-universal-types %})
