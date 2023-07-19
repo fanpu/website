@@ -29,8 +29,10 @@ have not taken, in the comments section below.
 
 Inspiration for this page came from [Wan Shen's CMU course review page](https://wanshenl.me/courses/reviews/).
 
-This page was recently updated on 11/9/2022 to help students decide the classes
-they may want to take ahead of course registration week.
+*This page was recently updated on 07/20/2023 as I work on finishing my course reviews for the Spring 2023 semester.*
+
+~~*This page was recently updated on 11/9/2022 to help students decide the classes
+they may want to take ahead of course registration week.*~~
 
 ## Categories
 
@@ -168,14 +170,14 @@ you might be interested in directly.
 
 {: .first-course-item #course10716 }
 
-- 10-716 &nbsp; **[Advanced Machine Learning: Theory and Methods](https://www.cs.cmu.edu/~pradeepr/716/)**, [ Pradeep Ravikumar](http://www.cs.cmu.edu/~pradeepr/)
+- &#11088; 10-716 &nbsp; **[Advanced Machine Learning: Theory and Methods](https://www.cs.cmu.edu/~pradeepr/716/)**, [ Pradeep Ravikumar](http://www.cs.cmu.edu/~pradeepr/)
 
   This was my favorite class this semester. It felt like a natural
   continuation of [10-708 Probabilistic Graphical Models](#course10708),
   with a strong focus on understanding the theory of how many non-parametric
   modern machine learning techniques work. It is very much a math and theory
   course and can get pretty dense at times, but it is also very rewarding.
-  
+
   Since there does not appear to be much information online about the specific
   content covered, I'll try to summarize them here.
 
@@ -192,7 +194,7 @@ you might be interested in directly.
   over many classes of loss functions and function spaces.
   4. Nonparametric Regression: partition estimators, spline estimators,
   basis/dictionary series estimators, k-NN regression,
-  smoothing kernel regression estimators, Reproducing Kernel Hilbert Space (RKHS) regression estimators, wavelets
+  smoothing kernel regression estimators, Reproducing Kernel Hilbert Space (RKHS)/Mercer kernel regression estimators, wavelets
   5. Nonparametric Classification: contrasting
   classification error between parametric vs nonparametric models, 
   minimax rates of convergence for classification vs regression
@@ -200,25 +202,68 @@ you might be interested in directly.
   6. Nonparametric Greedy & Boosting: Orthogonal Greedy Algorithm,
   Greedy Coordinate Descent (i.e boosting), Adaboost,
   functional gradient descent
-  7. Optimal Transport
-  8. Deep Density Estimation
-  9. Deep Representation Learning and Kernels
-  10. Dimensionality Reduction & Manifolds
-  11. Clustering
-  12. Learning & Games
-  13. Causality
-  14. Random Forests and Kernels
+  7. Optimal Transport: Monge assignments and the Kantorovich relaxation to
+  motivate Wasserstein distance, the Kantorovich dual, integral probability
+  metrics, applications to statistical estimation and Wasserstein GAN
+  8. Deep Density Estimation: variational auto-encoders, normalizing flows, autoregressive flows, destructive distribution learning
+  9. Deep Representation Learning and Kernels: RKHS kernel regression, RKHS in
+  relation to representation learning, random features, randomly wired DNNs and
+  its relation to Gaussian Processes
+  10. Dimensionality Reduction & Manifolds: PCA, multi-dimensional scaling
+  (MDS), kernel PCA, local linear embeddings (LLE), Laplacian eigenmaps,
+  diffusion maps, Johnson-Lindenstrauss Lemma and random projections
+  11. Clustering: k-means as vector quantization, mixture models and local non-identifiability,
+  level set clustering, hierarchical clustering, spectral clustering
+  12. Learning & Games: online learning, Follow the Leader (FTL), Follow the Regularized Leader (FTRL), 
+  regret bounds for FTRL on convex and non-convex action domains and loss functions, two-player games and Nash equilibrium
+  13. Causality: adjusting for confounding, causal graphs and structural equations
+  14. Random Forests and Kernels: Bagging, layered nearest neighbor (LNN), kernel-based view of random forests
 
+  Pradeep is a great lecturer and he takes great effort to answer every student's questions in detail. 
+  However, while I often find myself being able to follow the current micro-level derivations and explanations,
+  I often feel somewhat lost about how it fits in with the bigger picture and its relation with other techniques,
+  possibly due to a lack of prior exposure to many of these topics. 
+
+  There is significant variance in the difficulty of homework problems in a
+  single homework, which I thought made the scoring of the homework problems
+  somewhat nonsensical as the points were more or less evenly distributed.  I
+  recall there were a couple of problems that demanded a fair bit of thought and
+  insight but had relatively short solutions, and therefore only netted a
+  moderate amount of points compared to the effort required.
+
+  I thought the exams were relatively easy. It is proof-based and will ask you
+  to perform derivations of results or techniques related to what is seen in class,
+  which sounds much scarier than it actually is because the questions are relatively guided.
+
+  One thing that happened this semester (and also apparently for prior semesters
+  according to some people that I spoke to) was the steep drop in attendance as the semester
+  went on.  During the first lecture, there were barely enough seats for everyone
+  and some people had to stand, but by the mid-way point the average attendance was
+  just around 5 people. However, when it came to the midterms, the classroom filled up again
+  and I even heard the instructor for the previous class remark how she didn't
+  realize we had so many students in this class as she was leaving. 
   
+  This was probably not such a bad thing for the people who did come to lectures, since
+  it meant more personalized attention from the instructor, more opportunities
+  to ask your own questions, and a better view of the board. 
 
-- 15-712 &nbsp; **[Advanced Operating Systems and Distributed Systems](https://www.cs.cmu.edu/~15712/)**, [Phil Gibbons](http://www.cs.cmu.edu/~gibbons/)
+  I initially thought this phenomenon was because the other students (who were
+  mostly MLD Ph.Ds and MSML/MSDS students) were already very knowledgeable and didn't see the need to
+  come to lecture, but only learned much later that it was actually because many
+  of them also found the material challenging and found it difficult to follow the lecture.
+
+  I think the takeaway here is that this will be a very difficult class (in my opinion likely
+  the hardest class offered in MLD), so try to go in with friends and don't shy away
+  from asking questions since it is likely that many people may also be confused.
+
+- &#11088; 15-712 &nbsp; **[Advanced Operating Systems and Distributed Systems](https://www.cs.cmu.edu/~15712/)**, [Phil Gibbons](http://www.cs.cmu.edu/~gibbons/)
   {: .course-item #course15712 }
 
   I really liked this class and felt that there wasn't enough information about
   this course online by people who have taken it, so I wrote a dedicated
   post for it: [CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review]({% post_url 2023-06-09-advanced-operating-systems-course-review %})
 
-- 36-709 &nbsp; **Advanced Statistical Theory I**, [Matey Neykov](https://mateyneykov.com/)
+- &#10084;&#65039; 36-709 &nbsp; **Advanced Statistical Theory I**, [Matey Neykov](https://mateyneykov.com/)
   {: .course-item #course36709 }
 
 - 36-708 &nbsp; **[The ABCDE of Statistical Methods in Machine Learning](https://36708.github.io/)**, [Aaditya Ramdas](https://www.stat.cmu.edu/~aramdas/)
