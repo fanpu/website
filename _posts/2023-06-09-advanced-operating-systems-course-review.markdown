@@ -2,6 +2,7 @@
 title: "CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review"
 layout: post
 tags: [courses, cmu, systems]
+keywords: 15712, 15-712, cmu 15712, cmu 15-712, advanced os, advanced operating systems, cmu, carnegie mellon, computer systems, course review, courses, fanpu
 cover: santorini_church.avif
 cover_preview: santorini_church.avif
 caption: Three Bells of Fira, Thera, Greece
