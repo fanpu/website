@@ -1,6 +1,13 @@
 <tr>
     <td>
-        <b><a href="{{ course.url }}">{{ course.name }}</a></b> ({{ course.semester }})
+        <b>
+            {% if course.url %}
+                <a href="{{ course.url }}">{{ course.name }}</a>
+            {% else %}
+                {{ course.name }}
+            {% endif %}
+        </b>
+             ({{ course.semester }})
         <br>
         {% if course.instructors %}
             {% if course.instructors.size > 1 %}

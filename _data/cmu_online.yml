@@ -703,6 +703,24 @@ pl_courses:
       - graduate
       - pl-theory
 
+  - name: "15-816 Advanced Topics in Logic: Substructural Logics"
+    url: http://www.cs.cmu.edu/~fp/courses/15816-f16/
+    description: >
+      This graduate course provides an introduction to substructural logics, such
+      as linear, ordered, affine, bunched, or separation logic, with an emphasis
+      on their applications in computer science. This includes the design and
+      theory of programming constructs for concurrent message-passing computation
+      and techniques for specifying and reasoning about programming languages in
+      the form of substructural operational semantics.
+    panopto_link: https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=17bf4c63-e606-4029-b508-f94c7d121ca0
+    semester: Spring 2012
+    instructors: 
+      - name: Frank Pfenning
+        website: http://www.cs.cmu.edu/~fp/
+    tags:
+      - graduate
+      - pl-theory
+
   - name: 15-819 Resource Aware Programming Languages
     url: https://www.cs.cmu.edu/~janh/courses/ra20/
     description: >
@@ -775,28 +793,6 @@ pl_courses:
     instructors: 
       - name: Robert Harper
         website: http://www.cs.cmu.edu/~rwh/
-    tags:
-      - graduate
-      - pl-theory
-
-  - name: 15-816 Substructural Logics
-    url: https://www.cs.cmu.edu/~fp/courses/15816-f16/
-    description: >
-      This graduate course provides an introduction to substructural logics,
-      such as linear, ordered, affine, bunched, or separation logic, with an
-      emphasis on their applications in computer science. This includes the
-      design and theory of programming constructs for concurrent message-passing
-      computation and techniques for specifying and reasoning about programming
-      languages in the form of substructural operational semantics.
-    youtube_playlist_id: PL0DsGHMPLUWWFF_6823_bNEGf5uObH4AT
-    video_note: >
-      Note that videos in the playlist are from a similar set
-      of lectures given at OPLSS, instead of CMU due to the
-      absence of recordings.
-    semester: OPLSS Summer 2017
-    instructors: 
-      - name: Frank Pfenning
-        website: http://www.cs.cmu.edu/~fp/
     tags:
       - graduate
       - pl-theory
