@@ -173,6 +173,9 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  summaries:
+    output: true
+    permalink: /summaries/:path/
 
 announcements:
   enabled: true
@@ -270,14 +273,14 @@ display_tags: ['code', 'machine-learning', 'general', 'math', 'startup'] # this 
 scholar:
 
   last_name: [Zeng]
-  first_name: [Fan Pu, F.]
+  first_name: [Fan Pu]
 
   style: apa
   locale: en
 
   source: /_bibliography/
-  bibliography: papers.bib
-  bibliography_template: bib
+  bibliography: summaries.bib
+  bibliography_template: custom_bib
   # Note: if you have latex math in your bibtex, the latex filter
   # preprocessing may conflict with MathJAX if the latter is enabled.
   # See https://github.com/alshedivat/al-folio/issues/357.
