@@ -4,7 +4,7 @@ permalink: /cmu-online/
 title: CMU Online
 description: Publicly Accessible CMU Courses
 nav: true
-nav_order: 10
+nav_order: 5
 toc:
   sidebar: left
 giscus_comments: true
