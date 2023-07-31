@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<!-- _layouts/summary.html -->
+
+{% if page._styles %}
+<!-- Page/Post style -->
+<style type="text/css">
+  {{ page._styles }}
+</style>
+{% endif %}
+
+{% include scripts/mathjax_macros.html %}
+
+<!-- hack to inherit CSS styles to suppress list counts -->
+<div class="publications">
+    {% bibliography --file summaries --query @*[id={{page.bib_id}}] %}
+</div>
+
+<div class="post">
+  <article class="post-content">
+    {% if page.toc and page.toc.beginning %}
+    <div id="table-of-contents">
+      {% toc %}
+    </div>
+    <hr>
+    {% endif %}
+    <div id="markdown-content">
+      {{ content }}
+    </div>
+  </article>
+
+  {%- if site.giscus.repo and page.giscus_comments -%}
+    {% include giscus.html %}
+  {%- endif -%}
+
+</div>
