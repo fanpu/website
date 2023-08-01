@@ -131,13 +131,17 @@
           {%- if entry.html %}
             <a href="{{ entry.html }}" class="btn btn-sm z-depth-0" role="button">HTML</a>
           {%- endif %}
-          {%- if entry.pdf %}
+          {%- if entry.file %}
+            {% assign pdf_url = "https://arxiv.org/pdf/" | append: {{entry.file}} %}
+            <a href="{{ pdf_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
+          {%- endif %}
+          <!-- {%- if entry.pdf %}
             {% if entry.pdf contains '://' -%}
             <a href="{{ entry.pdf }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
             {%- else -%}
             <a href="{{ entry.pdf | prepend: '/assets/pdf/' | relative_url }}" class="btn btn-sm z-depth-0" role="button">PDF</a>
             {%- endif %}
-          {%- endif %}
+          {%- endif %} -->
           {%- if entry.supp %}
             {% if entry.supp contains '://' -%}
             <a href="{{ entry.supp }}" class="btn btn-sm z-depth-0" role="button">Supp</a>
