@@ -5,18 +5,28 @@ from datetime import date
 def retrieve_arxiv_bib(id):
     return arxiv2bib([id])[0]
 
+def clean_title(title):
+    title = title.strip()
+    title = title.replace("\n", "")
+    return title
+
 # title can contain spaces, caps
 def filename(title):
     today = date.today()
     title = title.lower()
     title = title.replace(" ", "-")
+    title = title.replace(",", "")
+    title = title.replace(":", "")
+    title = title.strip()
+    title = ''.join(e for e in title if e.isalnum() or e == "-")
+    print("Filename", title)
     return f"_summaries/{today}-{title}.markdown"
 
 def template(title, bib_id):
     return \
 f"""---
 layout: summary
-title: {title}
+title: "{title}"
 giscus_comments: true
 bib_id: {bib_id}
 ---
@@ -57,7 +67,7 @@ def main():
     args = parser.parse_args()
 
     bib = retrieve_arxiv_bib(args.arxiv_id)
-    title = bib.title
+    title = clean_title(bib.title)
     bib_id = bib.id
 
     create_summary_template(title, bib_id)
