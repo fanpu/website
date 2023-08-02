@@ -16,7 +16,7 @@ reader already has some familiarity with the paper.
 This serves to both catalog my own reading and academic progress, and may also
 be of interest to others to find interesting papers to check out.
 
-The format is inspired by the <a href="https://www.cs.cmu.edu/~15712/summaries.html">paper summaries</a> of a graduate class I took.
+The format is inspired by the <a href="https://www.cs.cmu.edu/~15712/summaries.html">paper summaries</a> of a class I took.
 
 {% include scripts/mathjax_macros.html %}
 
