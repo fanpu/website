@@ -9,6 +9,7 @@ def retrieve_arxiv_bib(id):
 def clean_title(title):
     title = title.strip()
     title = title.replace("\n", "")
+    title = re.sub(' +', '', title)
     return title
 
 # title can contain spaces, caps
