@@ -23,7 +23,7 @@ The format is inspired by the <a href="https://www.cs.cmu.edu/~15712/summaries.h
 ---
 
 <ol>
-    {% for summary in site.summaries %}
+    {% for summary in site.summaries reversed %}
     <li>
         <a href="{{ summary.url | relative_url }}">
             ({{ summary.date | date: '%b %-d, %Y' }})
