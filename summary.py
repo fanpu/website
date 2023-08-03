@@ -1,4 +1,5 @@
 import argparse
+import re
 from arxiv2bib import arxiv2bib
 from datetime import date
 
@@ -21,6 +22,9 @@ def filename(title):
     title = ''.join(e for e in title if e.isalnum() or e == "-")
     print("Filename", title)
     return f"_summaries/{today}-{title}.markdown"
+
+def eprint_without_version(eprint):
+    return re.sub("v\d+", "", eprint)
 
 def template(title, bib_id):
     return \
@@ -52,7 +56,9 @@ def create_summary_template(title, bib_id):
 
     print(f"New summary template created at {filepath}")
 
-def update_summary_bib(bibtex):
+def update_summary_bib(bibtex, eprint):
+    bibtex = bibtex[:-2]
+    bibtex += f""",\nEprintNoVer   = {{{eprint_without_version(eprint)}}}\n}}"""
     with open("_bibliography/summaries.bib", "a") as f:
         f.write("\n\n")
         f.write(bibtex)
@@ -71,7 +77,7 @@ def main():
     bib_id = bib.id
 
     create_summary_template(title, bib_id)
-    update_summary_bib(bib.bibtex())
+    update_summary_bib(bib.bibtex(), bib_id)
 
 
 if __name__ == "__main__":

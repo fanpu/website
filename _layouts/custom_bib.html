@@ -124,8 +124,8 @@
           <!-- {%- if entry.abstract %}
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
           {%- endif %} -->
-          {%- if entry.eprint %}
-            <a href="http://arxiv.org/abs/{{ entry.eprint }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
+          {%- if entry.url %}
+            <a href="{{ entry.url }}" class="btn btn-sm z-depth-0" role="button">arXiv</a>
           {%- endif %}
           <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
           {%- if entry.html %}
@@ -177,8 +177,8 @@
           <div class="badges">
             {%- if site.badges.altmetric_badge %}
             <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"
-              {% if entry.eprint %}
-                data-arxiv-id="{{ entry.eprint }}"
+              {% if entry.eprintnover %}
+                data-arxiv-id="{{ entry.eprintnover }}"
               {% elsif entry.doi %}
                 data-doi="{{ entry.doi }}"
               {% elsif entry.altmetric %}
@@ -192,7 +192,9 @@
             {%- endif %}
             {%- if site.badges.dimensions_badge %}
               <span class="__dimensions_badge_embed__"
-              {% if entry.doi %}
+              {% if entry.eprintnover %}
+                data-doi="10.48550/arXiv.{{ entry.eprintnover }}"
+              {% else if entry.doi %}
                 data-doi="{{ entry.doi }}"
               {% else if entry.pmid %}
                 data-pmid="{{ entry.pmid }}"
