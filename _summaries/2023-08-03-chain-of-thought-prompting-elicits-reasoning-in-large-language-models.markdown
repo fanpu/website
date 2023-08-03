@@ -23,7 +23,7 @@ for large language models in multi-step reasoning tasks like arithmetic
 questions. It is robust to differences in the prompting style.
 
 #### 2. Emergent Property of Large Language Models
-the success of chain-of-thought prompting is an emergent property of large
+The success of chain-of-thought prompting is an emergent property of large
 language models, but on the contrary could hurt performance for smaller models
 as compared to standard prompting.
 It is an interesting future direction to understand how this
