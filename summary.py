@@ -20,6 +20,7 @@ def filename(title):
     title = title.replace(",", "")
     title = title.replace(":", "")
     title = title.strip()
+    title = re.sub("-+", "-", title)
     title = ''.join(e for e in title if e.isalnum() or e == "-")
     print("Filename", title)
     return f"_summaries/{today}-{title}.markdown"
