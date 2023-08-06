@@ -55,6 +55,8 @@ the RM model, or the potential impact that they may have on the
 psychology of the human labelers who may be harmed by exposure to these samples.
 
 ### Conclusions for Future Work
-RLHF is a promising way of improving the alignment of machine learning models to human preferences.
+RLHF is a promising way of improving the alignment of machine learning models to
+human preferences by overcoming the problem of the scarcity of supervised
+datapoints through the use of a reward model.
 However, care and transparency should always be taken towards whose preferences these are,
 to avoid harming groups that are under-represented in training data.
