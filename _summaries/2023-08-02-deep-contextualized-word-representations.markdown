@@ -1,6 +1,6 @@
 ---
 layout: summary
-title: "Deep contextualized word representations"
+title: "Deep contextualized word representations (ELMo)"
 giscus_comments: true
 bib_id: 1802.05365v2
 ---
@@ -10,8 +10,8 @@ bib_id: 1802.05365v2
 #### 1. Context-aware Word Embeddings
 Most word embedding techniques only embed single words without regard to their
 context, which could affect the performance of downstream tasks.
-ELMo instead embeds words as a function of the entire input sentence
-using a two-layer bidirectional language model (biLM).
+ELMo (Embeddings from Language Models) instead embeds words as a function of the
+entire input sentence using a two-layer bidirectional language model (biLM).
 
 #### 2. Using All biLM Layers For Representation
 Previous work only used the last layer of the biLM.
