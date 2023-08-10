@@ -53,6 +53,10 @@ the fine-tuned performance generalizes to out-of-distribution samples.
 
 ### Conclusions for Future Work
 Sycophancy is a real problem in language models that can result in an
-echo-chamber effect, and one possible approach to alleviate this would be to
+echo-chamber effect, and one possible approach to slightly alleviate this would be to
 explicitly teach the model that user opinion is independent of factual data,
 such as by using additional synthetic data as proposed in the paper.
+
+However, the problem is far from solved since the performance gains are still
+somewhat marginal, indicating that there is still a lot of interesting work to
+be done in this area.
