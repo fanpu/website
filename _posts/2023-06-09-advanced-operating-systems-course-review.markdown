@@ -12,7 +12,7 @@ toc:
   sidebar: left
 giscus_comments: true
 description: >
-  This was an excellent seminar-based graduate course that took us on a
+  15-712 was an excellent seminar-based graduate course that took us on a
   whirlwind tour through many of the most seminal SigOps Hall of Fame papers
   across several systems domains. It will prepare you to be a great systems
   designer and researcher. In this post, I will share my experience in the
