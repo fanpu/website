@@ -12,7 +12,7 @@ description: >
   called APES (Average Perplexity Evaluation for Sentences) to address the
   limitations of existing metrics, and apply them to our results. Our results
   are evaluated against both LSTM and GPT-2 baselines.
-img: assets/img/posts/rainier_view.avif
+img: assets/img/posts/rainier_view.webp
 importance: 2
 category: machine-learning
 redirect_internal: _posts/2022-12-05-improving-domain-adaptation-of-transformer-models-for-reddit-comments.markdown

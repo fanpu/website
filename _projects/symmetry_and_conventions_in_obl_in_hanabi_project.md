@@ -11,7 +11,7 @@ description: >
   cooperative game Hanabi in the zero-shot coordination (ZSC) context are
   invariant across symmetries of the game, and if any conventions formed during
   training are arbitrary or natural, both of which are desirable properties.
-img: assets/img/posts/boston.avif
+img: assets/img/posts/boston.webp
 importance: 1
 category: machine-learning
 redirect_internal: _posts/2022-12-09-symmetry-and-conventions-in-obl-hanabi.markdown

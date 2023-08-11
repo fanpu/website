@@ -1,8 +1,8 @@
 ---
 layout: post
 tags: [software engineering, startup]
-cover: saleswhale/saleswhale_offsite_resize.avif
-cover_preview: saleswhale/saleswhale_offsite_resize.avif
+cover: saleswhale/saleswhale_offsite_resize.webp
+cover_preview: saleswhale/saleswhale_offsite_resize.webp
 caption: Saleswhale offsite!
 class: post-template
 author: fanpu

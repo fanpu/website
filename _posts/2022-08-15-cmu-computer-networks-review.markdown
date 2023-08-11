@@ -2,8 +2,8 @@
 title: "CMU 15-441/641 Computer Networks Course Review"
 layout: post
 tags: [courses, systems]
-cover: mojave_national_preserve.avif
-cover_preview: mojave_national_preserve.avif
+cover: mojave_national_preserve.webp
+cover_preview: mojave_national_preserve.webp
 caption: Mojave National Preserve, California, USA
 class: post-template
 author: fanpu
@@ -52,7 +52,7 @@ improve on both throughput and Jain's Fairness Index (for fairness when multiple
 connections connect on the same link) as compared to TCP Reno.
 
 {% include figure.html 
-    path="/assets/img/posts/tcp_reno_state_diagram.avif"
+    path="/assets/img/posts/tcp_reno_state_diagram.webp"
     width="400px"
     class="z-depth-1"
     caption="TCP Reno Congestion Control State Diagram"
@@ -69,7 +69,7 @@ checkpoint solo. Since I had already written load balancers twice, once for
 do the same.
 
 {% include figure.html 
-    path="/assets/img/posts/networks_p3.avif"
+    path="/assets/img/posts/networks_p3.webp"
     width="400px"
     class="z-depth-1"
     caption="Relationship between the proxy and the load balancer, taken from the writeup"
@@ -91,7 +91,7 @@ multiple clients in terms of link utilization, fairness, and smoothness in a
 Docker environment with simulated network conditions.
 
 {% include figure.html 
-    path="assets/img/posts/big_buck_bunny.avif"
+    path="assets/img/posts/big_buck_bunny.webp"
     width="400px"
     class="z-depth-1"
     caption="A still from Big Buck Bunny"

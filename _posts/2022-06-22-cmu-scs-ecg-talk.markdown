@@ -2,8 +2,8 @@
 title: "My Sharing at the Hwa Chong Undergrad Alumni Forum"
 layout: post
 tags: [general, opinion]
-cover: arapaho-lake.avif
-cover_preview: arapaho-lake.avif
+cover: arapaho-lake.webp
+cover_preview: arapaho-lake.webp
 caption: Arapaho Lakes, Arapaho and Roosevelt National Forests, Colorado, USA
 class: post-template
 author: fanpu

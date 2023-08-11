@@ -2,8 +2,8 @@
 title: "Tips for US College Applications"
 layout: post
 tags: [college]
-cover: hwachong.avif
-cover_preview: hwachong.avif
+cover: hwachong.webp
+cover_preview: hwachong.webp
 caption: Hwa Chong Institution, Singapore
 class: post-template
 author: fanpu

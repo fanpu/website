@@ -2,8 +2,8 @@
 title: "Why Study Computer Systems"
 layout: post
 tags: [general, cmu]
-cover: stoa_acropolis.avif
-cover_preview: stoa_acropolis.avif
+cover: stoa_acropolis.webp
+cover_preview: stoa_acropolis.webp
 caption: The Stoa of Attalos and the Acropolis, Ancient Agora of Athens, Athina, Greece
 class: post-template
 author: fanpu

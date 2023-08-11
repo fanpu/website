@@ -2,7 +2,7 @@
 layout: post
 tags: [general, CMU, code]
 title: My Involvement in the Autolab Project
-cover_preview: autolab.avif
+cover_preview: autolab.webp
 class: post-template
 author: fanpu
 toc:

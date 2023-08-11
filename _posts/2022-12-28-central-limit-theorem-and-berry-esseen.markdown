@@ -2,8 +2,8 @@
 title: "A Concise Proof of the Central Limit Theorem, and Its Actually Useful Version, the Berry-Esseen Theorem"
 layout: post
 tags: [math, machine-learning]
-cover: maine.avif
-cover_preview: maine.avif
+cover: maine.webp
+cover_preview: maine.webp
 caption: Acadia National Park, Maine, USA
 class: post-template
 author: fanpu

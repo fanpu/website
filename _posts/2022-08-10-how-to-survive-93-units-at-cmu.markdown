@@ -2,7 +2,7 @@
 title: "How I Managed a 93 Units Workload at CMU"
 layout: post
 tags: [general]
-cover: assets/images/posts/oxford.avif
+cover: assets/images/posts/oxford.webp
 class: post-template
 author: fanpu
 toc:
@@ -69,7 +69,7 @@ they are posted. It will actually turn out that this won't be strictly necessary
 ### A Day in the Life
 The calendar below outlines what a normal week looks like.
 
-![What my weekly calendar looks like](/assets/images/posts/cmu_week_calendar.avif){: width="100%"}
+![What my weekly calendar looks like](/assets/images/posts/cmu_week_calendar.webp){: width="100%"}
 
 Here's what my routine looks like.
 

@@ -1,8 +1,8 @@
 ---
 layout: post
 tags: [code]
-cover: cut_winter.avif
-cover_preview: cut_winter.avif
+cover: cut_winter.webp
+cover_preview: cut_winter.webp
 caption: The Fence in front of Hunt Library at Carnegie Mellon University
 class: post-template
 author: fanpu

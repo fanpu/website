@@ -2,8 +2,8 @@
 title: "The Art of LaTeX: Common Mistakes, and Advice for Typesetting Beautiful, Delightful Proofs"
 layout: post
 tags: [code, general]
-cover: ubin_pond.avif
-cover_preview: ubin_pond.avif
+cover: ubin_pond.webp
+cover_preview: ubin_pond.webp
 caption: Pulau Ubin, Singapore
 class: post-template
 author: fanpu
@@ -105,7 +105,7 @@ paper recently, where the outer right square brackets was missing and the left o
 had the wrong size:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/paired_delim.avif"
+    path="/assets/img/posts/latex-mistakes/paired_delim.webp"
     width="500px"
     class="z-depth-1"
     caption="What happens when you don't use paired delimiters"
@@ -203,7 +203,7 @@ there is often a lot of nested syntactical structure, which could make it easy
 to make mistakes.  Consider the following proof:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/macros.avif"
+    path="/assets/img/posts/latex-mistakes/macros.webp"
     width="600px"
     class="z-depth-1"
     caption="A proof with a lot of syntactical structure"
@@ -260,7 +260,7 @@ Expressions which are logically a single unit should stay on the same line, inst
 of being split apart mid-sentence. Cue the following bad example from another paper:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/nbsp.avif"
+    path="/assets/img/posts/latex-mistakes/nbsp.webp"
     width="300px"
     class="z-depth-1"
     caption="Expressions that are broken apart"
@@ -301,7 +301,7 @@ the justified text on the first line, to compensate for the expression assigning
 to stay on the same line:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/nbsp-positive.avif"
+    path="/assets/img/posts/latex-mistakes/nbsp-positive.webp"
     width="300px"
     class="z-depth-1"
     caption="Expressions that brace together stays together"
@@ -312,7 +312,7 @@ When referencing figures and equations, you want the text and number (i.e Figure
 This is a negative example, where the region underlined in red shows how it was split up:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/figure-truncated.avif"
+    path="/assets/img/posts/latex-mistakes/figure-truncated.webp"
     width="500px"
     class="z-depth-1"
     caption='The phrase "Figure 2" was truncated in half'
@@ -336,7 +336,7 @@ allows it to flow more naturally and make it easier for the reader to follow.
 Consider the following example that does not use punctuation:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/sentence-negative.avif"
+    path="/assets/img/posts/latex-mistakes/sentence-negative.webp"
     width="400px"
     class="z-depth-1"
     caption="Expressions which are not punctuated are tiring to read"
@@ -352,7 +352,7 @@ and the final equation should be ended by a full stop. Here is a good example of
 that helps to guide the reader along the author's train of thought:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/sentence-multiline.avif"
+    path="/assets/img/posts/latex-mistakes/sentence-multiline.webp"
     width="400px"
     class="z-depth-1"
     caption="Appropriate use of commas and full stop to guide the reader"
@@ -363,7 +363,7 @@ allow the text to flow naturally, where it takes the form of
 "analogously, observe that we have [foo] and [bar], where the inequality...":
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/sentence-two-exp.avif"
+    path="/assets/img/posts/latex-mistakes/sentence-two-exp.webp"
     width="400px"
     class="z-depth-1"
     caption="Punctuation allows the content to flow naturally"
@@ -373,7 +373,7 @@ This even extends to when you pack several equations on a single line, which
 is common when you are trying to fit the page limit for conference submissions:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/sentence-singleline.avif"
+    path="/assets/img/posts/latex-mistakes/sentence-singleline.webp"
     width="400px"
     class="z-depth-1"
     caption="Appropriate use of punctuation when multiple equations are on a single line"
@@ -404,7 +404,7 @@ $\mathcal{F}$-limit of $(x_n)_n$.
 {% endhighlight %}
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/proof.avif"
+    path="/assets/img/posts/latex-mistakes/proof.webp"
     width="600px"
     class="z-depth-1"
     caption="Signposting using the `proof` environment"
@@ -432,7 +432,7 @@ newline before the closing `\end{proof}`, which happens pretty often:
 {% endhighlight %}
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/qedhere.avif"
+    path="/assets/img/posts/latex-mistakes/qedhere.webp"
     width="600px"
     class="z-depth-1"
     caption="Misaligned QED symbol"
@@ -464,7 +464,7 @@ For instance, the following example fails to add spacing before the differential
 of the variable $$dz$$:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/integral.avif"
+    path="/assets/img/posts/latex-mistakes/integral.webp"
     width="500px"
     class="z-depth-1"
     caption='Lack of spacing before "dz"'
@@ -598,7 +598,7 @@ This allows it to know which side to orient the ticks:
 {% endhighlight %}
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/quotes.avif"
+    path="/assets/img/posts/latex-mistakes/quotes.webp"
     width="100px"
     class="z-depth-1"
     caption="Output of correct usage of quotes"
@@ -614,7 +614,7 @@ this is usually the case, and therefore writing `\epsilon` results in a very unc
 read:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/epsilon-wrong.avif"
+    path="/assets/img/posts/latex-mistakes/epsilon-wrong.webp"
     width="600px"
     class="z-depth-1"
     caption='Using "\epsilon" looks weird'
@@ -623,7 +623,7 @@ read:
 Using `\varepsilon` makes the reader feel much more at peace:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/epsilon-right.avif"
+    path="/assets/img/posts/latex-mistakes/epsilon-right.webp"
     width="600px"
     class="z-depth-1"
     caption='"\varepsilon" is usually what should be used'
@@ -639,7 +639,7 @@ difference in how the rendering of the set of natural numbers
 $$\mathbb{N}$$ differs, using the same example as the previous section:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/mathbbm.avif"
+    path="/assets/img/posts/latex-mistakes/mathbbm.webp"
     width="600px"
     class="z-depth-1"
     caption='Use `mathbbm` instead of `mathbb`'
@@ -656,7 +656,7 @@ X = \left( X_1, \dots, X_n \right)
 {% endhighlight %}
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/dots.avif"
+    path="/assets/img/posts/latex-mistakes/dots.webp"
     width="300px"
     class="z-depth-1"
     caption='Output of "..." versus "\dots"'
@@ -684,7 +684,7 @@ To denote multiplication, use `\cdot` or `times` instead of `*`. See the differe
 in the equation:
 
 {% include figure.html 
-    path="/assets/img/posts/latex-mistakes/multiplication.avif"
+    path="/assets/img/posts/latex-mistakes/multiplication.webp"
     width="600px"
     class="z-depth-1"
     caption='Use "\cdot" looks much better than "*"'

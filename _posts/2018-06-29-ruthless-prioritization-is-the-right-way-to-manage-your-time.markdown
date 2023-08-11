@@ -1,8 +1,8 @@
 ---
 layout: post
 tags: [general, startup]
-cover: saleswhale/saleswhale_team_photo_fun_resize.avif
-cover_preview: saleswhale/saleswhale_team_photo_fun_resize.avif
+cover: saleswhale/saleswhale_team_photo_fun_resize.webp
+cover_preview: saleswhale/saleswhale_team_photo_fun_resize.webp
 class: post-template
 author: fanpu
 giscus_comments: true

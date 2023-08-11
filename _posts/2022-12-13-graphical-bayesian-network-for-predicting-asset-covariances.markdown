@@ -2,8 +2,8 @@
 title: "Graphical Bayesian Networks with Topic Modeling Priors for Predicting Asset Covariances"
 layout: post
 tags: [machine-learning, project]
-cover: rainier.avif
-cover_preview: rainier.avif
+cover: rainier.webp
+cover_preview: rainier.webp
 caption: Mount Rainier, Mount Rainier National Park, Washington, USA
 class: post-template
 author: fanpu

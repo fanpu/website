@@ -2,8 +2,8 @@
 title: "The CMU Steam Tunnels and Wean 9"
 layout: post
 tags: [general, cmu]
-cover: cmu_steam_tunnels/tunnel.avif
-cover_preview: cmu_steam_tunnels/tunnel.avif
+cover: cmu_steam_tunnels/tunnel.webp
+cover_preview: cmu_steam_tunnels/tunnel.webp
 caption: A section of the underground steam tunnels
 class: post-template
 author: fanpu
@@ -49,7 +49,7 @@ asbestos for obvious reasons.  He then unlocked an unmarked door, and let us
 into the tunnels proper:
 
 {% include figure.html 
-  path="assets/img/posts/cmu_steam_tunnels/main_tunnel.avif" 
+  path="assets/img/posts/cmu_steam_tunnels/main_tunnel.webp" 
   width="400px"
   class="z-depth-1" 
   caption="Inside the steam tunnel!"
@@ -61,7 +61,7 @@ hissing and you could really feel the warmth emanating from them.
 At some point I was slightly afraid that a pipe beside me might burst.
 
 {% include figure.html 
-  path="assets/img/posts/cmu_steam_tunnels/phone_box.avif" 
+  path="assets/img/posts/cmu_steam_tunnels/phone_box.webp" 
   width="400px"
   class="z-depth-1" 
   caption="A phone box in the tunnel. Hopefully no one ever had to use it."
@@ -71,7 +71,7 @@ At some point, there was a fork where the tunnel on the left fork became very
 short and narrow. We took the right fork.
 
 {% include figure.html 
-  path="assets/img/posts/cmu_steam_tunnels/side_tunnel.avif" 
+  path="assets/img/posts/cmu_steam_tunnels/side_tunnel.webp" 
   width="400px"
   class="z-depth-1" 
   caption="The short and narrow left fork of the tunnel"
@@ -83,7 +83,7 @@ to reach a cavern, which was unlit. It was known as the
 CFA cavern as it is located right under the steps of CFA:
 
 {% include figure.html 
-  path="assets/img/posts/cmu_steam_tunnels/cfa_cavern.avif" 
+  path="assets/img/posts/cmu_steam_tunnels/cfa_cavern.webp" 
   width="400px"
   class="z-depth-1" 
   caption="The CFA cavern, with flash photography"
@@ -103,7 +103,7 @@ than the steam tunnels right below it though.
 We then went back down into the tunnels, and continued on:
 
 {% include figure.html 
-  path="assets/img/posts/cmu_steam_tunnels/another_tunnel.avif" 
+  path="assets/img/posts/cmu_steam_tunnels/another_tunnel.webp" 
   width="400px"
   class="z-depth-1" 
   caption="More tunnels!"
@@ -118,7 +118,7 @@ this wonderful opportunity to defile the steam tunnels to
 my heart's content:
 
 {% include figure.html 
-  path="assets/img/posts/cmu_steam_tunnels/graffiti.avif" 
+  path="assets/img/posts/cmu_steam_tunnels/graffiti.webp" 
   width="400px"
   class="z-depth-1" 
   caption="SLICE-sanctioned vandalism"
@@ -138,7 +138,7 @@ and even spare doors for classrooms. It made me realize just how much
 maintenance it took to operate a campus.
 
 {% include figure.html 
-  path="assets/img/posts/cmu_steam_tunnels/wean_9.avif" 
+  path="assets/img/posts/cmu_steam_tunnels/wean_9.webp" 
   width="400px"
   class="z-depth-1" 
   caption="Our guide leading us through Wean 9"
@@ -149,7 +149,7 @@ adjust our eyes for a few seconds to the new blinding sunlight.
 It was beautiful!
 
 {% include figure.html 
-  path="assets/img/posts/cmu_steam_tunnels/hammerschlag.avif" 
+  path="assets/img/posts/cmu_steam_tunnels/hammerschlag.webp" 
   width="400px"
   class="z-depth-1" 
   caption="A majestic view of Hammerschlag Hall. I wish I could take my graduation pictures from here."
@@ -160,7 +160,7 @@ only place on campus where you can take a side-by-side photo with the
 Hammerschlag radio tower:
 
 {% include figure.html 
-  path="assets/img/posts/cmu_steam_tunnels/roof_photo.avif" 
+  path="assets/img/posts/cmu_steam_tunnels/roof_photo.webp" 
   width="400px"
   class="z-depth-1" 
   caption="The Hammerschlag tower, which houses the Carnegie Tech Radio Club
@@ -168,14 +168,14 @@ Hammerschlag radio tower:
 %}
 
 {% include figure.html 
-  path="assets/img/posts/cmu_steam_tunnels/cic.avif" 
+  path="assets/img/posts/cmu_steam_tunnels/cic.webp" 
   width="400px"
   class="z-depth-1" 
   caption="An interesting view of CIC and Tepper"
 %}
 
 {% include figure.html 
-  path="assets/img/posts/cmu_steam_tunnels/gates.avif" 
+  path="assets/img/posts/cmu_steam_tunnels/gates.webp" 
   width="400px"
   class="z-depth-1" 
   caption="Gates, which is usually perceived to tower over all other campus buildings in its vicinity, look short from here"

@@ -2,8 +2,8 @@
 title: "Bounding Mixing Times of Markov Chains via the Spectral Gap"
 layout: post
 tags: [math, machine-learning]
-cover: fallingwater.avif
-cover_preview: fallingwater.avif
+cover: fallingwater.webp
+cover_preview: fallingwater.webp
 caption: Fallingwater, designed by Frank Lloyd Wright. Laurel Highlands, Pennsylvania, USA
 class: post-template
 author: fanpu
@@ -93,7 +93,7 @@ for an illustration.
 \begin{figure}[h]
     \label{fig:tv}
     \centering
-    \includegraphics[width=0.7\textwidth]{tv.avif}
+    \includegraphics[width=0.7\textwidth]{tv.webp}
     \caption{Total Variation distance between some sample $\mathcal{D}_1, \mathcal{D}_2$ illustrated by the sum of the shaded green regions.}
 \end{figure}
 

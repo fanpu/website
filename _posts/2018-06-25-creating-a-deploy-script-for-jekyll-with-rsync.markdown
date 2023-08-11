@@ -1,7 +1,7 @@
 ---
 layout: post
 tags: [code]
-cover_preview: rsync.avif
+cover_preview: rsync.webp
 description: >
   Static site generators like Jekyll makes it easy to
   write and build static websites. However, this still comes with the problem of

@@ -2,8 +2,8 @@
 title: "Breaking CMU's Bomblab with Angr for Fun and Profit - Part 7"
 layout: post
 tags: [rev, ctf, code]
-cover: campton.avif
-cover_preview: campton.avif
+cover: campton.webp
+cover_preview: campton.webp
 caption: Campton, New Hampshire, USA. We went skiing in the area.
 class: post-template
 author: fanpu

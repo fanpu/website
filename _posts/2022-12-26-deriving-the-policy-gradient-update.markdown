@@ -2,8 +2,8 @@
 title: "Reinforcement Learning Policy Optimization: Deriving the Policy Gradient Update"
 layout: post
 tags: [machine-learning]
-cover: denali_horseshoe_lake.avif
-cover_preview: denali_horseshoe_lake.avif
+cover: denali_horseshoe_lake.webp
+cover_preview: denali_horseshoe_lake.webp
 caption: Horseshoe Lake Trail, Denali National Park and Preserve, Alaska, USA
 class: post-template
 author: fanpu

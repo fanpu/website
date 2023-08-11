@@ -2,8 +2,8 @@
 title: "Impagliazzo's Five Worlds, or The Computational (Im)Possibilities of The World That We Live In"
 layout: post
 tags: [complexity-theory, computer-science]
-cover: denali.avif
-cover_preview: denali.avif
+cover: denali.webp
+cover_preview: denali.webp
 caption: Denali National Park, Alaska
 description: >
     Most people have probably heard of the P = NP? problem in some shape or

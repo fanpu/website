@@ -2,8 +2,8 @@
 title: "Solving Genshin Impact's Ancient Azure Stars quest in Linear Time"
 layout: post
 tags: [general, code]
-cover: mona.avif
-cover_preview: mona.avif
+cover: mona.webp
+cover_preview: mona.webp
 caption: Mona in the event domain, Genshin Impact
 class: post-template
 author: fanpu
@@ -48,7 +48,7 @@ The premise is relatively simple: somewhere in the room (perhaps towards the
 roof), a target constellation is shown, such as the following:
 
 {% include figure.html 
-    path="/assets/img/posts/genshin-puzzle-1.avif"
+    path="/assets/img/posts/genshin-puzzle-1.webp"
     width="400px"
     class="z-depth-1"
     caption="A target constellation to achieve"
@@ -65,7 +65,7 @@ formed by the beams corresponds to the desired target constellation. For
 the previous example, we have the following solution:
 
 {% include figure.html 
-    path="/assets/img/posts/genshin-puzzle-1-solved.avif"
+    path="/assets/img/posts/genshin-puzzle-1-solved.webp"
     width="400px"
     class="z-depth-1"
     caption="A solved configuration of the previous puzzle"
@@ -75,7 +75,7 @@ The puzzles seem to get progressively harder, with an increasing number of stars
 in the constellations, and an exponentially growing state space. Or do they?
 
 {% include figure.html 
-    path="/assets/img/posts/genshin-puzzle-3.avif"
+    path="/assets/img/posts/genshin-puzzle-3.webp"
     width="400px"
     class="z-depth-1"
     caption="A constellation with many more stars"
@@ -147,7 +147,7 @@ already takes $$O(n)$$ time for the algorithm. It certainly looks like Mona will
 be speeding through these puzzles in no time after all!
 
 {% include figure.html 
-    path="/assets/img/posts/mona_end.avif"
+    path="/assets/img/posts/mona_end.webp"
     width="400px"
     class="z-depth-1"
     caption="Mona looking dapper as always."

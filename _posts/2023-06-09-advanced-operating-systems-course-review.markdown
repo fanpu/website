@@ -3,8 +3,8 @@ title: "CMU 15-712 Advanced Operating Systems and Distributed Systems Course Rev
 layout: post
 tags: [courses, cmu, systems]
 keywords: 15712, 15-712, cmu 15712, cmu 15-712, advanced os, advanced operating systems, cmu, carnegie mellon, computer systems, course review, courses, fanpu
-cover: santorini_church.avif
-cover_preview: santorini_church.avif
+cover: santorini_church.webp
+cover_preview: santorini_church.webp
 caption: Three Bells of Fira, Thera, Greece
 class: post-template
 author: fanpu
@@ -81,14 +81,14 @@ Research](https://www.cs.cmu.edu/~15712/papers/hamming86.pdf) by Richard Hamming
 The following two slides gives a good sense of the spirit of the paper:
 
 {% include figure.html 
-    path="/assets/img/posts/adv_os/slide_1.avif"
+    path="/assets/img/posts/adv_os/slide_1.webp"
     width="400px"
     class="z-depth-1"
     caption="How to be a Great Scientist (1)"
 %}
 
 {% include figure.html 
-    path="/assets/img/posts/adv_os/slide_2.avif"
+    path="/assets/img/posts/adv_os/slide_2.webp"
     width="400px"
     class="z-depth-1"
     caption="How to be a Great Scientist (2)"
@@ -350,7 +350,7 @@ a reinforcement-learning based scheduler that uses Deep-Q Learning to learn
 the optimal way of performing this split.
 
 {% include figure.html 
-    path="/assets/img/posts/adv_os/presentation.avif"
+    path="/assets/img/posts/adv_os/presentation.webp"
     width="400px"
     class="z-depth-1"
     caption="Giving our final project presentation in the Panther Hollow conference room at CIC"

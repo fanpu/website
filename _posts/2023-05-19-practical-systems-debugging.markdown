@@ -2,8 +2,8 @@
 title: "Practical Systems Debugging"
 layout: post
 tags: [general, cmu]
-cover: theatre_of_dionysus.avif
-cover_preview: theatre_of_dionysus.avif
+cover: theatre_of_dionysus.webp
+cover_preview: theatre_of_dionysus.webp
 caption: Chek Jawa Wetlands, Pulau Ubin, Singapore
 class: post-template
 author: fanpu

@@ -2,8 +2,8 @@
 title: "Quantum physics inaccuracies in Seishun Buta Yaro (Rascal Does Not Dream of Bunny Girl Senpai)"
 layout: post
 tags: [general]
-cover: bunny_senpai.avif
-cover_preview: bunny_senpai.avif
+cover: bunny_senpai.webp
+cover_preview: bunny_senpai.webp
 caption: A still from Seishun Buta Yaro
 class: post-template
 author: fanpu

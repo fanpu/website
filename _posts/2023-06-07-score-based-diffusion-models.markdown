@@ -3,7 +3,7 @@ title: "Score-Based Diffusion Models"
 layout: post
 tags: [machine-learning]
 cover: santorini_oia_2.jpg
-cover_preview: santorini_oia_2.avif
+cover_preview: santorini_oia_2.webp
 caption: Oia, Santorini, Greece
 class: post-template
 author: fanpu
@@ -514,7 +514,7 @@ We conduct the following preliminary series of experiments, based on released wo
 ## Investigating the manifold hypothesis
 
 {% include figure.html 
-    path="/assets/img/posts/score-based-diffusion-models/sample_dist.avif"
+    path="/assets/img/posts/score-based-diffusion-models/sample_dist.webp"
     width="600px"
     class="z-depth-1"
     num=1
@@ -539,7 +539,7 @@ sample of the distribution.
 To better visualize the effects of annealing when sampling via Langevin Dynamics, we generated images from a model trained on the CelebA dataset. We first tried applying Langevin Dynamics with a fixed noise and then used annealing to gradually decrease the noise.
 
 {% include figure.html 
-    path="/assets/img/posts/score-based-diffusion-models/annealing_ablation.avif"
+    path="/assets/img/posts/score-based-diffusion-models/annealing_ablation.webp"
     width="600px"
     class="z-depth-1"
     num=2
@@ -551,7 +551,7 @@ To better visualize the effects of annealing when sampling via Langevin Dynamics
 Figure 2 shows that the results with annealing are significantly clearer and more varied, matching the performance of GANs in 2019.
 
 {% include figure.html 
-    path="/assets/img/posts/score-based-diffusion-models/left_right.avif"
+    path="/assets/img/posts/score-based-diffusion-models/left_right.webp"
     width="600px"
     class="z-depth-1"
     num=3
@@ -566,7 +566,7 @@ We notice that the image generated without annealing manages to produce the stru
 We also investigated the effect of changing the lowest noise standard deviation $$\sigma$$ while keeping the number of different noises injected fixed at $$10$$. The 10 noise values are determined by an interpolation in log scale.
 
 {% include figure.html 
-    path="/assets/img/posts/score-based-diffusion-models/vary_sigma.avif"
+    path="/assets/img/posts/score-based-diffusion-models/vary_sigma.webp"
     width="600px"
     class="z-depth-1"
     num=4

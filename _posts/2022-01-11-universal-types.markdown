@@ -2,8 +2,8 @@
 title: "Universal types, and your type checker doesn't suck as much as you think"
 layout: post
 tags: [code, pl-theory]
-cover: horse_lake_2.avif
-cover_preview: horse_lake_2.avif
+cover: horse_lake_2.webp
+cover_preview: horse_lake_2.webp
 caption: Crystal Lake, Mammoth Lakes Basin, California, USA
 class: post-template
 author: fanpu

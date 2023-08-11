@@ -5,7 +5,7 @@ print("Run this from the directory that you want to convert image files for")
 
 p = pathlib.Path(".")
 
-target_suffix = ".avif"
+target_suffix = ".webp"
 image_exts = [
     ".jpg",
     ".JPG",

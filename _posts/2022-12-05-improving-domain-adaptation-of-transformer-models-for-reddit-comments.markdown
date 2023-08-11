@@ -2,8 +2,8 @@
 title: "Improving Domain Adaptation of Transformer Models For Generating Reddit Comments"
 layout: post
 tags: [machine-learning, project]
-cover: rainier_view.avif
-cover_preview: rainier_view.avif
+cover: rainier_view.webp
+cover_preview: rainier_view.webp
 caption: Skyline Loop Trail, Mount Rainier National Park, Washington, USA
 class: post-template
 author: fanpu

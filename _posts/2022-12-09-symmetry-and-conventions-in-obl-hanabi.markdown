@@ -2,8 +2,8 @@
 title: "Analysis of Symmetry and Conventions in Off-Belief Learning (OBL) in Hanabi"
 layout: post
 tags: [machine-learning, project]
-cover: boston.avif
-cover_preview: boston.avif
+cover: boston.webp
+cover_preview: boston.webp
 caption: Boston, Massachusetts, USA
 class: post-template
 author: fanpu

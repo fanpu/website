@@ -1,8 +1,8 @@
 ---
 layout: post
 tags: [software engineering, general, startup]
-cover: drama.avif
-cover_preview: drama.avif
+cover: drama.webp
+cover_preview: drama.webp
 caption: Carnegie Mellon School of Drama
 class: post-template
 author: fanpu

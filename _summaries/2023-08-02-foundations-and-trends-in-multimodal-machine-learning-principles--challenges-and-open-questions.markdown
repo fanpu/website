@@ -11,7 +11,7 @@ bib_id: 2209.03430v2
 The authors propose a new taxonomy for classifying multimodal machine learning research, categorized into 6 different categories given below:
 
 {% include figure.html 
-    path="/assets/img/summaries/multimodal-taxonomy.avif"
+    path="/assets/img/summaries/multimodal-taxonomy.webp"
     width="600px"
     class="z-depth-1"
     caption="Taxonomy of the 6 core challenges in multimodal machine learning"

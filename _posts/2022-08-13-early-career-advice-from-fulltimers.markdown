@@ -2,7 +2,7 @@
 title: "Some Early Career Advice I've Gotten"
 layout: post
 tags: [general]
-cover: assets/images/posts/oxford.avif
+cover: assets/images/posts/oxford.webp
 class: post-template
 author: fanpu
 toc:

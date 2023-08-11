@@ -1,8 +1,8 @@
 ---
 layout: post
 tags: [code]
-cover: college_of_engineering.avif
-cover_preview: college_of_engineering.avif
+cover: college_of_engineering.webp
+cover_preview: college_of_engineering.webp
 caption: CMU College of Engineering and Wean Hall
 class: post-template
 author: fanpu

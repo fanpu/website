@@ -2,8 +2,8 @@
 title: "Pseudo-determinism for Graph Streaming Problems"
 layout: post
 tags: [theory, project]
-cover: rainier_top.avif
-cover_preview: rainier_top.avif
+cover: rainier_top.webp
+cover_preview: rainier_top.webp
 caption: View from Skyline Loop Trail, Mount Rainier National Park, Washington, USA
 class: post-template
 author: fanpu

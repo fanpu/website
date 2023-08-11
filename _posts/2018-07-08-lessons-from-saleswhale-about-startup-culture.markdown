@@ -1,8 +1,8 @@
 ---
 layout: post
 tags: [startup, saleswhale]
-cover: saleswhale/saleswhale_laser_tag_resize.avif
-cover_preview: saleswhale/saleswhale_laser_tag_resize.avif
+cover: saleswhale/saleswhale_laser_tag_resize.webp
+cover_preview: saleswhale/saleswhale_laser_tag_resize.webp
 caption: Saleswhale goes to laser tag!
 class: post-template
 author: fanpu

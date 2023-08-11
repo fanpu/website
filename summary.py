@@ -70,16 +70,23 @@ def update_summary_bib(bibtex, eprint):
 
 def main():
     parser = argparse.ArgumentParser(description='Create summary template from arxiv ID')
-    parser.add_argument('arxiv_id', type=str,
-                        help='arXiv article ID')
+    parser.add_argument('--arxiv_id', type=str,
+                        help='arXiv article ID', required=False)
+    parser.add_argument('--title', required=False)
+    parser.add_argument('--bib-id', required=False)
     args = parser.parse_args()
 
-    bib = retrieve_arxiv_bib(args.arxiv_id)
-    title = clean_title(bib.title)
-    bib_id = bib.id
+    if args.title:
+        title = args.title
+        bib_id = args.bib_id
+        create_summary_template(title, bib_id)
+    else:
+        bib = retrieve_arxiv_bib(args.arxiv_id)
+        title = clean_title(bib.title)
+        bib_id = bib.id
 
-    create_summary_template(title, bib_id)
-    update_summary_bib(bib.bibtex(), bib_id)
+        create_summary_template(title, bib_id)
+        update_summary_bib(bib.bibtex(), bib_id)
 
 
 if __name__ == "__main__":

@@ -4,7 +4,7 @@ import os
 
 png_ext = ".png"
 jpg_ext = ".jpg"
-avif_ext = ".avif"
+avif_ext = ".webp"
 
 for filename in os.listdir("."):
     if not (filename.endswith(png_ext) or filename.endswith(jpg_ext)):

@@ -10,7 +10,7 @@ bib_id: 2201.11903v6
 #### 1. Chain-of-Thought Prompting for Large Language Models
 
 {% include figure.html 
-    path="/assets/img/summaries/cot.avif"
+    path="/assets/img/summaries/cot.webp"
     width="600px"
     class="z-depth-1"
     caption="Standard prompting, which gets the wrong answer vs chain-of-thought prompting, which arrives at the correct answer"

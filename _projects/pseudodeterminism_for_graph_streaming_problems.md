@@ -15,7 +15,7 @@ description: >
    graph. While the randomized and deterministic graph streaming algorithms
    have been mostly well-studied, we investigate pseudo-deterministic space
    lower bounds and upper bounds for graph theoretic streaming problems.
-img: assets/img/posts/rainier_top.avif
+img: assets/img/posts/rainier_top.webp
 importance: 2
 category: machine-learning
 redirect_internal: _posts/2022-12-19-pseudo-determinism-for-graph-streaming-problems.markdown
