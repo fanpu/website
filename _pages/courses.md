@@ -416,14 +416,30 @@ you might be interested in directly.
   planning to take [17-603](#course17603), then you must take
   this course as well since the mock negotiations were so much fun.
 
+Units: 60
+
 I TA'd for [10-708 Probabilistic Graphical
 Models](https://andrejristeski.github.io/10708-S23/) under [Andrej
 Risteski](https://www.andrew.cmu.edu/user/aristesk/) this semester.
 It was a fun experience and not as stressful as I had feared. Being
 able to lead 2 of the recitations was one of the highlights of my semester.
+I would like to thank [Andrej](https://www.andrew.cmu.edu/user/aristesk/) and my
+fellow TAs (especially [Jennifer](https://scholar.google.com/citations?user=Q5EDXpkAAAAJ&hl=en), whose
+office hours slot was right before mine and always stayed overtime
+to help me with the queue) for making it so enjoyable. I am also
+grateful to all my students for their great questions and being able to mentor
+their impressive projects, and for giving me the opportunity to grow as a TA.
 
 I also continued staying in an advisory role for
 [Autolab](https://autolabproject.com/), being generally quite hands-off.
+[Michelle](https://michellexliu.me/) was the project lead this semester and did
+a terrific job. This being my last semester, I will dearly miss the team when I
+graduate.
+
+I did booth with [SSA](https://cmussa.org/) again this year, and contributed mainly 
+to the mechanical team and design teams. We built a Blitz booth themed after Singapore's
+[Gardens by the Bay](https://www.gardensbythebay.com.sg/) and came in runner's up, after 
+a well-deserved win by [JSA](https://www.cmujsa.com/).
 
 This semester was rather risky for me because I did not have the necessary
 prerequisites for over half of my classes. I was missing
@@ -790,6 +806,23 @@ and did not learn as much as during my first internship with them.
 
 - 70-350 **Acting for Business**, Evelyn Pierce
   {: .course-item #course70350 }
+
+  This class is similar to 54-191 Acting for Non-Majors, except with the individual
+  and duet performances reversed. The class was very enjoyable (though somewhat
+  slow-paced at times) and the workload is low. You get to perform skits like
+  monologues, improv, and duets in front of the class, as well as watch your
+  fellow classmates perform and give feedback. 
+  
+  The class made me acutely more aware of things like body language, stage
+  presence, and voice projection. It gave me the observational lens required to
+  better critique plays and acting by others, and increased self-awareness of
+  how I present myself to others.
+
+  Even though the class is called Acting for Business, there isn't really a huge
+  explicit business component to it, which I appreciated. I think the key
+  takeaway is to understand how you present yourself, to increase your
+  confidence and interpersonal communication skills, and to improve your
+  personal charisma.
 
 Units: 93
 
