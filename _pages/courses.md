@@ -29,6 +29,12 @@ have not taken, in the comments section below.
 
 Inspiration for this page came from [Wan Shen's CMU course review page](https://wanshenl.me/courses/reviews/).
 
+{% assign n =  site.data.course_review_blogs.blogs | size %}
+{% assign blogs = site.data.course_review_blogs.blogs  | sample: n %}
+Other similar CMU course review pages, in randomized order each time this site is re-built and deployed: {% for blog in blogs %}[&#9733;]({{ blog }}) {% endfor %}
+
+Do email me if you would also like your course review page to also be included here.
+
 *This page was recently updated on 07/20/2023 as I work on finishing my course reviews for the Spring 2023 semester.*
 
 ~~*This page was recently updated on 11/9/2022 to help students decide the classes
