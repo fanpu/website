@@ -643,7 +643,7 @@ I decided to do another return internship with [Jane
 Street](https://www.janestreet.com/), as I had a great experience with them the
 previous year. Highlights of the internship included a two-week exchange at
 their London office, where I managed to catch up with many high school friends
-studying in the UK.
+who are now either studying or working in the UK.
 
 However, in hindsight I feel that it would have been better to diversify my
 internship experiences and try interning at a significantly different company
