@@ -17,10 +17,10 @@ COVID-19 pandemic. Do also check out the [CMU Online page]( {% link
 _pages/cmu-online.md %} ) for a curation of courses whose lectures
 and course content are publicly available.
 
-Course background: I graduated with a [B.S in Computer Science](http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/undergraduatecomputerscience/#bscurriculumtextcontainer) with two concentrations: 
+Course background: I graduated with a [B.S in Computer Science](http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/undergraduatecomputerscience/#bscurriculumtextcontainer) (2018-2022) with two concentrations: 
 [Algorithms and Complexity](http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/scsconcentrations/#algorithmsandcomplexitytext) and [Computer Systems](http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/scsconcentrations/#computersystemstextcontainer),
 and a minor in [Mathematical Sciences](http://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscience/departmentofmathematicalsciences/#minorstext). 
-I then did a [M.S in Computer Science](https://csd.cmu.edu/academics/masters/ms-in-computer-science),
+I then did a [M.S in Computer Science](https://csd.cmu.edu/academics/masters/ms-in-computer-science) (2022-2023),
 with a mostly ML, theory, and stats-heavy courseload.
 
 Courses with a &#11088; are those that I found transformative,
@@ -418,6 +418,13 @@ you might be interested in directly.
 
 Units: 60
 
+This was the final semester (out of 2) of my Master's degree. My
+goal for pursuing a M.S degree is to reach the frontiers of a field
+and find a research interest, which I did in theoretical machine learning.
+I mostly leave without regrets, except for one: not having been able to
+work with any of the brilliant professors here on research, since I found
+my direction so late.
+
 I TA'd for [10-708 Probabilistic Graphical
 Models](https://andrejristeski.github.io/10708-S23/) under [Andrej
 Risteski](https://www.andrew.cmu.edu/user/aristesk/) this semester.
@@ -441,7 +448,7 @@ to the mechanical team and design teams. We built a Blitz booth themed after Sin
 [Gardens by the Bay](https://www.gardensbythebay.com.sg/) and came in runner's up, after 
 a well-deserved win by [JSA](https://www.cmujsa.com/).
 
-This semester was rather risky for me because I did not have the necessary
+Academically, this semester was rather risky for me because I did not have the necessary
 prerequisites for over half of my classes. I was missing
 [36-705 Intermediate Statistics](https://www.stat.cmu.edu/~larry/=stat705/)
 for [10-716](#course10716), [36-708](#course36708), [36-709](#course36709), 
@@ -460,6 +467,15 @@ While 21-720 was not listed as a prerequisite
 on SIO for this course, it was announced as such (along with [21-640 General
 Topology](#course21640)) by the instructor during the first class, so as to
 motivate and develop many of the more interesting applications in the subject.
+
+This concludes my wonderful time at CMU, and I leave with many beautiful
+memories. Thank you to my professors who showed me the bountiful fields of their
+intellectual gardens and sparked a lifelong joy and insatiable desire in this
+student of wanting to explore more of it; to my friends who colored my life with
+love and laughter through our journey of growth and humility, I hope we will
+stay lifelong friends; and finally to my family for always being so
+unconditionally supportive and for providing a safe harbor for me to turn to any
+time.
 
 ### Fall 2022
 
@@ -651,8 +667,10 @@ internship experiences and try interning at a significantly different company
 low-cost 3-month investment for you to figure out what your interests are and to
 learn about the problems faced by different industries. Since the internship
 structure does not vary significantly between yeras, I ended up
-attending a lot of similar talks and lessons for interns,
-and did not learn as much as during my first internship with them.
+attending a lot of similar talks and lessons for interns, which felt slightly
+repetitive. Not to say that there's any fault with their internship, which is very
+well-run and well thought-out as far as internships go - this is on purely
+on the grounds of increasing my early career exposure to different types of companies.
 
 ### Spring 2022
 
@@ -825,6 +843,36 @@ and did not learn as much as during my first internship with them.
   personal charisma.
 
 Units: 93
+
+This was the final semester of my undergrad, and so I made sure to spend enough
+time with my friends and cherish our remaining time together on top of just
+academics. We went to Las Vegas during Spring Break together, and the crazy
+things we did together were truly memorable.
+
+I worked on Spring Carnival [booth](https://www.springcarnival.org/booth.shtml)
+with [SSA](https://cmussa.org/), and we built a blitz booth with a Changi
+Airport theme.  This was the first time booth has been held since the start of
+the pandemic in 2020, and we lost a lot of technical know-how and tribal
+knowledge about booth building from our seniors who also used to work on booth,
+but have graduated since. I mainly worked on the mechanical team, doing tasks
+like cutting wood, screwing frames together, and construction of the booth.
+It was a really fun experience and I managed to get to know many of my juniors
+in SSA much better. To put the cherry on top, our booth came in first place in our 
+Blitz category!
+
+On the academic side of things, I tried to make it more manageable by
+watching the lectures for 10-725 and 16-385 asynchronously, which helped to
+reduce the in-person fatigue levels.
+Well actually, I was forced to watch it asynchronously as otherwise I had 
+no time to eat lunch at all, having back-to-back classes from 10am till 4.30pm daily.
+
+However, there were still several pretty crazy weeks, especially when midterms
+from multiple classes lined up in a single week. Thankfully, I really enjoyed
+the content from all my classes, which energized and motivated me every day.
+
+It felt incredible how quickly 4 years went by. It didn't feel like too long
+ago when I was still a freshman, wondering what kind of path I would take,
+and what sort of impact I would make at CMU. I guess I know the answer now!
 
 ---
 
