@@ -278,6 +278,41 @@ you might be interested in directly.
 - &#10084;&#65039; 36-709 &nbsp; **Advanced Statistical Theory I**, [Matey Neykov](https://mateyneykov.com/)
   {: .course-item #course36709 }
 
+  This course largely follows [High-Dimensional Statistics: A Non-Asymptotic Viewpoint](https://www.cambridge.org/core/books/highdimensional-statistics/8A91ECEEC38F46DAB53E9FF8757C7A4E) by [Wainwright](https://people.eecs.berkeley.edu/~wainwrig/),
+  with the last portion branching off towards topics in the professor's own research interests.
+  This is a core course in theoretical statistics that all stats Ph.D students
+  must take, and most students in the course came from this demographic. The
+  focus of the course is on high-dimensional statistical models, and
+  non-parametric statistical models.
+
+  There were 4 homeworks, with around 2-3 weeks between each one. They are all proof-based questions, with many
+  of them coming from Wainwright's book. I found the homeworks quite challenging, and had to collaborate with
+  a few stats Ph.D students to get through some of them (thank you for
+  introducing me to the stats Ph.D. lounge!). There were some tools required
+  for solving some of the problems that I have never seen or had to use before
+  in any of my previous CS or math classes, but which may (?) be standard fare in
+  statistical literature, that may have contributed to my difficulty.
+  Fortunately, I still managed to solve *almost* all the homework problems.
+
+  Each student also had to scribe a lecture, which is then posted on Canvas as
+  reference for all other students. There is also a project on deeply understanding a
+  recent advanced theoretical paper in statistics or machine learning, which involves
+  both a paper writeup and a presentation of its contents to the class.
+  Thankfully there are no exams.
+
+  Topics covered included concentration inequalities (sub-Gaussian,
+  sub-exponential random variables), maximal inequalities, bounded differences,
+  covering and packing, Gaussian and Rademacher complexity, chaining and
+  Dudley's entropy integral bound, comparison inequalities (Slepian and
+  Sudakov-Fernique) and lower bounds, high-dimensional and sparse PCA,
+  Davis-Kahan theorem, LASSO in relation to prediction/support recovery/debiasing, 
+  covariance matrix estimation, non-parametric least squares, minimax lower
+  bounds (Le Cam's method and Fano's method), Gaussian sequence model minimax rates.
+
+  Overall I really enjoyed this class as it introduced me to many concepts in
+  modern statistical analysis, which is really helpful in understanding
+  statistical machine learning papers.
+
 - 36-708 &nbsp; **[The ABCDE of Statistical Methods in Machine Learning](https://36708.github.io/)**, [Aaditya Ramdas](https://www.stat.cmu.edu/~aramdas/)
   {: .course-item #course36708 }
 
