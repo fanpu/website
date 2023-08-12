@@ -17,6 +17,12 @@ COVID-19 pandemic. Do also check out the [CMU Online page]( {% link
 _pages/cmu-online.md %} ) for a curation of courses whose lectures
 and course content are publicly available.
 
+Course background: I graduated with a [B.S in Computer Science](http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/undergraduatecomputerscience/#bscurriculumtextcontainer) with two concentrations: 
+[Algorithms and Complexity](http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/scsconcentrations/#algorithmsandcomplexitytext) and [Computer Systems](http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/scsconcentrations/#computersystemstextcontainer),
+and a minor in [Mathematical Sciences](http://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscience/departmentofmathematicalsciences/#minorstext). 
+I then did a [M.S in Computer Science](https://csd.cmu.edu/academics/masters/ms-in-computer-science),
+with a mostly ML, theory, and stats-heavy courseload.
+
 Courses with a &#11088; are those that I found transformative,
 and those with a &#10084;&#65039; are those that I enjoyed a lot.
 
