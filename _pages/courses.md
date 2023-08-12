@@ -587,6 +587,22 @@ significant course projects on your schedule to avoid such a situation.
 
 ---
 
+### Summer 2022
+I decided to do another return internship with [Jane
+Street](https://www.janestreet.com/), as I had a great experience with them the
+previous year. Highlights of the internship included a two-week exchange at
+their London office, where I managed to catch up with many high school friends
+studying in the UK.
+
+However, in hindsight I feel that it would have been better to diversify my
+internship experiences and try interning at a significantly different company
+(such as a ML-focused company).  This is because internships are a relatively
+low-cost 3-month investment for you to figure out what your interests are and to
+learn about the problems faced by different industries. Since the internship
+structure does not vary significantly between yeras, I ended up
+attending a lot of similar talks and lessons for interns,
+and did not learn as much as during my first internship with them.
+
 ### Spring 2022
 
 {: .first-course-item #course10725 }
@@ -869,6 +885,16 @@ Units: 75
 
 ---
 
+### Summer 2021
+I spent my summer as a Linux engineer intern in [Jane Street](https://www.janestreet.com/)
+to work on exciting systems-level problems, and had a lot of fun exploring NYC
+with other interns. I learned the following summer that the VM manager that I wrote
+for my first project is now the standard way that VMs are provisioned by
+different teams in the firm, which made me feel that my work was very impactful
+and valuable.
+
+---
+
 ### Spring 2021
 
 {: .first-course-item #course15855 }
@@ -1142,6 +1168,25 @@ I dropped 15-312 Foundations of Programming Languages in the middle of the semes
 
 ---
 
+### Summer 2020
+Due to the COVID-19 pandemic, I ended up doing my internship with [The Company
+Formerly Called Facebook](https://about.meta.com/) on the [Tupperware
+Scheduler
+team](https://engineering.fb.com/2019/06/06/data-center-engineering/twine/) (now
+called Twine) remotely from Pittsburgh. Twine is like Kubernetes, but can
+orchestrate containers on up to millions of servers, instead of just a few
+hundred. We were facing very interesting scaling engineering problems at the
+time, due to the huge surge in traffic on Facebook products driven by the
+pandemic. As part of the efforts to address this issue, I was tasked with
+writing a large-scale load testing framework to see if Twine was battle-ready to
+withstand the increasing load placed by their billions of users.
+
+Since there was not much to do outside during the pandemic, my [roommate](https://adbforlife.github.io/)
+and I ended up playing and solving CTF challenges every day after work, and the highlight
+was playing DEF CON 28 together with [PPP](https://pwning.net/), where we came in second.
+
+---
+
 ### Spring 2020
 
 {: .first-course-item #course15410 }
@@ -1316,6 +1361,12 @@ was taught by a good professor.
 I spent a wonderful summer interning at [Asana](https://asana.com/) in San Francisco as a Software
 Engineering intern on the Infrastructure Management Team.  My mentor and I
 became great friends, and we still regularly keep in touch many years on.
+
+I ended up visiting many of the great national parks in California on weekend
+trips during the internship, including
+[Yosemite](https://www.nps.gov/yose/index.htm), [Lake
+Tahoe](https://visitlaketahoe.com/), [Mt. Lassen](https://www.nps.gov/lavo/index.htm), and
+[Muir Woods](https://www.nps.gov/muwo/index.htm). It was a fun time!
 
 ---
 ### Spring 2019
