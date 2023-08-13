@@ -34,9 +34,6 @@
         {% endfor %}
         <br>
         <br>
-        {{ course.description }}
-    </td>
-    <td>
         {% if course.youtube_playlist_id %}
             <div class="embed-container">
                 <iframe {% if course.youtube_playlist_id %}
@@ -45,10 +42,12 @@
                 </iframe>
             </div>
         {% elsif course.panopto_link %}
-            <a href="{{ course.panopto_link }}">Public Panopto Link</a>
+            <a href="{{ course.panopto_link }}">Public Panopto Lecture Videos Link</a>
         {% elsif course.youtube_channel_link %}
             <a href="{{ course.youtube_channel_link }}">Link to Youtube Channel</a>
         {% endif %}
         {{ course.video_note }}
+        <br>
+        {{ course.description }}
     </td>
 </tr>
