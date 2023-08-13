@@ -1,13 +1,13 @@
 ---
 layout: page
 permalink: /summaries/
-title: Paper Summaries
+title: ML Paper Summaries
 description: >
 nav: true
 nav_order: 5
 ---
 
-Summaries and critiques of papers I've read in detail. This is not a summary of
+Summaries and critiques of papers (mostly in machine learning) I've read in detail. This is not a summary of
 the traditional sense which will carefully go over all the major concepts in the
 paper (due to time constraints); instead, it will be rather concise and only
 contain the key points that I find interesting, with the expectation that the
