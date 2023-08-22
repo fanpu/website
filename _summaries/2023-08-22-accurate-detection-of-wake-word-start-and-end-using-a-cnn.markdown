@@ -16,7 +16,7 @@ before forking off into two different outputs, as illustrated
 in the diagram below.
 
 {% include figure.html 
-    path="/assets/img/summaries/ww-start-end.webp"
+    path="/assets/img/summaries/ww-start-end-regression.webp"
     width="600px"
     class="z-depth-1"
 %}
