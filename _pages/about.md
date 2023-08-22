@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Incoming Linux Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>. <a href='https://www.cs.cmu.edu/'>CMU SCS</a> Class of 2022, MSCS Class of 2023. Currently located in New York, NY, USA. 
+subtitle: Linux Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>. Currently located in New York, NY, USA. 
 
 profile:
   align: right
@@ -17,9 +17,8 @@ latest_posts: false # includes a list of the newest posts
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hello! I am Fan Pu, having recently completed both my M.S and B.S in Computer
-Science in Carnegie Mellon University (CMU). I am currently enjoying
-my summer break before I start work full-time in August.
+Hello! I am Fan Pu. I recently graduated with a M.S (2023) and B.S (2022) in Computer
+Science from [Carnegie Mellon University](https://www.cmu.edu/).
 
 At CMU, I was actively involved in the open-source programming assignment
 auto-grading platform [Autolab](https://autolabproject.com/) from 2018-2023. I
@@ -41,10 +40,9 @@ In my free time, I enjoy bouldering, K-pop dancing, running, reading and learnin
 things for my blog, and watching anime. I used to do sprint canoe competitively.
 If I have an extended break I enjoy traveling, especially hiking and exploring
 the great outdoors. Most of the banner pictures on my blog posts were taken
-during these hikes. My favorite classroom in CMU is GHC 4303 and my favorite
-spot is the Autolab room, GHC 9126.
+during these hikes. My favorite classroom in CMU is GHC 4303.
 
-I grew up in my hometown Singapore before moving to the US for college. I try
+I grew up in my hometown Singapore before moving to the US for college and work. I try
 to go back and visit once a year.
 
 Feel free to reach out to me at fzeng[at]alumni[dot]cmu[dot]edu. I am happy to
