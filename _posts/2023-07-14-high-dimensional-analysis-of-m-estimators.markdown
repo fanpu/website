@@ -56,6 +56,7 @@ $$
     \newcommand{\ctriplet}{ \C(\mcal, \mocalp; \ts) }
     \newcommand{\fcal}{\mathcal{F}}
     \newcommand{\kbb}{\mathbb{K}}
+    \DeclareMathOperator*{\argmin}{arg\,min}
 $$
 
 # Introduction
