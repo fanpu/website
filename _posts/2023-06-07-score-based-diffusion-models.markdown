@@ -21,7 +21,7 @@ description: >
     drawbacks. Joint work with Owen Wang.
 ---
 $$
-    \newcommand{\mathbb{E}}{\mathbb{E}}
+    \newcommand{\E}{\mathbb{E}}
     \newcommand{\bone}{\boldsymbol{1}}
     \newcommand{\bbeta}{\boldsymbol{\beta}}
     \newcommand{\bdelta}{\boldsymbol{\delta}}
