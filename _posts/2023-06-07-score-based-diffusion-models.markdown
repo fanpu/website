@@ -22,6 +22,8 @@ description: >
 ---
 $$
     \newcommand{\mathbb{E}}{\mathbb{E}}
+    \newcommand{\bx}{\boldsymbol{x}}
+    \newcommand{\boldf}{\boldsymbol{f}}
     \newcommand{\bX}{\boldsymbol{X}}
     \newcommand{\bv}{\boldsymbol{v}}
     \newcommand{\bpi}{\boldsymbol{\pi}}
