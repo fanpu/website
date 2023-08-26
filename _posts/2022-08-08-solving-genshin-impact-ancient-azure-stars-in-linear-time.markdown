@@ -111,7 +111,7 @@ hard problems are actually very easy on trees (if you are interested, look up
 the treewidth of a graph, which measures how much a graph is like a tree. The
 smallest treewidth is 1. Trees have treewidth 1, graphs that can be formed by
 series and parallel composition have treewidth 2, but the intuition quickly
-breaks down from here. Many $$\NP$$-hard problems can in fact be solved
+breaks down from here. Many $$\mathsf{NP}$$-hard problems can in fact be solved
 efficiently on graphs with bounded treewidth!). 
 
 We then have a trivial algorithm of just rooting the graph on any vertex, and

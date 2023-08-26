@@ -71,7 +71,7 @@ $$
 Computing $$\mathcal{Z}(\theta)$$ is therefore the main problem here since 
 the number of configurations of $$\bx$$ is exponential in $$n$$.
 Indeed, computing partition functions is proven to be
-$$\#\P$$-hard in general (this is stricly harder than being $$\NP$$-hard, which to our
+$$\#\mathsf{P}$$-hard in general (this is stricly harder than being $$\mathsf{NP}$$-hard, which to our
 current knowledge only has exponential time algorithms).
 
 Therefore, several families of methods have been developed to try to approximate

@@ -287,7 +287,7 @@ estimator:
 
 $$
 \begin{align}
-   \hat \btheta_{N,M} \overset{p}{\to} \btheta^* \text { as } \N \to \infty
+   \hat \btheta_{N,M} \overset{p}{\to} \btheta^* \text { as } \mathbb{N} \to \infty
 \end{align}
 $$
 
