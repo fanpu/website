@@ -34,6 +34,27 @@ description: >
     result, followed by a walkthrough of the proof itself.
 published: true
 ---
+$$
+    \newcommand{\rcal}{\mathcal{R}}
+    \newcommand{\lcal}{\mathcal{L}}
+    \newcommand{\mcal}{\mathcal{M}}
+    \newcommand{\mocal}{\overline{\mathcal{M}}}
+    \newcommand{\mocalp}{\overline{\mathcal{M}}^\perp}
+    \newcommand{\mcalp}{\mathcal{M}^\perp}
+    \newcommand{\sse}{\subseteq}
+    \newcommand{\kl}{\kappa_{\lcal}}
+    \newcommand{\tl}{\tau_{\lcal}}
+    \newcommand{\ts}{\theta^*}
+    \newcommand{\hd}{\widehat{\Delta}}
+    \newcommand{\thatn}{\hat{\theta}_n}
+    \newcommand{\that}{\hat{\theta}}
+    \newcommand{\thatlambda}{\widehat{\theta}_{\lambda_n}}
+    \newcommand{\thatl}{\thatlambda}
+    \newcommand{\rs}{\rcal^*}
+    \newcommand{\ctriplet}{ \C(\mcal, \mocalp; \ts) }
+    \newcommand{\fcal}{\mathcal{F}}
+    \newcommand{\kbb}{\mathbb{K}}
+$$
 
 # Introduction
 
