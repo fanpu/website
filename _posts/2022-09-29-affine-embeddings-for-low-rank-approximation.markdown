@@ -23,7 +23,7 @@ description: >
     significant space savings, and can also help to make the data more
     interpretable. In this post, we explore how affine embeddings
     via the CountSketch matrix allows us to perform
-    low rank approximation in time \(O\left(\nnz{A}+(n+d) \poly \left( \frac{k}{\epsilon} \right)\right)\).
+    low rank approximation in time \(O\left(\nnz{A}+(n+d) \text{poly} \left( \frac{k}{\epsilon} \right)\right)\).
 
 ---
 
@@ -145,7 +145,7 @@ In fact, all of the following sketching matrices work:
 
 1. $$S$$ as the $$\frac{k}{\epsilon} \times n$$ matrix of i.i.d normal random variables. We can compute $$SA$$ in time $$O\left( \nnz{A} \frac{k}{\epsilon} \right)$$ since $$S$$ is dense. However, we could do a lot better.
 2. $$S$$ as the $$\tilde{O}\left(\frac{k}{\epsilon}\right) \times n$$ Subsampled Randomized Hadamard Transform (also called the Fast Johnson Lindenstrauss) matrix. $$SA$$ can be computed in $$O(nd \log n)$$ time.
-3. $$S$$ as the $$\poly\left( \frac{k}{\epsilon} \right) \times n$$ CountSketch matrix. While the number of rows is larger, $$SA$$ can be computed in just $$\nnz{A}$$ time.
+3. $$S$$ as the $$\text{poly}\left( \frac{k}{\epsilon} \right) \times n$$ CountSketch matrix. While the number of rows is larger, $$SA$$ can be computed in just $$\nnz{A}$$ time.
 
 In this post, we will focus on using the CountSketch matrix for low-rank approximation.
 
@@ -181,8 +181,8 @@ $$
 
 #### Sketching the Hypothetical Regression Problem with CountSketch
 Now take the CountSketch matrix $$S$$ to be our affine embedding. We claim that
-just $$\poly \left( \frac{k}{\epsilon} \right)$$ rows suffices, instead of the
-usual $$\poly \left( \frac{d}{\epsilon} \right)$$ rows. This is because since
+just $$\text{poly} \left( \frac{k}{\epsilon} \right)$$ rows suffices, instead of the
+usual $$\text{poly} \left( \frac{d}{\epsilon} \right)$$ rows. This is because since
 $$A_k$$ only has rank $$k$$, then we could replace it with some other $$n \times k$$
 rank $$k$$ matrix $$U_k$$ that has the same column span as $$A_k$$. This works because
 for every $$X$$ there is some $$Y$$ such that $$A_{k} X=U_{k} Y$$ and vice versa. Thus
@@ -305,15 +305,15 @@ This shows that it suffices to just compute the SVD of $$A (SA)^- U \Sigma$$ to 
 Unfortunately, we still haven't achieved the running time we want.
 Recall that our goal was to find the best rank-$$k$$ approximation in time
 $${O(\nnz{A} +(n+d) \operatorname{poly}(k / \varepsilon))}$$.
-$$A (SA)^- U \Sigma$$ is a $$n \times \poly \left( \frac{k}{\epsilon} \right)$$ matrix,
-so one might claim that computing its SVD only takes $$O\left( n \cdot \poly \left(
+$$A (SA)^- U \Sigma$$ is a $$n \times \text{poly} \left( \frac{k}{\epsilon} \right)$$ matrix,
+so one might claim that computing its SVD only takes $$O\left( n \cdot \text{poly} \left(
         \frac{k}{\epsilon} \right) \right)$$, which is within our time bounds.
 We could also compute $$SA$$, its pseudoinverse $$(SA)^-$$, and the multiplication $$(SA)^-U\Sigma$$ quickly.
 
 However, the problem is that we cannot multiply on the left by $$A$$ within the
 time bounds, because we have no guarantees about the sparsity of $$(SA)^- U
     \Sigma$$. It may as well be a very dense matrix. This means that computing
-$$A(SA)^- U \Sigma$$ takes time at least $$O\left( \nnz{A} \cdot \poly\left(
+$$A(SA)^- U \Sigma$$ takes time at least $$O\left( \nnz{A} \cdot \text{poly}\left(
         \frac{k}{\epsilon} \right) \right)$$, which does not meet our bounds.
 
 ### Summary of Current Progress
@@ -324,7 +324,7 @@ algorithm works as follows:
 2. Project each row of $$A$$ onto $$SA$$. We just showed that we couldn't do this in our desired time bound
           $${O\left(\nnz{A} +(n+d) \operatorname{poly}\left( \frac{k}{\epsilon} \right)\right)}$$.
 3. Find the best rank-$$k$$ approximation of the projected points inside the rowspace of $$SA$$.
-          This is in time $$O\left( n \cdot \poly \left( \frac{k}{\epsilon}
+          This is in time $$O\left( n \cdot \text{poly} \left( \frac{k}{\epsilon}
                   \right) \right)$$.
 
 Therefore Step 2 is our bottleneck that we hope to improve. We will do this by
@@ -344,7 +344,7 @@ $$
 
 We can't sketch on the left anymore since $$X$$ appears on the left, so we try to
 sketch on the right instead. Let $$R$$ be an affine embedding matrix, say a
-transposed CountSketch matrix with $$\poly \cdot \left( \frac{k}{\epsilon}
+transposed CountSketch matrix with $$\text{poly} \cdot \left( \frac{k}{\epsilon}
     \right)$$ columns. Then we sketch on the right in Equation \ref{eq:target} to
 change our target to be
 
@@ -401,15 +401,15 @@ in $$Y$$ to obtain an even better solution, contradicting its optimality.
 ### Analyzing the Runtime
 This time round, we have truly solved the problem. Previously, we failed because we could not
 project $$A$$ onto the column space of $$SA$$ in the desired time bounds. But this
-time round, $$SAR$$ has dimensions $$\poly \left( \frac{k}{\epsilon} \right) \times
-    \poly \left( \frac{k}{\epsilon} \right)$$, and $$AR$$ is a $$n \times \left(
+time round, $$SAR$$ has dimensions $$\text{poly} \left( \frac{k}{\epsilon} \right) \times
+    \text{poly} \left( \frac{k}{\epsilon} \right)$$, and $$AR$$ is a $$n \times \left(
     \frac{k}{\epsilon} \right)$$ matrix that takes $$\nnz{A}$$ time to compute, which
-means that $$AR(SAR)^-(SAR)$$ can be computed in time $$n \cdot \poly\left(
+means that $$AR(SAR)^-(SAR)$$ can be computed in time $$n \cdot \text{poly}\left(
     \frac{k}{\epsilon} \right) \in {O\left(\nnz{A} +(n+d) \operatorname{poly}\left(
         \frac{k}{\epsilon} \right)\right)} $$.
 
 As a result, we can proceed to compute $$Y$$ in Equation \ref{eq:change-var} by
-performing truncated SVD in time $$O\left(n \cdot \poly \left( \frac{k}{\epsilon}
+performing truncated SVD in time $$O\left(n \cdot \text{poly} \left( \frac{k}{\epsilon}
         \right)\right)$$.
 
 As noted previously, our solution $$Y$$ must look like $$Y = XSAR$$ for some $$X$$.
@@ -423,7 +423,7 @@ is a $$n \times d$$ matrix, which does not fit in our desired running time.
 ### Returning the Output in Factored Form
 We want to output $$LR = Y(SAR)^-SA$$ as $$L, R$$ where $$L$$ is $$n \times k$$ and $$R$$ is $$k \times d$$.
 
-To do so, recall that $$Y$$ is $$n \times \poly \left( \frac{k}{\epsilon} \right)$$ and so we
+To do so, recall that $$Y$$ is $$n \times \text{poly} \left( \frac{k}{\epsilon} \right)$$ and so we
 can recover its SVD representation as $$Y = U \Sigma V^\top$$. Then
 let
 
@@ -452,7 +452,7 @@ approximation algorithm is very simple.
 3. Compute $$\argmin_Y \left\|Y-A R(S A R)^{-}(S A R)\right\|_{\mathrm{F}}^{2}$$ by truncated SVD.
 4. Output $$Y(SAR)^{-}SA$$ in factored form.
 
-This takes $$O\left(\nnz{A}+(n+d) \poly \left( \frac{k}{\epsilon} \right)
+This takes $$O\left(\nnz{A}+(n+d) \text{poly} \left( \frac{k}{\epsilon} \right)
     \right)$$ time overall, which is much faster than applying truncated SVD to $$A$$
 directly.
 

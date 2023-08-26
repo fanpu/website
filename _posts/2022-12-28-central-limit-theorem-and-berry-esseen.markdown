@@ -307,7 +307,7 @@ In words, the theorem says that the difference between the CDF of the sum of
 the mean-0 random variables and the CDF of the standard normal is bounded by a
 value proportionate to the third moment. This then becomes useful as a tool in
 proving high probability statements if we can show that the third moment is
-inversely polynomially small, i.e $$\beta = 1/\poly(n)$$.
+inversely polynomially small, i.e $$\beta = 1/\text{poly}(n)$$.
 
 Another thing to note is that the theorem only provides an absolute bound for all values of $$u$$.
 Therefore, when $$u$$ is very negative and $$\Pr [Z \leq u ] = \Phi(u)$$ is very small, the
