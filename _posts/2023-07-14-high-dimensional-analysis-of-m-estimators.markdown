@@ -35,7 +35,7 @@ description: >
 published: true
 ---
 $$
-    \newcommand{\mathbb{R}}{\mathbb R}
+    \newcommand{\R}{\mathbb R}
     \newcommand{\C}{\mathbb C}
     \newcommand{\rcal}{\mathcal{R}}
     \newcommand{\lcal}{\mathcal{L}}
