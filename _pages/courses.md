@@ -524,7 +524,7 @@ time.
   how joint distributions of several variables can be represented efficiently by
   various models, taking into factors such as causal relationships. In the
   inference module, you will learn that sampling from such models is very hard
-  in general (assuming $$\P \neq \NP$$), and develop probabilistic ways of
+  in general (assuming $$\mathsf{P} \neq \mathsf{NP}$$), and develop probabilistic ways of
   sampling from them such as Monte-Carlo Markov-Chain and Variational Inference methods.
   In the final module, you will learn how such models can be fitted to training data.
   Graphical models form the backbone of many modern machine learning techniques like
