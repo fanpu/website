@@ -21,6 +21,13 @@ description: >
     drawbacks. Joint work with Owen Wang.
 ---
 $$
+    \newcommand{\E}{\mathbb{E}}
+    \newcommand{\bX}{\boldsymbol{X}}
+    \newcommand{\bv}{\boldsymbol{v}}
+    \newcommand{\bpi}{\boldsymbol{\pi}}
+    \newcommand{\bz}{\boldsymbol{z}}
+    \newcommand{\btheta}{\boldsymbol{\theta}}
+    \DeclareMathOperator{\tr}{tr}
     \newcommand{\pdata}{p_{\text{data}}(\bx)}
     \newcommand{\st}{\mathbf{s}_\mathbf{\theta}}
     \newcommand{\xt}{\tilde{\bx}}
