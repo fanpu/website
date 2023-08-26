@@ -17,7 +17,7 @@ on different problems. In the pass@k metric, the model generates $$k$$ different
 samples for a problem, and $$c$$ is the number of outputs that passes all test cases
 for that problem. They then use the following estimator:
 
-$$pass@k \coloneqq \E_{\text{Problems}} \left[ 1 - \frac{\binom{n-c}{k}}{\binom{n}{k}} \right].$$
+$$pass@k \coloneqq \mathbb{E}_{\text{Problems}} \left[ 1 - \frac{\binom{n-c}{k}}{\binom{n}{k}} \right].$$
 
 They showed that Codex performed better than GPT on their own HumanEval dataset. The HumanEval
 dataset is their own newly-developed dataset of problems and solutions, to avoid testing
