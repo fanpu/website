@@ -157,9 +157,19 @@ They then showed that this setup results in state-of-the-art performance on many
 tasks with long-range dependencies, outperforming Transformers and its variants.
 
 ### Most Glaring Deficiency
-It was unclear to me intuitively how such a conceptually simple S4 model
-is somehow capable of capturing long-range dependencies. It would make
-the paper even better if they included some hypotheses on why it works well.
+In many ways, the S4 model feels reminiscent of a RNN, except it uses a HiPPO
+matrix for updating its hidden state, which gives rise to opportunities for
+speedups which is the main focus of this paper.
+
+In this manner, would a traditional RNN approach have performed just as well
+if the matrix for updating the hidden state was also the HiPPO matrix?
+This was a question that could have been answered.
+
+It was unclear to me intuitively how the conceptually simple S4 model is
+somehow capable of capturing long-range dependencies, which plagues regular
+RNNs. Admittedly this may have been addressed more in-depth in the previous
+HiPPO paper, but it would make the paper even better if they included some
+hypotheses on why it works well.
 
 ### Conclusions for Future Work
 This paper showed that state space sequence models can be a viable technique for
