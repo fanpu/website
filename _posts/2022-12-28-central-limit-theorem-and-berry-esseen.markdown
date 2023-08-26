@@ -204,7 +204,7 @@ $$
 \end{align*}
 $$
 
-See that $$\mathbb{E}[A_i] = 0$$, and $$\Var(A_i) = 1$$.
+See that $$\mathbb{E}[A_i] = 0$$, and $$\mathbf{Var}(A_i) = 1$$.
 
 Then starting from the definition of the moment generating function of $$Z_n$$,
 
@@ -235,7 +235,7 @@ $$
                                & = 0,                                                                                                                                                      \\
     M_{A_i}^{\prime \prime}(0) & = \mathbb{E} \left[ A_i^2 \right]                                                     & \text{(by the $k$th moment property proved previously)}                   \\
                                & = \mathbb{E} \left[ A_i^2 \right] - \mathbb{E} \left[ A_i \right]^2 + \mathbb{E} \left[ A_i \right]^2                                                                             \\
-                               & = \Var(A_i) + \mathbb{E} \left[ A_i \right]^2                                         & \text{($\Var(A_i) = \mathbb{E} \left[ A_i^2 \right] - \mathbb{E} \left[ A_i \right]^2 $)} \\
+                               & = \mathbf{Var}(A_i) + \mathbb{E} \left[ A_i \right]^2                                         & \text{($\mathbf{Var}(A_i) = \mathbb{E} \left[ A_i^2 \right] - \mathbb{E} \left[ A_i \right]^2 $)} \\
                                & = 1 + 0 \\
                                & = 1.
 \end{align*}
@@ -285,7 +285,7 @@ and the statement goes as follows:
 
     Assume \( \mathbb{E} [X_i] = 0 \; \forall i \).
 
-    Write \( \sigma_i^2 = \Var [ X_i] = \mathbb{E}[X_i^2] - \mathbb{E}[X_i]^2 = \mathbb{E}[X_i^2] \).
+    Write \( \sigma_i^2 = \mathbf{Var} [ X_i] = \mathbb{E}[X_i^2] - \mathbb{E}[X_i]^2 = \mathbb{E}[X_i^2] \).
 
     Assume \( \sum\limits_{i=1}^n \sigma_i^2 = 1 \). 
 
