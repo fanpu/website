@@ -35,7 +35,7 @@ description: >
 published: true
 ---
 $$
-    \newcommand{\R}{\mathbb R}
+    \newcommand{\mathbb{R}}{\mathbb R}
     \newcommand{\C}{\mathbb C}
     \newcommand{\rcal}{\mathcal{R}}
     \newcommand{\lcal}{\mathcal{L}}
@@ -108,7 +108,7 @@ If we add a regularization term $$\rcal$$ to penalize complexity of the model, s
     The Lasso program is an example of a regularized \( M \)-estimator, where a
     \( \ell_1 \) regularization penalty is applied:
     $$
-        \that \in \argmin_{\theta \in \R^d} \left\{
+        \that \in \argmin_{\theta \in \mathbb{R}^d} \left\{
         \frac{1}{2n} \| y - \bX \theta \|_2^2 + \lambda_n \| \theta \|_1
         \right\}.
     $$
@@ -125,7 +125,7 @@ If we add a regularization term $$\rcal$$ to penalize complexity of the model, s
     \(\dotprod{\cdot}{\cdot}\). Then the dual norm of \(\rcal\)
     is defined as
     $$
-        \rs(v) \coloneqq \sup_{u \in \R^p \setminus \left\{ 0 \right\}}
+        \rs(v) \coloneqq \sup_{u \in \mathbb{R}^p \setminus \left\{ 0 \right\}}
         \frac{ \dotprod{u}{v} }{\rcal (u)} = \sup_{\rcal(u) \leq 1} \dotprod{u}{v}.
     $$
   "
@@ -173,7 +173,7 @@ The subspace compatibility constant is defined as follows:
   type="definition"
   name="Subspace Compatibility Constant"
   statement="
-    For any subspace \( \mcal \) of \( \R^p \), the <i>subspace compatibility constant</i>
+    For any subspace \( \mcal \) of \( \mathbb{R}^p \), the <i>subspace compatibility constant</i>
     with respect to the pair \( (\rcal, \| \cdot \|) \) is given by
 
     $$
@@ -208,13 +208,13 @@ In our setup, we define the following quantities:
         drawn from distribution $$\mathbb{P}$$ with some parameter $$\theta^*$$,
 - $$\mathcal{L}: \mathbb{R}^p \times \mathcal{Z}^n \to \mathbb{R}$$ a convex and differentiable loss function, such that $$\mathcal{L}(\theta; Z_1^n)$$ returns the loss of $$\theta$$ on observations $$Z_1^n$$,
 - $$\lambda_n > 0$$: a user-defined regularization penalty,
-- $$\mathcal{R} : \R^p \to \R_+$$ a norm-based regularizer.
+- $$\mathcal{R} : \mathbb{R}^p \to \mathbb{R}_+$$ a norm-based regularizer.
 
 The purpose of the regularized $$M$$-estimator is then to solve for the convex optimization problem
 
 $$
 \begin{align} \label{eq:opt}
-    \widehat{\theta}_{\lambda_n} \in \argmin_{\theta \in \R^p} \left\{
+    \widehat{\theta}_{\lambda_n} \in \argmin_{\theta \in \mathbb{R}^p} \left\{
     \mathcal{L}(\theta; Z_1^n) + \lambda_n \mathcal{R} (\theta) \right\},
 \end{align}
 $$
@@ -225,19 +225,19 @@ $$
     \| \thatlambda - \theta^* \|
 \end{align}
 $$
-for some error norm $$\| \cdot \|$$ induced by an inner product $$\langle \cdot, \cdot \rangle$$ in $$\R^p$$.
+for some error norm $$\| \cdot \|$$ induced by an inner product $$\langle \cdot, \cdot \rangle$$ in $$\mathbb{R}^p$$.
 
 # Decomposability of the Regularizer $$\mathcal{R}$$
 
 The first key property in the result is decomposability of our norm-based regularizer $$\rcal$$.
-Working in the ambient $$\R^p$$, define $$\mcal \sse \R^p$$ to be the model subspace that captures
+Working in the ambient $$\mathbb{R}^p$$, define $$\mcal \sse \mathbb{R}^p$$ to be the model subspace that captures
 the constraints of the model that we are working with (i.e $$k$$-sparse vectors),
 and denote $$\mocal$$ to be its closure, i.e the union of $$\mcal$$ and all of its limit points.
 In addition, denote $$\mocalp$$ to be the orthogonal complement of $$\mocal$$, namely
 
 $$
 \begin{align}
-    \mocalp \coloneqq \left\{ v \in \R^p \mid \langle u, v \rangle = 0 \text{ for all \( u \in \mocal \) }
+    \mocalp \coloneqq \left\{ v \in \mathbb{R}^p \mid \langle u, v \rangle = 0 \text{ for all \( u \in \mocal \) }
     \right\}.
 \end{align}
 $$
@@ -284,22 +284,22 @@ and the following example highlights one such case.
   type="example"
   name="\( s \)-sparse Vectors"
   statement="
-      Consider estimating the parameters \( \that \) with \( \ell_1 \)-regularization in \( \R^p \) where we assume that
+      Consider estimating the parameters \( \that \) with \( \ell_1 \)-regularization in \( \mathbb{R}^p \) where we assume that
     the model is \( s \)-sparse. Then for any set \( S \sse [p] \) where \( |S| = s \),
     we can define our model subspace \( \mcal \) as
 
     \[
     \begin{align*}
-        \mcal(S) \coloneqq \left\{ \theta \in \R^p \mid \theta_j = 0 \quad \forall j \not\in S \right\},
+        \mcal(S) \coloneqq \left\{ \theta \in \mathbb{R}^p \mid \theta_j = 0 \quad \forall j \not\in S \right\},
     \end{align*}
     \]
 
-    i.e all the vectors in \( \R^p \) that only has support in \( S \). In this case, \( \mcal = \mocal \),
+    i.e all the vectors in \( \mathbb{R}^p \) that only has support in \( S \). In this case, \( \mcal = \mocal \),
     and our orthogonal complement \( \mocalp \) is just
 
     \[
     \begin{align*}
-        \mocalp(S) \coloneqq \left\{ \gamma \in \R^p \mid \gamma_j = 0 \quad \forall j \in S \right\}.
+        \mocalp(S) \coloneqq \left\{ \gamma \in \mathbb{R}^p \mid \gamma_j = 0 \quad \forall j \in S \right\}.
     \end{align*}
     \]
 
@@ -356,7 +356,7 @@ This is given in the following result, which is known as Lemma 1 in [(Negahban e
 
     $$
     \begin{align*} \label{eq:c}
-        \C(\mcal, \mocalp; \ts) \coloneqq \left\{  \Delta \in \R^p \mid
+        \C(\mcal, \mocalp; \ts) \coloneqq \left\{  \Delta \in \mathbb{R}^p \mid
         \rcal(\Delta_{\mocalp}) \leq 3 \rcal (\Delta_{\mocal}) + 4 \rcal (\ts_{\mcalp})
         \right\}.
     \end{align*}
@@ -371,7 +371,7 @@ Due to space constraints, we are unable to prove Lemma [Lemma 1](#lemma-1) in th
 but it is very important in the formulation of restricted strong convexity, and in proving
 [Theorem 1](#thm-1).
 
-[Figure 1](#fig-1) provides a visualization of $$\ctriplet$$ in $$\R^3$$ in the
+[Figure 1](#fig-1) provides a visualization of $$\ctriplet$$ in $$\mathbb{R}^3$$ in the
 sparse vectors setting. In this case, $$S = \left\{ 3 \right\}$$ with $$|S|=1$$,
 and so the projection of $$\Delta$$ onto the model subspace only has non-zero
 values on the third coordinate, and its orthogonal complement is where the third
@@ -379,8 +379,8 @@ coordinate is zero. Formally,
 
 $$
 \begin{align}
-    \mcal(S) = \mocal(S) & = \left\{ \Delta \in \R^3 \mid \Delta_1 = \Delta_2 = 0 \right\}, \\
-    \mocalp(S)           & = \left\{ \Delta \in \R^3 \mid \Delta_3 = 0 \right\}.
+    \mcal(S) = \mocal(S) & = \left\{ \Delta \in \mathbb{R}^3 \mid \Delta_1 = \Delta_2 = 0 \right\}, \\
+    \mocalp(S)           & = \left\{ \Delta \in \mathbb{R}^3 \mid \Delta_3 = 0 \right\}.
 \end{align}
 $$
 
@@ -395,7 +395,7 @@ when $$\ts \in \mcal$$. In this scenario, $$\rcal (\ts_{\mcalp}) = 0$$, and so
 
 $$
 \begin{align*}
-    \C(\mcal, \mocalp; \ts) = \left\{  \Delta \in \R^p \mid
+    \C(\mcal, \mocalp; \ts) = \left\{  \Delta \in \mathbb{R}^p \mid
     \rcal(\Delta_{\mocalp}) \leq 3 \rcal (\Delta_{\mocal}) \right\},
 \end{align*}
 $$
@@ -545,7 +545,7 @@ $$ \ctriplet $$ due to [Lemma 1](#lemma-1).  Therefore, it suffices to show
 $$ \fcal(\Delta) > 0 $$ to obtain a bound on $$ \| \hd \| = \| \thatlambda - \ts\| $$, 
 which completes the proof of Theorem 1.
 
-Define $$\fcal : \R^p \to \R$$ by
+Define $$\fcal : \mathbb{R}^p \to \mathbb{R}$$ by
 
 $$
 \begin{align}

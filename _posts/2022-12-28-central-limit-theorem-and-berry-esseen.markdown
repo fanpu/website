@@ -62,7 +62,7 @@ The Central Limit Theorem can then be stated in the following form (there are ma
   name="Central Limit Theorem"
   statement="
   Let \( X_1, X_2, \dots, X_n \) be a sequence of independent random variables with mean \( \mu \) and variance \( \sigma^2 \).
-  Assume that the moment generating function \( \E \left[ \exp(t X_i) \right] \) is finite for \( t \) in a neighborhood around zero.
+  Assume that the moment generating function \( \mathbb{E} \left[ \exp(t X_i) \right] \) is finite for \( t \) in a neighborhood around zero.
   Let \( \overline{X}_n = \frac{1}{n} \sum\limits_{i=1}^n X_i \). Let
   
   $$ Z_n = \frac{\sqrt{n} \left( \overline{X}_n - \mu \right)}{\sigma}. $$
@@ -92,28 +92,28 @@ defined as follows:
   statement="
   The moment generating function of a random variable \( X \) is given by
   
-  $$ M_X(t) = \E \left[ e^{tX} \right].$$
+  $$ M_X(t) = \mathbb{E} \left[ e^{tX} \right].$$
   "
 %}
 
 It is called a moment generating function since the $$k$$th moment of $$X$$,
-i.e $$\E \left[X^k \right] $$, can be obtained by taking the
+i.e $$\mathbb{E} \left[X^k \right] $$, can be obtained by taking the
 $$k$$th derivative of its moment-generating function (MGF) at 0:
 
-$$ \E \left[X^k \right]  = M^{(k)}(0). $$
+$$ \mathbb{E} \left[X^k \right]  = M^{(k)}(0). $$
 
 This is not too hard to see by induction on the fact that
-$$M_X^k(t) = \E \left[ X^k e^{tX} \right]$$. The base case is trivial. 
+$$M_X^k(t) = \mathbb{E} \left[ X^k e^{tX} \right]$$. The base case is trivial. 
 For the inductive case,
 
 $$
 \begin{align*}
-    M_X^{(k)}(t) & = \frac{d^k}{dt^k} \E \left[ e^{tX} \right] \\ 
-               & = \frac{d}{dt} \E \left[ X^{k-1} e^{tX} \right] & \text{(by IH)}\\
+    M_X^{(k)}(t) & = \frac{d^k}{dt^k} \mathbb{E} \left[ e^{tX} \right] \\ 
+               & = \frac{d}{dt} \mathbb{E} \left[ X^{k-1} e^{tX} \right] & \text{(by IH)}\\
                & = \frac{d}{dt} \int f(x) x^{k-1} e^{tx} \; dx \\ 
                & = \int \frac{d}{dt} f(x) x^{k-1} e^{tx} \; dx \\
                & = \int f(x) x^{k} e^{tx} \; dx \\
-               & = \E \left[ X^{k} e^{tX} \right].
+               & = \mathbb{E} \left[ X^{k} e^{tX} \right].
 \end{align*}
 $$
 
@@ -171,7 +171,7 @@ Let's first find the moment generating function of $$Z$$:
 
 $$
 \begin{align*}
-    M_{Z} & = \E \left[ e^{tZ} \right]                                                                                                \\
+    M_{Z} & = \mathbb{E} \left[ e^{tZ} \right]                                                                                                \\
           & = \int f_Z(x) e^{tx} \; dx                                                                                                \\
           & = \int \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}x^2} e^{tx} \; dx                 & \text{(subst. pdf of standard Gaussian)} \\
           & = \int \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}x^2 + tx} \; dx                                                              \\
@@ -204,15 +204,15 @@ $$
 \end{align*}
 $$
 
-See that $$\E[A_i] = 0$$, and $$\Var(A_i) = 1$$.
+See that $$\mathbb{E}[A_i] = 0$$, and $$\Var(A_i) = 1$$.
 
 Then starting from the definition of the moment generating function of $$Z_n$$,
 
 $$
 \begin{align*}
-    M_{Z_n}(t) & = \E \left[ e^{t Z_n} \right]                                                                                                   \\
-               & = \E \left[ \exp\left(t \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n A_i \right) \right] & \text{(by equivalent definition of $Z_n$)} \\
-               & = \prod_{i=1}^n \E \left[ \exp\left( \frac{t}{\sqrt{n}} A_i \right) \right]        & \text{(by independence of $A_i$'s)}        \\
+    M_{Z_n}(t) & = \mathbb{E} \left[ e^{t Z_n} \right]                                                                                                   \\
+               & = \mathbb{E} \left[ \exp\left(t \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n A_i \right) \right] & \text{(by equivalent definition of $Z_n$)} \\
+               & = \prod_{i=1}^n \mathbb{E} \left[ \exp\left( \frac{t}{\sqrt{n}} A_i \right) \right]        & \text{(by independence of $A_i$'s)}        \\
                & = \prod_{i=1}^n M_{A_i}(t/\sqrt{n})                                                & \text{(definition of $M_{A_i}$)}           \\
                & = M_{A_i}(t/\sqrt{n} )^n.
 \end{align*}
@@ -228,14 +228,14 @@ These are:
 
 $$
 \begin{align*}
-    M_{A_i}(0)                 & = \E \left[ e^{t A_i} \right] \Big|_{t=0}                                                                                                                 \\
-                               & = \E \left[ 1 \right]                                                                                                                                     \\
+    M_{A_i}(0)                 & = \mathbb{E} \left[ e^{t A_i} \right] \Big|_{t=0}                                                                                                                 \\
+                               & = \mathbb{E} \left[ 1 \right]                                                                                                                                     \\
                                & = 1,                                                                                                                                                      \\
-    M_{A_i}^\prime(0)          & = \E \left[ A_i \right]                                                       & \text{(by the $k$th moment property proved previously)}                   \\
+    M_{A_i}^\prime(0)          & = \mathbb{E} \left[ A_i \right]                                                       & \text{(by the $k$th moment property proved previously)}                   \\
                                & = 0,                                                                                                                                                      \\
-    M_{A_i}^{\prime \prime}(0) & = \E \left[ A_i^2 \right]                                                     & \text{(by the $k$th moment property proved previously)}                   \\
-                               & = \E \left[ A_i^2 \right] - \E \left[ A_i \right]^2 + \E \left[ A_i \right]^2                                                                             \\
-                               & = \Var(A_i) + \E \left[ A_i \right]^2                                         & \text{($\Var(A_i) = \E \left[ A_i^2 \right] - \E \left[ A_i \right]^2 $)} \\
+    M_{A_i}^{\prime \prime}(0) & = \mathbb{E} \left[ A_i^2 \right]                                                     & \text{(by the $k$th moment property proved previously)}                   \\
+                               & = \mathbb{E} \left[ A_i^2 \right] - \mathbb{E} \left[ A_i \right]^2 + \mathbb{E} \left[ A_i \right]^2                                                                             \\
+                               & = \Var(A_i) + \mathbb{E} \left[ A_i \right]^2                                         & \text{($\Var(A_i) = \mathbb{E} \left[ A_i^2 \right] - \mathbb{E} \left[ A_i \right]^2 $)} \\
                                & = 1 + 0 \\
                                & = 1.
 \end{align*}
@@ -283,13 +283,13 @@ and the statement goes as follows:
   statement="
     Let \( X_1, \dots, X_n \) be independent random variables.
 
-    Assume \( \E [X_i] = 0 \; \forall i \).
+    Assume \( \mathbb{E} [X_i] = 0 \; \forall i \).
 
-    Write \( \sigma_i^2 = \Var [ X_i] = \E[X_i^2] - \E[X_i]^2 = \E[X_i^2] \).
+    Write \( \sigma_i^2 = \Var [ X_i] = \mathbb{E}[X_i^2] - \mathbb{E}[X_i]^2 = \mathbb{E}[X_i^2] \).
 
     Assume \( \sum\limits_{i=1}^n \sigma_i^2 = 1 \). 
 
-    Let \( S = \sum\limits_{i=1}^n X_i \). Then \( \forall u \in \R \),
+    Let \( S = \sum\limits_{i=1}^n X_i \). Then \( \forall u \in \mathbb{R}\),
     
     $$
         \lvert \Pr \left[ S \leq u \right] - \Pr \left[ Z \leq u \right] \rvert
@@ -298,7 +298,7 @@ and the statement goes as follows:
 
     where the exact constant depends on the proof, with the best known constant
     being \(.5600\) proven by Shevtsova in 2010, and 
-    \(\beta = \sum\limits_{i=1}^n \E \left[ \lvert X_i \rvert^3 \right]\).
+    \(\beta = \sum\limits_{i=1}^n \mathbb{E} \left[ \lvert X_i \rvert^3 \right]\).
 
   "
 %}

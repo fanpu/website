@@ -21,7 +21,7 @@ description: >
     drawbacks. Joint work with Owen Wang.
 ---
 $$
-    \newcommand{\E}{\mathbb{E}}
+    \newcommand{\mathbb{E}}{\mathbb{E}}
     \newcommand{\bX}{\boldsymbol{X}}
     \newcommand{\bv}{\boldsymbol{v}}
     \newcommand{\bpi}{\boldsymbol{\pi}}
@@ -193,7 +193,7 @@ Divergence between the score function and the score network:
 
 $$
 \begin{align} \label{eq:score-matching-target-fisher-div}
-    \argmin_\theta \frac{1}{2} \E_{\pdata} \left[
+    \argmin_\theta \frac{1}{2} \mathbb{E}_{\pdata} \left[
         \| \stx - \nabla_\bx \log \pdata \|_2^2
         \right].
 \end{align}
@@ -209,7 +209,7 @@ is equivalent to Equation \ref{eq:score-matching-target} below:
 
 $$
 \begin{align} \label{eq:score-matching-target}
-    \argmin_\theta \frac{1}{2} \E_{\pdata} \left[
+    \argmin_\theta \frac{1}{2} \mathbb{E}_{\pdata} \left[
         \tr \left( \nabla_\bx \stx \right) +
         \frac{1}{2} \| \stx \|_2^2
         \right].
@@ -232,7 +232,7 @@ multivariate standard Gaussian) in order to optimize an analog of the Fisher Div
 
 $$
 \begin{align}
-    L(\btheta, \pv) = \frac{1}{2} \E_{\pv} \E_{\pdata} \left[ (\bv^T \stx - \bv^T \sdx)^2 \right]
+    L(\btheta, \pv) = \frac{1}{2} \mathbb{E}_{\pv} \mathbb{E}_{\pdata} \left[ (\bv^T \stx - \bv^T \sdx)^2 \right]
 \end{align}
 $$
 
@@ -240,9 +240,9 @@ We observe that
 
 $$
 \begin{align}
-    L(\btheta; \pv) &= \frac{1}{2} \E_{\pv} \E_{\pdata} \left[ (\bv^T \stx - \bv^T \sdx)^2 \right]\\
-    &=\frac{1}{2} \E_{\pv} \E_{\pdata} \left[ (\bv^T \stx )^2 + (\bv^T \sdx)^2 - 2(\bv^T \stx )(\bv^T \sdx) \right]\\
-    &= \E_{\pv} \E_{\pdata} \left[ \frac{1}{2}(\bv^T \stx )^2 - (\bv^T \stx )(\bv^T \sdx) \right] + C\\
+    L(\btheta; \pv) &= \frac{1}{2} \mathbb{E}_{\pv} \mathbb{E}_{\pdata} \left[ (\bv^T \stx - \bv^T \sdx)^2 \right]\\
+    &=\frac{1}{2} \mathbb{E}_{\pv} \mathbb{E}_{\pdata} \left[ (\bv^T \stx )^2 + (\bv^T \sdx)^2 - 2(\bv^T \stx )(\bv^T \sdx) \right]\\
+    &= \mathbb{E}_{\pv} \mathbb{E}_{\pdata} \left[ \frac{1}{2}(\bv^T \stx )^2 - (\bv^T \stx )(\bv^T \sdx) \right] + C\\
 \end{align}
 $$
 
@@ -251,14 +251,14 @@ Now note
 
 $$
 \begin{align}
- & -\E_{\pv} \E_{\pdata}\left[(\bv^T \stx )(\bv^T \sdx) \right] \\
-=& -\E_{\pv} \int \left[(\bv^T \stx )(\bv^T \sdx)  \pdata d\bx\right]\\
-=& -\E_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\log \pdata)\pdata d\bx\right] \\
-=& -\E_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\pdata)d\bx\right] \\
-=& -\E_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\pdata)d\bx\right] \\
-=& -\E_{\pv}  \left[\sum_{i}\int(\bv^T \stx )(v_i\frac{\partial \pdata}{\partial x_i})d\bx\right] \\
-=& \E_{\pv}  \left[\int \bv^T\stx\bv \cdot \pdata d\bx\right] \\
-=& \E_{\pv}\E_{\pdata}\left[\bv^T\stx\bv \right]
+ & -\mathbb{E}_{\pv} \mathbb{E}_{\pdata}\left[(\bv^T \stx )(\bv^T \sdx) \right] \\
+=& -\mathbb{E}_{\pv} \int \left[(\bv^T \stx )(\bv^T \sdx)  \pdata d\bx\right]\\
+=& -\mathbb{E}_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\log \pdata)\pdata d\bx\right] \\
+=& -\mathbb{E}_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\pdata)d\bx\right] \\
+=& -\mathbb{E}_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\pdata)d\bx\right] \\
+=& -\mathbb{E}_{\pv}  \left[\sum_{i}\int(\bv^T \stx )(v_i\frac{\partial \pdata}{\partial x_i})d\bx\right] \\
+=& \mathbb{E}_{\pv}  \left[\int \bv^T\stx\bv \cdot \pdata d\bx\right] \\
+=& \mathbb{E}_{\pv}\mathbb{E}_{\pdata}\left[\bv^T\stx\bv \right]
 \end{align}
 $$
 
@@ -267,7 +267,7 @@ parts. This finally yields the equivalent objective:
 
 $$
 \begin{align}
-    J(\btheta; \pv) &= \E_{\pv} \E_{\pdata} \left[ \bv^T \nabla_\bx \stx \bv + \frac{1}{2} \| \stx \|_2^2 \right]
+    J(\btheta; \pv) &= \mathbb{E}_{\pv} \mathbb{E}_{\pdata} \left[ \bv^T \nabla_\bx \stx \bv + \frac{1}{2} \| \stx \|_2^2 \right]
 \end{align}
 $$
 
@@ -381,7 +381,7 @@ as
 
 $$
 \begin{align}
-    \ell(\theta; \sigma) \triangleq \frac{1}{2} \E_{\pdata} \E_{\xt \sim \mathcal{N}(\bx, \sigma^2 I)} \left[ \left\| \stxt + \frac{\xt - \bx}{\sigma^2} \right\|_2^2 \right],
+    \ell(\theta; \sigma) \triangleq \frac{1}{2} \mathbb{E}_{\pdata} \mathbb{E}_{\xt \sim \mathcal{N}(\bx, \sigma^2 I)} \left[ \left\| \stxt + \frac{\xt - \bx}{\sigma^2} \right\|_2^2 \right],
 \end{align}
 $$
 
@@ -436,9 +436,9 @@ The objective function for score matching for the SDE is then given by
 
 $$
 \begin{align}
-    \argmin_{\theta} \E_t 
+    \argmin_{\theta} \mathbb{E}_t 
     \left[ 
-    \lambda (t) \E_{\bx(0)} \E_{\bx (t) \mid \bx(0)} \left[ 
+    \lambda (t) \mathbb{E}_{\bx(0)} \mathbb{E}_{\bx (t) \mid \bx(0)} \left[ 
     \| \bs_\theta (\bx(t), t) - \nabla_{\bx(t)} \log p_{0t}(\bx (t) \mid \bx(0)) \|_2^2
     \right]
     \right].

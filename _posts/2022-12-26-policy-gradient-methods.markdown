@@ -30,7 +30,7 @@ that it visits.
 This can be formalized as
 
 \begin{equation}
-    \max_\theta \E_{\tau \sim P_\theta(\tau)} [R(\tau)],
+    \max_\theta \mathbb{E}_{\tau \sim P_\theta(\tau)} [R(\tau)],
 \end{equation}
 
 where $$\tau$$ refers to a trajectory of state-action pairs, $$P_\theta(\tau)$$
@@ -39,7 +39,7 @@ and $$R(\tau)$$ is the reward under trajectory $$\tau$$.
 
 To perform a gradient-based update on $$\theta$$ to increase the reward, we 
 need to compute 
-$$\nabla_\theta \E_{\tau \sim P(\tau; \theta)} [R(\tau)] $$. We can derive the
+$$\nabla_\theta \mathbb{E}_{\tau \sim P(\tau; \theta)} [R(\tau)] $$. We can derive the
 following sequence of steps:
 
 

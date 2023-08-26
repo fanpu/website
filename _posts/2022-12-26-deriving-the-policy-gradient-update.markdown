@@ -54,7 +54,7 @@ This can be formalized as the following objective:
 
 $$
 \begin{align}
-     & \max_\theta \E_{\tau \sim P_\theta(\tau)} [R(\tau)] \\
+     & \max_\theta \mathbb{E}_{\tau \sim P_\theta(\tau)} [R(\tau)] \\
    = & \max_\theta \sum\limits_\tau P_\theta(\tau) R(\tau) \\
    = & \max_\theta U(\theta),
 \end{align}
@@ -84,12 +84,12 @@ necessarily know this environment transition probability $$P(s_{t+1} \mid s_t, a
 
 To perform a gradient-based update on $$\theta$$ to increase the reward, we 
 need to compute the derivative with respect to our policy $$\theta$$, i.e
-$$\nabla_\theta \E_{\tau \sim P(\tau; \theta)} [R(\tau)] $$. 
+$$\nabla_\theta \mathbb{E}_{\tau \sim P(\tau; \theta)} [R(\tau)] $$. 
 Let's walk through the derivation step by step:
 
 $$
 \begin{align*}
-    \nabla_\theta \E_{\tau \sim P_\theta(\tau)} [R(\tau)]
+    \nabla_\theta \mathbb{E}_{\tau \sim P_\theta(\tau)} [R(\tau)]
      & = \nabla_\theta \sum\limits_\tau P_\theta(\tau) R(\tau) \\
      & = \sum\limits_\tau \nabla_\theta  P_\theta(\tau) R(\tau) & \text{(uh oh...)}\\
 \end{align*}
@@ -109,7 +109,7 @@ $$
     &= \sum\limits_\tau \frac{ P_\theta(\tau) }{ P_\theta(\tau) } \nabla_\theta  P_\theta(\tau) R(\tau) & \text{(multiplying by 1)} \\
     &= \sum\limits_\tau P_\theta(\tau) \frac{ \nabla_\theta  P_\theta(\tau)  }{ P_\theta(\tau) } R(\tau) & \text{(rearranging)} \\
     &= \sum\limits_\tau P_\theta(\tau) \nabla_\theta  \log  P_\theta(\tau) R(\tau) & \text{($\frac{d}{dx} \log f(x) = \frac{f'(x)}{f(x)} $)} \\
-    &= \E_{\tau \sim P_\theta(\tau)} \left[ \nabla_\theta  \log  P_\theta(\tau) R(\tau)  \right] \\
+    &= \mathbb{E}_{\tau \sim P_\theta(\tau)} \left[ \nabla_\theta  \log  P_\theta(\tau) R(\tau)  \right] \\
     &\approx \frac{1}{N} \sum\limits_{i=1}^N \nabla_\theta  \log  P_\theta(\tau_i) R(\tau_i), \\
 \end{align*}
 $$
