@@ -127,7 +127,7 @@ These, and their mitigations, include:
     An example generative attack is the Emoji attack, shown in the figure below:
 
 {% include figure.html 
-    path="/assets/img/summaries/watermark-attacks.webp"
+    path="/assets/img/summaries/watermark-attack.webp"
     width="600px"
     class="z-depth-1"
 %}
@@ -149,7 +149,7 @@ having only to modify the final logits before sampling. It also does not require
 However, while such watermark-based approaches are one step towards allowing us
 to identify LLM-produced text in the wild, they still suffer from the fundamental
 limitation that it require adversaries to be using LLMs that conform with the watermarking standard.
-Indeed, given the rising prevalence of highly capable [small language](https://ai.meta.com/llama/)
-models](https://ai.meta.com/llama/) that can run on commodity hardware,
+Indeed, given the rising prevalence of highly capable [small language models](https://ai.meta.com/llama/)
+that can run on commodity hardware,
 motivated adversaries can simply deploy and run their own models that produce
 text without any watermarks.
