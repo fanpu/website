@@ -16,7 +16,7 @@ data = {
 }
 
 # The TrackBack URL from the post's front matter (or where you stored it)
-arXiv_id = '2004.04906v3'
+arXiv_id = '2004.04906'
 trackback_url = f'https://arxiv.org/trackback/{arXiv_id}'
 
 
