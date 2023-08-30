@@ -580,3 +580,31 @@ Url           = {http://arxiv.org/abs/2301.10226v3},
 File          = {2301.10226v3.pdf},
 EprintNoVer   = {2301.10226}
 }
+
+@article{2012.07805v2,
+Author        = {Nicholas Carlini and Florian Tramer and Eric Wallace and Matthew Jagielski and Ariel Herbert-Voss and Katherine Lee and Adam Roberts and Tom Brown and Dawn Song and Ulfar Erlingsson and Alina Oprea and Colin Raffel},
+Title         = {Extracting Training Data from Large Language Models},
+Eprint        = {2012.07805v2},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CR},
+Abstract      = {It has become common to publish large (billion parameter) language models
+that have been trained on private datasets. This paper demonstrates that in
+such settings, an adversary can perform a training data extraction attack to
+recover individual training examples by querying the language model.
+  We demonstrate our attack on GPT-2, a language model trained on scrapes of
+the public Internet, and are able to extract hundreds of verbatim text
+sequences from the model's training data. These extracted examples include
+(public) personally identifiable information (names, phone numbers, and email
+addresses), IRC conversations, code, and 128-bit UUIDs. Our attack is possible
+even though each of the above sequences are included in just one document in
+the training data.
+  We comprehensively evaluate our extraction attack to understand the factors
+that contribute to its success. Worryingly, we find that larger models are more
+vulnerable than smaller models. We conclude by drawing lessons and discussing
+possible safeguards for training large language models.},
+Year          = {2020},
+Month         = {Dec},
+Url           = {http://arxiv.org/abs/2012.07805v2},
+File          = {2012.07805v2.pdf},
+EprintNoVer   = {2012.07805}
+}
