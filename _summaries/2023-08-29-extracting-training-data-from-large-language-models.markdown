@@ -19,7 +19,7 @@ given below (with permission from the individual affected):
 
 {% include figure.html 
     path="/assets/img/summaries/llm-extraction-example.webp"
-    width="600px"
+    width="350px"
     class="z-depth-1"
 %}
 
@@ -27,7 +27,7 @@ The table below shows the types of memorized content that they were able to reco
 
 {% include figure.html 
     path="/assets/img/summaries/llm-extraction-memorized.webp"
-    width="600px"
+    width="350px"
     class="z-depth-1"
 %}
 
