@@ -132,5 +132,5 @@ If an error occured, the `error` field is set to `1`:
 And that's all there is to creating Trackback requests! It's actually quite
 simple, and is just not terribly well-documented. 
 
-Again, please use it responsibly and stay away from any behavior that could be
-constituted as spamming.
+As a final parting word, a reminder again to please use it *responsibly* and *stay
+away from any behavior that could be constituted as spamming*.
