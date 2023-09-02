@@ -265,7 +265,7 @@ Some examples of the different skins are shown below. I know, they're pretty!
 ### LiqidWave
 
 {% include figure.html 
-    path="/assets/img/posts/sdvx/vivid-480p-2.gif"
+    path="/assets/img/posts/sdvx/vivid.gif"
     width="400px"
     class="z-depth-1"
 %}
