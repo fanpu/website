@@ -1,25 +1,37 @@
 ---
 title: "Playing Sound Voltex at Home: Setting Up Unnamed SDVX Clone with the Yuancon SDVX Controller"
 layout: post
-tags: [general]
-cover: fuji_ascent_1.webp
-cover_preview: fuji_ascent_1.webp
-caption: Yoshida Trail ascent on Mt Fuji, Shizuoka Prefecture, Japan
+tags: [general, rhythm-games]
+cover: sdvx/sdvx_banner.webp
+cover_preview: sdvx/sdvx_banner.webp
+caption: The mascots of Sound Voltex series, Rasis and Grace
 class: post-template
 author: fanpu
 toc:
   sidebar: left
 giscus_comments: true
 description: >
-  UPDATE ME
+  Rhythm is just a $200 controller and some hopefully-not-too-complicated
+  open source software setup away!
+
+  This beginner's guide will help to demystify the process of setting up Sound Voltex
+  at home using a custom SDVX controller using Unnamed SDVX Clone.
 published: true
+---
+
+Rhythm is just a $200 controller and some hopefully-not-too-complicated
+open source software setup away!
+
+This beginner's guide will help to demystify the process of setting up Sound Voltex
+at home using a custom SDVX controller using Unnamed SDVX Clone.
+
 ---
 
 My foray into rhythm games started way
 back with [Love Live! School Idol Festival](https://lovelive-sif-global.bushimo.jp/).
 While the game has sadly since shut down, other
-titles that I've played
-included [BanG Dream!](https://bang-dream-gbp-en.bushiroad.com/)
+titles I've played
+include [BanG Dream!](https://bang-dream-gbp-en.bushiroad.com/)
 and [Project SEKAI](https://projectsekai.fandom.com/wiki/Project_SEKAI_COLORFUL_STAGE!).
 
 When I visited Japan a few months ago in the summer, I discovered [Sound Voltex](https://p.eagate.573.jp/game/sdvx/sv/p/index.html), and instantly
@@ -39,7 +51,7 @@ Rhythm games in general are sadly not as mainstream outside of Japan.
 For instance, in Singapore I was only aware of a single arcade that had Sound Voltex cabs,
 even though arcades are quite popular in general. Similarly, in NYC, there's only a single 
 small arcade called [Chinatown Fair](http://www.chinatownfair.biz/) that has Sound Voltex.
-So naturally I wanted to see if I could set it up myself at home.
+So naturally I wanted to see if I could set it up at home to continue enjoying the game.
 
 (Apparently, if you have a lot of disposable income and space in your living
 room, you can also just buy an entire [previous-generation Sound Voltex
@@ -48,16 +60,16 @@ few thousand dollars)
 
 ## Why This Guide
 I decided to write this guide since the setup process could seem somewhat daunting for
-people who are interested in rhythm games but are not developers. Hopefully with
-this guide more people will also be able to play and enjoy this game.
+people who are interested in rhythm games but are not developers. Hopefully
+now more people will also be able to play and enjoy this game.
 
 The setup process is very straightforward on Windows, but has a few subtle
 points on macOS and Linux that I'll point out.
 
-## Setup Used
+## Setup Specification
 This guide will use the following setup:
 
-- Game: [unnamed-sdvx-clone](https://github.com/Drewol/unnamed-sdvx-clone)
+- Game: [unnamed-sdvx-clone](https://github.com/Drewol/unnamed-sdvx-clone), commonly abbreviated USC
 - Controller: [Yuancon SDVX controller](https://yuancon.store/controller/sdvxblack).
 
 While I performed the setup on macOS, the instructions are largely the same
@@ -166,7 +178,7 @@ On first startup, you should see this:
     class="z-depth-1"
 %}
 
-For now, you can just use your mouse to interface with the game.
+For now, you can just use your mouse to interact with the game menu.
 
 ## Configuring The Controller
 
@@ -208,38 +220,100 @@ Let's now setup our Yuancon controller!
     the menus, and the buttons to activate them!
 
 ## Getting Songs
-Right after setup, there are no songs to play yet.
+Right after setup, there are no songs to play yet. USC uses
+the same chart format as [K-Shoot MANIA (KSM)](https://www.kshootmania.com/en/)
 
 There are a few places you can get songs:
 
-- [Ripped songs from SDVX](https://oniichan.wtf/help/songs.html), probably questionable legality but almost everyone recommends and uses it
+- [Nautica](https://ksm.dev/) hosts community-created KSM charts. There is also a
+    menu option to download these directly from within USC.
+- [Converted SDVX Charts](https://oniichan.wtf/help/songs.html): probably somewhat 
+    questionable legally because of copyright and whatnot but a lot of people
+    recommend and use it
+- [This KSM FAQ page on Reddit](https://www.reddit.com/r/kshootmania/wiki/gettingsongs/#wiki_getting_more_songs) provides many useful links for downloading new songs
 
-
-
-
+Once you have downloaded the songs, unzip and extract them if necessary,
+and copy them into the ``
 
 ## Skinning The Game
 
-The default skin is 
+The default skin works, but it is pretty mid:
+
 {% include figure.html 
     path="/assets/img/posts/sdvx/sdvx-default-480.gif"
     width="400px"
     class="z-depth-1"
 %}
-You can get skins from the game [here](https://oniichan.wtf/help/skins.html).
 
+However, let's try to re-create the original SDVX arcade experience with
+skins. 
+You can get skins for the game [here](https://oniichan.wtf/help/skins.html).
+These are really high-effort and well-made, and huge thanks to the developers
+and artists for making them.
 
-Choose 
+Once you have downloaded the skin, extract and move them to `./bin/skins`. You
+should then be able to select the skin under the `Skins` tab of the game
+settings.
+
+The UI of the skin for the game may change depending on whether your
+monitor is in portrait or landscape mode. Orienting it vertically
+is recommended for the best SDVX-like experience - the spaceship(?) at
+the bottom only shows up when it's vertical.
+
+Some examples of the different skins are shown below. I know, they're pretty!
+
+### LiqidWave
+
+{% include figure.html 
+    path="/assets/img/posts/sdvx/vivid-480p-2.gif"
+    width="400px"
+    class="z-depth-1"
+%}
+
+If you run into errors about shaders when trying to play a song, see the [Common
+Errors](#common-errors) section below.
 
 ### ExperimentalGear
 
-Of all the skins I've tried, I like ExperimentalGear the most as it
-has essentially the same UI and UX as the most recent Sound Voltex Exceed Gear
-cabinet.
+{% include figure.html 
+    path="/assets/img/posts/sdvx/experimental-gear.gif"
+    width="400px"
+    class="z-depth-1"
+%}
 
-skins/ExperimentalGear/scripts/language/EN.lua
+As a side note, if you find the default menu text for this skin too casual/unprofessional,
+you can change it in `./bin/skins/ExperimentalGear/scripts/language/EN.lua`.
 
-## Some additional 
+### Heavenly Express
+
+{% include figure.html 
+    path="/assets/img/posts/sdvx/heavenly-express.gif"
+    width="400px"
+    class="z-depth-1"
+%}
+
+## Crew
+Not all skins come with a cast of crews, like the ExperimentalGear skin which
+only comes with a boring empty `nothing` skin in
+`./bin/skins/ExperimentalGear/textures/crew/anim`.
+
+As crews are very important for our psychological safety and well-being,
+fortunately we can just copy over the animations from other skins.
+In HeavenlyExpress, you can find it in `./bin/skins/HeavenlyExpress-1.3.0/textures/_shared/crew`. Similarly, in LiqidWave they are stored in `./bin/skins/LiqidWave-1.5.0/textures/_shared/crew`.
+
+Rasis congratulating us after a song is too precious to not show here:
+{% include figure.html 
+    path="/assets/img/posts/sdvx/rasis.gif"
+    width="400px"
+    class="z-depth-1"
+%}
+
+## Conclusion
+If you've made it this far, congrats and thanks for reading!  I hope you'll
+enjoy the game as much as I do.  If you have any questions or run into problems,
+feel free to ask in the comments section below.
+
+## Extras
 
 ### Aside: KSM Chart Formats
 KSM charts have a `.ksh` extensions. This can be a useful check to ensure
@@ -345,3 +419,104 @@ filtertype=lpf1
 0000|00|o0
 0000|00|::
 ```
+
+## Common Errors
+Some errors I faced when trying to setup and configure the game.
+
+### module `commonShared` not found
+
+If you get a Lua error about not being able to load a `commonShared` package,
+such as when using a custom skin:
+
+```bash
+[14:45:10][Error] Lua error: ...clone/bin/skins/HeavenlyExpress-1.3.0/scripts/common.lua:2: module 'commonShared' not found:
+	no field package.preload['commonShared']
+	no file '/usr/local/share/lua/5.3/commonShared.lua'
+	no file '/usr/local/share/lua/5.3/commonShared/init.lua'
+	no file '/usr/local/lib/lua/5.3/commonShared.lua'
+	no file '/usr/local/lib/lua/5.3/commonShared/init.lua'
+	no file './commonShared.lua'
+	no file './commonShared/init.lua'
+	no file '/Users/fanpu/unnamed-sdvx-clone/bin/skins/HeavenlyExpress-1.3.0/scripts/commonShared.lua'
+	no file 'skins/HeavenlyExpress-1.3.0/textures/_shared/scripts/commonShared.lua'
+	no file '/usr/local/lib/lua/5.3/commonShared.so'
+	no file '/usr/local/lib/lua/5.3/loadall.so'
+	no file './commonShared.so'
+
+```
+
+You are likely running the game from the root of the project directory (i.e
+`./bin/usc-game`), instead of from within the `./bin` directory itself.
+
+### HeavenlyExpress Skin: Could not load shaders
+
+If you are using the HeavenlyExpress skin, you may run into the following
+error after selecting a track to play:
+
+```bash
+Shader Error: 
+Could not load shaders skins/HeavenlyExpress-1.3.0/shaders/holdbutton.vs 
+and skins/HeavenlyExpress-1.3.0/shaders/holdbutton.fs
+```
+
+You may also get logs like this:
+
+```bash
+[14:58:37][Error] Shader program compile log for /Users/fanpu/unnamed-sdvx-clone/bin/skins/HeavenlyExpress-1.3.0/shaders/holdbutton.vs: ERROR: 0:6: 'varying' : syntax error: syntax error
+
+[14:58:37][Error] Shader program compile log for /Users/fanpu/unnamed-sdvx-clone/bin/skins/HeavenlyExpress-1.3.0/shaders/holdbutton.fs: ERROR: 0:10: 'varying' : syntax error: syntax error
+
+[14:58:37][Error] Failed to load vertex shader for material from /Users/fanpu/unnamed-sdvx-clone/bin/skins/HeavenlyExpress-1.3.0/shaders/holdbutton.vs
+```
+
+The shaders were probably written a long time ago, since
+the `varying` keyword has been deprecated since OpenGL 3.3.
+It was previously used as a qualifier for variables that communicate
+between the vertex shader and the fragment shader, that is now
+replaced by the `in` and `out` qualifiers to provide a more clear distinction of
+data flow between shaders.
+
+To fix this, modify the two files and change the `varying`
+keyword to `out` in both files:
+
+In file `bin/skins/HeavenlyExpress-1.3.0/shaders/holdbutton.vs`:
+```c
+#version 330
+#extension GL_ARB_separate_shader_objects : enable
+layout(location=0) in vec2 inPos;
+layout(location=1) in vec2 inTex;
+
+out vec4 position; // update here
+
+out gl_PerVertex
+{
+        vec4 gl_Position;
+};
+
+...rest of file omitted...
+```
+
+In file `bin/skins/HeavenlyExpress-1.3.0/shaders/holdbutton.fs`:
+```c
+#version 330
+#extension GL_ARB_separate_shader_objects : enable
+
+layout(location=1) in vec2 fsTex;
+layout(location=0) out vec4 target;
+
+uniform sampler2D mainTex;
+uniform float objectGlow;
+
+out vec4 position; // update here
+
+...rest of file omitted...
+```
+
+Restart the game and you should be good now.
+
+### ExperimentalGear Custom Skin Does Not Change
+
+I faced issues where it appeared that the value that I set in the settings page
+for the skin to use was not being saved. I resolved
+this by manually editing the config file in
+`./bin/skins/ExperimentalGear/skin.cfg`.
