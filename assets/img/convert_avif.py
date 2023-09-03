@@ -19,3 +19,7 @@ for f in p.rglob("*"):
             new_path = f.with_suffix(target_suffix)
             print(new_path)
             os.system(f"convert {f} -resize 1024\> {new_path}")
+
+
+# To convert from gif to webp:
+# ffmpeg -i input.gif -vcodec webp -loop 0 -pix_fmt yuva420p output.webp

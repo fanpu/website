@@ -173,7 +173,7 @@ Honestly if you're on Linux, you should be able to figure it out by yourself ðŸ˜
 On first startup, you should see this:
 
 {% include figure.html 
-    path="/assets/img/posts/sdvx/sdvx_initial.gif"
+    path="/assets/img/posts/sdvx/sdvx_initial.webp"
     width="400px"
     class="z-depth-1"
 %}
@@ -233,19 +233,19 @@ There are a few places you can get songs:
 - [This KSM FAQ page on Reddit](https://www.reddit.com/r/kshootmania/wiki/gettingsongs/#wiki_getting_more_songs) provides many useful links for downloading new songs
 
 Once you have downloaded the songs, unzip and extract them if necessary,
-and copy them into the ``
+and copy them into `./bin/songs`.
 
 ## Skinning The Game
 
-The default skin works, but it is pretty mid:
+The default skin works, but it is not very impressive:
 
 {% include figure.html 
-    path="/assets/img/posts/sdvx/sdvx-default-480.gif"
+    path="/assets/img/posts/sdvx/sdvx_default.webp"
     width="400px"
     class="z-depth-1"
 %}
 
-However, let's try to re-create the original SDVX arcade experience with
+Let's try to re-create the original SDVX arcade experience with
 skins. 
 You can get skins for the game [here](https://oniichan.wtf/help/skins.html).
 These are really high-effort and well-made, and huge thanks to the developers
@@ -262,10 +262,12 @@ the bottom only shows up when it's vertical.
 
 Some examples of the different skins are shown below. I know, they're pretty!
 
+(*Why are the previews so low-res? [Bandwidth costs add up!](https://www.digitalocean.com/blog/its-all-about-the-bandwidth-why-many-network-intensive-services-select-digitalocean-as-their-cloud)*)
+
 ### LiqidWave
 
 {% include figure.html 
-    path="/assets/img/posts/sdvx/vivid.gif"
+    path="/assets/img/posts/sdvx/vivid.webp"
     width="400px"
     class="z-depth-1"
 %}
@@ -276,7 +278,7 @@ Errors](#common-errors) section below.
 ### ExperimentalGear
 
 {% include figure.html 
-    path="/assets/img/posts/sdvx/experimental-gear.gif"
+    path="/assets/img/posts/sdvx/experimental-gear.webp"
     width="400px"
     class="z-depth-1"
 %}
@@ -287,7 +289,7 @@ you can change it in `./bin/skins/ExperimentalGear/scripts/language/EN.lua`.
 ### Heavenly Express
 
 {% include figure.html 
-    path="/assets/img/posts/sdvx/heavenly-express.gif"
+    path="/assets/img/posts/sdvx/heavenly-express.webp"
     width="400px"
     class="z-depth-1"
 %}
@@ -301,9 +303,8 @@ As crews are very important for our psychological safety and well-being,
 fortunately we can just copy over the animations from other skins.
 In HeavenlyExpress, you can find it in `./bin/skins/HeavenlyExpress-1.3.0/textures/_shared/crew`. Similarly, in LiqidWave they are stored in `./bin/skins/LiqidWave-1.5.0/textures/_shared/crew`.
 
-Rasis congratulating us after a song is too precious to not show here:
 {% include figure.html 
-    path="/assets/img/posts/sdvx/rasis.gif"
+    path="/assets/img/posts/sdvx/rasis.webp"
     width="400px"
     class="z-depth-1"
 %}
@@ -420,7 +421,7 @@ filtertype=lpf1
 0000|00|::
 ```
 
-## Common Errors
+## Possible Errors And How To Resolve
 Some errors I faced when trying to setup and configure the game.
 
 ### module `commonShared` not found
