@@ -294,6 +294,10 @@ you can change it in `./bin/skins/ExperimentalGear/scripts/language/EN.lua`.
     class="z-depth-1"
 %}
 
+<video autoplay="autoplay" loop="loop">
+  <source src="/assets/img/posts/sdvx/heavenly-express.webm" type="video/webm">
+</video>
+
 ## Crew
 Not all skins come with a cast of crews, like the ExperimentalGear skin which
 only comes with a boring empty `nothing` skin in
