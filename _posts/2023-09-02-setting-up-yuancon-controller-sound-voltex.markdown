@@ -172,10 +172,13 @@ Honestly if you're on Linux, you should be able to figure it out by yourself ðŸ˜
 
 On first startup, you should see this:
 
-{% include figure.html 
-    path="/assets/img/posts/sdvx/sdvx_initial.webp"
+{% include video.html 
+    path="/assets/img/posts/sdvx/sdvx-initial.webm"
     width="400px"
     class="z-depth-1"
+    autoplay=true
+    muted=true
+    loop=true
 %}
 
 For now, you can just use your mouse to interact with the game menu.
