@@ -239,10 +239,13 @@ and copy them into `./bin/songs`.
 
 The default skin works, but it is not very impressive:
 
-{% include figure.html 
-    path="/assets/img/posts/sdvx/sdvx_default.webp"
+{% include video.html 
+    path="/assets/img/posts/sdvx/sdvx-default.webm"
     width="400px"
     class="z-depth-1"
+    autoplay=true
+    muted=true
+    loop=true
 %}
 
 Let's try to re-create the original SDVX arcade experience with
@@ -266,10 +269,13 @@ Some examples of the different skins are shown below. I know, they're pretty!
 
 ### LiqidWave
 
-{% include figure.html 
-    path="/assets/img/posts/sdvx/vivid.webp"
+{% include video.html 
+    path="/assets/img/posts/sdvx/vivid.webm"
     width="400px"
     class="z-depth-1"
+    autoplay=true
+    muted=true
+    loop=true
 %}
 
 If you run into errors about shaders when trying to play a song, see the [Common
@@ -277,10 +283,13 @@ Errors](#common-errors) section below.
 
 ### ExperimentalGear
 
-{% include figure.html 
-    path="/assets/img/posts/sdvx/experimental-gear.webp"
+{% include video.html 
+    path="/assets/img/posts/sdvx/experimental-gear.webm"
     width="400px"
     class="z-depth-1"
+    autoplay=true
+    muted=true
+    loop=true
 %}
 
 As a side note, if you find the default menu text for this skin too casual/unprofessional,
@@ -288,15 +297,15 @@ you can change it in `./bin/skins/ExperimentalGear/scripts/language/EN.lua`.
 
 ### Heavenly Express
 
-{% include figure.html 
-    path="/assets/img/posts/sdvx/heavenly-express.webp"
+{% include video.html 
+    path="/assets/img/posts/sdvx/heavenly-express.webm"
     width="400px"
     class="z-depth-1"
+    autoplay=true
+    muted=true
+    loop=true
 %}
 
-<video autoplay="autoplay" loop="loop">
-  <source src="/assets/img/posts/sdvx/heavenly-express.webm" type="video/webm">
-</video>
 
 ## Crew
 Not all skins come with a cast of crews, like the ExperimentalGear skin which
@@ -307,10 +316,13 @@ As crews are very important for our psychological safety and well-being,
 fortunately we can just copy over the animations from other skins.
 In HeavenlyExpress, you can find it in `./bin/skins/HeavenlyExpress-1.3.0/textures/_shared/crew`. Similarly, in LiqidWave they are stored in `./bin/skins/LiqidWave-1.5.0/textures/_shared/crew`.
 
-{% include figure.html 
-    path="/assets/img/posts/sdvx/rasis.webp"
+{% include video.html 
+    path="/assets/img/posts/sdvx/rasis.webm"
     width="400px"
     class="z-depth-1"
+    autoplay=true
+    muted=true
+    loop=true
 %}
 
 ## Conclusion
