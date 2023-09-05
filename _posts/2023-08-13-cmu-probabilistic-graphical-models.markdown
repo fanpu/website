@@ -15,6 +15,9 @@ description: >
 published: false
 ---
 
+## Overview
+If you had 
+
 ## Course Content
 
 
@@ -26,6 +29,11 @@ There are 4-5 homeworks, covering the following topics:
 3. Variational Inference
 4. Beyond Likelihood (GANs, score matching, NCE)
 5. Causality
+
+## Recommended Readings
+
+- [Probabilistic Machine Learning: Advanced Topics](https://probml.github.io/pml-book/book2.html), [Kevin Patrick Murphy](https://www.cs.ubc.ca/~murphyk/)
+- 
 
 ## Acknowledgments
 I would like to thank [Jennifer Hsia](https://www.linkedin.com/in/jennifer-h-b90144131/) for helping to review
