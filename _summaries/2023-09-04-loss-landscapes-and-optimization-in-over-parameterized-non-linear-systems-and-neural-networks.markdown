@@ -1,6 +1,6 @@
 ---
 layout: summary
-title: "Loss landscapes and optimization in over-parameterized non-linear systems and neural networks"
+title: "Loss Landscapes and Optimization in Over-Parameterized Non-Linear Systems and Neural Networks"
 giscus_comments: true
 bib_id: 2003.00307v2
 ---
