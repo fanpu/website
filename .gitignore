@@ -12,3 +12,5 @@ vendor
 __pycache__
 public
 trackback
+input.txt
+output.txt
