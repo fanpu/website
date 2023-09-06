@@ -101,7 +101,7 @@ and expectations for the rest of the semester going forward. The message is clea
 
 # Course Content
 
-The class us on a whirlwind tour through many [SIGOPS
+The class took us on a whirlwind tour through many [SIGOPS
 Hall of Fame papers](https://www.sigops.org/awards/hof/), which the award
 description states was "instituted in 2005 to recognize the most influential
 Operating Systems papers that were published at least ten years in the past".
