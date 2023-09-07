@@ -62,8 +62,9 @@ $$\left\| \nabla f(w) \right\|^2 \geq \mu (f(w) - f^*), \qquad \forall w,$$
 
 where $$f^* = \argmin_{w \in \R^d} f(w)$$ is the minimizer.
 
-[Polyak showed in 1963](https://www.sciencedirect.com/science/article/pii/0041555363903823) that functions that satisfy the PL condition has a global
-linear convergence rate for gradient descent.
+[Polyak showed in 1963](https://www.sciencedirect.com/science/article/pii/0041555363903823) 
+that functions that satisfy the PL condition converge exponentially fast under
+gradient descent.
 
 The authors introduce a modified variant called the PL$$^*$$ condition, with the main difference
 being our assumption that over-parameterized models can achieve 0 training loss and hence 
