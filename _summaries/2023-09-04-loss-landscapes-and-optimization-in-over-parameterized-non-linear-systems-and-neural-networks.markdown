@@ -29,7 +29,8 @@ and does not provide us with the machinery to answer this question:
 > "Convexity is not the right framework for analysis of over-parameterized systems, even locally."
 
 Instead, they introduce the PL$$^*$$ condition which is
-a variant of the Polyak- Lojasiewicz condition, and show that networks that
+a variant of the 
+Polyak-Łojasiewicz condition, and show that networks that
 satisfy the PL$$^*$$ condition can converge to a global minimum.
 
 First, let's look at the fundamental differences in the loss landscape of under-parameterized
