@@ -79,6 +79,7 @@ Some of my more popular posts that might be of interest:
 2022-06-22-cmu-scs-ecg-talk %}), i.e. why study Computer Science at CMU
 
 **Technical Posts**
+- [(Paper Summary) The Implicit Bias of Gradient Descent on Separable Data]({% link _summaries/2023-09-09-the-implicit-bias-of-gradient-descent-on-separable-data.markdown %})
 - [A Unified Framework for High-Dimensional Analysis of M-Estimators with Decomposable Regularizers: A Guided Walkthrough]({% post_url 2023-07-14-high-dimensional-analysis-of-m-estimators %})
 - [Score-Based Diffusion Models]({% post_url 2023-06-07-score-based-diffusion-models %})
 - [The Delightful Consequences of the Graph Minor Theorem]({% post_url 2022-06-01-the-delightful-consequences-of-the-graph-minor-theorem %})
