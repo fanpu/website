@@ -72,7 +72,7 @@ Unfortunately, even with regularization the various popular architectures were s
 able to almost perfectly fit random labels:
 
 {% include figure.html 
-    path="/assets/img/summaries/rethinking-generalization-fit-random.webp"
+    path="/assets/img/summaries/rethinking-generalization-explicit-reg.webp"
     width="600px"
     class="z-depth-1"
 %}
