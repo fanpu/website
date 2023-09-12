@@ -33,7 +33,7 @@ will be the one that generalizes the best.
 
 Let's now consider the problem setup: the goal is to minimize the empirical loss
 
-$$\calL(\bw) = \sum_{n=1}^N \ell \left( y_n \bw^\top \bx_n \right),$$
+$$\mathcal{L}(\bw) = \sum_{n=1}^N \ell \left( y_n \bw^\top \bx_n \right),$$
 
 where labels $$y_n$$ are binary $$\pm 1$$ labels.
 
