@@ -721,3 +721,30 @@ Url           = {http://arxiv.org/abs/1611.03530v2},
 File          = {1611.03530v2.pdf},
 EprintNoVer   = {1611.03530}
 }
+
+@article{2102.09690v2,
+Author        = {Tony Z. Zhao and Eric Wallace and Shi Feng and Dan Klein and Sameer Singh},
+Title         = {Calibrate Before Use: Improving Few-Shot Performance of Language Models},
+Eprint        = {2102.09690v2},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CL},
+Abstract      = {GPT-3 can perform numerous tasks when provided a natural language prompt that
+contains a few training examples. We show that this type of few-shot learning
+can be unstable: the choice of prompt format, training examples, and even the
+order of the training examples can cause accuracy to vary from near chance to
+near state-of-the-art. We demonstrate that this instability arises from the
+bias of language models towards predicting certain answers, e.g., those that
+are placed near the end of the prompt or are common in the pre-training data.
+To mitigate this, we first estimate the model's bias towards each answer by
+asking for its prediction when given the training prompt and a content-free
+test input such as "N/A". We then fit calibration parameters that cause the
+prediction for this input to be uniform across answers. On a diverse set of
+tasks, this contextual calibration procedure substantially improves GPT-3 and
+GPT-2's average accuracy (up to 30.0% absolute) and reduces variance across
+different choices of the prompt.},
+Year          = {2021},
+Month         = {Feb},
+Url           = {http://arxiv.org/abs/2102.09690v2},
+File          = {2102.09690v2.pdf},
+EprintNoVer   = {2102.09690}
+}
