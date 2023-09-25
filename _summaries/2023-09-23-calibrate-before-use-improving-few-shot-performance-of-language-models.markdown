@@ -39,7 +39,7 @@ labels.
 - Recency Bias: It also tends to output labels with a higher probability if it
   is more common towards the end of the few-shot examples. For instance, this
   can be observed in the "Balanced" regime.
-- Common Token Bias: Tokens that appear in the pre-training dataset also has a
+- Common Token Bias: Tokens that appear in the pre-training dataset also have a
 higher tendency of being output. This was observed for the LAMA fact
 retrieval dataset, where it tends to predict common tokens like "America"
 instead of rarer ground-truth tokens.
