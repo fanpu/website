@@ -777,3 +777,62 @@ Url           = {http://arxiv.org/abs/2202.12837v2},
 File          = {2202.12837v2.pdf},
 EprintNoVer   = {2202.12837}
 }
+
+@article{2108.04106v3,
+Author        = {Sewon Min and Mike Lewis and Hannaneh Hajishirzi and Luke Zettlemoyer},
+Title         = {Noisy Channel Language Model Prompting for Few-Shot Text Classification},
+Eprint        = {2108.04106v3},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CL},
+Abstract      = {We introduce a noisy channel approach for language model prompting in
+few-shot text classification. Instead of computing the likelihood of the label
+given the input (referred as direct models), channel models compute the
+conditional probability of the input given the label, and are thereby required
+to explain every word in the input. We use channel models for recently proposed
+few-shot learning methods with no or very limited updates to the language model
+parameters, via either in-context demonstration or prompt tuning. Our
+experiments show that, for both methods, channel models significantly
+outperform their direct counterparts, which we attribute to their stability,
+i.e., lower variance and higher worst-case accuracy. We also present extensive
+ablations that provide recommendations for when to use channel prompt tuning
+instead of other competitive methods (e.g., direct head tuning): channel prompt
+tuning is preferred when the number of training examples is small, labels in
+the training data are imbalanced, or generalization to unseen labels is
+required.},
+Year          = {2021},
+Month         = {Aug},
+Url           = {http://arxiv.org/abs/2108.04106v3},
+File          = {2108.04106v3.pdf},
+EprintNoVer   = {2108.04106}
+}
+
+@article{2206.12839v3,
+Author        = {Disha Shrivastava and Hugo Larochelle and Daniel Tarlow},
+Title         = {Repository-Level Prompt Generation for Large Language Models of Code},
+Eprint        = {2206.12839v3},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.LG},
+Abstract      = {With the success of large language models (LLMs) of code and their use as
+code assistants (e.g. Codex used in GitHub Copilot), techniques for introducing
+domain-specific knowledge in the prompt design process become important. In
+this work, we propose a framework called Repo-Level Prompt Generator that
+learns to generate example-specific prompts using prompt proposals. The prompt
+proposals take context from the entire repository, thereby incorporating both
+the structure of the repository and the context from other relevant files (e.g.
+imports, parent class files). Our technique doesn't require any access to the
+weights of the LLM, making it applicable in cases where we only have black-box
+access to the LLM. We conduct experiments on the task of single-line
+code-autocompletion using code repositories taken from Google Code archives. We
+demonstrate that an oracle constructed from our prompt proposals gives a
+remarkably high relative improvement of 36% over Codex, showing the quality of
+these proposals. Further, we show that when we train a model to predict a
+prompt proposal, we can achieve significant performance gains over Codex and
+other baselines. We release our code, data, and trained checkpoints at:
+\url{https://github.com/shrivastavadisha/repo_level_prompt_generation}.},
+Year          = {2022},
+Month         = {Jun},
+Note          = {ICML, 2023},
+Url           = {http://arxiv.org/abs/2206.12839v3},
+File          = {2206.12839v3.pdf},
+EprintNoVer   = {2206.12839}
+}
