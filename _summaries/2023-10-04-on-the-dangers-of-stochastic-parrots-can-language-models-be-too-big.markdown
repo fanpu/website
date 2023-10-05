@@ -86,6 +86,7 @@ prompted the government to take action. A lack of representative training data f
 these languages with fewer number of speakers is likely to be a major reason for
 the mistranslation.
 
+
 ### Most Glaring Deficiency
 
 I found the paper overly qualitative with a lack of clear evidence or results to
@@ -104,3 +105,9 @@ regarding the ethics and morality of LLMs back when the paper was published in
 Most of what is discussed is common knowledge now, which is perhaps a testament
 to the success of the efforts of the authors and all others who work to ensure
 that LLMs are put to use for good.
+
+To end off, quoting Birhane and Prabhu, based off a quote from Ruha
+Benjamin:
+
+> "Feeding AI systems on the world’s beauty, ugliness, and cruelty, but
+expecting it to reflect only the beauty is a fantasy."
