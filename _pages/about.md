@@ -66,6 +66,7 @@ suggestions. All banner pictures on the blog are taken by yours truly!
 Some of my more popular posts that might be of interest:
 
 **Technical Posts**
+- [(Paper Summary) Zero-shot Image-to-Image Translation]({% link _summaries/2023-10-22-zero-shot-image-to-image-translation.markdown %})
 - [(Paper Summary) The Implicit Bias of Gradient Descent on Separable Data]({% link _summaries/2023-09-09-the-implicit-bias-of-gradient-descent-on-separable-data.markdown %})
 - [A Unified Framework for High-Dimensional Analysis of M-Estimators with Decomposable Regularizers: A Guided Walkthrough]({% post_url 2023-07-14-high-dimensional-analysis-of-m-estimators %})
 - [Score-Based Diffusion Models]({% post_url 2023-06-07-score-based-diffusion-models %})
