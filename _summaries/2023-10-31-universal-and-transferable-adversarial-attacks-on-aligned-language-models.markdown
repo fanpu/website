@@ -161,7 +161,7 @@ The full algorithm is given below:
 
 Their method performs much better than other state-of-the-art baselines:
 {% include figure.html
-    path="/assets/img/summaries/adv-prompt-universal-prompt-results.webp"
+    path="/assets/img/summaries/adv-prompt-results.webp"
     width="600px"
     class="z-depth-1"
 %}
@@ -173,7 +173,7 @@ where the adversarial prompt generated for open-source models (Vicuna-7B and 13B
 could also do somewhat well on other models, including proprietary ones:
 
 {% include figure.html
-    path="/assets/img/summaries/adv-prompt-universal-prompt-transfer.webp"
+    path="/assets/img/summaries/adv-prompt-transfer.webp"
     width="600px"
     class="z-depth-1"
 %}
