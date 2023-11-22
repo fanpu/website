@@ -2,722 +2,1014 @@
 ---
 
 @article{2209.03430v2,
-Author        = {Paul Pu Liang and Amir Zadeh and Louis-Philippe Morency},
-Title         = {Foundations and Trends in Multimodal Machine Learning: Principles,
-  Challenges, and Open Questions},
-Eprint        = {2209.03430v2},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.LG},
-Abstract      = {Multimodal machine learning is a vibrant multi-disciplinary research field
-that aims to design computer agents with intelligent capabilities such as
-understanding, reasoning, and learning through integrating multiple
-communicative modalities, including linguistic, acoustic, visual, tactile, and
-physiological messages. With the recent interest in video understanding,
-embodied autonomous agents, text-to-image generation, and multisensor fusion in
-application domains such as healthcare and robotics, multimodal machine
-learning has brought unique computational and theoretical challenges to the
-machine learning community given the heterogeneity of data sources and the
-interconnections often found between modalities. However, the breadth of
-progress in multimodal research has made it difficult to identify the common
-themes and open questions in the field. By synthesizing a broad range of
-application domains and theoretical frameworks from both historical and recent
-perspectives, this paper is designed to provide an overview of the
-computational and theoretical foundations of multimodal machine learning. We
-start by defining three key principles of modality heterogeneity, connections,
-and interactions that have driven subsequent innovations, and propose a
-taxonomy of six core technical challenges: representation, alignment,
-reasoning, generation, transference, and quantification covering historical and
-recent trends. Recent technical achievements will be presented through the lens
-of this taxonomy, allowing researchers to understand the similarities and
-differences across new approaches. We end by motivating several open problems
-for future research as identified by our taxonomy.},
-Year          = {2022},
-Month         = {Sep},
-Url           = {http://arxiv.org/abs/2209.03430v2},
-File          = {2209.03430v2.pdf},
-EprintNoVer   = {2209.03430}
+  author        = {Paul Pu Liang and Amir Zadeh and Louis-Philippe Morency},
+  title         = {Foundations and Trends in Multimodal Machine Learning: Principles,
+                   Challenges, and Open Questions},
+  eprint        = {2209.03430v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {Multimodal machine learning is a vibrant multi-disciplinary research field
+                   that aims to design computer agents with intelligent capabilities such as
+                   understanding, reasoning, and learning through integrating multiple
+                   communicative modalities, including linguistic, acoustic, visual, tactile, and
+                   physiological messages. With the recent interest in video understanding,
+                   embodied autonomous agents, text-to-image generation, and multisensor fusion in
+                   application domains such as healthcare and robotics, multimodal machine
+                   learning has brought unique computational and theoretical challenges to the
+                   machine learning community given the heterogeneity of data sources and the
+                   interconnections often found between modalities. However, the breadth of
+                   progress in multimodal research has made it difficult to identify the common
+                   themes and open questions in the field. By synthesizing a broad range of
+                   application domains and theoretical frameworks from both historical and recent
+                   perspectives, this paper is designed to provide an overview of the
+                   computational and theoretical foundations of multimodal machine learning. We
+                   start by defining three key principles of modality heterogeneity, connections,
+                   and interactions that have driven subsequent innovations, and propose a
+                   taxonomy of six core technical challenges: representation, alignment,
+                   reasoning, generation, transference, and quantification covering historical and
+                   recent trends. Recent technical achievements will be presented through the lens
+                   of this taxonomy, allowing researchers to understand the similarities and
+                   differences across new approaches. We end by motivating several open problems
+                   for future research as identified by our taxonomy.},
+  year          = {2022},
+  month         = {Sep},
+  url           = {http://arxiv.org/abs/2209.03430v2},
+  file          = {2209.03430v2.pdf},
+  eprintnover   = {2209.03430}
 }
 
 @article{1802.05365v2,
-Author        = {Matthew E. Peters and Mark Neumann and Mohit Iyyer and Matt Gardner and Christopher Clark and Kenton Lee and Luke Zettlemoyer},
-Title         = {Deep contextualized word representations},
-Eprint        = {1802.05365v2},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {We introduce a new type of deep contextualized word representation that
-models both (1) complex characteristics of word use (e.g., syntax and
-semantics), and (2) how these uses vary across linguistic contexts (i.e., to
-model polysemy). Our word vectors are learned functions of the internal states
-of a deep bidirectional language model (biLM), which is pre-trained on a large
-text corpus. We show that these representations can be easily added to existing
-models and significantly improve the state of the art across six challenging
-NLP problems, including question answering, textual entailment and sentiment
-analysis. We also present an analysis showing that exposing the deep internals
-of the pre-trained network is crucial, allowing downstream models to mix
-different types of semi-supervision signals.},
-Year          = {2018},
-Month         = {Feb},
-Url           = {http://arxiv.org/abs/1802.05365v2},
-File          = {1802.05365v2.pdf},
-EprintNoVer   = {1802.05365}
+  author        = {Matthew E. Peters and Mark Neumann and Mohit Iyyer and Matt Gardner and Christopher Clark and Kenton Lee and Luke Zettlemoyer},
+  title         = {Deep contextualized word representations},
+  eprint        = {1802.05365v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {We introduce a new type of deep contextualized word representation that
+                   models both (1) complex characteristics of word use (e.g., syntax and
+                   semantics), and (2) how these uses vary across linguistic contexts (i.e., to
+                   model polysemy). Our word vectors are learned functions of the internal states
+                   of a deep bidirectional language model (biLM), which is pre-trained on a large
+                   text corpus. We show that these representations can be easily added to existing
+                   models and significantly improve the state of the art across six challenging
+                   NLP problems, including question answering, textual entailment and sentiment
+                   analysis. We also present an analysis showing that exposing the deep internals
+                   of the pre-trained network is crucial, allowing downstream models to mix
+                   different types of semi-supervision signals.},
+  year          = {2018},
+  month         = {Feb},
+  url           = {http://arxiv.org/abs/1802.05365v2},
+  file          = {1802.05365v2.pdf},
+  eprintnover   = {1802.05365}
 }
 
 @article{2201.11903v6,
-Author        = {Jason Wei and Xuezhi Wang and Dale Schuurmans and Maarten Bosma and Brian Ichter and Fei Xia and Ed Chi and Quoc Le and Denny Zhou},
-Title         = {Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
-Eprint        = {2201.11903v6},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {We explore how generating a chain of thought -- a series of intermediate
-reasoning steps -- significantly improves the ability of large language models
-to perform complex reasoning. In particular, we show how such reasoning
-abilities emerge naturally in sufficiently large language models via a simple
-method called chain of thought prompting, where a few chain of thought
-demonstrations are provided as exemplars in prompting. Experiments on three
-large language models show that chain of thought prompting improves performance
-on a range of arithmetic, commonsense, and symbolic reasoning tasks. The
-empirical gains can be striking. For instance, prompting a 540B-parameter
-language model with just eight chain of thought exemplars achieves state of the
-art accuracy on the GSM8K benchmark of math word problems, surpassing even
-finetuned GPT-3 with a verifier.},
-Year          = {2022},
-Month         = {Jan},
-Url           = {http://arxiv.org/abs/2201.11903v6},
-File          = {2201.11903v6.pdf},
-EprintNoVer   = {2201.11903}
+  author        = {Jason Wei and Xuezhi Wang and Dale Schuurmans and Maarten Bosma and Brian Ichter and Fei Xia and Ed Chi and Quoc Le and Denny Zhou},
+  title         = {Chain-of-Thought Prompting Elicits Reasoning in Large Language Models},
+  eprint        = {2201.11903v6},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {We explore how generating a chain of thought -- a series of intermediate
+                   reasoning steps -- significantly improves the ability of large language models
+                   to perform complex reasoning. In particular, we show how such reasoning
+                   abilities emerge naturally in sufficiently large language models via a simple
+                   method called chain of thought prompting, where a few chain of thought
+                   demonstrations are provided as exemplars in prompting. Experiments on three
+                   large language models show that chain of thought prompting improves performance
+                   on a range of arithmetic, commonsense, and symbolic reasoning tasks. The
+                   empirical gains can be striking. For instance, prompting a 540B-parameter
+                   language model with just eight chain of thought exemplars achieves state of the
+                   art accuracy on the GSM8K benchmark of math word problems, surpassing even
+                   finetuned GPT-3 with a verifier.},
+  year          = {2022},
+  month         = {Jan},
+  url           = {http://arxiv.org/abs/2201.11903v6},
+  file          = {2201.11903v6.pdf},
+  eprintnover   = {2201.11903}
 }
 
 @article{2005.14165v4,
-Author        = {Tom B. Brown and Benjamin Mann and Nick Ryder and Melanie Subbiah and Jared Kaplan and Prafulla Dhariwal and Arvind Neelakantan and Pranav Shyam and Girish Sastry and Amanda Askell and Sandhini Agarwal and Ariel Herbert-Voss and Gretchen Krueger and Tom Henighan and Rewon Child and Aditya Ramesh and Daniel M. Ziegler and Jeffrey Wu and Clemens Winter and Christopher Hesse and Mark Chen and Eric Sigler and Mateusz Litwin and Scott Gray and Benjamin Chess and Jack Clark and Christopher Berner and Sam McCandlish and Alec Radford and Ilya Sutskever and Dario Amodei},
-Title         = {Language Models are Few-Shot Learners},
-Eprint        = {2005.14165v4},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {Recent work has demonstrated substantial gains on many NLP tasks and
-benchmarks by pre-training on a large corpus of text followed by fine-tuning on
-a specific task. While typically task-agnostic in architecture, this method
-still requires task-specific fine-tuning datasets of thousands or tens of
-thousands of examples. By contrast, humans can generally perform a new language
-task from only a few examples or from simple instructions - something which
-current NLP systems still largely struggle to do. Here we show that scaling up
-language models greatly improves task-agnostic, few-shot performance, sometimes
-even reaching competitiveness with prior state-of-the-art fine-tuning
-approaches. Specifically, we train GPT-3, an autoregressive language model with
-175 billion parameters, 10x more than any previous non-sparse language model,
-and test its performance in the few-shot setting. For all tasks, GPT-3 is
-applied without any gradient updates or fine-tuning, with tasks and few-shot
-demonstrations specified purely via text interaction with the model. GPT-3
-achieves strong performance on many NLP datasets, including translation,
-question-answering, and cloze tasks, as well as several tasks that require
-on-the-fly reasoning or domain adaptation, such as unscrambling words, using a
-novel word in a sentence, or performing 3-digit arithmetic. At the same time,
-we also identify some datasets where GPT-3's few-shot learning still struggles,
-as well as some datasets where GPT-3 faces methodological issues related to
-training on large web corpora. Finally, we find that GPT-3 can generate samples
-of news articles which human evaluators have difficulty distinguishing from
-articles written by humans. We discuss broader societal impacts of this finding
-and of GPT-3 in general.},
-Year          = {2020},
-Month         = {May},
-Url           = {http://arxiv.org/abs/2005.14165v4},
-File          = {2005.14165v4.pdf},
-EprintNoVer   = {2005.14165}
+  author        = {Tom B. Brown and Benjamin Mann and Nick Ryder and Melanie Subbiah and Jared Kaplan and Prafulla Dhariwal and Arvind Neelakantan and Pranav Shyam and Girish Sastry and Amanda Askell and Sandhini Agarwal and Ariel Herbert-Voss and Gretchen Krueger and Tom Henighan and Rewon Child and Aditya Ramesh and Daniel M. Ziegler and Jeffrey Wu and Clemens Winter and Christopher Hesse and Mark Chen and Eric Sigler and Mateusz Litwin and Scott Gray and Benjamin Chess and Jack Clark and Christopher Berner and Sam McCandlish and Alec Radford and Ilya Sutskever and Dario Amodei},
+  title         = {Language Models are Few-Shot Learners},
+  eprint        = {2005.14165v4},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {Recent work has demonstrated substantial gains on many NLP tasks and
+                   benchmarks by pre-training on a large corpus of text followed by fine-tuning on
+                   a specific task. While typically task-agnostic in architecture, this method
+                   still requires task-specific fine-tuning datasets of thousands or tens of
+                   thousands of examples. By contrast, humans can generally perform a new language
+                   task from only a few examples or from simple instructions - something which
+                   current NLP systems still largely struggle to do. Here we show that scaling up
+                   language models greatly improves task-agnostic, few-shot performance, sometimes
+                   even reaching competitiveness with prior state-of-the-art fine-tuning
+                   approaches. Specifically, we train GPT-3, an autoregressive language model with
+                   175 billion parameters, 10x more than any previous non-sparse language model,
+                   and test its performance in the few-shot setting. For all tasks, GPT-3 is
+                   applied without any gradient updates or fine-tuning, with tasks and few-shot
+                   demonstrations specified purely via text interaction with the model. GPT-3
+                   achieves strong performance on many NLP datasets, including translation,
+                   question-answering, and cloze tasks, as well as several tasks that require
+                   on-the-fly reasoning or domain adaptation, such as unscrambling words, using a
+                   novel word in a sentence, or performing 3-digit arithmetic. At the same time,
+                   we also identify some datasets where GPT-3's few-shot learning still struggles,
+                   as well as some datasets where GPT-3 faces methodological issues related to
+                   training on large web corpora. Finally, we find that GPT-3 can generate samples
+                   of news articles which human evaluators have difficulty distinguishing from
+                   articles written by humans. We discuss broader societal impacts of this finding
+                   and of GPT-3 in general.},
+  year          = {2020},
+  month         = {May},
+  url           = {http://arxiv.org/abs/2005.14165v4},
+  file          = {2005.14165v4.pdf},
+  eprintnover   = {2005.14165}
 }
 
 @article{1810.04805v2,
-Author        = {Jacob Devlin and Ming-Wei Chang and Kenton Lee and Kristina Toutanova},
-Title         = {BERT: Pre-training of Deep Bidirectional Transformers for Language
-  Understanding},
-Eprint        = {1810.04805v2},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {We introduce a new language representation model called BERT, which stands
-for Bidirectional Encoder Representations from Transformers. Unlike recent
-language representation models, BERT is designed to pre-train deep
-bidirectional representations from unlabeled text by jointly conditioning on
-both left and right context in all layers. As a result, the pre-trained BERT
-model can be fine-tuned with just one additional output layer to create
-state-of-the-art models for a wide range of tasks, such as question answering
-and language inference, without substantial task-specific architecture
-modifications.
-  BERT is conceptually simple and empirically powerful. It obtains new
-state-of-the-art results on eleven natural language processing tasks, including
-pushing the GLUE score to 80.5% (7.7% point absolute improvement), MultiNLI
-accuracy to 86.7% (4.6% absolute improvement), SQuAD v1.1 question answering
-Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1
-(5.1 point absolute improvement).},
-Year          = {2018},
-Month         = {Oct},
-Url           = {http://arxiv.org/abs/1810.04805v2},
-File          = {1810.04805v2.pdf},
-EprintNoVer   = {1810.04805}
+  author        = {Jacob Devlin and Ming-Wei Chang and Kenton Lee and Kristina Toutanova},
+  title         = {BERT: Pre-training of Deep Bidirectional Transformers for Language
+                   Understanding},
+  eprint        = {1810.04805v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {We introduce a new language representation model called BERT, which stands
+                   for Bidirectional Encoder Representations from Transformers. Unlike recent
+                   language representation models, BERT is designed to pre-train deep
+                   bidirectional representations from unlabeled text by jointly conditioning on
+                   both left and right context in all layers. As a result, the pre-trained BERT
+                   model can be fine-tuned with just one additional output layer to create
+                   state-of-the-art models for a wide range of tasks, such as question answering
+                   and language inference, without substantial task-specific architecture
+                   modifications.
+                   BERT is conceptually simple and empirically powerful. It obtains new
+                   state-of-the-art results on eleven natural language processing tasks, including
+                   pushing the GLUE score to 80.5% (7.7% point absolute improvement), MultiNLI
+                   accuracy to 86.7% (4.6% absolute improvement), SQuAD v1.1 question answering
+                   Test F1 to 93.2 (1.5 point absolute improvement) and SQuAD v2.0 Test F1 to 83.1
+                   (5.1 point absolute improvement).},
+  year          = {2018},
+  month         = {Oct},
+  url           = {http://arxiv.org/abs/1810.04805v2},
+  file          = {1810.04805v2.pdf},
+  eprintnover   = {1810.04805}
 }
 
 @article{2203.02155v1,
-Author        = {Long Ouyang and Jeff Wu and Xu Jiang and Diogo Almeida and Carroll L. Wainwright and Pamela Mishkin and Chong Zhang and Sandhini Agarwal and Katarina Slama and Alex Ray and John Schulman and Jacob Hilton and Fraser Kelton and Luke Miller and Maddie Simens and Amanda Askell and Peter Welinder and Paul Christiano and Jan Leike and Ryan Lowe},
-Title         = {Training language models to follow instructions with human feedback},
-Eprint        = {2203.02155v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {Making language models bigger does not inherently make them better at
-following a user's intent. For example, large language models can generate
-outputs that are untruthful, toxic, or simply not helpful to the user. In other
-words, these models are not aligned with their users. In this paper, we show an
-avenue for aligning language models with user intent on a wide range of tasks
-by fine-tuning with human feedback. Starting with a set of labeler-written
-prompts and prompts submitted through the OpenAI API, we collect a dataset of
-labeler demonstrations of the desired model behavior, which we use to fine-tune
-GPT-3 using supervised learning. We then collect a dataset of rankings of model
-outputs, which we use to further fine-tune this supervised model using
-reinforcement learning from human feedback. We call the resulting models
-InstructGPT. In human evaluations on our prompt distribution, outputs from the
-1.3B parameter InstructGPT model are preferred to outputs from the 175B GPT-3,
-despite having 100x fewer parameters. Moreover, InstructGPT models show
-improvements in truthfulness and reductions in toxic output generation while
-having minimal performance regressions on public NLP datasets. Even though
-InstructGPT still makes simple mistakes, our results show that fine-tuning with
-human feedback is a promising direction for aligning language models with human
-intent.},
-Year          = {2022},
-Month         = {Mar},
-Url           = {http://arxiv.org/abs/2203.02155v1},
-File          = {2203.02155v1.pdf},
-EprintNoVer   = {2203.02155}
+  author        = {Long Ouyang and Jeff Wu and Xu Jiang and Diogo Almeida and Carroll L. Wainwright and Pamela Mishkin and Chong Zhang and Sandhini Agarwal and Katarina Slama and Alex Ray and John Schulman and Jacob Hilton and Fraser Kelton and Luke Miller and Maddie Simens and Amanda Askell and Peter Welinder and Paul Christiano and Jan Leike and Ryan Lowe},
+  title         = {Training language models to follow instructions with human feedback},
+  eprint        = {2203.02155v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {Making language models bigger does not inherently make them better at
+                   following a user's intent. For example, large language models can generate
+                   outputs that are untruthful, toxic, or simply not helpful to the user. In other
+                   words, these models are not aligned with their users. In this paper, we show an
+                   avenue for aligning language models with user intent on a wide range of tasks
+                   by fine-tuning with human feedback. Starting with a set of labeler-written
+                   prompts and prompts submitted through the OpenAI API, we collect a dataset of
+                   labeler demonstrations of the desired model behavior, which we use to fine-tune
+                   GPT-3 using supervised learning. We then collect a dataset of rankings of model
+                   outputs, which we use to further fine-tune this supervised model using
+                   reinforcement learning from human feedback. We call the resulting models
+                   InstructGPT. In human evaluations on our prompt distribution, outputs from the
+                   1.3B parameter InstructGPT model are preferred to outputs from the 175B GPT-3,
+                   despite having 100x fewer parameters. Moreover, InstructGPT models show
+                   improvements in truthfulness and reductions in toxic output generation while
+                   having minimal performance regressions on public NLP datasets. Even though
+                   InstructGPT still makes simple mistakes, our results show that fine-tuning with
+                   human feedback is a promising direction for aligning language models with human
+                   intent.},
+  year          = {2022},
+  month         = {Mar},
+  url           = {http://arxiv.org/abs/2203.02155v1},
+  file          = {2203.02155v1.pdf},
+  eprintnover   = {2203.02155}
 }
 
 @article{2107.03374v2,
-Author        = {Mark Chen and Jerry Tworek and Heewoo Jun and Qiming Yuan and Henrique Ponde de Oliveira Pinto and Jared Kaplan and Harri Edwards and Yuri Burda and Nicholas Joseph and Greg Brockman and Alex Ray and Raul Puri and Gretchen Krueger and Michael Petrov and Heidy Khlaaf and Girish Sastry and Pamela Mishkin and Brooke Chan and Scott Gray and Nick Ryder and Mikhail Pavlov and Alethea Power and Lukasz Kaiser and Mohammad Bavarian and Clemens Winter and Philippe Tillet and Felipe Petroski Such and Dave Cummings and Matthias Plappert and Fotios Chantzis and Elizabeth Barnes and Ariel Herbert-Voss and William Hebgen Guss and Alex Nichol and Alex Paino and Nikolas Tezak and Jie Tang and Igor Babuschkin and Suchir Balaji and Shantanu Jain and William Saunders and Christopher Hesse and Andrew N. Carr and Jan Leike and Josh Achiam and Vedant Misra and Evan Morikawa and Alec Radford and Matthew Knight and Miles Brundage and Mira Murati and Katie Mayer and Peter Welinder and Bob McGrew and Dario Amodei and Sam McCandlish and Ilya Sutskever and Wojciech Zaremba},
-Title         = {Evaluating Large Language Models Trained on Code},
-Eprint        = {2107.03374v2},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.LG},
-Abstract      = {We introduce Codex, a GPT language model fine-tuned on publicly available
-code from GitHub, and study its Python code-writing capabilities. A distinct
-production version of Codex powers GitHub Copilot. On HumanEval, a new
-evaluation set we release to measure functional correctness for synthesizing
-programs from docstrings, our model solves 28.8% of the problems, while GPT-3
-solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling
-from the model is a surprisingly effective strategy for producing working
-solutions to difficult prompts. Using this method, we solve 70.2% of our
-problems with 100 samples per problem. Careful investigation of our model
-reveals its limitations, including difficulty with docstrings describing long
-chains of operations and with binding operations to variables. Finally, we
-discuss the potential broader impacts of deploying powerful code generation
-technologies, covering safety, security, and economics.},
-Year          = {2021},
-Month         = {Jul},
-Url           = {http://arxiv.org/abs/2107.03374v2},
-File          = {2107.03374v2.pdf},
-EprintNoVer   = {2107.03374}
+  author        = {Mark Chen and Jerry Tworek and Heewoo Jun and Qiming Yuan and Henrique Ponde de Oliveira Pinto and Jared Kaplan and Harri Edwards and Yuri Burda and Nicholas Joseph and Greg Brockman and Alex Ray and Raul Puri and Gretchen Krueger and Michael Petrov and Heidy Khlaaf and Girish Sastry and Pamela Mishkin and Brooke Chan and Scott Gray and Nick Ryder and Mikhail Pavlov and Alethea Power and Lukasz Kaiser and Mohammad Bavarian and Clemens Winter and Philippe Tillet and Felipe Petroski Such and Dave Cummings and Matthias Plappert and Fotios Chantzis and Elizabeth Barnes and Ariel Herbert-Voss and William Hebgen Guss and Alex Nichol and Alex Paino and Nikolas Tezak and Jie Tang and Igor Babuschkin and Suchir Balaji and Shantanu Jain and William Saunders and Christopher Hesse and Andrew N. Carr and Jan Leike and Josh Achiam and Vedant Misra and Evan Morikawa and Alec Radford and Matthew Knight and Miles Brundage and Mira Murati and Katie Mayer and Peter Welinder and Bob McGrew and Dario Amodei and Sam McCandlish and Ilya Sutskever and Wojciech Zaremba},
+  title         = {Evaluating Large Language Models Trained on Code},
+  eprint        = {2107.03374v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {We introduce Codex, a GPT language model fine-tuned on publicly available
+                   code from GitHub, and study its Python code-writing capabilities. A distinct
+                   production version of Codex powers GitHub Copilot. On HumanEval, a new
+                   evaluation set we release to measure functional correctness for synthesizing
+                   programs from docstrings, our model solves 28.8% of the problems, while GPT-3
+                   solves 0% and GPT-J solves 11.4%. Furthermore, we find that repeated sampling
+                   from the model is a surprisingly effective strategy for producing working
+                   solutions to difficult prompts. Using this method, we solve 70.2% of our
+                   problems with 100 samples per problem. Careful investigation of our model
+                   reveals its limitations, including difficulty with docstrings describing long
+                   chains of operations and with binding operations to variables. Finally, we
+                   discuss the potential broader impacts of deploying powerful code generation
+                   technologies, covering safety, security, and economics.},
+  year          = {2021},
+  month         = {Jul},
+  url           = {http://arxiv.org/abs/2107.03374v2},
+  file          = {2107.03374v2.pdf},
+  eprintnover   = {2107.03374}
 }
 
 @article{1910.13461v1,
-Author        = {Mike Lewis and Yinhan Liu and Naman Goyal and Marjan Ghazvininejad and Abdelrahman Mohamed and Omer Levy and Ves Stoyanov and Luke Zettlemoyer},
-Title         = {BART: Denoising Sequence-to-Sequence Pre-training for Natural Language
-  Generation, Translation, and Comprehension},
-Eprint        = {1910.13461v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {We present BART, a denoising autoencoder for pretraining sequence-to-sequence
-models. BART is trained by (1) corrupting text with an arbitrary noising
-function, and (2) learning a model to reconstruct the original text. It uses a
-standard Tranformer-based neural machine translation architecture which,
-despite its simplicity, can be seen as generalizing BERT (due to the
-bidirectional encoder), GPT (with the left-to-right decoder), and many other
-more recent pretraining schemes. We evaluate a number of noising approaches,
-finding the best performance by both randomly shuffling the order of the
-original sentences and using a novel in-filling scheme, where spans of text are
-replaced with a single mask token. BART is particularly effective when fine
-tuned for text generation but also works well for comprehension tasks. It
-matches the performance of RoBERTa with comparable training resources on GLUE
-and SQuAD, achieves new state-of-the-art results on a range of abstractive
-dialogue, question answering, and summarization tasks, with gains of up to 6
-ROUGE. BART also provides a 1.1 BLEU increase over a back-translation system
-for machine translation, with only target language pretraining. We also report
-ablation experiments that replicate other pretraining schemes within the BART
-framework, to better measure which factors most influence end-task performance.},
-Year          = {2019},
-Month         = {Oct},
-Url           = {http://arxiv.org/abs/1910.13461v1},
-File          = {1910.13461v1.pdf},
-EprintNoVer   = {1910.13461}
+  author        = {Mike Lewis and Yinhan Liu and Naman Goyal and Marjan Ghazvininejad and Abdelrahman Mohamed and Omer Levy and Ves Stoyanov and Luke Zettlemoyer},
+  title         = {BART: Denoising Sequence-to-Sequence Pre-training for Natural Language
+                   Generation, Translation, and Comprehension},
+  eprint        = {1910.13461v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {We present BART, a denoising autoencoder for pretraining sequence-to-sequence
+                   models. BART is trained by (1) corrupting text with an arbitrary noising
+                   function, and (2) learning a model to reconstruct the original text. It uses a
+                   standard Tranformer-based neural machine translation architecture which,
+                   despite its simplicity, can be seen as generalizing BERT (due to the
+                   bidirectional encoder), GPT (with the left-to-right decoder), and many other
+                   more recent pretraining schemes. We evaluate a number of noising approaches,
+                   finding the best performance by both randomly shuffling the order of the
+                   original sentences and using a novel in-filling scheme, where spans of text are
+                   replaced with a single mask token. BART is particularly effective when fine
+                   tuned for text generation but also works well for comprehension tasks. It
+                   matches the performance of RoBERTa with comparable training resources on GLUE
+                   and SQuAD, achieves new state-of-the-art results on a range of abstractive
+                   dialogue, question answering, and summarization tasks, with gains of up to 6
+                   ROUGE. BART also provides a 1.1 BLEU increase over a back-translation system
+                   for machine translation, with only target language pretraining. We also report
+                   ablation experiments that replicate other pretraining schemes within the BART
+                   framework, to better measure which factors most influence end-task performance.},
+  year          = {2019},
+  month         = {Oct},
+  url           = {http://arxiv.org/abs/1910.13461v1},
+  file          = {1910.13461v1.pdf},
+  eprintnover   = {1910.13461}
 }
 
 @article{2005.11401v4,
-Author        = {Patrick Lewis and Ethan Perez and Aleksandra Piktus and Fabio Petroni and Vladimir Karpukhin and Naman Goyal and Heinrich Küttler and Mike Lewis and Wen-tau Yih and Tim Rocktäschel and Sebastian Riedel and Douwe Kiela},
-Title         = {Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks},
-Eprint        = {2005.11401v4},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {Large pre-trained language models have been shown to store factual knowledge
-in their parameters, and achieve state-of-the-art results when fine-tuned on
-downstream NLP tasks. However, their ability to access and precisely manipulate
-knowledge is still limited, and hence on knowledge-intensive tasks, their
-performance lags behind task-specific architectures. Additionally, providing
-provenance for their decisions and updating their world knowledge remain open
-research problems. Pre-trained models with a differentiable access mechanism to
-explicit non-parametric memory can overcome this issue, but have so far been
-only investigated for extractive downstream tasks. We explore a general-purpose
-fine-tuning recipe for retrieval-augmented generation (RAG) -- models which
-combine pre-trained parametric and non-parametric memory for language
-generation. We introduce RAG models where the parametric memory is a
-pre-trained seq2seq model and the non-parametric memory is a dense vector index
-of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG
-formulations, one which conditions on the same retrieved passages across the
-whole generated sequence, the other can use different passages per token. We
-fine-tune and evaluate our models on a wide range of knowledge-intensive NLP
-tasks and set the state-of-the-art on three open domain QA tasks, outperforming
-parametric seq2seq models and task-specific retrieve-and-extract architectures.
-For language generation tasks, we find that RAG models generate more specific,
-diverse and factual language than a state-of-the-art parametric-only seq2seq
-baseline.},
-Year          = {2020},
-Month         = {May},
-Url           = {http://arxiv.org/abs/2005.11401v4},
-File          = {2005.11401v4.pdf},
-EprintNoVer   = {2005.11401}
+  author        = {Patrick Lewis and Ethan Perez and Aleksandra Piktus and Fabio Petroni and Vladimir Karpukhin and Naman Goyal and Heinrich Küttler and Mike Lewis and Wen-tau Yih and Tim Rocktäschel and Sebastian Riedel and Douwe Kiela},
+  title         = {Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks},
+  eprint        = {2005.11401v4},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {Large pre-trained language models have been shown to store factual knowledge
+                   in their parameters, and achieve state-of-the-art results when fine-tuned on
+                   downstream NLP tasks. However, their ability to access and precisely manipulate
+                   knowledge is still limited, and hence on knowledge-intensive tasks, their
+                   performance lags behind task-specific architectures. Additionally, providing
+                   provenance for their decisions and updating their world knowledge remain open
+                   research problems. Pre-trained models with a differentiable access mechanism to
+                   explicit non-parametric memory can overcome this issue, but have so far been
+                   only investigated for extractive downstream tasks. We explore a general-purpose
+                   fine-tuning recipe for retrieval-augmented generation (RAG) -- models which
+                   combine pre-trained parametric and non-parametric memory for language
+                   generation. We introduce RAG models where the parametric memory is a
+                   pre-trained seq2seq model and the non-parametric memory is a dense vector index
+                   of Wikipedia, accessed with a pre-trained neural retriever. We compare two RAG
+                   formulations, one which conditions on the same retrieved passages across the
+                   whole generated sequence, the other can use different passages per token. We
+                   fine-tune and evaluate our models on a wide range of knowledge-intensive NLP
+                   tasks and set the state-of-the-art on three open domain QA tasks, outperforming
+                   parametric seq2seq models and task-specific retrieve-and-extract architectures.
+                   For language generation tasks, we find that RAG models generate more specific,
+                   diverse and factual language than a state-of-the-art parametric-only seq2seq
+                   baseline.},
+  year          = {2020},
+  month         = {May},
+  url           = {http://arxiv.org/abs/2005.11401v4},
+  file          = {2005.11401v4.pdf},
+  eprintnover   = {2005.11401}
 }
 
 @article{2004.04906v3,
-Author        = {Vladimir Karpukhin and Barlas Oğuz and Sewon Min and Patrick Lewis and Ledell Wu and Sergey Edunov and Danqi Chen and Wen-tau Yih},
-Title         = {Dense Passage Retrieval for Open-Domain Question Answering},
-Eprint        = {2004.04906v3},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {Open-domain question answering relies on efficient passage retrieval to
-select candidate contexts, where traditional sparse vector space models, such
-as TF-IDF or BM25, are the de facto method. In this work, we show that
-retrieval can be practically implemented using dense representations alone,
-where embeddings are learned from a small number of questions and passages by a
-simple dual-encoder framework. When evaluated on a wide range of open-domain QA
-datasets, our dense retriever outperforms a strong Lucene-BM25 system largely
-by 9%-19% absolute in terms of top-20 passage retrieval accuracy, and helps our
-end-to-end QA system establish new state-of-the-art on multiple open-domain QA
-benchmarks.},
-Year          = {2020},
-Month         = {Apr},
-Url           = {http://arxiv.org/abs/2004.04906v3},
-File          = {2004.04906v3.pdf},
-EprintNoVer   = {2004.04906}
+  author        = {Vladimir Karpukhin and Barlas Oğuz and Sewon Min and Patrick Lewis and Ledell Wu and Sergey Edunov and Danqi Chen and Wen-tau Yih},
+  title         = {Dense Passage Retrieval for Open-Domain Question Answering},
+  eprint        = {2004.04906v3},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {Open-domain question answering relies on efficient passage retrieval to
+                   select candidate contexts, where traditional sparse vector space models, such
+                   as TF-IDF or BM25, are the de facto method. In this work, we show that
+                   retrieval can be practically implemented using dense representations alone,
+                   where embeddings are learned from a small number of questions and passages by a
+                   simple dual-encoder framework. When evaluated on a wide range of open-domain QA
+                   datasets, our dense retriever outperforms a strong Lucene-BM25 system largely
+                   by 9%-19% absolute in terms of top-20 passage retrieval accuracy, and helps our
+                   end-to-end QA system establish new state-of-the-art on multiple open-domain QA
+                   benchmarks.},
+  year          = {2020},
+  month         = {Apr},
+  url           = {http://arxiv.org/abs/2004.04906v3},
+  file          = {2004.04906v3.pdf},
+  eprintnover   = {2004.04906}
 }
 
 
 @inproceedings{Radford2019LanguageMA,
-  title={Language Models are Unsupervised Multitask Learners},
-  author={Alec Radford and Jeff Wu and Rewon Child and David Luan and Dario Amodei and Ilya Sutskever},
-  year={2019},
-  url={https://api.semanticscholar.org/CorpusID:160025533},
-  abstract={Natural language processing tasks, such as question answering,
-  machine translation, reading comprehension, and summarization, are typically
-  approached with supervised learning on taskspecific datasets. We demonstrate
-  that language models begin to learn these tasks without any explicit
-  supervision when trained on a new dataset of millions of webpages called
-  WebText. When conditioned on a document plus questions, the answers generated
-  by the language model reach 55 F1 on the CoQA dataset matching or exceeding
-  the performance of 3 out of 4 baseline systems without using the 127,000+
-  training examples. The capacity of the language model is essential to the
-  success of zero-shot task transfer and increasing it improves performance in a
-  log-linear fashion across tasks. Our largest model, GPT-2, is a 1.5B parameter
-  Transformer that achieves state of the art results on 7 out of 8 tested
-  language modeling datasets in a zero-shot setting but still underfits WebText.
-  Samples from the model reflect these improvements and contain coherent
-  paragraphs of text. These findings suggest a promising path towards building
-  language processing systems which learn to perform tasks from their naturally
-  occurring demonstrations.}
+  title    = {Language Models are Unsupervised Multitask Learners},
+  author   = {Alec Radford and Jeff Wu and Rewon Child and David Luan and Dario Amodei and Ilya Sutskever},
+  year     = {2019},
+  url      = {https://api.semanticscholar.org/CorpusID:160025533},
+  abstract = {Natural language processing tasks, such as question answering,
+              machine translation, reading comprehension, and summarization, are typically
+              approached with supervised learning on taskspecific datasets. We demonstrate
+              that language models begin to learn these tasks without any explicit
+              supervision when trained on a new dataset of millions of webpages called
+              WebText. When conditioned on a document plus questions, the answers generated
+              by the language model reach 55 F1 on the CoQA dataset matching or exceeding
+              the performance of 3 out of 4 baseline systems without using the 127,000+
+              training examples. The capacity of the language model is essential to the
+              success of zero-shot task transfer and increasing it improves performance in a
+              log-linear fashion across tasks. Our largest model, GPT-2, is a 1.5B parameter
+              Transformer that achieves state of the art results on 7 out of 8 tested
+              language modeling datasets in a zero-shot setting but still underfits WebText.
+              Samples from the model reflect these improvements and contain coherent
+              paragraphs of text. These findings suggest a promising path towards building
+              language processing systems which learn to perform tasks from their naturally
+              occurring demonstrations.}
 }
 
 @article{2308.03958v1,
-Author        = {Jerry Wei and Da Huang and Yifeng Lu and Denny Zhou and Quoc V. Le},
-Title         = {Simple synthetic data reduces sycophancy in large language models},
-Eprint        = {2308.03958v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {Sycophancy is an undesirable behavior where models tailor their responses to
-follow a human user's view even when that view is not objectively correct
-(e.g., adapting liberal views once a user reveals that they are liberal). In
-this paper, we study the prevalence of sycophancy in language models and
-propose a simple synthetic-data intervention to reduce this behavior.
-  First, on a set of three sycophancy tasks (Perez et al., 2022) where models
-are asked for an opinion on statements with no correct answers (e.g.,
-politics), we observe that both model scaling and instruction tuning
-significantly increase sycophancy for PaLM models up to 540B parameters.
-Second, we extend sycophancy evaluations to simple addition statements that are
-objectively incorrect, finding that despite knowing that these statements are
-wrong, language models will still agree with them if the user does as well.
-  To reduce sycophancy, we present a straightforward synthetic-data
-intervention that takes public NLP tasks and encourages models to be robust to
-user opinions on these tasks. Adding these data in a lightweight finetuning
-step can significantly reduce sycophantic behavior on held-out prompts. Code
-for generating synthetic data for intervention can be found at
-https://github.com/google/sycophancy-intervention.},
-Year          = {2023},
-Month         = {Aug},
-Url           = {http://arxiv.org/abs/2308.03958v1},
-File          = {2308.03958v1.pdf},
-EprintNoVer   = {2308.03958}
+  author        = {Jerry Wei and Da Huang and Yifeng Lu and Denny Zhou and Quoc V. Le},
+  title         = {Simple synthetic data reduces sycophancy in large language models},
+  eprint        = {2308.03958v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {Sycophancy is an undesirable behavior where models tailor their responses to
+                   follow a human user's view even when that view is not objectively correct
+                   (e.g., adapting liberal views once a user reveals that they are liberal). In
+                   this paper, we study the prevalence of sycophancy in language models and
+                   propose a simple synthetic-data intervention to reduce this behavior.
+                   First, on a set of three sycophancy tasks (Perez et al., 2022) where models
+                   are asked for an opinion on statements with no correct answers (e.g.,
+                   politics), we observe that both model scaling and instruction tuning
+                   significantly increase sycophancy for PaLM models up to 540B parameters.
+                   Second, we extend sycophancy evaluations to simple addition statements that are
+                   objectively incorrect, finding that despite knowing that these statements are
+                   wrong, language models will still agree with them if the user does as well.
+                   To reduce sycophancy, we present a straightforward synthetic-data
+                   intervention that takes public NLP tasks and encourages models to be robust to
+                   user opinions on these tasks. Adding these data in a lightweight finetuning
+                   step can significantly reduce sycophantic behavior on held-out prompts. Code
+                   for generating synthetic data for intervention can be found at
+                   https://github.com/google/sycophancy-intervention.},
+  year          = {2023},
+  month         = {Aug},
+  url           = {http://arxiv.org/abs/2308.03958v1},
+  file          = {2308.03958v1.pdf},
+  eprintnover   = {2308.03958}
 }
 
 @inproceedings{Radford2018ImprovingLU,
-  title={Improving Language Understanding by Generative Pre-Training},
-  author={Alec Radford and Karthik Narasimhan},
-  year={2018},
-  url={https://api.semanticscholar.org/CorpusID:49313245}
+  title  = {Improving Language Understanding by Generative Pre-Training},
+  author = {Alec Radford and Karthik Narasimhan},
+  year   = {2018},
+  url    = {https://api.semanticscholar.org/CorpusID:49313245}
 }
 
 @article{2308.00352v3,
-Author        = {Sirui Hong and Xiawu Zheng and Jonathan Chen and Yuheng Cheng and Jinlin Wang and Ceyao Zhang and Zili Wang and Steven Ka Shing Yau and Zijuan Lin and Liyang Zhou and Chenyu Ran and Lingfeng Xiao and Chenglin Wu},
-Title         = {MetaGPT: Meta Programming for Multi-Agent Collaborative Framework},
-Eprint        = {2308.00352v3},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.AI},
-Abstract      = {Recently, remarkable progress has been made in automated task-solving through
-the use of multi-agent driven by large language models (LLMs). However,
-existing LLM-based multi-agent works primarily focus on solving simple dialogue
-tasks, and complex tasks are rarely studied, mainly due to the LLM
-hallucination problem. This type of hallucination becomes cascading when
-naively chaining multiple intelligent agents, resulting in a failure to
-effectively address complex problems. Therefore, we introduce MetaGPT, an
-innovative framework that incorporates efficient human workflows as a meta
-programming approach into LLM-based multi-agent collaboration. Specifically,
-MetaGPT encodes Standardized Operating Procedures (SOPs) into prompts to
-enhance structured coordination. Subsequently, it mandates modular outputs,
-empowering agents with domain expertise comparable to human professionals, to
-validate outputs and minimize compounded errors. In this way, MetaGPT leverages
-the assembly line paradigm to assign diverse roles to various agents, thereby
-establishing a framework that can effectively and cohesively deconstruct
-complex multi-agent collaborative problems. Our experiments on collaborative
-software engineering benchmarks demonstrate that MetaGPT generates more
-coherent and correct solutions compared to existing chat-based multi-agent
-systems. This highlights the potential of integrating human domain knowledge
-into multi-agent systems, thereby creating new opportunities to tackle complex
-real-world challenges. The GitHub repository of this project is publicly
-available on:https://github.com/geekan/MetaGPT.},
-Year          = {2023},
-Month         = {Aug},
-Url           = {http://arxiv.org/abs/2308.00352v3},
-File          = {2308.00352v3.pdf},
-EprintNoVer   = {2308.00352}
+  author        = {Sirui Hong and Xiawu Zheng and Jonathan Chen and Yuheng Cheng and Jinlin Wang and Ceyao Zhang and Zili Wang and Steven Ka Shing Yau and Zijuan Lin and Liyang Zhou and Chenyu Ran and Lingfeng Xiao and Chenglin Wu},
+  title         = {MetaGPT: Meta Programming for Multi-Agent Collaborative Framework},
+  eprint        = {2308.00352v3},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.AI},
+  abstract      = {Recently, remarkable progress has been made in automated task-solving through
+                   the use of multi-agent driven by large language models (LLMs). However,
+                   existing LLM-based multi-agent works primarily focus on solving simple dialogue
+                   tasks, and complex tasks are rarely studied, mainly due to the LLM
+                   hallucination problem. This type of hallucination becomes cascading when
+                   naively chaining multiple intelligent agents, resulting in a failure to
+                   effectively address complex problems. Therefore, we introduce MetaGPT, an
+                   innovative framework that incorporates efficient human workflows as a meta
+                   programming approach into LLM-based multi-agent collaboration. Specifically,
+                   MetaGPT encodes Standardized Operating Procedures (SOPs) into prompts to
+                   enhance structured coordination. Subsequently, it mandates modular outputs,
+                   empowering agents with domain expertise comparable to human professionals, to
+                   validate outputs and minimize compounded errors. In this way, MetaGPT leverages
+                   the assembly line paradigm to assign diverse roles to various agents, thereby
+                   establishing a framework that can effectively and cohesively deconstruct
+                   complex multi-agent collaborative problems. Our experiments on collaborative
+                   software engineering benchmarks demonstrate that MetaGPT generates more
+                   coherent and correct solutions compared to existing chat-based multi-agent
+                   systems. This highlights the potential of integrating human domain knowledge
+                   into multi-agent systems, thereby creating new opportunities to tackle complex
+                   real-world challenges. The GitHub repository of this project is publicly
+                   available on:https://github.com/geekan/MetaGPT.},
+  year          = {2023},
+  month         = {Aug},
+  url           = {http://arxiv.org/abs/2308.00352v3},
+  file          = {2308.00352v3.pdf},
+  eprintnover   = {2308.00352}
 }
 
 @article{2304.03442v2,
-Author        = {Joon Sung Park and Joseph C. O'Brien and Carrie J. Cai and Meredith Ringel Morris and Percy Liang and Michael S. Bernstein},
-Title         = {Generative Agents: Interactive Simulacra of Human Behavior},
-Eprint        = {2304.03442v2},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.HC},
-Abstract      = {Believable proxies of human behavior can empower interactive applications
-ranging from immersive environments to rehearsal spaces for interpersonal
-communication to prototyping tools. In this paper, we introduce generative
-agents--computational software agents that simulate believable human behavior.
-Generative agents wake up, cook breakfast, and head to work; artists paint,
-while authors write; they form opinions, notice each other, and initiate
-conversations; they remember and reflect on days past as they plan the next
-day. To enable generative agents, we describe an architecture that extends a
-large language model to store a complete record of the agent's experiences
-using natural language, synthesize those memories over time into higher-level
-reflections, and retrieve them dynamically to plan behavior. We instantiate
-generative agents to populate an interactive sandbox environment inspired by
-The Sims, where end users can interact with a small town of twenty five agents
-using natural language. In an evaluation, these generative agents produce
-believable individual and emergent social behaviors: for example, starting with
-only a single user-specified notion that one agent wants to throw a Valentine's
-Day party, the agents autonomously spread invitations to the party over the
-next two days, make new acquaintances, ask each other out on dates to the
-party, and coordinate to show up for the party together at the right time. We
-demonstrate through ablation that the components of our agent
-architecture--observation, planning, and reflection--each contribute critically
-to the believability of agent behavior. By fusing large language models with
-computational, interactive agents, this work introduces architectural and
-interaction patterns for enabling believable simulations of human behavior.},
-Year          = {2023},
-Month         = {Apr},
-Url           = {http://arxiv.org/abs/2304.03442v2},
-File          = {2304.03442v2.pdf},
-EprintNoVer   = {2304.03442}
+  author        = {Joon Sung Park and Joseph C. O'Brien and Carrie J. Cai and Meredith Ringel Morris and Percy Liang and Michael S. Bernstein},
+  title         = {Generative Agents: Interactive Simulacra of Human Behavior},
+  eprint        = {2304.03442v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.HC},
+  abstract      = {Believable proxies of human behavior can empower interactive applications
+                   ranging from immersive environments to rehearsal spaces for interpersonal
+                   communication to prototyping tools. In this paper, we introduce generative
+                   agents--computational software agents that simulate believable human behavior.
+                   Generative agents wake up, cook breakfast, and head to work; artists paint,
+                   while authors write; they form opinions, notice each other, and initiate
+                   conversations; they remember and reflect on days past as they plan the next
+                   day. To enable generative agents, we describe an architecture that extends a
+                   large language model to store a complete record of the agent's experiences
+                   using natural language, synthesize those memories over time into higher-level
+                   reflections, and retrieve them dynamically to plan behavior. We instantiate
+                   generative agents to populate an interactive sandbox environment inspired by
+                   The Sims, where end users can interact with a small town of twenty five agents
+                   using natural language. In an evaluation, these generative agents produce
+                   believable individual and emergent social behaviors: for example, starting with
+                   only a single user-specified notion that one agent wants to throw a Valentine's
+                   Day party, the agents autonomously spread invitations to the party over the
+                   next two days, make new acquaintances, ask each other out on dates to the
+                   party, and coordinate to show up for the party together at the right time. We
+                   demonstrate through ablation that the components of our agent
+                   architecture--observation, planning, and reflection--each contribute critically
+                   to the believability of agent behavior. By fusing large language models with
+                   computational, interactive agents, this work introduces architectural and
+                   interaction patterns for enabling believable simulations of human behavior.},
+  year          = {2023},
+  month         = {Apr},
+  url           = {http://arxiv.org/abs/2304.03442v2},
+  file          = {2304.03442v2.pdf},
+  eprintnover   = {2304.03442}
 }
 
 @article{1910.10683v3,
-Author        = {Colin Raffel and Noam Shazeer and Adam Roberts and Katherine Lee and Sharan Narang and Michael Matena and Yanqi Zhou and Wei Li and Peter J. Liu},
-Title         = {Exploring the Limits of Transfer Learning with a Unified Text-to-Text
-  Transformer},
-Eprint        = {1910.10683v3},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.LG},
-Abstract      = {Transfer learning, where a model is first pre-trained on a data-rich task
-before being fine-tuned on a downstream task, has emerged as a powerful
-technique in natural language processing (NLP). The effectiveness of transfer
-learning has given rise to a diversity of approaches, methodology, and
-practice. In this paper, we explore the landscape of transfer learning
-techniques for NLP by introducing a unified framework that converts all
-text-based language problems into a text-to-text format. Our systematic study
-compares pre-training objectives, architectures, unlabeled data sets, transfer
-approaches, and other factors on dozens of language understanding tasks. By
-combining the insights from our exploration with scale and our new ``Colossal
-Clean Crawled Corpus'', we achieve state-of-the-art results on many benchmarks
-covering summarization, question answering, text classification, and more. To
-facilitate future work on transfer learning for NLP, we release our data set,
-pre-trained models, and code.},
-Year          = {2019},
-Month         = {Oct},
-Url           = {http://arxiv.org/abs/1910.10683v3},
-File          = {1910.10683v3.pdf},
-EprintNoVer   = {1910.10683}
+  author        = {Colin Raffel and Noam Shazeer and Adam Roberts and Katherine Lee and Sharan Narang and Michael Matena and Yanqi Zhou and Wei Li and Peter J. Liu},
+  title         = {Exploring the Limits of Transfer Learning with a Unified Text-to-Text
+                   Transformer},
+  eprint        = {1910.10683v3},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {Transfer learning, where a model is first pre-trained on a data-rich task
+                   before being fine-tuned on a downstream task, has emerged as a powerful
+                   technique in natural language processing (NLP). The effectiveness of transfer
+                   learning has given rise to a diversity of approaches, methodology, and
+                   practice. In this paper, we explore the landscape of transfer learning
+                   techniques for NLP by introducing a unified framework that converts all
+                   text-based language problems into a text-to-text format. Our systematic study
+                   compares pre-training objectives, architectures, unlabeled data sets, transfer
+                   approaches, and other factors on dozens of language understanding tasks. By
+                   combining the insights from our exploration with scale and our new ``Colossal
+                   Clean Crawled Corpus'', we achieve state-of-the-art results on many benchmarks
+                   covering summarization, question answering, text classification, and more. To
+                   facilitate future work on transfer learning for NLP, we release our data set,
+                   pre-trained models, and code.},
+  year          = {2019},
+  month         = {Oct},
+  url           = {http://arxiv.org/abs/1910.10683v3},
+  file          = {1910.10683v3.pdf},
+  eprintnover   = {1910.10683}
 }
 
 @article{2303.11607v1,
-Author        = {Siddique Latif and Aun Zaidi and Heriberto Cuayahuitl and Fahad Shamshad and Moazzam Shoukat and Junaid Qadir},
-Title         = {Transformers in Speech Processing: A Survey},
-Eprint        = {2303.11607v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {The remarkable success of transformers in the field of natural language
-processing has sparked the interest of the speech-processing community, leading
-to an exploration of their potential for modeling long-range dependencies
-within speech sequences. Recently, transformers have gained prominence across
-various speech-related domains, including automatic speech recognition, speech
-synthesis, speech translation, speech para-linguistics, speech enhancement,
-spoken dialogue systems, and numerous multimodal applications. In this paper,
-we present a comprehensive survey that aims to bridge research studies from
-diverse subfields within speech technology. By consolidating findings from
-across the speech technology landscape, we provide a valuable resource for
-researchers interested in harnessing the power of transformers to advance the
-field. We identify the challenges encountered by transformers in speech
-processing while also offering insights into potential solutions to address
-these issues.},
-Year          = {2023},
-Month         = {Mar},
-Url           = {http://arxiv.org/abs/2303.11607v1},
-File          = {2303.11607v1.pdf},
-EprintNoVer   = {2303.11607}
+  author        = {Siddique Latif and Aun Zaidi and Heriberto Cuayahuitl and Fahad Shamshad and Moazzam Shoukat and Junaid Qadir},
+  title         = {Transformers in Speech Processing: A Survey},
+  eprint        = {2303.11607v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {The remarkable success of transformers in the field of natural language
+                   processing has sparked the interest of the speech-processing community, leading
+                   to an exploration of their potential for modeling long-range dependencies
+                   within speech sequences. Recently, transformers have gained prominence across
+                   various speech-related domains, including automatic speech recognition, speech
+                   synthesis, speech translation, speech para-linguistics, speech enhancement,
+                   spoken dialogue systems, and numerous multimodal applications. In this paper,
+                   we present a comprehensive survey that aims to bridge research studies from
+                   diverse subfields within speech technology. By consolidating findings from
+                   across the speech technology landscape, we provide a valuable resource for
+                   researchers interested in harnessing the power of transformers to advance the
+                   field. We identify the challenges encountered by transformers in speech
+                   processing while also offering insights into potential solutions to address
+                   these issues.},
+  year          = {2023},
+  month         = {Mar},
+  url           = {http://arxiv.org/abs/2303.11607v1},
+  file          = {2303.11607v1.pdf},
+  eprintnover   = {2303.11607}
 }
 
 @article{2008.03790v1,
-Author        = {Christin Jose and Yuriy Mishchenko and Thibaud Senechal and Anish Shah and Alex Escott and Shiv Vitaladevuni},
-Title         = {Accurate Detection of Wake Word Start and End Using a CNN},
-Eprint        = {2008.03790v1},
-DOI           = {10.21437/Interspeech.2020-1491},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {eess.AS},
-Abstract      = {Small footprint embedded devices require keyword spotters (KWS) with small
-model size and detection latency for enabling voice assistants. Such a keyword
-is often referred to as \textit{wake word} as it is used to wake up voice
-assistant enabled devices. Together with wake word detection, accurate
-estimation of wake word endpoints (start and end) is an important task of KWS.
-In this paper, we propose two new methods for detecting the endpoints of wake
-words in neural KWS that use single-stage word-level neural networks. Our
-results show that the new techniques give superior accuracy for detecting wake
-words' endpoints of up to 50 msec standard error versus human annotations, on
-par with the conventional Acoustic Model plus HMM forced alignment. To our
-knowledge, this is the first study of wake word endpoints detection methods for
-single-stage neural KWS.},
-Year          = {2020},
-Month         = {Aug},
-Note          = {Interspeech 2020},
-Url           = {http://arxiv.org/abs/2008.03790v1},
-File          = {2008.03790v1.pdf},
-EprintNoVer   = {2008.03790}
+  author        = {Christin Jose and Yuriy Mishchenko and Thibaud Senechal and Anish Shah and Alex Escott and Shiv Vitaladevuni},
+  title         = {Accurate Detection of Wake Word Start and End Using a CNN},
+  eprint        = {2008.03790v1},
+  doi           = {10.21437/Interspeech.2020-1491},
+  archiveprefix = {arXiv},
+  primaryclass  = {eess.AS},
+  abstract      = {Small footprint embedded devices require keyword spotters (KWS) with small
+                   model size and detection latency for enabling voice assistants. Such a keyword
+                   is often referred to as \textit{wake word} as it is used to wake up voice
+                   assistant enabled devices. Together with wake word detection, accurate
+                   estimation of wake word endpoints (start and end) is an important task of KWS.
+                   In this paper, we propose two new methods for detecting the endpoints of wake
+                   words in neural KWS that use single-stage word-level neural networks. Our
+                   results show that the new techniques give superior accuracy for detecting wake
+                   words' endpoints of up to 50 msec standard error versus human annotations, on
+                   par with the conventional Acoustic Model plus HMM forced alignment. To our
+                   knowledge, this is the first study of wake word endpoints detection methods for
+                   single-stage neural KWS.},
+  year          = {2020},
+  month         = {Aug},
+  note          = {Interspeech 2020},
+  url           = {http://arxiv.org/abs/2008.03790v1},
+  file          = {2008.03790v1.pdf},
+  eprintnover   = {2008.03790}
 }
 
 @article{2111.00396v3,
-Author        = {Albert Gu and Karan Goel and Christopher Ré},
-Title         = {Efficiently Modeling Long Sequences with Structured State Spaces},
-Eprint        = {2111.00396v3},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.LG},
-Abstract      = {A central goal of sequence modeling is designing a single principled model
-that can address sequence data across a range of modalities and tasks,
-particularly on long-range dependencies. Although conventional models including
-RNNs, CNNs, and Transformers have specialized variants for capturing long
-dependencies, they still struggle to scale to very long sequences of $10000$ or
-more steps. A promising recent approach proposed modeling sequences by
-simulating the fundamental state space model (SSM) \( x'(t) = Ax(t) + Bu(t),
-y(t) = Cx(t) + Du(t) \), and showed that for appropriate choices of the state
-matrix \( A \), this system could handle long-range dependencies mathematically
-and empirically. However, this method has prohibitive computation and memory
-requirements, rendering it infeasible as a general sequence modeling solution.
-We propose the Structured State Space sequence model (S4) based on a new
-parameterization for the SSM, and show that it can be computed much more
-efficiently than prior approaches while preserving their theoretical strengths.
-Our technique involves conditioning \( A \) with a low-rank correction,
-allowing it to be diagonalized stably and reducing the SSM to the well-studied
-computation of a Cauchy kernel. S4 achieves strong empirical results across a
-diverse range of established benchmarks, including (i) 91\% accuracy on
-sequential CIFAR-10 with no data augmentation or auxiliary losses, on par with
-a larger 2-D ResNet, (ii) substantially closing the gap to Transformers on
-image and language modeling tasks, while performing generation $60\times$
-faster (iii) SoTA on every task from the Long Range Arena benchmark, including
-solving the challenging Path-X task of length 16k that all prior work fails on,
-while being as efficient as all competitors.},
-Year          = {2021},
-Month         = {Oct},
-Url           = {http://arxiv.org/abs/2111.00396v3},
-File          = {2111.00396v3.pdf},
-EprintNoVer   = {2111.00396}
+  author        = {Albert Gu and Karan Goel and Christopher Ré},
+  title         = {Efficiently Modeling Long Sequences with Structured State Spaces},
+  eprint        = {2111.00396v3},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {A central goal of sequence modeling is designing a single principled model
+                   that can address sequence data across a range of modalities and tasks,
+                   particularly on long-range dependencies. Although conventional models including
+                   RNNs, CNNs, and Transformers have specialized variants for capturing long
+                   dependencies, they still struggle to scale to very long sequences of $10000$ or
+                   more steps. A promising recent approach proposed modeling sequences by
+                   simulating the fundamental state space model (SSM) \( x'(t) = Ax(t) + Bu(t),
+                   y(t) = Cx(t) + Du(t) \), and showed that for appropriate choices of the state
+                   matrix \( A \), this system could handle long-range dependencies mathematically
+                   and empirically. However, this method has prohibitive computation and memory
+                   requirements, rendering it infeasible as a general sequence modeling solution.
+                   We propose the Structured State Space sequence model (S4) based on a new
+                   parameterization for the SSM, and show that it can be computed much more
+                   efficiently than prior approaches while preserving their theoretical strengths.
+                   Our technique involves conditioning \( A \) with a low-rank correction,
+                   allowing it to be diagonalized stably and reducing the SSM to the well-studied
+                   computation of a Cauchy kernel. S4 achieves strong empirical results across a
+                   diverse range of established benchmarks, including (i) 91\% accuracy on
+                   sequential CIFAR-10 with no data augmentation or auxiliary losses, on par with
+                   a larger 2-D ResNet, (ii) substantially closing the gap to Transformers on
+                   image and language modeling tasks, while performing generation $60\times$
+                   faster (iii) SoTA on every task from the Long Range Arena benchmark, including
+                   solving the challenging Path-X task of length 16k that all prior work fails on,
+                   while being as efficient as all competitors.},
+  year          = {2021},
+  month         = {Oct},
+  url           = {http://arxiv.org/abs/2111.00396v3},
+  file          = {2111.00396v3.pdf},
+  eprintnover   = {2111.00396}
 }
 
 @article{2301.10226v3,
-Author        = {John Kirchenbauer and Jonas Geiping and Yuxin Wen and Jonathan Katz and Ian Miers and Tom Goldstein},
-Title         = {A Watermark for Large Language Models},
-Eprint        = {2301.10226v3},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.LG},
-Abstract      = {Potential harms of large language models can be mitigated by watermarking
-model output, i.e., embedding signals into generated text that are invisible to
-humans but algorithmically detectable from a short span of tokens. We propose a
-watermarking framework for proprietary language models. The watermark can be
-embedded with negligible impact on text quality, and can be detected using an
-efficient open-source algorithm without access to the language model API or
-parameters. The watermark works by selecting a randomized set of "green" tokens
-before a word is generated, and then softly promoting use of green tokens
-during sampling. We propose a statistical test for detecting the watermark with
-interpretable p-values, and derive an information-theoretic framework for
-analyzing the sensitivity of the watermark. We test the watermark using a
-multi-billion parameter model from the Open Pretrained Transformer (OPT)
-family, and discuss robustness and security.},
-Year          = {2023},
-Month         = {Jan},
-Url           = {http://arxiv.org/abs/2301.10226v3},
-File          = {2301.10226v3.pdf},
-EprintNoVer   = {2301.10226}
+  author        = {John Kirchenbauer and Jonas Geiping and Yuxin Wen and Jonathan Katz and Ian Miers and Tom Goldstein},
+  title         = {A Watermark for Large Language Models},
+  eprint        = {2301.10226v3},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {Potential harms of large language models can be mitigated by watermarking
+                   model output, i.e., embedding signals into generated text that are invisible to
+                   humans but algorithmically detectable from a short span of tokens. We propose a
+                   watermarking framework for proprietary language models. The watermark can be
+                   embedded with negligible impact on text quality, and can be detected using an
+                   efficient open-source algorithm without access to the language model API or
+                   parameters. The watermark works by selecting a randomized set of "green" tokens
+                   before a word is generated, and then softly promoting use of green tokens
+                   during sampling. We propose a statistical test for detecting the watermark with
+                   interpretable p-values, and derive an information-theoretic framework for
+                   analyzing the sensitivity of the watermark. We test the watermark using a
+                   multi-billion parameter model from the Open Pretrained Transformer (OPT)
+                   family, and discuss robustness and security.},
+  year          = {2023},
+  month         = {Jan},
+  url           = {http://arxiv.org/abs/2301.10226v3},
+  file          = {2301.10226v3.pdf},
+  eprintnover   = {2301.10226}
 }
 
 @article{2012.07805v2,
-Author        = {Nicholas Carlini and Florian Tramer and Eric Wallace and Matthew Jagielski and Ariel Herbert-Voss and Katherine Lee and Adam Roberts and Tom Brown and Dawn Song and Ulfar Erlingsson and Alina Oprea and Colin Raffel},
-Title         = {Extracting Training Data from Large Language Models},
-Eprint        = {2012.07805v2},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CR},
-Abstract      = {It has become common to publish large (billion parameter) language models
-that have been trained on private datasets. This paper demonstrates that in
-such settings, an adversary can perform a training data extraction attack to
-recover individual training examples by querying the language model.
-  We demonstrate our attack on GPT-2, a language model trained on scrapes of
-the public Internet, and are able to extract hundreds of verbatim text
-sequences from the model's training data. These extracted examples include
-(public) personally identifiable information (names, phone numbers, and email
-addresses), IRC conversations, code, and 128-bit UUIDs. Our attack is possible
-even though each of the above sequences are included in just one document in
-the training data.
-  We comprehensively evaluate our extraction attack to understand the factors
-that contribute to its success. Worryingly, we find that larger models are more
-vulnerable than smaller models. We conclude by drawing lessons and discussing
-possible safeguards for training large language models.},
-Year          = {2020},
-Month         = {Dec},
-Url           = {http://arxiv.org/abs/2012.07805v2},
-File          = {2012.07805v2.pdf},
-EprintNoVer   = {2012.07805}
+  author        = {Nicholas Carlini and Florian Tramer and Eric Wallace and Matthew Jagielski and Ariel Herbert-Voss and Katherine Lee and Adam Roberts and Tom Brown and Dawn Song and Ulfar Erlingsson and Alina Oprea and Colin Raffel},
+  title         = {Extracting Training Data from Large Language Models},
+  eprint        = {2012.07805v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CR},
+  abstract      = {It has become common to publish large (billion parameter) language models
+                   that have been trained on private datasets. This paper demonstrates that in
+                   such settings, an adversary can perform a training data extraction attack to
+                   recover individual training examples by querying the language model.
+                   We demonstrate our attack on GPT-2, a language model trained on scrapes of
+                   the public Internet, and are able to extract hundreds of verbatim text
+                   sequences from the model's training data. These extracted examples include
+                   (public) personally identifiable information (names, phone numbers, and email
+                   addresses), IRC conversations, code, and 128-bit UUIDs. Our attack is possible
+                   even though each of the above sequences are included in just one document in
+                   the training data.
+                   We comprehensively evaluate our extraction attack to understand the factors
+                   that contribute to its success. Worryingly, we find that larger models are more
+                   vulnerable than smaller models. We conclude by drawing lessons and discussing
+                   possible safeguards for training large language models.},
+  year          = {2020},
+  month         = {Dec},
+  url           = {http://arxiv.org/abs/2012.07805v2},
+  file          = {2012.07805v2.pdf},
+  eprintnover   = {2012.07805}
 }
 
 @article{2003.00307v2,
-Author        = {Chaoyue Liu and Libin Zhu and Mikhail Belkin},
-Title         = {Loss landscapes and optimization in over-parameterized non-linear
-  systems and neural networks},
-Eprint        = {2003.00307v2},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.LG},
-Abstract      = {The success of deep learning is due, to a large extent, to the remarkable
-effectiveness of gradient-based optimization methods applied to large neural
-networks. The purpose of this work is to propose a modern view and a general
-mathematical framework for loss landscapes and efficient optimization in
-over-parameterized machine learning models and systems of non-linear equations,
-a setting that includes over-parameterized deep neural networks. Our starting
-observation is that optimization problems corresponding to such systems are
-generally not convex, even locally. We argue that instead they satisfy PL*,
-a variant of the Polyak-Lojasiewicz condition on most (but not all) of the
-parameter space, which guarantees both the existence of solutions and efficient
-optimization by (stochastic) gradient descent (SGD/GD). The PL* condition of
-these systems is closely related to the condition number of the tangent kernel
-associated to a non-linear system showing how a PL*-based non-linear theory
-parallels classical analyses of over-parameterized linear equations. We show
-that wide neural networks satisfy the PL* condition, which explains the
-(S)GD convergence to a global minimum. Finally we propose a relaxation of the
-PL* condition applicable to "almost" over-parameterized systems.},
-Year          = {2020},
-Month         = {Feb},
-Url           = {http://arxiv.org/abs/2003.00307v2},
-File          = {2003.00307v2.pdf},
-EprintNoVer   = {2003.00307}
+  author        = {Chaoyue Liu and Libin Zhu and Mikhail Belkin},
+  title         = {Loss landscapes and optimization in over-parameterized non-linear
+                   systems and neural networks},
+  eprint        = {2003.00307v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {The success of deep learning is due, to a large extent, to the remarkable
+                   effectiveness of gradient-based optimization methods applied to large neural
+                   networks. The purpose of this work is to propose a modern view and a general
+                   mathematical framework for loss landscapes and efficient optimization in
+                   over-parameterized machine learning models and systems of non-linear equations,
+                   a setting that includes over-parameterized deep neural networks. Our starting
+                   observation is that optimization problems corresponding to such systems are
+                   generally not convex, even locally. We argue that instead they satisfy PL*,
+                   a variant of the Polyak-Lojasiewicz condition on most (but not all) of the
+                   parameter space, which guarantees both the existence of solutions and efficient
+                   optimization by (stochastic) gradient descent (SGD/GD). The PL* condition of
+                   these systems is closely related to the condition number of the tangent kernel
+                   associated to a non-linear system showing how a PL*-based non-linear theory
+                   parallels classical analyses of over-parameterized linear equations. We show
+                   that wide neural networks satisfy the PL* condition, which explains the
+                   (S)GD convergence to a global minimum. Finally we propose a relaxation of the
+                   PL* condition applicable to "almost" over-parameterized systems.},
+  year          = {2020},
+  month         = {Feb},
+  url           = {http://arxiv.org/abs/2003.00307v2},
+  file          = {2003.00307v2.pdf},
+  eprintnover   = {2003.00307}
 }
 
 @article{1810.02054v2,
-Author        = {Simon S. Du and Xiyu Zhai and Barnabas Poczos and Aarti Singh},
-Title         = {Gradient Descent Provably Optimizes Over-parameterized Neural Networks},
-Eprint        = {1810.02054v2},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.LG},
-Abstract      = {One of the mysteries in the success of neural networks is randomly
-initialized first order methods like gradient descent can achieve zero training
-loss even though the objective function is non-convex and non-smooth. This
-paper demystifies this surprising phenomenon for two-layer fully connected ReLU
-activated neural networks. For an $m$ hidden node shallow neural network with
-ReLU activation and $n$ training data, we show as long as $m$ is large enough
-and no two inputs are parallel, randomly initialized gradient descent converges
-to a globally optimal solution at a linear convergence rate for the quadratic
-loss function.
-  Our analysis relies on the following observation: over-parameterization and
-random initialization jointly restrict every weight vector to be close to its
-initialization for all iterations, which allows us to exploit a strong
-convexity-like property to show that gradient descent converges at a global
-linear rate to the global optimum. We believe these insights are also useful in
-analyzing deep models and other first order methods.},
-Year          = {2018},
-Month         = {Oct},
-Url           = {http://arxiv.org/abs/1810.02054v2},
-File          = {1810.02054v2.pdf},
-EprintNoVer   = {1810.02054}
+  author        = {Simon S. Du and Xiyu Zhai and Barnabas Poczos and Aarti Singh},
+  title         = {Gradient Descent Provably Optimizes Over-parameterized Neural Networks},
+  eprint        = {1810.02054v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {One of the mysteries in the success of neural networks is randomly
+                   initialized first order methods like gradient descent can achieve zero training
+                   loss even though the objective function is non-convex and non-smooth. This
+                   paper demystifies this surprising phenomenon for two-layer fully connected ReLU
+                   activated neural networks. For an $m$ hidden node shallow neural network with
+                   ReLU activation and $n$ training data, we show as long as $m$ is large enough
+                   and no two inputs are parallel, randomly initialized gradient descent converges
+                   to a globally optimal solution at a linear convergence rate for the quadratic
+                   loss function.
+                   Our analysis relies on the following observation: over-parameterization and
+                   random initialization jointly restrict every weight vector to be close to its
+                   initialization for all iterations, which allows us to exploit a strong
+                   convexity-like property to show that gradient descent converges at a global
+                   linear rate to the global optimum. We believe these insights are also useful in
+                   analyzing deep models and other first order methods.},
+  year          = {2018},
+  month         = {Oct},
+  url           = {http://arxiv.org/abs/1810.02054v2},
+  file          = {1810.02054v2.pdf},
+  eprintnover   = {1810.02054}
 }
 
 @article{1710.10345v5,
-Author        = {Daniel Soudry and Elad Hoffer and Mor Shpigel Nacson and Suriya Gunasekar and Nathan Srebro},
-Title         = {The Implicit Bias of Gradient Descent on Separable Data},
-Eprint        = {1710.10345v5},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {stat.ML},
-Abstract      = {We examine gradient descent on unregularized logistic regression problems,
-with homogeneous linear predictors on linearly separable datasets. We show the
-predictor converges to the direction of the max-margin (hard margin SVM)
-solution. The result also generalizes to other monotone decreasing loss
-functions with an infimum at infinity, to multi-class problems, and to training
-a weight layer in a deep network in a certain restricted setting. Furthermore,
-we show this convergence is very slow, and only logarithmic in the convergence
-of the loss itself. This can help explain the benefit of continuing to optimize
-the logistic or cross-entropy loss even after the training error is zero and
-the training loss is extremely small, and, as we show, even if the validation
-loss increases. Our methodology can also aid in understanding implicit
-regularization n more complex models and with other optimization methods.},
-Year          = {2017},
-Month         = {Oct},
-Url           = {http://arxiv.org/abs/1710.10345v5},
-File          = {1710.10345v5.pdf},
-EprintNoVer   = {1710.10345}
+  author        = {Daniel Soudry and Elad Hoffer and Mor Shpigel Nacson and Suriya Gunasekar and Nathan Srebro},
+  title         = {The Implicit Bias of Gradient Descent on Separable Data},
+  eprint        = {1710.10345v5},
+  archiveprefix = {arXiv},
+  primaryclass  = {stat.ML},
+  abstract      = {We examine gradient descent on unregularized logistic regression problems,
+                   with homogeneous linear predictors on linearly separable datasets. We show the
+                   predictor converges to the direction of the max-margin (hard margin SVM)
+                   solution. The result also generalizes to other monotone decreasing loss
+                   functions with an infimum at infinity, to multi-class problems, and to training
+                   a weight layer in a deep network in a certain restricted setting. Furthermore,
+                   we show this convergence is very slow, and only logarithmic in the convergence
+                   of the loss itself. This can help explain the benefit of continuing to optimize
+                   the logistic or cross-entropy loss even after the training error is zero and
+                   the training loss is extremely small, and, as we show, even if the validation
+                   loss increases. Our methodology can also aid in understanding implicit
+                   regularization n more complex models and with other optimization methods.},
+  year          = {2017},
+  month         = {Oct},
+  url           = {http://arxiv.org/abs/1710.10345v5},
+  file          = {1710.10345v5.pdf},
+  eprintnover   = {1710.10345}
 }
 
 @article{1611.03530v2,
-Author        = {Chiyuan Zhang and Samy Bengio and Moritz Hardt and Benjamin Recht and Oriol Vinyals},
-Title         = {Understanding deep learning requires rethinking generalization},
-Eprint        = {1611.03530v2},
+  author        = {Chiyuan Zhang and Samy Bengio and Moritz Hardt and Benjamin Recht and Oriol Vinyals},
+  title         = {Understanding deep learning requires rethinking generalization},
+  eprint        = {1611.03530v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {Despite their massive size, successful deep artificial neural networks can
+                   exhibit a remarkably small difference between training and test performance.
+                   Conventional wisdom attributes small generalization error either to properties
+                   of the model family, or to the regularization techniques used during training.
+                   Through extensive systematic experiments, we show how these traditional
+                   approaches fail to explain why large neural networks generalize well in
+                   practice. Specifically, our experiments establish that state-of-the-art
+                   convolutional networks for image classification trained with stochastic
+                   gradient methods easily fit a random labeling of the training data. This
+                   phenomenon is qualitatively unaffected by explicit regularization, and occurs
+                   even if we replace the true images by completely unstructured random noise. We
+                   corroborate these experimental findings with a theoretical construction showing
+                   that simple depth two neural networks already have perfect finite sample
+                   expressivity as soon as the number of parameters exceeds the number of data
+                   points as it usually does in practice.
+                   We interpret our experimental findings by comparison with traditional models.},
+  year          = {2016},
+  month         = {Nov},
+  url           = {http://arxiv.org/abs/1611.03530v2},
+  file          = {1611.03530v2.pdf},
+  eprintnover   = {1611.03530}
+}
+
+@article{2102.09690v2,
+  author        = {Tony Z. Zhao and Eric Wallace and Shi Feng and Dan Klein and Sameer Singh},
+  title         = {Calibrate Before Use: Improving Few-Shot Performance of Language Models},
+  eprint        = {2102.09690v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {GPT-3 can perform numerous tasks when provided a natural language prompt that
+                   contains a few training examples. We show that this type of few-shot learning
+                   can be unstable: the choice of prompt format, training examples, and even the
+                   order of the training examples can cause accuracy to vary from near chance to
+                   near state-of-the-art. We demonstrate that this instability arises from the
+                   bias of language models towards predicting certain answers, e.g., those that
+                   are placed near the end of the prompt or are common in the pre-training data.
+                   To mitigate this, we first estimate the model's bias towards each answer by
+                   asking for its prediction when given the training prompt and a content-free
+                   test input such as "N/A". We then fit calibration parameters that cause the
+                   prediction for this input to be uniform across answers. On a diverse set of
+                   tasks, this contextual calibration procedure substantially improves GPT-3 and
+                   GPT-2's average accuracy (up to 30.0% absolute) and reduces variance across
+                   different choices of the prompt.},
+  year          = {2021},
+  month         = {Feb},
+  url           = {http://arxiv.org/abs/2102.09690v2},
+  file          = {2102.09690v2.pdf},
+  eprintnover   = {2102.09690}
+}
+
+@article{2202.12837v2,
+  author        = {Sewon Min and Xinxi Lyu and Ari Holtzman and Mikel Artetxe and Mike Lewis and Hannaneh Hajishirzi and Luke Zettlemoyer},
+  title         = {Rethinking the Role of Demonstrations: What Makes In-Context Learning
+                   Work?},
+  eprint        = {2202.12837v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {Large language models (LMs) are able to in-context learn -- perform a new
+                   task via inference alone by conditioning on a few input-label pairs
+                   (demonstrations) and making predictions for new inputs. However, there has been
+                   little understanding of how the model learns and which aspects of the
+                   demonstrations contribute to end task performance. In this paper, we show that
+                   ground truth demonstrations are in fact not required -- randomly replacing
+                   labels in the demonstrations barely hurts performance on a range of
+                   classification and multi-choce tasks, consistently over 12 different models
+                   including GPT-3. Instead, we find that other aspects of the demonstrations are
+                   the key drivers of end task performance, including the fact that they provide a
+                   few examples of (1) the label space, (2) the distribution of the input text,
+                   and (3) the overall format of the sequence. Together, our analysis provides a
+                   new way of understanding how and why in-context learning works, while opening
+                   up new questions about how much can be learned from large language models
+                   through inference alone.},
+  year          = {2022},
+  month         = {Feb},
+  url           = {http://arxiv.org/abs/2202.12837v2},
+  file          = {2202.12837v2.pdf},
+  eprintnover   = {2202.12837}
+}
+
+@article{2108.04106v3,
+  author        = {Sewon Min and Mike Lewis and Hannaneh Hajishirzi and Luke Zettlemoyer},
+  title         = {Noisy Channel Language Model Prompting for Few-Shot Text Classification},
+  eprint        = {2108.04106v3},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {We introduce a noisy channel approach for language model prompting in
+                   few-shot text classification. Instead of computing the likelihood of the label
+                   given the input (referred as direct models), channel models compute the
+                   conditional probability of the input given the label, and are thereby required
+                   to explain every word in the input. We use channel models for recently proposed
+                   few-shot learning methods with no or very limited updates to the language model
+                   parameters, via either in-context demonstration or prompt tuning. Our
+                   experiments show that, for both methods, channel models significantly
+                   outperform their direct counterparts, which we attribute to their stability,
+                   i.e., lower variance and higher worst-case accuracy. We also present extensive
+                   ablations that provide recommendations for when to use channel prompt tuning
+                   instead of other competitive methods (e.g., direct head tuning): channel prompt
+                   tuning is preferred when the number of training examples is small, labels in
+                   the training data are imbalanced, or generalization to unseen labels is
+                   required.},
+  year          = {2021},
+  month         = {Aug},
+  url           = {http://arxiv.org/abs/2108.04106v3},
+  file          = {2108.04106v3.pdf},
+  eprintnover   = {2108.04106}
+}
+
+@article{2206.12839v3,
+  author        = {Disha Shrivastava and Hugo Larochelle and Daniel Tarlow},
+  title         = {Repository-Level Prompt Generation for Large Language Models of Code},
+  eprint        = {2206.12839v3},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {With the success of large language models (LLMs) of code and their use as
+                   code assistants (e.g. Codex used in GitHub Copilot), techniques for introducing
+                   domain-specific knowledge in the prompt design process become important. In
+                   this work, we propose a framework called Repo-Level Prompt Generator that
+                   learns to generate example-specific prompts using prompt proposals. The prompt
+                   proposals take context from the entire repository, thereby incorporating both
+                   the structure of the repository and the context from other relevant files (e.g.
+                   imports, parent class files). Our technique doesn't require any access to the
+                   weights of the LLM, making it applicable in cases where we only have black-box
+                   access to the LLM. We conduct experiments on the task of single-line
+                   code-autocompletion using code repositories taken from Google Code archives. We
+                   demonstrate that an oracle constructed from our prompt proposals gives a
+                   remarkably high relative improvement of 36% over Codex, showing the quality of
+                   these proposals. Further, we show that when we train a model to predict a
+                   prompt proposal, we can achieve significant performance gains over Codex and
+                   other baselines. We release our code, data, and trained checkpoints at:
+                   \url{https://github.com/shrivastavadisha/repo_level_prompt_generation}.},
+  year          = {2022},
+  month         = {Jun},
+  note          = {ICML, 2023},
+  url           = {http://arxiv.org/abs/2206.12839v3},
+  file          = {2206.12839v3.pdf},
+  eprintnover   = {2206.12839}
+}
+
+@inproceedings{stochastic-parrots,
+  author    = {Bender, Emily M. and Gebru, Timnit and McMillan-Major, Angelina and Shmitchell, Shmargaret},
+  title     = {On the Dangers of Stochastic Parrots: Can Language Models Be Too Big? 🦜},
+  year      = {2021},
+  isbn      = {9781450383097},
+  publisher = {Association for Computing Machinery},
+  address   = {New York, NY, USA},
+  url       = {https://doi.org/10.1145/3442188.3445922},
+  doi       = {10.1145/3442188.3445922},
+  abstract  = {The past 3 years of work in NLP have been characterized by the development and deployment of ever larger language models, especially for English. BERT, its variants, GPT-2/3, and others, most recently Switch-C, have pushed the boundaries of the possible both through architectural innovations and through sheer size. Using these pretrained models and the methodology of fine-tuning them for specific tasks, researchers have extended the state of the art on a wide array of tasks as measured by leaderboards on specific benchmarks for English. In this paper, we take a step back and ask: How big is too big? What are the possible risks associated with this technology and what paths are available for mitigating those risks? We provide recommendations including weighing the environmental and financial costs first, investing resources into curating and carefully documenting datasets rather than ingesting everything on the web, carrying out pre-development exercises evaluating how the planned approach fits into research and development goals and supports stakeholder values, and encouraging research directions beyond ever larger language models.},
+  booktitle = {Proceedings of the 2021 ACM Conference on Fairness, Accountability, and Transparency},
+  pages     = {610–623},
+  numpages  = {14},
+  location  = {Virtual Event, Canada},
+  series    = {FAccT '21}
+}
+
+@article{2208.01618v1,
+Author        = {Rinon Gal and Yuval Alaluf and Yuval Atzmon and Or Patashnik and Amit H. Bermano and Gal Chechik and Daniel Cohen-Or},
+Title         = {An Image is Worth One Word: Personalizing Text-to-Image Generation using
+  Textual Inversion},
+Eprint        = {2208.01618v1},
 ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.LG},
-Abstract      = {Despite their massive size, successful deep artificial neural networks can
-exhibit a remarkably small difference between training and test performance.
-Conventional wisdom attributes small generalization error either to properties
-of the model family, or to the regularization techniques used during training.
-  Through extensive systematic experiments, we show how these traditional
-approaches fail to explain why large neural networks generalize well in
-practice. Specifically, our experiments establish that state-of-the-art
-convolutional networks for image classification trained with stochastic
-gradient methods easily fit a random labeling of the training data. This
-phenomenon is qualitatively unaffected by explicit regularization, and occurs
-even if we replace the true images by completely unstructured random noise. We
-corroborate these experimental findings with a theoretical construction showing
-that simple depth two neural networks already have perfect finite sample
-expressivity as soon as the number of parameters exceeds the number of data
-points as it usually does in practice.
-  We interpret our experimental findings by comparison with traditional models.},
-Year          = {2016},
+PrimaryClass  = {cs.CV},
+Abstract      = {Text-to-image models offer unprecedented freedom to guide creation through
+natural language. Yet, it is unclear how such freedom can be exercised to
+generate images of specific unique concepts, modify their appearance, or
+compose them in new roles and novel scenes. In other words, we ask: how can we
+use language-guided models to turn our cat into a painting, or imagine a new
+product based on our favorite toy? Here we present a simple approach that
+allows such creative freedom. Using only 3-5 images of a user-provided concept,
+like an object or a style, we learn to represent it through new "words" in the
+embedding space of a frozen text-to-image model. These "words" can be composed
+into natural language sentences, guiding personalized creation in an intuitive
+way. Notably, we find evidence that a single word embedding is sufficient for
+capturing unique and varied concepts. We compare our approach to a wide range
+of baselines, and demonstrate that it can more faithfully portray the concepts
+across a range of applications and tasks.
+  Our code, data and new words will be available at:
+https://textual-inversion.github.io},
+Year          = {2022},
+Month         = {Aug},
+Url           = {http://arxiv.org/abs/2208.01618v1},
+File          = {2208.01618v1.pdf},
+EprintNoVer   = {2208.01618}
+}
+
+@article{2211.09800v2,
+Author        = {Tim Brooks and Aleksander Holynski and Alexei A. Efros},
+Title         = {InstructPix2Pix: Learning to Follow Image Editing Instructions},
+Eprint        = {2211.09800v2},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CV},
+Abstract      = {We propose a method for editing images from human instructions: given an
+input image and a written instruction that tells the model what to do, our
+model follows these instructions to edit the image. To obtain training data for
+this problem, we combine the knowledge of two large pretrained models -- a
+language model (GPT-3) and a text-to-image model (Stable Diffusion) -- to
+generate a large dataset of image editing examples. Our conditional diffusion
+model, InstructPix2Pix, is trained on our generated data, and generalizes to
+real images and user-written instructions at inference time. Since it performs
+edits in the forward pass and does not require per example fine-tuning or
+inversion, our model edits images quickly, in a matter of seconds. We show
+compelling editing results for a diverse collection of input images and written
+instructions.},
+Year          = {2022},
 Month         = {Nov},
-Url           = {http://arxiv.org/abs/1611.03530v2},
-File          = {1611.03530v2.pdf},
-EprintNoVer   = {1611.03530}
+Url           = {http://arxiv.org/abs/2211.09800v2},
+File          = {2211.09800v2.pdf},
+EprintNoVer   = {2211.09800}
+}
+
+@article{2302.03027v1,
+Author        = {Gaurav Parmar and Krishna Kumar Singh and Richard Zhang and Yijun Li and Jingwan Lu and Jun-Yan Zhu},
+Title         = {Zero-shot Image-to-Image Translation},
+Eprint        = {2302.03027v1},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CV},
+Abstract      = {Large-scale text-to-image generative models have shown their remarkable
+ability to synthesize diverse and high-quality images. However, it is still
+challenging to directly apply these models for editing real images for two
+reasons. First, it is hard for users to come up with a perfect text prompt that
+accurately describes every visual detail in the input image. Second, while
+existing models can introduce desirable changes in certain regions, they often
+dramatically alter the input content and introduce unexpected changes in
+unwanted regions. In this work, we propose pix2pix-zero, an image-to-image
+translation method that can preserve the content of the original image without
+manual prompting. We first automatically discover editing directions that
+reflect desired edits in the text embedding space. To preserve the general
+content structure after editing, we further propose cross-attention guidance,
+which aims to retain the cross-attention maps of the input image throughout the
+diffusion process. In addition, our method does not need additional training
+for these edits and can directly use the existing pre-trained text-to-image
+diffusion model. We conduct extensive experiments and show that our method
+outperforms existing and concurrent works for both real and synthetic image
+editing.},
+Year          = {2023},
+Month         = {Feb},
+Url           = {http://arxiv.org/abs/2302.03027v1},
+File          = {2302.03027v1.pdf},
+EprintNoVer   = {2302.03027}
+}
+
+@article{2307.15043v1,
+Author        = {Andy Zou and Zifan Wang and J. Zico Kolter and Matt Fredrikson},
+Title         = {Universal and Transferable Adversarial Attacks on Aligned Language
+  Models},
+Eprint        = {2307.15043v1},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CL},
+Abstract      = {Because "out-of-the-box" large language models are capable of generating a
+great deal of objectionable content, recent work has focused on aligning these
+models in an attempt to prevent undesirable generation. While there has been
+some success at circumventing these measures -- so-called "jailbreaks" against
+LLMs -- these attacks have required significant human ingenuity and are brittle
+in practice. In this paper, we propose a simple and effective attack method
+that causes aligned language models to generate objectionable behaviors.
+Specifically, our approach finds a suffix that, when attached to a wide range
+of queries for an LLM to produce objectionable content, aims to maximize the
+probability that the model produces an affirmative response (rather than
+refusing to answer). However, instead of relying on manual engineering, our
+approach automatically produces these adversarial suffixes by a combination of
+greedy and gradient-based search techniques, and also improves over past
+automatic prompt generation methods.
+  Surprisingly, we find that the adversarial prompts generated by our approach
+are quite transferable, including to black-box, publicly released LLMs.
+Specifically, we train an adversarial attack suffix on multiple prompts (i.e.,
+queries asking for many different types of objectionable content), as well as
+multiple models (in our case, Vicuna-7B and 13B). When doing so, the resulting
+attack suffix is able to induce objectionable content in the public interfaces
+to ChatGPT, Bard, and Claude, as well as open source LLMs such as LLaMA-2-Chat,
+Pythia, Falcon, and others. In total, this work significantly advances the
+state-of-the-art in adversarial attacks against aligned language models,
+raising important questions about how such systems can be prevented from
+producing objectionable information. Code is available at
+github.com/llm-attacks/llm-attacks.},
+Year          = {2023},
+Month         = {Jul},
+Url           = {http://arxiv.org/abs/2307.15043v1},
+File          = {2307.15043v1.pdf},
+EprintNoVer   = {2307.15043}
+}
+
+@article{2112.10752v2,
+Author        = {Robin Rombach and Andreas Blattmann and Dominik Lorenz and Patrick Esser and Björn Ommer},
+Title         = {High-Resolution Image Synthesis with Latent Diffusion Models},
+Eprint        = {2112.10752v2},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CV},
+Abstract      = {By decomposing the image formation process into a sequential application of
+denoising autoencoders, diffusion models (DMs) achieve state-of-the-art
+synthesis results on image data and beyond. Additionally, their formulation
+allows for a guiding mechanism to control the image generation process without
+retraining. However, since these models typically operate directly in pixel
+space, optimization of powerful DMs often consumes hundreds of GPU days and
+inference is expensive due to sequential evaluations. To enable DM training on
+limited computational resources while retaining their quality and flexibility,
+we apply them in the latent space of powerful pretrained autoencoders. In
+contrast to previous work, training diffusion models on such a representation
+allows for the first time to reach a near-optimal point between complexity
+reduction and detail preservation, greatly boosting visual fidelity. By
+introducing cross-attention layers into the model architecture, we turn
+diffusion models into powerful and flexible generators for general conditioning
+inputs such as text or bounding boxes and high-resolution synthesis becomes
+possible in a convolutional manner. Our latent diffusion models (LDMs) achieve
+a new state of the art for image inpainting and highly competitive performance
+on various tasks, including unconditional image generation, semantic scene
+synthesis, and super-resolution, while significantly reducing computational
+requirements compared to pixel-based DMs. Code is available at
+https://github.com/CompVis/latent-diffusion .},
+Year          = {2021},
+Month         = {Dec},
+Url           = {http://arxiv.org/abs/2112.10752v2},
+File          = {2112.10752v2.pdf},
+EprintNoVer   = {2112.10752}
 }
