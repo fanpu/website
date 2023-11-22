@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Linux Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>. Currently located in New York, NY, USA. 
+subtitle: Software Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>. Currently located in New York, NY, USA. 
 
 profile:
   align: right
@@ -17,7 +17,9 @@ latest_posts: false # includes a list of the newest posts
 social: true  # includes social icons at the bottom of the page
 ---
 
-Hello! I am Fan Pu. I recently graduated with a M.S (2023) and B.S (2022) in Computer
+Hello! I am Fan Pu, and I work with large language models
+and machine learning at [Jane Street](https://www.janestreet.com/). 
+I recently graduated with a M.S (2023) and B.S (2022) in Computer
 Science from [Carnegie Mellon University](https://www.cmu.edu/).
 
 At CMU, I was actively involved in the open-source programming assignment
