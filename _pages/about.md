@@ -50,8 +50,7 @@ to go back and visit once a year.
 Feel free to reach out to me at fzeng[at]alumni[dot]cmu[dot]edu. I am happy to
 chat and share any of my experiences.
 Unfortunately, I am unable to provide referrals for people that I have not
-worked with as I cannot write a strong recommendation, without which it is
-almost always an instant rejection.
+worked with as I cannot write a strong recommendation.
 
 I have a Technician amateur radio license, and my callsign is 
 [KC3UFE](https://www.fccbulletin.com/callsign/?q=KC3UFE).
