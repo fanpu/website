@@ -1013,3 +1013,89 @@ Url           = {http://arxiv.org/abs/2112.10752v2},
 File          = {2112.10752v2.pdf},
 EprintNoVer   = {2112.10752}
 }
+
+@article{2310.03533v4,
+Author        = {Angela Fan and Beliz Gokkaya and Mark Harman and Mitya Lyubarskiy and Shubho Sengupta and Shin Yoo and Jie M. Zhang},
+Title         = {Large Language Models for Software Engineering: Survey and Open Problems},
+Eprint        = {2310.03533v4},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.SE},
+Abstract      = {This paper provides a survey of the emerging area of Large Language Models
+(LLMs) for Software Engineering (SE). It also sets out open research challenges
+for the application of LLMs to technical problems faced by software engineers.
+LLMs' emergent properties bring novelty and creativity with applications right
+across the spectrum of Software Engineering activities including coding,
+design, requirements, repair, refactoring, performance improvement,
+documentation and analytics. However, these very same emergent properties also
+pose significant technical challenges; we need techniques that can reliably
+weed out incorrect solutions, such as hallucinations. Our survey reveals the
+pivotal role that hybrid techniques (traditional SE plus LLMs) have to play in
+the development and deployment of reliable, efficient and effective LLM-based
+SE.},
+Year          = {2023},
+Month         = {Oct},
+Url           = {http://arxiv.org/abs/2310.03533v4},
+File          = {2310.03533v4.pdf},
+EprintNoVer   = {2310.03533}
+}
+
+@article{2312.00752v1,
+Author        = {Albert Gu and Tri Dao},
+Title         = {Mamba: Linear-Time Sequence Modeling with Selective State Spaces},
+Eprint        = {2312.00752v1},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.LG},
+Abstract      = {Foundation models, now powering most of the exciting applications in deep
+learning, are almost universally based on the Transformer architecture and its
+core attention module. Many subquadratic-time architectures such as linear
+attention, gated convolution and recurrent models, and structured state space
+models (SSMs) have been developed to address Transformers' computational
+inefficiency on long sequences, but they have not performed as well as
+attention on important modalities such as language. We identify that a key
+weakness of such models is their inability to perform content-based reasoning,
+and make several improvements. First, simply letting the SSM parameters be
+functions of the input addresses their weakness with discrete modalities,
+allowing the model to selectively propagate or forget information along the
+sequence length dimension depending on the current token. Second, even though
+this change prevents the use of efficient convolutions, we design a
+hardware-aware parallel algorithm in recurrent mode. We integrate these
+selective SSMs into a simplified end-to-end neural network architecture without
+attention or even MLP blocks (Mamba). Mamba enjoys fast inference (5$\times$
+higher throughput than Transformers) and linear scaling in sequence length, and
+its performance improves on real data up to million-length sequences. As a
+general sequence model backbone, Mamba achieves state-of-the-art performance
+across several modalities such as language, audio, and genomics. On language
+modeling, our Mamba-3B model outperforms Transformers of the same size and
+matches Transformers twice its size, both in pretraining and downstream
+evaluation.},
+Year          = {2023},
+Month         = {Dec},
+Url           = {http://arxiv.org/abs/2312.00752v1},
+File          = {2312.00752v1.pdf},
+EprintNoVer   = {2312.00752}
+}
+
+@article{2209.11895v1,
+Author        = {Catherine Olsson and Nelson Elhage and Neel Nanda and Nicholas Joseph and Nova DasSarma and Tom Henighan and Ben Mann and Amanda Askell and Yuntao Bai and Anna Chen and Tom Conerly and Dawn Drain and Deep Ganguli and Zac Hatfield-Dodds and Danny Hernandez and Scott Johnston and Andy Jones and Jackson Kernion and Liane Lovitt and Kamal Ndousse and Dario Amodei and Tom Brown and Jack Clark and Jared Kaplan and Sam McCandlish and Chris Olah},
+Title         = {In-context Learning and Induction Heads},
+Eprint        = {2209.11895v1},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.LG},
+Abstract      = {"Induction heads" are attention heads that implement a simple algorithm to
+complete token sequences like [A][B] ... [A] -> [B]. In this work, we present
+preliminary and indirect evidence for a hypothesis that induction heads might
+constitute the mechanism for the majority of all "in-context learning" in large
+transformer models (i.e. decreasing loss at increasing token indices). We find
+that induction heads develop at precisely the same point as a sudden sharp
+increase in in-context learning ability, visible as a bump in the training
+loss. We present six complementary lines of evidence, arguing that induction
+heads may be the mechanistic source of general in-context learning in
+transformer models of any size. For small attention-only models, we present
+strong, causal evidence; for larger models with MLPs, we present correlational
+evidence.},
+Year          = {2022},
+Month         = {Sep},
+Url           = {http://arxiv.org/abs/2209.11895v1},
+File          = {2209.11895v1.pdf},
+EprintNoVer   = {2209.11895}
+}
