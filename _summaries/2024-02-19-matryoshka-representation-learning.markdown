@@ -99,10 +99,42 @@ We consider two main applications of MRL that can significantly speed things up.
    these softmax probabilities on a holdout validation set, and then upgrading to a
    higher-capacity representation if it falls below this threshold.
 
+   Impressively, MRL was able to get the same accuracy as fixed feature baselines while using
+   a 14x smaller representation:
+
+    {% include figure_simple.html
+        path="/assets/img/summaries/mrl_classification.webp"
+        width="600px"
+        class="z-depth-1"
+    %}
+
 2. The other is adaptive retrieval, where we first retrieve a larger quantity
    of vectors using a lower-dimensional representation, before re-ranking the top ones using
    a higher dimension, hence saving on compute.
 
+   To compare retrieval against the other baselines, they used the mean Average Precision @ k (mAP@k)
+   metric, where the top 10 closest embeddings are retrieved, and the mean of
+   the number of embeddings whose label matches the label of the query label is
+   taken.
+
+{% include figure_simple.html
+    path="/assets/img/summaries/mrl_retrieval.webp"
+    width="600px"
+    class="z-depth-1"
+%}
+
 ### Most Glaring Deficiency
 
+Given the recent surge of interest in LLMs, the paper could have also done
+some experiments with language modeling tasks.
+Language modeling can be viewed as a form of sequential multi-class
+classification problem, so it seems like quite a natural direction to pursue.
+
 ### Conclusions for Future Work
+
+Instead of using fixed-size representations, we can utilize flexible representation learning approaches that encodes information
+at multiple granularities in a single embedding vector.
+
+Perhaps we can use similar ideas to also get flexibility at other kinds of
+computational and memory bottlenecks, where we may not require the full ambient
+dimension to perform well for the task at hand.
