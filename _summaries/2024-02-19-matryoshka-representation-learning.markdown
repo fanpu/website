@@ -35,7 +35,7 @@ run much faster than fixed feature representations.
 
 {% include figure.html
     path="/assets/img/summaries/mrl_architecture.webp"
-    width="600px"
+    width="400px"
     class="z-depth-1"
 %}
 
@@ -104,7 +104,7 @@ We consider two main applications of MRL that can significantly speed things up.
 
     {% include figure_simple.html
         path="/assets/img/summaries/mrl_classification.webp"
-        width="600px"
+        width="300px"
         class="z-depth-1"
     %}
 
@@ -119,7 +119,7 @@ We consider two main applications of MRL that can significantly speed things up.
 
 {% include figure_simple.html
     path="/assets/img/summaries/mrl_retrieval.webp"
-    width="600px"
+    width="300px"
     class="z-depth-1"
 %}
 
