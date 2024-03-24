@@ -5,7 +5,7 @@ giscus_comments: true
 bib_id: 2001.08361v1
 ---
 
-### Three Important Things
+### Four Important Things
 
 #### 1. Power Law Relationship of $$L$$ With Respect To $$N, C, D$$
 
