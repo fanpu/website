@@ -855,469 +855,470 @@
 }
 
 @article{2208.01618v1,
-Author        = {Rinon Gal and Yuval Alaluf and Yuval Atzmon and Or Patashnik and Amit H. Bermano and Gal Chechik and Daniel Cohen-Or},
-Title         = {An Image is Worth One Word: Personalizing Text-to-Image Generation using
-  Textual Inversion},
-Eprint        = {2208.01618v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CV},
-Abstract      = {Text-to-image models offer unprecedented freedom to guide creation through
-natural language. Yet, it is unclear how such freedom can be exercised to
-generate images of specific unique concepts, modify their appearance, or
-compose them in new roles and novel scenes. In other words, we ask: how can we
-use language-guided models to turn our cat into a painting, or imagine a new
-product based on our favorite toy? Here we present a simple approach that
-allows such creative freedom. Using only 3-5 images of a user-provided concept,
-like an object or a style, we learn to represent it through new "words" in the
-embedding space of a frozen text-to-image model. These "words" can be composed
-into natural language sentences, guiding personalized creation in an intuitive
-way. Notably, we find evidence that a single word embedding is sufficient for
-capturing unique and varied concepts. We compare our approach to a wide range
-of baselines, and demonstrate that it can more faithfully portray the concepts
-across a range of applications and tasks.
-  Our code, data and new words will be available at:
-https://textual-inversion.github.io},
-Year          = {2022},
-Month         = {Aug},
-Url           = {http://arxiv.org/abs/2208.01618v1},
-File          = {2208.01618v1.pdf},
-EprintNoVer   = {2208.01618}
+  author        = {Rinon Gal and Yuval Alaluf and Yuval Atzmon and Or Patashnik and Amit H. Bermano and Gal Chechik and Daniel Cohen-Or},
+  title         = {An Image is Worth One Word: Personalizing Text-to-Image Generation using
+                   Textual Inversion},
+  eprint        = {2208.01618v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  abstract      = {Text-to-image models offer unprecedented freedom to guide creation through
+                   natural language. Yet, it is unclear how such freedom can be exercised to
+                   generate images of specific unique concepts, modify their appearance, or
+                   compose them in new roles and novel scenes. In other words, we ask: how can we
+                   use language-guided models to turn our cat into a painting, or imagine a new
+                   product based on our favorite toy? Here we present a simple approach that
+                   allows such creative freedom. Using only 3-5 images of a user-provided concept,
+                   like an object or a style, we learn to represent it through new "words" in the
+                   embedding space of a frozen text-to-image model. These "words" can be composed
+                   into natural language sentences, guiding personalized creation in an intuitive
+                   way. Notably, we find evidence that a single word embedding is sufficient for
+                   capturing unique and varied concepts. We compare our approach to a wide range
+                   of baselines, and demonstrate that it can more faithfully portray the concepts
+                   across a range of applications and tasks.
+                   Our code, data and new words will be available at:
+                   https://textual-inversion.github.io},
+  year          = {2022},
+  month         = {Aug},
+  url           = {http://arxiv.org/abs/2208.01618v1},
+  file          = {2208.01618v1.pdf},
+  eprintnover   = {2208.01618}
 }
 
 @article{2211.09800v2,
-Author        = {Tim Brooks and Aleksander Holynski and Alexei A. Efros},
-Title         = {InstructPix2Pix: Learning to Follow Image Editing Instructions},
-Eprint        = {2211.09800v2},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CV},
-Abstract      = {We propose a method for editing images from human instructions: given an
-input image and a written instruction that tells the model what to do, our
-model follows these instructions to edit the image. To obtain training data for
-this problem, we combine the knowledge of two large pretrained models -- a
-language model (GPT-3) and a text-to-image model (Stable Diffusion) -- to
-generate a large dataset of image editing examples. Our conditional diffusion
-model, InstructPix2Pix, is trained on our generated data, and generalizes to
-real images and user-written instructions at inference time. Since it performs
-edits in the forward pass and does not require per example fine-tuning or
-inversion, our model edits images quickly, in a matter of seconds. We show
-compelling editing results for a diverse collection of input images and written
-instructions.},
-Year          = {2022},
-Month         = {Nov},
-Url           = {http://arxiv.org/abs/2211.09800v2},
-File          = {2211.09800v2.pdf},
-EprintNoVer   = {2211.09800}
+  author        = {Tim Brooks and Aleksander Holynski and Alexei A. Efros},
+  title         = {InstructPix2Pix: Learning to Follow Image Editing Instructions},
+  eprint        = {2211.09800v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  abstract      = {We propose a method for editing images from human instructions: given an
+                   input image and a written instruction that tells the model what to do, our
+                   model follows these instructions to edit the image. To obtain training data for
+                   this problem, we combine the knowledge of two large pretrained models -- a
+                   language model (GPT-3) and a text-to-image model (Stable Diffusion) -- to
+                   generate a large dataset of image editing examples. Our conditional diffusion
+                   model, InstructPix2Pix, is trained on our generated data, and generalizes to
+                   real images and user-written instructions at inference time. Since it performs
+                   edits in the forward pass and does not require per example fine-tuning or
+                   inversion, our model edits images quickly, in a matter of seconds. We show
+                   compelling editing results for a diverse collection of input images and written
+                   instructions.},
+  year          = {2022},
+  month         = {Nov},
+  url           = {http://arxiv.org/abs/2211.09800v2},
+  file          = {2211.09800v2.pdf},
+  eprintnover   = {2211.09800}
 }
 
 @article{2302.03027v1,
-Author        = {Gaurav Parmar and Krishna Kumar Singh and Richard Zhang and Yijun Li and Jingwan Lu and Jun-Yan Zhu},
-Title         = {Zero-shot Image-to-Image Translation},
-Eprint        = {2302.03027v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CV},
-Abstract      = {Large-scale text-to-image generative models have shown their remarkable
-ability to synthesize diverse and high-quality images. However, it is still
-challenging to directly apply these models for editing real images for two
-reasons. First, it is hard for users to come up with a perfect text prompt that
-accurately describes every visual detail in the input image. Second, while
-existing models can introduce desirable changes in certain regions, they often
-dramatically alter the input content and introduce unexpected changes in
-unwanted regions. In this work, we propose pix2pix-zero, an image-to-image
-translation method that can preserve the content of the original image without
-manual prompting. We first automatically discover editing directions that
-reflect desired edits in the text embedding space. To preserve the general
-content structure after editing, we further propose cross-attention guidance,
-which aims to retain the cross-attention maps of the input image throughout the
-diffusion process. In addition, our method does not need additional training
-for these edits and can directly use the existing pre-trained text-to-image
-diffusion model. We conduct extensive experiments and show that our method
-outperforms existing and concurrent works for both real and synthetic image
-editing.},
-Year          = {2023},
-Month         = {Feb},
-Url           = {http://arxiv.org/abs/2302.03027v1},
-File          = {2302.03027v1.pdf},
-EprintNoVer   = {2302.03027}
+  author        = {Gaurav Parmar and Krishna Kumar Singh and Richard Zhang and Yijun Li and Jingwan Lu and Jun-Yan Zhu},
+  title         = {Zero-shot Image-to-Image Translation},
+  eprint        = {2302.03027v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  abstract      = {Large-scale text-to-image generative models have shown their remarkable
+                   ability to synthesize diverse and high-quality images. However, it is still
+                   challenging to directly apply these models for editing real images for two
+                   reasons. First, it is hard for users to come up with a perfect text prompt that
+                   accurately describes every visual detail in the input image. Second, while
+                   existing models can introduce desirable changes in certain regions, they often
+                   dramatically alter the input content and introduce unexpected changes in
+                   unwanted regions. In this work, we propose pix2pix-zero, an image-to-image
+                   translation method that can preserve the content of the original image without
+                   manual prompting. We first automatically discover editing directions that
+                   reflect desired edits in the text embedding space. To preserve the general
+                   content structure after editing, we further propose cross-attention guidance,
+                   which aims to retain the cross-attention maps of the input image throughout the
+                   diffusion process. In addition, our method does not need additional training
+                   for these edits and can directly use the existing pre-trained text-to-image
+                   diffusion model. We conduct extensive experiments and show that our method
+                   outperforms existing and concurrent works for both real and synthetic image
+                   editing.},
+  year          = {2023},
+  month         = {Feb},
+  url           = {http://arxiv.org/abs/2302.03027v1},
+  file          = {2302.03027v1.pdf},
+  eprintnover   = {2302.03027}
 }
 
 @article{2307.15043v1,
-Author        = {Andy Zou and Zifan Wang and J. Zico Kolter and Matt Fredrikson},
-Title         = {Universal and Transferable Adversarial Attacks on Aligned Language
-  Models},
-Eprint        = {2307.15043v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {Because "out-of-the-box" large language models are capable of generating a
-great deal of objectionable content, recent work has focused on aligning these
-models in an attempt to prevent undesirable generation. While there has been
-some success at circumventing these measures -- so-called "jailbreaks" against
-LLMs -- these attacks have required significant human ingenuity and are brittle
-in practice. In this paper, we propose a simple and effective attack method
-that causes aligned language models to generate objectionable behaviors.
-Specifically, our approach finds a suffix that, when attached to a wide range
-of queries for an LLM to produce objectionable content, aims to maximize the
-probability that the model produces an affirmative response (rather than
-refusing to answer). However, instead of relying on manual engineering, our
-approach automatically produces these adversarial suffixes by a combination of
-greedy and gradient-based search techniques, and also improves over past
-automatic prompt generation methods.
-  Surprisingly, we find that the adversarial prompts generated by our approach
-are quite transferable, including to black-box, publicly released LLMs.
-Specifically, we train an adversarial attack suffix on multiple prompts (i.e.,
-queries asking for many different types of objectionable content), as well as
-multiple models (in our case, Vicuna-7B and 13B). When doing so, the resulting
-attack suffix is able to induce objectionable content in the public interfaces
-to ChatGPT, Bard, and Claude, as well as open source LLMs such as LLaMA-2-Chat,
-Pythia, Falcon, and others. In total, this work significantly advances the
-state-of-the-art in adversarial attacks against aligned language models,
-raising important questions about how such systems can be prevented from
-producing objectionable information. Code is available at
-github.com/llm-attacks/llm-attacks.},
-Year          = {2023},
-Month         = {Jul},
-Url           = {http://arxiv.org/abs/2307.15043v1},
-File          = {2307.15043v1.pdf},
-EprintNoVer   = {2307.15043}
+  author        = {Andy Zou and Zifan Wang and J. Zico Kolter and Matt Fredrikson},
+  title         = {Universal and Transferable Adversarial Attacks on Aligned Language
+                   Models},
+  eprint        = {2307.15043v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {Because "out-of-the-box" large language models are capable of generating a
+                   great deal of objectionable content, recent work has focused on aligning these
+                   models in an attempt to prevent undesirable generation. While there has been
+                   some success at circumventing these measures -- so-called "jailbreaks" against
+                   LLMs -- these attacks have required significant human ingenuity and are brittle
+                   in practice. In this paper, we propose a simple and effective attack method
+                   that causes aligned language models to generate objectionable behaviors.
+                   Specifically, our approach finds a suffix that, when attached to a wide range
+                   of queries for an LLM to produce objectionable content, aims to maximize the
+                   probability that the model produces an affirmative response (rather than
+                   refusing to answer). However, instead of relying on manual engineering, our
+                   approach automatically produces these adversarial suffixes by a combination of
+                   greedy and gradient-based search techniques, and also improves over past
+                   automatic prompt generation methods.
+                   Surprisingly, we find that the adversarial prompts generated by our approach
+                   are quite transferable, including to black-box, publicly released LLMs.
+                   Specifically, we train an adversarial attack suffix on multiple prompts (i.e.,
+                   queries asking for many different types of objectionable content), as well as
+                   multiple models (in our case, Vicuna-7B and 13B). When doing so, the resulting
+                   attack suffix is able to induce objectionable content in the public interfaces
+                   to ChatGPT, Bard, and Claude, as well as open source LLMs such as LLaMA-2-Chat,
+                   Pythia, Falcon, and others. In total, this work significantly advances the
+                   state-of-the-art in adversarial attacks against aligned language models,
+                   raising important questions about how such systems can be prevented from
+                   producing objectionable information. Code is available at
+                   github.com/llm-attacks/llm-attacks.},
+  year          = {2023},
+  month         = {Jul},
+  url           = {http://arxiv.org/abs/2307.15043v1},
+  file          = {2307.15043v1.pdf},
+  eprintnover   = {2307.15043}
 }
 
 @article{2112.10752v2,
-Author        = {Robin Rombach and Andreas Blattmann and Dominik Lorenz and Patrick Esser and Björn Ommer},
-Title         = {High-Resolution Image Synthesis with Latent Diffusion Models},
-Eprint        = {2112.10752v2},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CV},
-Abstract      = {By decomposing the image formation process into a sequential application of
-denoising autoencoders, diffusion models (DMs) achieve state-of-the-art
-synthesis results on image data and beyond. Additionally, their formulation
-allows for a guiding mechanism to control the image generation process without
-retraining. However, since these models typically operate directly in pixel
-space, optimization of powerful DMs often consumes hundreds of GPU days and
-inference is expensive due to sequential evaluations. To enable DM training on
-limited computational resources while retaining their quality and flexibility,
-we apply them in the latent space of powerful pretrained autoencoders. In
-contrast to previous work, training diffusion models on such a representation
-allows for the first time to reach a near-optimal point between complexity
-reduction and detail preservation, greatly boosting visual fidelity. By
-introducing cross-attention layers into the model architecture, we turn
-diffusion models into powerful and flexible generators for general conditioning
-inputs such as text or bounding boxes and high-resolution synthesis becomes
-possible in a convolutional manner. Our latent diffusion models (LDMs) achieve
-a new state of the art for image inpainting and highly competitive performance
-on various tasks, including unconditional image generation, semantic scene
-synthesis, and super-resolution, while significantly reducing computational
-requirements compared to pixel-based DMs. Code is available at
-https://github.com/CompVis/latent-diffusion .},
-Year          = {2021},
-Month         = {Dec},
-Url           = {http://arxiv.org/abs/2112.10752v2},
-File          = {2112.10752v2.pdf},
-EprintNoVer   = {2112.10752}
+  author        = {Robin Rombach and Andreas Blattmann and Dominik Lorenz and Patrick Esser and Björn Ommer},
+  title         = {High-Resolution Image Synthesis with Latent Diffusion Models},
+  eprint        = {2112.10752v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CV},
+  abstract      = {By decomposing the image formation process into a sequential application of
+                   denoising autoencoders, diffusion models (DMs) achieve state-of-the-art
+                   synthesis results on image data and beyond. Additionally, their formulation
+                   allows for a guiding mechanism to control the image generation process without
+                   retraining. However, since these models typically operate directly in pixel
+                   space, optimization of powerful DMs often consumes hundreds of GPU days and
+                   inference is expensive due to sequential evaluations. To enable DM training on
+                   limited computational resources while retaining their quality and flexibility,
+                   we apply them in the latent space of powerful pretrained autoencoders. In
+                   contrast to previous work, training diffusion models on such a representation
+                   allows for the first time to reach a near-optimal point between complexity
+                   reduction and detail preservation, greatly boosting visual fidelity. By
+                   introducing cross-attention layers into the model architecture, we turn
+                   diffusion models into powerful and flexible generators for general conditioning
+                   inputs such as text or bounding boxes and high-resolution synthesis becomes
+                   possible in a convolutional manner. Our latent diffusion models (LDMs) achieve
+                   a new state of the art for image inpainting and highly competitive performance
+                   on various tasks, including unconditional image generation, semantic scene
+                   synthesis, and super-resolution, while significantly reducing computational
+                   requirements compared to pixel-based DMs. Code is available at
+                   https://github.com/CompVis/latent-diffusion .},
+  year          = {2021},
+  month         = {Dec},
+  url           = {http://arxiv.org/abs/2112.10752v2},
+  file          = {2112.10752v2.pdf},
+  eprintnover   = {2112.10752}
 }
 
 @article{2310.03533v4,
-Author        = {Angela Fan and Beliz Gokkaya and Mark Harman and Mitya Lyubarskiy and Shubho Sengupta and Shin Yoo and Jie M. Zhang},
-Title         = {Large Language Models for Software Engineering: Survey and Open Problems},
-Eprint        = {2310.03533v4},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.SE},
-Abstract      = {This paper provides a survey of the emerging area of Large Language Models
-(LLMs) for Software Engineering (SE). It also sets out open research challenges
-for the application of LLMs to technical problems faced by software engineers.
-LLMs' emergent properties bring novelty and creativity with applications right
-across the spectrum of Software Engineering activities including coding,
-design, requirements, repair, refactoring, performance improvement,
-documentation and analytics. However, these very same emergent properties also
-pose significant technical challenges; we need techniques that can reliably
-weed out incorrect solutions, such as hallucinations. Our survey reveals the
-pivotal role that hybrid techniques (traditional SE plus LLMs) have to play in
-the development and deployment of reliable, efficient and effective LLM-based
-SE.},
-Year          = {2023},
-Month         = {Oct},
-Url           = {http://arxiv.org/abs/2310.03533v4},
-File          = {2310.03533v4.pdf},
-EprintNoVer   = {2310.03533}
+  author        = {Angela Fan and Beliz Gokkaya and Mark Harman and Mitya Lyubarskiy and Shubho Sengupta and Shin Yoo and Jie M. Zhang},
+  title         = {Large Language Models for Software Engineering: Survey and Open Problems},
+  eprint        = {2310.03533v4},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.SE},
+  abstract      = {This paper provides a survey of the emerging area of Large Language Models
+                   (LLMs) for Software Engineering (SE). It also sets out open research challenges
+                   for the application of LLMs to technical problems faced by software engineers.
+                   LLMs' emergent properties bring novelty and creativity with applications right
+                   across the spectrum of Software Engineering activities including coding,
+                   design, requirements, repair, refactoring, performance improvement,
+                   documentation and analytics. However, these very same emergent properties also
+                   pose significant technical challenges; we need techniques that can reliably
+                   weed out incorrect solutions, such as hallucinations. Our survey reveals the
+                   pivotal role that hybrid techniques (traditional SE plus LLMs) have to play in
+                   the development and deployment of reliable, efficient and effective LLM-based
+                   SE.},
+  year          = {2023},
+  month         = {Oct},
+  url           = {http://arxiv.org/abs/2310.03533v4},
+  file          = {2310.03533v4.pdf},
+  eprintnover   = {2310.03533}
 }
 
 @article{2312.00752v1,
-Author        = {Albert Gu and Tri Dao},
-Title         = {Mamba: Linear-Time Sequence Modeling with Selective State Spaces},
-Eprint        = {2312.00752v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.LG},
-Abstract      = {Foundation models, now powering most of the exciting applications in deep
-learning, are almost universally based on the Transformer architecture and its
-core attention module. Many subquadratic-time architectures such as linear
-attention, gated convolution and recurrent models, and structured state space
-models (SSMs) have been developed to address Transformers' computational
-inefficiency on long sequences, but they have not performed as well as
-attention on important modalities such as language. We identify that a key
-weakness of such models is their inability to perform content-based reasoning,
-and make several improvements. First, simply letting the SSM parameters be
-functions of the input addresses their weakness with discrete modalities,
-allowing the model to selectively propagate or forget information along the
-sequence length dimension depending on the current token. Second, even though
-this change prevents the use of efficient convolutions, we design a
-hardware-aware parallel algorithm in recurrent mode. We integrate these
-selective SSMs into a simplified end-to-end neural network architecture without
-attention or even MLP blocks (Mamba). Mamba enjoys fast inference (5$\times$
-higher throughput than Transformers) and linear scaling in sequence length, and
-its performance improves on real data up to million-length sequences. As a
-general sequence model backbone, Mamba achieves state-of-the-art performance
-across several modalities such as language, audio, and genomics. On language
-modeling, our Mamba-3B model outperforms Transformers of the same size and
-matches Transformers twice its size, both in pretraining and downstream
-evaluation.},
-Year          = {2023},
-Month         = {Dec},
-Url           = {http://arxiv.org/abs/2312.00752v1},
-File          = {2312.00752v1.pdf},
-EprintNoVer   = {2312.00752}
+  author        = {Albert Gu and Tri Dao},
+  title         = {Mamba: Linear-Time Sequence Modeling with Selective State Spaces},
+  eprint        = {2312.00752v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {Foundation models, now powering most of the exciting applications in deep
+                   learning, are almost universally based on the Transformer architecture and its
+                   core attention module. Many subquadratic-time architectures such as linear
+                   attention, gated convolution and recurrent models, and structured state space
+                   models (SSMs) have been developed to address Transformers' computational
+                   inefficiency on long sequences, but they have not performed as well as
+                   attention on important modalities such as language. We identify that a key
+                   weakness of such models is their inability to perform content-based reasoning,
+                   and make several improvements. First, simply letting the SSM parameters be
+                   functions of the input addresses their weakness with discrete modalities,
+                   allowing the model to selectively propagate or forget information along the
+                   sequence length dimension depending on the current token. Second, even though
+                   this change prevents the use of efficient convolutions, we design a
+                   hardware-aware parallel algorithm in recurrent mode. We integrate these
+                   selective SSMs into a simplified end-to-end neural network architecture without
+                   attention or even MLP blocks (Mamba). Mamba enjoys fast inference (5$\times$
+                   higher throughput than Transformers) and linear scaling in sequence length, and
+                   its performance improves on real data up to million-length sequences. As a
+                   general sequence model backbone, Mamba achieves state-of-the-art performance
+                   across several modalities such as language, audio, and genomics. On language
+                   modeling, our Mamba-3B model outperforms Transformers of the same size and
+                   matches Transformers twice its size, both in pretraining and downstream
+                   evaluation.},
+  year          = {2023},
+  month         = {Dec},
+  url           = {http://arxiv.org/abs/2312.00752v1},
+  file          = {2312.00752v1.pdf},
+  eprintnover   = {2312.00752}
 }
 
 @article{2209.11895v1,
-Author        = {Catherine Olsson and Nelson Elhage and Neel Nanda and Nicholas Joseph and Nova DasSarma and Tom Henighan and Ben Mann and Amanda Askell and Yuntao Bai and Anna Chen and Tom Conerly and Dawn Drain and Deep Ganguli and Zac Hatfield-Dodds and Danny Hernandez and Scott Johnston and Andy Jones and Jackson Kernion and Liane Lovitt and Kamal Ndousse and Dario Amodei and Tom Brown and Jack Clark and Jared Kaplan and Sam McCandlish and Chris Olah},
-Title         = {In-context Learning and Induction Heads},
-Eprint        = {2209.11895v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.LG},
-Abstract      = {"Induction heads" are attention heads that implement a simple algorithm to
-complete token sequences like [A][B] ... [A] -> [B]. In this work, we present
-preliminary and indirect evidence for a hypothesis that induction heads might
-constitute the mechanism for the majority of all "in-context learning" in large
-transformer models (i.e. decreasing loss at increasing token indices). We find
-that induction heads develop at precisely the same point as a sudden sharp
-increase in in-context learning ability, visible as a bump in the training
-loss. We present six complementary lines of evidence, arguing that induction
-heads may be the mechanistic source of general in-context learning in
-transformer models of any size. For small attention-only models, we present
-strong, causal evidence; for larger models with MLPs, we present correlational
-evidence.},
-Year          = {2022},
-Month         = {Sep},
-Url           = {http://arxiv.org/abs/2209.11895v1},
-File          = {2209.11895v1.pdf},
-EprintNoVer   = {2209.11895}
+  author        = {Catherine Olsson and Nelson Elhage and Neel Nanda and Nicholas Joseph and Nova DasSarma and Tom Henighan and Ben Mann and Amanda Askell and Yuntao Bai and Anna Chen and Tom Conerly and Dawn Drain and Deep Ganguli and Zac Hatfield-Dodds and Danny Hernandez and Scott Johnston and Andy Jones and Jackson Kernion and Liane Lovitt and Kamal Ndousse and Dario Amodei and Tom Brown and Jack Clark and Jared Kaplan and Sam McCandlish and Chris Olah},
+  title         = {In-context Learning and Induction Heads},
+  eprint        = {2209.11895v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {"Induction heads" are attention heads that implement a simple algorithm to
+                   complete token sequences like [A][B] ... [A] -> [B]. In this work, we present
+                   preliminary and indirect evidence for a hypothesis that induction heads might
+                   constitute the mechanism for the majority of all "in-context learning" in large
+                   transformer models (i.e. decreasing loss at increasing token indices). We find
+                   that induction heads develop at precisely the same point as a sudden sharp
+                   increase in in-context learning ability, visible as a bump in the training
+                   loss. We present six complementary lines of evidence, arguing that induction
+                   heads may be the mechanistic source of general in-context learning in
+                   transformer models of any size. For small attention-only models, we present
+                   strong, causal evidence; for larger models with MLPs, we present correlational
+                   evidence.},
+  year          = {2022},
+  month         = {Sep},
+  url           = {http://arxiv.org/abs/2209.11895v1},
+  file          = {2209.11895v1.pdf},
+  eprintnover   = {2209.11895}
 }
 
 @article{2205.13147v4,
-Author        = {Aditya Kusupati and Gantavya Bhatt and Aniket Rege and Matthew Wallingford and Aditya Sinha and Vivek Ramanujan and William Howard-Snyder and Kaifeng Chen and Sham Kakade and Prateek Jain and Ali Farhadi},
-Title         = {Matryoshka Representation Learning},
-Eprint        = {2205.13147v4},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.LG},
-Abstract      = {Learned representations are a central component in modern ML systems, serving
-a multitude of downstream tasks. When training such representations, it is
-often the case that computational and statistical constraints for each
-downstream task are unknown. In this context rigid, fixed capacity
-representations can be either over or under-accommodating to the task at hand.
-This leads us to ask: can we design a flexible representation that can adapt to
-multiple downstream tasks with varying computational resources? Our main
-contribution is Matryoshka Representation Learning (MRL) which encodes
-information at different granularities and allows a single embedding to adapt
-to the computational constraints of downstream tasks. MRL minimally modifies
-existing representation learning pipelines and imposes no additional cost
-during inference and deployment. MRL learns coarse-to-fine representations that
-are at least as accurate and rich as independently trained low-dimensional
-representations. The flexibility within the learned Matryoshka Representations
-offer: (a) up to 14x smaller embedding size for ImageNet-1K classification at
-the same level of accuracy; (b) up to 14x real-world speed-ups for large-scale
-retrieval on ImageNet-1K and 4K; and (c) up to 2% accuracy improvements for
-long-tail few-shot classification, all while being as robust as the original
-representations. Finally, we show that MRL extends seamlessly to web-scale
-datasets (ImageNet, JFT) across various modalities -- vision (ViT, ResNet),
-vision + language (ALIGN) and language (BERT). MRL code and pretrained models
-are open-sourced at https://github.com/RAIVNLab/MRL.},
-Year          = {2022},
-Month         = {May},
-Url           = {http://arxiv.org/abs/2205.13147v4},
-File          = {2205.13147v4.pdf},
-EprintNoVer   = {2205.13147}
+  author        = {Aditya Kusupati and Gantavya Bhatt and Aniket Rege and Matthew Wallingford and Aditya Sinha and Vivek Ramanujan and William Howard-Snyder and Kaifeng Chen and Sham Kakade and Prateek Jain and Ali Farhadi},
+  title         = {Matryoshka Representation Learning},
+  eprint        = {2205.13147v4},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {Learned representations are a central component in modern ML systems, serving
+                   a multitude of downstream tasks. When training such representations, it is
+                   often the case that computational and statistical constraints for each
+                   downstream task are unknown. In this context rigid, fixed capacity
+                   representations can be either over or under-accommodating to the task at hand.
+                   This leads us to ask: can we design a flexible representation that can adapt to
+                   multiple downstream tasks with varying computational resources? Our main
+                   contribution is Matryoshka Representation Learning (MRL) which encodes
+                   information at different granularities and allows a single embedding to adapt
+                   to the computational constraints of downstream tasks. MRL minimally modifies
+                   existing representation learning pipelines and imposes no additional cost
+                   during inference and deployment. MRL learns coarse-to-fine representations that
+                   are at least as accurate and rich as independently trained low-dimensional
+                   representations. The flexibility within the learned Matryoshka Representations
+                   offer: (a) up to 14x smaller embedding size for ImageNet-1K classification at
+                   the same level of accuracy; (b) up to 14x real-world speed-ups for large-scale
+                   retrieval on ImageNet-1K and 4K; and (c) up to 2% accuracy improvements for
+                   long-tail few-shot classification, all while being as robust as the original
+                   representations. Finally, we show that MRL extends seamlessly to web-scale
+                   datasets (ImageNet, JFT) across various modalities -- vision (ViT, ResNet),
+                   vision + language (ALIGN) and language (BERT). MRL code and pretrained models
+                   are open-sourced at https://github.com/RAIVNLab/MRL.},
+  year          = {2022},
+  month         = {May},
+  url           = {http://arxiv.org/abs/2205.13147v4},
+  file          = {2205.13147v4.pdf},
+  eprintnover   = {2205.13147}
 }
 
 @article{2004.12832v2,
-Author        = {Omar Khattab and Matei Zaharia},
-Title         = {ColBERT: Efficient and Effective Passage Search via Contextualized Late
-  Interaction over BERT},
-Eprint        = {2004.12832v2},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.IR},
-Abstract      = {Recent progress in Natural Language Understanding (NLU) is driving fast-paced
-advances in Information Retrieval (IR), largely owed to fine-tuning deep
-language models (LMs) for document ranking. While remarkably effective, the
-ranking models based on these LMs increase computational cost by orders of
-magnitude over prior approaches, particularly as they must feed each
-query-document pair through a massive neural network to compute a single
-relevance score. To tackle this, we present ColBERT, a novel ranking model that
-adapts deep LMs (in particular, BERT) for efficient retrieval. ColBERT
-introduces a late interaction architecture that independently encodes the query
-and the document using BERT and then employs a cheap yet powerful interaction
-step that models their fine-grained similarity. By delaying and yet retaining
-this fine-granular interaction, ColBERT can leverage the expressiveness of deep
-LMs while simultaneously gaining the ability to pre-compute document
-representations offline, considerably speeding up query processing. Beyond
-reducing the cost of re-ranking the documents retrieved by a traditional model,
-ColBERT's pruning-friendly interaction mechanism enables leveraging
-vector-similarity indexes for end-to-end retrieval directly from a large
-document collection. We extensively evaluate ColBERT using two recent passage
-search datasets. Results show that ColBERT's effectiveness is competitive with
-existing BERT-based models (and outperforms every non-BERT baseline), while
-executing two orders-of-magnitude faster and requiring four orders-of-magnitude
-fewer FLOPs per query.},
-Year          = {2020},
-Month         = {Apr},
-Url           = {http://arxiv.org/abs/2004.12832v2},
-File          = {2004.12832v2.pdf},
-EprintNoVer   = {2004.12832}
+  author        = {Omar Khattab and Matei Zaharia},
+  title         = {ColBERT: Efficient and Effective Passage Search via Contextualized Late
+                   Interaction over BERT},
+  eprint        = {2004.12832v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.IR},
+  abstract      = {Recent progress in Natural Language Understanding (NLU) is driving fast-paced
+                   advances in Information Retrieval (IR), largely owed to fine-tuning deep
+                   language models (LMs) for document ranking. While remarkably effective, the
+                   ranking models based on these LMs increase computational cost by orders of
+                   magnitude over prior approaches, particularly as they must feed each
+                   query-document pair through a massive neural network to compute a single
+                   relevance score. To tackle this, we present ColBERT, a novel ranking model that
+                   adapts deep LMs (in particular, BERT) for efficient retrieval. ColBERT
+                   introduces a late interaction architecture that independently encodes the query
+                   and the document using BERT and then employs a cheap yet powerful interaction
+                   step that models their fine-grained similarity. By delaying and yet retaining
+                   this fine-granular interaction, ColBERT can leverage the expressiveness of deep
+                   LMs while simultaneously gaining the ability to pre-compute document
+                   representations offline, considerably speeding up query processing. Beyond
+                   reducing the cost of re-ranking the documents retrieved by a traditional model,
+                   ColBERT's pruning-friendly interaction mechanism enables leveraging
+                   vector-similarity indexes for end-to-end retrieval directly from a large
+                   document collection. We extensively evaluate ColBERT using two recent passage
+                   search datasets. Results show that ColBERT's effectiveness is competitive with
+                   existing BERT-based models (and outperforms every non-BERT baseline), while
+                   executing two orders-of-magnitude faster and requiring four orders-of-magnitude
+                   fewer FLOPs per query.},
+  year          = {2020},
+  month         = {Apr},
+  url           = {http://arxiv.org/abs/2004.12832v2},
+  file          = {2004.12832v2.pdf},
+  eprintnover   = {2004.12832}
 }
 
 @article{2310.03714v1,
-Author        = {Omar Khattab and Arnav Singhvi and Paridhi Maheshwari and Zhiyuan Zhang and Keshav Santhanam and Sri Vardhamanan and Saiful Haq and Ashutosh Sharma and Thomas T. Joshi and Hanna Moazam and Heather Miller and Matei Zaharia and Christopher Potts},
-Title         = {DSPy: Compiling Declarative Language Model Calls into Self-Improving
-  Pipelines},
-Eprint        = {2310.03714v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {The ML community is rapidly exploring techniques for prompting language
-models (LMs) and for stacking them into pipelines that solve complex tasks.
-Unfortunately, existing LM pipelines are typically implemented using hard-coded
-"prompt templates", i.e. lengthy strings discovered via trial and error. Toward
-a more systematic approach for developing and optimizing LM pipelines, we
-introduce DSPy, a programming model that abstracts LM pipelines as text
-transformation graphs, i.e. imperative computational graphs where LMs are
-invoked through declarative modules. DSPy modules are parameterized, meaning
-they can learn (by creating and collecting demonstrations) how to apply
-compositions of prompting, finetuning, augmentation, and reasoning techniques.
-We design a compiler that will optimize any DSPy pipeline to maximize a given
-metric. We conduct two case studies, showing that succinct DSPy programs can
-express and optimize sophisticated LM pipelines that reason about math word
-problems, tackle multi-hop retrieval, answer complex questions, and control
-agent loops. Within minutes of compiling, a few lines of DSPy allow GPT-3.5 and
-llama2-13b-chat to self-bootstrap pipelines that outperform standard few-shot
-prompting (generally by over 25% and 65%, respectively) and pipelines with
-expert-created demonstrations (by up to 5-46% and 16-40%, respectively). On top
-of that, DSPy programs compiled to open and relatively small LMs like
-770M-parameter T5 and llama2-13b-chat are competitive with approaches that rely
-on expert-written prompt chains for proprietary GPT-3.5. DSPy is available at
-https://github.com/stanfordnlp/dspy},
-Year          = {2023},
-Month         = {Oct},
-Url           = {http://arxiv.org/abs/2310.03714v1},
-File          = {2310.03714v1.pdf},
-EprintNoVer   = {2310.03714}
+  author        = {Omar Khattab and Arnav Singhvi and Paridhi Maheshwari and Zhiyuan Zhang and Keshav Santhanam and Sri Vardhamanan and Saiful Haq and Ashutosh Sharma and Thomas T. Joshi and Hanna Moazam and Heather Miller and Matei Zaharia and Christopher Potts},
+  title         = {DSPy: Compiling Declarative Language Model Calls into Self-Improving
+                   Pipelines},
+  eprint        = {2310.03714v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {The ML community is rapidly exploring techniques for prompting language
+                   models (LMs) and for stacking them into pipelines that solve complex tasks.
+                   Unfortunately, existing LM pipelines are typically implemented using hard-coded
+                   "prompt templates", i.e. lengthy strings discovered via trial and error. Toward
+                   a more systematic approach for developing and optimizing LM pipelines, we
+                   introduce DSPy, a programming model that abstracts LM pipelines as text
+                   transformation graphs, i.e. imperative computational graphs where LMs are
+                   invoked through declarative modules. DSPy modules are parameterized, meaning
+                   they can learn (by creating and collecting demonstrations) how to apply
+                   compositions of prompting, finetuning, augmentation, and reasoning techniques.
+                   We design a compiler that will optimize any DSPy pipeline to maximize a given
+                   metric. We conduct two case studies, showing that succinct DSPy programs can
+                   express and optimize sophisticated LM pipelines that reason about math word
+                   problems, tackle multi-hop retrieval, answer complex questions, and control
+                   agent loops. Within minutes of compiling, a few lines of DSPy allow GPT-3.5 and
+                   llama2-13b-chat to self-bootstrap pipelines that outperform standard few-shot
+                   prompting (generally by over 25% and 65%, respectively) and pipelines with
+                   expert-created demonstrations (by up to 5-46% and 16-40%, respectively). On top
+                   of that, DSPy programs compiled to open and relatively small LMs like
+                   770M-parameter T5 and llama2-13b-chat are competitive with approaches that rely
+                   on expert-written prompt chains for proprietary GPT-3.5. DSPy is available at
+                   https://github.com/stanfordnlp/dspy},
+  year          = {2023},
+  month         = {Oct},
+  url           = {http://arxiv.org/abs/2310.03714v1},
+  file          = {2310.03714v1.pdf},
+  eprintnover   = {2310.03714}
 }
 
 @article{2001.08361v1,
-Author        = {Jared Kaplan and Sam McCandlish and Tom Henighan and Tom B. Brown and Benjamin Chess and Rewon Child and Scott Gray and Alec Radford and Jeffrey Wu and Dario Amodei},
-Title         = {Scaling Laws for Neural Language Models},
-Eprint        = {2001.08361v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.LG},
-Abstract      = {We study empirical scaling laws for language model performance on the
-cross-entropy loss. The loss scales as a power-law with model size, dataset
-size, and the amount of compute used for training, with some trends spanning
-more than seven orders of magnitude. Other architectural details such as
-network width or depth have minimal effects within a wide range. Simple
-equations govern the dependence of overfitting on model/dataset size and the
-dependence of training speed on model size. These relationships allow us to
-determine the optimal allocation of a fixed compute budget. Larger models are
-significantly more sample-efficient, such that optimally compute-efficient
-training involves training very large models on a relatively modest amount of
-data and stopping significantly before convergence.},
-Year          = {2020},
-Month         = {Jan},
-Url           = {http://arxiv.org/abs/2001.08361v1},
-File          = {2001.08361v1.pdf},
-EprintNoVer   = {2001.08361}
+  author        = {Jared Kaplan and Sam McCandlish and Tom Henighan and Tom B. Brown and Benjamin Chess and Rewon Child and Scott Gray and Alec Radford and Jeffrey Wu and Dario Amodei},
+  title         = {Scaling Laws for Neural Language Models},
+  eprint        = {2001.08361v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.LG},
+  abstract      = {We study empirical scaling laws for language model performance on the
+                   cross-entropy loss. The loss scales as a power-law with model size, dataset
+                   size, and the amount of compute used for training, with some trends spanning
+                   more than seven orders of magnitude. Other architectural details such as
+                   network width or depth have minimal effects within a wide range. Simple
+                   equations govern the dependence of overfitting on model/dataset size and the
+                   dependence of training speed on model size. These relationships allow us to
+                   determine the optimal allocation of a fixed compute budget. Larger models are
+                   significantly more sample-efficient, such that optimally compute-efficient
+                   training involves training very large models on a relatively modest amount of
+                   data and stopping significantly before convergence.},
+  year          = {2020},
+  month         = {Jan},
+  url           = {http://arxiv.org/abs/2001.08361v1},
+  file          = {2001.08361v1.pdf},
+  eprintnover   = {2001.08361}
 }
 
 @article{2203.15556v1,
-Author        = {Jordan Hoffmann and Sebastian Borgeaud and Arthur Mensch and Elena Buchatskaya and Trevor Cai and Eliza Rutherford and Diego de Las Casas and Lisa Anne Hendricks and Johannes Welbl and Aidan Clark and Tom Hennigan and Eric Noland and Katie Millican and George van den Driessche and Bogdan Damoc and Aurelia Guy and Simon Osindero and Karen Simonyan and Erich Elsen and Jack W. Rae and Oriol Vinyals and Laurent Sifre},
-Title         = {Training Compute-Optimal Large Language Models},
-Eprint        = {2203.15556v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {We investigate the optimal model size and number of tokens for training a
-transformer language model under a given compute budget. We find that current
-large language models are significantly undertrained, a consequence of the
-recent focus on scaling language models whilst keeping the amount of training
-data constant. By training over 400 language models ranging from 70 million to
-over 16 billion parameters on 5 to 500 billion tokens, we find that for
-compute-optimal training, the model size and the number of training tokens
-should be scaled equally: for every doubling of model size the number of
-training tokens should also be doubled. We test this hypothesis by training a
-predicted compute-optimal model, Chinchilla, that uses the same compute budget
-as Gopher but with 70B parameters and 4$\times$ more more data. Chinchilla
-uniformly and significantly outperforms Gopher (280B), GPT-3 (175B), Jurassic-1
-(178B), and Megatron-Turing NLG (530B) on a large range of downstream
-evaluation tasks. This also means that Chinchilla uses substantially less
-compute for fine-tuning and inference, greatly facilitating downstream usage.
-As a highlight, Chinchilla reaches a state-of-the-art average accuracy of 67.5%
-on the MMLU benchmark, greater than a 7% improvement over Gopher.},
-Year          = {2022},
-Month         = {Mar},
-Url           = {http://arxiv.org/abs/2203.15556v1},
-File          = {2203.15556v1.pdf},
-EprintNoVer   = {2203.15556}
+  author        = {Jordan Hoffmann and Sebastian Borgeaud and Arthur Mensch and Elena Buchatskaya and Trevor Cai and Eliza Rutherford and Diego de Las Casas and Lisa Anne Hendricks and Johannes Welbl and Aidan Clark and Tom Hennigan and Eric Noland and Katie Millican and George van den Driessche and Bogdan Damoc and Aurelia Guy and Simon Osindero and Karen Simonyan and Erich Elsen and Jack W. Rae and Oriol Vinyals and Laurent Sifre},
+  title         = {Training Compute-Optimal Large Language Models},
+  eprint        = {2203.15556v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {We investigate the optimal model size and number of tokens for training a
+                   transformer language model under a given compute budget. We find that current
+                   large language models are significantly undertrained, a consequence of the
+                   recent focus on scaling language models whilst keeping the amount of training
+                   data constant. By training over 400 language models ranging from 70 million to
+                   over 16 billion parameters on 5 to 500 billion tokens, we find that for
+                   compute-optimal training, the model size and the number of training tokens
+                   should be scaled equally: for every doubling of model size the number of
+                   training tokens should also be doubled. We test this hypothesis by training a
+                   predicted compute-optimal model, Chinchilla, that uses the same compute budget
+                   as Gopher but with 70B parameters and 4$\times$ more more data. Chinchilla
+                   uniformly and significantly outperforms Gopher (280B), GPT-3 (175B), Jurassic-1
+                   (178B), and Megatron-Turing NLG (530B) on a large range of downstream
+                   evaluation tasks. This also means that Chinchilla uses substantially less
+                   compute for fine-tuning and inference, greatly facilitating downstream usage.
+                   As a highlight, Chinchilla reaches a state-of-the-art average accuracy of 67.5%
+                   on the MMLU benchmark, greater than a 7% improvement over Gopher.},
+  year          = {2022},
+  month         = {Mar},
+  url           = {http://arxiv.org/abs/2203.15556v1},
+  file          = {2203.15556v1.pdf},
+  eprintnover   = {2203.15556}
 }
 
 @article{2106.09685v2,
-Author        = {Edward J. Hu and Yelong Shen and Phillip Wallis and Zeyuan Allen-Zhu and Yuanzhi Li and Shean Wang and Lu Wang and Weizhu Chen},
-Title         = {LoRA: Low-Rank Adaptation of Large Language Models},
-Eprint        = {2106.09685v2},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {An important paradigm of natural language processing consists of large-scale
-pre-training on general domain data and adaptation to particular tasks or
-domains. As we pre-train larger models, full fine-tuning, which retrains all
-model parameters, becomes less feasible. Using GPT-3 175B as an example --
-deploying independent instances of fine-tuned models, each with 175B
-parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or
-LoRA, which freezes the pre-trained model weights and injects trainable rank
-decomposition matrices into each layer of the Transformer architecture, greatly
-reducing the number of trainable parameters for downstream tasks. Compared to
-GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable
-parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA
-performs on-par or better than fine-tuning in model quality on RoBERTa,
-DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher
-training throughput, and, unlike adapters, no additional inference latency. We
-also provide an empirical investigation into rank-deficiency in language model
-adaptation, which sheds light on the efficacy of LoRA. We release a package
-that facilitates the integration of LoRA with PyTorch models and provide our
-implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at
-https://github.com/microsoft/LoRA.},
-Year          = {2021},
-Month         = {Jun},
-Url           = {http://arxiv.org/abs/2106.09685v2},
-File          = {2106.09685v2.pdf},
-EprintNoVer   = {2106.09685}
+  author        = {Edward J. Hu and Yelong Shen and Phillip Wallis and Zeyuan Allen-Zhu and Yuanzhi Li and Shean Wang and Lu Wang and Weizhu Chen},
+  title         = {LoRA: Low-Rank Adaptation of Large Language Models},
+  eprint        = {2106.09685v2},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {An important paradigm of natural language processing consists of large-scale
+                   pre-training on general domain data and adaptation to particular tasks or
+                   domains. As we pre-train larger models, full fine-tuning, which retrains all
+                   model parameters, becomes less feasible. Using GPT-3 175B as an example --
+                   deploying independent instances of fine-tuned models, each with 175B
+                   parameters, is prohibitively expensive. We propose Low-Rank Adaptation, or
+                   LoRA, which freezes the pre-trained model weights and injects trainable rank
+                   decomposition matrices into each layer of the Transformer architecture, greatly
+                   reducing the number of trainable parameters for downstream tasks. Compared to
+                   GPT-3 175B fine-tuned with Adam, LoRA can reduce the number of trainable
+                   parameters by 10,000 times and the GPU memory requirement by 3 times. LoRA
+                   performs on-par or better than fine-tuning in model quality on RoBERTa,
+                   DeBERTa, GPT-2, and GPT-3, despite having fewer trainable parameters, a higher
+                   training throughput, and, unlike adapters, no additional inference latency. We
+                   also provide an empirical investigation into rank-deficiency in language model
+                   adaptation, which sheds light on the efficacy of LoRA. We release a package
+                   that facilitates the integration of LoRA with PyTorch models and provide our
+                   implementations and model checkpoints for RoBERTa, DeBERTa, and GPT-2 at
+                   https://github.com/microsoft/LoRA.},
+  year          = {2021},
+  month         = {Jun},
+  url           = {http://arxiv.org/abs/2106.09685v2},
+  file          = {2106.09685v2.pdf},
+  eprintnover   = {2106.09685}
+}
 @article{2402.13753v1,
-Author        = {Yiran Ding and Li Lyna Zhang and Chengruidong Zhang and Yuanyuan Xu and Ning Shang and Jiahang Xu and Fan Yang and Mao Yang},
-Title         = {LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens},
-Eprint        = {2402.13753v1},
-ArchivePrefix = {arXiv},
-PrimaryClass  = {cs.CL},
-Abstract      = {Large context window is a desirable feature in large language models (LLMs).
-However, due to high fine-tuning costs, scarcity of long texts, and
-catastrophic values introduced by new token positions, current extended context
-windows are limited to around 128k tokens. This paper introduces LongRoPE that,
-for the first time, extends the context window of pre-trained LLMs to an
-impressive 2048k tokens, with up to only 1k fine-tuning steps at within 256k
-training lengths, while maintaining performance at the original short context
-window. This is achieved by three key innovations: (i) we identify and exploit
-two forms of non-uniformities in positional interpolation through an efficient
-search, providing a better initialization for fine-tuning and enabling an 8x
-extension in non-fine-tuning scenarios; (ii) we introduce a progressive
-extension strategy that first fine-tunes a 256k length LLM and then conducts a
-second positional interpolation on the fine-tuned extended LLM to achieve a
-2048k context window; (iii) we readjust LongRoPE on 8k length to recover the
-short context window performance. Extensive experiments on LLaMA2 and Mistral
-across various tasks demonstrate the effectiveness of our method. Models
-extended via LongRoPE retain the original architecture with minor modifications
-to the positional embedding, and can reuse most pre-existing optimizations.},
-Year          = {2024},
-Month         = {Feb},
-Url           = {http://arxiv.org/abs/2402.13753v1},
-File          = {2402.13753v1.pdf},
-EprintNoVer   = {2402.13753}
+  author        = {Yiran Ding and Li Lyna Zhang and Chengruidong Zhang and Yuanyuan Xu and Ning Shang and Jiahang Xu and Fan Yang and Mao Yang},
+  title         = {LongRoPE: Extending LLM Context Window Beyond 2 Million Tokens},
+  eprint        = {2402.13753v1},
+  archiveprefix = {arXiv},
+  primaryclass  = {cs.CL},
+  abstract      = {Large context window is a desirable feature in large language models (LLMs).
+                   However, due to high fine-tuning costs, scarcity of long texts, and
+                   catastrophic values introduced by new token positions, current extended context
+                   windows are limited to around 128k tokens. This paper introduces LongRoPE that,
+                   for the first time, extends the context window of pre-trained LLMs to an
+                   impressive 2048k tokens, with up to only 1k fine-tuning steps at within 256k
+                   training lengths, while maintaining performance at the original short context
+                   window. This is achieved by three key innovations: (i) we identify and exploit
+                   two forms of non-uniformities in positional interpolation through an efficient
+                   search, providing a better initialization for fine-tuning and enabling an 8x
+                   extension in non-fine-tuning scenarios; (ii) we introduce a progressive
+                   extension strategy that first fine-tunes a 256k length LLM and then conducts a
+                   second positional interpolation on the fine-tuned extended LLM to achieve a
+                   2048k context window; (iii) we readjust LongRoPE on 8k length to recover the
+                   short context window performance. Extensive experiments on LLaMA2 and Mistral
+                   across various tasks demonstrate the effectiveness of our method. Models
+                   extended via LongRoPE retain the original architecture with minor modifications
+                   to the positional embedding, and can reuse most pre-existing optimizations.},
+  year          = {2024},
+  month         = {Feb},
+  url           = {http://arxiv.org/abs/2402.13753v1},
+  file          = {2402.13753v1.pdf},
+  eprintnover   = {2402.13753}
 }
