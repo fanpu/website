@@ -5,7 +5,7 @@ giscus_comments: true
 bib_id: 2203.15556v1
 ---
 
-### Three Important Things
+### Five Important Things
 
 #### 1. Optimal Parameter/Training Tokens Allocation
 
