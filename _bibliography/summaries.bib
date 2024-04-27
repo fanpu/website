@@ -1322,3 +1322,60 @@
   file          = {2402.13753v1.pdf},
   eprintnover   = {2402.13753}
 }
+
+@article{2104.09864v5,
+Author        = {Jianlin Su and Yu Lu and Shengfeng Pan and Ahmed Murtadha and Bo Wen and Yunfeng Liu},
+Title         = {RoFormer: Enhanced Transformer with Rotary Position Embedding},
+Eprint        = {2104.09864v5},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CL},
+Abstract      = {Position encoding recently has shown effective in the transformer
+architecture. It enables valuable supervision for dependency modeling between
+elements at different positions of the sequence. In this paper, we first
+investigate various methods to integrate positional information into the
+learning process of transformer-based language models. Then, we propose a novel
+method named Rotary Position Embedding(RoPE) to effectively leverage the
+positional information. Specifically, the proposed RoPE encodes the absolute
+position with a rotation matrix and meanwhile incorporates the explicit
+relative position dependency in self-attention formulation. Notably, RoPE
+enables valuable properties, including the flexibility of sequence length,
+decaying inter-token dependency with increasing relative distances, and the
+capability of equipping the linear self-attention with relative position
+encoding. Finally, we evaluate the enhanced transformer with rotary position
+embedding, also called RoFormer, on various long text classification benchmark
+datasets. Our experiments show that it consistently overcomes its alternatives.
+Furthermore, we provide a theoretical analysis to explain some experimental
+results. RoFormer is already integrated into Huggingface:
+\url{https://huggingface.co/docs/transformers/model_doc/roformer}.},
+Year          = {2021},
+Month         = {Apr},
+Url           = {http://arxiv.org/abs/2104.09864v5},
+File          = {2104.09864v5.pdf},
+EprintNoVer   = {2104.09864}
+}
+
+@article{2101.00190v1,
+Author        = {Xiang Lisa Li and Percy Liang},
+Title         = {Prefix-Tuning: Optimizing Continuous Prompts for Generation},
+Eprint        = {2101.00190v1},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CL},
+Abstract      = {Fine-tuning is the de facto way to leverage large pretrained language models
+to perform downstream tasks. However, it modifies all the language model
+parameters and therefore necessitates storing a full copy for each task. In
+this paper, we propose prefix-tuning, a lightweight alternative to fine-tuning
+for natural language generation tasks, which keeps language model parameters
+frozen, but optimizes a small continuous task-specific vector (called the
+prefix). Prefix-tuning draws inspiration from prompting, allowing subsequent
+tokens to attend to this prefix as if it were "virtual tokens". We apply
+prefix-tuning to GPT-2 for table-to-text generation and to BART for
+summarization. We find that by learning only 0.1\% of the parameters,
+prefix-tuning obtains comparable performance in the full data setting,
+outperforms fine-tuning in low-data settings, and extrapolates better to
+examples with topics unseen during training.},
+Year          = {2021},
+Month         = {Jan},
+Url           = {http://arxiv.org/abs/2101.00190v1},
+File          = {2101.00190v1.pdf},
+EprintNoVer   = {2101.00190}
+}
