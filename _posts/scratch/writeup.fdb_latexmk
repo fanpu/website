@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1694313717 "/Users/fanpu/website/_posts/scratch/writeup.tex" "writeup.pdf" "writeup" 1694313718
-  "/Users/fanpu/website/_posts/scratch/writeup.tex" 1694313717 4601 3083cb65210367ec9d487ff5d37109d3 ""
+["pdflatex"] 1714701319 "/Users/fanpu/website/_posts/scratch/writeup.tex" "writeup.pdf" "writeup" 1714701319
+  "/Users/fanpu/website/_posts/scratch/writeup.tex" 1714701318 4968 aba265679d6bcd6d29f0b3d3d53114c6 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy6.tfm" 1246382020 1124 14ccf5552bc7f77ca02a8a402bea8bfb ""
   "/usr/local/texlive/2022/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmbsy8.tfm" 1246382020 1120 200be8b775682cdf80acad4be5ef57e4 ""
@@ -159,9 +159,9 @@
   "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1678085742 2826429 a062b676b715d5d408e4021b419fe784 ""
   "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
   "CSTheoryToolkitCMUStyle.sty" 1694312064 8557 aa5c01f2663c137aeacda471bc6e025f ""
-  "writeup.aux" 1694313718 723 8a97c82e47e633d1e2ee39aa7f9bd581 "pdflatex"
+  "writeup.aux" 1714701319 723 8a97c82e47e633d1e2ee39aa7f9bd581 "pdflatex"
   "writeup.out" 0 -1 0 "pdflatex"
-  "writeup.tex" 1694313717 4601 3083cb65210367ec9d487ff5d37109d3 ""
+  "writeup.tex" 1714701318 4968 aba265679d6bcd6d29f0b3d3d53114c6 ""
   (generated)
   "writeup.aux"
   "writeup.log"

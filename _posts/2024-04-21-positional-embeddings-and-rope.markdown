@@ -1,14 +1,77 @@
 ---
-layout: summary
-title: "RoFormer: Enhanced Transformer with Rotary Position Embedding"
+title: "Understanding Positional Embeddings: From Sinusoidal Embeddings to RoPE"
+layout: post
+tags: [machine-learning, math]
+cover: furano.webp
+cover_preview: furano.webp
+caption: Lavender Fields in Biei, Kamikawa Subprefecture, Hokkaido, Japan
+class: post-template
+author: fanpu
+toc:
+  sidebar: left
 giscus_comments: true
-bib_id: 2104.09864v5
-published: false
+description: >
+  TODO
 ---
 
-### Three Important Things
+Positional embeddings enable the Transformer architecture to perform well on
+sequential data, as the self-attention mechanism itself (and all other
+components of the Transformer other than causal masking) are position-agnostic.
 
-#### 1. How Positional Encoding in "Attention Is All You Need" Works
+In this post, we'll learn why positional embeddings are important, how the
+original positional embeddings from the [Attention Is All You
+Need](https://arxiv.org/abs/1706.03762) paper works and intuition
+behind how it was designed, and finally derive a state-of-the-art
+technique called rotary position embeddings (RoPE) which performs better
+and is used in almost all open-source large language models today (and believed
+to be used in proprietary models as well).
+
+{% include figure.html
+    path="/assets/img/posts/positional_embeddings/rope_models.webp"
+    width="500px"
+    class="z-depth-1"
+    num=1
+    caption="
+        Open source models predominantly use RoPE for positional embeddings.
+        Image from <a href='https://arxiv.org/abs/2402.00838'>OLMo: Accelerating the Science of Language Models</a>.
+    "
+%}
+
+## Attention and Self-Attention
+
+To understand why positional embeddings are important, let's review how the
+attention mechanism works.
+
+There are three components to the attention mechanism: queries, keys, and values.
+Keys and values come together in pairs, and queries and keys are comparable
+against each other for some similarity measure.
+
+This terminology is inspired by search engines, where given a particular query $$q$$,
+you compare it against all keys $$k_1, \cdots, k_m$$ for some similarity
+function $$\alpha(q, k_i)$$, and then weigh each of the corresponding values
+$$v_1, \cdots, v_m$$ based on how similar each corresponding key was to the
+query, i.e $$\sum_{i=1}^m \alpha (q, k_i) v_i$$.
+
+In practice, the choice of similarity function is the dot product (otherwise known as dot-product attention),
+scaled by $$1/\sqrt{d}$$ where $$d$$ is the dimension of $$q$$ and the $$k_i$$'s to reduce variance of the results.
+A softmax is then applied to make the weights for each $$v_i$$ sum to 1.
+
+If we block this with queries $$q_1, \cdots, q_n$$ with $$\mathbf{Q}$$,
+and similarly $$\mathbf{K}, \mathbf{V}$$ for the keys and values,
+this gives that the attention is given by
+
+$$
+\textrm{Attention}(\mathbf{Q}, \mathbf{K}) = \sum_{i=1}^m \frac{\exp \left( \frac{q^T k_i}{\sqrt{d}} \right)}
+{\sum_{j=1}^m \exp \left( \frac{q^T k_j}{\sqrt{d}} \right) } v_i = \textrm{softmax} \left( \frac{\mathbf{QK}^T}{\sqrt{d}} \right) \mathbf{V}
+$$
+
+As you can see, the formulation of the attention mechanism is agnostic to the ordering of the queries, keys, and values.
+In other words, you can use any permutation of the indices of the keys and
+values, and you will still obtain the same result for each query.
+
+However, positional information is clearly very important in text.
+
+## How Positional Encoding in "Attention Is All You Need" Works
 
 Position embedding is a way to give the Transformer information about
 the ordering of each token in the input sequence, since the attention
