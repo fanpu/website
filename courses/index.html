@@ -44,12 +44,22 @@
     <link rel="canonical" href="https://fanpu.io/courses/">
     <!-- Dark Mode -->
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
 
-    <script src="/assets/js/theme.js"></script>
-    <script src="/assets/js/dark_mode.js"></script>
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@FanPu_Zeng">
+    <meta name="twitter:creator" content="@">
+    <meta name="og:title" content="CMU Course Reviews">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="og:image" content="">
     
 
+    
+    <meta name="og:description" content="Reviews and Recommendations for Computer Science and Math Courses at CMU">
+    
+
+    <!-- end of Twitter cards -->
   </head>
 
   <!-- Body -->
@@ -91,18 +101,10 @@
                 <a class="nav-link" href="/cmu-online/">CMU Online</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="/projects/">Projects</a>
+                <a class="nav-link" href="/summaries/">ML Paper Summaries</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/repositories/">Repositories</a>
-              </li>
-
-              <!-- Toogle theme mode -->
-              <li class="toggle-container">
-                <button id="light-toggle" title="Change theme">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-                </button>
               </li>
             </ul>
           </div>
@@ -131,117 +133,123 @@
           <div class="col-sm-9">
             <div style="display:none">
     $$
-    \DeclareMathOperator*{\argmax}{arg\,max}
-    \DeclareMathOperator*{\argmin}{arg\,min}
-    \newcommand{\nnz}[1]{\mbox{nnz}(#1)}
-    \newcommand{\dotprod}[2]{\langle #1, #2 \rangle}
+    \newcommand{\bone}{\mathbf{1}}
+    \newcommand{\bbeta}{\mathbf{\beta}}
+    \newcommand{\bdelta}{\mathbf{\delta}}
+    \newcommand{\bepsilon}{\mathbf{\epsilon}}
+    \newcommand{\blambda}{\mathbf{\lambda}}
+    \newcommand{\bomega}{\mathbf{\omega}}
+    \newcommand{\bpi}{\mathbf{\pi}}
+    \newcommand{\bphi}{\mathbf{\phi}}
+    \newcommand{\bvphi}{\mathbf{\varphi}}
+    \newcommand{\bpsi}{\mathbf{\psi}}
+    \newcommand{\bsigma}{\mathbf{\sigma}}
+    \newcommand{\btheta}{\mathbf{\theta}}
+    \newcommand{\btau}{\mathbf{\tau}}
+    \newcommand{\ba}{\mathbf{a}}
+    \newcommand{\bb}{\mathbf{b}}
+    \newcommand{\bc}{\mathbf{c}}
+    \newcommand{\bd}{\mathbf{d}}
+    \newcommand{\be}{\mathbf{e}}
+    \newcommand{\boldf}{\mathbf{f}}
+    \newcommand{\bg}{\mathbf{g}}
+    \newcommand{\bh}{\mathbf{h}}
+    \newcommand{\bi}{\mathbf{i}}
+    \newcommand{\bj}{\mathbf{j}}
+    \newcommand{\bk}{\mathbf{k}}
+    \newcommand{\bell}{\mathbf{\ell}}
+    \newcommand{\bm}{\mathbf{m}}
+    \newcommand{\bn}{\mathbf{n}}
+    \newcommand{\bo}{\mathbf{o}}
+    \newcommand{\bp}{\mathbf{p}}
+    \newcommand{\bq}{\mathbf{q}}
+    \newcommand{\br}{\mathbf{r}}
+    \newcommand{\bs}{\mathbf{s}}
+    \newcommand{\bt}{\mathbf{t}}
+    \newcommand{\bu}{\mathbf{u}}
+    \newcommand{\bv}{\mathbf{v}}
+    \newcommand{\bw}{\mathbf{w}}
+    \newcommand{\bx}{\mathbf{x}}
+    \newcommand{\by}{\mathbf{y}}
+    \newcommand{\bz}{\mathbf{z}}
+    \newcommand{\bA}{\mathbf{A}}
+    \newcommand{\bB}{\mathbf{B}}
+    \newcommand{\bC}{\mathbf{C}}
+    \newcommand{\bD}{\mathbf{D}}
+    \newcommand{\bE}{\mathbf{E}}
+    \newcommand{\bF}{\mathbf{F}}
+    \newcommand{\bG}{\mathbf{G}}
+    \newcommand{\bH}{\mathbf{H}}
+    \newcommand{\bI}{\mathbf{I}}
+    \newcommand{\bJ}{\mathbf{J}}
+    \newcommand{\bK}{\mathbf{K}}
+    \newcommand{\bL}{\mathbf{L}}
+    \newcommand{\bM}{\mathbf{M}}
+    \newcommand{\bN}{\mathbf{N}}
+    \newcommand{\bP}{\mathbf{P}}
+    \newcommand{\bQ}{\mathbf{Q}}
+    \newcommand{\bR}{\mathbf{R}}
+    \newcommand{\bS}{\mathbf{S}}
+    \newcommand{\bT}{\mathbf{T}}
+    \newcommand{\bU}{\mathbf{U}}
+    \newcommand{\bV}{\mathbf{V}}
+    \newcommand{\bW}{\mathbf{W}}
+    \newcommand{\bX}{\mathbf{X}}
+    \newcommand{\bY}{\mathbf{Y}}
+    \newcommand{\bZ}{\mathbf{Z}}
 
-    % environments
-    \declaretheorem[numberwithin=section]{theorem}
-    \declaretheorem[sibling=theorem]{lemma}
-    \declaretheorem[sibling=theorem]{claim}
-    \declaretheorem[sibling=theorem]{proposition}
-    \declaretheorem[sibling=theorem]{fact}
-    \declaretheorem[sibling=theorem]{corollary}
-    \declaretheorem[sibling=theorem]{conjecture}
-    \declaretheorem[sibling=theorem]{question}
-    \declaretheorem[sibling=theorem]{answer}
-    \declaretheorem[sibling=theorem]{solution}
-    \declaretheorem[sibling=theorem]{hypothesis}
-    \declaretheorem[sibling=theorem]{exercise}
-    \theoremstyle{definition}
-    \declaretheorem[sibling=theorem]{definition}
-    \declaretheorem[sibling=theorem]{remark}
-    \declaretheorem[sibling=theorem]{notation}
-    \declaretheorem[sibling=theorem]{observation}
-    \declaretheorem[sibling=theorem]{example}
+    \newcommand{\bsa}{\boldsymbol{a}}
+    \newcommand{\bsb}{\boldsymbol{b}}
+    \newcommand{\bsc}{\boldsymbol{c}}
+    \newcommand{\bsd}{\boldsymbol{d}}
+    \newcommand{\bse}{\boldsymbol{e}}
+    \newcommand{\bsoldf}{\boldsymbol{f}}
+    \newcommand{\bsg}{\boldsymbol{g}}
+    \newcommand{\bsh}{\boldsymbol{h}}
+    \newcommand{\bsi}{\boldsymbol{i}}
+    \newcommand{\bsj}{\boldsymbol{j}}
+    \newcommand{\bsk}{\boldsymbol{k}}
+    \newcommand{\bsell}{\boldsymbol{\ell}}
+    \newcommand{\bsm}{\boldsymbol{m}}
+    \newcommand{\bsn}{\boldsymbol{n}}
+    \newcommand{\bso}{\boldsymbol{o}}
+    \newcommand{\bsp}{\boldsymbol{p}}
+    \newcommand{\bsq}{\boldsymbol{q}}
+    \newcommand{\bsr}{\boldsymbol{r}}
+    \newcommand{\bss}{\boldsymbol{s}}
+    \newcommand{\bst}{\boldsymbol{t}}
+    \newcommand{\bsu}{\boldsymbol{u}}
+    \newcommand{\bsv}{\boldsymbol{v}}
+    \newcommand{\bsw}{\boldsymbol{w}}
+    \newcommand{\bsx}{\boldsymbol{x}}
+    \newcommand{\bsy}{\boldsymbol{y}}
+    \newcommand{\bsz}{\boldsymbol{z}}
+    \newcommand{\bsA}{\boldsymbol{A}}
+    \newcommand{\bsB}{\boldsymbol{B}}
+    \newcommand{\bsC}{\boldsymbol{C}}
+    \newcommand{\bsD}{\boldsymbol{D}}
+    \newcommand{\bsE}{\boldsymbol{E}}
+    \newcommand{\bsF}{\boldsymbol{F}}
+    \newcommand{\bsG}{\boldsymbol{G}}
+    \newcommand{\bsH}{\boldsymbol{H}}
+    \newcommand{\bsI}{\boldsymbol{I}}
+    \newcommand{\bsJ}{\boldsymbol{J}}
+    \newcommand{\bsK}{\boldsymbol{K}}
+    \newcommand{\bsL}{\boldsymbol{L}}
+    \newcommand{\bsM}{\boldsymbol{M}}
+    \newcommand{\bsN}{\boldsymbol{N}}
+    \newcommand{\bsP}{\boldsymbol{P}}
+    \newcommand{\bsQ}{\boldsymbol{Q}}
+    \newcommand{\bsR}{\boldsymbol{R}}
+    \newcommand{\bsS}{\boldsymbol{S}}
+    \newcommand{\bsT}{\boldsymbol{T}}
+    \newcommand{\bsU}{\boldsymbol{U}}
+    \newcommand{\bsV}{\boldsymbol{V}}
+    \newcommand{\bsW}{\boldsymbol{W}}
+    \newcommand{\bsX}{\boldsymbol{X}}
+    \newcommand{\bsY}{\boldsymbol{Y}}
+    \newcommand{\bsZ}{\boldsymbol{Z}}
 
-    \newcommand{\ignore}[1]{}
-
-    % probability type operators
-    \let\Pr\relax
-    \DeclareMathOperator*{\Pr}{\mathbf{Pr}}
-    \newcommand{\E}{\mathbb{E}}
-    \DeclareMathOperator*{\Ex}{\mathbf{E}}
-    \DeclareMathOperator*{\Var}{\mathbf{Var}}
-    \DeclareMathOperator*{\Cov}{\mathbf{Cov}}
-    \DeclareMathOperator*{\stddev}{\mathbf{stddev}}
-    \DeclareMathOperator{\littlesum}
-    \DeclareMathOperator{\littleprod}
-    \DeclareMathOperator*{\avg}{avg}
-
-
-    % math terms
-    \DeclareMathOperator{\poly}{poly}
-    \DeclareMathOperator{\polylog}{polylog}
-    \DeclareMathOperator{\size}{size}
-    \DeclareMathOperator{\sgn}{sgn}
-    \DeclareMathOperator{\dist}{dist}
-    \DeclareMathOperator{\vol}{vol}
-    \DeclareMathOperator{\spn}{span}
-    \DeclareMathOperator{\supp}{supp}
-    \DeclareMathOperator{\tr}{tr}
-    \DeclareMathOperator{\Tr}{Tr}
-    \DeclareMathOperator{\codim}{codim}
-    \DeclareMathOperator{\diag}{diag}
-
-    % number systems
-    \newcommand{\R}{\mathbb R}
-    \newcommand{\C}{\mathbb C}
-    \newcommand{\N}{\mathbb N}
-    \newcommand{\Z}{\mathbb Z}
-    \newcommand{\F}{\mathbb F}
-    \newcommand{\Q}{\mathbb Q}
-
-    % complexity classes
-    \newcommand{\PTIME}{\mathsf{P}}
-    \newcommand{\LOGSPACE}{\mathsf{L}}
-    \newcommand{\ZPP}{\mathsf{ZPP}}
-    \newcommand{\RP}{\mathsf{RP}}
-    \newcommand{\BPP}{\mathsf{BPP}}
-    \newcommand{\P}{\mathsf{P}}
-    \newcommand{\NP}{\mathsf{NP}}
-    \newcommand{\TC}{\mathsf{TC}}
-    \newcommand{\AC}{\mathsf{AC}}
-    \newcommand{\SC}{\mathsf{SC}}
-    \newcommand{\SZK}{\mathsf{SZK}}
-    \newcommand{\AM}{\mathsf{AM}}
-    \newcommand{\IP}{\mathsf{IP}}
-    \newcommand{\PSPACE}{\mathsf{PSPACE}}
-    \newcommand{\EXP}{\mathsf{EXP}}
-    \newcommand{\MIP}{\mathsf{MIP}}
-    \newcommand{\NEXP}{\mathsf{NEXP}}
-    \newcommand{\BQP}{\mathsf{BQP}}
-    \newcommand{\distP}{\mathsf{dist\textbf{P}}}
-    \newcommand{\distNP}{\mathsf{dist\textbf{NP}}}
-
-    % short forms
-    \newcommand{\eps}{\epsilon}
-    \newcommand{\lam}{\lambda}
-    \newcommand{\dleta}{\delta}
-    \newcommand{\simga}{\sigma}
-    \newcommand{\vphi}{\varphi}
-    \newcommand{\la}{\langle}
-    \newcommand{\ra}{\rangle}
-    \newcommand{\wt}[1]{\widetilde{#1}}
-    \newcommand{\wh}[1]{\widehat{#1}}
-    \newcommand{\ol}[1]{\overline{#1}}
-    \newcommand{\ul}[1]{\underline{#1}}
-    \newcommand{\ot}{\otimes}
-    \newcommand{\zo}{\{0,1\}}
-    \newcommand{\co}{:} %\newcommand{\co}{\colon}
-    \newcommand{\bdry}{\partial}
-    \newcommand{\grad}{\nabla}
-    \newcommand{\transp}{^\intercal}
-    \newcommand{\inv}{^{-1}}
-    \newcommand{\symmdiff}{\triangle} \newcommand{\symdiff}{\symmdiff}
-    \newcommand{\half}{\tfrac{1}{2}}
-    \newcommand{\bbone}{\mathbbm 1}
-    \newcommand{\Id}{\bbone}
-
-    \newcommand{\SAT}{\mathsf{SAT}}
-
-    % calligraphic letters
     \newcommand{\calA}{\mathcal{A}}
     \newcommand{\calB}{\mathcal{B}}
     \newcommand{\calC}{\mathcal{C}}
@@ -269,123 +277,93 @@
     \newcommand{\calY}{\mathcal{Y}}
     \newcommand{\calZ}{\mathcal{Z}}
 
-    % bold
-    \newcommand{\bone}{\boldsymbol{1}}
-    \newcommand{\bbeta}{\boldsymbol{\beta}}
-    \newcommand{\bdelta}{\boldsymbol{\delta}}
-    \newcommand{\bepsilon}{\boldsymbol{\epsilon}}
-    \newcommand{\blambda}{\boldsymbol{\lambda}}
-    \newcommand{\bomega}{\boldsymbol{\omega}}
-    \newcommand{\bpi}{\boldsymbol{\pi}}
-    \newcommand{\bphi}{\boldsymbol{\phi}}
-    \newcommand{\bvphi}{\boldsymbol{\varphi}}
-    \newcommand{\bpsi}{\boldsymbol{\psi}}
-    \newcommand{\bsigma}{\boldsymbol{\sigma}}
-    \newcommand{\btheta}{\boldsymbol{\theta}}
-    \newcommand{\btau}{\boldsymbol{\tau}}
-    \newcommand{\ba}{\boldsymbol{a}}
-    \newcommand{\bb}{\boldsymbol{b}}
-    \newcommand{\bc}{\boldsymbol{c}}
-    \newcommand{\bd}{\boldsymbol{d}}
-    \newcommand{\be}{\boldsymbol{e}}
-    \newcommand{\boldf}{\boldsymbol{f}}
-    \newcommand{\bg}{\boldsymbol{g}}
-    \newcommand{\bh}{\boldsymbol{h}}
-    \newcommand{\bi}{\boldsymbol{i}}
-    \newcommand{\bj}{\boldsymbol{j}}
-    \newcommand{\bk}{\boldsymbol{k}}
-    \newcommand{\bell}{\boldsymbol{\ell}}
-    \newcommand{\bm}{\boldsymbol{m}}
-    \newcommand{\bn}{\boldsymbol{n}}
-    \newcommand{\bo}{\boldsymbol{o}}
-    \newcommand{\bp}{\boldsymbol{p}}
-    \newcommand{\bq}{\boldsymbol{q}}
-    \newcommand{\br}{\boldsymbol{r}}
-    \newcommand{\bs}{\boldsymbol{s}}
-    \newcommand{\bt}{\boldsymbol{t}}
-    \newcommand{\bu}{\boldsymbol{u}}
-    \newcommand{\bv}{\boldsymbol{v}}
-    \newcommand{\bw}{\boldsymbol{w}}
-    \newcommand{\bx}{\boldsymbol{x}}
-    \newcommand{\by}{\boldsymbol{y}}
-    \newcommand{\bz}{\boldsymbol{z}}
-    \newcommand{\bA}{\boldsymbol{A}}
-    \newcommand{\bB}{\boldsymbol{B}}
-    \newcommand{\bC}{\boldsymbol{C}}
-    \newcommand{\bD}{\boldsymbol{D}}
-    \newcommand{\bE}{\boldsymbol{E}}
-    \newcommand{\bF}{\boldsymbol{F}}
-    \newcommand{\bG}{\boldsymbol{G}}
-    \newcommand{\bH}{\boldsymbol{H}}
-    \newcommand{\bI}{\boldsymbol{I}}
-    \newcommand{\bJ}{\boldsymbol{J}}
-    \newcommand{\bK}{\boldsymbol{K}}
-    \newcommand{\bL}{\boldsymbol{L}}
-    \newcommand{\bM}{\boldsymbol{M}}
-    \newcommand{\bN}{\boldsymbol{N}}
-    \newcommand{\bP}{\boldsymbol{P}}
-    \newcommand{\bQ}{\boldsymbol{Q}}
-    \newcommand{\bR}{\boldsymbol{R}}
-    \newcommand{\bS}{\boldsymbol{S}}
-    \newcommand{\bT}{\boldsymbol{T}}
-    \newcommand{\bU}{\boldsymbol{U}}
-    \newcommand{\bV}{\boldsymbol{V}}
-    \newcommand{\bW}{\boldsymbol{W}}
-    \newcommand{\bX}{\boldsymbol{X}}
-    \newcommand{\bY}{\boldsymbol{Y}}
-    \newcommand{\bZ}{\boldsymbol{Z}}
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\C}{\mathbb{C}}
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\F}{\mathbb{F}}
+    \newcommand{\Q}{\mathbb{Q}}
 
-    % others
-    \newcommand{\false}}
-    \newcommand{\true}}
+    \DeclareMathOperator*{\argmax}{arg\,max}
+    \DeclareMathOperator*{\argmin}{arg\,min}
+    \newcommand{\nnz}[1]{\mbox{nnz}(#1)}
+    \newcommand{\dotprod}[2]{\langle #1, #2 \rangle}
 
-    % bold calligraphic
+    \newcommand{\ignore}[1]{}
+
+    \let\Pr\relax
+    \DeclareMathOperator*{\Pr}{\mathbf{Pr}}
+    \newcommand{\E}{\mathbb{E}}
+    \DeclareMathOperator*{\Ex}{\mathbf{E}}
+    \DeclareMathOperator*{\Var}{\mathbf{Var}}
+    \DeclareMathOperator*{\Cov}{\mathbf{Cov}}
+    \DeclareMathOperator*{\stddev}{\mathbf{stddev}}
+    \DeclareMathOperator*{\avg}{avg}
+
+    \DeclareMathOperator{\poly}{poly}
+    \DeclareMathOperator{\polylog}{polylog}
+    \DeclareMathOperator{\size}{size}
+    \DeclareMathOperator{\sgn}{sgn}
+    \DeclareMathOperator{\dist}{dist}
+    \DeclareMathOperator{\vol}{vol}
+    \DeclareMathOperator{\spn}{span}
+    \DeclareMathOperator{\supp}{supp}
+    \DeclareMathOperator{\tr}{tr}
+    \DeclareMathOperator{\Tr}{Tr}
+    \DeclareMathOperator{\codim}{codim}
+    \DeclareMathOperator{\diag}{diag}
+
+    \newcommand{\PTIME}{\mathsf{P}}
+    \newcommand{\LOGSPACE}{\mathsf{L}}
+    \newcommand{\ZPP}{\mathsf{ZPP}}
+    \newcommand{\RP}{\mathsf{RP}}
+    \newcommand{\BPP}{\mathsf{BPP}}
+    \newcommand{\P}{\mathsf{P}}
+    \newcommand{\NP}{\mathsf{NP}}
+    \newcommand{\TC}{\mathsf{TC}}
+    \newcommand{\AC}{\mathsf{AC}}
+    \newcommand{\SC}{\mathsf{SC}}
+    \newcommand{\SZK}{\mathsf{SZK}}
+    \newcommand{\AM}{\mathsf{AM}}
+    \newcommand{\IP}{\mathsf{IP}}
+    \newcommand{\PSPACE}{\mathsf{PSPACE}}
+    \newcommand{\EXP}{\mathsf{EXP}}
+    \newcommand{\MIP}{\mathsf{MIP}}
+    \newcommand{\NEXP}{\mathsf{NEXP}}
+    \newcommand{\BQP}{\mathsf{BQP}}
+    \newcommand{\distP}{\mathsf{dist\textbf{P}}}
+    \newcommand{\distNP}{\mathsf{dist\textbf{NP}}}
+
+    \newcommand{\eps}{\epsilon}
+    \newcommand{\lam}{\lambda}
+    \newcommand{\dleta}{\delta}
+    \newcommand{\simga}{\sigma}
+    \newcommand{\vphi}{\varphi}
+    \newcommand{\la}{\langle}
+    \newcommand{\ra}{\rangle}
+    \newcommand{\wt}[1]{\widetilde{#1}}
+    \newcommand{\wh}[1]{\widehat{#1}}
+    \newcommand{\ol}[1]{\overline{#1}}
+    \newcommand{\ul}[1]{\underline{#1}}
+    \newcommand{\ot}{\otimes}
+    \newcommand{\zo}{\{0,1\}}
+    \newcommand{\co}{:} %\newcommand{\co}{\colon}
+    \newcommand{\bdry}{\partial}
+    \newcommand{\grad}{\nabla}
+    \newcommand{\transp}{^\intercal}
+    \newcommand{\inv}{^{-1}}
+    \newcommand{\symmdiff}{\triangle} \newcommand{\symdiff}{\symmdiff}
+    \newcommand{\half}{\tfrac{1}{2}}
+    \newcommand{\bbone}{\mathbbm 1}
+    \newcommand{\Id}{\bbone}
+
+    \newcommand{\SAT}{\mathsf{SAT}}
+
     \newcommand{\bcalG}{\boldsymbol{\calG}}
     \newcommand{\calbG}{\bcalG}
     \newcommand{\bcalX}{\boldsymbol{\calX}} \newcommand{\calbX}{\bcalX}
     \newcommand{\bcalY}{\boldsymbol{\calY}} \newcommand{\calbY}{\bcalY}
     \newcommand{\bcalZ}{\boldsymbol{\calZ}} \newcommand{\calbZ}{\bcalZ}
-
-    % left-right wrappers
-    \DeclarePairedDelimiter\parens{\lparen}{\rparen}
-    \DeclarePairedDelimiter\abs{\lvert}{\rvert}
-    \DeclarePairedDelimiter\norm{\lVert}{\rVert}
-    \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
-    \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
-    \DeclarePairedDelimiter\braces{\lbrace}{\rbrace}
-    \DeclarePairedDelimiter\bracks{\lbrack}{\rbrack}
-    \DeclarePairedDelimiter\angles{\langle}{\rangle}
-
-    % something for figures
-    \newcommand{\myfig}[4]{\begin{figure}[H] \centering \includegraphics[width=#1\textwidth]{#2} \caption{#3} \label{#4}
-    \end{figure}}
-    
-
-    \definecolor{codegreen}{rgb}{0,0.6,0}
-    \definecolor{codegray}{rgb}{0.5,0.5,0.5}
-    \definecolor{codepurple}{rgb}{0.58,0,0.82}
-    \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-    \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=left,
-    numbersep=5pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2
-    }
-
-    \lstset{style=mystyle}
     $$
 </div>
 <!-- page.html -->
@@ -403,6 +381,12 @@ dependent on the professors, or due to the impact of virtual classes during the
 COVID-19 pandemic. Do also check out the <a href="/cmu-online/">CMU Online page</a> for a curation of courses whose lectures
 and course content are publicly available.</p>
 
+<p>Course background: I graduated with a <a href="http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/undergraduatecomputerscience/#bscurriculumtextcontainer" rel="external nofollow noopener" target="_blank">B.S in Computer Science</a> (2018-2022) with two concentrations: 
+<a href="http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/scsconcentrations/#algorithmsandcomplexitytext" rel="external nofollow noopener" target="_blank">Algorithms and Complexity</a> and <a href="http://coursecatalog.web.cmu.edu/schools-colleges/schoolofcomputerscience/scsconcentrations/#computersystemstextcontainer" rel="external nofollow noopener" target="_blank">Computer Systems</a>,
+and a minor in <a href="http://coursecatalog.web.cmu.edu/schools-colleges/melloncollegeofscience/departmentofmathematicalsciences/#minorstext" rel="external nofollow noopener" target="_blank">Mathematical Sciences</a>. 
+I then did a <a href="https://csd.cmu.edu/academics/masters/ms-in-computer-science" rel="external nofollow noopener" target="_blank">M.S in Computer Science</a> (2022-2023),
+with a mostly ML, theory, and stats-heavy courseload.</p>
+
 <p>Courses with a ⭐ are those that I found transformative,
 and those with a ❤️ are those that I enjoyed a lot.</p>
 
@@ -415,14 +399,22 @@ have not taken, in the comments section below.</p>
 
 <p>Inspiration for this page came from <a href="https://wanshenl.me/courses/reviews/" rel="external nofollow noopener" target="_blank">Wan Shen’s CMU course review page</a>.</p>
 
-<p>This page was recently updated on 11/9/2022 to help students decide the classes
-they may want to take ahead of course registration week.</p>
+<p>Other similar CMU course review pages, in randomized order each time this site is re-built and deployed: <a href="https://brandonspark.github.io/courses/" rel="external nofollow noopener" target="_blank">★</a> <a href="https://ruiran.me/courses/" rel="external nofollow noopener" target="_blank">★</a> <a href="https://heleaf.me/blog/classes" rel="external nofollow noopener" target="_blank">★</a> <a href="https://seristof.github.io/html/courses.html" rel="external nofollow noopener" target="_blank">★</a> <a href="https://bokken12.github.io/reviews/" rel="external nofollow noopener" target="_blank">★</a> <a href="https://hachiyuki8.github.io/cmu/course-reviews" rel="external nofollow noopener" target="_blank">★</a> <a href="https://pi314mm.github.io/courses.html" rel="external nofollow noopener" target="_blank">★</a> <a href="https://thenumb.at/cmu/" rel="external nofollow noopener" target="_blank">★</a> <a href="https://wanshenl.me/courses/reviews/" rel="external nofollow noopener" target="_blank">★</a> <a href="https://aceeliu.github.io/blog/2023/sidebar-table-of-contents/" rel="external nofollow noopener" target="_blank">★</a> <a href="http://weihang7.github.io/courses/" rel="external nofollow noopener" target="_blank">★</a> <a href="https://bennyontheblock.com/posts/coursef22/" rel="external nofollow noopener" target="_blank">★</a> <a href="https://abigalekim.github.io/courses/" rel="external nofollow noopener" target="_blank">★</a> <a href="https://pranavkumar.me/courses/" rel="external nofollow noopener" target="_blank">★</a></p>
+
+<p>Do email me if you would also like your course review page to also be included here.</p>
+
+<p><em>This page was recently updated on 07/20/2023 as I work on finishing my course reviews for the Spring 2023 semester.</em></p>
+
+<p><del><em>This page was recently updated on 11/9/2022 to help students decide the classes
+they may want to take ahead of course registration week.</em></del></p>
 
 <h2 id="categories">Categories</h2>
 
 <p>For ease of navigation, I’ve also categorized the classes that I’ve taken into
 the areas that they fall under, so you can just access the ones that
 you might be interested in directly.</p>
+
+<h3 id="computer-science-theory--algorithms">Computer Science Theory &amp; Algorithms</h3>
 
 <table class="table table-bordered table-hover table-sm">
   <thead>
@@ -467,6 +459,10 @@ you might be interested in directly.</p>
   </tbody>
 </table>
 
+<p><br></p>
+
+<h3 id="machine-learning-statistics-and-artificial-intelligence">Machine Learning, Statistics, and Artificial Intelligence</h3>
+
 <table class="table table-bordered table-hover table-sm">
   <thead>
     <tr>
@@ -506,6 +502,10 @@ you might be interested in directly.</p>
     </tr>
   </tbody>
 </table>
+
+<p><br></p>
+
+<h3 id="computer-systems">Computer Systems</h3>
 
 <table class="table table-bordered table-hover table-sm">
   <thead>
@@ -547,6 +547,10 @@ you might be interested in directly.</p>
   </tbody>
 </table>
 
+<p><br></p>
+
+<h3 id="programming-language-theory">Programming Language Theory</h3>
+
 <table class="table table-bordered table-hover table-sm">
   <thead>
     <tr>
@@ -571,6 +575,10 @@ you might be interested in directly.</p>
     </tr>
   </tbody>
 </table>
+
+<p><br></p>
+
+<h3 id="mathematics">Mathematics</h3>
 
 <table class="table table-bordered table-hover table-sm">
   <thead>
@@ -618,6 +626,10 @@ you might be interested in directly.</p>
   </tbody>
 </table>
 
+<p><br></p>
+
+<h3 id="computer-science---others">Computer Science - Others</h3>
+
 <table class="table table-bordered table-hover table-sm">
   <thead>
     <tr>
@@ -632,7 +644,7 @@ you might be interested in directly.</p>
       <td><a href="#course15300">15-300 Research and Innovation in Computer Science</a></td>
     </tr>
     <tr>
-      <td><a href="#course17604">17-603 Communication for Software Leaders II</a></td>
+      <td><a href="#course17604">17-604 Communication for Software Leaders II</a></td>
     </tr>
     <tr>
       <td><a href="#course17603">17-603 Communication for Software Leaders I</a></td>
@@ -652,10 +664,14 @@ you might be interested in directly.</p>
   </tbody>
 </table>
 
+<p><br></p>
+
+<h3 id="general-education-stucos-others">General Education, StuCos, Others</h3>
+
 <table class="table table-bordered table-hover table-sm">
   <thead>
     <tr>
-      <th>General Education, Stucos, Others</th>
+      <th>General Education, StuCos, Others</th>
     </tr>
   </thead>
   <tbody>
@@ -706,58 +722,311 @@ you might be interested in directly.</p>
 
 <ul class="first-course-item" id="course10716">
   <li>
-    <p>10-716   <strong><a href="https://www.cs.cmu.edu/~pradeepr/716/" rel="external nofollow noopener" target="_blank">Advanced Machine Learning: Theory and Methods</a></strong>, <a href="http://www.cs.cmu.edu/~pradeepr/" rel="external nofollow noopener" target="_blank"> Pradeep Ravikumar</a></p>
+    <p>⭐ 10-716   <strong><a href="https://www.cs.cmu.edu/~pradeepr/716/" rel="external nofollow noopener" target="_blank">Advanced Machine Learning: Theory and Methods</a></strong>, <a href="http://www.cs.cmu.edu/~pradeepr/" rel="external nofollow noopener" target="_blank"> Pradeep Ravikumar</a></p>
+
+    <p>This was my favorite class this semester. It felt like a natural
+continuation of <a href="#course10708">10-708 Probabilistic Graphical Models</a>,
+with a strong focus on understanding the theory of how many non-parametric
+modern machine learning techniques work. It is very much a math and theory
+course and can get pretty dense at times, but it is also very rewarding.</p>
+
+    <p>Since there does not appear to be much information online about the specific
+content covered, I’ll try to summarize them here.</p>
+
+    <ol>
+      <li>Statistical decision theory: this was mostly a quick recap,
+since it was covered in the pre-requisite class 36-705. 
+If you did not take 36-705, it’ll be helpful to learn/review
+Bayesian estimators, and Bayesian and minimax risk as it’ll
+be used throughout the course.</li>
+      <li>Nonparametric Bayesian methods: the Dirichlet process for CDF estimation,
+Dirichlet process mixture for density estimation, 
+and the Gaussian process for estimating a regression function</li>
+      <li>Nonparametric Density Estimation: histograms, kernel density estimators,
+series estimators. A key result is how the kernel estimator is minimax-optimal
+over many classes of loss functions and function spaces.</li>
+      <li>Nonparametric Regression: partition estimators, spline estimators,
+basis/dictionary series estimators, k-NN regression,
+smoothing kernel regression estimators, Reproducing Kernel Hilbert Space (RKHS)/Mercer kernel regression estimators, wavelets</li>
+      <li>Nonparametric Classification: contrasting
+classification error between parametric vs nonparametric models, 
+minimax rates of convergence for classification vs regression
+for different function classes of distributions</li>
+      <li>Nonparametric Greedy &amp; Boosting: Orthogonal Greedy Algorithm,
+Greedy Coordinate Descent (i.e boosting), Adaboost,
+functional gradient descent</li>
+      <li>Optimal Transport: Monge assignments and the Kantorovich relaxation to
+motivate Wasserstein distance, the Kantorovich dual, integral probability
+metrics, applications to statistical estimation and Wasserstein GAN</li>
+      <li>Deep Density Estimation: variational auto-encoders, normalizing flows, autoregressive flows, destructive distribution learning</li>
+      <li>Deep Representation Learning and Kernels: RKHS kernel regression, RKHS in
+relation to representation learning, random features, randomly wired DNNs and
+its relation to Gaussian Processes</li>
+      <li>Dimensionality Reduction &amp; Manifolds: PCA, multi-dimensional scaling
+(MDS), kernel PCA, local linear embeddings (LLE), Laplacian eigenmaps,
+diffusion maps, Johnson-Lindenstrauss Lemma and random projections</li>
+      <li>Clustering: k-means as vector quantization, mixture models and local non-identifiability,
+level set clustering, hierarchical clustering, spectral clustering</li>
+      <li>Learning &amp; Games: online learning, Follow the Leader (FTL), Follow the Regularized Leader (FTRL), 
+regret bounds for FTRL on convex and non-convex action domains and loss functions, two-player games and Nash equilibrium</li>
+      <li>Causality: adjusting for confounding, causal graphs and structural equations</li>
+      <li>Random Forests and Kernels: Bagging, layered nearest neighbor (LNN), kernel-based view of random forests</li>
+    </ol>
+
+    <p>Pradeep is a great lecturer and he takes great effort to answer every student’s questions in detail. 
+However, while I often find myself being able to follow the current micro-level derivations and explanations,
+I often feel somewhat lost about how it fits in with the bigger picture and its relation with other techniques,
+possibly due to a lack of prior exposure to many of these topics.</p>
+
+    <p>There is significant variance in the difficulty of homework problems in a
+single homework, which I thought made the scoring of the homework problems
+somewhat nonsensical as the points were more or less evenly distributed.  I
+recall there were a couple of problems that demanded a fair bit of thought and
+insight but had relatively short solutions, and therefore only netted a
+moderate amount of points compared to the effort required.</p>
+
+    <p>I thought the exams were relatively easy. It is proof-based and will ask you
+to perform derivations of results or techniques related to what is seen in class,
+which sounds much scarier than it actually is because the questions are relatively guided.</p>
+
+    <p>One thing that happened this semester (and also apparently for prior semesters
+according to some people that I spoke to) was the steep drop in attendance as the semester
+went on.  During the first lecture, there were barely enough seats for everyone
+and some people had to stand, but by the mid-way point the average attendance was
+just around 5 people. However, when it came to the midterms, the classroom filled up again
+and I even heard the instructor for the previous class remark how she didn’t
+realize we had so many students in this class as she was leaving.</p>
+
+    <p>This was probably not such a bad thing for the people who did come to lectures, since
+it meant more personalized attention from the instructor, more opportunities
+to ask your own questions, and a better view of the board.</p>
+
+    <p>I initially thought this phenomenon was because the other students (who were
+mostly MLD Ph.Ds and MSML/MSDS students) were already very knowledgeable and didn’t see the need to
+come to lecture, but only learned much later that it was actually because many
+of them also found the material challenging and found it difficult to follow the lecture.</p>
+
+    <p>I think the takeaway here is that this will be a very difficult class (in my opinion likely
+the hardest class offered in MLD), so try to go in with friends and don’t shy away
+from asking questions since it is likely that many people may also be confused.</p>
   </li>
   <li>
-    <p class="course-item" id="course15712">15-712   <strong><a href="https://www.cs.cmu.edu/~15712/" rel="external nofollow noopener" target="_blank">Advanced Operating Systems and Distributed Systems</a></strong>, <a href="http://www.cs.cmu.edu/~gibbons/" rel="external nofollow noopener" target="_blank">Phil Gibbons</a></p>
+    <p class="course-item" id="course15712">⭐ 15-712   <strong><a href="https://www.cs.cmu.edu/~15712/" rel="external nofollow noopener" target="_blank">Advanced Operating Systems and Distributed Systems</a></strong>, <a href="http://www.cs.cmu.edu/~gibbons/" rel="external nofollow noopener" target="_blank">Phil Gibbons</a></p>
 
     <p>I really liked this class and felt that there wasn’t enough information about
 this course online by people who have taken it, so I wrote a dedicated
 post for it: <a href="/blog/2023/advanced-operating-systems-course-review/">CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review</a></p>
   </li>
   <li>
-    <p class="course-item" id="course36709">36-709   <strong>Advanced Statistical Theory I</strong>, <a href="https://mateyneykov.com/" rel="external nofollow noopener" target="_blank">Matey Neykov</a></p>
+    <p class="course-item" id="course36709">❤️ 36-709   <strong>Advanced Statistical Theory I</strong>, <a href="https://mateyneykov.com/" rel="external nofollow noopener" target="_blank">Matey Neykov</a></p>
+
+    <p>This course largely follows <a href="https://www.cambridge.org/core/books/highdimensional-statistics/8A91ECEEC38F46DAB53E9FF8757C7A4E" rel="external nofollow noopener" target="_blank">High-Dimensional Statistics: A Non-Asymptotic Viewpoint</a> by <a href="https://people.eecs.berkeley.edu/~wainwrig/" rel="external nofollow noopener" target="_blank">Wainwright</a>,
+with the last portion branching off towards topics in the professor’s own research interests.
+This is a core course in theoretical statistics that all stats Ph.D students
+must take, and most students in the course came from this demographic. The
+focus of the course is on high-dimensional statistical models, and
+non-parametric statistical models.</p>
+
+    <p>There were 4 homeworks, with around 2-3 weeks between each one. They are all proof-based questions, with many
+of them coming from Wainwright’s book. I found the homeworks quite challenging, and had to collaborate with
+a few stats Ph.D students to get through some of them (thank you for
+introducing me to the stats Ph.D. lounge!). There were some tools required
+for solving some of the problems that I have never seen or had to use before
+in any of my previous CS or math classes, but which may (?) be standard fare in
+statistical literature, that may have contributed to my difficulty.
+Fortunately, I still managed to solve <em>almost</em> all the homework problems.</p>
+
+    <p>Each student also had to scribe a lecture, which is then posted on Canvas as
+reference for all other students. There is also a project on deeply understanding a
+recent advanced theoretical paper in statistics or machine learning, which involves
+both a paper writeup and a presentation of its contents to the class.
+Thankfully there are no exams.</p>
+
+    <p>Topics covered included concentration inequalities (sub-Gaussian,
+sub-exponential random variables), maximal inequalities, bounded differences,
+covering and packing, Gaussian and Rademacher complexity, chaining and
+Dudley’s entropy integral bound, comparison inequalities (Slepian and
+Sudakov-Fernique) and lower bounds, high-dimensional and sparse PCA,
+Davis-Kahan theorem, LASSO in relation to prediction/support recovery/debiasing, 
+covariance matrix estimation, non-parametric least squares, minimax lower
+bounds (Le Cam’s method and Fano’s method), Gaussian sequence model minimax rates.</p>
+
+    <p>Overall I really enjoyed this class as it introduced me to many concepts in
+modern statistical analysis, which is really helpful in understanding
+statistical machine learning papers.</p>
   </li>
   <li>
     <p class="course-item" id="course36708">36-708   <strong><a href="https://36708.github.io/" rel="external nofollow noopener" target="_blank">The ABCDE of Statistical Methods in Machine Learning</a></strong>, <a href="https://www.stat.cmu.edu/~aramdas/" rel="external nofollow noopener" target="_blank">Aaditya Ramdas</a></p>
+
+    <p>I initially did not notice this course, as I thought ABCDE meant just the basics.
+However, what the course is actually about is a journey through various
+methods in statistical machine learning, viewed from the following lens:</p>
+    <ul>
+      <li>
+<strong>A</strong>lgorithm design principles,</li>
+      <li>
+<strong>B</strong>ias-variance trade-off,</li>
+      <li>
+<strong>C</strong>omputational and memory considerations, <strong>C</strong>alibration, <strong>C</strong>onformal prediction,</li>
+      <li>
+<strong>D</strong>ata analysis,</li>
+      <li>
+<strong>E</strong>xplainability and interpretability.</li>
+    </ul>
+
+    <p>Aaditya is really clear, and he will re-iterate the important
+points many times throughout the class, sometimes too many times in my opinion,
+which was fine but it would also be good to learn more content instead.  I
+also heard from some other students that he is one of the best lecturers in
+the stats department.</p>
+
+    <p>Most of the class is on non-parametric methods, covering
+techniques like nearest neighbor methods, distribution-free predictive inference,
+calibration, decision trees, bagging, random forests, stacking, boosting,
+reproducing kernel Hilbert spaces (RKHS), kernel methods like kernel
+ridge regression and kernel PCA, Shapley values, spectral PCA,
+and some basic deep learning topics like deep PCA.</p>
+
+    <p>I found the class very practical and helpful, and learned a lot as someone
+with no data science and practical machine learning background. This was
+especially from the many discussions on which techniques were suitable for
+which contexts, according to the ABCDE methodology.</p>
+
+    <p>A lot of the topics in this course were familiar to other students who came
+from a traditional stats background, and I feel like you might get bored in
+this class if you already have a pretty solid stats foundation. Otherwise, 
+there is a lot you’ll learn.</p>
+
+    <p>The midterms and homework were both relatively chill. Homework included both
+theoretical derivations, and also experiments on datasets using methods
+learned in class.</p>
   </li>
   <li>
     <p class="course-item" id="course36708">21-329   <strong>Set Theory</strong>, Benjamin Siskind</p>
+
+    <p>I initially got interested in this class as quite a couple of theorems from my
+other classes appealed to important results from set theory, such as Zorn’s
+Lemma used for proving Tychonoff’s theorem. Since set theory is such a foundational
+topic in mathematics, I wanted to take it to satisfy my curiosity.</p>
+
+    <p>This course covered all the chapters in <a href="https://www.cambridge.org/core/books/course-on-set-theory/9E65D5D9CA561CA2D87F91B21B0D117D" rel="external nofollow noopener" target="_blank">A Course on Set Theory</a>
+apart from 6, i.e ZFC, order, cardinality, trees, and filters and ideals.
+It starts fairly slowly, and speeds up towards the latter of the second
+half. I could see some parallels between set theory and type theory
+initially in the more constructive concepts, but they soon began to differ
+greatly due to the heavy use of non-constructive methods
+in the proofs of set theory.</p>
+
+    <p>The most interesting topic for me was the development of trees and Baire
+spaces, which led to the study of games and determinacy,
+with the consequence that sets which are determined have certain nice
+properties.</p>
+
+    <p>The course was taught by Benny, a postdoctoral associate teaching the class
+for the first time, so it was expected that there would be a few rough edges.
+Benny cares about the class, is passionate about the course content (he
+does research in model theory and descriptive set theory), and responds to
+emails and clarifications fairly promptly.</p>
+
+    <p>I think the course could have been paced faster at the start. It was also
+challenging to read the lecturer’s handwriting sometimes. I felt there was
+significant time pressure for the exams (similar to <a href="#course21301">21-301
+Combinatorics</a>), though the homeworks were quite reasonable.</p>
   </li>
   <li>
     <p class="course-item" id="course17604">17-604   <strong>Communications for Software Leaders II</strong>, <a href="https://www.linkedin.com/in/frollini/" rel="external nofollow noopener" target="_blank">Dominick (Nick) Frollini</a></p>
 
-    <p>The highlight of this class were 3 different mock negotiation scenarios
-that you had to roleplay and perform
-I really enjoyed the negotiation exercises
-in particular, they were very exciting and put me in the shoes of roles that I
-would have never imagined playing them before. Nick is a very enthusiastic
-teacher, his lectures are very clear and well-paced, and it’s clear he has
-done this so many times that it’s almost like a rehearsed performance that
-flows so smoothly. Thanks for a great semester!</p>
+    <p>The highlight of this follow-up class to 
+<a href="#course17603">17-603 Communication for Software Leaders I</a> are the mock
+negotiation in-class exercises that we had to prepare and role-play for.
+Prior to each mock negotiation, we were provided with case
+materials developed by the
+<a href="https://www.kellogg.northwestern.edu/" rel="external nofollow noopener" target="_blank">Kellogg</a> MBA program that contains
+important private information specific to our role, which must
+be kept secret.
+We then planned out our negotiation strategy before class, possibly with
+other people in the same faction so as to present a unified front
+against the other parties during negotiation.</p>
+
+    <p>The mock negotiations were really exciting as they put us in the shoes
+of roles as diverse as CEOs, government officials, hardware designers,
+or even fishermen. You will have specific instructions on
+the kind of personality traits, negotiation style, and cultural
+customs that your role will have. I really indulged myself in this,
+especially since I took <a href="#course70350">70-350 Acting for Business</a>
+not too long ago. The outcome of the negotiations will directly
+affect your grades, so these are really high-stakes, high-pressure
+situations that you will be put into. It was extremely fun and
+entertaining.</p>
+
+    <p>Nick is a very passionate teacher with clear and well-paced lectures.
+It’s obvious he has done this so many times that it’s almost
+like a rehearsed performance. In my opinion, if you are already
+planning to take <a href="#course17603">17-603</a>, then you must take
+this course as well since the mock negotiations were so much fun.</p>
   </li>
 </ul>
 
+<p>Units: 60</p>
+
+<p>This was the final semester (out of 2) of my Master’s degree. My
+goal for pursuing a M.S degree is to reach the frontiers of a field
+and find a research interest, which I did in theoretical machine learning.
+I mostly leave without regrets, except for one: not having been able to
+work with any of the brilliant professors here on research, since I found
+my direction so late.</p>
+
 <p>I TA’d for <a href="https://andrejristeski.github.io/10708-S23/" rel="external nofollow noopener" target="_blank">10-708 Probabilistic Graphical
 Models</a> under <a href="https://www.andrew.cmu.edu/user/aristesk/" rel="external nofollow noopener" target="_blank">Andrej
-Risteski</a> this semester.</p>
+Risteski</a> this semester.
+It was a fun experience and not as stressful as I had feared. Being
+able to lead 2 of the recitations was one of the highlights of my semester.
+I would like to thank <a href="https://www.andrew.cmu.edu/user/aristesk/" rel="external nofollow noopener" target="_blank">Andrej</a> and my
+fellow TAs (especially <a href="https://scholar.google.com/citations?user=Q5EDXpkAAAAJ&amp;hl=en" rel="external nofollow noopener" target="_blank">Jennifer</a>, whose
+office hours slot was right before mine and always stayed overtime
+to help me with the queue) for making it so enjoyable. I am also
+grateful to all my students for their great questions and being able to mentor
+their impressive projects, and for giving me the opportunity to grow as a TA.</p>
 
-<p>I dropped 21-640 Functional Analysis halfway through the semester, as this
-iteration of the course offering depended on knowledge of content from 21-720 Measure Theory and Integration
-in order to motivate and develop many of the more interesting applications in the subject.
-I was trying to binge-watch <a href="https://www.math.cmu.edu/~gautam/sj/teaching/2020-21/720-measure/lectures.html" rel="external nofollow noopener" target="_blank">recorded
-lecture</a>
-videos from a past offering of
-Measure Theory and
-Integration](https://www.math.cmu.edu/~gautam/sj/teaching/2020-21/720-measure/lectures.html)
-taught by Gautam Iyer during the Covid semester in the first month of the semester,
-which helped for a few weeks but eventually was still insufficient 
-as you really had to also work through all the homework in order
-to truly understand the material and know how to apply it.  The other
-requirement for the course is fundamentals in topology, i.e. first half of 21-640 General
-Topology which I took the previous semester.</p>
+<p>I also continued staying in an advisory role for
+<a href="https://autolabproject.com/" rel="external nofollow noopener" target="_blank">Autolab</a>, being generally quite hands-off.
+<a href="https://michellexliu.me/" rel="external nofollow noopener" target="_blank">Michelle</a> was the project lead this semester and did
+a terrific job. This being my last semester, I will dearly miss the team when I
+graduate.</p>
 
-<p>Reviews for this semester will be updated soon :)</p>
+<p>I did booth with <a href="https://cmussa.org/" rel="external nofollow noopener" target="_blank">SSA</a> again this year, and contributed mainly 
+to the mechanical team and design teams. We built a Blitz booth themed after Singapore’s
+<a href="https://www.gardensbythebay.com.sg/" rel="external nofollow noopener" target="_blank">Gardens by the Bay</a> and came in runner’s up, after 
+a well-deserved win by <a href="https://www.cmujsa.com/" rel="external nofollow noopener" target="_blank">JSA</a>.</p>
+
+<p>Academically, this semester was rather risky for me because I did not have the necessary
+prerequisites for over half of my classes. I was missing
+<a href="https://www.stat.cmu.edu/~larry/=stat705/" rel="external nofollow noopener" target="_blank">36-705 Intermediate Statistics</a>
+for <a href="#course10716">10-716</a>, <a href="#course36708">36-708</a>, <a href="#course36709">36-709</a>, 
+and missing <a href="https://www.math.cmu.edu/~gautam/sj/teaching/2022-23/720-measure/" rel="external nofollow noopener" target="_blank">21-720 Measure Theory and Integration</a> for [21-640]. 
+It was also a difficult and tiring process to get into <a href="#course36709">36-709</a> as
+the class was a required stats Ph.D. course that was generally very full, and
+they had no reservations for CS majors. I ended up reading through some of the
+lecture notes of <a href="https://www.stat.cmu.edu/~larry/=stat705/" rel="external nofollow noopener" target="_blank">36-705</a>
+over the winter break before the semester began to insure against the worst-case
+scenario.</p>
+
+<p>I ended up dropping 21-640 Functional Analysis halfway through the semester
+as it became increasingly difficult to do (and even understand) the homework without
+the necessary measure theory background.
+While 21-720 was not listed as a prerequisite
+on SIO for this course, it was announced as such (along with <a href="#course21640">21-640 General
+Topology</a>) by the instructor during the first class, so as to
+motivate and develop many of the more interesting applications in the subject.</p>
+
+<p>This concludes my wonderful time at CMU, and I leave with many beautiful
+memories. Thank you to my professors who showed me the bountiful fields of their
+intellectual gardens and sparked a lifelong joy and insatiable desire in this
+student of wanting to explore more of it; to my friends who colored my life with
+love and laughter through our journey of growth and humility, I hope we will
+stay lifelong friends; and finally to my family for always being so
+unconditionally supportive and for providing a safe harbor for me to turn to any
+time.</p>
 
 <h3 id="fall-2022">Fall 2022</h3>
 
@@ -791,8 +1060,8 @@ Overall I felt that Pravesh is a great lecturer, and the topics covered are very
 and applicable. The course was offered for the first time this semester, so there
 were a few rough edges (i.e in the proof of Cheeger’s inequality he initially
 did not want to prove it in terms of the Laplacian of the graph to avoid
-introducing new concepts and notation, but doing so ended up being more confusing
-than helpful), but overall it is quite a good class. The homework problems
+introducing unnecessary concepts and notation, but doing so ended up being more confusing
+than helpful), but overall it is an excellent class. The homework problems
 are reasonable and the workload is on the lighter side.</p>
   </li>
   <li>
@@ -806,7 +1075,7 @@ inference, and learning. In the representation module, you will learn about
 how joint distributions of several variables can be represented efficiently by
 various models, taking into factors such as causal relationships. In the
 inference module, you will learn that sampling from such models is very hard
-in general (assuming \(\P \neq \NP\)), and develop probabilistic ways of
+in general (assuming \(\mathsf{P} \neq \mathsf{NP}\)), and develop probabilistic ways of
 sampling from them such as Monte-Carlo Markov-Chain and Variational Inference methods.
 In the final module, you will learn how such models can be fitted to training data.
 Graphical models form the backbone of many modern machine learning techniques like
@@ -937,6 +1206,24 @@ from my mistake and make sure that you don’t have too many classes with
 significant course projects on your schedule to avoid such a situation.</p>
 
 <hr>
+
+<h3 id="summer-2022">Summer 2022</h3>
+<p>I decided to do another return internship with <a href="https://www.janestreet.com/" rel="external nofollow noopener" target="_blank">Jane
+Street</a>, as I had a great experience with them the
+previous year. Highlights of the internship included a two-week exchange at
+their London office, where I managed to catch up with many high school friends
+who are now either studying or working in the UK.</p>
+
+<p>However, in hindsight I feel that it would have been better to diversify my
+internship experiences and try interning at a significantly different company
+(such as a ML-focused company).  This is because internships are a relatively
+low-cost 3-month investment for you to figure out what your interests are and to
+learn about the problems faced by different industries. Since the internship
+structure does not vary significantly between yeras, I ended up
+attending a lot of similar talks and lessons for interns, which felt slightly
+repetitive. Not to say that there’s any fault with their internship, which is very
+well-run and well thought-out as far as internships go - this is on purely
+on the grounds of increasing my early career exposure to different types of companies.</p>
 
 <h3 id="spring-2022">Spring 2022</h3>
 
@@ -1090,10 +1377,57 @@ race, and live updates on when which buggy crossed a certain junction.</p>
   </li>
   <li>
     <p class="course-item" id="course70350">70-350 <strong>Acting for Business</strong>, Evelyn Pierce</p>
+
+    <p>This class is similar to 54-191 Acting for Non-Majors, except with the individual
+and duet performances reversed. The class was very enjoyable (though somewhat
+slow-paced at times) and the workload is low. You get to perform skits like
+monologues, improv, and duets in front of the class, as well as watch your
+fellow classmates perform and give feedback.</p>
+
+    <p>The class made me acutely more aware of things like body language, stage
+presence, and voice projection. It gave me the observational lens required to
+better critique plays and acting by others, and increased self-awareness of
+how I present myself to others.</p>
+
+    <p>Even though the class is called Acting for Business, there isn’t really a huge
+explicit business component to it, which I appreciated. I think the key
+takeaway is to understand how you present yourself, to increase your
+confidence and interpersonal communication skills, and to improve your
+personal charisma.</p>
   </li>
 </ul>
 
 <p>Units: 93</p>
+
+<p>This was the final semester of my undergrad, and so I made sure to spend enough
+time with my friends and cherish our remaining time together on top of just
+academics. We went to Las Vegas during Spring Break together, and the crazy
+things we did together were truly memorable.</p>
+
+<p>I worked on Spring Carnival <a href="https://www.springcarnival.org/booth.shtml" rel="external nofollow noopener" target="_blank">booth</a>
+with <a href="https://cmussa.org/" rel="external nofollow noopener" target="_blank">SSA</a>, and we built a blitz booth with a Changi
+Airport theme.  This was the first time booth has been held since the start of
+the pandemic in 2020, and we lost a lot of technical know-how and tribal
+knowledge about booth building from our seniors who also used to work on booth,
+but have graduated since. I mainly worked on the mechanical team, doing tasks
+like cutting wood, screwing frames together, and construction of the booth.
+It was a really fun experience and I managed to get to know many of my juniors
+in SSA much better. To put the cherry on top, our booth came in first place in our 
+Blitz category!</p>
+
+<p>On the academic side of things, I tried to make it more manageable by
+watching the lectures for 10-725 and 16-385 asynchronously, which helped to
+reduce the in-person fatigue levels.
+Well actually, I was forced to watch it asynchronously as otherwise I had 
+no time to eat lunch at all, having back-to-back classes from 10am till 4.30pm daily.</p>
+
+<p>However, there were still several pretty crazy weeks, especially when midterms
+from multiple classes lined up in a single week. Thankfully, I really enjoyed
+the content from all my classes, which energized and motivated me every day.</p>
+
+<p>It felt incredible how quickly 4 years went by. It didn’t feel like too long
+ago when I was still a freshman, wondering what kind of path I would take,
+and what sort of impact I would make at CMU. I guess I know the answer now!</p>
 
 <hr>
 
@@ -1220,6 +1554,16 @@ remaining 20 minutes is spent on group discussions.</p>
 </ul>
 
 <p>Units: 75</p>
+
+<hr>
+
+<h3 id="summer-2021">Summer 2021</h3>
+<p>I spent my summer as a Linux engineer intern in <a href="https://www.janestreet.com/" rel="external nofollow noopener" target="_blank">Jane Street</a>
+to work on exciting systems-level problems, and had a lot of fun exploring NYC
+with other interns. I learned the following summer that the VM manager that I wrote
+for my first project is now the standard way that VMs are provisioned by
+different teams in the firm, which made me feel that my work was very impactful
+and valuable.</p>
 
 <hr>
 
@@ -1509,6 +1853,25 @@ is unclear if/when the class will be offered again.</p>
 
 <hr>
 
+<h3 id="summer-2020">Summer 2020</h3>
+<p>Due to the COVID-19 pandemic, I ended up doing my internship with <a href="https://about.meta.com/" rel="external nofollow noopener" target="_blank">The Company
+Formerly Called Facebook</a> on the <a href="https://engineering.fb.com/2019/06/06/data-center-engineering/twine/" rel="external nofollow noopener" target="_blank">Tupperware
+Scheduler
+team</a> (now
+called Twine) remotely from Pittsburgh. Twine is like Kubernetes, but can
+orchestrate containers on up to millions of servers, instead of just a few
+hundred. We were facing very interesting scaling engineering problems at the
+time, due to the huge surge in traffic on Facebook products driven by the
+pandemic. As part of the efforts to address this issue, I was tasked with
+writing a large-scale load testing framework to see if Twine was battle-ready to
+withstand the increasing load placed by their billions of users.</p>
+
+<p>Since there was not much to do outside during the pandemic, my <a href="https://adbforlife.github.io/" rel="external nofollow noopener" target="_blank">roommate</a>
+and I ended up playing and solving CTF challenges every day after work, and the highlight
+was playing DEF CON 28 together with <a href="https://pwning.net/" rel="external nofollow noopener" target="_blank">PPP</a>, where we came in second.</p>
+
+<hr>
+
 <h3 id="spring-2020">Spring 2020</h3>
 
 <ul class="first-course-item" id="course15410">
@@ -1689,6 +2052,12 @@ was taught by a good professor.</p>
 <p>I spent a wonderful summer interning at <a href="https://asana.com/" rel="external nofollow noopener" target="_blank">Asana</a> in San Francisco as a Software
 Engineering intern on the Infrastructure Management Team.  My mentor and I
 became great friends, and we still regularly keep in touch many years on.</p>
+
+<p>I ended up visiting many of the great national parks in California on weekend
+trips during the internship, including
+<a href="https://www.nps.gov/yose/index.htm" rel="external nofollow noopener" target="_blank">Yosemite</a>, <a href="https://visitlaketahoe.com/" rel="external nofollow noopener" target="_blank">Lake
+Tahoe</a>, <a href="https://www.nps.gov/lavo/index.htm" rel="external nofollow noopener" target="_blank">Mt. Lassen</a>, and
+<a href="https://www.nps.gov/muwo/index.htm" rel="external nofollow noopener" target="_blank">Muir Woods</a>. It was a fun time!</p>
 
 <hr>
 <h3 id="spring-2019">Spring 2019</h3>
@@ -1945,8 +2314,8 @@ research in the field.</p>
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2023 Fan Pu  Zeng. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: June 13, 2023.
+        © Copyright 2024 Fan Pu  Zeng. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
+Last updated: July 13, 2024.
       </div>
     </footer>
 
@@ -1984,7 +2353,6 @@ Last updated: June 13, 2023.
 
     
   <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-  <script async src="https://badge.dimensions.ai/badge.js"></script>
 
     <!-- MathJax -->
   <script type="text/javascript">
@@ -2004,14 +2372,7 @@ Last updated: June 13, 2023.
   <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
   <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3VHEYH05S"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ window.dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-S3VHEYH05S');
-  </script>
+    
     
 
 <!-- Scrolling Progress Bar -->

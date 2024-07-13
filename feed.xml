@@ -1,17 +1,1688 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="https://fanpu.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fanpu.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2023-06-13T10:06:18+00:00</updated><id>https://fanpu.io/feed.xml</id><title type="html">blank</title><subtitle>Homepage
-</subtitle><entry><title type="html">CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review</title><link href="https://fanpu.io/blog/2023/advanced-operating-systems-course-review/" rel="alternate" type="text/html" title="CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review" /><published>2023-06-09T00:00:00+00:00</published><updated>2023-06-09T00:00:00+00:00</updated><id>https://fanpu.io/blog/2023/advanced-operating-systems-course-review</id><content type="html" xml:base="https://fanpu.io/blog/2023/advanced-operating-systems-course-review/"><![CDATA[<p>This semester (Spring 2023), I took <a href="https://www.cs.cmu.edu/~15712/">15-712 Advanced Operating Systems and
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="https://fanpu.io/feed.xml" rel="self" type="application/atom+xml" /><link href="https://fanpu.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2024-07-13T22:06:21+00:00</updated><id>https://fanpu.io/feed.xml</id><title type="html">blank</title><subtitle>Homepage
+</subtitle><entry><title type="html">Playing Sound Voltex at Home: Setting Up Unnamed SDVX Clone with the Yuancon SDVX Controller</title><link href="https://fanpu.io/blog/2023/setting-up-yuancon-controller-sound-voltex/" rel="alternate" type="text/html" title="Playing Sound Voltex at Home: Setting Up Unnamed SDVX Clone with the Yuancon SDVX Controller" /><published>2023-09-02T00:00:00+00:00</published><updated>2023-09-02T00:00:00+00:00</updated><id>https://fanpu.io/blog/2023/setting-up-yuancon-controller-sound-voltex</id><content type="html" xml:base="https://fanpu.io/blog/2023/setting-up-yuancon-controller-sound-voltex/"><![CDATA[<p>Rhythm is just a $200 controller and some hopefully-not-too-complicated
+open source software setup away!</p>
+
+<p>This beginner’s guide will help to demystify the process of setting up Sound Voltex
+at home using a custom SDVX controller using Unnamed SDVX Clone.</p>
+
+<hr />
+
+<p>My foray into rhythm games started way
+back with <a href="https://lovelive-sif-global.bushimo.jp/">Love Live! School Idol Festival</a>.
+While the game has sadly since shut down, other
+titles I’ve played
+include <a href="https://bang-dream-gbp-en.bushiroad.com/">BanG Dream!</a>
+and <a href="https://projectsekai.fandom.com/wiki/Project_SEKAI_COLORFUL_STAGE!">Project SEKAI</a>.</p>
+
+<p>When I visited Japan a few months ago in the summer, I discovered <a href="https://p.eagate.573.jp/game/sdvx/sv/p/index.html">Sound Voltex</a>, and instantly
+fell in love with its unique control system and beautiful flashy graphics:</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/sdvx/sdvx_and_me.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+</figure>
+
+<p>In Japan, you pay 100 yen (~$0.68 USD) to play two to three songs. You get to
+play three songs if you don’t crash (i.e fail) any tracks, and two if you fail
+on either of the first two guaranteed plays.</p>
+
+<p>Rhythm games in general are sadly not as mainstream outside of Japan.
+For instance, in Singapore I was only aware of a single arcade that had Sound Voltex cabs,
+even though arcades are quite popular in general. Similarly, in NYC, there’s only a single 
+small arcade called <a href="http://www.chinatownfair.biz/">Chinatown Fair</a> that has Sound Voltex.
+So naturally I wanted to see if I could set it up at home to continue enjoying the game.</p>
+
+<p>(Apparently, if you have a lot of disposable income and space in your living
+room, you can also just buy an entire <a href="https://www.hadouken-arcade.com/products/sound-voltex-vivid-wave">previous-generation Sound Voltex
+cabinet</a> for a
+few thousand dollars)</p>
+
+<h2 id="why-this-guide">Why This Guide</h2>
+<p>I decided to write this guide since the setup process could seem somewhat daunting for
+people who are interested in rhythm games but are not developers. Hopefully
+now more people will also be able to play and enjoy this game.</p>
+
+<p>The setup process is very straightforward on Windows, but has a few subtle
+points on macOS and Linux that I’ll point out.</p>
+
+<h2 id="setup-specification">Setup Specification</h2>
+<p>This guide will use the following setup:</p>
+
+<ul>
+  <li>Game: <a href="https://github.com/Drewol/unnamed-sdvx-clone">unnamed-sdvx-clone</a>, commonly abbreviated USC</li>
+  <li>Controller: <a href="https://yuancon.store/controller/sdvxblack">Yuancon SDVX controller</a>.</li>
+</ul>
+
+<p>While I performed the setup on macOS, the instructions are largely the same
+for Linux based systems as well. In fact, if you are already 
+regardless of which controller or OS you use.</p>
+
+<h2 id="installing-unnamed-sdvx-clone">Installing Unnamed SDVX Clone</h2>
+
+<h3 id="windows">Windows</h3>
+<p>The setup process for Windows is very straightforward.
+You should just download the <a href="https://drewol.me/Downloads/Game.zip">latest Windows build</a> as linked on the <a href="https://drewol.me/Downloads/Game.zip">Github page</a>, and run <code class="language-plaintext highlighter-rouge">usc-game.exe</code> to start the game.</p>
+
+<h3 id="macos">macOS</h3>
+
+<p>This is mostly just from the <a href="https://github.com/Drewol/unnamed-sdvx-clone#macos">official instructions</a>,
+but with implicit points made explicit:</p>
+
+<ol>
+  <li>If you don’t have <a href="https://docs.brew.sh/">Homebrew</a> on your machine yet, install it by 
+<a href="https://brew.sh/">following the instructions here</a>. Homebrew is a package management software.</li>
+  <li>
+    <p>If you don’t have <a href="https://git-scm.com/">git</a> yet, install it with Homebrew:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>git
+</code></pre></div>    </div>
+
+    <p>Git is a version control system (normally used for code). In our case, we use it mainly to obtain
+the project dependencies.</p>
+  </li>
+  <li>
+    <p>Clone the <code class="language-plaintext highlighter-rouge">unnamed-sdvx-clone</code> with <code class="language-plaintext highlighter-rouge">git</code>:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>git clone https://github.com/Drewol/unnamed-sdvx-clone
+</code></pre></div>    </div>
+
+    <p>This will result in the game being downloaded to a <code class="language-plaintext highlighter-rouge">unnamed-sdvx-clone</code> folder
+in your current working directory.</p>
+  </li>
+  <li>
+    <p>Navigate into the new folder, and download the submodules of the project:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>unnamed-sdvx-clone
+<span class="nv">$ </span>git submodule update <span class="nt">--init</span> <span class="nt">--recursive</span>
+</code></pre></div>    </div>
+
+    <p>This is necessary because the game has third-party dependencies, which are
+tracked as <a href="https://github.com/Drewol/unnamed-sdvx-clone/blob/develop/.gitmodules">other Github repositories</a>.</p>
+  </li>
+  <li>
+    <p>Install more dependencies required to build the project with Homebrew:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>brew <span class="nb">install </span>cmake freetype libvorbis sdl2 libpng jpeg libarchive libiconv
+</code></pre></div>    </div>
+
+    <p>These are all open source libraries required for the following reasons:</p>
+    <ul>
+      <li><a href="https://cmake.org/"><code class="language-plaintext highlighter-rouge">cmake</code></a>: a popular build system used to compile the project</li>
+      <li><a href="https://freetype.org/"><code class="language-plaintext highlighter-rouge">freetype</code></a>: for rendering fonts</li>
+      <li><a href="https://xiph.org/vorbis/"><code class="language-plaintext highlighter-rouge">libvorbis</code></a>: audio compression</li>
+      <li><a href="https://www.libsdl.org/"><code class="language-plaintext highlighter-rouge">sdl2</code></a>: get access to hardware inputs like keyboard, mouse, controller, etc</li>
+      <li><a href="https://github.com/glennrp/libpng"><code class="language-plaintext highlighter-rouge">libpng</code></a>: for using/manipulating PNG images</li>
+      <li><a href="https://www.ijg.org/"><code class="language-plaintext highlighter-rouge">jpeg</code></a>: for using/manipulating JPEG images</li>
+      <li><a href="https://www.libarchive.org/"><code class="language-plaintext highlighter-rouge">libarchive</code></a>: compression library</li>
+      <li><a href="https://www.gnu.org/software/libiconv/"><code class="language-plaintext highlighter-rouge">libiconv</code></a>: convert between different character encodings (i.e <a href="https://en.wikipedia.org/wiki/ISO/IEC_8859-1">ISO-8859-1</a> to <a href="https://en.wikipedia.org/wiki/UTF-8">UTF-8</a>)</li>
+    </ul>
+  </li>
+  <li>
+    <p>Configure the project using <code class="language-plaintext highlighter-rouge">cmake</code>. In this case, the project author
+already kindly wrapped a script around this command, so we only have to run the
+script:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>./mac-cmake.sh
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Compile and build the project:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make
+</code></pre></div>    </div>
+
+    <p>This step could take a while. If you want to speed it up, you can run it and
+specify the <code class="language-plaintext highlighter-rouge">-j</code> argument parallelize the compilation based on the number of
+cores you have (use one less than your total number of cores):</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span>make <span class="nt">-j</span> 9
+</code></pre></div>    </div>
+  </li>
+  <li>
+    <p>Run the game from the <code class="language-plaintext highlighter-rouge">bin</code> folder:</p>
+
+    <div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">$ </span><span class="nb">cd </span>bin
+<span class="nv">$ </span>./usc-game
+</code></pre></div>    </div>
+
+    <p>It is important to run it from the <code class="language-plaintext highlighter-rouge">./bin</code> folder and not the root of the
+project directory, as some skins search for file dependencies in a relative
+manner and will hence not be able to find it.</p>
+  </li>
+</ol>
+
+<h3 id="linux">Linux</h3>
+<p>Honestly if you’re on Linux, you should be able to figure it out by yourself 😊</p>
+
+<h2 id="first-startup">First Startup</h2>
+
+<p>On first startup, you should see this:</p>
+
+<figure>
+
+  
+
+  <video src="/assets/img/posts/sdvx/sdvx-initial.webm" class="z-depth-1 center" width="400px" height="auto" autoplay="" loop="" muted="" />
+
+  
+
+</figure>
+
+<p>For now, you can just use your mouse to interact with the game menu.</p>
+
+<h2 id="configuring-the-controller">Configuring The Controller</h2>
+
+<p>Let’s now setup our Yuancon controller!</p>
+
+<ol>
+  <li>
+    <p>Quit the game, and unplug your SDVX controller if it is plugged in</p>
+  </li>
+  <li>
+    <p>Hold the <code class="language-plaintext highlighter-rouge">START</code> and <code class="language-plaintext highlighter-rouge">BT-C</code> button simultaneously. The <code class="language-plaintext highlighter-rouge">START</code> button is the
+diamond-shaped button at the top, while the BT-C is the third white button from
+the left (it should also be labelled on the controller board).</p>
+
+    <p>Then while still holding down both buttons, connect it to your computer.
+This will put it in <a href="https://oniichan.wtf/help/index.html">Controller HID Mode</a>,
+where the controller inputs as a gamepad.</p>
+  </li>
+  <li>
+    <p>Start up the game again, and navigate to the <code class="language-plaintext highlighter-rouge">Settings</code> page.
+Here, you want to do the following:</p>
+
+    <ul>
+      <li>Set <code class="language-plaintext highlighter-rouge">Button input mode</code> to <code class="language-plaintext highlighter-rouge">Controller</code></li>
+      <li>Set <code class="language-plaintext highlighter-rouge">Laser input mode</code> to <code class="language-plaintext highlighter-rouge">Controller</code></li>
+      <li>Adjust laser sensitivity accordingly (I like <code class="language-plaintext highlighter-rouge">1.875</code>)</li>
+      <li>Click on each of the key bindings, and hit the corresponding
+keys on your controller. I used the button on the
+right side of the controller panel as my back button.</li>
+    </ul>
+
+    <p>You should have something that looks similar to this:</p>
+
+    <p><img src="/assets/img/posts/sdvx/sdvx-settings.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" /></p>
+  </li>
+  <li>
+    <p>Restart the game. You should now be able to use the knobs to cycle through
+the menus, and the buttons to activate them!</p>
+  </li>
+</ol>
+
+<h2 id="getting-songs">Getting Songs</h2>
+<p>Right after setup, there are no songs to play yet. USC uses
+the same chart format as <a href="https://www.kshootmania.com/en/">K-Shoot MANIA (KSM)</a></p>
+
+<p>There are a few places you can get songs:</p>
+
+<ul>
+  <li><a href="https://ksm.dev/">Nautica</a> hosts community-created KSM charts. There is also a
+  menu option to download these directly from within USC.</li>
+  <li><a href="https://oniichan.wtf/help/songs.html">Converted SDVX Charts</a>: probably somewhat 
+  questionable legally because of copyright and whatnot but a lot of people
+  recommend and use it</li>
+  <li><a href="https://www.reddit.com/r/kshootmania/wiki/gettingsongs/#wiki_getting_more_songs">This KSM FAQ page on Reddit</a> provides many useful links for downloading new songs</li>
+</ul>
+
+<p>Once you have downloaded the songs, unzip and extract them if necessary,
+and copy them into <code class="language-plaintext highlighter-rouge">./bin/songs</code>.</p>
+
+<h2 id="skinning-the-game">Skinning The Game</h2>
+
+<p>The default skin works, but it is not very impressive:</p>
+
+<figure>
+
+  
+
+  <video src="/assets/img/posts/sdvx/sdvx-default.webm" class="z-depth-1 center" width="400px" height="auto" autoplay="" loop="" muted="" />
+
+  
+
+</figure>
+
+<p>Let’s try to re-create the original SDVX arcade experience with
+skins. 
+You can get skins for the game <a href="https://oniichan.wtf/help/skins.html">here</a>.
+These are really high-effort and well-made, and huge thanks to the developers
+and artists for making them.</p>
+
+<p>Once you have downloaded the skin, extract and move them to <code class="language-plaintext highlighter-rouge">./bin/skins</code>. You
+should then be able to select the skin under the <code class="language-plaintext highlighter-rouge">Skins</code> tab of the game
+settings.</p>
+
+<p>The UI of the skin for the game may change depending on whether your
+monitor is in portrait or landscape mode. Orienting it vertically
+is recommended for the best SDVX-like experience - the spaceship(?) at
+the bottom only shows up when it’s vertical.</p>
+
+<p>Some examples of the different skins are shown below. I know, they’re pretty!</p>
+
+<p>(<em>Why are the previews so low-res? <a href="https://www.digitalocean.com/blog/its-all-about-the-bandwidth-why-many-network-intensive-services-select-digitalocean-as-their-cloud">Bandwidth costs add up!</a></em>)</p>
+
+<h3 id="liqidwave">LiqidWave</h3>
+
+<figure>
+
+  
+
+  <video src="/assets/img/posts/sdvx/vivid.webm" class="z-depth-1 center" width="400px" height="auto" autoplay="" loop="" muted="" />
+
+  
+
+</figure>
+
+<p>If you run into errors about shaders when trying to play a song, see the <a href="#common-errors">Common
+Errors</a> section below.</p>
+
+<h3 id="experimentalgear">ExperimentalGear</h3>
+
+<figure>
+
+  
+
+  <video src="/assets/img/posts/sdvx/experimental-gear.webm" class="z-depth-1 center" width="400px" height="auto" autoplay="" loop="" muted="" />
+
+  
+
+</figure>
+
+<p>As a side note, if you find the default menu text for this skin too casual/unprofessional,
+you can change it in <code class="language-plaintext highlighter-rouge">./bin/skins/ExperimentalGear/scripts/language/EN.lua</code>.</p>
+
+<h3 id="heavenly-express">Heavenly Express</h3>
+
+<figure>
+
+  
+
+  <video src="/assets/img/posts/sdvx/heavenly-express.webm" class="z-depth-1 center" width="400px" height="auto" autoplay="" loop="" muted="" />
+
+  
+
+</figure>
+
+<h2 id="crew">Crew</h2>
+<p>Not all skins come with a cast of crews, like the ExperimentalGear skin which
+only comes with a boring empty <code class="language-plaintext highlighter-rouge">nothing</code> skin in
+<code class="language-plaintext highlighter-rouge">./bin/skins/ExperimentalGear/textures/crew/anim</code>.</p>
+
+<p>As crews are very important for our psychological safety and well-being,
+fortunately we can just copy over the animations from other skins.
+In HeavenlyExpress, you can find it in <code class="language-plaintext highlighter-rouge">./bin/skins/HeavenlyExpress-1.3.0/textures/_shared/crew</code>. Similarly, in LiqidWave they are stored in <code class="language-plaintext highlighter-rouge">./bin/skins/LiqidWave-1.5.0/textures/_shared/crew</code>.</p>
+
+<figure>
+
+  
+
+  <video src="/assets/img/posts/sdvx/rasis.webm" class="z-depth-1 center" width="400px" height="auto" autoplay="" loop="" muted="" />
+
+  
+
+</figure>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>If you’ve made it this far, congrats and thanks for reading!  I hope you’ll
+enjoy the game as much as I do.  If you have any questions or run into problems,
+feel free to ask in the comments section below.</p>
+
+<h2 id="extras">Extras</h2>
+
+<h3 id="aside-ksm-chart-formats">Aside: KSM Chart Formats</h3>
+<p>KSM charts have a <code class="language-plaintext highlighter-rouge">.ksh</code> extensions. This can be a useful check to ensure
+that any charts that you download are actually for this game.</p>
+
+<p>The following is a snippet of the <code class="language-plaintext highlighter-rouge">ADV.ksh</code> (i.e advanced beatmap)
+file for YOASOBI’s Idol (アイドル):</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nv">title</span><span class="o">=</span>アイドル
+<span class="nv">artist</span><span class="o">=</span>YOASOBI /「推しの子」より
+<span class="nv">effect</span><span class="o">=</span>AS
+<span class="nv">jacket</span><span class="o">=</span>jk.jpg
+<span class="nv">illustrator</span><span class="o">=</span>-
+<span class="nv">difficulty</span><span class="o">=</span>challenge
+<span class="nv">level</span><span class="o">=</span>10
+<span class="nv">t</span><span class="o">=</span>166
+<span class="nv">m</span><span class="o">=</span>music.ogg
+<span class="nv">o</span><span class="o">=</span>0
+<span class="nb">bg</span><span class="o">=</span>desert
+<span class="nv">layer</span><span class="o">=</span>smoke
+<span class="nv">po</span><span class="o">=</span>56024
+<span class="nv">plength</span><span class="o">=</span>15000
+<span class="nv">pfiltergain</span><span class="o">=</span>50
+<span class="nv">filtertype</span><span class="o">=</span>peak
+<span class="nv">chokkakuautovol</span><span class="o">=</span>0
+<span class="nv">chokkakuvol</span><span class="o">=</span>50
+<span class="nv">ver</span><span class="o">=</span>171
+<span class="nt">--</span>
+<span class="nv">beat</span><span class="o">=</span>4/4
+0000|00|--
+<span class="nt">--</span>
+0000|00|0-
+0000|00|:-
+0000|00|o-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|o-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|P-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|P-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+0000|00|:-
+<span class="nt">--</span>
+0000|00|0-
+0000|00|:-
+<span class="nv">filtertype</span><span class="o">=</span>lpf1
+0000|00|0o
+0000|00|::
+0000|00|o0
+0000|00|::
+</code></pre></div></div>
+
+<h2 id="possible-errors-and-how-to-resolve">Possible Errors And How To Resolve</h2>
+<p>Some errors I faced when trying to setup and configure the game.</p>
+
+<h3 id="module-commonshared-not-found">module <code class="language-plaintext highlighter-rouge">commonShared</code> not found</h3>
+
+<p>If you get a Lua error about not being able to load a <code class="language-plaintext highlighter-rouge">commonShared</code> package,
+such as when using a custom skin:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>14:45:10][Error] Lua error: ...clone/bin/skins/HeavenlyExpress-1.3.0/scripts/common.lua:2: module <span class="s1">'commonShared'</span> not found:
+	no field package.preload[<span class="s1">'commonShared'</span><span class="o">]</span>
+	no file <span class="s1">'/usr/local/share/lua/5.3/commonShared.lua'</span>
+	no file <span class="s1">'/usr/local/share/lua/5.3/commonShared/init.lua'</span>
+	no file <span class="s1">'/usr/local/lib/lua/5.3/commonShared.lua'</span>
+	no file <span class="s1">'/usr/local/lib/lua/5.3/commonShared/init.lua'</span>
+	no file <span class="s1">'./commonShared.lua'</span>
+	no file <span class="s1">'./commonShared/init.lua'</span>
+	no file <span class="s1">'/Users/fanpu/unnamed-sdvx-clone/bin/skins/HeavenlyExpress-1.3.0/scripts/commonShared.lua'</span>
+	no file <span class="s1">'skins/HeavenlyExpress-1.3.0/textures/_shared/scripts/commonShared.lua'</span>
+	no file <span class="s1">'/usr/local/lib/lua/5.3/commonShared.so'</span>
+	no file <span class="s1">'/usr/local/lib/lua/5.3/loadall.so'</span>
+	no file <span class="s1">'./commonShared.so'</span>
+
+</code></pre></div></div>
+
+<p>You are likely running the game from the root of the project directory (i.e
+<code class="language-plaintext highlighter-rouge">./bin/usc-game</code>), instead of from within the <code class="language-plaintext highlighter-rouge">./bin</code> directory itself.</p>
+
+<h3 id="heavenlyexpress-skin-could-not-load-shaders">HeavenlyExpress Skin: Could not load shaders</h3>
+
+<p>If you are using the HeavenlyExpress skin, you may run into the following
+error after selecting a track to play:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Shader Error: 
+Could not load shaders skins/HeavenlyExpress-1.3.0/shaders/holdbutton.vs 
+and skins/HeavenlyExpress-1.3.0/shaders/holdbutton.fs
+</code></pre></div></div>
+
+<p>You may also get logs like this:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">[</span>14:58:37][Error] Shader program compile log <span class="k">for</span> /Users/fanpu/unnamed-sdvx-clone/bin/skins/HeavenlyExpress-1.3.0/shaders/holdbutton.vs: ERROR: 0:6: <span class="s1">'varying'</span> : syntax error: syntax error
+
+<span class="o">[</span>14:58:37][Error] Shader program compile log <span class="k">for</span> /Users/fanpu/unnamed-sdvx-clone/bin/skins/HeavenlyExpress-1.3.0/shaders/holdbutton.fs: ERROR: 0:10: <span class="s1">'varying'</span> : syntax error: syntax error
+
+<span class="o">[</span>14:58:37][Error] Failed to load vertex shader <span class="k">for </span>material from /Users/fanpu/unnamed-sdvx-clone/bin/skins/HeavenlyExpress-1.3.0/shaders/holdbutton.vs
+</code></pre></div></div>
+
+<p>The shaders were probably written a long time ago, since
+the <code class="language-plaintext highlighter-rouge">varying</code> keyword has been deprecated since OpenGL 3.3.
+It was previously used as a qualifier for variables that communicate
+between the vertex shader and the fragment shader, that is now
+replaced by the <code class="language-plaintext highlighter-rouge">in</code> and <code class="language-plaintext highlighter-rouge">out</code> qualifiers to provide a more clear distinction of
+data flow between shaders.</p>
+
+<p>To fix this, modify the two files and change the <code class="language-plaintext highlighter-rouge">varying</code>
+keyword to <code class="language-plaintext highlighter-rouge">out</code> in both files:</p>
+
+<p>In file <code class="language-plaintext highlighter-rouge">bin/skins/HeavenlyExpress-1.3.0/shaders/holdbutton.vs</code>:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#version 330
+#extension GL_ARB_separate_shader_objects : enable
+</span><span class="n">layout</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="n">in</span> <span class="n">vec2</span> <span class="n">inPos</span><span class="p">;</span>
+<span class="n">layout</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="n">in</span> <span class="n">vec2</span> <span class="n">inTex</span><span class="p">;</span>
+
+<span class="n">out</span> <span class="n">vec4</span> <span class="n">position</span><span class="p">;</span> <span class="c1">// update here</span>
+
+<span class="n">out</span> <span class="n">gl_PerVertex</span>
+<span class="p">{</span>
+        <span class="n">vec4</span> <span class="n">gl_Position</span><span class="p">;</span>
+<span class="p">};</span>
+
+<span class="p">...</span><span class="n">rest</span> <span class="n">of</span> <span class="n">file</span> <span class="n">omitted</span><span class="p">...</span>
+</code></pre></div></div>
+
+<p>In file <code class="language-plaintext highlighter-rouge">bin/skins/HeavenlyExpress-1.3.0/shaders/holdbutton.fs</code>:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#version 330
+#extension GL_ARB_separate_shader_objects : enable
+</span>
+<span class="n">layout</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span> <span class="n">in</span> <span class="n">vec2</span> <span class="n">fsTex</span><span class="p">;</span>
+<span class="n">layout</span><span class="p">(</span><span class="n">location</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span> <span class="n">out</span> <span class="n">vec4</span> <span class="n">target</span><span class="p">;</span>
+
+<span class="n">uniform</span> <span class="n">sampler2D</span> <span class="n">mainTex</span><span class="p">;</span>
+<span class="n">uniform</span> <span class="kt">float</span> <span class="n">objectGlow</span><span class="p">;</span>
+
+<span class="n">out</span> <span class="n">vec4</span> <span class="n">position</span><span class="p">;</span> <span class="c1">// update here</span>
+
+<span class="p">...</span><span class="n">rest</span> <span class="n">of</span> <span class="n">file</span> <span class="n">omitted</span><span class="p">...</span>
+</code></pre></div></div>
+
+<p>Restart the game and you should be good now.</p>
+
+<h3 id="experimentalgear-custom-skin-does-not-change">ExperimentalGear Custom Skin Does Not Change</h3>
+
+<p>I faced issues where it appeared that the value that I set in the settings page
+for the skin to use was not being saved. I resolved
+this by manually editing the config file in
+<code class="language-plaintext highlighter-rouge">./bin/skins/ExperimentalGear/skin.cfg</code>.</p>]]></content><author><name>fanpu</name></author><category term="general" /><category term="rhythm-games" /><summary type="html"><![CDATA[Rhythm is just a $200 controller and some hopefully-not-too-complicated open source software setup away! This beginner's guide will help to demystify the process of setting up Sound Voltex at home using a custom SDVX controller using Unnamed SDVX Clone.]]></summary></entry><entry><title type="html">Creating Trackback Requests for Static Sites</title><link href="https://fanpu.io/blog/2023/creating-trackback-requests/" rel="alternate" type="text/html" title="Creating Trackback Requests for Static Sites" /><published>2023-09-01T00:00:00+00:00</published><updated>2023-09-01T00:00:00+00:00</updated><id>https://fanpu.io/blog/2023/creating-trackback-requests</id><content type="html" xml:base="https://fanpu.io/blog/2023/creating-trackback-requests/"><![CDATA[<p>In this article, I will show you how you can generate trackback requests to
+external websites to link back to your static site like
+<a href="https://jekyllrb.com/">Jekyll</a> or <a href="https://gohugo.io/">Hugo</a>.
+I decided to write this article after realizing how there is almost no
+information online about how to make DIY trackback requests when I was
+trying to set it up.</p>
+
+<h2 id="what-is-trackback">What is Trackback?</h2>
+<p>From <a href="">Wikipedia</a>:</p>
+
+<blockquote>
+  <p>A trackback allows one website to notify another about an update. It is one
+of four types of linkback methods for website authors to request notification
+when somebody links to one of their documents. This enables authors to keep
+track of who is linking to their articles. Some weblog software, such as
+SilverStripe, WordPress, Drupal, and Movable Type, supports automatic pingbacks
+where all the links in a published article can be pinged when the article is
+published. The term is used colloquially for any kind of linkback.</p>
+</blockquote>
+
+<p>Essentially, it is a mechanism for other websites to know that you mentioned them,
+with the hope that they’ll notice you and possibly mention you as well.
+It helps to increase the visibility and discoverability of your website.</p>
+
+<h2 id="use-case">Use Case</h2>
+<p>My use case was to send trackbacks to <a href="https://info.arxiv.org/help/trackback.html">arXiv</a>,
+so that specific arXiv papers will know that my blog post mentioned them, and readers
+can also check it out as an additional resource. In particular, each of my <a href="summaries">paper summary</a> posts is based around a paper, and it would be nice if they could be linked from the respective arXiv paper abstract pages.</p>
+
+<p>In arXiv, there is a blog link section that will track websites that made trackback
+requests for a given paper:</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/trackback_post/trackback_blog_link.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture>
+</figure>
+
+<p>Unfortunately, if you try to search for anything about trackbacks and/or
+pingbacks, most of what you’ll get are articles about how to disable them on
+popular blogging platforms like WordPress due to <a href="https://blog.hubspot.com/website/trackback-spam">widespread misuse and spam</a>, or
+otherwise how to configure them.</p>
+
+<p>There was also a 7-year old <a href="https://superuser.com/questions/1098682/how-to-send-trackback-to-arxiv-papers-from-a-jekyll-blog">StackOverflow post</a> about how to
+create trackback requests for arXiv, essentially the same problem I was facing. 
+Sadly, it currently has a grand total of 0 answers and 0 comments. I hope this
+article might be useful if the author is still facing the issue.</p>
+
+<h2 id="manually-creating-trackback-requests">Manually Creating Trackback Requests</h2>
+<p>The convenience of CMS blogging software like
+<a href="https://wordpress.org/documentation/article/trackbacks-and-pingbacks/">WordPress</a>
+is that it supports features like automated trackbacks and pingbacks for content
+that you create. Static site generators are not capable of this, since by design they
+are static and stateless. This means that we have to make such requests manually,
+which is fortunately not too difficult!</p>
+
+<p>Here’s a very simple script for doing it. In this example, the target URL
+is for the arXiv trackback endpoint.</p>
+
+<p>Before reading or running the code, please note that you <strong>SHOULD NOT</strong> test or
+experiment on this with trackback listener URLs and spam them. You should only
+make requests if they are legitimate and you have a genuine reason for letting
+them know about your blog post.  Trackback spam is a serious issue and part of
+why they have become so unpopular and unmanageable is due to the high volumes of
+spam.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="code"><pre><span class="kn">import</span> <span class="n">requests</span>
+
+<span class="c1"># Replace with your own data
+</span><span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="sh">'</span><span class="s">title</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">My Awesome Blog Post</span><span class="sh">'</span><span class="p">,</span>
+    <span class="sh">'</span><span class="s">url</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">https://my-blog.com/post/</span><span class="sh">'</span><span class="p">,</span>
+    <span class="sh">'</span><span class="s">blog_name</span><span class="sh">'</span><span class="p">:</span> <span class="sh">'</span><span class="s">My Awesome Blog</span><span class="sh">'</span>
+<span class="p">}</span>
+
+<span class="c1"># Replace with actual Trackback destination URL
+</span><span class="n">trackback_url</span> <span class="o">=</span> <span class="sa">f</span><span class="sh">'</span><span class="s">https://foo.bar/trackback/post_id</span><span class="sh">'</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="p">.</span><span class="nf">post</span><span class="p">(</span><span class="n">trackback_url</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="n">data</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">response</span><span class="p">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sh">"</span><span class="s">Trackback successful!</span><span class="sh">"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nf">print</span><span class="p">(</span><span class="sa">f</span><span class="sh">"</span><span class="s">Trackback failed with status code: </span><span class="si">{</span><span class="n">response</span><span class="p">.</span><span class="n">status_code</span><span class="si">}</span><span class="sh">"</span><span class="p">)</span>
+
+<span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">.</span><span class="n">content</span><span class="p">.</span><span class="nf">decode</span><span class="p">())</span>
+</pre></td></tr></tbody></table></code></pre></figure>
+
+<p>A successful response has the <code class="language-plaintext highlighter-rouge">error</code> field set to <code class="language-plaintext highlighter-rouge">0</code>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;response&gt;</span>
+  <span class="nt">&lt;error&gt;</span>0<span class="nt">&lt;/error&gt;</span>
+<span class="nt">&lt;/response&gt;</span></code></pre></figure>
+
+<p>If an error occured, the <code class="language-plaintext highlighter-rouge">error</code> field is set to <code class="language-plaintext highlighter-rouge">1</code>:</p>
+
+<figure class="highlight"><pre><code class="language-xml" data-lang="xml"><span class="cp">&lt;?xml version="1.0" encoding="utf-8"?&gt;</span>
+<span class="nt">&lt;response&gt;</span>
+  <span class="nt">&lt;error&gt;</span>1<span class="nt">&lt;/error&gt;</span>
+  <span class="nt">&lt;message&gt;</span>(some error message)<span class="nt">&lt;/message&gt;</span>
+<span class="nt">&lt;/response&gt;</span></code></pre></figure>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>And that’s all there is to creating Trackback requests! It’s actually quite
+simple, and is just not terribly well-documented.</p>
+
+<p>As a final parting word, a reminder again to please use it <em>responsibly</em> and <em>stay
+away from any behavior that could be constituted as spamming</em>.</p>]]></content><author><name>fanpu</name></author><category term="code" /><category term="general" /><summary type="html"><![CDATA[A simple guide on creating manual Trackback requests for static sites to increase visibility and discoverability]]></summary></entry><entry><title type="html">A Unified Framework for High-Dimensional Analysis of M-Estimators with Decomposable Regularizers: A Guided Walkthrough</title><link href="https://fanpu.io/blog/2023/high-dimensional-analysis-of-m-estimators/" rel="alternate" type="text/html" title="A Unified Framework for High-Dimensional Analysis of M-Estimators with Decomposable Regularizers: A Guided Walkthrough" /><published>2023-07-14T00:00:00+00:00</published><updated>2023-07-14T00:00:00+00:00</updated><id>https://fanpu.io/blog/2023/high-dimensional-analysis-of-m-estimators</id><content type="html" xml:base="https://fanpu.io/blog/2023/high-dimensional-analysis-of-m-estimators/"><![CDATA[\[\newcommand{\rcal}{\mathcal{R}}
+    \newcommand{\lcal}{\mathcal{L}}
+    \newcommand{\mcal}{\mathcal{M}}
+    \newcommand{\mocal}{\overline{\mathcal{M}}}
+    \newcommand{\mocalp}{\overline{\mathcal{M}}^\perp}
+    \newcommand{\mcalp}{\mathcal{M}^\perp}
+    \newcommand{\sse}{\subseteq}
+    \newcommand{\kl}{\kappa_{\lcal}}
+    \newcommand{\tl}{\tau_{\lcal}}
+    \newcommand{\ts}{\theta^*}
+    \newcommand{\hd}{\widehat{\Delta}}
+    \newcommand{\thatn}{\hat{\theta}_n}
+    \newcommand{\that}{\hat{\theta}}
+    \newcommand{\thatlambda}{\widehat{\theta}_{\lambda_n}}
+    \newcommand{\thatl}{\thatlambda}
+    \newcommand{\rs}{\rcal^*}
+    \newcommand{\ctriplet}{ \C(\mcal, \mocalp; \ts) }
+    \newcommand{\fcal}{\mathcal{F}}
+    \newcommand{\kbb}{\mathbb{K}}
+\newcommand{\dotprod}[2]{\langle #1, #2 \rangle}
+    \DeclareMathOperator*{\argmin}{arg\,min}\]
+
+<h1 id="introduction">Introduction</h1>
+
+<p>In high-dimensional statistical inference, it is common for the number of
+parameters \(p\) to be comparable to or greater than the sample size \(n\).
+However, for an estimator \(\thatn\) to be consistent in such a regime,
+meaning that it converges to the true parameter \(\theta\),
+it is necessary to make additional low-dimensional
+assumptions on the model.
+Examples of such constraints that have been well-studied include
+linear regression with sparsity constraints, estimation of structured covariance
+or inverse covariance matrices, graphical model selection, sparse principal
+component analysis (PCA), low-rank matrix estimation, matrix decomposition problems
+and estimation of sparse additive nonparametric models <a href="https://arxiv.org/abs/1010.2731">(Negahban et al., 2009)</a>.</p>
+
+<p>In recent years, there has been a flurry of work on each of these individual specific cases.
+However, the authors of the paper in discussion poses the question of whether there is a way
+of unifying these analysis to understand all of such estimators in a common framework,
+and answers it in the affirmative. They showed that it is possible to bound
+the squared difference between any regularized \(M\)-estimator and its true
+parameter by (1) the decomposability of the regularization function, and (2)
+restricted strong convexity of the loss function. We will call this the “main theorem”
+in the remainder of the blog post, and this is referred to as “Theorem 1” in <a href="https://arxiv.org/abs/1010.2731">(Negahban et al., 2009)</a>.</p>
+
+<p>In the remainder of the paper, we will develop the tools necessary to deeply
+understand and prove the result. Notation used will be consistent with the
+original paper for expositional clarity.</p>
+
+<h1 id="background">Background</h1>
+
+<p>In this section, we develop some of the necessary background and notation to build up to the proof.</p>
+
+<h2 id="regularized-m-estimators">Regularized \(M\)-estimators</h2>
+
+<p>\(M\)-estimators (\(M\) for “maximum likelihood-type”) are solutions that minimize the sum of loss functions \(\rho\):
+\begin{align}
+    \that \in \argmin_\theta \sum_{i=1}^n \rho(x_i, \theta).
+\end{align}</p>
+
+<p>If we add a regularization term \(\rcal\) to penalize complexity of the model, scaled by weights \(\lambda\), the method is known as a regularized \(M\)-estimator:
+\begin{align}
+    \that \in \argmin_\theta \sum_{i=1}^n \rho(x_i, \theta) + \lambda \rcal(\theta).
+\end{align}</p>
+
+<div class="example">
+    <div class="theorem-title">Example
+        
+        
+            (Lasso Program)
+        
+    </div>
+    <div class="theorem-contents">
+        
+    The Lasso program is an example of a regularized \( M \)-estimator, where a
+    \( \ell_1 \) regularization penalty is applied:
+    $$
+        \that \in \argmin_{\theta \in \mathbb{R}^d} \left\{
+        \frac{1}{2n} \| y - \bX \theta \|_2^2 + \lambda_n \| \theta \|_1
+        \right\}.
+    $$
+  
+    </div>
+</div>
+
+<h2 id="dual-norms">Dual Norms</h2>
+
+<div class="definition">
+    <div class="theorem-title">Definition
+        
+        
+            (Dual Norms)
+        
+    </div>
+    <div class="theorem-contents">
+        
+    Let \(\rcal\) be a norm induced by an inner product
+    \(\dotprod{\cdot}{\cdot}\). Then the dual norm of \(\rcal\)
+    is defined as
+    $$
+        \rs(v) \coloneqq \sup_{u \in \mathbb{R}^p \setminus \left\{ 0 \right\}}
+        \frac{ \dotprod{u}{v} }{\rcal (u)} = \sup_{\rcal(u) \leq 1} \dotprod{u}{v}.
+    $$
+  
+    </div>
+</div>
+
+<div class="example">
+    <div class="theorem-title">Example
+        
+        
+            (\(\ell_1\) and \(\ell_\infty\) norms are dual norms)
+        
+    </div>
+    <div class="theorem-contents">
+        
+  We will show that the dual of the \( \ell_1 \) norm is the \( \ell_\infty \) norm.
+
+Well, to see that \( \rs(v) \leq \| v \|_\infty \), observe that
+        \begin{align*}
+            \rs(v)
+             &amp; = \sup_{\| u \|_1 \leq 1} \dotprod{u}{v}                                        \\
+             &amp; = \sup_{\| u \|_1 \leq 1} \sum_{k=1}^p | u_k | | v_k |                          \\
+             &amp; \leq \sup_{\| u \|_1 \leq 1} \left( \sum_{k=1}^p | u_k | \right) \| v \|_\infty \\
+             &amp; = | v |_\infty   \tag{since \( \| u \|_1 \leq 1 \) }.
+        \end{align*}
+        For the opposite direction,
+
+        \begin{align*}
+            \sup_{\| u \|_1 \leq 1} \dotprod{u}{v}
+             &amp; = \sup_{\| u \|_1 \leq 1} \sum_{k=1}^p |u_k| |v_k|                               \\
+             &amp; \geq 1 \cdot |v_j| \tag{
+             set \( j = \argmax_j |v_j|, u = \be_j \)
+             } \\
+             &amp; = \| v \|_\infty,
+        \end{align*}
+        hence we have equality.
+
+  
+    </div>
+</div>
+
+<h2 id="subspace-compatibility-constant">Subspace Compatibility Constant</h2>
+
+<p>The subspace compatibility constant measures how much the regularizer \(\rcal\) can change
+with respect to the error norm  \(\| \cdot \|\) restricted to the subspace \(\mcal\).
+This concept will show up later in showing that the restricted strong convexity
+condition will hold with certain parameters.</p>
+
+<p>The subspace compatibility constant is defined as follows:</p>
+
+<div class="definition">
+    <div class="theorem-title">Definition
+        
+        
+            (Subspace Compatibility Constant)
+        
+    </div>
+    <div class="theorem-contents">
+        
+    For any subspace \( \mcal \) of \( \mathbb{R}^p \), the <i>subspace compatibility constant</i>
+    with respect to the pair \( (\rcal, \| \cdot \|) \) is given by
+
+    $$
+        \varPsi (\mcal) \coloneqq \sup_{u \in \mcal \setminus \left\{ 0 \right\}} \frac{\rcal(u)}{\| u \|}.
+    $$
+    
+    </div>
+</div>
+
+<p>It can be thought of as the Lipschitz constant of the regularizer with respect to the error norm
+restricted to values in \(\mcal\),
+by considering the point where it can vary the most.</p>
+
+<h2 id="projections">Projections</h2>
+<p>Define the projection operator
+\begin{align}
+    \Pi_{\mcal}(u) \coloneqq \argmin_{v \in \mcal} | u - v |
+\end{align}
+to be the projection of \(u\) onto the subspace \(\mcal\).
+For notational brevity, we will use the shorthand \(u_{\mcal} = \Pi_{\mcal}(u)\).</p>
+
+<p>One property of the projection operator is that it is non-expansive, meaning that
+\begin{align}
+    | \Pi(u) - \Pi(v) | \leq | u - v | \label{eq:non-expansive}
+\end{align}
+for some error norm \(\| \cdot \|\). In other words, it has Lipschitz constant 1.</p>
+
+<h1 id="problem-formulation">Problem Formulation</h1>
+
+<p>In our setup, we define the following quantities:</p>
+
+<ul>
+  <li>\(Z_1^n \coloneqq \left\{ Z_1, \cdots, Z_n \right\}\) \(n\) i.i.d observations
+      drawn from distribution \(\mathbb{P}\) with some parameter \(\theta^*\),</li>
+  <li>\(\mathcal{L}: \mathbb{R}^p \times \mathcal{Z}^n \to \mathbb{R}\) a convex and differentiable loss function, such that \(\mathcal{L}(\theta; Z_1^n)\) returns the loss of \(\theta\) on observations \(Z_1^n\),</li>
+  <li>\(\lambda_n &gt; 0\): a user-defined regularization penalty,</li>
+  <li>\(\mathcal{R} : \mathbb{R}^p \to \mathbb{R}_+\) a norm-based regularizer.</li>
+</ul>
+
+<p>The purpose of the regularized \(M\)-estimator is then to solve for the convex optimization problem</p>
+
+\[\begin{align} \label{eq:opt}
+    \widehat{\theta}_{\lambda_n} \in \argmin_{\theta \in \mathbb{R}^p} \left\{
+    \mathcal{L}(\theta; Z_1^n) + \lambda_n \mathcal{R} (\theta) \right\},
+\end{align}\]
+
+<p>and we are interested in deriving bounds on
+\(\begin{align}
+    \| \thatlambda - \theta^* \|
+\end{align}\)
+for some error norm \(\| \cdot \|\) induced by an inner product \(\langle \cdot, \cdot \rangle\) in \(\mathbb{R}^p\).</p>
+
+<h1 id="decomposability-of-the-regularizer-mathcalr">Decomposability of the Regularizer \(\mathcal{R}\)</h1>
+
+<p>The first key property in the result is decomposability of our norm-based regularizer \(\rcal\).
+Working in the ambient \(\mathbb{R}^p\), define \(\mcal \sse \mathbb{R}^p\) to be the model subspace that captures
+the constraints of the model that we are working with (i.e \(k\)-sparse vectors),
+and denote \(\mocal\) to be its closure, i.e the union of \(\mcal\) and all of its limit points.
+In addition, denote \(\mocalp\) to be the orthogonal complement of \(\mocal\), namely</p>
+
+\[\begin{align}
+    \mocalp \coloneqq \left\{ v \in \mathbb{R}^p \mid \langle u, v \rangle = 0 \text{ for all \( u \in \mocal \) }
+    \right\}.
+\end{align}\]
+
+<p>We call this the perturbation subspace, as they represent perturbations away from the model subspace \(\mocal\).
+The reason why we need to consider \(\mocal\) instead of \(\mcal\) is because there are some special cases
+of low-rank matrices and nuclear norms where it could be possible that \(\mcal\) is strictly contained in \(\mocal\).</p>
+
+<p>Now we can introduce the property of decomposability:</p>
+
+<div class="definition">
+    <div class="theorem-title">Definition
+        
+        
+            (Regularizer Decomposability)
+        
+    </div>
+    <div class="theorem-contents">
+        
+      Given a pair of subspaces \( \mcal \sse \mocal \), a norm-based regularizer
+    \( \rcal \) is <i>decomposable</i> with respect to \( (\mocal, \mocalp) \) if
+
+    $$
+        \rcal(\theta + \gamma) = \rcal(\theta) + \rcal(\gamma)
+    $$
+
+    for all \( \theta \in \mcal \) and \( \gamma \in \mocalp \).
+  
+    </div>
+</div>
+
+<p>Since \(\rcal\) is a norm-based regularizer, by the triangle inequality property of norms we know that always
+\begin{align}
+    \rcal(\theta + \gamma) \leq \rcal(\theta) + \rcal(\gamma),
+\end{align}
+and hence this is a stronger condition which requires tightness in the
+inequality when we are specifically considering elements in the closure of the
+model subspace and its orthogonal complement.</p>
+
+<p>Decomposability of the regularizer is important as it allows us to penalize deviations \(\gamma\)
+away from the model subspace in \(\mcal\) to the maximum extent possible.
+We are usually interested to find model subspaces that are small, with a large orthogonal complement.
+We will see in the main theorem that when this is the case, we will obtain better rates for estimating
+\(\theta^*\).</p>
+
+<p>There are many natural contexts that admit regularizers which are decomposable with respect to subspaces,
+and the following example highlights one such case.</p>
+
+<div class="example">
+    <div class="theorem-title">Example
+        
+        
+            (\( s \)-sparse Vectors)
+        
+    </div>
+    <div class="theorem-contents">
+        
+      Consider estimating the parameters \( \that \) with \( \ell_1 \)-regularization in \( \mathbb{R}^p \) where we assume that
+    the model is \( s \)-sparse. Then for any set \( S \sse [p] \) where \( |S| = s \),
+    we can define our model subspace \( \mcal \) as
+
+    \[
+    \begin{align*}
+        \mcal(S) \coloneqq \left\{ \theta \in \mathbb{R}^p \mid \theta_j = 0 \quad \forall j \not\in S \right\},
+    \end{align*}
+    \]
+
+    i.e all the vectors in \( \mathbb{R}^p \) that only has support in \( S \). In this case, \( \mcal = \mocal \),
+    and our orthogonal complement \( \mocalp \) is just
+
+    \[
+    \begin{align*}
+        \mocalp(S) \coloneqq \left\{ \gamma \in \mathbb{R}^p \mid \gamma_j = 0 \quad \forall j \in S \right\}.
+    \end{align*}
+    \]
+
+    Then this setup is decomposable:
+
+    \[
+    \begin{align*}
+        \| \theta + \gamma \|_1 = \| \theta_S + \gamma_{S^c} \|_1 = \| \theta_S \|_1 + \| \gamma_{S^c} \| = \| \theta \|_1 + \| \gamma \|_1
+    \end{align*}
+    \] 
+
+    by the Pythagorean theorem.
+  
+    </div>
+</div>
+
+<h2 id="role-of-decomposability">Role of Decomposability</h2>
+
+<figure id="fig-1">
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/high-dimensional-analysis-of-m-estimators/c_illust.webp" class="z-depth-1 center" width="500px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption"><i>Figure 1.</i>
+      
+        A visualization of \( \ctriplet \).  The shaded area represents the set
+        \( \ctriplet \), i.e all values of \( \theta \) that satisfies the inequality of
+        the set in Lemma 1. 
+    
+    </figcaption>
+</figure>
+
+<p>Decomposability is important because it allows us to bound the error of the estimator.
+This is given in the following result, which is known as Lemma 1 in <a href="https://arxiv.org/abs/1010.2731">(Negahban et al., 2009)</a>:</p>
+
+<div class="lemma" id="lemma-1">
+    <div class="theorem-title">Lemma
+        
+        
+            (Lemma 1 in 
+  <a href="https://arxiv.org/abs/1010.2731">
+    (Negahban et al., 2009)
+  </a>)
+        
+    </div>
+    <div class="theorem-contents">
+        
+    Suppose that \( \lcal \) is a convex and differentiable function, and consider
+    any optimal solution \( \that \) to the optimization problem
+    with a strictly positive regularization parameter satisfying
+
+    $$
+    \begin{align*}
+        \lambda_n \geq 2 \rcal^* (\nabla \lcal (\ts; Z_1^n)).
+    \end{align*}
+    $$
+
+    Then for any pair \( (\mcal, \mocalp) \) over which \( \rcal \) is decomposable,
+    the error \( \hd = \thatlambda - \ts  \) belongs to the set
+
+    $$
+    \begin{align*} \label{eq:c}
+        \C(\mcal, \mocalp; \ts) \coloneqq \left\{  \Delta \in \mathbb{R}^p \mid
+        \rcal(\Delta_{\mocalp}) \leq 3 \rcal (\Delta_{\mocal}) + 4 \rcal (\ts_{\mcalp})
+        \right\}.
+    \end{align*}
+    $$
+  
+    </div>
+</div>
+
+<p>Recall from the <a href="#projections">Projections Section</a> that
+\(\Delta_{\mocalp}\) represents the projection of \(\Delta\) onto \(\mocalp\), and similarly
+for the other quantities.
+Due to space constraints, we are unable to prove Lemma <a href="#lemma-1">Lemma 1</a> in this survey,
+but it is very important in the formulation of restricted strong convexity, and in proving
+<a href="#thm-1">Theorem 1</a>.</p>
+
+<p><a href="#fig-1">Figure 1</a> provides a visualization of \(\ctriplet\) in \(\mathbb{R}^3\) in the
+sparse vectors setting. In this case, \(S = \left\{ 3 \right\}\) with \(|S|=1\),
+and so the projection of \(\Delta\) onto the model subspace only has non-zero
+values on the third coordinate, and its orthogonal complement is where the third
+coordinate is zero. Formally,</p>
+
+\[\begin{align}
+    \mcal(S) = \mocal(S) &amp; = \left\{ \Delta \in \mathbb{R}^3 \mid \Delta_1 = \Delta_2 = 0 \right\}, \\
+    \mocalp(S)           &amp; = \left\{ \Delta \in \mathbb{R}^3 \mid \Delta_3 = 0 \right\}.
+\end{align}\]
+
+<p>The vertical axis of <a href="#fig-1">Figure 1</a> denotes the third coordinate,
+and the horizontal plane denotes the first two coordinates.
+The shaded area
+represents the set \(\ctriplet\), i.e all values of \(\theta\) that satisfies the inequality
+of the set in <a href="#lemma-1">Lemma 1</a>.</p>
+
+<p><a href="#fig-1">Figure 1(a)</a> shows the special case
+when \(\ts \in \mcal\). In this scenario, \(\rcal (\ts_{\mcalp}) = 0\), and so</p>
+
+\[\begin{align*}
+    \C(\mcal, \mocalp; \ts) = \left\{  \Delta \in \mathbb{R}^p \mid
+    \rcal(\Delta_{\mocalp}) \leq 3 \rcal (\Delta_{\mocal}) \right\},
+\end{align*}\]
+
+<p>which is a cone.</p>
+
+<p>However, in the general setting where \(\ts \not\in \mcal\),
+then \(\rcal (\ts_{\mcalp}) &gt; 0\), and the set \(\ctriplet\) will become a star-shaped set
+like what is shown in <a href="#fig-1">Figure 1(b)</a>.</p>
+
+<h1 id="restricted-strong-convexity-rsc-of-the-loss-function">Restricted Strong Convexity (RSC) of the Loss Function</h1>
+
+<figure id="fig-2">
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/high-dimensional-analysis-of-m-estimators/curvature.webp" class="z-depth-1 center" width="500px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption"><i>Figure 2.</i>
+      
+        An illustration of the role of curvature in guaranteeing that
+        \( \hd = \thatlambda - \ts \) is small when \( \lcal(\thatlambda) - \lcal(\ts) \) is small.
+    
+    </figcaption>
+</figure>
+
+<p>In a classical setting, as the number of samples \(n\) increases, the difference
+in loss \(d \lcal = |\lcal(\thatlambda) - \lcal(\ts)|\) will converge to zero.
+However, the convergence in loss by itself is insufficient to also ensure
+the convergence in parameters, \(\hd = \thatlambda - \ts\). Instead, it also
+depends on the curvature of the loss function \(\lcal\).</p>
+
+<p><a href="#fig-2">Figure 2</a> illustrates the importance of curvature.
+In <a href="#fig-2">Figure 2(a)</a>, \(\lcal\) has high curvature, and so
+having a small \(d\lcal\) also implies a small \(\hd\). On the other hand,
+in <a href="#fig-2">Figure 2(b)</a>, \(\lcal\) has an almost flat landscape
+near \(\thatlambda\), and hence even when \(d \lcal\) is small,
+\(\hd\) could still be large.</p>
+
+<p>Consider performing a Taylor expansion of \(\lcal\) around \(\ts\):</p>
+
+\[\begin{align}
+    \lcal(\ts + \Delta)
+     &amp; = \lcal(\ts) + \dotprod{\nabla \lcal(\ts)}{\Delta}
+    + \underbrace{\frac{1}{2} \Delta^T \nabla^2 \lcal(\ts) \Delta + \dots}_{\delta \lcal(\Delta, \ts)}.
+\end{align}\]
+
+<p>Then we can rearrange and write the error of the first-order Taylor series expansion at \(\ts\) as</p>
+
+\[\begin{align*}
+    \delta \lcal(\Delta, \ts) = \lcal(\ts + \Delta) - \lcal(\ts) -
+    \dotprod{\nabla \lcal(\ts)}{\Delta}.
+\end{align*}\]
+
+<p>The first-order Taylor approximation is a linear approximation, and hence the error
+\(\delta \lcal(\Delta, \ts)\), which is dominated by the quadratic term, can capture the curvature
+about \(\ts\).</p>
+
+<p>As such, one way to show that \(\lcal\) has good curvature about \(\ts\) is to show that
+\(\delta \lcal(\Delta, \ts) \geq \kappa \|\Delta \|^2\) holds for all \(\Delta\) in
+a neighborhood of \(\ts\). This is because we are enforcing a lower bound on its quadratic growth.</p>
+
+<p>This leads us to the definition of restricted strong convexity:</p>
+
+<div class="definition">
+    <div class="theorem-title">Definition
+        
+        
+            (Restricted Strong Convexity)
+        
+    </div>
+    <div class="theorem-contents">
+        
+    The loss function satisfies a <i>restricted strong convexity</i> (RSC)
+    condition with curvature \( \kl &gt; 0 \) and tolerance function \( \tl \) if
+    \begin{align*}
+        \delta \lcal(\Delta, \ts) \geq \kl \| \Delta \|^2 - \tl^2(\ts)
+    \end{align*}
+    for all \( \Delta \in \ctriplet \).
+  
+    </div>
+</div>
+
+<p>We only need to consider error terms \(\Delta \in \ctriplet\), since Lemma \ref{lemma:1}
+guarantees us that the error term will only lie in that set.</p>
+
+<p>In many statistical models, restricted strong convexity holds with \(\tl = 0\), however, it is required in more general settings, such as generalized linear models.</p>
+
+<h1 id="proof-of-theorem-1">Proof of Theorem 1</h1>
+<p>We can now state and prove the main result of the paper.
+This will hold under the decomposability of the regularizer (G1), and the
+restricted strong convexity of the loss function (G2).</p>
+
+<ul>
+  <li>
+    <p><strong>(G1)</strong>
+      The regularizer \(\rcal\) is a norm and is decomposable
+      with respect to the subspace pair \((\mcal, \mocalp)\), where \(\mcal \sse \mocalp\).</p>
+  </li>
+  <li>
+    <p><strong>(G2)</strong>
+      The loss function \(\lcal\) is convex and differentiable, and satisfies restricted strong convexity
+      with curvature \(\kl\) and tolerance \(\tl\).</p>
+  </li>
+</ul>
+
+<div class="theorem" id="thm-1">
+    <div class="theorem-title">Theorem
+        
+            1 in (Negahban et al., 2009)
+        
+        
+            (Bounds for General Models)
+        
+    </div>
+    <div class="theorem-contents">
+        
+      Under conditions (G1) and (G2),
+    consider the convex optimization problem (\ref{eq:opt})
+    based on a strictly positive positive regularization constant
+    \( \lambda_n \geq 2 \rs (\nabla \lcal (\ts)) \). Then any optimal solution
+    \( \thatlambda \) to the convex program (\ref{eq:opt}) satisfies the bound
+    \begin{align*}
+        \| \thatlambda - \ts \|^2 \leq 9 \frac{\lambda_n^2}{\kl^2} \Psi^2(\mocal)
+        + \frac{\lambda_n}{\kl} \left( 2 \tl^2 (\ts) + 4 \rcal (\ts_{\mcal^{\perp}}) \right).
+    \end{align*}
+  
+    </div>
+</div>
+
+<p>We will rely on the following lemmas that will be stated without proof due to space constraints:</p>
+
+<div class="lemma">
+    <div class="theorem-title">Lemma
+        
+            3 in (Negahban et al., 2009)
+        
+        
+            (Deviation Inequalities)
+        
+    </div>
+    <div class="theorem-contents">
+        
+    For any decomposable regularizer and \( p \)-dimensional
+    vectors \( \ts \) and \( \Delta \), we have
+    \begin{align*}
+        \rcal(\ts + \Delta) - \rcal(\ts) \geq
+        \rcal(\Delta_{\mocalp}) - \rcal(\Delta_{\mocal}) - 2 \rcal(\ts_{\mcal^{\perp}}).
+    \end{align*}
+    Moreover, as long as \( \lambda_n \geq 2 \rs (\nabla \lcal(\ts)) \) and \( \lcal \) is convex, we have
+    \begin{align*}
+        \lcal(\ts + \Delta) - \lcal(\ts) \geq - \frac{\lambda_n}{2} [\rcal(\Delta_{\mocal}) + \rcal(\Delta_{\mocalp})].
+    \end{align*}
+  
+    </div>
+</div>
+
+<div class="lemma">
+    <div class="theorem-title">Lemma
+        
+            4 in (Negahban et al., 2009)
+        
+        
+    </div>
+    <div class="theorem-contents">
+        
+    If \( \fcal(\Delta) &gt; 0 \) for all vectors \( \Delta \in \mathbb{K}(\delta) \), then
+    \( \| \hd \| \leq \delta \).
+  
+    </div>
+</div>
+
+<p>Note that this was similar to our previous analysis on restricted strong
+convexity where we only really need to consider error terms restricted to
+\(\ctriplet\) due to <a href="#lemma-1">Lemma 1</a>.  Therefore, it suffices to show
+\(\fcal(\Delta) &gt; 0\) to obtain a bound on \(\| \hd \| = \| \thatlambda - \ts\|\), 
+which completes the proof of Theorem 1.</p>
+
+<p>Define \(\fcal : \mathbb{R}^p \to \mathbb{R}\) by</p>
+
+\[\begin{align}
+    \fcal(\Delta) \coloneqq \lcal(\ts + \Delta) - \lcal(\ts) + \lambda_n \left\{
+    \rcal(\ts + \Delta) - \rcal(\ts)
+    \right\},
+\end{align}\]
+
+<p>and define the set</p>
+
+\[\begin{align}
+    \mathbb{K}(\delta) \coloneqq \ctriplet \cap \left\{ \| \Delta \| = \delta \right\}.
+\end{align}\]
+
+<p>Take any \(\Delta \in \kbb\). Then</p>
+
+\[\begin{align}
+    \fcal(\Delta)
+    =    &amp; \lcal(\ts + \Delta) - \lcal(\ts) + \lambda_n \left\{
+    \rcal(\ts + \Delta) - \rcal(\ts) \right\} \tag{by definition} \\
+    \geq &amp; \langle  \nabla \lcal (\ts), \Delta \rangle + \kl \| \Delta \|^2 - \tl^2(\ts) + \lambda_n \left\{
+    \rcal(\ts + \Delta) - \rcal(\ts) \right\} \\
+    &amp; \qquad \text{(by restricted strong convexity:
+        \(\delta \lcal(\Delta, \ts) \geq \kl \| \Delta \|^2 - \tl^2(\ts)\),} \\
+    &amp; \qquad \text{ and
+    \( \delta \lcal(\Delta, \ts) = \lcal(\ts + \Delta) - \lcal(\ts) -
+        \dotprod{\nabla \lcal(\ts)}{\Delta} \) ) } \\
+    \geq &amp; \langle  \nabla \lcal (\ts), \Delta \rangle + \kl \| \Delta \|^2 - \tl^2(\ts) + \lambda_n \left\{
+    \rcal(\Delta_{\mocalp}) - \rcal(\Delta_{\mocal}) - 2 \rcal(\ts_{\mcal^{\perp}})
+    \right\} \\
+    &amp; \qquad \text{(by Lemma 3)}.
+    \label{thm-deriv:1}
+\end{align}\]
+
+<p>We lower bound the first term as
+\(\langle  \nabla \lcal (\ts), \Delta \rangle \geq - \frac{\lambda_n}{2}
+    \rcal(\Delta)\):</p>
+
+\[\begin{align}
+    | \langle  \nabla \lcal (\ts), \Delta \rangle |
+    \leq                                             &amp; \rs(\nabla \lcal(\ts)) \rcal(\Delta) &amp; \text{(Cauchy-Schwarz using dual norms \( \rcal \) and \( \rs \))} \\
+    \leq                                             &amp; \frac{\lambda_n}{2} \rcal(\Delta) &amp; \text{Theorem 1 assumption: \( \lambda_n \geq 2 \rs (\nabla \lcal(\ts)) \))},
+\end{align}\]
+
+<p>and hence,</p>
+
+\[\begin{align}
+    \langle  \nabla \lcal (\ts), \Delta \rangle \geq &amp; - \frac{\lambda_n}{2}
+    \rcal(\Delta).
+\end{align}\]
+
+<p>So applying to (\ref{thm-deriv:1}),</p>
+
+\[\begin{align}
+    \fcal(\Delta)
+    \geq &amp; \kl \| \Delta \|^2 - \tl^2(\ts) + \lambda_n \left\{
+    \rcal(\Delta_{\mocalp}) - \rcal(\Delta_{\mocal}) - 2 \rcal(\ts_{\mcal^{\perp}})
+    \right\} - \frac{\lambda_n}{2} \rcal(\Delta)                                                                                                                                       \\
+    \geq &amp; \kl \| \Delta \|^2 - \tl^2(\ts) + \lambda_n \left\{
+    \rcal(\Delta_{\mocalp}) - \rcal(\Delta_{\mocal}) - 2 \rcal(\ts_{\mcal^{\perp}})
+    \right\} - \frac{\lambda_n}{2} (\rcal(\Delta_{\mocalp}) + \rcal(\Delta_{\mocal})) \\
+    &amp; \qquad \text{(Triangle inequality: \( \rcal(\Delta) \leq \rcal(\Delta_{\mocalp}) + \rcal(\Delta_{\mocal}) \))} \\
+    =    &amp; \kl \| \Delta \|^2 - \tl^2(\ts) + \lambda_n \left\{
+    \frac{1}{2}\rcal(\Delta_{\mocalp}) -
+    \frac{3}{2}\rcal(\Delta_{\mocal}) - 2 \rcal(\ts_{\mcal^{\perp}})
+    \right\} \\
+    &amp; \qquad \text{(Moving terms in)} \\
+    \geq &amp; \kl \| \Delta \|^2 - \tl^2(\ts) + \lambda_n \left\{
+    -
+    \frac{3}{2}\rcal(\Delta_{\mocal}) - 2 \rcal(\ts_{\mcal^{\perp}})
+    \right\} \\
+    &amp; \qquad \text{(Norms always non-negative)} \\
+    = &amp; \kl \| \Delta \|^2 - \tl^2(\ts) - \frac{\lambda_n }{2} \left\{
+    3 \rcal(\Delta_{\mocal}) + 4 \rcal(\ts_{\mcal^{\perp}})
+    \right\} \label{eq:r-delta-lb} .
+\end{align}\]
+
+<p>To bound the term \(\rcal(\Delta_{\mocal})\),
+recall the definition of subspace compatibility:</p>
+
+\[\begin{align}
+    \varPsi (\mcal) \coloneqq \sup_{u \in \mcal \setminus \left\{ 0 \right\}} \frac{\rcal(u)}{\| u \|}, \label{eq:r-delta-ub}
+\end{align}\]
+
+<p>and hence</p>
+
+\[\begin{align}
+    \rcal(\Delta_{\mocal}) \leq \varPsi(\mocal) \| \Delta_{\mocal} \|.
+\end{align}\]
+
+<p>To upper bound \(\| \Delta_{\mocal} \|\), we have</p>
+
+\[\begin{align}
+    \| \Delta_{\mocal} \|
+        &amp; = \| \Pi_{\mocal} (\Delta) - \Pi_{\mocal}(0) \| &amp; \text{(Since \(0 \in \mocal \), \( \Pi_{\mocal}(0) = 0 \)) }     \\
+        &amp; \leq \| \Delta - 0 \| &amp; \text{(Projection operator is non-expansive, see Equation \ref{eq:non-expansive})} \\
+        &amp; = \| \Delta \|,
+\end{align}\]
+
+<p>which substituting into Equation (\ref{eq:r-delta-ub}) gives</p>
+
+\[\begin{align}
+    \rcal(\Delta_{\mocal}) \leq \varPsi(\mocal) \| \Delta \|.
+\end{align}\]
+
+<p>Now we can use this result to lower bound
+Equation \ref{eq:r-delta-lb}:</p>
+
+\[\begin{align}
+    \fcal (\Delta)
+    \geq &amp; \kl \| \Delta \|^2 - \tl^2(\ts) - \frac{\lambda_n }{2} \left\{
+    3 \varPsi(\mocal) \| \Delta \|
+    + 4 \rcal(\ts_{\mcal^{\perp}})
+    \right\}. \label{eq:strict-psd}
+\end{align}\]
+
+<p>The RHS of the inequality in Equation \ref{eq:strict-psd} has a strictly
+positive definite quadratic form in \(\| \Delta \|\), and hence by taking
+\(\| \Delta \|\) large, it will be strictly positive.
+To find such a sufficiently large \(\| \Delta \|\), write</p>
+
+\[\begin{align}
+    a &amp; = \kl,                                                     \\
+    b &amp; = \frac{3\lambda_n}{2} \varPsi (\mocal),                  \\
+    c &amp; = \tau_{\lcal}^2 (\ts) + 2 \lambda_n \rcal(\ts_{\mcalp}), \\
+\end{align}\]
+
+<p>such that we have</p>
+
+\[\begin{align}
+    \fcal (\Delta)
+        &amp; \geq a \| \Delta \|^2 - b \| \Delta \| - c.
+\end{align}\]
+
+<p>Then the square of the rightmost intercept is given by the squared quadratic formula</p>
+
+\[\begin{align}
+    \| \Delta \|^2
+        &amp; = \left( \frac{-(-b) + \sqrt{b^2 - 4a(-c)}}{2a} \right)^2                                                 \\
+        &amp; = \left( \frac{b + \sqrt{b^2 + 4ac}}{2a} \right)^2                                                 \\
+        &amp; \leq \left( \frac{\sqrt{b^2 + 4ac}}{a} \right)^2 &amp; \text{($b \leq \sqrt{b^2 + 4ac}$)}                                              \label{eq:coarse-bound}  \\
+        &amp; = \frac{b^2 + 4ac}{a^2}                                                 \\
+        &amp; = \frac{9 \lambda_n^2 \varPsi^2 (\mocal)}{4 \kl^2}
+    + \frac{ 4 \tau_{\lcal}^2 (\ts) + 8 \lambda_n \rcal(\ts_{\mcalp}) }{\kl}. &amp; \text{(Substituting in \(a, b, c\))} \\
+\end{align}\]
+
+<p>In <a href="https://arxiv.org/abs/1010.2731">(Negahban et al., 2009)</a>, they were able to show an upper bound of</p>
+
+\[\begin{align}
+    \| \Delta \|^2
+        &amp; \leq \frac{9 \lambda_n^2 \varPsi^2 (\mocal)}{\kl^2} +
+    \frac{\lambda_n}{\kl} \left\{
+    2\tau_{\lcal}^2 (\ts) + 4 \rcal(\ts_{\mcalp})
+    \right\}, \label{eq:ub}
+\end{align}\]
+
+<p>but I did not manage to figure out how they managed to produce a \(\lambda_n\)
+term beside the \(\tl^2(\ts)\) term. All other differences are just 
+constant factors. It may be due to an overly coarse
+bound on my end applied in Equation \ref{eq:coarse-bound}, but it
+is unclear to me how the \(\lambda_n\) term can be applied on only
+the \(\tl^2(\ts)\) term without affecting the \(\rcal(\ts_{\mcalp})\) term.</p>
+
+<p>With Equation \ref{eq:ub}, we can hence apply Lemma 4 in <a href="https://arxiv.org/abs/1010.2731">(Negahban et al., 2009)</a>
+to obtain the desired result that</p>
+
+\[\begin{align}
+    \| \thatlambda - \ts \|^2 \leq 9 \frac{\lambda_n^2}{\kl^2} \Psi^2(\mocal)
+    + \frac{\lambda_n}{\kl} \left( 2 \tl^2 (\ts) + 4 \rcal (\ts_{\mcal^{\perp}}) \right).
+\end{align}\]
+
+<p>This concludes the proof.</p>
+
+<h1 id="conclusion">Conclusion</h1>
+<p>In the <a href="#proof-of-theorem-1">proof of Theorem 1</a>, we saw how
+the bound is derived from the two key ingredients of the decomposability
+of the regularizer, and restricted strong convexity of the loss function.
+The decomposability of the regularizer allowed us to ensure that the
+error vector \(\hd\) will stay in the set \(\ctriplet\). This condition
+is then required in Lemma 4 of <a href="https://arxiv.org/abs/1010.2731">(Negahban et al., 2009)</a>, which allows us
+to bound \(\| \hd \|\) given that \(\fcal(\Delta) &gt; 0\). In one of the
+steps where we were lower bounding \(\fcal(\Delta)\) in the proof,
+we made use of the properties of restricted strong convexity.</p>
+
+<p><a href="#thm-1">Theorem 1</a> provides a family of bounds for each decomposable
+regularizer under the choice of \((\mcal, \mocalp)\).
+The authors of <a href="https://arxiv.org/abs/1010.2731">(Negahban et al., 2009)</a> were able to use
+<a href="#thm-1">Theorem 1</a> to rederive both existing known results,
+and also derive new results on low-rank matrix estimation using the nuclear
+norm, minimax-optimal rates for noisy matrix completion, and noisy matrix
+decomposition. The reader is encouraged to refer to <a href="https://arxiv.org/abs/1010.2731">(Negahban et al., 2009)</a>
+for more details on the large number of corrollaries of <a href="#thm-1">Theorem 1</a>.</p>
+
+<h1 id="acknowledgments">Acknowledgments</h1>
+<p>I would like to thank my dear friend <a href="https://www.linkedin.com/in/josh-abrams-78a4a6134/">Josh
+Abrams</a>
+for helping to review and provide valuable suggestions for this post!</p>
+
+<h1 id="citations">Citations</h1>
+<ol>
+  <li>Negahban, S., Yu, B., Wainwright, M. J., and Ravikumar, P. <a href="https://proceedings.neurips.cc/paper_files/paper/2009/file/dc58e3a306451c9d670adcd37004f48f-Paper.pdf">A unified
+framework for high-dimensional analysis of m-estimators with decomposable
+regularizers</a>.
+In Bengio, Y., Schuurmans, D., Lafferty, J., Williams, C., and Culotta, A.
+(eds.), Advances in Neural Information Processing Systems, volume 22. Curran
+Associates, Inc., 2009. 
+URL https://proceedings.neurips.cc/paper_files/paper/2009/file/dc58e3a306451c9d670adcd37004f48f-Paper.pdf.</li>
+</ol>]]></content><author><name>fanpu</name></author><category term="statistics" /><category term="machine-learning" /><summary type="html"><![CDATA[Imagine doing high-dimensional statistical inference, but instead of repeatedly studying different settings with specific low-dimensional constraints (such as linear regression with sparsity constraints, or estimation of structured covariance matrices), there is a method for performing a unified analysis using appropriate notions. Well, you're in luck! 'A Unified Framework for High-Dimensional Analysis of \( M \)-Estimators with Decomposable Regularizers' by Negahban, Ravikumar, Wainwright, and Yu shows that the \( \ell_2 \) difference between any regularized \(M\)-estimator and its true parameter can be bounded if the regularization function is decomposable, and the loss function satisfies restricted strong convexity. The goal of this post is to provide intuition for the result and develop sufficient background for understanding the proof of this result, followed by a walkthrough of the proof itself.]]></summary></entry><entry><title type="html">The CMU Steam Tunnels and Wean 9</title><link href="https://fanpu.io/blog/2023/cmu-steam-tunnels/" rel="alternate" type="text/html" title="The CMU Steam Tunnels and Wean 9" /><published>2023-06-16T00:00:00+00:00</published><updated>2023-06-16T00:00:00+00:00</updated><id>https://fanpu.io/blog/2023/cmu-steam-tunnels</id><content type="html" xml:base="https://fanpu.io/blog/2023/cmu-steam-tunnels/"><![CDATA[<p>If you’re curious about the infamous steam tunnels at CMU, or what the views
+from the roof of Wean Hall looks like, this is for you! The week after course
+finals concluded, <a href="https://www.cmu.edu/student-affairs/slice/">CMU SLICE</a>
+(Student Leadership, Involvement, and Civic Engagement) organized an Underground
+Steam Tunnels Tour as a Senior Week event. I was technically not
+a senior as I am a graduate student, but they were nice enough to let me join.</p>
+
+<p>Before I continue, let me warn readers that you are not allowed to enter the
+steam tunnels by yourself. Please sign up for an official tour by SLICE that
+will be led by a facilities engineer. From <a href="https://www.cmu.edu/student-affairs/theword/community-policies/steam-tunnels.html">The Word Student
+Handbook</a>:</p>
+
+<blockquote class="block-danger">
+  <h4 id="steam-tunnels">Steam Tunnels</h4>
+  <p>Because of the danger to all who enter them, the steam tunnels are locked and
+anyone found in the tunnels will be subject to serious disciplinary action
+and/or criminal action. The University Police are responsible for keeping the
+tunnels locked and apprehending anyone who trespasses in them.</p>
+</blockquote>
+
+<h1 id="the-steam-tunnels">The Steam Tunnels</h1>
+<p>We met at the fence, and all of us had to sign a waiver and don a helmet (the
+same white helmet that was used by builders during Spring Carnival booth).</p>
+
+<p>We proceeded to the basement of Margaret Morrison Hall, and the engineer guiding
+the expedition shared some history about how the Margaret Morrison basement was
+enhanced to be flood-resistant after a flooding incident a few decades ago
+caused water to also flood into the steam tunnels.</p>
+
+<p>We were warned that the tunnels will be hot and claustrophobic, that we should
+not touch any pipes as they will be extremely hot, and to not poke at any
+asbestos for obvious reasons.  He then unlocked an unmarked door, and let us
+into the tunnels proper:</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/cmu_steam_tunnels/main_tunnel.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption">
+      Inside the steam tunnel!
+    </figcaption>
+</figure>
+
+<p>It was initially still quite cool near the door, but the temperature
+began rising as we went further in. Some sections of the pipes were
+hissing and you could really feel the warmth emanating from them.
+At some point I was slightly afraid that a pipe beside me might burst.</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/cmu_steam_tunnels/phone_box.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption">
+      A phone box in the tunnel. Hopefully no one ever had to use it.
+    </figcaption>
+</figure>
+
+<p>At some point, there was a fork where the tunnel on the left fork became very
+short and narrow. We took the right fork.</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/cmu_steam_tunnels/side_tunnel.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption">
+      The short and narrow left fork of the tunnel
+    </figcaption>
+</figure>
+
+<p>It was generally quite well-lit, until we were brought to
+a section of the tunnel where we had to ascend a rusty ladder
+to reach a cavern, which was unlit. It was known as the
+CFA cavern as it is located right under the steps of CFA:</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/cmu_steam_tunnels/cfa_cavern.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption">
+      The CFA cavern, with flash photography
+    </figcaption>
+</figure>
+
+<p>Apparently at some point in the past, a very resourceful CFA student
+decided to make this their home. Not only was rent cheap (free!), 
+but it was also very close to the CFA building! However, they were
+found by campus police and booted out.</p>
+
+<p>I would not say that it was the most ideal living arrangement. There were
+plastic bottles strewn everywhere, and stalactites growing down from the
+ceiling. The air was very damp and musty, and would probably do something bad to
+your lungs if you stayed in there long enough. It was surprisingly much cooler
+than the steam tunnels right below it though.</p>
+
+<p>We then went back down into the tunnels, and continued on:</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/cmu_steam_tunnels/another_tunnel.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption">
+      More tunnels!
+    </figcaption>
+</figure>
+
+<p>As it got close to the end of the tunnels, we were each handed chalk 
+that can be used for leaving our mark in the tunnel. 
+Since public vandalism is <a href="https://en.wikipedia.org/wiki/Vandalism_Act#Michael_Fay_(1994)">punishable by
+caning</a> in my
+home country, of course I was not going to pass on
+this wonderful opportunity to defile the steam tunnels to
+my heart’s content:</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/cmu_steam_tunnels/graffiti.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption">
+      SLICE-sanctioned vandalism
+    </figcaption>
+</figure>
+
+<p>We then emerged from an exit deep inside Doherty Hall, which
+was nice as it was beginning to get rather uncomfortable and claustrophobic. Whew!</p>
+
+<h1 id="roof-of-wean">Roof of Wean</h1>
+<p>If you thought there were only 8 levels in Wean, then you
+will learn something new today. We took the freight elevator
+from the corner of Wean to floor PH (penthouse?), AKA Wean 9.</p>
+
+<p>Wean 9 was essentially a huge storeroom for CMU FMS (Facility Management
+Services). There were all sorts of supplies and tools,
+and even spare doors for classrooms. It made me realize just how much
+maintenance it took to operate a campus.</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/cmu_steam_tunnels/wean_9.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption">
+      Our guide leading us through Wean 9
+    </figcaption>
+</figure>
+
+<p>We were finally brought to a door that led to the roof of Wean Hall, and had to
+adjust our eyes for a few seconds to the new blinding sunlight.
+It was beautiful!</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/cmu_steam_tunnels/hammerschlag.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption">
+      A majestic view of Hammerschlag Hall. I wish I could take my graduation pictures from here.
+    </figcaption>
+</figure>
+
+<p>Everyone got busy snapping photos, myself included. To my knowledge this is the
+only place on campus where you can take a side-by-side photo with the
+Hammerschlag radio tower:</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/cmu_steam_tunnels/roof_photo.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption">
+      The Hammerschlag tower, which houses the Carnegie Tech Radio Club
+  (W3VC) and contains both repeaters and transmitters.
+    </figcaption>
+</figure>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/cmu_steam_tunnels/cic.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption">
+      An interesting view of CIC and Tepper
+    </figcaption>
+</figure>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/posts/cmu_steam_tunnels/gates.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+
+  </picture><figcaption class="caption">
+      Gates, which is usually perceived to tower over all other campus buildings in its vicinity, look short from here
+    </figcaption>
+</figure>
+
+<p>There was some open space on the roof, and I thought it would be pretty cool if
+they opened an open-air cafe here. It has pretty nice panoramic views of the entire campus.</p>
+
+<p>And that’s it for the tour!</p>
+
+<h1 id="acknowledgments">Acknowledgments</h1>
+<p>I would like to thank <a href="https://www.cmu.edu/student-affairs/slice/">SLICE</a> for organizing this trip, my friend <a href="https://www.linkedin.com/in/justin-sun-92b691169/">Justin
+Sun</a> who also went on this
+little adventure with me for proofreading this post, and <a href="https://www.linkedin.com/in/joseph-x-li/">Joey Li</a>
+for pointing out a mistake in the post, where I previously erroneously claimed
+that WRCT 88.3FM was also broadcast from Hammerschlag tower.</p>]]></content><author><name>fanpu</name></author><category term="general" /><category term="cmu" /><summary type="html"><![CDATA[If you're curious about the infamous steam tunnels at CMU, or what the views from the roof of Wean Hall looks like, this post is for you!]]></summary></entry><entry><title type="html">CMU 15712 Advanced Operating Systems and Distributed Systems Course Review</title><link href="https://fanpu.io/blog/2023/advanced-operating-systems-course-review/" rel="alternate" type="text/html" title="CMU 15712 Advanced Operating Systems and Distributed Systems Course Review" /><published>2023-06-09T00:00:00+00:00</published><updated>2023-06-09T00:00:00+00:00</updated><id>https://fanpu.io/blog/2023/advanced-operating-systems-course-review</id><content type="html" xml:base="https://fanpu.io/blog/2023/advanced-operating-systems-course-review/"><![CDATA[<p>This semester (Spring 2023), I took <a href="https://www.cs.cmu.edu/~15712/">15-712 Advanced Operating Systems and
 Distributed Systems</a> under professor <a href="http://www.cs.cmu.edu/~gibbons/">Phil
 Gibbons</a> and his TA and also PhD advisee <a href="http://nicebowlofsoup.com/">Val
-Choung</a>. This was the first time I took
-a class under Phil (he usually teaches either this class or <a href="http://www.cs.cmu.edu/afs/cs/academic/class/15745-s19/www/">15-745 Optimizing
-Compilers for Modern
-Architectures</a>),
-and interestingly enough this was the third time Val was my TA, the 
-previous two times being 15-330 Introduction to Computer Security
-in Fall 2019 and <a href="https://www.cs.cmu.edu/~410/">15-410 Operating System Design and Implementation</a>
-in Spring 2020.</p>
+Choung</a>.</p>
 
-<h1 id="overall-impression">Overall Impression</h1>
 <p>This class exceeded my expectations significantly.
 I found it especially meaningful and apt since this was my last systems class before I
 graduate, and the topics and discussions from class helped to unify all the
@@ -19,27 +1690,6 @@ systems concepts that I had learnt from previous classes into a nice package
 informed by common underlying principles: from distributed systems, to
 networking, databases, filesystems, operating systems, and even machine learning
 systems.</p>
-
-<h1 id="why-i-took-the-class">Why I Took The Class</h1>
-<p>I had to take a systems class this semester to fulfill my graduation
-requirements for the MSCS program. I initially did include this class in my
-shortlist of systems classes to take, but then thought it was just going to be a
-paper reading class (not that I had been in one of such classes before, but it
-just did not sound very interesting and felt like something I could do by myself
-asynchronously after I graduate) and therefore was quite hesitant to take it.</p>
-
-<p>As such, during registration week I settled on <a href="https://www.cs.cmu.edu/~418/">15-618 Parallel Computer Architecture and
-Programming</a>,
-since it included topics on GPU programming that aligned with my current
-interests in machine learning. However, I did not feel like the class was
-sufficiently challenging for me after the first lecture, as it was a bit too
-slow-paced and simple for my liking as I already had exposure to most of the
-topics from other system classes that I had taken. I decided to switch
-to 15-712, and I knew immediately that it was the right class for me after the
-first lecture.</p>
-
-<p>In a sense, this class was a hidden gem and I was really glad that I ended up
-taking it.</p>
 
 <h1 id="the-first-lecture">The First Lecture</h1>
 <p>The first lecture went through 2 Wisdom Papers, which no one was expected
@@ -97,7 +1747,7 @@ The following two slides gives a good sense of the spirit of the paper:</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/adv_os/slide_1.avif" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/adv_os/slide_1.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       How to be a Great Scientist (1)
@@ -109,7 +1759,7 @@ The following two slides gives a good sense of the spirit of the paper:</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/adv_os/slide_2.avif" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/adv_os/slide_2.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       How to be a Great Scientist (2)
@@ -120,71 +1770,9 @@ The following two slides gives a good sense of the spirit of the paper:</p>
 simply because they were interesting, but because they helped to set the tone
 and expectations for the rest of the semester going forward. The message is clear: this is going to be a practical and useful class that will help you on your journey to becoming great systems designers and researchers.</p>
 
-<h1 id="course-structure">Course Structure</h1>
-<p>There are three main components to the class: paper summaries,
-projects, and exams.</p>
-
-<h2 id="1-paper-summaries">1. Paper Summaries</h2>
-<p>Before each lecture, the class is assigned a required reading and an optional reading. A paper summary of the required reading must be submitted before
-the class, which will discuss both readings.</p>
-
-<p>The paper summary will contain 3 things:</p>
-<ol>
-  <li>The 3 most important things in the paper,</li>
-  <li>1 most glaring deficiency of the paper (even highly celebrated papers have faults!),</li>
-  <li>A conclusion on how you will use lessons from this paper to inform you on how
-you will build systems in the future.</li>
-</ol>
-
-<p>It took me on average 2-4 hours to read each paper and around 15 minutes for the summary.</p>
-
-<p>The lectures for this class are front-loaded, meaning that during the first
-two-thirds of the semester, you will meet 3 times a week for 80 minutes each,
-while there will be no lectures at all during the final third of the semester,
-and so “on average” throughout the semester you will meet twice a week. This is so that
-students have enough knowledge and content to begin working on their course
-projects early on in the semester.</p>
-
-<p>There will be 3 short breaks in each lecture, where all students will get into
-breakout groups and share and discuss among themselves one of the prompts
-for the paper based on their paper summaries. Afterwards, all groups
-are invited to share what they thought.</p>
-
-<p>Reading and writing the paper summaries are the only “homework” you will get in
-this class.</p>
-
-<h2 id="2-course-project">2. Course Project</h2>
-<p>There is also a semester-long course project with a significant systems
-component in groups of three. This will begin in earnest after a third of the
-semester, and all the project groups met with Phil and the TA Val once every two
-weeks.  The deliverables include a project proposal, an interim report, a final
-presentation, and a final report. The course project will be the
-largest constituent of your final grade.</p>
-
-<h2 id="3-midterms">3. Midterms</h2>
-<p>Finally, there are two midterm exams, which are taken during class time.
-The first is taken in the middle of the semester, and the second is taken
-after all lectures have concluded.</p>
-
-<p>Each midterm will cover content from a shortlisted selection of 10
-of the required readings. There will be 9 questions on the midterm,
-which covers 9 of the 10 papers, and you are only required to answer 7 of
-the problems.</p>
-
-<p>The course staff will also provide two past year exams to practice on, though
-some of the readings may have changed since.</p>
-
-<p>It admittedly does seem quite daunting to have to study and be familiar with 10
-papers spanning very different topics. I did not have time to actually re-read
-all 10 papers to prepare for the midterm, and so the way I prepared was to go
-through all the lecture slides again, re-read the most important sections of the
-paper, and skim through the rest. Afterward, I attempted the past exams to fill
-in any gaps that I may have missed. This strategy allowed me to do fairly well
-on the exam.</p>
-
 <h1 id="course-content">Course Content</h1>
 
-<p>The class us on a whirlwind tour through many <a href="https://www.sigops.org/awards/hof/">SIGOPS
+<p>The class took us on a whirlwind tour through many <a href="https://www.sigops.org/awards/hof/">SIGOPS
 Hall of Fame papers</a>, which the award
 description states was “instituted in 2005 to recognize the most influential
 Operating Systems papers that were published at least ten years in the past”.
@@ -276,20 +1864,6 @@ with a practical implementation that optimizes both cluster-wide and per-job par
   <li><a href="https://www.cs.cmu.edu/~15712/papers/kim21.pdf">LineFS: Efficient SmartNIC Offload of a Distributed File System with Pipeline Parallelism (Kim’21), SOSP’21 best paper</a> - optimizing the performance of distributed file systems (DFS) by decomposing DFS operations into pipelined stages and offloading networked stages to a SmartNIC asynchronously</li>
 </ul>
 
-<h1 id="workload">Workload</h1>
-<p>The class has a moderate workload for a systems class. Expect to spend 10-12 hours 
-a week on the readings and paper summaries while lectures are ongoing, probably
-a couple more hours once the projects get into motion midway through the
-semester, and for it to consume a significant portion of your existence in the
-last two weeks before the final presentations.</p>
-
-<p>It is a far less demanding and stressful class than the legendary <a href="https://www.cs.cmu.edu/~410/">15-410/605
-Operating System Design and Implementation</a> class, 
-so don’t let the “advanced” in the course title scare you off from taking this class.
-After all, most people taking this class are Ph.D. students who have their
-own research to work on and can’t exactly spend all their time on courses,
-unlike undergraduates.</p>
-
 <h1 id="takeaways-from-the-class">Takeaways From The Class</h1>
 <p>Here are my thoughts on the key takeaways from the class.</p>
 
@@ -373,6 +1947,81 @@ from many rounds of feedback during past iterations.  It is rich in content,
 is accessible and yet challenging to students from a wide range of backgrounds,
 and will prepare one well for building systems in the future, be it in 
 academia or industry.</p>
+<h1 id="course-structure">Course Structure</h1>
+<p>There are three main components to the class: paper summaries,
+projects, and exams.</p>
+
+<h2 id="1-paper-summaries">1. Paper Summaries</h2>
+<p>Before each lecture, the class is assigned a required reading and an optional reading. A paper summary of the required reading must be submitted before
+the class, which will discuss both readings.</p>
+
+<p>The paper summary will contain 3 things:</p>
+<ol>
+  <li>The 3 most important things in the paper,</li>
+  <li>1 most glaring deficiency of the paper (even highly celebrated papers have faults!),</li>
+  <li>A conclusion on how you will use lessons from this paper to inform you on how
+you will build systems in the future.</li>
+</ol>
+
+<p>It took me on average 2-4 hours to read each paper and around 15 minutes for the summary.</p>
+
+<p>The lectures for this class are front-loaded, meaning that during the first
+two-thirds of the semester, you will meet 3 times a week for 80 minutes each,
+while there will be no lectures at all during the final third of the semester,
+and so “on average” throughout the semester you will meet twice a week. This is so that
+students have enough knowledge and content to begin working on their course
+projects early on in the semester.</p>
+
+<p>There will be 3 short breaks in each lecture, where all students will get into
+breakout groups and share and discuss among themselves one of the prompts
+for the paper based on their paper summaries. Afterwards, all groups
+are invited to share what they thought.</p>
+
+<p>Reading and writing the paper summaries are the only “homework” you will get in
+this class.</p>
+
+<h2 id="2-course-project">2. Course Project</h2>
+<p>There is also a semester-long course project with a significant systems
+component in groups of three. This will begin in earnest after a third of the
+semester, and all the project groups met with Phil and the TA Val once every two
+weeks.  The deliverables include a project proposal, an interim report, a final
+presentation, and a final report. The course project will be the
+largest constituent of your final grade.</p>
+
+<h2 id="3-midterms">3. Midterms</h2>
+<p>Finally, there are two midterm exams, which are taken during class time.
+The first is taken in the middle of the semester, and the second is taken
+after all lectures have concluded.</p>
+
+<p>Each midterm will cover content from a shortlisted selection of 10
+of the required readings. There will be 9 questions on the midterm,
+which covers 9 of the 10 papers, and you are only required to answer 7 of
+the problems.</p>
+
+<p>The course staff will also provide two past year exams to practice on, though
+some of the readings may have changed since.</p>
+
+<p>It admittedly does seem quite daunting to have to study and be familiar with 10
+papers spanning very different topics. I did not have time to actually re-read
+all 10 papers to prepare for the midterm, and so the way I prepared was to go
+through all the lecture slides again, re-read the most important sections of the
+paper, and skim through the rest. Afterward, I attempted the past exams to fill
+in any gaps that I may have missed. This strategy allowed me to do fairly well
+on the exam.</p>
+
+<h1 id="workload">Workload</h1>
+<p>The class has a moderate workload for a systems class. Expect to spend 10-12 hours 
+a week on the readings and paper summaries while lectures are ongoing, probably
+a couple more hours once the projects get into motion midway through the
+semester, and for it to consume a significant portion of your existence in the
+last two weeks before the final presentations.</p>
+
+<p>It is a far less demanding and stressful class than the legendary <a href="https://www.cs.cmu.edu/~410/">15-410/605
+Operating System Design and Implementation</a> class, 
+so don’t let the “advanced” in the course title scare you off from taking this class.
+After all, most people taking this class are Ph.D. students who have their
+own research to work on and can’t exactly spend all their time on courses,
+unlike undergraduates.</p>
 
 <h1 id="our-course-project-and-reflections">Our Course Project, and Reflections</h1>
 <p>Our course project was on the automated optimal scheduling of data in dynamic neural
@@ -391,7 +2040,7 @@ the optimal way of performing this split.</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/adv_os/presentation.avif" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/adv_os/presentation.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Giving our final project presentation in the Panther Hollow conference room at CIC
@@ -430,10 +2079,100 @@ second midterm.</p>
 Strong undergraduates with sufficient background would also definitely do well
 in the class.</p>
 
+<h1 id="why-i-took-this-class">Why I Took This Class</h1>
+<p>I had to take a systems class this semester to fulfill my graduation
+requirements for the MSCS program. I initially did include this class in my
+shortlist of systems classes to take, but then thought it was just going to be a
+paper reading class (not that I had been in one of such classes before, but it
+just did not sound very interesting and felt like something I could do by myself
+asynchronously after I graduate) and therefore was quite hesitant to take it.</p>
+
+<p>As such, during registration week I settled on <a href="https://www.cs.cmu.edu/~418/">15-618 Parallel Computer Architecture and
+Programming</a>,
+since it included topics on GPU programming that aligned with my current
+interests in machine learning. However, I did not feel like the class was
+sufficiently challenging for me after the first lecture, as it was a bit too
+slow-paced and simple for my liking as I already had exposure to most of the
+topics from other system classes that I had taken. I decided to switch
+to 15-712, and I knew immediately that it was the right class for me after the
+first lecture.</p>
+
+<p>In a sense, this class was a hidden gem and I was really glad that I ended up
+taking it.</p>
+
 <h1 id="acknowledgments">Acknowledgments</h1>
 <p>I would like to express my gratitude to <a href="https://adbforlife.github.io/">Albert
-Gao</a> and <a href="https://abigalekim.github.io/">Abigale Kim</a> for helping to proofread this article. Both of them
-took the class with me this semester.</p>]]></content><author><name>fanpu</name></author><category term="courses" /><category term="cmu" /><category term="systems" /><summary type="html"><![CDATA[15-712 Advanced Operating Systems and Distributed Systems was an excellent seminar-based graduate course that took us on a whirlwind tour through many of the most seminal SigOps Hall of Fame papers across several systems domains. It will prepare you to be a great systems designer and researcher. In this post, I will share my experience in the class, the course structure and content, what I thought were the key takeaways, and who this class would be suitable for.]]></summary></entry><entry><title type="html">Score-Based Diffusion Models</title><link href="https://fanpu.io/blog/2023/score-based-diffusion-models/" rel="alternate" type="text/html" title="Score-Based Diffusion Models" /><published>2023-06-07T00:00:00+00:00</published><updated>2023-06-07T00:00:00+00:00</updated><id>https://fanpu.io/blog/2023/score-based-diffusion-models</id><content type="html" xml:base="https://fanpu.io/blog/2023/score-based-diffusion-models/"><![CDATA[<p>\(\newcommand{\pdata}{p_{\text{data}}(\bx)}
+Gao</a> for helping to proofread this article, who
+took the class with me this semester.</p>]]></content><author><name>fanpu</name></author><category term="courses" /><category term="cmu" /><category term="systems" /><summary type="html"><![CDATA[15-712 Advanced OS was an excellent seminar-based graduate course that took us on a whirlwind tour through many of the most seminal SigOps Hall of Fame papers across several systems domains. It will prepare you to be a great systems designer and researcher. In this post, I will share my experience in the class, the course structure and content, what I thought were the biggest takeaways, and who this class might be suitable for.]]></summary></entry><entry><title type="html">Score-Based Diffusion Models</title><link href="https://fanpu.io/blog/2023/score-based-diffusion-models/" rel="alternate" type="text/html" title="Score-Based Diffusion Models" /><published>2023-06-07T00:00:00+00:00</published><updated>2023-06-07T00:00:00+00:00</updated><id>https://fanpu.io/blog/2023/score-based-diffusion-models</id><content type="html" xml:base="https://fanpu.io/blog/2023/score-based-diffusion-models/"><![CDATA[<p>\(\newcommand{\E}{\mathbb{E}}
+    \newcommand{\bone}{\boldsymbol{1}}
+    \newcommand{\bbeta}{\boldsymbol{\beta}}
+    \newcommand{\bdelta}{\boldsymbol{\delta}}
+    \newcommand{\bepsilon}{\boldsymbol{\epsilon}}
+    \newcommand{\blambda}{\boldsymbol{\lambda}}
+    \newcommand{\bomega}{\boldsymbol{\omega}}
+    \newcommand{\bpi}{\boldsymbol{\pi}}
+    \newcommand{\bphi}{\boldsymbol{\phi}}
+    \newcommand{\bvphi}{\boldsymbol{\varphi}}
+    \newcommand{\bpsi}{\boldsymbol{\psi}}
+    \newcommand{\bsigma}{\boldsymbol{\sigma}}
+    \newcommand{\btheta}{\boldsymbol{\theta}}
+    \newcommand{\btau}{\boldsymbol{\tau}}
+    \newcommand{\ba}{\boldsymbol{a}}
+    \newcommand{\bb}{\boldsymbol{b}}
+    \newcommand{\bc}{\boldsymbol{c}}
+    \newcommand{\bd}{\boldsymbol{d}}
+    \newcommand{\be}{\boldsymbol{e}}
+    \newcommand{\boldf}{\boldsymbol{f}}
+    \newcommand{\bg}{\boldsymbol{g}}
+    \newcommand{\bh}{\boldsymbol{h}}
+    \newcommand{\bi}{\boldsymbol{i}}
+    \newcommand{\bj}{\boldsymbol{j}}
+    \newcommand{\bk}{\boldsymbol{k}}
+    \newcommand{\bell}{\boldsymbol{\ell}}
+    \newcommand{\bm}{\boldsymbol{m}}
+    \newcommand{\bn}{\boldsymbol{n}}
+    \newcommand{\bo}{\boldsymbol{o}}
+    \newcommand{\bp}{\boldsymbol{p}}
+    \newcommand{\bq}{\boldsymbol{q}}
+    \newcommand{\br}{\boldsymbol{r}}
+    \newcommand{\bs}{\boldsymbol{s}}
+    \newcommand{\bt}{\boldsymbol{t}}
+    \newcommand{\bu}{\boldsymbol{u}}
+    \newcommand{\bv}{\boldsymbol{v}}
+    \newcommand{\bw}{\boldsymbol{w}}
+    \newcommand{\bx}{\boldsymbol{x}}
+    \newcommand{\by}{\boldsymbol{y}}
+    \newcommand{\bz}{\boldsymbol{z}}
+    \newcommand{\bA}{\boldsymbol{A}}
+    \newcommand{\bB}{\boldsymbol{B}}
+    \newcommand{\bC}{\boldsymbol{C}}
+    \newcommand{\bD}{\boldsymbol{D}}
+    \newcommand{\bE}{\boldsymbol{E}}
+    \newcommand{\bF}{\boldsymbol{F}}
+    \newcommand{\bG}{\boldsymbol{G}}
+    \newcommand{\bH}{\boldsymbol{H}}
+    \newcommand{\bI}{\boldsymbol{I}}
+    \newcommand{\bJ}{\boldsymbol{J}}
+    \newcommand{\bK}{\boldsymbol{K}}
+    \newcommand{\bL}{\boldsymbol{L}}
+    \newcommand{\bM}{\boldsymbol{M}}
+    \newcommand{\bN}{\boldsymbol{N}}
+    \newcommand{\bP}{\boldsymbol{P}}
+    \newcommand{\bQ}{\boldsymbol{Q}}
+    \newcommand{\bR}{\boldsymbol{R}}
+    \newcommand{\bS}{\boldsymbol{S}}
+    \newcommand{\bT}{\boldsymbol{T}}
+    \newcommand{\bU}{\boldsymbol{U}}
+    \newcommand{\bV}{\boldsymbol{V}}
+    \newcommand{\bW}{\boldsymbol{W}}
+    \newcommand{\bX}{\boldsymbol{X}}
+    \newcommand{\bY}{\boldsymbol{Y}}
+    \newcommand{\bZ}{\boldsymbol{Z}}
+    \newcommand{\boldf}{\boldsymbol{f}}
+    \newcommand{\bpi}{\boldsymbol{\pi}}
+    \newcommand{\btheta}{\boldsymbol{\theta}}
+    \DeclareMathOperator{\tr}{tr}
+    \newcommand{\pdata}{p_{\text{data}}(\bx)}
     \newcommand{\st}{\mathbf{s}_\mathbf{\theta}}
     \newcommand{\xt}{\tilde{\bx}}
     \newcommand{\stx}{\mathbf{s}_\mathbf{\theta}(\bx)}
@@ -602,7 +2341,7 @@ network \(\stx\) parameterized by \(\theta\).</p>
 Divergence between the score function and the score network:</p>
 
 \[\begin{align} \label{eq:score-matching-target-fisher-div}
-    \argmin_\theta \frac{1}{2} \E_{\pdata} \left[
+    \argmin_\theta \frac{1}{2} \mathbb{E}_{\pdata} \left[
         \| \stx - \nabla_\bx \log \pdata \|_2^2
         \right].
 \end{align}\]
@@ -616,7 +2355,7 @@ showed that Equation \ref{eq:score-matching-target-fisher-div}
 is equivalent to Equation \ref{eq:score-matching-target} below:</p>
 
 \[\begin{align} \label{eq:score-matching-target}
-    \argmin_\theta \frac{1}{2} \E_{\pdata} \left[
+    \argmin_\theta \frac{1}{2} \mathbb{E}_{\pdata} \left[
         \tr \left( \nabla_\bx \stx \right) +
         \frac{1}{2} \| \stx \|_2^2
         \right].
@@ -637,36 +2376,36 @@ called sliced score matching <a href="http://arxiv.org/abs/1905.07088">(Song et 
 multivariate standard Gaussian) in order to optimize an analog of the Fisher Divergence:</p>
 
 \[\begin{align}
-    L(\btheta, \pv) = \frac{1}{2} \E_{\pv} \E_{\pdata} \left[ (\bv^T \stx - \bv^T \sdx)^2 \right]
+    L(\btheta, \pv) = \frac{1}{2} \mathbb{E}_{\pv} \mathbb{E}_{\pdata} \left[ (\bv^T \stx - \bv^T \sdx)^2 \right]
 \end{align}\]
 
 <p>We observe that</p>
 
 \[\begin{align}
-    L(\btheta; \pv) &amp;= \frac{1}{2} \E_{\pv} \E_{\pdata} \left[ (\bv^T \stx - \bv^T \sdx)^2 \right]\\
-    &amp;=\frac{1}{2} \E_{\pv} \E_{\pdata} \left[ (\bv^T \stx )^2 + (\bv^T \sdx)^2 - 2(\bv^T \stx )(\bv^T \sdx) \right]\\
-    &amp;= \E_{\pv} \E_{\pdata} \left[ \frac{1}{2}(\bv^T \stx )^2 - (\bv^T \stx )(\bv^T \sdx) \right] + C\\
+    L(\btheta; \pv) &amp;= \frac{1}{2} \mathbb{E}_{\pv} \mathbb{E}_{\pdata} \left[ (\bv^T \stx - \bv^T \sdx)^2 \right]\\
+    &amp;=\frac{1}{2} \mathbb{E}_{\pv} \mathbb{E}_{\pdata} \left[ (\bv^T \stx )^2 + (\bv^T \sdx)^2 - 2(\bv^T \stx )(\bv^T \sdx) \right]\\
+    &amp;= \mathbb{E}_{\pv} \mathbb{E}_{\pdata} \left[ \frac{1}{2}(\bv^T \stx )^2 - (\bv^T \stx )(\bv^T \sdx) \right] + C\\
 \end{align}\]
 
 <p>where the \(\sdx\) term is absorbed into \(C\) as it doesn’t depend on \(\theta\).
 Now note</p>
 
 \[\begin{align}
- &amp; -\E_{\pv} \E_{\pdata}\left[(\bv^T \stx )(\bv^T \sdx) \right] \\
-=&amp; -\E_{\pv} \int \left[(\bv^T \stx )(\bv^T \sdx)  \pdata d\bx\right]\\
-=&amp; -\E_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\log \pdata)\pdata d\bx\right] \\
-=&amp; -\E_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\pdata)d\bx\right] \\
-=&amp; -\E_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\pdata)d\bx\right] \\
-=&amp; -\E_{\pv}  \left[\sum_{i}\int(\bv^T \stx )(v_i\frac{\partial \pdata}{\partial x_i})d\bx\right] \\
-=&amp; \E_{\pv}  \left[\int \bv^T\stx\bv \cdot \pdata d\bx\right] \\
-=&amp; \E_{\pv}\E_{\pdata}\left[\bv^T\stx\bv \right]
+ &amp; -\mathbb{E}_{\pv} \mathbb{E}_{\pdata}\left[(\bv^T \stx )(\bv^T \sdx) \right] \\
+=&amp; -\mathbb{E}_{\pv} \int \left[(\bv^T \stx )(\bv^T \sdx)  \pdata d\bx\right]\\
+=&amp; -\mathbb{E}_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\log \pdata)\pdata d\bx\right] \\
+=&amp; -\mathbb{E}_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\pdata)d\bx\right] \\
+=&amp; -\mathbb{E}_{\pv}  \left[\int(\bv^T \stx )(\bv^T\nabla_{\bx}\pdata)d\bx\right] \\
+=&amp; -\mathbb{E}_{\pv}  \left[\sum_{i}\int(\bv^T \stx )(v_i\frac{\partial \pdata}{\partial x_i})d\bx\right] \\
+=&amp; \mathbb{E}_{\pv}  \left[\int \bv^T\stx\bv \cdot \pdata d\bx\right] \\
+=&amp; \mathbb{E}_{\pv}\mathbb{E}_{\pdata}\left[\bv^T\stx\bv \right]
 \end{align}\]
 
 <p>where line 16 is obtained by applying multivariate integration by
 parts. This finally yields the equivalent objective:</p>
 
 \[\begin{align}
-    J(\btheta; \pv) &amp;= \E_{\pv} \E_{\pdata} \left[ \bv^T \nabla_\bx \stx \bv + \frac{1}{2} \| \stx \|_2^2 \right]
+    J(\btheta; \pv) &amp;= \mathbb{E}_{\pv} \mathbb{E}_{\pdata} \left[ \bv^T \nabla_\bx \stx \bv + \frac{1}{2} \| \stx \|_2^2 \right]
 \end{align}\]
 
 <p>which no longer has a dependence on the unknown \(\nabla_{bx}\sdx\). This leads to the unbiased estimator:</p>
@@ -682,7 +2421,7 @@ regularity conditions, sliced score matching is an asymptotically consistent
 estimator:</p>
 
 \[\begin{align}
-   \hat \btheta_{N,M} \overset{p}{\to} \btheta^* \text { as } \N \to \infty
+   \hat \btheta_{N,M} \overset{p}{\to} \btheta^* \text { as } \mathbb{N} \to \infty
 \end{align}\]
 
 <p>where</p>
@@ -772,7 +2511,7 @@ annealing down the noise to achieve convergence.</p>
 as</p>
 
 \[\begin{align}
-    \ell(\theta; \sigma) \triangleq \frac{1}{2} \E_{\pdata} \E_{\xt \sim \mathcal{N}(\bx, \sigma^2 I)} \left[ \left\| \stxt + \frac{\xt - \bx}{\sigma^2} \right\|_2^2 \right],
+    \ell(\theta; \sigma) \triangleq \frac{1}{2} \mathbb{E}_{\pdata} \mathbb{E}_{\xt \sim \mathcal{N}(\bx, \sigma^2 I)} \left[ \left\| \stxt + \frac{\xt - \bx}{\sigma^2} \right\|_2^2 \right],
 \end{align}\]
 
 <p>and the unified objective for denoising across all levels is given as</p>
@@ -819,9 +2558,9 @@ d \bx = [\boldf (\bx, t) - g(t)^2 \nabla_{\bx} \log_{p_t} (\bx) ] \, dt + g(t) \
 <p>The objective function for score matching for the SDE is then given by</p>
 
 \[\begin{align}
-    \argmin_{\theta} \E_t 
+    \argmin_{\theta} \mathbb{E}_t 
     \left[ 
-    \lambda (t) \E_{\bx(0)} \E_{\bx (t) \mid \bx(0)} \left[ 
+    \lambda (t) \mathbb{E}_{\bx(0)} \mathbb{E}_{\bx (t) \mid \bx(0)} \left[ 
     \| \bs_\theta (\bx(t), t) - \nabla_{\bx(t)} \log p_{0t}(\bx (t) \mid \bx(0)) \|_2^2
     \right]
     \right].
@@ -900,12 +2639,12 @@ This process thus has bounded variance since \(\beta_i\) is bounded.</p>
 
 <h2 id="investigating-the-manifold-hypothesis">Investigating the manifold hypothesis</h2>
 
-<figure>
+<figure id="fig-1">
   <picture>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/score-based-diffusion-models/sample_dist.avif" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/score-based-diffusion-models/sample_dist.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption"><i>Figure 1.</i>
       
@@ -928,12 +2667,12 @@ sample of the distribution.</p>
 
 <p>To better visualize the effects of annealing when sampling via Langevin Dynamics, we generated images from a model trained on the CelebA dataset. We first tried applying Langevin Dynamics with a fixed noise and then used annealing to gradually decrease the noise.</p>
 
-<figure>
+<figure id="fig-2">
   <picture>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/score-based-diffusion-models/annealing_ablation.avif" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/score-based-diffusion-models/annealing_ablation.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption"><i>Figure 2.</i>
       
@@ -944,12 +2683,12 @@ sample of the distribution.</p>
 
 <p>Figure 2 shows that the results with annealing are significantly clearer and more varied, matching the performance of GANs in 2019.</p>
 
-<figure>
+<figure id="fig-3">
   <picture>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/score-based-diffusion-models/left_right.avif" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/score-based-diffusion-models/left_right.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption"><i>Figure 3.</i>
       
@@ -963,12 +2702,12 @@ sample of the distribution.</p>
 <h2 id="effect-of-noise-parameters-for-annealed-langevin-dynamics">Effect of noise parameters for annealed Langevin Dynamics</h2>
 <p>We also investigated the effect of changing the lowest noise standard deviation \(\sigma\) while keeping the number of different noises injected fixed at \(10\). The 10 noise values are determined by an interpolation in log scale.</p>
 
-<figure>
+<figure id="fig-4">
   <picture>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/score-based-diffusion-models/vary_sigma.avif" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/score-based-diffusion-models/vary_sigma.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption"><i>Figure 4.</i>
       
@@ -1190,7 +2929,7 @@ had the wrong size:</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/paired_delim.avif" class="z-depth-1 center" width="500px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/paired_delim.webp" class="z-depth-1 center" width="500px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       What happens when you don't use paired delimiters
@@ -1305,7 +3044,7 @@ to make mistakes.  Consider the following proof:</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/macros.avif" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/macros.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       A proof with a lot of syntactical structure
@@ -1361,7 +3100,7 @@ of being split apart mid-sentence. Cue the following bad example from another pa
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/nbsp.avif" class="z-depth-1 center" width="300px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/nbsp.webp" class="z-depth-1 center" width="300px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Expressions that are broken apart
@@ -1400,7 +3139,7 @@ to stay on the same line:</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/nbsp-positive.avif" class="z-depth-1 center" width="300px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/nbsp-positive.webp" class="z-depth-1 center" width="300px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Expressions that brace together stays together
@@ -1416,7 +3155,7 @@ This is a negative example, where the region underlined in red shows how it was 
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/figure-truncated.avif" class="z-depth-1 center" width="500px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/figure-truncated.webp" class="z-depth-1 center" width="500px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       The phrase "Figure 2" was truncated in half
@@ -1443,7 +3182,7 @@ allows it to flow more naturally and make it easier for the reader to follow.</p
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/sentence-negative.avif" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/sentence-negative.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Expressions which are not punctuated are tiring to read
@@ -1464,7 +3203,7 @@ that helps to guide the reader along the author’s train of thought:</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/sentence-multiline.avif" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/sentence-multiline.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Appropriate use of commas and full stop to guide the reader
@@ -1480,7 +3219,7 @@ allow the text to flow naturally, where it takes the form of
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/sentence-two-exp.avif" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/sentence-two-exp.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Punctuation allows the content to flow naturally
@@ -1495,7 +3234,7 @@ is common when you are trying to fit the page limit for conference submissions:<
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/sentence-singleline.avif" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/sentence-singleline.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Appropriate use of punctuation when multiple equations are on a single line
@@ -1529,7 +3268,7 @@ Suppose that <span class="p">$</span><span class="o">(</span><span class="nb">x<
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/proof.avif" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/proof.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Signposting using the `proof` environment
@@ -1560,7 +3299,7 @@ newline before the closing <code class="language-plaintext highlighter-rouge">\e
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/qedhere.avif" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/qedhere.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Misaligned QED symbol
@@ -1595,7 +3334,7 @@ of the variable \(dz\):</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/integral.avif" class="z-depth-1 center" width="500px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/integral.webp" class="z-depth-1 center" width="500px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Lack of spacing before "dz"
@@ -1736,7 +3475,7 @@ This allows it to know which side to orient the ticks:</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/quotes.avif" class="z-depth-1 center" width="100px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/quotes.webp" class="z-depth-1 center" width="100px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Output of correct usage of quotes
@@ -1757,7 +3496,7 @@ read:</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/epsilon-wrong.avif" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/epsilon-wrong.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Using "\epsilon" looks weird
@@ -1771,7 +3510,7 @@ read:</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/epsilon-right.avif" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/epsilon-right.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       "\varepsilon" is usually what should be used
@@ -1792,7 +3531,7 @@ difference in how the rendering of the set of natural numbers
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/mathbbm.avif" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/mathbbm.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Use `mathbbm` instead of `mathbb`
@@ -1812,7 +3551,7 @@ X = <span class="k">\left</span>( X<span class="p">_</span>1, <span class="k">\d
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/dots.avif" class="z-depth-1 center" width="300px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/dots.webp" class="z-depth-1 center" width="300px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Output of "..." versus "\dots"
@@ -1863,7 +3602,7 @@ in the equation:</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/latex-mistakes/multiplication.avif" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
+    <img src="/assets/img/posts/latex-mistakes/multiplication.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
 
   </picture><figcaption class="caption">
       Use "\cdot" looks much better than "*"
@@ -1986,7 +3725,7 @@ can be distributions that converge but disagree in value at points of discontinu
     <div class="theorem-contents">
         
   Let \( X_1, X_2, \dots, X_n \) be a sequence of independent random variables with mean \( \mu \) and variance \( \sigma^2 \).
-  Assume that the moment generating function \( \E \left[ \exp(t X_i) \right] \) is finite for \( t \) in a neighborhood around zero.
+  Assume that the moment generating function \( \mathbb{E} \left[ \exp(t X_i) \right] \) is finite for \( t \) in a neighborhood around zero.
   Let \( \overline{X}_n = \frac{1}{n} \sum\limits_{i=1}^n X_i \). Let
   
   $$ Z_n = \frac{\sqrt{n} \left( \overline{X}_n - \mu \right)}{\sigma}. $$
@@ -2022,28 +3761,28 @@ defined as follows:</p>
         
   The moment generating function of a random variable \( X \) is given by
   
-  $$ M_X(t) = \E \left[ e^{tX} \right].$$
+  $$ M_X(t) = \mathbb{E} \left[ e^{tX} \right].$$
   
     </div>
 </div>
 
 <p>It is called a moment generating function since the \(k\)th moment of \(X\),
-i.e \(\E \left[X^k \right]\), can be obtained by taking the
+i.e \(\mathbb{E} \left[X^k \right]\), can be obtained by taking the
 \(k\)th derivative of its moment-generating function (MGF) at 0:</p>
 
-\[\E \left[X^k \right]  = M^{(k)}(0).\]
+\[\mathbb{E} \left[X^k \right]  = M^{(k)}(0).\]
 
 <p>This is not too hard to see by induction on the fact that
-\(M_X^k(t) = \E \left[ X^k e^{tX} \right]\). The base case is trivial. 
+\(M_X^k(t) = \mathbb{E} \left[ X^k e^{tX} \right]\). The base case is trivial. 
 For the inductive case,</p>
 
 \[\begin{align*}
-    M_X^{(k)}(t) &amp; = \frac{d^k}{dt^k} \E \left[ e^{tX} \right] \\ 
-               &amp; = \frac{d}{dt} \E \left[ X^{k-1} e^{tX} \right] &amp; \text{(by IH)}\\
+    M_X^{(k)}(t) &amp; = \frac{d^k}{dt^k} \mathbb{E} \left[ e^{tX} \right] \\ 
+               &amp; = \frac{d}{dt} \mathbb{E} \left[ X^{k-1} e^{tX} \right] &amp; \text{(by IH)}\\
                &amp; = \frac{d}{dt} \int f(x) x^{k-1} e^{tx} \; dx \\ 
                &amp; = \int \frac{d}{dt} f(x) x^{k-1} e^{tx} \; dx \\
                &amp; = \int f(x) x^{k} e^{tx} \; dx \\
-               &amp; = \E \left[ X^{k} e^{tX} \right].
+               &amp; = \mathbb{E} \left[ X^{k} e^{tX} \right].
 \end{align*}\]
 
 <p>Substituting \(t=0\) gives us the desired result.</p>
@@ -2110,7 +3849,7 @@ the moments of the standard normal \(Z\).</p>
 <p>Let’s first find the moment generating function of \(Z\):</p>
 
 \[\begin{align*}
-    M_{Z} &amp; = \E \left[ e^{tZ} \right]                                                                                                \\
+    M_{Z} &amp; = \mathbb{E} \left[ e^{tZ} \right]                                                                                                \\
           &amp; = \int f_Z(x) e^{tx} \; dx                                                                                                \\
           &amp; = \int \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}x^2} e^{tx} \; dx                 &amp; \text{(subst. pdf of standard Gaussian)} \\
           &amp; = \int \frac{1}{\sqrt{2 \pi}} e^{-\frac{1}{2}x^2 + tx} \; dx                                                              \\
@@ -2139,14 +3878,14 @@ and see that we can write \(Z_n = \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n A_i\), 
     &amp;= Z_n.
 \end{align*}\]
 
-<p>See that \(\E[A_i] = 0\), and \(\Var(A_i) = 1\).</p>
+<p>See that \(\mathbb{E}[A_i] = 0\), and \(\mathbf{Var}(A_i) = 1\).</p>
 
 <p>Then starting from the definition of the moment generating function of \(Z_n\),</p>
 
 \[\begin{align*}
-    M_{Z_n}(t) &amp; = \E \left[ e^{t Z_n} \right]                                                                                                   \\
-               &amp; = \E \left[ \exp\left(t \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n A_i \right) \right] &amp; \text{(by equivalent definition of $Z_n$)} \\
-               &amp; = \prod_{i=1}^n \E \left[ \exp\left( \frac{t}{\sqrt{n}} A_i \right) \right]        &amp; \text{(by independence of $A_i$'s)}        \\
+    M_{Z_n}(t) &amp; = \mathbb{E} \left[ e^{t Z_n} \right]                                                                                                   \\
+               &amp; = \mathbb{E} \left[ \exp\left(t \frac{1}{\sqrt{n}} \sum\limits_{i=1}^n A_i \right) \right] &amp; \text{(by equivalent definition of $Z_n$)} \\
+               &amp; = \prod_{i=1}^n \mathbb{E} \left[ \exp\left( \frac{t}{\sqrt{n}} A_i \right) \right]        &amp; \text{(by independence of $A_i$'s)}        \\
                &amp; = \prod_{i=1}^n M_{A_i}(t/\sqrt{n})                                                &amp; \text{(definition of $M_{A_i}$)}           \\
                &amp; = M_{A_i}(t/\sqrt{n} )^n.
 \end{align*}\]
@@ -2160,14 +3899,14 @@ second order term, which requires us to find the first three moments of the MGF.
 <p>These are:</p>
 
 \[\begin{align*}
-    M_{A_i}(0)                 &amp; = \E \left[ e^{t A_i} \right] \Big|_{t=0}                                                                                                                 \\
-                               &amp; = \E \left[ 1 \right]                                                                                                                                     \\
+    M_{A_i}(0)                 &amp; = \mathbb{E} \left[ e^{t A_i} \right] \Big|_{t=0}                                                                                                                 \\
+                               &amp; = \mathbb{E} \left[ 1 \right]                                                                                                                                     \\
                                &amp; = 1,                                                                                                                                                      \\
-    M_{A_i}^\prime(0)          &amp; = \E \left[ A_i \right]                                                       &amp; \text{(by the $k$th moment property proved previously)}                   \\
+    M_{A_i}^\prime(0)          &amp; = \mathbb{E} \left[ A_i \right]                                                       &amp; \text{(by the $k$th moment property proved previously)}                   \\
                                &amp; = 0,                                                                                                                                                      \\
-    M_{A_i}^{\prime \prime}(0) &amp; = \E \left[ A_i^2 \right]                                                     &amp; \text{(by the $k$th moment property proved previously)}                   \\
-                               &amp; = \E \left[ A_i^2 \right] - \E \left[ A_i \right]^2 + \E \left[ A_i \right]^2                                                                             \\
-                               &amp; = \Var(A_i) + \E \left[ A_i \right]^2                                         &amp; \text{($\Var(A_i) = \E \left[ A_i^2 \right] - \E \left[ A_i \right]^2 $)} \\
+    M_{A_i}^{\prime \prime}(0) &amp; = \mathbb{E} \left[ A_i^2 \right]                                                     &amp; \text{(by the $k$th moment property proved previously)}                   \\
+                               &amp; = \mathbb{E} \left[ A_i^2 \right] - \mathbb{E} \left[ A_i \right]^2 + \mathbb{E} \left[ A_i \right]^2                                                                             \\
+                               &amp; = \mathbf{Var}(A_i) + \mathbb{E} \left[ A_i \right]^2                                         &amp; \text{($\mathbf{Var}(A_i) = \mathbb{E} \left[ A_i^2 \right] - \mathbb{E} \left[ A_i \right]^2 $)} \\
                                &amp; = 1 + 0 \\
                                &amp; = 1.
 \end{align*}\]
@@ -2215,13 +3954,13 @@ and the statement goes as follows:</p>
         
     Let \( X_1, \dots, X_n \) be independent random variables.
 
-    Assume \( \E [X_i] = 0 \; \forall i \).
+    Assume \( \mathbb{E} [X_i] = 0 \; \forall i \).
 
-    Write \( \sigma_i^2 = \Var [ X_i] = \E[X_i^2] - \E[X_i]^2 = \E[X_i^2] \).
+    Write \( \sigma_i^2 = \mathbf{Var} [ X_i] = \mathbb{E}[X_i^2] - \mathbb{E}[X_i]^2 = \mathbb{E}[X_i^2] \).
 
     Assume \( \sum\limits_{i=1}^n \sigma_i^2 = 1 \). 
 
-    Let \( S = \sum\limits_{i=1}^n X_i \). Then \( \forall u \in \R \),
+    Let \( S = \sum\limits_{i=1}^n X_i \). Then \( \forall u \in \mathbb{R}\),
     
     $$
         \lvert \Pr \left[ S \leq u \right] - \Pr \left[ Z \leq u \right] \rvert
@@ -2230,7 +3969,7 @@ and the statement goes as follows:</p>
 
     where the exact constant depends on the proof, with the best known constant
     being \(.5600\) proven by Shevtsova in 2010, and 
-    \(\beta = \sum\limits_{i=1}^n \E \left[ \lvert X_i \rvert^3 \right]\).
+    \(\beta = \sum\limits_{i=1}^n \mathbb{E} \left[ \lvert X_i \rvert^3 \right]\).
 
   
     </div>
@@ -2240,7 +3979,7 @@ and the statement goes as follows:</p>
 the mean-0 random variables and the CDF of the standard normal is bounded by a
 value proportionate to the third moment. This then becomes useful as a tool in
 proving high probability statements if we can show that the third moment is
-inversely polynomially small, i.e \(\beta = 1/\poly(n)\).</p>
+inversely polynomially small, i.e \(\beta = 1/\text{poly}(n)\).</p>
 
 <p>Another thing to note is that the theorem only provides an absolute bound for all values of \(u\).
 Therefore, when \(u\) is very negative and \(\Pr [Z \leq u ] = \Phi(u)\) is very small, the
@@ -2293,7 +4032,7 @@ performed at each time step \(t\).</p>
 <p>This can be formalized as the following objective:</p>
 
 \[\begin{align}
-     &amp; \max_\theta \E_{\tau \sim P_\theta(\tau)} [R(\tau)] \\
+     &amp; \max_\theta \mathbb{E}_{\tau \sim P_\theta(\tau)} [R(\tau)] \\
    = &amp; \max_\theta \sum\limits_\tau P_\theta(\tau) R(\tau) \\
    = &amp; \max_\theta U(\theta),
 \end{align}\]
@@ -2320,11 +4059,11 @@ necessarily know this environment transition probability \(P(s_{t+1} \mid s_t, a
 
 <p>To perform a gradient-based update on \(\theta\) to increase the reward, we 
 need to compute the derivative with respect to our policy \(\theta\), i.e
-\(\nabla_\theta \E_{\tau \sim P(\tau; \theta)} [R(\tau)]\). 
+\(\nabla_\theta \mathbb{E}_{\tau \sim P(\tau; \theta)} [R(\tau)]\). 
 Let’s walk through the derivation step by step:</p>
 
 \[\begin{align*}
-    \nabla_\theta \E_{\tau \sim P_\theta(\tau)} [R(\tau)]
+    \nabla_\theta \mathbb{E}_{\tau \sim P_\theta(\tau)} [R(\tau)]
      &amp; = \nabla_\theta \sum\limits_\tau P_\theta(\tau) R(\tau) \\
      &amp; = \sum\limits_\tau \nabla_\theta  P_\theta(\tau) R(\tau) &amp; \text{(uh oh...)}\\
 \end{align*}\]
@@ -2342,7 +4081,7 @@ and will quickly get out of hand to be computed feasibly.</p>
     &amp;= \sum\limits_\tau \frac{ P_\theta(\tau) }{ P_\theta(\tau) } \nabla_\theta  P_\theta(\tau) R(\tau) &amp; \text{(multiplying by 1)} \\
     &amp;= \sum\limits_\tau P_\theta(\tau) \frac{ \nabla_\theta  P_\theta(\tau)  }{ P_\theta(\tau) } R(\tau) &amp; \text{(rearranging)} \\
     &amp;= \sum\limits_\tau P_\theta(\tau) \nabla_\theta  \log  P_\theta(\tau) R(\tau) &amp; \text{($\frac{d}{dx} \log f(x) = \frac{f'(x)}{f(x)} $)} \\
-    &amp;= \E_{\tau \sim P_\theta(\tau)} \left[ \nabla_\theta  \log  P_\theta(\tau) R(\tau)  \right] \\
+    &amp;= \mathbb{E}_{\tau \sim P_\theta(\tau)} \left[ \nabla_\theta  \log  P_\theta(\tau) R(\tau)  \right] \\
     &amp;\approx \frac{1}{N} \sum\limits_{i=1}^N \nabla_\theta  \log  P_\theta(\tau_i) R(\tau_i), \\
 \end{align*}\]
 
@@ -2442,519 +4181,4 @@ for the course project of
 <a href="https://www.cs.cmu.edu/~dwoodruf/teaching/15859-fall22/index.html">15-859CC Algorithms for Big Data</a>.</p>
 
 <h3 id="paper">Paper</h3>
-<p><a href="/assets/research/Pseudodeterminism_For_Graph_Streaming_Problems.pdf">Link to our paper</a>.</p>]]></content><author><name>fanpu</name></author><category term="theory" /><category term="project" /><summary type="html"><![CDATA[Given a fixed input for a search problem, pseudo-deterministic algorithms produce the same answer over multiple independent runs, with high probability. For example, we can efficiently find a certificate for inequality of multivariate polynomials pseudo-deterministically, but it is not known how to do so deterministically. The same notion can be extended to the streaming model. The problem of finding a nonzero element from a turnstile stream is previously shown to require linear space for both deterministic and pseudo-deterministic algorithms. Another model of streaming problems is that of graphs, where edge insertions and deletions occur along a stream. Some natural problems include connectivity, bipartiteness, and colorability of a graph. While the randomized and deterministic graph streaming algorithms have been mostly well-studied, we investigate pseudo-deterministic space lower bounds and upper bounds for graph theoretic streaming problems.]]></summary></entry><entry><title type="html">Graphical Bayesian Networks with Topic Modeling Priors for Predicting Asset Covariances</title><link href="https://fanpu.io/blog/2022/graphical-bayesian-network-for-predicting-asset-covariances/" rel="alternate" type="text/html" title="Graphical Bayesian Networks with Topic Modeling Priors for Predicting Asset Covariances" /><published>2022-12-13T00:00:00+00:00</published><updated>2022-12-13T00:00:00+00:00</updated><id>https://fanpu.io/blog/2022/graphical-bayesian-network-for-predicting-asset-covariances</id><content type="html" xml:base="https://fanpu.io/blog/2022/graphical-bayesian-network-for-predicting-asset-covariances/"><![CDATA[<h3 id="summary">Summary</h3>
-
-<p>Covariance matrix prediction is a long-standing challenge in modern portfolio
-theory and quantitative finance. In this project, we investigate the
-effectiveness of Bayesian networks in predicting the covariance matrix of
-financial assets (specifically a subset of the S&amp;P 500), evaluated against
-Heterogeneous Autoregressive (HAR) models. In particular, we consider both
-HAR-DRD, based on the DRD decomposition of the covariance matrix, and Graphical
-HAR (GHAR)-DRD, which is also based on DRD decomposition but also makes use of
-graphical relationships between the assets. To build the graph representing
-relationships between the assets, we apply Latent Dirichlet allocation (LDA) on
-the 10-K filings of each of the companies, and infer edges based on topic
-overlap. We show that this technique has limited usefulness in our setup, but
-provides recommendations on how it could be further improved based on our
-observations of its predictions.</p>
-
-<p>Joint work with <a href="https://www.cmu.edu/mscf/student-experience/meet-our-current-students/2023-minghanl.html">Kevin Minghan
-Li</a>
-for the course project of <a href="https://andrejristeski.github.io/10708-F22/">10-708 Probabilistic Graphical Models</a>.</p>
-
-<h3 id="paper">Paper</h3>
-
-<p><a href="/assets/research/Graphical_Bayesian_Networks_For_Predicting_Asset_Covariances.pdf">Link to our paper</a>.</p>]]></content><author><name>fanpu</name></author><category term="machine-learning" /><category term="project" /><summary type="html"><![CDATA[Covariance matrix prediction is a long-standing challenge in modern portfolio theory and quantitative finance. In this project, we investigate the effectiveness of Bayesian networks in predicting the covariance matrix of financial assets (specifically a subset of the S&P 500), evaluated against Heterogeneous Autoregressive (HAR) models. In particular, we consider both HAR-DRD, based on the DRD decomposition of the covariance matrix, and Graphical HAR (GHAR)-DRD, which is also based on DRD decomposition but also makes use of graphical relationships between the assets. To build the graph representing relationships between the assets, we apply Latent Dirichlet allocation (LDA) on the 10-K filings of each of the companies, and infer edges based on topic overlap.]]></summary></entry><entry><title type="html">Analysis of Symmetry and Conventions in Off-Belief Learning (OBL) in Hanabi</title><link href="https://fanpu.io/blog/2022/symmetry-and-conventions-in-obl-hanabi/" rel="alternate" type="text/html" title="Analysis of Symmetry and Conventions in Off-Belief Learning (OBL) in Hanabi" /><published>2022-12-09T00:00:00+00:00</published><updated>2022-12-09T00:00:00+00:00</updated><id>https://fanpu.io/blog/2022/symmetry-and-conventions-in-obl-hanabi</id><content type="html" xml:base="https://fanpu.io/blog/2022/symmetry-and-conventions-in-obl-hanabi/"><![CDATA[<h3 id="summary">Summary</h3>
-<p>We investigate if policies learnt by agents using the Off-Belief Learning (OBL)
-algorithm in the multi-player cooperative game Hanabi in the zero-shot
-coordination (ZSC) context are invariant across symmetries of the game, and if
-any conventions formed during training are arbitrary or natural. We do this by
-a convention analysis on the action matrix of what the agent does, introduce a
-novel technique called the Intervention Analysis to estimate if the actions
-taken by the policies learnt are equivalent between isomorphisms of the same
-game state, and finally evaluate if our observed results also hold in a
-simplified version of Hanabi which we call Mini-Hanabi.</p>
-
-<p>Joint work with <a href="https://17zhangw.github.io/">William Zhang</a>
-for the course project of 
-<a href="https://www.cs.cmu.edu/~15784/">15-784 Foundations of Cooperative AI</a></p>
-
-<h3 id="paper">Paper</h3>
-
-<p><a href="/assets/research/Analysis_Of_Symmetry_And_Conventions_In_Off_Belief_Learning_In_Hanabi.pdf">Link to our paper</a>.</p>]]></content><author><name>fanpu</name></author><category term="machine-learning" /><category term="project" /><summary type="html"><![CDATA[Hanabi has been proposed as the new frontier for developing strategies in cooperative AI, currently a very nascent area of AI research. A recent algorithm that has been developed for multi-agent reinforcement learning in a cooperative context is the Off-Belief Learning (OBL) algorithm, which is based on iterated reasoning starting from a base policy. We investigate if policies learnt by agents using the OBL algorithm in the multi-player cooperative game Hanabi in the zero-shot coordination (ZSC) context are invariant across symmetries of the game, and if any conventions formed during training are arbitrary or natural, both of which are desirable properties.]]></summary></entry><entry><title type="html">Improving Domain Adaptation of Transformer Models For Generating Reddit Comments</title><link href="https://fanpu.io/blog/2022/improving-domain-adaptation-of-transformer-models-for-reddit-comments/" rel="alternate" type="text/html" title="Improving Domain Adaptation of Transformer Models For Generating Reddit Comments" /><published>2022-12-05T00:00:00+00:00</published><updated>2022-12-05T00:00:00+00:00</updated><id>https://fanpu.io/blog/2022/improving-domain-adaptation-of-transformer-models-for-reddit-comments</id><content type="html" xml:base="https://fanpu.io/blog/2022/improving-domain-adaptation-of-transformer-models-for-reddit-comments/"><![CDATA[<h3 id="summary">Summary</h3>
-<p>We improve upon the recent success of large language models based on the
-transformer architecture by investigating and showing several methods that
-have empirically improved its performance in domain adaptation. We use a
-pre-trained GPT-2 model and perform fine-tuning on 5 different subreddits,
-and use different methods of ordering the training data based on our priors
-about the input to see how this affects the prediction quality of the trained
-model. We propose a new metric for evaluating causal language modeling tasks
-called APES (Average Perplexity Evaluation for Sentences) to address the
-limitations of existing metrics, and apply them to our results. Our results
-are evaluated against both LSTM and GPT-2 baselines.</p>
-
-<p>There have been many exciting breakthroughts in language generation models in
-recent years. From the simple n-gram model that has been studied since the
-early 20th century, to the introduction of neural language models that utilizes
-word embeddings at the turn of the century (2001), in the past few years we saw
-the development of powerful language models such as Word2Vec (2013),
-Transformer (2017), BERT (2018), GPT (2018), GPT-3 (2020). Such models have
-already beaten humans in accuracy in tasks such as reading comprehension, and
-have displayed high levels of fluency in language-generation tasks. These
-successes can be attributed to the great strides taken in Deep Learning, the
-increase in computational resources, and the proliferation of publicly
-available datasets and benchmarks.</p>
-
-<p>We aim to replicate and build upon existing work in causal language models by
-investigating and answering the following research questions in this paper:</p>
-
-<ol>
-  <li>
-    <p>Can we improve the performance of domain adaptation of transformer language
-models by various methods of ordering the inputs seen at training time,
-based on our priors about the input?</p>
-  </li>
-  <li>
-    <p>Can we successfully perform domain adaptation using just commodity hardware
-on unstruc- tured internet discourse that can contain new vocabulary, carry
-unique speech patterns, and require expert domain knowledge in order to
-provide a cogent response to a prompt?</p>
-  </li>
-  <li>
-    <p>Can we successfully perform domain adaptation on large language models with
-billions of parameters even with very small datasets?</p>
-  </li>
-  <li>
-    <p>What is a suitable evaluation metric to determine the success of domain
-adaptation for text generation, given the limitations of existing metrics
-for evaluating causal language models?</p>
-  </li>
-</ol>
-
-<p>Our paper shows mild results for point 1, and answers points 2 and 3
-affirmatively empirically. We propose a new metric to address point 4 which we
-call APES (Average Perplexity Evaluation for Sentences), and use it to evaluate
-our results. We achieve our results by fine-tuning a pre-trained GPT-2 language
-model using data from 5 subreddits with distinct topics and talking styles, and
-use various methods of ordering the input data to improve the performance of
-fine-tuning as measured by the Bilingual Evaluation Understudy (BLEU) score and
-a qualitative evaluation of the results given a prompt from different
-subreddits. Finally, we use the APES metric to manually score 200 results from
-the test set from each dataset from 1 to 5. Our results are evaluated against a
-LSTM baseline and a GPT-2 model without fine-tuning.</p>
-
-<p>Joint work with Joseph Salmento
-for the course project of 
-<a href="https://rsalakhucmu.github.io/10417-22/">10-617 Intermediate Deep Learning</a>.</p>
-
-<h3 id="paper">Paper</h3>
-
-<p><a href="/assets/research/Improving_Domain_Adaptation_Of_Transformer_Models_For_Generating_Reddit_Comments.pdf">Link to our paper</a>.</p>]]></content><author><name>fanpu</name></author><category term="machine-learning" /><category term="project" /><summary type="html"><![CDATA[We improve upon the recent success of large language models based on the transformer architecture by investigating and showing several methods that have empirically improved its performance in domain adaptation. We use a pre-trained GPT-2 model and perform fine-tuning on 5 different subreddits, and use different methods of ordering the training data based on our priors about the input to see how this affects the prediction quality of the trained model. We propose a new metric for evaluating causal language modeling tasks called APES (Average Perplexity Evaluation for Sentences) to address the limitations of existing metrics, and apply them to our results. Our results are evaluated against both LSTM and GPT-2 baselines.]]></summary></entry><entry><title type="html">Efficient Low Rank Approximation via Affine Embeddings</title><link href="https://fanpu.io/blog/2022/affine-embeddings-for-low-rank-approximation/" rel="alternate" type="text/html" title="Efficient Low Rank Approximation via Affine Embeddings" /><published>2022-09-29T00:00:00+00:00</published><updated>2022-09-29T00:00:00+00:00</updated><id>https://fanpu.io/blog/2022/affine-embeddings-for-low-rank-approximation</id><content type="html" xml:base="https://fanpu.io/blog/2022/affine-embeddings-for-low-rank-approximation/"><![CDATA[<h3 id="affine-embeddings">Affine Embeddings</h3>
-<p>Suppose we have a \(n \times d\) matrix \(A\) that is tall and thin, and a \(n \times m\) matrix \(B\) that can have a very large number of columns. The goal is to solve</p>
-
-\[\begin{equation}
-    \min_X | AX - B|_F^2.
-\end{equation}\]
-
-<p>An affine embedding is a matrix \(S\) such that</p>
-
-\[\begin{equation} \label{eq:affine_desired}
-    \|S(A X-B)\|_{\mathrm{F}}=(1 \pm \varepsilon)\|A X-B\|_{\mathrm{F}}
-\end{equation}\]
-
-<p>holds with high probability. CountSketch matrices are one class
-of matrices that can be used for affine embeddings.
-CountSketch matrices are \(k \times n\) matrices with \(k = O(d^2/\varepsilon^2)\),
-and where one entry is taken per column at random and set to \(\pm 1\) with
-equal probability, with all other entries zero.</p>
-
-<p>For the rest of this post, we will see how to apply affine embeddings to help solve low-rank approximations.</p>
-
-<h3 id="low-rank-approximation">Low-Rank Approximation</h3>
-<p>Low-rank approximation is also referred to as Principal Component Analysis
-(PCA).  It is one of the most popular ways of performing linear dimensionality
-reduction, with other more complicated ways being via neural networks.</p>
-
-<h3 id="motivation">Motivation</h3>
-<p>Suppose you have a \(n \times d\) matrix \(A\), where both dimensions are large.
-This could represent something like a customer-product matrix used in online
-recommender systems, where each cell \(A_{i,j}\) denotes how many times customer \(i\)
-purchased item \(j\). Then it is typically the case that \(A\) can be
-well-approximated by a low-rank matrix. For instance, using the previous
-example, there might only be a few dominant patterns that describes purchasing
-behavior in \(A\), and the rest of it is just noise.</p>
-
-<p>Therefore, if we can find such a low-rank approximation, we can achieve
-significant space savings, and can also help to make the data more
-interpretable.</p>
-
-<p>We can thus formulate our problem as finding a rank-\(k\) matrix \(A_k\) such that</p>
-
-\[\begin{equation}\label{eq:best-rank-k}
-    \argmin_{\text {rank-$k$ matrices $B$} }\|A - B\|_{\mathrm{F}}
-\end{equation}\]
-
-<h3 id="exact-solution-truncated-singular-value-decomposition">Exact Solution: Truncated Singular Value Decomposition</h3>
-<p>A natural solution that comes to mind is to use truncated singular value
-decomposition (SVD), which in fact gives us the best rank-\(k\) approximation for
-\(A\) as per Equation \ref{eq:best-rank-k}.  To approximate the \(n \times d\)
-matrix \(A\) with a rank-\(k\) matrix, compute the SVD of \(A\) to get \(A=U \Sigma
-    V^{\top}\). Define \(\Sigma_{k}\) by zeroing out all the singular values in
-\(\Sigma\) below the \(k\)-th row, and define \(A_{k}=U \Sigma_{k} V^{\top}\). Note
-that we can also drop all but the top \(k\) rows or \(V^{\top}\) and drop all but
-the top \(k\) columns of \(U\) without changing \(A_{k}\).</p>
-
-<p>It turns out that \(A_{k}\) minimizes \(\left\|A_{k}-A\right\|\) among all rank-\(k\) matrices for many norms, including the Frobenius norm and the spectral norm. More generally, \(A_{k}\) is the best rank-\(k\) approximation under any unitarily invariant norm.</p>
-
-<p>We can compute the SVD of \(A\) in \(O\left(\min \left(n d^{2}, n^{2}
-d\right)\right)\) time. The \(\min\) comes from the fact that we can transpose
-\(A\) if necessary before performing SVD, so that the linear dimension matches
-the larger dimension.</p>
-
-<p>However, the problem is that performing SVD is too expensive, since \(n\) and \(d\) are large.</p>
-
-<h3 id="approximate-solution-truncated-singular-value-decomposition">Approximate Solution: Truncated Singular Value Decomposition</h3>
-<p>In order to get a better runtime, we relax the problem such that we are satisfied
-with an approximate solution instead of an exact solution. Our goal is now to
-find a rank \(k\) matrix \(A'\) such that</p>
-
-\[\begin{equation}
-    \left\|A^{\prime}-A\right\|_F \leq(1+\varepsilon)\left\|A_{k}-A\right\|_F
-\end{equation}\]
-
-<p>with a constant failure probability (say 9/10).</p>
-
-<p>We will now show an algorithm that can do this
-\({O(\nnz{A} +(n+d) \operatorname{poly}(k / \varepsilon))}\) time,
-due to Woodruff, Clarkson, and Sarlos~\cite{Woodruff-LRA}~\cite{sarlos}. Recall that \(\nnz{A}\) is the number of non-zero entries in \(A\). When the input is dense, this is in approximately \(O(n d)\) time, which is significantly
-faster than SVD. When it is sparse, it becomes even faster.</p>
-
-<h3 id="intuition">Intuition</h3>
-<p>The key idea is to compute \(SA\), such that the number of rows of \(S\) is \(O(k/\epsilon)\) which is small.</p>
-
-<p>Think of the rows of \(A\) as points in \(\mathbb{R}^d\).
-Think of \(SA\) as taking a small number of linear combinations of \(A\),
-where each row of \(S\) is picking a random linear combination of all the rows of \(A\), i.e points in \(\mathbb{R}^d\):</p>
-
-<figure>
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/low-rank-approx-intuition-matrix.avif" class="z-depth-0 center" width="200px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();" />
-
-  </picture>
-</figure>
-
-<p>This allows us to think of \(SA\) as a \(\frac{k}{\epsilon} \times d\) matrix where
-we performed this operation \(k/\epsilon\) times.  Then each row of \(SA\) is a
-linear combination of the rows of \(A\), but now in a subspace of only dimension
-\(k/\epsilon\). If we run SVD on these projected points, we can do it in only
-\(O \left( n\left( \frac{k}{\epsilon} \right)^2 \right)\) time!</p>
-
-<p>To summarize, the main idea is to:</p>
-
-<ol>
-  <li>Project all the rows of \(A\) onto a lower dimensional space \(SA\).</li>
-  <li>Find the best rank-\(k\) approximation to the points in \(SA\) via SVD.</li>
-</ol>
-
-<h3 id="choice-of-sketching-matrix">Choice of Sketching Matrix</h3>
-<p>One might wonder which sketching matrices \(S\) would work for this paradigm.
-In fact, all of the following sketching matrices work:</p>
-
-<ol>
-  <li>\(S\) as the \(\frac{k}{\epsilon} \times n\) matrix of i.i.d normal random variables. We can compute \(SA\) in time \(O\left( \nnz{A} \frac{k}{\epsilon} \right)\) since \(S\) is dense. However, we could do a lot better.</li>
-  <li>\(S\) as the \(\tilde{O}\left(\frac{k}{\epsilon}\right) \times n\) Subsampled Randomized Hadamard Transform (also called the Fast Johnson Lindenstrauss) matrix. \(SA\) can be computed in \(O(nd \log n)\) time.</li>
-  <li>\(S\) as the \(\poly\left( \frac{k}{\epsilon} \right) \times n\) CountSketch matrix. While the number of rows is larger, \(SA\) can be computed in just \(\nnz{A}\) time.</li>
-</ol>
-
-<p>In this post, we will focus on using the CountSketch matrix for low-rank approximation.</p>
-
-<h3 id="showing-the-existence-of-a-good-solution-in-the-row-span-of-sa">Showing the Existence of a Good Solution in the Row Span of \(SA\)</h3>
-<p>For our proposed algorithm to actually work, we must first guarantee that some
-good rank-\(k\) approximation must live in the row span of \(SA\) in the first
-place. We will use the following thought experiment to show that such a solution
-indeed exists. We will not actually attempt to recover the solution.</p>
-
-<p>Consider the following hypothetical regression problem:</p>
-
-\[\begin{equation}\label{eq:hypothetical-regression}
-    \min _{X}\left\|A_{k} X-A\right\|_{\mathrm{F}}=\left\|A_{k}-A\right\|_{\mathrm{F}}.
-\end{equation}\]
-
-<p>Note again that this is only hypothetical: we don’t know what \(A_k\) is, because
-if we did, then we are already done!</p>
-
-<h4 id="best-solution-to-hypothetical-regression-problem">Best Solution to Hypothetical Regression Problem</h4>
-<p>The best solution of \(X\) to Equation \ref{eq:hypothetical-regression} is just
-the identity matrix \(I_d\), since \(A_k\) is already defined to be the best
-rank-\(k\) approximation to \(A\), and we cannot increase the rank by multiplying
-something in hopes of further decreasing the Frobenius norm. This gives us</p>
-
-\[\begin{equation}
-    \min _{X}\left\|A_{k}
-    X-A\right\|_{\mathrm{F}}=\left\|A_{k}-A\right\|_{\mathrm{F}}.
-\end{equation}\]
-
-<h4 id="sketching-the-hypothetical-regression-problem-with-countsketch">Sketching the Hypothetical Regression Problem with CountSketch</h4>
-<p>Now take the CountSketch matrix \(S\) to be our affine embedding. We claim that
-just \(\poly \left( \frac{k}{\epsilon} \right)\) rows suffices, instead of the
-usual \(\poly \left( \frac{d}{\epsilon} \right)\) rows. This is because since
-\(A_k\) only has rank \(k\), then we could replace it with some other \(n \times k\)
-rank \(k\) matrix \(U_k\) that has the same column span as \(A_k\). This works because
-for every \(X\) there is some \(Y\) such that \(A_{k} X=U_{k} Y\) and vice versa. Thus
-we can replace \(A_{k}\) with \(U_{k}\) without generality, and \(S\) can be taken as
-a CountSketch matrix for the smaller matrix \(U_{k}\).</p>
-
-<p>Recall our affine embedding result:</p>
-
-\[\begin{equation}\label{eq:embedding}
-    \left\|S A_{k} X-S A\right\|_{\mathrm{F}}=(1 \pm \varepsilon)\left\|A_{k}
-    X-A\right\|_{\mathrm{F}}.
-\end{equation}\]
-
-<p>To solve for the \(X\) that minimizes the left hand side quantity, recall that the
-normal equation gives us</p>
-
-\[\begin{equation}\label{eq:normal}
-    \argmin_{X}\left\|S A_{k} X-S A\right\|_{\mathrm{F}}=\left(S
-    A_{k}\right)^{-} S A.
-\end{equation}\]
-
-<p>Plug in Equation \ref{eq:normal} into the right side of \ref{eq:embedding} to obtain</p>
-
-\[\begin{equation}\label{eq:exists}
-    \|     A_k (SA_k)^- SA - A \|_F \leq (1 \pm \epsilon) \| A_k - A \|_F.
-\end{equation}\]
-
-<p>What is exciting about Equation \ref{eq:exists} is that it tells us that
-\(A_k (SA_k)^- SA\) is a \((1 \pm \epsilon)\) approximation for \(A_k\).
-Furthermore, \(A_k (SA_k)^- SA\) is rank-\(k\) and is in the row span of \(SA\),
-which precisely answers our original question of whether a good rank-\(k\)
-approximation in the row span of \(SA\) exists in the affirmative!</p>
-
-<p>To belabor the point, we do not know either \(A_k\) or \(A_k (SA_k)^- SA\);
-we simply used them to prove that our desired rank-\(k\) approximation in \(SA\) exists.</p>
-
-<h3 id="considering-the-optimal-sketched-solution">Considering the Optimal Sketched Solution</h3>
-<p>Our conclusion from the previous section allows us to conclude that</p>
-
-\[\begin{equation}\label{eq:sketch-1}
-    \min _{\text {rank-} k X}\|X S A-A\|_{\mathrm{F}}^2 \leq\left\|A_{k}\left(S
-    A_{k}\right)^{-} S A-A\right\|_{\mathrm{F}}^2
-    \leq(1+\varepsilon)\left\|A_{k}-A\right\|_{\mathrm{F}}^2.
-\end{equation}\]
-
-<p>However, solving for the left hand side of Equation \ref{eq:sketch-1} is
-different from normal regression, because the rank of our solution for \(X\) is
-constrained. Suppose for a moment that we ignore this rank constraint and proceed
-to solve for \(X\) as per usual using our normal equations. Then by plugging in
-the normal equations into Equation \ref{eq:sketch-1}, we obtain</p>
-
-\[\begin{equation}\label{eq:pyt-1}
-    \|X S A-A\|_{\mathrm{F}}^{2}=
-    \left\|X S A-A(S A)^{-} S
-    A\right\|_{\mathrm{F}}^{2}
-    + \left\|A(S A)^{-} S
-    A-A\right\|_{\mathrm{F}}^{2}
-\end{equation}\]
-
-<p>by considering the Pythagorean theorem for the elements row-wise: \(X_i SA\) is a projection of \(X_i\)
-onto \(SA\) in a rank-\(k\) space, and \(A_i (SA)^- SA\) is the projection of \(A_i\) onto \(SA\).</p>
-
-<p>Equation \ref{eq:pyt-1} tells us that the second term on the right hand side does not depend on \(X\),
-so we can re-formulate Equation \ref{eq:sketch-1} as</p>
-
-\[\begin{equation}\label{eq:smaller-min}
-    \min _{\text {rank-}k\, X}\|X S A-A\|_{\mathrm{F}}^{2}=\left\|A(S A)^{-} S
-    A-A\right\|_{\mathrm{F}}^{2}+
-    \min _{\text {rank}-k\, X}\left\|X S A-A(S A)^{-} S
-    A\right\|_{\mathrm{F}}^{2}.
-\end{equation}\]
-
-<h3 id="a-simpler-minimization-problem">A Simpler Minimization Problem</h3>
-<p>Equation \ref{eq:smaller-min} reduces our original minimization problem to just solving</p>
-
-\[\begin{equation}
-    \min _{\text {rank}-k\, X}\left\|X S A-A(S A)^{-} S
-    A\right\|_{\mathrm{F}}^{2}.
-\end{equation}\]
-
-<p>To solve this, let’s begin by writing \(S A=U \Sigma V^{\top}\) in SVD form. We can do
-this in \(d \cdot \operatorname{poly} \left( \frac{k}{\epsilon} \right)\) time. Then simplify our
-expression from Equation \ref{eq:smaller-min} to obtain</p>
-
-\[\begin{align}
-      &amp; \min _{\text {rank-}k\, X}\left\|X S A-A(S A)^{-} S
-    A\right\|_{\mathrm{F}}^{2}                                                                                                                               \\
-    = &amp; \min _{\text {rank}-k\, X}\left\|X U \Sigma
-    V^{\top}-A(S A)^{-} U \Sigma V^{\top}\right\|_{\mathrm{F}}^{2}
-      &amp; \text{(substituting SVD representation of $S$)}                                                                                                      \\
-    = &amp; \min _{\text
-        {rank}-k\, X}\left\|\left(X U \Sigma-A(S A)^{-} U \Sigma\right)
-    V^{\top}\right\|_{\mathrm{F}}^{2}                                                                                                                        \\
-    = &amp; \min _{\text
-        {rank}-k\, X}\left\|X U \Sigma-A(S A)^{-} U \Sigma
-    \right\|_{\mathrm{F}}^{2}
-      &amp; \text{($V^\top$ is orthonormal and does not change norm)}                                                                                            \\
-    = &amp; \min _{\text {rank-k } Y}\left\|Y - A (SA)^- U \Sigma\right\|_{F}^{2}. &amp; \text{(change of variables from $X$ to $Y$, since $U\Sigma$ has full rank)} \\
-\end{align}\]
-
-<p>This shows that it suffices to just compute the SVD of \(A (SA)^- U \Sigma\) to solve our original problem!</p>
-
-<h3 id="issues-with-running-time">Issues with Running Time</h3>
-<p>Unfortunately, we still haven’t achieved the running time we want.
-Recall that our goal was to find the best rank-\(k\) approximation in time
-\({O(\nnz{A} +(n+d) \operatorname{poly}(k / \varepsilon))}\).
-\(A (SA)^- U \Sigma\) is a \(n \times \poly \left( \frac{k}{\epsilon} \right)\) matrix,
-so one might claim that computing its SVD only takes \(O\left( n \cdot \poly \left(
-        \frac{k}{\epsilon} \right) \right)\), which is within our time bounds.
-We could also compute \(SA\), its pseudoinverse \((SA)^-\), and the multiplication \((SA)^-U\Sigma\) quickly.</p>
-
-<p>However, the problem is that we cannot multiply on the left by \(A\) within the
-time bounds, because we have no guarantees about the sparsity of \((SA)^- U
-    \Sigma\). It may as well be a very dense matrix. This means that computing
-\(A(SA)^- U \Sigma\) takes time at least \(O\left( \nnz{A} \cdot \poly\left(
-        \frac{k}{\epsilon} \right) \right)\), which does not meet our bounds.</p>
-
-<h3 id="summary-of-current-progress">Summary of Current Progress</h3>
-<p>Now is a good time to stop and review the progress that we have made so far. To recap, our current
-algorithm works as follows:</p>
-
-<ol>
-  <li>Compute \(SA\). This is in time \((\nnz{(A)})\)</li>
-  <li>Project each row of \(A\) onto \(SA\). We just showed that we couldn’t do this in our desired time bound
-       \({O\left(\nnz{A} +(n+d) \operatorname{poly}\left( \frac{k}{\epsilon} \right)\right)}\).</li>
-  <li>Find the best rank-\(k\) approximation of the projected points inside the rowspace of \(SA\).
-       This is in time \(O\left( n \cdot \poly \left( \frac{k}{\epsilon}
-               \right) \right)\).</li>
-</ol>
-
-<p>Therefore Step 2 is our bottleneck that we hope to improve. We will do this by
-approximating the projection of \(A\) onto \(SA\).</p>
-
-<h3 id="approximating-the-projection">Approximating the Projection</h3>
-<p>Projection is in fact just least-squares regression in disguise.
-This inspires us to sketch again to reduce the dimensions of the problem.</p>
-
-<p>Recall that previously we wanted to solve for</p>
-
-\[\begin{equation}\label{eq:target}
-    \min _{\text {rank-} k \, X}\|X S A-A\|_{\mathrm{F}}^{2}.
-\end{equation}\]
-
-<p>We can’t sketch on the left anymore since \(X\) appears on the left, so we try to
-sketch on the right instead. Let \(R\) be an affine embedding matrix, say a
-transposed CountSketch matrix with \(\poly \cdot \left( \frac{k}{\epsilon}
-    \right)\) columns. Then we sketch on the right in Equation \ref{eq:target} to
-change our target to be</p>
-
-\[\begin{equation}\label{eq:new-target}
-    \min _{\text {rank-} k \, X}   \|X (S A) R-A R\|_{\mathrm{F}}^{2}.
-\end{equation}\]
-
-<p>It would be wise to first verify that we can compute all our quantities in the
-desired bounds.  Indeed, computing \(AR\) takes \(\nnz{A}\) time, and computing
-\(SAR\) can be done in \(\nnz{SA} \leq \nnz{A}\) by recalling that \(SA\) cannot
-increase the number of non-zero entries in \(A\).</p>
-
-<p>Since \(R\) is an affine embedding, by Equation \ref{eq:new-target} we obtain</p>
-
-\[\begin{equation}\label{eq:applied}
-    \|X (S A) R-A R\|_{\mathrm{F}}^{2}.
-    =(1 \pm \varepsilon)\|X (S
-    A)-A\|_{\mathrm{F}}^{2}.
-\end{equation}\]
-
-<p>We can rewrite our new target in Equation \ref{eq:new-target} to obtain</p>
-
-\[\begin{align}
-    \min _{\text {rank-} k\, X}\|X S A R-A R\|_{\mathrm{F}}^{2}
-     &amp; =\left\|A R(S A
-    R)^{-} S A R-A R\right\|_{\mathrm{F}}^{2}+\min _{\text {rank-}k\, X}\left\|X S A
-    R-A R(S A R)^{-} S A R\right\|_{\mathrm{F}}^{2}
-\end{align}\]
-
-<p>by applying the Pythagorean theorem. Then similarly as before, note that only the
-second term depends on \(X\), so again we have a smaller minimization problem:</p>
-
-\[\begin{equation}\label{eq:change-var}
-    \min _{\text {rank-k } X}\left\|X S A R-A R(S A
-    R)^{-}(S A R)\right\|_{\mathrm{F}}^{2}
-    =
-    \min _{\text {rank-} k\,
-        Y}\left\|Y-A R(S A R)^{-} S A R\right\|_{\mathrm{F}}^{2},
-\end{equation}\]
-
-<p>where we perform a change of variables to \(Y\). We can do this because the optimal \(Y\) must
-live in the row space of \(SAR\) and therefore take the form \(XSAR\). Suppose if it did not, then since \(AR(SAR)^-SAR\) is
-in the row space of \(SAR\), then we could simply remove the orthogonal components to \(SAR\)
-in \(Y\) to obtain an even better solution, contradicting its optimality.</p>
-
-<h3 id="analyzing-the-runtime">Analyzing the Runtime</h3>
-<p>This time round, we have truly solved the problem. Previously, we failed because we could not
-project \(A\) onto the column space of \(SA\) in the desired time bounds. But this
-time round, \(SAR\) has dimensions \(\poly \left( \frac{k}{\epsilon} \right) \times
-    \poly \left( \frac{k}{\epsilon} \right)\), and \(AR\) is a \(n \times \left(
-    \frac{k}{\epsilon} \right)\) matrix that takes \(\nnz{A}\) time to compute, which
-means that \(AR(SAR)^-(SAR)\) can be computed in time \(n \cdot \poly\left(
-    \frac{k}{\epsilon} \right) \in {O\left(\nnz{A} +(n+d) \operatorname{poly}\left(
-        \frac{k}{\epsilon} \right)\right)}\).</p>
-
-<p>As a result, we can proceed to compute \(Y\) in Equation \ref{eq:change-var} by
-performing truncated SVD in time \(O\left(n \cdot \poly \left( \frac{k}{\epsilon}
-        \right)\right)\).</p>
-
-<p>As noted previously, our solution \(Y\) must look like \(Y = XSAR\) for some \(X\).
-We can thus solve for \(X = Y(SAR)^-\).</p>
-
-<p>Then by Equation \ref{eq:target}, the final rank-\(k\) approximation that we wish
-to return is \(XSA = Y(SAR)^-SA\). A final caveat here is that we must
-return \(Y(SAR)^-SA\) in factored form, because if we multiply out the matrices it
-is a \(n \times d\) matrix, which does not fit in our desired running time.</p>
-
-<h3 id="returning-the-output-in-factored-form">Returning the Output in Factored Form</h3>
-<p>We want to output \(LR = Y(SAR)^-SA\) as \(L, R\) where \(L\) is \(n \times k\) and \(R\) is \(k \times d\).</p>
-
-<p>To do so, recall that \(Y\) is \(n \times \poly \left( \frac{k}{\epsilon} \right)\) and so we
-can recover its SVD representation as \(Y = U \Sigma V^\top\). Then
-let</p>
-
-\[\begin{align}
-    L &amp; = U \Sigma,         \\
-    R &amp; = V^\top (SAR)^-SA,
-\end{align}\]
-
-<p>where \(L\) is \(n \times  k\) and \(R\) is \(k \times d\). One can check that we can perform all
-the matrix multiplications within the time bounds.</p>
-
-<h3 id="bounding-the-failure-probability">Bounding the Failure Probability</h3>
-<p>The sketch by \(S\) and \(R\) may both fail to be an affine embedding with some
-constant probability, say \(\delta = \frac{1}{100}\).
-Then we can simply union bound over \(S\) and \(R\) failing to show that the construction
-works with small constant failure probability.</p>
-
-<h3 id="summary">Summary</h3>
-<p>That was a lot of discussion and analysis, but in the end, the low-rank
-approximation algorithm is very simple.</p>
-
-<ol>
-  <li>Compute \(SA\).</li>
-  <li>Compute \(SAR\) and \(AR\).</li>
-  <li>Compute \(\argmin_Y \left\|Y-A R(S A R)^{-}(S A R)\right\|_{\mathrm{F}}^{2}\) by truncated SVD.</li>
-  <li>Output \(Y(SAR)^{-}SA\) in factored form.</li>
-</ol>
-
-<p>This takes \(O\left(\nnz{A}+(n+d) \poly \left( \frac{k}{\epsilon} \right)
-    \right)\) time overall, which is much faster than applying truncated SVD to \(A\)
-directly.</p>
-
-<h2 id="references">References</h2>
-<ul>
-  <li>Kenneth L. Clarkson and David P. Woodruff. Low rank approximation and regression in
-input sparsity time. CoRR, abs/1207.6365, 2012. 
-URL: <a href="http://arxiv.org/abs/1207.6365">http://arxiv.org/abs/1207.6365</a>, arXiv:1207.6365.</li>
-  <li>Tamas Sarlos. Improved approximation algorithms for large matrices via random projections. In 2006 47th Annual IEEE Symposium on Foundations of Computer Science (FOCS’06), pages
-143–152, 2006. doi:10.1109/FOCS.2006.37.</li>
-</ul>]]></content><author><name>fanpu</name></author><category term="theory" /><category term="machine-learning" /><category term="math" /><summary type="html"><![CDATA[Suppose you have a \(n \times d\) matrix \(A\), where both dimensions are large. This could represent something like a customer-product matrix used in online recommender systems, where each cell \(A_{i,j}\) denotes how many times customer \(i\) purchased item \(j\). Then it is typically the case that \(A\) can be well-approximated by a low-rank matrix. For instance, using the previous example, there might only be a few dominant patterns that describes purchasing behavior in \(A\), and the rest of it is just noise. Therefore, if we can find such a low-rank approximation, we can achieve significant space savings, and can also help to make the data more interpretable. In this post, we explore how affine embeddings via the CountSketch matrix allows us to perform low rank approximation in time \(O\left(\nnz{A}+(n+d) \poly \left( \frac{k}{\epsilon} \right)\right)\).]]></summary></entry></feed>
+<p><a href="/assets/research/Pseudodeterminism_For_Graph_Streaming_Problems.pdf">Link to our paper</a>.</p>]]></content><author><name>fanpu</name></author><category term="theory" /><category term="project" /><summary type="html"><![CDATA[Given a fixed input for a search problem, pseudo-deterministic algorithms produce the same answer over multiple independent runs, with high probability. For example, we can efficiently find a certificate for inequality of multivariate polynomials pseudo-deterministically, but it is not known how to do so deterministically. The same notion can be extended to the streaming model. The problem of finding a nonzero element from a turnstile stream is previously shown to require linear space for both deterministic and pseudo-deterministic algorithms. Another model of streaming problems is that of graphs, where edge insertions and deletions occur along a stream. Some natural problems include connectivity, bipartiteness, and colorability of a graph. While the randomized and deterministic graph streaming algorithms have been mostly well-studied, we investigate pseudo-deterministic space lower bounds and upper bounds for graph theoretic streaming problems.]]></summary></entry></feed>

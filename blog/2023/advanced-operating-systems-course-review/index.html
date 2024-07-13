@@ -10,11 +10,11 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review | Fan Pu  Zeng</title>
+    <title>CMU 15712 Advanced Operating Systems and Distributed Systems Course Review | Fan Pu  Zeng</title>
     <meta name="author" content="Fan Pu  Zeng">
-    <meta name="description" content="15-712 Advanced Operating Systems and Distributed Systems was an excellent seminar-based graduate course that took us on a whirlwind tour through many of the most seminal SigOps Hall of Fame papers across several systems domains. It will prepare you to be a great systems designer and researcher.  In this post, I will share my experience in the class, the course structure and content, what I thought were the key takeaways, and who this class would be suitable for.
+    <meta name="description" content="15-712 Advanced OS was an excellent seminar-based graduate course that took us on a whirlwind tour through many of the most seminal SigOps Hall of Fame papers across several systems domains. It will prepare you to be a great systems designer and researcher. In this post, I will share my experience in the class, the course structure and content, what I thought were the biggest takeaways, and who this class might be suitable for.
 ">
-    <meta name="keywords" content="fanpu, fan pu, fanpu zeng, fan pu zeng, zengfanpu, fanpuzeng, fzeng, CMU, cmu, carnegie mellon, cmu courses, school of computer science, scs, machine learning, computer science, ml, theory, courses, course reviews, CS, Jane Street">
+    <meta name="keywords" content="15712,15-712,cmu 15712,cmu 15-712,advanced os,advanced operating systems,cmu,carnegie mellon,computer systems,course review,courses,fanpu">
 
 
     <!-- Bootstrap & MDB -->
@@ -45,12 +45,25 @@
     <link rel="canonical" href="https://fanpu.io/blog/2023/advanced-operating-systems-course-review/">
     <!-- Dark Mode -->
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
 
-    <script src="/assets/js/theme.js"></script>
-    <script src="/assets/js/dark_mode.js"></script>
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@FanPu_Zeng">
+    <meta name="twitter:creator" content="@fanpu">
+    <meta name="og:title" content="CMU 15712 Advanced Operating Systems and Distributed Systems Course Review">
+
+    
+    <meta name="twitter:card" content="summary_large_image">
+    
+    <meta name="og:image" content="https://fanpu.io/assets/img/posts/santorini_church.webp">
+
     
 
+    
+    <meta name="og:description" content="15-712 Advanced OS was an excellent seminar-based graduate course that took us on a whirlwind tour through many of the most seminal SigOps Hall of Fame papers across several systems domains. It will prepare you to be a great systems designer and researcher. In this post, I will share my experience in the class, the course structure and content, what I thought were the biggest takeaways, and who this class might be suitable for.
+">
+    
+
+    <!-- end of Twitter cards -->
   </head>
 
   <!-- Body -->
@@ -92,18 +105,10 @@
                 <a class="nav-link" href="/cmu-online/">CMU Online</a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="/projects/">Projects</a>
+                <a class="nav-link" href="/summaries/">ML Paper Summaries</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/repositories/">Repositories</a>
-              </li>
-
-              <!-- Toogle theme mode -->
-              <li class="toggle-container">
-                <button id="light-toggle" title="Change theme">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-                </button>
               </li>
             </ul>
           </div>
@@ -132,119 +137,127 @@
           <div class="col-sm-9">
             <!-- _layouts/post.html -->
 
-<div style="display:none">
+<div class="post">
+
+  <div style="display:none">
     $$
-    \DeclareMathOperator*{\argmax}{arg\,max}
-    \DeclareMathOperator*{\argmin}{arg\,min}
-    \newcommand{\nnz}[1]{\mbox{nnz}(#1)}
-    \newcommand{\dotprod}[2]{\langle #1, #2 \rangle}
+    \newcommand{\bone}{\mathbf{1}}
+    \newcommand{\bbeta}{\mathbf{\beta}}
+    \newcommand{\bdelta}{\mathbf{\delta}}
+    \newcommand{\bepsilon}{\mathbf{\epsilon}}
+    \newcommand{\blambda}{\mathbf{\lambda}}
+    \newcommand{\bomega}{\mathbf{\omega}}
+    \newcommand{\bpi}{\mathbf{\pi}}
+    \newcommand{\bphi}{\mathbf{\phi}}
+    \newcommand{\bvphi}{\mathbf{\varphi}}
+    \newcommand{\bpsi}{\mathbf{\psi}}
+    \newcommand{\bsigma}{\mathbf{\sigma}}
+    \newcommand{\btheta}{\mathbf{\theta}}
+    \newcommand{\btau}{\mathbf{\tau}}
+    \newcommand{\ba}{\mathbf{a}}
+    \newcommand{\bb}{\mathbf{b}}
+    \newcommand{\bc}{\mathbf{c}}
+    \newcommand{\bd}{\mathbf{d}}
+    \newcommand{\be}{\mathbf{e}}
+    \newcommand{\boldf}{\mathbf{f}}
+    \newcommand{\bg}{\mathbf{g}}
+    \newcommand{\bh}{\mathbf{h}}
+    \newcommand{\bi}{\mathbf{i}}
+    \newcommand{\bj}{\mathbf{j}}
+    \newcommand{\bk}{\mathbf{k}}
+    \newcommand{\bell}{\mathbf{\ell}}
+    \newcommand{\bm}{\mathbf{m}}
+    \newcommand{\bn}{\mathbf{n}}
+    \newcommand{\bo}{\mathbf{o}}
+    \newcommand{\bp}{\mathbf{p}}
+    \newcommand{\bq}{\mathbf{q}}
+    \newcommand{\br}{\mathbf{r}}
+    \newcommand{\bs}{\mathbf{s}}
+    \newcommand{\bt}{\mathbf{t}}
+    \newcommand{\bu}{\mathbf{u}}
+    \newcommand{\bv}{\mathbf{v}}
+    \newcommand{\bw}{\mathbf{w}}
+    \newcommand{\bx}{\mathbf{x}}
+    \newcommand{\by}{\mathbf{y}}
+    \newcommand{\bz}{\mathbf{z}}
+    \newcommand{\bA}{\mathbf{A}}
+    \newcommand{\bB}{\mathbf{B}}
+    \newcommand{\bC}{\mathbf{C}}
+    \newcommand{\bD}{\mathbf{D}}
+    \newcommand{\bE}{\mathbf{E}}
+    \newcommand{\bF}{\mathbf{F}}
+    \newcommand{\bG}{\mathbf{G}}
+    \newcommand{\bH}{\mathbf{H}}
+    \newcommand{\bI}{\mathbf{I}}
+    \newcommand{\bJ}{\mathbf{J}}
+    \newcommand{\bK}{\mathbf{K}}
+    \newcommand{\bL}{\mathbf{L}}
+    \newcommand{\bM}{\mathbf{M}}
+    \newcommand{\bN}{\mathbf{N}}
+    \newcommand{\bP}{\mathbf{P}}
+    \newcommand{\bQ}{\mathbf{Q}}
+    \newcommand{\bR}{\mathbf{R}}
+    \newcommand{\bS}{\mathbf{S}}
+    \newcommand{\bT}{\mathbf{T}}
+    \newcommand{\bU}{\mathbf{U}}
+    \newcommand{\bV}{\mathbf{V}}
+    \newcommand{\bW}{\mathbf{W}}
+    \newcommand{\bX}{\mathbf{X}}
+    \newcommand{\bY}{\mathbf{Y}}
+    \newcommand{\bZ}{\mathbf{Z}}
 
-    % environments
-    \declaretheorem[numberwithin=section]{theorem}
-    \declaretheorem[sibling=theorem]{lemma}
-    \declaretheorem[sibling=theorem]{claim}
-    \declaretheorem[sibling=theorem]{proposition}
-    \declaretheorem[sibling=theorem]{fact}
-    \declaretheorem[sibling=theorem]{corollary}
-    \declaretheorem[sibling=theorem]{conjecture}
-    \declaretheorem[sibling=theorem]{question}
-    \declaretheorem[sibling=theorem]{answer}
-    \declaretheorem[sibling=theorem]{solution}
-    \declaretheorem[sibling=theorem]{hypothesis}
-    \declaretheorem[sibling=theorem]{exercise}
-    \theoremstyle{definition}
-    \declaretheorem[sibling=theorem]{definition}
-    \declaretheorem[sibling=theorem]{remark}
-    \declaretheorem[sibling=theorem]{notation}
-    \declaretheorem[sibling=theorem]{observation}
-    \declaretheorem[sibling=theorem]{example}
+    \newcommand{\bsa}{\boldsymbol{a}}
+    \newcommand{\bsb}{\boldsymbol{b}}
+    \newcommand{\bsc}{\boldsymbol{c}}
+    \newcommand{\bsd}{\boldsymbol{d}}
+    \newcommand{\bse}{\boldsymbol{e}}
+    \newcommand{\bsoldf}{\boldsymbol{f}}
+    \newcommand{\bsg}{\boldsymbol{g}}
+    \newcommand{\bsh}{\boldsymbol{h}}
+    \newcommand{\bsi}{\boldsymbol{i}}
+    \newcommand{\bsj}{\boldsymbol{j}}
+    \newcommand{\bsk}{\boldsymbol{k}}
+    \newcommand{\bsell}{\boldsymbol{\ell}}
+    \newcommand{\bsm}{\boldsymbol{m}}
+    \newcommand{\bsn}{\boldsymbol{n}}
+    \newcommand{\bso}{\boldsymbol{o}}
+    \newcommand{\bsp}{\boldsymbol{p}}
+    \newcommand{\bsq}{\boldsymbol{q}}
+    \newcommand{\bsr}{\boldsymbol{r}}
+    \newcommand{\bss}{\boldsymbol{s}}
+    \newcommand{\bst}{\boldsymbol{t}}
+    \newcommand{\bsu}{\boldsymbol{u}}
+    \newcommand{\bsv}{\boldsymbol{v}}
+    \newcommand{\bsw}{\boldsymbol{w}}
+    \newcommand{\bsx}{\boldsymbol{x}}
+    \newcommand{\bsy}{\boldsymbol{y}}
+    \newcommand{\bsz}{\boldsymbol{z}}
+    \newcommand{\bsA}{\boldsymbol{A}}
+    \newcommand{\bsB}{\boldsymbol{B}}
+    \newcommand{\bsC}{\boldsymbol{C}}
+    \newcommand{\bsD}{\boldsymbol{D}}
+    \newcommand{\bsE}{\boldsymbol{E}}
+    \newcommand{\bsF}{\boldsymbol{F}}
+    \newcommand{\bsG}{\boldsymbol{G}}
+    \newcommand{\bsH}{\boldsymbol{H}}
+    \newcommand{\bsI}{\boldsymbol{I}}
+    \newcommand{\bsJ}{\boldsymbol{J}}
+    \newcommand{\bsK}{\boldsymbol{K}}
+    \newcommand{\bsL}{\boldsymbol{L}}
+    \newcommand{\bsM}{\boldsymbol{M}}
+    \newcommand{\bsN}{\boldsymbol{N}}
+    \newcommand{\bsP}{\boldsymbol{P}}
+    \newcommand{\bsQ}{\boldsymbol{Q}}
+    \newcommand{\bsR}{\boldsymbol{R}}
+    \newcommand{\bsS}{\boldsymbol{S}}
+    \newcommand{\bsT}{\boldsymbol{T}}
+    \newcommand{\bsU}{\boldsymbol{U}}
+    \newcommand{\bsV}{\boldsymbol{V}}
+    \newcommand{\bsW}{\boldsymbol{W}}
+    \newcommand{\bsX}{\boldsymbol{X}}
+    \newcommand{\bsY}{\boldsymbol{Y}}
+    \newcommand{\bsZ}{\boldsymbol{Z}}
 
-    \newcommand{\ignore}[1]{}
-
-    % probability type operators
-    \let\Pr\relax
-    \DeclareMathOperator*{\Pr}{\mathbf{Pr}}
-    \newcommand{\E}{\mathbb{E}}
-    \DeclareMathOperator*{\Ex}{\mathbf{E}}
-    \DeclareMathOperator*{\Var}{\mathbf{Var}}
-    \DeclareMathOperator*{\Cov}{\mathbf{Cov}}
-    \DeclareMathOperator*{\stddev}{\mathbf{stddev}}
-    \DeclareMathOperator{\littlesum}
-    \DeclareMathOperator{\littleprod}
-    \DeclareMathOperator*{\avg}{avg}
-
-
-    % math terms
-    \DeclareMathOperator{\poly}{poly}
-    \DeclareMathOperator{\polylog}{polylog}
-    \DeclareMathOperator{\size}{size}
-    \DeclareMathOperator{\sgn}{sgn}
-    \DeclareMathOperator{\dist}{dist}
-    \DeclareMathOperator{\vol}{vol}
-    \DeclareMathOperator{\spn}{span}
-    \DeclareMathOperator{\supp}{supp}
-    \DeclareMathOperator{\tr}{tr}
-    \DeclareMathOperator{\Tr}{Tr}
-    \DeclareMathOperator{\codim}{codim}
-    \DeclareMathOperator{\diag}{diag}
-
-    % number systems
-    \newcommand{\R}{\mathbb R}
-    \newcommand{\C}{\mathbb C}
-    \newcommand{\N}{\mathbb N}
-    \newcommand{\Z}{\mathbb Z}
-    \newcommand{\F}{\mathbb F}
-    \newcommand{\Q}{\mathbb Q}
-
-    % complexity classes
-    \newcommand{\PTIME}{\mathsf{P}}
-    \newcommand{\LOGSPACE}{\mathsf{L}}
-    \newcommand{\ZPP}{\mathsf{ZPP}}
-    \newcommand{\RP}{\mathsf{RP}}
-    \newcommand{\BPP}{\mathsf{BPP}}
-    \newcommand{\P}{\mathsf{P}}
-    \newcommand{\NP}{\mathsf{NP}}
-    \newcommand{\TC}{\mathsf{TC}}
-    \newcommand{\AC}{\mathsf{AC}}
-    \newcommand{\SC}{\mathsf{SC}}
-    \newcommand{\SZK}{\mathsf{SZK}}
-    \newcommand{\AM}{\mathsf{AM}}
-    \newcommand{\IP}{\mathsf{IP}}
-    \newcommand{\PSPACE}{\mathsf{PSPACE}}
-    \newcommand{\EXP}{\mathsf{EXP}}
-    \newcommand{\MIP}{\mathsf{MIP}}
-    \newcommand{\NEXP}{\mathsf{NEXP}}
-    \newcommand{\BQP}{\mathsf{BQP}}
-    \newcommand{\distP}{\mathsf{dist\textbf{P}}}
-    \newcommand{\distNP}{\mathsf{dist\textbf{NP}}}
-
-    % short forms
-    \newcommand{\eps}{\epsilon}
-    \newcommand{\lam}{\lambda}
-    \newcommand{\dleta}{\delta}
-    \newcommand{\simga}{\sigma}
-    \newcommand{\vphi}{\varphi}
-    \newcommand{\la}{\langle}
-    \newcommand{\ra}{\rangle}
-    \newcommand{\wt}[1]{\widetilde{#1}}
-    \newcommand{\wh}[1]{\widehat{#1}}
-    \newcommand{\ol}[1]{\overline{#1}}
-    \newcommand{\ul}[1]{\underline{#1}}
-    \newcommand{\ot}{\otimes}
-    \newcommand{\zo}{\{0,1\}}
-    \newcommand{\co}{:} %\newcommand{\co}{\colon}
-    \newcommand{\bdry}{\partial}
-    \newcommand{\grad}{\nabla}
-    \newcommand{\transp}{^\intercal}
-    \newcommand{\inv}{^{-1}}
-    \newcommand{\symmdiff}{\triangle} \newcommand{\symdiff}{\symmdiff}
-    \newcommand{\half}{\tfrac{1}{2}}
-    \newcommand{\bbone}{\mathbbm 1}
-    \newcommand{\Id}{\bbone}
-
-    \newcommand{\SAT}{\mathsf{SAT}}
-
-    % calligraphic letters
     \newcommand{\calA}{\mathcal{A}}
     \newcommand{\calB}{\mathcal{B}}
     \newcommand{\calC}{\mathcal{C}}
@@ -272,130 +285,98 @@
     \newcommand{\calY}{\mathcal{Y}}
     \newcommand{\calZ}{\mathcal{Z}}
 
-    % bold
-    \newcommand{\bone}{\boldsymbol{1}}
-    \newcommand{\bbeta}{\boldsymbol{\beta}}
-    \newcommand{\bdelta}{\boldsymbol{\delta}}
-    \newcommand{\bepsilon}{\boldsymbol{\epsilon}}
-    \newcommand{\blambda}{\boldsymbol{\lambda}}
-    \newcommand{\bomega}{\boldsymbol{\omega}}
-    \newcommand{\bpi}{\boldsymbol{\pi}}
-    \newcommand{\bphi}{\boldsymbol{\phi}}
-    \newcommand{\bvphi}{\boldsymbol{\varphi}}
-    \newcommand{\bpsi}{\boldsymbol{\psi}}
-    \newcommand{\bsigma}{\boldsymbol{\sigma}}
-    \newcommand{\btheta}{\boldsymbol{\theta}}
-    \newcommand{\btau}{\boldsymbol{\tau}}
-    \newcommand{\ba}{\boldsymbol{a}}
-    \newcommand{\bb}{\boldsymbol{b}}
-    \newcommand{\bc}{\boldsymbol{c}}
-    \newcommand{\bd}{\boldsymbol{d}}
-    \newcommand{\be}{\boldsymbol{e}}
-    \newcommand{\boldf}{\boldsymbol{f}}
-    \newcommand{\bg}{\boldsymbol{g}}
-    \newcommand{\bh}{\boldsymbol{h}}
-    \newcommand{\bi}{\boldsymbol{i}}
-    \newcommand{\bj}{\boldsymbol{j}}
-    \newcommand{\bk}{\boldsymbol{k}}
-    \newcommand{\bell}{\boldsymbol{\ell}}
-    \newcommand{\bm}{\boldsymbol{m}}
-    \newcommand{\bn}{\boldsymbol{n}}
-    \newcommand{\bo}{\boldsymbol{o}}
-    \newcommand{\bp}{\boldsymbol{p}}
-    \newcommand{\bq}{\boldsymbol{q}}
-    \newcommand{\br}{\boldsymbol{r}}
-    \newcommand{\bs}{\boldsymbol{s}}
-    \newcommand{\bt}{\boldsymbol{t}}
-    \newcommand{\bu}{\boldsymbol{u}}
-    \newcommand{\bv}{\boldsymbol{v}}
-    \newcommand{\bw}{\boldsymbol{w}}
-    \newcommand{\bx}{\boldsymbol{x}}
-    \newcommand{\by}{\boldsymbol{y}}
-    \newcommand{\bz}{\boldsymbol{z}}
-    \newcommand{\bA}{\boldsymbol{A}}
-    \newcommand{\bB}{\boldsymbol{B}}
-    \newcommand{\bC}{\boldsymbol{C}}
-    \newcommand{\bD}{\boldsymbol{D}}
-    \newcommand{\bE}{\boldsymbol{E}}
-    \newcommand{\bF}{\boldsymbol{F}}
-    \newcommand{\bG}{\boldsymbol{G}}
-    \newcommand{\bH}{\boldsymbol{H}}
-    \newcommand{\bI}{\boldsymbol{I}}
-    \newcommand{\bJ}{\boldsymbol{J}}
-    \newcommand{\bK}{\boldsymbol{K}}
-    \newcommand{\bL}{\boldsymbol{L}}
-    \newcommand{\bM}{\boldsymbol{M}}
-    \newcommand{\bN}{\boldsymbol{N}}
-    \newcommand{\bP}{\boldsymbol{P}}
-    \newcommand{\bQ}{\boldsymbol{Q}}
-    \newcommand{\bR}{\boldsymbol{R}}
-    \newcommand{\bS}{\boldsymbol{S}}
-    \newcommand{\bT}{\boldsymbol{T}}
-    \newcommand{\bU}{\boldsymbol{U}}
-    \newcommand{\bV}{\boldsymbol{V}}
-    \newcommand{\bW}{\boldsymbol{W}}
-    \newcommand{\bX}{\boldsymbol{X}}
-    \newcommand{\bY}{\boldsymbol{Y}}
-    \newcommand{\bZ}{\boldsymbol{Z}}
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\C}{\mathbb{C}}
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\F}{\mathbb{F}}
+    \newcommand{\Q}{\mathbb{Q}}
 
-    % others
-    \newcommand{\false}}
-    \newcommand{\true}}
+    \DeclareMathOperator*{\argmax}{arg\,max}
+    \DeclareMathOperator*{\argmin}{arg\,min}
+    \newcommand{\nnz}[1]{\mbox{nnz}(#1)}
+    \newcommand{\dotprod}[2]{\langle #1, #2 \rangle}
 
-    % bold calligraphic
+    \newcommand{\ignore}[1]{}
+
+    \let\Pr\relax
+    \DeclareMathOperator*{\Pr}{\mathbf{Pr}}
+    \newcommand{\E}{\mathbb{E}}
+    \DeclareMathOperator*{\Ex}{\mathbf{E}}
+    \DeclareMathOperator*{\Var}{\mathbf{Var}}
+    \DeclareMathOperator*{\Cov}{\mathbf{Cov}}
+    \DeclareMathOperator*{\stddev}{\mathbf{stddev}}
+    \DeclareMathOperator*{\avg}{avg}
+
+    \DeclareMathOperator{\poly}{poly}
+    \DeclareMathOperator{\polylog}{polylog}
+    \DeclareMathOperator{\size}{size}
+    \DeclareMathOperator{\sgn}{sgn}
+    \DeclareMathOperator{\dist}{dist}
+    \DeclareMathOperator{\vol}{vol}
+    \DeclareMathOperator{\spn}{span}
+    \DeclareMathOperator{\supp}{supp}
+    \DeclareMathOperator{\tr}{tr}
+    \DeclareMathOperator{\Tr}{Tr}
+    \DeclareMathOperator{\codim}{codim}
+    \DeclareMathOperator{\diag}{diag}
+
+    \newcommand{\PTIME}{\mathsf{P}}
+    \newcommand{\LOGSPACE}{\mathsf{L}}
+    \newcommand{\ZPP}{\mathsf{ZPP}}
+    \newcommand{\RP}{\mathsf{RP}}
+    \newcommand{\BPP}{\mathsf{BPP}}
+    \newcommand{\P}{\mathsf{P}}
+    \newcommand{\NP}{\mathsf{NP}}
+    \newcommand{\TC}{\mathsf{TC}}
+    \newcommand{\AC}{\mathsf{AC}}
+    \newcommand{\SC}{\mathsf{SC}}
+    \newcommand{\SZK}{\mathsf{SZK}}
+    \newcommand{\AM}{\mathsf{AM}}
+    \newcommand{\IP}{\mathsf{IP}}
+    \newcommand{\PSPACE}{\mathsf{PSPACE}}
+    \newcommand{\EXP}{\mathsf{EXP}}
+    \newcommand{\MIP}{\mathsf{MIP}}
+    \newcommand{\NEXP}{\mathsf{NEXP}}
+    \newcommand{\BQP}{\mathsf{BQP}}
+    \newcommand{\distP}{\mathsf{dist\textbf{P}}}
+    \newcommand{\distNP}{\mathsf{dist\textbf{NP}}}
+
+    \newcommand{\eps}{\epsilon}
+    \newcommand{\lam}{\lambda}
+    \newcommand{\dleta}{\delta}
+    \newcommand{\simga}{\sigma}
+    \newcommand{\vphi}{\varphi}
+    \newcommand{\la}{\langle}
+    \newcommand{\ra}{\rangle}
+    \newcommand{\wt}[1]{\widetilde{#1}}
+    \newcommand{\wh}[1]{\widehat{#1}}
+    \newcommand{\ol}[1]{\overline{#1}}
+    \newcommand{\ul}[1]{\underline{#1}}
+    \newcommand{\ot}{\otimes}
+    \newcommand{\zo}{\{0,1\}}
+    \newcommand{\co}{:} %\newcommand{\co}{\colon}
+    \newcommand{\bdry}{\partial}
+    \newcommand{\grad}{\nabla}
+    \newcommand{\transp}{^\intercal}
+    \newcommand{\inv}{^{-1}}
+    \newcommand{\symmdiff}{\triangle} \newcommand{\symdiff}{\symmdiff}
+    \newcommand{\half}{\tfrac{1}{2}}
+    \newcommand{\bbone}{\mathbbm 1}
+    \newcommand{\Id}{\bbone}
+
+    \newcommand{\SAT}{\mathsf{SAT}}
+
     \newcommand{\bcalG}{\boldsymbol{\calG}}
     \newcommand{\calbG}{\bcalG}
     \newcommand{\bcalX}{\boldsymbol{\calX}} \newcommand{\calbX}{\bcalX}
     \newcommand{\bcalY}{\boldsymbol{\calY}} \newcommand{\calbY}{\bcalY}
     \newcommand{\bcalZ}{\boldsymbol{\calZ}} \newcommand{\calbZ}{\bcalZ}
-
-    % left-right wrappers
-    \DeclarePairedDelimiter\parens{\lparen}{\rparen}
-    \DeclarePairedDelimiter\abs{\lvert}{\rvert}
-    \DeclarePairedDelimiter\norm{\lVert}{\rVert}
-    \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
-    \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
-    \DeclarePairedDelimiter\braces{\lbrace}{\rbrace}
-    \DeclarePairedDelimiter\bracks{\lbrack}{\rbrack}
-    \DeclarePairedDelimiter\angles{\langle}{\rangle}
-
-    % something for figures
-    \newcommand{\myfig}[4]{\begin{figure}[H] \centering \includegraphics[width=#1\textwidth]{#2} \caption{#3} \label{#4}
-    \end{figure}}
-    
-
-    \definecolor{codegreen}{rgb}{0,0.6,0}
-    \definecolor{codegray}{rgb}{0.5,0.5,0.5}
-    \definecolor{codepurple}{rgb}{0.58,0,0.82}
-    \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-    \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=left,
-    numbersep=5pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2
-    }
-
-    \lstset{style=mystyle}
     $$
 </div>
 
-<div class="post">
-
   <header class="post-header">
-    <h1 class="post-title">CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review</h1>
+    <h1 class="post-title">CMU 15712 Advanced Operating Systems and Distributed Systems Course Review</h1>
     <p class="post-meta">June 9, 2023• fanpu</p>
     <p class="post-tags">
       <a href="/blog/2023"> <i class="fas fa-calendar fa-sm"></i> 2023 </a>
@@ -417,7 +398,7 @@
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/santorini_church.avif" class="preview z-depth-1 rounded center" width="100%" height="450px" alt="post.cover" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/posts/santorini_church.webp" class="preview z-depth-1 rounded center" width="100%" height="450px" alt="post.cover" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 </figure>
@@ -433,16 +414,8 @@
       <p>This semester (Spring 2023), I took <a href="https://www.cs.cmu.edu/~15712/" rel="external nofollow noopener" target="_blank">15-712 Advanced Operating Systems and
 Distributed Systems</a> under professor <a href="http://www.cs.cmu.edu/~gibbons/" rel="external nofollow noopener" target="_blank">Phil
 Gibbons</a> and his TA and also PhD advisee <a href="http://nicebowlofsoup.com/" rel="external nofollow noopener" target="_blank">Val
-Choung</a>. This was the first time I took
-a class under Phil (he usually teaches either this class or <a href="http://www.cs.cmu.edu/afs/cs/academic/class/15745-s19/www/" rel="external nofollow noopener" target="_blank">15-745 Optimizing
-Compilers for Modern
-Architectures</a>),
-and interestingly enough this was the third time Val was my TA, the 
-previous two times being 15-330 Introduction to Computer Security
-in Fall 2019 and <a href="https://www.cs.cmu.edu/~410/" rel="external nofollow noopener" target="_blank">15-410 Operating System Design and Implementation</a>
-in Spring 2020.</p>
+Choung</a>.</p>
 
-<h1 id="overall-impression">Overall Impression</h1>
 <p>This class exceeded my expectations significantly.
 I found it especially meaningful and apt since this was my last systems class before I
 graduate, and the topics and discussions from class helped to unify all the
@@ -450,27 +423,6 @@ systems concepts that I had learnt from previous classes into a nice package
 informed by common underlying principles: from distributed systems, to
 networking, databases, filesystems, operating systems, and even machine learning
 systems.</p>
-
-<h1 id="why-i-took-the-class">Why I Took The Class</h1>
-<p>I had to take a systems class this semester to fulfill my graduation
-requirements for the MSCS program. I initially did include this class in my
-shortlist of systems classes to take, but then thought it was just going to be a
-paper reading class (not that I had been in one of such classes before, but it
-just did not sound very interesting and felt like something I could do by myself
-asynchronously after I graduate) and therefore was quite hesitant to take it.</p>
-
-<p>As such, during registration week I settled on <a href="https://www.cs.cmu.edu/~418/" rel="external nofollow noopener" target="_blank">15-618 Parallel Computer Architecture and
-Programming</a>,
-since it included topics on GPU programming that aligned with my current
-interests in machine learning. However, I did not feel like the class was
-sufficiently challenging for me after the first lecture, as it was a bit too
-slow-paced and simple for my liking as I already had exposure to most of the
-topics from other system classes that I had taken. I decided to switch
-to 15-712, and I knew immediately that it was the right class for me after the
-first lecture.</p>
-
-<p>In a sense, this class was a hidden gem and I was really glad that I ended up
-taking it.</p>
 
 <h1 id="the-first-lecture">The First Lecture</h1>
 <p>The first lecture went through 2 Wisdom Papers, which no one was expected
@@ -528,7 +480,7 @@ The following two slides gives a good sense of the spirit of the paper:</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/adv_os/slide_1.avif" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/posts/adv_os/slide_1.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture><figcaption class="caption">
       How to be a Great Scientist (1)
@@ -540,7 +492,7 @@ The following two slides gives a good sense of the spirit of the paper:</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/adv_os/slide_2.avif" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/posts/adv_os/slide_2.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture><figcaption class="caption">
       How to be a Great Scientist (2)
@@ -551,71 +503,9 @@ The following two slides gives a good sense of the spirit of the paper:</p>
 simply because they were interesting, but because they helped to set the tone
 and expectations for the rest of the semester going forward. The message is clear: this is going to be a practical and useful class that will help you on your journey to becoming great systems designers and researchers.</p>
 
-<h1 id="course-structure">Course Structure</h1>
-<p>There are three main components to the class: paper summaries,
-projects, and exams.</p>
-
-<h2 id="1-paper-summaries">1. Paper Summaries</h2>
-<p>Before each lecture, the class is assigned a required reading and an optional reading. A paper summary of the required reading must be submitted before
-the class, which will discuss both readings.</p>
-
-<p>The paper summary will contain 3 things:</p>
-<ol>
-  <li>The 3 most important things in the paper,</li>
-  <li>1 most glaring deficiency of the paper (even highly celebrated papers have faults!),</li>
-  <li>A conclusion on how you will use lessons from this paper to inform you on how
-you will build systems in the future.</li>
-</ol>
-
-<p>It took me on average 2-4 hours to read each paper and around 15 minutes for the summary.</p>
-
-<p>The lectures for this class are front-loaded, meaning that during the first
-two-thirds of the semester, you will meet 3 times a week for 80 minutes each,
-while there will be no lectures at all during the final third of the semester,
-and so “on average” throughout the semester you will meet twice a week. This is so that
-students have enough knowledge and content to begin working on their course
-projects early on in the semester.</p>
-
-<p>There will be 3 short breaks in each lecture, where all students will get into
-breakout groups and share and discuss among themselves one of the prompts
-for the paper based on their paper summaries. Afterwards, all groups
-are invited to share what they thought.</p>
-
-<p>Reading and writing the paper summaries are the only “homework” you will get in
-this class.</p>
-
-<h2 id="2-course-project">2. Course Project</h2>
-<p>There is also a semester-long course project with a significant systems
-component in groups of three. This will begin in earnest after a third of the
-semester, and all the project groups met with Phil and the TA Val once every two
-weeks.  The deliverables include a project proposal, an interim report, a final
-presentation, and a final report. The course project will be the
-largest constituent of your final grade.</p>
-
-<h2 id="3-midterms">3. Midterms</h2>
-<p>Finally, there are two midterm exams, which are taken during class time.
-The first is taken in the middle of the semester, and the second is taken
-after all lectures have concluded.</p>
-
-<p>Each midterm will cover content from a shortlisted selection of 10
-of the required readings. There will be 9 questions on the midterm,
-which covers 9 of the 10 papers, and you are only required to answer 7 of
-the problems.</p>
-
-<p>The course staff will also provide two past year exams to practice on, though
-some of the readings may have changed since.</p>
-
-<p>It admittedly does seem quite daunting to have to study and be familiar with 10
-papers spanning very different topics. I did not have time to actually re-read
-all 10 papers to prepare for the midterm, and so the way I prepared was to go
-through all the lecture slides again, re-read the most important sections of the
-paper, and skim through the rest. Afterward, I attempted the past exams to fill
-in any gaps that I may have missed. This strategy allowed me to do fairly well
-on the exam.</p>
-
 <h1 id="course-content">Course Content</h1>
 
-<p>The class us on a whirlwind tour through many <a href="https://www.sigops.org/awards/hof/" rel="external nofollow noopener" target="_blank">SIGOPS
+<p>The class took us on a whirlwind tour through many <a href="https://www.sigops.org/awards/hof/" rel="external nofollow noopener" target="_blank">SIGOPS
 Hall of Fame papers</a>, which the award
 description states was “instituted in 2005 to recognize the most influential
 Operating Systems papers that were published at least ten years in the past”.
@@ -728,20 +618,6 @@ with a practical implementation that optimizes both cluster-wide and per-job par
 <a href="https://www.cs.cmu.edu/~15712/papers/kim21.pdf" rel="external nofollow noopener" target="_blank">LineFS: Efficient SmartNIC Offload of a Distributed File System with Pipeline Parallelism (Kim’21), SOSP’21 best paper</a> - optimizing the performance of distributed file systems (DFS) by decomposing DFS operations into pipelined stages and offloading networked stages to a SmartNIC asynchronously</li>
 </ul>
 
-<h1 id="workload">Workload</h1>
-<p>The class has a moderate workload for a systems class. Expect to spend 10-12 hours 
-a week on the readings and paper summaries while lectures are ongoing, probably
-a couple more hours once the projects get into motion midway through the
-semester, and for it to consume a significant portion of your existence in the
-last two weeks before the final presentations.</p>
-
-<p>It is a far less demanding and stressful class than the legendary <a href="https://www.cs.cmu.edu/~410/" rel="external nofollow noopener" target="_blank">15-410/605
-Operating System Design and Implementation</a> class, 
-so don’t let the “advanced” in the course title scare you off from taking this class.
-After all, most people taking this class are Ph.D. students who have their
-own research to work on and can’t exactly spend all their time on courses,
-unlike undergraduates.</p>
-
 <h1 id="takeaways-from-the-class">Takeaways From The Class</h1>
 <p>Here are my thoughts on the key takeaways from the class.</p>
 
@@ -825,6 +701,81 @@ from many rounds of feedback during past iterations.  It is rich in content,
 is accessible and yet challenging to students from a wide range of backgrounds,
 and will prepare one well for building systems in the future, be it in 
 academia or industry.</p>
+<h1 id="course-structure">Course Structure</h1>
+<p>There are three main components to the class: paper summaries,
+projects, and exams.</p>
+
+<h2 id="1-paper-summaries">1. Paper Summaries</h2>
+<p>Before each lecture, the class is assigned a required reading and an optional reading. A paper summary of the required reading must be submitted before
+the class, which will discuss both readings.</p>
+
+<p>The paper summary will contain 3 things:</p>
+<ol>
+  <li>The 3 most important things in the paper,</li>
+  <li>1 most glaring deficiency of the paper (even highly celebrated papers have faults!),</li>
+  <li>A conclusion on how you will use lessons from this paper to inform you on how
+you will build systems in the future.</li>
+</ol>
+
+<p>It took me on average 2-4 hours to read each paper and around 15 minutes for the summary.</p>
+
+<p>The lectures for this class are front-loaded, meaning that during the first
+two-thirds of the semester, you will meet 3 times a week for 80 minutes each,
+while there will be no lectures at all during the final third of the semester,
+and so “on average” throughout the semester you will meet twice a week. This is so that
+students have enough knowledge and content to begin working on their course
+projects early on in the semester.</p>
+
+<p>There will be 3 short breaks in each lecture, where all students will get into
+breakout groups and share and discuss among themselves one of the prompts
+for the paper based on their paper summaries. Afterwards, all groups
+are invited to share what they thought.</p>
+
+<p>Reading and writing the paper summaries are the only “homework” you will get in
+this class.</p>
+
+<h2 id="2-course-project">2. Course Project</h2>
+<p>There is also a semester-long course project with a significant systems
+component in groups of three. This will begin in earnest after a third of the
+semester, and all the project groups met with Phil and the TA Val once every two
+weeks.  The deliverables include a project proposal, an interim report, a final
+presentation, and a final report. The course project will be the
+largest constituent of your final grade.</p>
+
+<h2 id="3-midterms">3. Midterms</h2>
+<p>Finally, there are two midterm exams, which are taken during class time.
+The first is taken in the middle of the semester, and the second is taken
+after all lectures have concluded.</p>
+
+<p>Each midterm will cover content from a shortlisted selection of 10
+of the required readings. There will be 9 questions on the midterm,
+which covers 9 of the 10 papers, and you are only required to answer 7 of
+the problems.</p>
+
+<p>The course staff will also provide two past year exams to practice on, though
+some of the readings may have changed since.</p>
+
+<p>It admittedly does seem quite daunting to have to study and be familiar with 10
+papers spanning very different topics. I did not have time to actually re-read
+all 10 papers to prepare for the midterm, and so the way I prepared was to go
+through all the lecture slides again, re-read the most important sections of the
+paper, and skim through the rest. Afterward, I attempted the past exams to fill
+in any gaps that I may have missed. This strategy allowed me to do fairly well
+on the exam.</p>
+
+<h1 id="workload">Workload</h1>
+<p>The class has a moderate workload for a systems class. Expect to spend 10-12 hours 
+a week on the readings and paper summaries while lectures are ongoing, probably
+a couple more hours once the projects get into motion midway through the
+semester, and for it to consume a significant portion of your existence in the
+last two weeks before the final presentations.</p>
+
+<p>It is a far less demanding and stressful class than the legendary <a href="https://www.cs.cmu.edu/~410/" rel="external nofollow noopener" target="_blank">15-410/605
+Operating System Design and Implementation</a> class, 
+so don’t let the “advanced” in the course title scare you off from taking this class.
+After all, most people taking this class are Ph.D. students who have their
+own research to work on and can’t exactly spend all their time on courses,
+unlike undergraduates.</p>
 
 <h1 id="our-course-project-and-reflections">Our Course Project, and Reflections</h1>
 <p>Our course project was on the automated optimal scheduling of data in dynamic neural
@@ -843,7 +794,7 @@ the optimal way of performing this split.</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/posts/adv_os/presentation.avif" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/posts/adv_os/presentation.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture><figcaption class="caption">
       Giving our final project presentation in the Panther Hollow conference room at CIC
@@ -882,9 +833,30 @@ second midterm.</p>
 Strong undergraduates with sufficient background would also definitely do well
 in the class.</p>
 
+<h1 id="why-i-took-this-class">Why I Took This Class</h1>
+<p>I had to take a systems class this semester to fulfill my graduation
+requirements for the MSCS program. I initially did include this class in my
+shortlist of systems classes to take, but then thought it was just going to be a
+paper reading class (not that I had been in one of such classes before, but it
+just did not sound very interesting and felt like something I could do by myself
+asynchronously after I graduate) and therefore was quite hesitant to take it.</p>
+
+<p>As such, during registration week I settled on <a href="https://www.cs.cmu.edu/~418/" rel="external nofollow noopener" target="_blank">15-618 Parallel Computer Architecture and
+Programming</a>,
+since it included topics on GPU programming that aligned with my current
+interests in machine learning. However, I did not feel like the class was
+sufficiently challenging for me after the first lecture, as it was a bit too
+slow-paced and simple for my liking as I already had exposure to most of the
+topics from other system classes that I had taken. I decided to switch
+to 15-712, and I knew immediately that it was the right class for me after the
+first lecture.</p>
+
+<p>In a sense, this class was a hidden gem and I was really glad that I ended up
+taking it.</p>
+
 <h1 id="acknowledgments">Acknowledgments</h1>
 <p>I would like to express my gratitude to <a href="https://adbforlife.github.io/" rel="external nofollow noopener" target="_blank">Albert
-Gao</a> and <a href="https://abigalekim.github.io/" rel="external nofollow noopener" target="_blank">Abigale Kim</a> for helping to proofread this article. Both of them
+Gao</a> for helping to proofread this article, who
 took the class with me this semester.</p>
 
     </div>
@@ -904,31 +876,31 @@ took the class with me this semester.</p>
   
 
   <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/setting-up-yuancon-controller-sound-voltex/">Playing Sound Voltex at Home: Setting Up Unnamed SDVX Clone with the Yuancon SDVX Controller</a>
+  </li>
+
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/creating-trackback-requests/">Creating Trackback Requests for Static Sites</a>
+  </li>
+
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/high-dimensional-analysis-of-m-estimators/">A Unified Framework for High-Dimensional Analysis of M-Estimators with Decomposable Regularizers: A Guided Walkthrough</a>
+  </li>
+
+  
+
+  <li class="my-2">
+    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/cmu-steam-tunnels/">The CMU Steam Tunnels and Wean 9</a>
+  </li>
+
+  
+
+  <li class="my-2">
     <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/score-based-diffusion-models/">Score-Based Diffusion Models</a>
-  </li>
-
-  
-
-  <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2023/latex-tips/">The Art of LaTeX: Common Mistakes, and Advice for Typesetting Beautiful, Delightful Proofs</a>
-  </li>
-
-  
-
-  <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2022/central-limit-theorem-and-berry-esseen/">A Concise Proof of the Central Limit Theorem, and Its Actually Useful Version, the Berry-Esseen Theorem</a>
-  </li>
-
-  
-
-  <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2022/deriving-the-policy-gradient-update/">Reinforcement Learning Policy Optimization: Deriving the Policy Gradient Update</a>
-  </li>
-
-  
-
-  <li class="my-2">
-    <a class="text-pink-700 underline font-semibold hover:text-pink-800" href="/blog/2022/pseudo-determinism-for-graph-streaming-problems/">Pseudo-determinism for Graph Streaming Problems</a>
   </li>
 
 <div id="giscus_thread" style="max-width: 800px; margin: 0 auto;">
@@ -970,8 +942,8 @@ took the class with me this semester.</p>
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2023 Fan Pu  Zeng. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: June 13, 2023.
+        © Copyright 2024 Fan Pu  Zeng. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
+Last updated: July 13, 2024.
       </div>
     </footer>
 
@@ -1009,7 +981,6 @@ Last updated: June 13, 2023.
 
     
   <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-  <script async src="https://badge.dimensions.ai/badge.js"></script>
 
     <!-- MathJax -->
   <script type="text/javascript">
@@ -1029,14 +1000,7 @@ Last updated: June 13, 2023.
   <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
   <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3VHEYH05S"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ window.dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-S3VHEYH05S');
-  </script>
+    
     
 
 <!-- Scrolling Progress Bar -->

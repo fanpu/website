@@ -44,12 +44,22 @@
     <link rel="canonical" href="https://fanpu.io/cmu-online/">
     <!-- Dark Mode -->
     
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jwarby/jekyll-pygments-themes@master/native.css" media="none" id="highlight_theme_dark">
 
-    <script src="/assets/js/theme.js"></script>
-    <script src="/assets/js/dark_mode.js"></script>
+    <!-- Twitter cards -->
+    <meta name="twitter:site" content="@FanPu_Zeng">
+    <meta name="twitter:creator" content="@">
+    <meta name="og:title" content="CMU Online">
+
+    
+    <meta name="twitter:card" content="summary">
+    <meta name="og:image" content="">
     
 
+    
+    <meta name="og:description" content="Publicly Accessible CMU Courses">
+    
+
+    <!-- end of Twitter cards -->
   </head>
 
   <!-- Body -->
@@ -91,18 +101,10 @@
                 <a class="nav-link" href="/cmu-online/">CMU Online<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item ">
-                <a class="nav-link" href="/projects/">Projects</a>
+                <a class="nav-link" href="/summaries/">ML Paper Summaries</a>
               </li>
               <li class="nav-item ">
                 <a class="nav-link" href="/repositories/">Repositories</a>
-              </li>
-
-              <!-- Toogle theme mode -->
-              <li class="toggle-container">
-                <button id="light-toggle" title="Change theme">
-                  <i class="fas fa-moon"></i>
-                  <i class="fas fa-sun"></i>
-                </button>
               </li>
             </ul>
           </div>
@@ -131,117 +133,123 @@
           <div class="col-sm-9">
             <div style="display:none">
     $$
-    \DeclareMathOperator*{\argmax}{arg\,max}
-    \DeclareMathOperator*{\argmin}{arg\,min}
-    \newcommand{\nnz}[1]{\mbox{nnz}(#1)}
-    \newcommand{\dotprod}[2]{\langle #1, #2 \rangle}
+    \newcommand{\bone}{\mathbf{1}}
+    \newcommand{\bbeta}{\mathbf{\beta}}
+    \newcommand{\bdelta}{\mathbf{\delta}}
+    \newcommand{\bepsilon}{\mathbf{\epsilon}}
+    \newcommand{\blambda}{\mathbf{\lambda}}
+    \newcommand{\bomega}{\mathbf{\omega}}
+    \newcommand{\bpi}{\mathbf{\pi}}
+    \newcommand{\bphi}{\mathbf{\phi}}
+    \newcommand{\bvphi}{\mathbf{\varphi}}
+    \newcommand{\bpsi}{\mathbf{\psi}}
+    \newcommand{\bsigma}{\mathbf{\sigma}}
+    \newcommand{\btheta}{\mathbf{\theta}}
+    \newcommand{\btau}{\mathbf{\tau}}
+    \newcommand{\ba}{\mathbf{a}}
+    \newcommand{\bb}{\mathbf{b}}
+    \newcommand{\bc}{\mathbf{c}}
+    \newcommand{\bd}{\mathbf{d}}
+    \newcommand{\be}{\mathbf{e}}
+    \newcommand{\boldf}{\mathbf{f}}
+    \newcommand{\bg}{\mathbf{g}}
+    \newcommand{\bh}{\mathbf{h}}
+    \newcommand{\bi}{\mathbf{i}}
+    \newcommand{\bj}{\mathbf{j}}
+    \newcommand{\bk}{\mathbf{k}}
+    \newcommand{\bell}{\mathbf{\ell}}
+    \newcommand{\bm}{\mathbf{m}}
+    \newcommand{\bn}{\mathbf{n}}
+    \newcommand{\bo}{\mathbf{o}}
+    \newcommand{\bp}{\mathbf{p}}
+    \newcommand{\bq}{\mathbf{q}}
+    \newcommand{\br}{\mathbf{r}}
+    \newcommand{\bs}{\mathbf{s}}
+    \newcommand{\bt}{\mathbf{t}}
+    \newcommand{\bu}{\mathbf{u}}
+    \newcommand{\bv}{\mathbf{v}}
+    \newcommand{\bw}{\mathbf{w}}
+    \newcommand{\bx}{\mathbf{x}}
+    \newcommand{\by}{\mathbf{y}}
+    \newcommand{\bz}{\mathbf{z}}
+    \newcommand{\bA}{\mathbf{A}}
+    \newcommand{\bB}{\mathbf{B}}
+    \newcommand{\bC}{\mathbf{C}}
+    \newcommand{\bD}{\mathbf{D}}
+    \newcommand{\bE}{\mathbf{E}}
+    \newcommand{\bF}{\mathbf{F}}
+    \newcommand{\bG}{\mathbf{G}}
+    \newcommand{\bH}{\mathbf{H}}
+    \newcommand{\bI}{\mathbf{I}}
+    \newcommand{\bJ}{\mathbf{J}}
+    \newcommand{\bK}{\mathbf{K}}
+    \newcommand{\bL}{\mathbf{L}}
+    \newcommand{\bM}{\mathbf{M}}
+    \newcommand{\bN}{\mathbf{N}}
+    \newcommand{\bP}{\mathbf{P}}
+    \newcommand{\bQ}{\mathbf{Q}}
+    \newcommand{\bR}{\mathbf{R}}
+    \newcommand{\bS}{\mathbf{S}}
+    \newcommand{\bT}{\mathbf{T}}
+    \newcommand{\bU}{\mathbf{U}}
+    \newcommand{\bV}{\mathbf{V}}
+    \newcommand{\bW}{\mathbf{W}}
+    \newcommand{\bX}{\mathbf{X}}
+    \newcommand{\bY}{\mathbf{Y}}
+    \newcommand{\bZ}{\mathbf{Z}}
 
-    % environments
-    \declaretheorem[numberwithin=section]{theorem}
-    \declaretheorem[sibling=theorem]{lemma}
-    \declaretheorem[sibling=theorem]{claim}
-    \declaretheorem[sibling=theorem]{proposition}
-    \declaretheorem[sibling=theorem]{fact}
-    \declaretheorem[sibling=theorem]{corollary}
-    \declaretheorem[sibling=theorem]{conjecture}
-    \declaretheorem[sibling=theorem]{question}
-    \declaretheorem[sibling=theorem]{answer}
-    \declaretheorem[sibling=theorem]{solution}
-    \declaretheorem[sibling=theorem]{hypothesis}
-    \declaretheorem[sibling=theorem]{exercise}
-    \theoremstyle{definition}
-    \declaretheorem[sibling=theorem]{definition}
-    \declaretheorem[sibling=theorem]{remark}
-    \declaretheorem[sibling=theorem]{notation}
-    \declaretheorem[sibling=theorem]{observation}
-    \declaretheorem[sibling=theorem]{example}
+    \newcommand{\bsa}{\boldsymbol{a}}
+    \newcommand{\bsb}{\boldsymbol{b}}
+    \newcommand{\bsc}{\boldsymbol{c}}
+    \newcommand{\bsd}{\boldsymbol{d}}
+    \newcommand{\bse}{\boldsymbol{e}}
+    \newcommand{\bsoldf}{\boldsymbol{f}}
+    \newcommand{\bsg}{\boldsymbol{g}}
+    \newcommand{\bsh}{\boldsymbol{h}}
+    \newcommand{\bsi}{\boldsymbol{i}}
+    \newcommand{\bsj}{\boldsymbol{j}}
+    \newcommand{\bsk}{\boldsymbol{k}}
+    \newcommand{\bsell}{\boldsymbol{\ell}}
+    \newcommand{\bsm}{\boldsymbol{m}}
+    \newcommand{\bsn}{\boldsymbol{n}}
+    \newcommand{\bso}{\boldsymbol{o}}
+    \newcommand{\bsp}{\boldsymbol{p}}
+    \newcommand{\bsq}{\boldsymbol{q}}
+    \newcommand{\bsr}{\boldsymbol{r}}
+    \newcommand{\bss}{\boldsymbol{s}}
+    \newcommand{\bst}{\boldsymbol{t}}
+    \newcommand{\bsu}{\boldsymbol{u}}
+    \newcommand{\bsv}{\boldsymbol{v}}
+    \newcommand{\bsw}{\boldsymbol{w}}
+    \newcommand{\bsx}{\boldsymbol{x}}
+    \newcommand{\bsy}{\boldsymbol{y}}
+    \newcommand{\bsz}{\boldsymbol{z}}
+    \newcommand{\bsA}{\boldsymbol{A}}
+    \newcommand{\bsB}{\boldsymbol{B}}
+    \newcommand{\bsC}{\boldsymbol{C}}
+    \newcommand{\bsD}{\boldsymbol{D}}
+    \newcommand{\bsE}{\boldsymbol{E}}
+    \newcommand{\bsF}{\boldsymbol{F}}
+    \newcommand{\bsG}{\boldsymbol{G}}
+    \newcommand{\bsH}{\boldsymbol{H}}
+    \newcommand{\bsI}{\boldsymbol{I}}
+    \newcommand{\bsJ}{\boldsymbol{J}}
+    \newcommand{\bsK}{\boldsymbol{K}}
+    \newcommand{\bsL}{\boldsymbol{L}}
+    \newcommand{\bsM}{\boldsymbol{M}}
+    \newcommand{\bsN}{\boldsymbol{N}}
+    \newcommand{\bsP}{\boldsymbol{P}}
+    \newcommand{\bsQ}{\boldsymbol{Q}}
+    \newcommand{\bsR}{\boldsymbol{R}}
+    \newcommand{\bsS}{\boldsymbol{S}}
+    \newcommand{\bsT}{\boldsymbol{T}}
+    \newcommand{\bsU}{\boldsymbol{U}}
+    \newcommand{\bsV}{\boldsymbol{V}}
+    \newcommand{\bsW}{\boldsymbol{W}}
+    \newcommand{\bsX}{\boldsymbol{X}}
+    \newcommand{\bsY}{\boldsymbol{Y}}
+    \newcommand{\bsZ}{\boldsymbol{Z}}
 
-    \newcommand{\ignore}[1]{}
-
-    % probability type operators
-    \let\Pr\relax
-    \DeclareMathOperator*{\Pr}{\mathbf{Pr}}
-    \newcommand{\E}{\mathbb{E}}
-    \DeclareMathOperator*{\Ex}{\mathbf{E}}
-    \DeclareMathOperator*{\Var}{\mathbf{Var}}
-    \DeclareMathOperator*{\Cov}{\mathbf{Cov}}
-    \DeclareMathOperator*{\stddev}{\mathbf{stddev}}
-    \DeclareMathOperator{\littlesum}
-    \DeclareMathOperator{\littleprod}
-    \DeclareMathOperator*{\avg}{avg}
-
-
-    % math terms
-    \DeclareMathOperator{\poly}{poly}
-    \DeclareMathOperator{\polylog}{polylog}
-    \DeclareMathOperator{\size}{size}
-    \DeclareMathOperator{\sgn}{sgn}
-    \DeclareMathOperator{\dist}{dist}
-    \DeclareMathOperator{\vol}{vol}
-    \DeclareMathOperator{\spn}{span}
-    \DeclareMathOperator{\supp}{supp}
-    \DeclareMathOperator{\tr}{tr}
-    \DeclareMathOperator{\Tr}{Tr}
-    \DeclareMathOperator{\codim}{codim}
-    \DeclareMathOperator{\diag}{diag}
-
-    % number systems
-    \newcommand{\R}{\mathbb R}
-    \newcommand{\C}{\mathbb C}
-    \newcommand{\N}{\mathbb N}
-    \newcommand{\Z}{\mathbb Z}
-    \newcommand{\F}{\mathbb F}
-    \newcommand{\Q}{\mathbb Q}
-
-    % complexity classes
-    \newcommand{\PTIME}{\mathsf{P}}
-    \newcommand{\LOGSPACE}{\mathsf{L}}
-    \newcommand{\ZPP}{\mathsf{ZPP}}
-    \newcommand{\RP}{\mathsf{RP}}
-    \newcommand{\BPP}{\mathsf{BPP}}
-    \newcommand{\P}{\mathsf{P}}
-    \newcommand{\NP}{\mathsf{NP}}
-    \newcommand{\TC}{\mathsf{TC}}
-    \newcommand{\AC}{\mathsf{AC}}
-    \newcommand{\SC}{\mathsf{SC}}
-    \newcommand{\SZK}{\mathsf{SZK}}
-    \newcommand{\AM}{\mathsf{AM}}
-    \newcommand{\IP}{\mathsf{IP}}
-    \newcommand{\PSPACE}{\mathsf{PSPACE}}
-    \newcommand{\EXP}{\mathsf{EXP}}
-    \newcommand{\MIP}{\mathsf{MIP}}
-    \newcommand{\NEXP}{\mathsf{NEXP}}
-    \newcommand{\BQP}{\mathsf{BQP}}
-    \newcommand{\distP}{\mathsf{dist\textbf{P}}}
-    \newcommand{\distNP}{\mathsf{dist\textbf{NP}}}
-
-    % short forms
-    \newcommand{\eps}{\epsilon}
-    \newcommand{\lam}{\lambda}
-    \newcommand{\dleta}{\delta}
-    \newcommand{\simga}{\sigma}
-    \newcommand{\vphi}{\varphi}
-    \newcommand{\la}{\langle}
-    \newcommand{\ra}{\rangle}
-    \newcommand{\wt}[1]{\widetilde{#1}}
-    \newcommand{\wh}[1]{\widehat{#1}}
-    \newcommand{\ol}[1]{\overline{#1}}
-    \newcommand{\ul}[1]{\underline{#1}}
-    \newcommand{\ot}{\otimes}
-    \newcommand{\zo}{\{0,1\}}
-    \newcommand{\co}{:} %\newcommand{\co}{\colon}
-    \newcommand{\bdry}{\partial}
-    \newcommand{\grad}{\nabla}
-    \newcommand{\transp}{^\intercal}
-    \newcommand{\inv}{^{-1}}
-    \newcommand{\symmdiff}{\triangle} \newcommand{\symdiff}{\symmdiff}
-    \newcommand{\half}{\tfrac{1}{2}}
-    \newcommand{\bbone}{\mathbbm 1}
-    \newcommand{\Id}{\bbone}
-
-    \newcommand{\SAT}{\mathsf{SAT}}
-
-    % calligraphic letters
     \newcommand{\calA}{\mathcal{A}}
     \newcommand{\calB}{\mathcal{B}}
     \newcommand{\calC}{\mathcal{C}}
@@ -269,123 +277,93 @@
     \newcommand{\calY}{\mathcal{Y}}
     \newcommand{\calZ}{\mathcal{Z}}
 
-    % bold
-    \newcommand{\bone}{\boldsymbol{1}}
-    \newcommand{\bbeta}{\boldsymbol{\beta}}
-    \newcommand{\bdelta}{\boldsymbol{\delta}}
-    \newcommand{\bepsilon}{\boldsymbol{\epsilon}}
-    \newcommand{\blambda}{\boldsymbol{\lambda}}
-    \newcommand{\bomega}{\boldsymbol{\omega}}
-    \newcommand{\bpi}{\boldsymbol{\pi}}
-    \newcommand{\bphi}{\boldsymbol{\phi}}
-    \newcommand{\bvphi}{\boldsymbol{\varphi}}
-    \newcommand{\bpsi}{\boldsymbol{\psi}}
-    \newcommand{\bsigma}{\boldsymbol{\sigma}}
-    \newcommand{\btheta}{\boldsymbol{\theta}}
-    \newcommand{\btau}{\boldsymbol{\tau}}
-    \newcommand{\ba}{\boldsymbol{a}}
-    \newcommand{\bb}{\boldsymbol{b}}
-    \newcommand{\bc}{\boldsymbol{c}}
-    \newcommand{\bd}{\boldsymbol{d}}
-    \newcommand{\be}{\boldsymbol{e}}
-    \newcommand{\boldf}{\boldsymbol{f}}
-    \newcommand{\bg}{\boldsymbol{g}}
-    \newcommand{\bh}{\boldsymbol{h}}
-    \newcommand{\bi}{\boldsymbol{i}}
-    \newcommand{\bj}{\boldsymbol{j}}
-    \newcommand{\bk}{\boldsymbol{k}}
-    \newcommand{\bell}{\boldsymbol{\ell}}
-    \newcommand{\bm}{\boldsymbol{m}}
-    \newcommand{\bn}{\boldsymbol{n}}
-    \newcommand{\bo}{\boldsymbol{o}}
-    \newcommand{\bp}{\boldsymbol{p}}
-    \newcommand{\bq}{\boldsymbol{q}}
-    \newcommand{\br}{\boldsymbol{r}}
-    \newcommand{\bs}{\boldsymbol{s}}
-    \newcommand{\bt}{\boldsymbol{t}}
-    \newcommand{\bu}{\boldsymbol{u}}
-    \newcommand{\bv}{\boldsymbol{v}}
-    \newcommand{\bw}{\boldsymbol{w}}
-    \newcommand{\bx}{\boldsymbol{x}}
-    \newcommand{\by}{\boldsymbol{y}}
-    \newcommand{\bz}{\boldsymbol{z}}
-    \newcommand{\bA}{\boldsymbol{A}}
-    \newcommand{\bB}{\boldsymbol{B}}
-    \newcommand{\bC}{\boldsymbol{C}}
-    \newcommand{\bD}{\boldsymbol{D}}
-    \newcommand{\bE}{\boldsymbol{E}}
-    \newcommand{\bF}{\boldsymbol{F}}
-    \newcommand{\bG}{\boldsymbol{G}}
-    \newcommand{\bH}{\boldsymbol{H}}
-    \newcommand{\bI}{\boldsymbol{I}}
-    \newcommand{\bJ}{\boldsymbol{J}}
-    \newcommand{\bK}{\boldsymbol{K}}
-    \newcommand{\bL}{\boldsymbol{L}}
-    \newcommand{\bM}{\boldsymbol{M}}
-    \newcommand{\bN}{\boldsymbol{N}}
-    \newcommand{\bP}{\boldsymbol{P}}
-    \newcommand{\bQ}{\boldsymbol{Q}}
-    \newcommand{\bR}{\boldsymbol{R}}
-    \newcommand{\bS}{\boldsymbol{S}}
-    \newcommand{\bT}{\boldsymbol{T}}
-    \newcommand{\bU}{\boldsymbol{U}}
-    \newcommand{\bV}{\boldsymbol{V}}
-    \newcommand{\bW}{\boldsymbol{W}}
-    \newcommand{\bX}{\boldsymbol{X}}
-    \newcommand{\bY}{\boldsymbol{Y}}
-    \newcommand{\bZ}{\boldsymbol{Z}}
+    \newcommand{\R}{\mathbb{R}}
+    \newcommand{\C}{\mathbb{C}}
+    \newcommand{\N}{\mathbb{N}}
+    \newcommand{\Z}{\mathbb{Z}}
+    \newcommand{\F}{\mathbb{F}}
+    \newcommand{\Q}{\mathbb{Q}}
 
-    % others
-    \newcommand{\false}}
-    \newcommand{\true}}
+    \DeclareMathOperator*{\argmax}{arg\,max}
+    \DeclareMathOperator*{\argmin}{arg\,min}
+    \newcommand{\nnz}[1]{\mbox{nnz}(#1)}
+    \newcommand{\dotprod}[2]{\langle #1, #2 \rangle}
 
-    % bold calligraphic
+    \newcommand{\ignore}[1]{}
+
+    \let\Pr\relax
+    \DeclareMathOperator*{\Pr}{\mathbf{Pr}}
+    \newcommand{\E}{\mathbb{E}}
+    \DeclareMathOperator*{\Ex}{\mathbf{E}}
+    \DeclareMathOperator*{\Var}{\mathbf{Var}}
+    \DeclareMathOperator*{\Cov}{\mathbf{Cov}}
+    \DeclareMathOperator*{\stddev}{\mathbf{stddev}}
+    \DeclareMathOperator*{\avg}{avg}
+
+    \DeclareMathOperator{\poly}{poly}
+    \DeclareMathOperator{\polylog}{polylog}
+    \DeclareMathOperator{\size}{size}
+    \DeclareMathOperator{\sgn}{sgn}
+    \DeclareMathOperator{\dist}{dist}
+    \DeclareMathOperator{\vol}{vol}
+    \DeclareMathOperator{\spn}{span}
+    \DeclareMathOperator{\supp}{supp}
+    \DeclareMathOperator{\tr}{tr}
+    \DeclareMathOperator{\Tr}{Tr}
+    \DeclareMathOperator{\codim}{codim}
+    \DeclareMathOperator{\diag}{diag}
+
+    \newcommand{\PTIME}{\mathsf{P}}
+    \newcommand{\LOGSPACE}{\mathsf{L}}
+    \newcommand{\ZPP}{\mathsf{ZPP}}
+    \newcommand{\RP}{\mathsf{RP}}
+    \newcommand{\BPP}{\mathsf{BPP}}
+    \newcommand{\P}{\mathsf{P}}
+    \newcommand{\NP}{\mathsf{NP}}
+    \newcommand{\TC}{\mathsf{TC}}
+    \newcommand{\AC}{\mathsf{AC}}
+    \newcommand{\SC}{\mathsf{SC}}
+    \newcommand{\SZK}{\mathsf{SZK}}
+    \newcommand{\AM}{\mathsf{AM}}
+    \newcommand{\IP}{\mathsf{IP}}
+    \newcommand{\PSPACE}{\mathsf{PSPACE}}
+    \newcommand{\EXP}{\mathsf{EXP}}
+    \newcommand{\MIP}{\mathsf{MIP}}
+    \newcommand{\NEXP}{\mathsf{NEXP}}
+    \newcommand{\BQP}{\mathsf{BQP}}
+    \newcommand{\distP}{\mathsf{dist\textbf{P}}}
+    \newcommand{\distNP}{\mathsf{dist\textbf{NP}}}
+
+    \newcommand{\eps}{\epsilon}
+    \newcommand{\lam}{\lambda}
+    \newcommand{\dleta}{\delta}
+    \newcommand{\simga}{\sigma}
+    \newcommand{\vphi}{\varphi}
+    \newcommand{\la}{\langle}
+    \newcommand{\ra}{\rangle}
+    \newcommand{\wt}[1]{\widetilde{#1}}
+    \newcommand{\wh}[1]{\widehat{#1}}
+    \newcommand{\ol}[1]{\overline{#1}}
+    \newcommand{\ul}[1]{\underline{#1}}
+    \newcommand{\ot}{\otimes}
+    \newcommand{\zo}{\{0,1\}}
+    \newcommand{\co}{:} %\newcommand{\co}{\colon}
+    \newcommand{\bdry}{\partial}
+    \newcommand{\grad}{\nabla}
+    \newcommand{\transp}{^\intercal}
+    \newcommand{\inv}{^{-1}}
+    \newcommand{\symmdiff}{\triangle} \newcommand{\symdiff}{\symmdiff}
+    \newcommand{\half}{\tfrac{1}{2}}
+    \newcommand{\bbone}{\mathbbm 1}
+    \newcommand{\Id}{\bbone}
+
+    \newcommand{\SAT}{\mathsf{SAT}}
+
     \newcommand{\bcalG}{\boldsymbol{\calG}}
     \newcommand{\calbG}{\bcalG}
     \newcommand{\bcalX}{\boldsymbol{\calX}} \newcommand{\calbX}{\bcalX}
     \newcommand{\bcalY}{\boldsymbol{\calY}} \newcommand{\calbY}{\bcalY}
     \newcommand{\bcalZ}{\boldsymbol{\calZ}} \newcommand{\calbZ}{\bcalZ}
-
-    % left-right wrappers
-    \DeclarePairedDelimiter\parens{\lparen}{\rparen}
-    \DeclarePairedDelimiter\abs{\lvert}{\rvert}
-    \DeclarePairedDelimiter\norm{\lVert}{\rVert}
-    \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
-    \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
-    \DeclarePairedDelimiter\braces{\lbrace}{\rbrace}
-    \DeclarePairedDelimiter\bracks{\lbrack}{\rbrack}
-    \DeclarePairedDelimiter\angles{\langle}{\rangle}
-
-    % something for figures
-    \newcommand{\myfig}[4]{\begin{figure}[H] \centering \includegraphics[width=#1\textwidth]{#2} \caption{#3} \label{#4}
-    \end{figure}}
-    
-
-    \definecolor{codegreen}{rgb}{0,0.6,0}
-    \definecolor{codegray}{rgb}{0.5,0.5,0.5}
-    \definecolor{codepurple}{rgb}{0.58,0,0.82}
-    \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
-
-    \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,
-    breaklines=true,
-    captionpos=b,
-    keepspaces=true,
-    numbers=left,
-    numbersep=5pt,
-    showspaces=false,
-    showstringspaces=false,
-    showtabs=false,
-    tabsize=2
-    }
-
-    \lstset{style=mystyle}
     $$
 </div>
 <!-- page.html -->
@@ -457,7 +435,6 @@ Both of these introductory courses are also available in the table below.</p>
     <thead>
         <tr>
             <th>Course Name</th>
-            <th>Lecture Videos</th>
         </tr>
     </thead>
 
@@ -466,7 +443,12 @@ Both of these introductory courses are also available in the table below.</p>
   
   <tr>
     <td>
-        <b><a href="https://dlsyscourse.org/" rel="external nofollow noopener" target="_blank">10-414/714 Deep Learning Systems, Algorithms and Implementation</a></b> (Fall 2022)
+        <b>
+            
+                <a href="https://dlsyscourse.org/" rel="external nofollow noopener" target="_blank">10-414/714 Deep Learning Systems, Algorithms and Implementation</a>
+            
+        </b>
+             (Fall 2022)
         <br>
         
             
@@ -489,10 +471,6 @@ Both of these introductory courses are also available in the table below.</p>
         
         <br>
         <br>
-        Deep learning methods have revolutionized a number of fields in Artificial Intelligence and Machine Learning in recent years. The widespread adoption of deep learning methods have in no small part been driven by the widespread availability of easy-to-use deep learning systems, such as PyTorch and TensorFlow. But despite their widespread availability and use, it is much less common for students to get involved with the internals of these libraries, to understand how they function at a fundamental level. But understanding these libraries deeply will help you make better use of their functionality, and enable you to develop or extend these libraries when needed to fit your own custom use cases in deep learning. <br> <br> The goal of this course is to provide students an understanding and overview of the “full stack” of deep learning systems, ranging from the high-level modeling design of modern deep learning systems, to the basic implementation of automatic differentiation tools, to the underlying device-level implementation of efficient algorithms. Throughout the course, students will design and build from scratch a complete deep learning library, capable of efficient GPU-based operations, automatic differentiation of all implemented functions, and the necessary modules to support parameterized layers, loss functions, data loaders, and optimizers. Using these tools, students will then build several state-of-the-art modeling methods, including convolutional networks for image classification and segmentation, recurrent networks and self-attention models for sequential tasks such as language modeling, and generative models for image generation.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLGzYMymX8amNyGPuJ35YWdq59eQ5jYCZ1" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -500,13 +478,21 @@ Both of these introductory courses are also available in the table below.</p>
             </div>
         
         
+        <br>
+        Deep learning methods have revolutionized a number of fields in Artificial Intelligence and Machine Learning in recent years. The widespread adoption of deep learning methods have in no small part been driven by the widespread availability of easy-to-use deep learning systems, such as PyTorch and TensorFlow. But despite their widespread availability and use, it is much less common for students to get involved with the internals of these libraries, to understand how they function at a fundamental level. But understanding these libraries deeply will help you make better use of their functionality, and enable you to develop or extend these libraries when needed to fit your own custom use cases in deep learning. <br> <br> The goal of this course is to provide students an understanding and overview of the “full stack” of deep learning systems, ranging from the high-level modeling design of modern deep learning systems, to the basic implementation of automatic differentiation tools, to the underlying device-level implementation of efficient algorithms. Throughout the course, students will design and build from scratch a complete deep learning library, capable of efficient GPU-based operations, automatic differentiation of all implemented functions, and the necessary modules to support parameterized layers, loss functions, data loaders, and optimizers. Using these tools, students will then build several state-of-the-art modeling methods, including convolutional networks for image classification and segmentation, recurrent networks and self-attention models for sequential tasks such as language modeling, and generative models for image generation.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="http://phontron.com/class/anlp2021/" rel="external nofollow noopener" target="_blank">11-711 Advanced NLP</a></b> (Fall 2022)
+        <b>
+            
+                <a href="http://phontron.com/class/anlp2021/" rel="external nofollow noopener" target="_blank">11-711 Advanced NLP</a>
+            
+        </b>
+             (Fall 2022)
         <br>
         
             
@@ -529,10 +515,6 @@ Both of these introductory courses are also available in the table below.</p>
         
         <br>
         <br>
-        Natural language processing technology attempts to model human language with computers, tackling a wide variety of problems from automatic translation to question answering. CS11-711 Advanced Natural Language Processing (at Carnegie Mellon University's Language Technology Institute) is an introductory graduate-level course on natural language processing aimed at students who are interested in doing cutting-edge research in the field. In it, we describe fundamental tasks in natural language processing such as syntactic, semantic, and discourse analysis, as well as methods to solve these tasks. The course focuses on modern methods using neural networks, and covers the basic modeling and learning algorithms required therefore. The class culminates in a project in which students attempt to reimplement and improve upon a research paper in a topic of their choosing.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PL8PYTP1V4I8D0UkqW2fEhgLrnlDW9QK7z" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -540,13 +522,21 @@ Both of these introductory courses are also available in the table below.</p>
             </div>
         
         
+        <br>
+        Natural language processing technology attempts to model human language with computers, tackling a wide variety of problems from automatic translation to question answering. CS11-711 Advanced Natural Language Processing (at Carnegie Mellon University's Language Technology Institute) is an introductory graduate-level course on natural language processing aimed at students who are interested in doing cutting-edge research in the field. In it, we describe fundamental tasks in natural language processing such as syntactic, semantic, and discourse analysis, as well as methods to solve these tasks. The course focuses on modern methods using neural networks, and covers the basic modeling and learning algorithms required therefore. The class culminates in a project in which students attempt to reimplement and improve upon a research paper in a topic of their choosing.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://www.cs.cmu.edu/~epxing/Class/10708-20/" rel="external nofollow noopener" target="_blank">10-708 Probabilistic Graphical Models</a></b> (Spring 2020)
+        <b>
+            
+                <a href="https://www.cs.cmu.edu/~epxing/Class/10708-20/" rel="external nofollow noopener" target="_blank">10-708 Probabilistic Graphical Models</a>
+            
+        </b>
+             (Spring 2020)
         <br>
         
             
@@ -566,10 +556,6 @@ Both of these introductory courses are also available in the table below.</p>
         
         <br>
         <br>
-        Many of the problems in artificial intelligence, statistics, computer systems, computer vision, natural language processing, and computational biology, among many other fields, can be viewed as the search for a coherent global conclusion from local information. The probabilistic graphical models' framework provides a unified view for this wide range of problems, enabling efficient inference, decision-making, and learning in problems with a very large number of attributes and huge datasets. This graduate-level course will provide you with a strong foundation for both applying graphical models to complex problems and for addressing core research topics in graphical models. The class will cover classical families of undirected and directed graphical models (i.e. Markov Random Fields and Bayesian Networks), modern deep generative models, as well as topics in graph neural networks and causal inference. It will also cover the necessary algorithmic toolkit, including variational inference and Markov Chain Monte Carlo methods.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLoZgVqqHOumTqxIhcdcpOAJOOimrRCGZn" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -577,13 +563,21 @@ Both of these introductory courses are also available in the table below.</p>
             </div>
         
         
+        <br>
+        Many of the problems in artificial intelligence, statistics, computer systems, computer vision, natural language processing, and computational biology, among many other fields, can be viewed as the search for a coherent global conclusion from local information. The probabilistic graphical models' framework provides a unified view for this wide range of problems, enabling efficient inference, decision-making, and learning in problems with a very large number of attributes and huge datasets. This graduate-level course will provide you with a strong foundation for both applying graphical models to complex problems and for addressing core research topics in graphical models. The class will cover classical families of undirected and directed graphical models (i.e. Markov Random Fields and Bayesian Networks), modern deep generative models, as well as topics in graph neural networks and causal inference. It will also cover the necessary algorithmic toolkit, including variational inference and Markov Chain Monte Carlo methods.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://www.andrew.cmu.edu/user/yuanzhil/cov.html" rel="external nofollow noopener" target="_blank">10-725 Convex Optimization</a></b> (Fall 2022)
+        <b>
+            
+                <a href="https://www.andrew.cmu.edu/user/yuanzhil/cov.html" rel="external nofollow noopener" target="_blank">10-725 Convex Optimization</a>
+            
+        </b>
+             (Fall 2022)
         <br>
         
             
@@ -603,21 +597,25 @@ Both of these introductory courses are also available in the table below.</p>
         
         <br>
         <br>
+        
+            <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=35028909-68d2-46be-b0d8-af020148d304" rel="external nofollow noopener" target="_blank">Public Panopto Lecture Videos Link</a>
+        
+        
+        <br>
         Convex optimization was an extremely useful tool in Machine Learning, capable of solving many real-world problems efficiently, such as linear regression, logistic regression, linear programming, SDP programming etc. However, in modern machine learning, as the non-convex neural networks growing to be the dominating models in this field, principles developed in traditional convex optimization are now becoming insufficient. <br> <br> In these lectures, you will see a convex optimization course that hasn't been taught (or close to being taught) anywhere else: This newly designed course spans the old topics in convex optimization such as Gradient Descent, Stochastic Gradient Descent, Mirror Descent, Accelerated Gradient Descent, Interior Point Method, and making connections all the way to optimizations topics in deep learning, such as Neural Tangent Kernel, Scheduled Learning Rate, Momentums, Batch normalization and Linear Reinforcement Learning. <br> <br> In the end of the course, you will have a sense about the spirit of convex optimization, and how it can still be applied to other real-world problems that are not convex at all.
 
-    </td>
-    <td>
-        
-            <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=35028909-68d2-46be-b0d8-af020148d304" rel="external nofollow noopener" target="_blank">Public Panopto Link</a>
-        
-        
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/" rel="external nofollow noopener" target="_blank">10-701 Introduction to Machine Learning</a></b> (Fall 2020)
+        <b>
+            
+                <a href="https://www.cs.cmu.edu/~epxing/Class/10701-20/" rel="external nofollow noopener" target="_blank">10-701 Introduction to Machine Learning</a>
+            
+        </b>
+             (Fall 2020)
         <br>
         
             
@@ -640,10 +638,6 @@ Both of these introductory courses are also available in the table below.</p>
         
         <br>
         <br>
-        Machine Learning is concerned with computer programs that automatically improve their performance through experience (e.g., programs that learn to recognize human faces, recommend music and movies, and drive autonomous robots). This course covers the theory and practical algorithms for machine learning from a variety of perspectives. We cover topics such as Linear Regression, SVMs, Neural Networks, Graphical Models, Clustering, etc. Programming assignments include hands-on experiments with various learning algorithms. This course is designed to give a PhD-level student a thorough grounding in the methodologies, technologies, mathematics and algorithms currently needed by people who do research in machine learning.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLsWN0V-b507g7dbQTUvFkKZEqdHR5Fh4P" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -651,13 +645,21 @@ Both of these introductory courses are also available in the table below.</p>
             </div>
         
         
+        <br>
+        Machine Learning is concerned with computer programs that automatically improve their performance through experience (e.g., programs that learn to recognize human faces, recommend music and movies, and drive autonomous robots). This course covers the theory and practical algorithms for machine learning from a variety of perspectives. We cover topics such as Linear Regression, SVMs, Neural Networks, Graphical Models, Clustering, etc. Programming assignments include hands-on experiments with various learning algorithms. This course is designed to give a PhD-level student a thorough grounding in the methodologies, technologies, mathematics and algorithms currently needed by people who do research in machine learning.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="http://www.cs.cmu.edu/~bapoczos/Classes/ML10715_2015Fall/" rel="external nofollow noopener" target="_blank">10-715 Advanced Introduction to Machine Learning</a></b> (Fall 2015)
+        <b>
+            
+                <a href="http://www.cs.cmu.edu/~bapoczos/Classes/ML10715_2015Fall/" rel="external nofollow noopener" target="_blank">10-715 Advanced Introduction to Machine Learning</a>
+            
+        </b>
+             (Fall 2015)
         <br>
         
             
@@ -680,10 +682,6 @@ Both of these introductory courses are also available in the table below.</p>
         
         <br>
         <br>
-        The rapid improvement of sensory techniques and processor speed, and the availability of inexpensive massive digital storage, have led to a growing demand for systems that can automatically comprehend and mine massive and complex data from diverse sources. Machine Learning is becoming the primary mechanism by which information is extracted from Big Data, and a primary pillar that Artificial Intelligence is built upon. <br> <br> This course is designed for Ph.D. students whose primary field of study is machine learning, or who intend to make machine learning methodological research a main focus of their thesis. It will give students a thorough grounding in the algorithms, mathematics, theories, and insights needed to do in-depth research and applications in machine learning. The topics of this course will in part parallel those covered in the general graduate machine learning course (10-701), but with a greater emphasis on depth in theory and algorithms. The course will also include additional advanced topics such as RKHS and representer theory, Bayesian nonparametrics, additional material on graphical models, manifolds and spectral graph theory, reinforcement learning and online learning, etc.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PL4YhK0pT0ZhWBzSBkMGzpnPw6sf6Ma0IX" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -691,13 +689,21 @@ Both of these introductory courses are also available in the table below.</p>
             </div>
         
         
+        <br>
+        The rapid improvement of sensory techniques and processor speed, and the availability of inexpensive massive digital storage, have led to a growing demand for systems that can automatically comprehend and mine massive and complex data from diverse sources. Machine Learning is becoming the primary mechanism by which information is extracted from Big Data, and a primary pillar that Artificial Intelligence is built upon. <br> <br> This course is designed for Ph.D. students whose primary field of study is machine learning, or who intend to make machine learning methodological research a main focus of their thesis. It will give students a thorough grounding in the algorithms, mathematics, theories, and insights needed to do in-depth research and applications in machine learning. The topics of this course will in part parallel those covered in the general graduate machine learning course (10-701), but with a greater emphasis on depth in theory and algorithms. The course will also include additional advanced topics such as RKHS and representer theory, Bayesian nonparametrics, additional material on graphical models, manifolds and spectral graph theory, reinforcement learning and online learning, etc.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://deeplearning.cs.cmu.edu/" rel="external nofollow noopener" target="_blank">11-485/785 Introduction to Deep Learning</a></b> (Fall 2022)
+        <b>
+            
+                <a href="https://deeplearning.cs.cmu.edu/" rel="external nofollow noopener" target="_blank">11-485/785 Introduction to Deep Learning</a>
+            
+        </b>
+             (Spring 2023)
         <br>
         
             
@@ -720,25 +726,29 @@ Both of these introductory courses are also available in the table below.</p>
         
         <br>
         <br>
-        "Deep Learning" systems, typified by deep neural networks, are increasingly taking over all the AI tasks, ranging from language understanding, speech and image recognition, to machine translation, planning, and even game playing and autonomous driving. As a result, expertise in deep learning is fast changing from an esoteric desirable to a mandatory prerequisite in many advanced academic settings, and a large advantage in the industrial job market.
-In this course we will learn about the basics of deep neural networks, and their applications to various AI tasks. By the end of the course, it is expected that students will have significant familiarity with the subject, and be able to apply Deep Learning to a variety of tasks. They will also be positioned to understand much of the current literature on the topic and extend their knowledge through further study.
-
-    </td>
-    <td>
         
             <div class="embed-container">
-                <iframe src="https://www.youtube.com/embed/videoseries?list=PLp-0K3kfddPxRmjgjm0P1WT6H-gTqE8j9" width="700" height="480" frameborder="0" allowfullscreen="true">
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PLp-0K3kfddPwgBSCbDtT6NaVOd-gIHVMW" width="700" height="480" frameborder="0" allowfullscreen="true">
                 </iframe>
             </div>
         
         
+        <br>
+        "Deep Learning" systems, typified by deep neural networks, are increasingly taking over all the AI tasks, ranging from language understanding, speech and image recognition, to machine translation, planning, and even game playing and autonomous driving. As a result, expertise in deep learning is fast changing from an esoteric desirable to a mandatory prerequisite in many advanced academic settings, and a large advantage in the industrial job market.
+In this course we will learn about the basics of deep neural networks, and their applications to various AI tasks. By the end of the course, it is expected that students will have significant familiarity with the subject, and be able to apply Deep Learning to a variety of tasks. They will also be positioned to understand much of the current literature on the topic and extend their knowledge through further study.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://cmudeeprl.github.io/703website_f22" rel="external nofollow noopener" target="_blank">10-703 Deep Reinforcement Learning &amp; Control</a></b> (Fall 2022)
+        <b>
+            
+                <a href="https://cmudeeprl.github.io/703website_f22" rel="external nofollow noopener" target="_blank">10-703 Deep Reinforcement Learning &amp; Control</a>
+            
+        </b>
+             (Fall 2022)
         <br>
         
             
@@ -758,21 +768,25 @@ In this course we will learn about the basics of deep neural networks, and their
         
         <br>
         <br>
+        
+            <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=ee5794a2-cb54-4edc-836b-aefc01023243" rel="external nofollow noopener" target="_blank">Public Panopto Lecture Videos Link</a>
+        
+        
+        <br>
         This course will cover latest advances in Reinforcement Learning and Imitation learning. This is a fast developing research field and an official textbook is available only for about one forth of the course material. The rest will be taught from recent research papers. This course brings together many disciplines of Artificial Intelligence to show how to develop intelligent agent that can learn to sense the world and learn to act imitating others or maximizing sparse rewards Particular focus will be given in incorporating visual sensory input and learning suitable visual state representations.
 
-    </td>
-    <td>
-        
-            <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=ee5794a2-cb54-4edc-836b-aefc01023243" rel="external nofollow noopener" target="_blank">Public Panopto Link</a>
-        
-        
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://cmu-multicomp-lab.github.io/mmml-course/fall2020/" rel="external nofollow noopener" target="_blank">11-777 Multi-Modal Machine Learning</a></b> (Fall 2020)
+        <b>
+            
+                <a href="https://cmu-multicomp-lab.github.io/mmml-course/fall2020/" rel="external nofollow noopener" target="_blank">11-777 Multi-Modal Machine Learning</a>
+            
+        </b>
+             (Fall 2020)
         <br>
         
             
@@ -792,11 +806,6 @@ In this course we will learn about the basics of deep neural networks, and their
         
         <br>
         <br>
-        Multimodal machine learning (MMML) is a vibrant multi-disciplinary research field which addresses some of the original goals of artificial intelligence by integrating and modeling multiple communicative modalities, including linguistic, acoustic, and visual messages. With the initial research on audio-visual speech recognition and more recently with language &amp; vision projects such as image and video captioning, this research field brings some unique challenges for multimodal researchers given the heterogeneity of the data and the contingency often found between modalities. This course will teach fundamental mathematical concepts related to MMML including multimodal alignment and fusion, heterogeneous representation learning and multistream temporal modeling. We will also review recent papers describing state-of-the-art probabilistic models and computational algorithms for MMML and discuss the current and upcoming challenges.
-The course will present the fundamental mathematical concepts in machine learning and deep learning relevant to the five main challenges in multimodal machine learning: (1) multimodal representation learning, (2) translation &amp; mapping, (3) modality alignment, (4) multimodal fusion and (5) co-learning. These include, but not limited to, multimodal auto-encoder, deep canonical correlation analysis, multi-kernel learning, attention models and multimodal recurrent neural networks. The course will also discuss many of the recent applications of MMML including multimodal affect recognition, image and video captioning and cross-modal multimedia retrieval.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLTLz0-WCKX616TjsrgPr2wFzKF54y-ZKc" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -804,13 +813,22 @@ The course will present the fundamental mathematical concepts in machine learnin
             </div>
         
         
+        <br>
+        Multimodal machine learning (MMML) is a vibrant multi-disciplinary research field which addresses some of the original goals of artificial intelligence by integrating and modeling multiple communicative modalities, including linguistic, acoustic, and visual messages. With the initial research on audio-visual speech recognition and more recently with language &amp; vision projects such as image and video captioning, this research field brings some unique challenges for multimodal researchers given the heterogeneity of the data and the contingency often found between modalities. This course will teach fundamental mathematical concepts related to MMML including multimodal alignment and fusion, heterogeneous representation learning and multistream temporal modeling. We will also review recent papers describing state-of-the-art probabilistic models and computational algorithms for MMML and discuss the current and upcoming challenges.
+The course will present the fundamental mathematical concepts in machine learning and deep learning relevant to the five main challenges in multimodal machine learning: (1) multimodal representation learning, (2) translation &amp; mapping, (3) modality alignment, (4) multimodal fusion and (5) co-learning. These include, but not limited to, multimodal auto-encoder, deep canonical correlation analysis, multi-kernel learning, attention models and multimodal recurrent neural networks. The course will also discuss many of the recent applications of MMML including multimodal affect recognition, image and video captioning and cross-modal multimedia retrieval.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="http://curtis.ml.cmu.edu/w/courses/index.php/Machine_Learning_with_Large_Datasets_10-605_in_Fall_2016" rel="external nofollow noopener" target="_blank">10-605/805 Machine Learning with Large Datasets</a></b> (Fall 2016)
+        <b>
+            
+                <a href="http://curtis.ml.cmu.edu/w/courses/index.php/Machine_Learning_with_Large_Datasets_10-605_in_Fall_2016" rel="external nofollow noopener" target="_blank">10-605/805 Machine Learning with Large Datasets</a>
+            
+        </b>
+             (Fall 2016)
         <br>
         
             
@@ -830,11 +848,6 @@ The course will present the fundamental mathematical concepts in machine learnin
         
         <br>
         <br>
-        Large datasets are difficult to work with for several reasons. They are difficult to visualize, and it is difficult to understand what sort of errors and biases are present in them. They are computationally expensive to process, and often the cost of learning is hard to predict - for instance, and algorithm that runs quickly in a dataset that fits in memory may be exorbitantly expensive when the dataset is too large for memory. Large datasets may also display qualitatively different behavior in terms of which learning methods produce the most accurate predictions.
-This course is intended to provide a student practical knowledge of, and experience with, the issues involving large datasets. Among the issues considered are: scalable learning techniques, such as streaming machine learning techniques; parallel infrastructures such as map-reduce; practical techniques for reducing the memory requirements for learning methods, such as feature hashing and Bloom filters; and techniques for analysis of programs in terms of memory, disk usage, and (for parallel methods) communication complexity.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PL4YhK0pT0ZhUoBI-V2AvitMrE133iAKs3" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -842,13 +855,22 @@ This course is intended to provide a student practical knowledge of, and experie
             </div>
         
         
+        <br>
+        Large datasets are difficult to work with for several reasons. They are difficult to visualize, and it is difficult to understand what sort of errors and biases are present in them. They are computationally expensive to process, and often the cost of learning is hard to predict - for instance, and algorithm that runs quickly in a dataset that fits in memory may be exorbitantly expensive when the dataset is too large for memory. Large datasets may also display qualitatively different behavior in terms of which learning methods produce the most accurate predictions.
+This course is intended to provide a student practical knowledge of, and experience with, the issues involving large datasets. Among the issues considered are: scalable learning techniques, such as streaming machine learning techniques; parallel infrastructures such as map-reduce; practical techniques for reducing the memory requirements for learning methods, such as feature hashing and Bloom filters; and techniques for analysis of programs in terms of memory, disk usage, and (for parallel methods) communication complexity.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="http://www.datasciencecourse.org/" rel="external nofollow noopener" target="_blank">15-388 Practical Data Science</a></b> (Fall 2019)
+        <b>
+            
+                <a href="http://www.datasciencecourse.org/" rel="external nofollow noopener" target="_blank">15-388 Practical Data Science</a>
+            
+        </b>
+             (Fall 2019)
         <br>
         
             
@@ -868,21 +890,25 @@ This course is intended to provide a student practical knowledge of, and experie
         
         <br>
         <br>
+        
+            <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=618ea253-ca45-4b14-9f1d-aab501543bd2" rel="external nofollow noopener" target="_blank">Public Panopto Lecture Videos Link</a>
+        
+        
+        <br>
         Data science is the study and practice of how we can extract insight and knowledge from large amounts of data. It is a burgeoning field, currently attracting substantial demand from both academia and industry. <br> <br> This course provides a practical introduction to the “full stack” of data science analysis, including data collection and processing, data visualization and presentation, statistical model building using machine learning, and big data techniques for scaling these methods. Topics covered include: collecting and processing data using relational methods, time series approaches, graph and network models, free text analysis, and spatial geographic methods; analyzing the data using a variety of statistical and machine learning methods include linear and non-linear regression and classification, unsupervised learning and anomaly detection, plus advanced machine learning methods like kernel approaches, boosting, or deep learning; visualizing and presenting data, particularly focusing the case of high-dimensional data; and applying these methods to big data settings, where multiple machines and distributed computation are needed to fully leverage the data.
 
-    </td>
-    <td>
-        
-            <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=618ea253-ca45-4b14-9f1d-aab501543bd2" rel="external nofollow noopener" target="_blank">Public Panopto Link</a>
-        
-        
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="http://www.cs.cmu.edu/~zkolter/course/15-780-s14/" rel="external nofollow noopener" target="_blank">15-780 Graduate Artificial Intelligence</a></b> (Spring 2014)
+        <b>
+            
+                <a href="http://www.cs.cmu.edu/~zkolter/course/15-780-s14/" rel="external nofollow noopener" target="_blank">15-780 Graduate Artificial Intelligence</a>
+            
+        </b>
+             (Spring 2014)
         <br>
         
             
@@ -906,14 +932,13 @@ This course is intended to provide a student practical knowledge of, and experie
         <br>
         <br>
         
-    </td>
-    <td>
-        
             <div class="embed-container">
-                <iframe src="https://www.youtube.com/embed/videoseries?list=PL4YhK0pT0ZhUoBI-V2AvitMrE133iAKs3" width="700" height="480" frameborder="0" allowfullscreen="true">
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PLOxR6w3fIHWyOa1Guwjl-oNNfvZ4yQUuD" width="700" height="480" frameborder="0" allowfullscreen="true">
                 </iframe>
             </div>
         
+        
+        <br>
         
     </td>
 </tr>
@@ -921,7 +946,12 @@ This course is intended to provide a student practical knowledge of, and experie
   
   <tr>
     <td>
-        <b><a href="http://www.cs.cmu.edu/~aiseminar/" rel="external nofollow noopener" target="_blank">CMU AI Seminar</a></b> (Ongoing)
+        <b>
+            
+                <a href="http://www.cs.cmu.edu/~aiseminar/" rel="external nofollow noopener" target="_blank">CMU AI Seminar</a>
+            
+        </b>
+             (Ongoing)
         <br>
         
         
@@ -930,14 +960,13 @@ This course is intended to provide a student practical knowledge of, and experie
         
         <br>
         <br>
-        This seminar aims to cover a wide variety of AI topics, such as computer vision, natural language processing (NLP), theoretical ML, AI fairness &amp; ethics, cognitive science, AI hardware, etc.
-
-    </td>
-    <td>
         
             <a href="https://www.youtube.com/@cmuaiseminar1950" rel="external nofollow noopener" target="_blank">Link to Youtube Channel</a>
         
         
+        <br>
+        This seminar aims to cover a wide variety of AI topics, such as computer vision, natural language processing (NLP), theoretical ML, AI fairness &amp; ethics, cognitive science, AI hardware, etc.
+
     </td>
 </tr>
 
@@ -956,7 +985,6 @@ referred to as an operating systems class.</p>
     <thead>
         <tr>
             <th>Course Name</th>
-            <th>Lecture Videos</th>
         </tr>
     </thead>
 
@@ -965,7 +993,12 @@ referred to as an operating systems class.</p>
   
   <tr>
     <td>
-        <b><a href="https://www.cs.cmu.edu/~213/" rel="external nofollow noopener" target="_blank">15-213/513 Introduction to Computer Systems</a></b> (Fall 2015)
+        <b>
+            
+                <a href="https://www.cs.cmu.edu/~213/" rel="external nofollow noopener" target="_blank">15-213/513 Introduction to Computer Systems</a>
+            
+        </b>
+             (Fall 2015)
         <br>
         
             
@@ -988,10 +1021,6 @@ referred to as an operating systems class.</p>
         
         <br>
         <br>
-        The Introduction to Computer Systems course provides a programmer's view of how computer systems execute programs, store information, and communicate. It enables students to become more effective programmers, especially in dealing with issues of performance, portability and robustness. It also serves as a foundation for courses on compilers, networks, operating systems, and computer architecture, where a deeper understanding of systems-level issues is required. Topics covered include: machine-level code and its generation by optimizing compilers, performance evaluation and optimization, computer arithmetic, memory organization and management, networking technology and protocols, and supporting concurrent computation.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLQ5cMeVTtiJkUilq92Cw9D6RhAJhPJ_JX" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -999,13 +1028,21 @@ referred to as an operating systems class.</p>
             </div>
         
         
+        <br>
+        The Introduction to Computer Systems course provides a programmer's view of how computer systems execute programs, store information, and communicate. It enables students to become more effective programmers, especially in dealing with issues of performance, portability and robustness. It also serves as a foundation for courses on compilers, networks, operating systems, and computer architecture, where a deeper understanding of systems-level issues is required. Topics covered include: machine-level code and its generation by optimizing compilers, performance evaluation and optimization, computer arithmetic, memory organization and management, networking technology and protocols, and supporting concurrent computation.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://15445.courses.cs.cmu.edu/fall2022/" rel="external nofollow noopener" target="_blank">15-445/645 Database Systems</a></b> (Fall 2022)
+        <b>
+            
+                <a href="https://15445.courses.cs.cmu.edu/fall2022/" rel="external nofollow noopener" target="_blank">15-445/645 Database Systems</a>
+            
+        </b>
+             (Fall 2022)
         <br>
         
             
@@ -1025,10 +1062,6 @@ referred to as an operating systems class.</p>
         
         <br>
         <br>
-        This course is on the design and implementation of database management systems. Topics include data models (relational, document, key/value), storage models (n-ary, decomposition), query languages (SQL, stored procedures), storage architectures (heaps, log-structured), indexing (order preserving trees, hash tables), transaction processing (ACID, concurrency control), recovery (logging, checkpoints), query processing (joins, sorting, aggregation, optimization), and parallel architectures (multi-core, distributed). Case studies on open-source and commercial database systems are used to illustrate these techniques and trade-offs. The course is appropriate for students that are prepared to flex their strong systems programming skills.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLSE8ODhjZXjaKScG3l0nuOiDTTqpfnWFf" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1036,13 +1069,21 @@ referred to as an operating systems class.</p>
             </div>
         
         
+        <br>
+        This course is on the design and implementation of database management systems. Topics include data models (relational, document, key/value), storage models (n-ary, decomposition), query languages (SQL, stored procedures), storage architectures (heaps, log-structured), indexing (order preserving trees, hash tables), transaction processing (ACID, concurrency control), recovery (logging, checkpoints), query processing (joins, sorting, aggregation, optimization), and parallel architectures (multi-core, distributed). Case studies on open-source and commercial database systems are used to illustrate these techniques and trade-offs. The course is appropriate for students that are prepared to flex their strong systems programming skills.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://15721.courses.cs.cmu.edu/spring2018/" rel="external nofollow noopener" target="_blank">15-721 Advanced Database Systems</a></b> (Spring 2018)
+        <b>
+            
+                <a href="https://15721.courses.cs.cmu.edu/spring2018/" rel="external nofollow noopener" target="_blank">15-721 Advanced Database Systems</a>
+            
+        </b>
+             (Spring 2023)
         <br>
         
             
@@ -1062,24 +1103,28 @@ referred to as an operating systems class.</p>
         
         <br>
         <br>
-        This course is a comprehensive study of the internals of modern database management systems. It will cover the core concepts and fundamentals of the components that are used in both high-performance transaction processing systems (OLTP) and large-scale analytical systems (OLAP). The class will stress both efficiency and correctness of the implementation of these ideas. All class projects will be in the context of a real in-memory, multi-core database system. The course is appropriate for graduate students in software systems and for advanced undergraduates with dirty systems programming skills.
-
-    </td>
-    <td>
         
             <div class="embed-container">
-                <iframe src="https://www.youtube.com/embed/videoseries?list=PLSE8ODhjZXjYplQRUlrgQKwIAV3es0U6t" width="700" height="480" frameborder="0" allowfullscreen="true">
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PLSE8ODhjZXjYzlLMbX3cR0sxWnRM7CLFn" width="700" height="480" frameborder="0" allowfullscreen="true">
                 </iframe>
             </div>
         
         
+        <br>
+        This course is a comprehensive study of the internals of modern database management systems. It will cover the core concepts and fundamentals of the components that are used in both high-performance transaction processing systems (OLTP) and large-scale analytical systems (OLAP). The class will stress both efficiency and correctness of the implementation of these ideas. All class projects will be in the context of a real in-memory, multi-core database system. The course is appropriate for graduate students in software systems and for advanced undergraduates with dirty systems programming skills.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://www.cs.cmu.edu/~418/" rel="external nofollow noopener" target="_blank">15-418/618 Parallel Computer Architecture and Programming</a></b> (Spring 2016)
+        <b>
+            
+                <a href="https://www.cs.cmu.edu/~418/" rel="external nofollow noopener" target="_blank">15-418/618 Parallel Computer Architecture and Programming</a>
+            
+        </b>
+             (Spring 2016)
         <br>
         
             
@@ -1102,21 +1147,25 @@ referred to as an operating systems class.</p>
         
         <br>
         <br>
+        
+            <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=f62c2297-de88-4e63-aff2-06641fa25e98" rel="external nofollow noopener" target="_blank">Public Panopto Lecture Videos Link</a>
+        
+        
+        <br>
         From smart phones, to multi-core CPUs and GPUs, to the world's largest supercomputers, parallel processing is ubiquitous in modern computing. The goal of this course is to provide a deep understanding of the fundamental principles and engineering trade-offs involved in designing modern parallel computing systems as well as to teach parallel programming techniques necessary to effectively utilize these machines. Because writing good parallel programs requires an understanding of key machine performance characteristics, this course will cover hardware design and how that affects software design.
 
-    </td>
-    <td>
-        
-            <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=f62c2297-de88-4e63-aff2-06641fa25e98" rel="external nofollow noopener" target="_blank">Public Panopto Link</a>
-        
-        
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://db.cs.cmu.edu/seminar2022/" rel="external nofollow noopener" target="_blank">¡Databases! – A Database Seminar Series</a></b> (Fall 2020)
+        <b>
+            
+                <a href="https://db.cs.cmu.edu/seminar2022/" rel="external nofollow noopener" target="_blank">¡Databases! – A Database Seminar Series</a>
+            
+        </b>
+             (Fall 2020)
         <br>
         
         
@@ -1125,10 +1174,6 @@ referred to as an operating systems class.</p>
         
         <br>
         <br>
-        A weekly seminar series on databases hosted by CMU, streamed on Zoom and open to the public. Each speaker will present the implementation details of their respective systems and examples of the technical challenges they faced when working with real-world customers. <br> <br> It is possible that similar such seminars will be held in the future, check their <a href="https://www.youtube.com/@CMUDatabaseGroup" rel="external nofollow noopener" target="_blank">Youtube channel</a> for the latest updates.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLSE8ODhjZXjZKp-oX_75aBnznulk7nubu" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1136,6 +1181,9 @@ referred to as an operating systems class.</p>
             </div>
         
         
+        <br>
+        A weekly seminar series on databases hosted by CMU, streamed on Zoom and open to the public. Each speaker will present the implementation details of their respective systems and examples of the technical challenges they faced when working with real-world customers. <br> <br> It is possible that similar such seminars will be held in the future, check their <a href="https://www.youtube.com/@CMUDatabaseGroup" rel="external nofollow noopener" target="_blank">Youtube channel</a> for the latest updates.
+
     </td>
 </tr>
 
@@ -1154,7 +1202,6 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
     <thead>
         <tr>
             <th>Course Name</th>
-            <th>Lecture Videos</th>
         </tr>
     </thead>
 
@@ -1163,7 +1210,12 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
   
   <tr>
     <td>
-        <b><a href="https://www.cs251.com/" rel="external nofollow noopener" target="_blank">15-251 Great Ideas in Theoretical Computer Science</a></b> (Spring 2016)
+        <b>
+            
+                <a href="https://www.cs251.com/" rel="external nofollow noopener" target="_blank">15-251 Great Ideas in Theoretical Computer Science</a>
+            
+        </b>
+             (Spring 2016)
         <br>
         
             
@@ -1183,10 +1235,6 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
         
         <br>
         <br>
-        This course is about how to use theoretical ideas to formulate and solve problems in computer science. It integrates mathematical material with general problem solving techniques and computer science applications. Examples are drawn from algorithms, complexity theory, game theory, probability theory, graph theory, automata theory, algebra, cryptography, and combinatorics. Assignments involve both mathematical proofs and programming. 
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLm3J0oaFux3aafQm568blS9blxtA_EWQv" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1194,13 +1242,21 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
             </div>
         
         
+        <br>
+        This course is about how to use theoretical ideas to formulate and solve problems in computer science. It integrates mathematical material with general problem solving techniques and computer science applications. Examples are drawn from algorithms, complexity theory, game theory, probability theory, graph theory, automata theory, algebra, cryptography, and combinatorics. Assignments involve both mathematical proofs and programming. 
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://www.cs.cmu.edu/~odonnell/15455-s17/" rel="external nofollow noopener" target="_blank">15-455 Undergraduate Complexity Theory</a></b> (Spring 2017)
+        <b>
+            
+                <a href="https://www.cs.cmu.edu/~odonnell/15455-s17/" rel="external nofollow noopener" target="_blank">15-455 Undergraduate Complexity Theory</a>
+            
+        </b>
+             (Spring 2017)
         <br>
         
             
@@ -1220,10 +1276,6 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
         
         <br>
         <br>
-        The course will overlap significantly with "Part 3: Complexity" of Sipser's textbook. Topics will include models of computation (Turing Machines, circuits, ...), time and space complexity; hierarchy theorems by diagonalization; P vs. NP; theorems of Ladner, Mahaney, Savitch, Immerman-Szelepcsényi; randomized computation; and, the polynomial-time hierarchy. We will also cover some non-traditional topics of current research interest, such as the Exponential Time Hypothesis, Feige's Hypothesis, and fine-grained complexity.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLm3J0oaFux3YL5vLXpzOyJiLtqLp6dCW2" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1231,13 +1283,21 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
             </div>
         
         
+        <br>
+        The course will overlap significantly with "Part 3: Complexity" of Sipser's textbook. Topics will include models of computation (Turing Machines, circuits, ...), time and space complexity; hierarchy theorems by diagonalization; P vs. NP; theorems of Ladner, Mahaney, Savitch, Immerman-Szelepcsényi; randomized computation; and, the polynomial-time hierarchy. We will also cover some non-traditional topics of current research interest, such as the Exponential Time Hypothesis, Feige's Hypothesis, and fine-grained complexity.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://www.cs.cmu.edu/~odonnell/quantum18/" rel="external nofollow noopener" target="_blank">15-459 Quantum Computation</a></b> (Fall 2018)
+        <b>
+            
+                <a href="https://www.cs.cmu.edu/~odonnell/quantum18/" rel="external nofollow noopener" target="_blank">15-459 Quantum Computation</a>
+            
+        </b>
+             (Fall 2018)
         <br>
         
             
@@ -1257,10 +1317,6 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
         
         <br>
         <br>
-        This course will be an introduction to quantum computation and quantum information theory, from the perspective of theoretical computer science. Topics include: Qubit operations, multi-qubit systems, p=artial measurements, entanglement, quantum teleportation and quantum money, quantum circuit model, Deutsch-Jozsa and Simons algorithm, number theory and Shors Algorithm, Grovers Algorithm, quantum complexity theory, limitations and current practical developments.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLm3J0oaFux3YL5qLskC6xQ24JpMwOAeJz" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1268,13 +1324,59 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
             </div>
         
         
+        <br>
+        This course will be an introduction to quantum computation and quantum information theory, from the perspective of theoretical computer science. Topics include: Qubit operations, multi-qubit systems, p=artial measurements, entanglement, quantum teleportation and quantum money, quantum circuit model, Deutsch-Jozsa and Simons algorithm, number theory and Shors Algorithm, Grovers Algorithm, quantum complexity theory, limitations and current practical developments.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="http://www.cs.cmu.edu/~odonnell/complexity17/" rel="external nofollow noopener" target="_blank">15-855 Graduate Complexity Theory</a></b> (Fall 2017)
+        <b>
+            
+                <a href="http://www.cs.cmu.edu/~15850/" rel="external nofollow noopener" target="_blank">15-850 Advanced Algorithms</a>
+            
+        </b>
+             (Spring 2023)
+        <br>
+        
+            
+                Instructor: 
+            
+            
+                <b><a href="http://www.cs.cmu.edu/~anupamg/" rel="external nofollow noopener" target="_blank">Anupam Gupta</a></b>
+                
+            
+            <br>
+        
+        
+        
+            <span class="badge rounded-pill graduate"> </span>
+        
+            <span class="badge rounded-pill theory"> </span>
+        
+        <br>
+        <br>
+        
+            <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=%2253c58248-7fd4-4f71-8774-af85013a570a%22" rel="external nofollow noopener" target="_blank">Public Panopto Lecture Videos Link</a>
+        
+        
+        <br>
+        An intensive graduate course on the design and analysis of algorithms. This course is primarily aimed at graduate and advanced undergraduate students interested in doing research in theoretical computer science. It is more specialized and in-depth than the graduate level Algorithms in the Real World course (15-750), and the undergraduate/masters' level Algorithms course (15-451/651). We will cover advanced algorithmic ideas (some classical, some very recent), and the theory behind it (theorems, proofs). For topics that were covered in 451/750, the goal is to cover advanced content, proofs, and new techniques.
+
+    </td>
+</tr>
+
+  
+  <tr>
+    <td>
+        <b>
+            
+                <a href="http://www.cs.cmu.edu/~odonnell/complexity17/" rel="external nofollow noopener" target="_blank">15-855 Graduate Complexity Theory</a>
+            
+        </b>
+             (Fall 2017)
         <br>
         
             
@@ -1301,10 +1403,6 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
         
         <br>
         <br>
-        The overarching goal is for students to learn the foundational aspects of structural complexity theory developed in the period 1970–2010. Students should learn the foundational relationships between time, space, and nondeterminism in computational complexity. Students will learn about circuit classes, how they relate to uniform models of computation, tools for proving circuit lower bounds, and also reasons why proving lower bounds are difficult. Students will be exposed to the pervasive role of randomness in complexity theory, even in the proof of purely deterministic results. By the end of the course, students will be able to study and contribute to cutting-edge research in computational complexity theory
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLm3J0oaFux3b8Gg1DdaJOzYNsaXYLAOKH" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1312,13 +1410,21 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
             </div>
         
         
+        <br>
+        The overarching goal is for students to learn the foundational aspects of structural complexity theory developed in the period 1970–2010. Students should learn the foundational relationships between time, space, and nondeterminism in computational complexity. Students will learn about circuit classes, how they relate to uniform models of computation, tools for proving circuit lower bounds, and also reasons why proving lower bounds are difficult. Students will be exposed to the pervasive role of randomness in complexity theory, even in the proof of purely deterministic results. By the end of the course, students will be able to study and contribute to cutting-edge research in computational complexity theory
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://www.cs.cmu.edu/~odonnell/toolkit20" rel="external nofollow noopener" target="_blank">15-751 Theory Toolkit</a></b> (Spring 2020)
+        <b>
+            
+                <a href="https://www.cs.cmu.edu/~odonnell/toolkit20" rel="external nofollow noopener" target="_blank">15-751 Theory Toolkit</a>
+            
+        </b>
+             (Spring 2020)
         <br>
         
             
@@ -1338,10 +1444,6 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
         
         <br>
         <br>
-        The goal of this class is to provide students with the tools needed to be able to read and participate in contemporary research in theoretical computer science. The main focus will be on learning fundamental CS Theory concepts and mathematical tools. Students should learn to apply basic techniques in asymptotic and probabilistic analysis. They should gain familiarity and comfort with a wide variety of tools in theoretical computer science, including analysis of Boolean functions, error-correcting codes, pseudorandomness, graph expansion, information theory, and communication complexity. They will learn applications of linear programming and semidefinite programming in constraint satisfaction problems, with a view from proof complexity. They will also be exposed to different computational intractability assumptions, and learn how they are applied.  A secondary focus of the course will be developing good practices in mathematical writing and good research habits. A goal for the students will be to improve their facility with LaTeX and their ability to write clear correct proofs.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLm3J0oaFux3ZYpFLwwrlv_EHH9wtH6pnX" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1349,14 +1451,22 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
             </div>
         
         
+        <br>
+        The goal of this class is to provide students with the tools needed to be able to read and participate in contemporary research in theoretical computer science. The main focus will be on learning fundamental CS Theory concepts and mathematical tools. Students should learn to apply basic techniques in asymptotic and probabilistic analysis. They should gain familiarity and comfort with a wide variety of tools in theoretical computer science, including analysis of Boolean functions, error-correcting codes, pseudorandomness, graph expansion, information theory, and communication complexity. They will learn applications of linear programming and semidefinite programming in constraint satisfaction problems, with a view from proof complexity. They will also be exposed to different computational intractability assumptions, and learn how they are applied.  A secondary focus of the course will be developing good practices in mathematical writing and good research habits. A goal for the students will be to improve their facility with LaTeX and their ability to write clear correct proofs.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="http://www.cs.cmu.edu/~praveshk/sosseminar/sosseminar.html" rel="external nofollow noopener" target="_blank">15-859GG Proofs vs Algorithms: The Sum-of-Squares Method
-</a></b> (Fall 2020)
+        <b>
+            
+                <a href="http://www.cs.cmu.edu/~praveshk/sosseminar/sosseminar.html" rel="external nofollow noopener" target="_blank">15-859GG Proofs vs Algorithms: The Sum-of-Squares Method
+</a>
+            
+        </b>
+             (Fall 2020)
         <br>
         
             
@@ -1376,10 +1486,6 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
         
         <br>
         <br>
-        This seminar examines the sum-of-squares method with an emphasis on recent developments and open directions for research. We will cover use of this method in designing algorithms for both worst-case optimization problems such as Max-Cut and Coloring and average-case problems arising in machine learning and algorithmic statistics such as learning mixtures of Gaussians and robust statistics. We will also cover techniques for proving lower-bounds on this method and its connection to restricted algorithmic frameworks such as Statistical Query Model, the Low-Degree Likelihood Ratio Method and Extended Formulations.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PL3NB_Sd9CrX-6CeApf12demgpe2PO4k8c" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1387,13 +1493,21 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
             </div>
         
         
+        <br>
+        This seminar examines the sum-of-squares method with an emphasis on recent developments and open directions for research. We will cover use of this method in designing algorithms for both worst-case optimization problems such as Max-Cut and Coloring and average-case problems arising in machine learning and algorithmic statistics such as learning mixtures of Gaussians and robust statistics. We will also cover techniques for proving lower-bounds on this method and its connection to restricted algorithmic frameworks such as Statistical Query Model, the Low-Degree Likelihood Ratio Method and Extended Formulations.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://www.cs.cmu.edu/~odonnell/aobf12/" rel="external nofollow noopener" target="_blank">15-859S Analysis of Boolean Functions</a></b> (Fall 2012)
+        <b>
+            
+                <a href="https://www.cs.cmu.edu/~odonnell/aobf12/" rel="external nofollow noopener" target="_blank">15-859S Analysis of Boolean Functions</a>
+            
+        </b>
+             (Fall 2012)
         <br>
         
             
@@ -1413,10 +1527,6 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
         
         <br>
         <br>
-        Boolean functions are perhaps the most basic object of study in theoretical computer science. They also arise in several other areas of mathematics, including combinatorics (graph theory, extremal combinatorics, additive combinatorics), metric and Banach spaces, statistical physics, and mathematical social choice. In this course we will study Boolean functions via their Fourier transform and other analytic methods. Highlights will include applications in property testing, social choice, learning theory, circuit complexity, pseudorandomness, constraint satisfaction problems, additive combinatorics, hypercontractivity, Gaussian geometry, random graph theory, and probabilistic invariance principles.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLm3J0oaFux3YypJNaF6sRAf2zC1QzMuTA" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1424,13 +1534,21 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
             </div>
         
         
+        <br>
+        Boolean functions are perhaps the most basic object of study in theoretical computer science. They also arise in several other areas of mathematics, including combinatorics (graph theory, extremal combinatorics, additive combinatorics), metric and Banach spaces, statistical physics, and mathematical social choice. In this course we will study Boolean functions via their Fourier transform and other analytic methods. Highlights will include applications in property testing, social choice, learning theory, circuit complexity, pseudorandomness, constraint satisfaction problems, additive combinatorics, hypercontractivity, Gaussian geometry, random graph theory, and probabilistic invariance principles.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://www.cs.cmu.edu/~odonnell/aobf12/" rel="external nofollow noopener" target="_blank">Theory Lunch</a></b> (Ongoing)
+        <b>
+            
+                <a href="https://www.cs.cmu.edu/~odonnell/aobf12/" rel="external nofollow noopener" target="_blank">Theory Lunch</a>
+            
+        </b>
+             (Ongoing)
         <br>
         
         
@@ -1439,14 +1557,13 @@ if you are new to CS theory. All subsequent theory classes assumes knowledge fro
         
         <br>
         <br>
-        Theory Lunch is an informal seminar run by the  <a href="http://theory.cs.cmu.edu/" rel="external nofollow noopener" target="_blank">Algorithms and Complexity</a> Theory Group at CMU.  The meetings have various forms: talks on recently completed results, joint reading of an interesting paper, presentations of current work in progress, exciting open problems, etc.
-
-    </td>
-    <td>
         
             <a href="https://www.youtube.com/channel/UCWFp4UWNiOv71j0sPbdNiqw" rel="external nofollow noopener" target="_blank">Link to Youtube Channel</a>
         
         
+        <br>
+        Theory Lunch is an informal seminar run by the  <a href="http://theory.cs.cmu.edu/" rel="external nofollow noopener" target="_blank">Algorithms and Complexity</a> Theory Group at CMU.  The meetings have various forms: talks on recently completed results, joint reading of an interesting paper, presentations of current work in progress, exciting open problems, etc.
+
     </td>
 </tr>
 
@@ -1479,7 +1596,6 @@ available lectures.</p>
     <thead>
         <tr>
             <th>Course Name</th>
-            <th>Lecture Videos</th>
         </tr>
     </thead>
 
@@ -1488,7 +1604,12 @@ available lectures.</p>
   
   <tr>
     <td>
-        <b><a href="https://www.andrew.cmu.edu/course/15-312" rel="external nofollow noopener" target="_blank">15-312 Foundations of Programming Languages</a></b> (OPLSS Summer 2018)
+        <b>
+            
+                <a href="https://www.andrew.cmu.edu/course/15-312" rel="external nofollow noopener" target="_blank">15-312 Foundations of Programming Languages</a>
+            
+        </b>
+             (OPLSS Summer 2018)
         <br>
         
             
@@ -1508,10 +1629,6 @@ available lectures.</p>
         
         <br>
         <br>
-        This course discusses in depth many of the concepts underlying the design, definition, implementation, and use of modern programming languages. Formal approaches to defining the syntax and semantics are used to describe the fundamental concepts underlying programming languages. A variety of programming paradigms are covered such as imperative, functional, logic, and concurrent programming. In addition to the formal studies, experience with programming in the languages is used to illustrate how different design goals can lead to radically different languages and models of computation.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PL0DsGHMPLUWVfdFCw7DrrNtO3w_AYrV0W" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1520,13 +1637,21 @@ available lectures.</p>
         
         Note that videos in the playlist are from a similar set of lectures given at OPLSS, instead of CMU due to the absence of recordings.
 
+        <br>
+        This course discusses in depth many of the concepts underlying the design, definition, implementation, and use of modern programming languages. Formal approaches to defining the syntax and semantics are used to describe the fundamental concepts underlying programming languages. A variety of programming paradigms are covered such as imperative, functional, logic, and concurrent programming. In addition to the formal studies, experience with programming in the languages is used to illustrate how different design goals can lead to radically different languages and models of computation.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="http://www.cs.cmu.edu/~rwh/courses/hott/" rel="external nofollow noopener" target="_blank">15-819 Homotopy Type Theory</a></b> (Fall 2012)
+        <b>
+            
+                <a href="http://www.cs.cmu.edu/~rwh/courses/hott/" rel="external nofollow noopener" target="_blank">15-819 Homotopy Type Theory</a>
+            
+        </b>
+             (Fall 2012)
         <br>
         
             
@@ -1546,10 +1671,6 @@ available lectures.</p>
         
         <br>
         <br>
-        This is a graduate research seminar on Homotopy Type Theory (HoTT), a recent enrichment of Intuitionistic Type Theory (ITT) to include "higher-dimensional" types. The dimensionality of a type refers to the structure of its paths, the constructive witnesses to the equality of pairs of elements of a type, which themselves form a type, the identity type. In general a type is infinite dimensional in the sense that it exhibits non-trivial structure at all dimensions: it has elements, paths between elements, paths between paths, and so on to all finite levels. Moreover, the paths at each level exhibit the algebraic structure of a (higher) groupoid, meaning that there is always the "null path" witnessing reflexivity, the "inverse" path witnessing symmetry, and the "concatenation" of paths witnessing transitivity such that group-like laws hold "up to higher homotopy". Specifically, there are higher-dimensional paths witnessing the associative, unital, and inverse laws for these operations. Altogether this means that a type is a weak ∞-groupoid.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PL1-2D_rCQBarjdqnM21sOsx09CtFSVO6Z" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1557,43 +1678,8 @@ available lectures.</p>
             </div>
         
         
-    </td>
-</tr>
-
-  
-  <tr>
-    <td>
-        <b><a href="https://www.cs.cmu.edu/~janh/courses/ra20/" rel="external nofollow noopener" target="_blank">15-819 Resource Aware Programming Languages</a></b> (OPLSS Summer 2019)
         <br>
-        
-            
-                Instructor: 
-            
-            
-                <b><a href="https://www.cs.cmu.edu/~janh" rel="external nofollow noopener" target="_blank">Jan Hoffmann</a></b>
-                
-            
-            <br>
-        
-        
-        
-            <span class="badge rounded-pill graduate"> </span>
-        
-            <span class="badge rounded-pill pl-theory"> </span>
-        
-        <br>
-        <br>
-        Resource usage—the amount of time, memory, and energy a program requires for its execution—is one of the central subjects of computer science. Nevertheless, resource usage often does not play a central role in classical programming-language concepts such as operational semantics, type systems, and program logics. The first part of the course revisits these concepts to model and analyze resource usage of programs in a compositional and mathematically-precise way. The emphasis is on practical, type-based techniques that automatically inform programmers about the resource usage of their code. <br> <br> The second part of the course studies probabilistic programming languages. Such languages describe probability distributions and can be used to precisely describe and analyze probabilistic models. Probabilistic languages are for instance used in statistical modeling and to facilitate probabilistic inference. The focus of the course is on the semantics and analysis of probabilistic languages. Interestingly, the techniques from the first part can be applied to automatically analyze the expected cost and results of probabilistic programs. <br> <br> The third part of the course, presents an application of automatic resource bound analysis in Nomos, a programming language for implementing digital contracts. Nomos is based on session types, which are a focus in this part. Moreover, blockchains and smart contracts are briefly covered to motivate the need for resource bounds.
-
-    </td>
-    <td>
-        
-            <div class="embed-container">
-                <iframe src="https://www.youtube.com/embed/videoseries?list=PL0DsGHMPLUWWnUukhh5xhZ8_u-QzRQzrO" width="700" height="480" frameborder="0" allowfullscreen="true">
-                </iframe>
-            </div>
-        
-        Note that videos in the playlist are from a similar set of lectures given at OPLSS, instead of CMU due to the absence of recordings.
+        This is a graduate research seminar on Homotopy Type Theory (HoTT), a recent enrichment of Intuitionistic Type Theory (ITT) to include "higher-dimensional" types. The dimensionality of a type refers to the structure of its paths, the constructive witnesses to the equality of pairs of elements of a type, which themselves form a type, the identity type. In general a type is infinite dimensional in the sense that it exhibits non-trivial structure at all dimensions: it has elements, paths between elements, paths between paths, and so on to all finite levels. Moreover, the paths at each level exhibit the algebraic structure of a (higher) groupoid, meaning that there is always the "null path" witnessing reflexivity, the "inverse" path witnessing symmetry, and the "concatenation" of paths witnessing transitivity such that group-like laws hold "up to higher homotopy". Specifically, there are higher-dimensional paths witnessing the associative, unital, and inverse laws for these operations. Altogether this means that a type is a weak ∞-groupoid.
 
     </td>
 </tr>
@@ -1601,45 +1687,12 @@ available lectures.</p>
   
   <tr>
     <td>
-        <b><a href="http://www.cs.cmu.edu/~rwh/courses/chtt/" rel="external nofollow noopener" target="_blank">15-819 Computational Type Theory</a></b> (OPLSS Summer 2018)
-        <br>
-        
+        <b>
             
-                Instructor: 
+                <a href="http://www.cs.cmu.edu/~fp/courses/15816-f16/" rel="external nofollow noopener" target="_blank">15-816 Advanced Topics in Logic: Substructural Logics</a>
             
-            
-                <b><a href="http://www.cs.cmu.edu/~rwh/" rel="external nofollow noopener" target="_blank">Robert Harper</a></b>
-                
-            
-            <br>
-        
-        
-        
-            <span class="badge rounded-pill graduate"> </span>
-        
-            <span class="badge rounded-pill pl-theory"> </span>
-        
-        <br>
-        <br>
-        Type theory may be presented semantically, with types specifying the behavior of programs, or axiomatically, as a formal system admitting many interpretations. From a computer science perspective, the computational semantics is of the essence, and the role of formalisms is pragmatic, the means for writing programs and building proof checkers. A central tool in either case is the method of logical relations, or Tait's method. Semantically, a wide range of typing constructs can be expressed using logical relations. Formally, logical relations are fundamental to the study of properties of languages, such as decidability of typing or termination properties. <br> <br> In this course we will study a range of typing concepts using these methods, from simple typing concepts such as functions and data structures found in many programming languages, to polymorphic type theory, which accounts for abstract types, and to dependent type theory, which accounts for mathematical proofs and the theory of program modules. Specific topics will vary according to the needs and interests of the students.
-
-    </td>
-    <td>
-        
-            <div class="embed-container">
-                <iframe src="https://www.youtube.com/embed/videoseries?list=PL0DsGHMPLUWXXA8RHzVZ2B5E5hP8CD15Z" width="700" height="480" frameborder="0" allowfullscreen="true">
-                </iframe>
-            </div>
-        
-        Note that videos in the playlist are from a similar set of lectures given at OPLSS, instead of CMU due to the absence of recordings.
-
-    </td>
-</tr>
-
-  
-  <tr>
-    <td>
-        <b><a href="https://www.cs.cmu.edu/~fp/courses/15816-f16/" rel="external nofollow noopener" target="_blank">15-816 Substructural Logics</a></b> (OPLSS Summer 2017)
+        </b>
+             (Spring 2012)
         <br>
         
             
@@ -1659,17 +1712,96 @@ available lectures.</p>
         
         <br>
         <br>
+        
+            <a href="https://scs.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx#folderID=17bf4c63-e606-4029-b508-f94c7d121ca0" rel="external nofollow noopener" target="_blank">Public Panopto Lecture Videos Link</a>
+        
+        
+        <br>
         This graduate course provides an introduction to substructural logics, such as linear, ordered, affine, bunched, or separation logic, with an emphasis on their applications in computer science. This includes the design and theory of programming constructs for concurrent message-passing computation and techniques for specifying and reasoning about programming languages in the form of substructural operational semantics.
 
     </td>
+</tr>
+
+  
+  <tr>
     <td>
+        <b>
+            
+                <a href="https://www.cs.cmu.edu/~janh/courses/ra20/" rel="external nofollow noopener" target="_blank">15-819 Resource Aware Programming Languages</a>
+            
+        </b>
+             (OPLSS Summer 2019)
+        <br>
+        
+            
+                Instructor: 
+            
+            
+                <b><a href="https://www.cs.cmu.edu/~janh" rel="external nofollow noopener" target="_blank">Jan Hoffmann</a></b>
+                
+            
+            <br>
+        
+        
+        
+            <span class="badge rounded-pill graduate"> </span>
+        
+            <span class="badge rounded-pill pl-theory"> </span>
+        
+        <br>
+        <br>
         
             <div class="embed-container">
-                <iframe src="https://www.youtube.com/embed/videoseries?list=PL0DsGHMPLUWWFF_6823_bNEGf5uObH4AT" width="700" height="480" frameborder="0" allowfullscreen="true">
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PL0DsGHMPLUWWnUukhh5xhZ8_u-QzRQzrO" width="700" height="480" frameborder="0" allowfullscreen="true">
                 </iframe>
             </div>
         
         Note that videos in the playlist are from a similar set of lectures given at OPLSS, instead of CMU due to the absence of recordings.
+
+        <br>
+        Resource usage—the amount of time, memory, and energy a program requires for its execution—is one of the central subjects of computer science. Nevertheless, resource usage often does not play a central role in classical programming-language concepts such as operational semantics, type systems, and program logics. The first part of the course revisits these concepts to model and analyze resource usage of programs in a compositional and mathematically-precise way. The emphasis is on practical, type-based techniques that automatically inform programmers about the resource usage of their code. <br> <br> The second part of the course studies probabilistic programming languages. Such languages describe probability distributions and can be used to precisely describe and analyze probabilistic models. Probabilistic languages are for instance used in statistical modeling and to facilitate probabilistic inference. The focus of the course is on the semantics and analysis of probabilistic languages. Interestingly, the techniques from the first part can be applied to automatically analyze the expected cost and results of probabilistic programs. <br> <br> The third part of the course, presents an application of automatic resource bound analysis in Nomos, a programming language for implementing digital contracts. Nomos is based on session types, which are a focus in this part. Moreover, blockchains and smart contracts are briefly covered to motivate the need for resource bounds.
+
+    </td>
+</tr>
+
+  
+  <tr>
+    <td>
+        <b>
+            
+                <a href="http://www.cs.cmu.edu/~rwh/courses/chtt/" rel="external nofollow noopener" target="_blank">15-819 Computational Type Theory</a>
+            
+        </b>
+             (OPLSS Summer 2018)
+        <br>
+        
+            
+                Instructor: 
+            
+            
+                <b><a href="http://www.cs.cmu.edu/~rwh/" rel="external nofollow noopener" target="_blank">Robert Harper</a></b>
+                
+            
+            <br>
+        
+        
+        
+            <span class="badge rounded-pill graduate"> </span>
+        
+            <span class="badge rounded-pill pl-theory"> </span>
+        
+        <br>
+        <br>
+        
+            <div class="embed-container">
+                <iframe src="https://www.youtube.com/embed/videoseries?list=PL0DsGHMPLUWXXA8RHzVZ2B5E5hP8CD15Z" width="700" height="480" frameborder="0" allowfullscreen="true">
+                </iframe>
+            </div>
+        
+        Note that videos in the playlist are from a similar set of lectures given at OPLSS, instead of CMU due to the absence of recordings.
+
+        <br>
+        Type theory may be presented semantically, with types specifying the behavior of programs, or axiomatically, as a formal system admitting many interpretations. From a computer science perspective, the computational semantics is of the essence, and the role of formalisms is pragmatic, the means for writing programs and building proof checkers. A central tool in either case is the method of logical relations, or Tait's method. Semantically, a wide range of typing constructs can be expressed using logical relations. Formally, logical relations are fundamental to the study of properties of languages, such as decidability of typing or termination properties. <br> <br> In this course we will study a range of typing concepts using these methods, from simple typing concepts such as functions and data structures found in many programming languages, to polymorphic type theory, which accounts for abstract types, and to dependent type theory, which accounts for mathematical proofs and the theory of program modules. Specific topics will vary according to the needs and interests of the students.
 
     </td>
 </tr>
@@ -1684,7 +1816,6 @@ available lectures.</p>
     <thead>
         <tr>
             <th>Course Name</th>
-            <th>Lecture Videos</th>
         </tr>
     </thead>
 
@@ -1693,7 +1824,12 @@ available lectures.</p>
   
   <tr>
     <td>
-        <b><a href="http://15462.courses.cs.cmu.edu" rel="external nofollow noopener" target="_blank">15-462/662 Computer Graphics</a></b> (Fall 2020)
+        <b>
+            
+                <a href="http://15462.courses.cs.cmu.edu" rel="external nofollow noopener" target="_blank">15-462/662 Computer Graphics</a>
+            
+        </b>
+             (Fall 2020)
         <br>
         
             
@@ -1713,14 +1849,13 @@ available lectures.</p>
         
         <br>
         <br>
-        This course provides a comprehensive introduction to computer graphics. It focuses on fundamental concepts and techniques, and their cross-cutting relationship to multiple problem domains in graphics (rendering, animation, geometry, imaging). Topics include: sampling, aliasing, interpolation, rasterization, geometric transformations, parameterization, visibility, compositing, filtering, convolution, curves &amp; surfaces, geometric data structures, subdivision, meshing, spatial hierarchies, ray tracing, radiometry, reflectance, light fields, geometric optics, Monte Carlo rendering, importance sampling, camera models, high-performance ray tracing, differential equations, time integration, numerical differentiation, physically-based animation, optimization, numerical linear algebra, inverse kinematics, Fourier methods, data fitting, example-based synthesis
-
-    </td>
-    <td>
         
-        For whatever reason I'm unable to embed this playlist directly, so here's a direct link:  <a href="https://www.youtube.com/playlist?list=PL9_jI1bdZmz2emSh0UQ5iOdT2xRHFHL7E" rel="external nofollow noopener" target="_blank">
+        For whatever reason embedding this playlist directly results in an error, so here's a direct link:  <a href="https://www.youtube.com/playlist?list=PL9_jI1bdZmz2emSh0UQ5iOdT2xRHFHL7E" rel="external nofollow noopener" target="_blank">
   https://www.youtube.com/playlist?list=PL9_jI1bdZmz2emSh0UQ5iOdT2xRHFHL7E
 </a>
+
+        <br>
+        This course provides a comprehensive introduction to computer graphics. It focuses on fundamental concepts and techniques, and their cross-cutting relationship to multiple problem domains in graphics (rendering, animation, geometry, imaging). Topics include: sampling, aliasing, interpolation, rasterization, geometric transformations, parameterization, visibility, compositing, filtering, convolution, curves &amp; surfaces, geometric data structures, subdivision, meshing, spatial hierarchies, ray tracing, radiometry, reflectance, light fields, geometric optics, Monte Carlo rendering, importance sampling, camera models, high-performance ray tracing, differential equations, time integration, numerical differentiation, physically-based animation, optimization, numerical linear algebra, inverse kinematics, Fourier methods, data fitting, example-based synthesis
 
     </td>
 </tr>
@@ -1728,7 +1863,12 @@ available lectures.</p>
   
   <tr>
     <td>
-        <b><a href="https://brickisland.net/DDGSpring2022/" rel="external nofollow noopener" target="_blank">15-458/858 Discrete Differential Geometry</a></b> (Spring 2021)
+        <b>
+            
+                <a href="https://brickisland.net/DDGSpring2022/" rel="external nofollow noopener" target="_blank">15-458/858 Discrete Differential Geometry</a>
+            
+        </b>
+             (Spring 2021)
         <br>
         
             
@@ -1748,10 +1888,6 @@ available lectures.</p>
         
         <br>
         <br>
-        This course focuses on three-dimensional geometry processing, while simultaneously providing a first course in traditional differential geometry. Our main goal is to show how fundamental geometric concepts (like curvature) can be understood from complementary computational and mathematical points of view. This dual perspective enriches understanding on both sides, and leads to the development of practical algorithms for working with real-world geometric data. Along the way we will revisit important ideas from calculus and linear algebra, putting a strong emphasis on intuitive, visual understanding that complements the more traditional formal, algebraic treatment. The course provides essential mathematical background as well as a large array of real-world examples and applications. It also provides a short survey of recent developments in digital geometry processing and discrete differential geometry. Topics include: curves and surfaces, curvature, connections and parallel transport, exterior algebra, exterior calculus, Stokes’ theorem, simplicial homology, de Rham cohomology, Helmholtz-Hodge decomposition, conformal mapping, finite element methods, and numerical linear algebra. Applications include: approximation of curvature, curve and surface smoothing, surface parameterization, vector field design, and computation of geodesic distance.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PL9_jI1bdZmz0hIrNCMQW1YmZysAiIYSSS" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1759,6 +1895,9 @@ available lectures.</p>
             </div>
         
         
+        <br>
+        This course focuses on three-dimensional geometry processing, while simultaneously providing a first course in traditional differential geometry. Our main goal is to show how fundamental geometric concepts (like curvature) can be understood from complementary computational and mathematical points of view. This dual perspective enriches understanding on both sides, and leads to the development of practical algorithms for working with real-world geometric data. Along the way we will revisit important ideas from calculus and linear algebra, putting a strong emphasis on intuitive, visual understanding that complements the more traditional formal, algebraic treatment. The course provides essential mathematical background as well as a large array of real-world examples and applications. It also provides a short survey of recent developments in digital geometry processing and discrete differential geometry. Topics include: curves and surfaces, curvature, connections and parallel transport, exterior algebra, exterior calculus, Stokes’ theorem, simplicial homology, de Rham cohomology, Helmholtz-Hodge decomposition, conformal mapping, finite element methods, and numerical linear algebra. Applications include: approximation of curvature, curve and surface smoothing, surface parameterization, vector field design, and computation of geodesic distance.
+
     </td>
 </tr>
 
@@ -1772,7 +1911,6 @@ available lectures.</p>
     <thead>
         <tr>
             <th>Course Name</th>
-            <th>Lecture Videos</th>
         </tr>
     </thead>
 
@@ -1781,7 +1919,12 @@ available lectures.</p>
   
   <tr>
     <td>
-        <b><a href="https://github.com/dynamics-simulation-16-715" rel="external nofollow noopener" target="_blank">16-715 Advanced Robot Dynamics and Simulation</a></b> (Fall 2022)
+        <b>
+            
+                <a href="https://github.com/dynamics-simulation-16-715" rel="external nofollow noopener" target="_blank">16-715 Advanced Robot Dynamics and Simulation</a>
+            
+        </b>
+             (Fall 2022)
         <br>
         
             
@@ -1801,10 +1944,6 @@ available lectures.</p>
         
         <br>
         <br>
-        This course explores the fundamental mathematics behind modeling the physics of robots, as well as state-of-the-art algorithms for robot simulation. We will review classical topics like Lagrangian mechanics and Hamilton’s Principle of Least Action, as well as modern computational methods like discrete mechanics and fast linear-time algorithms for dynamics simulation. A particular focus of the course will be rigorous treatments of 3D rotations and non-smooth contact interactions (impacts and friction) that are so prevalent in robotics applications. We will use numerous case studies to explore these topics, including quadrotors, fixed-wing aircraft, wheeled vehicles, quadrupeds, humanoids, and manipulators. Homework assignments will focus on practical implementation of algorithms and a course project will encourage students to apply simulation methods to their own research.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLZnJoM76RM6ItAfZIxJYNKdaR_BobleLY" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1812,13 +1951,21 @@ available lectures.</p>
             </div>
         
         
+        <br>
+        This course explores the fundamental mathematics behind modeling the physics of robots, as well as state-of-the-art algorithms for robot simulation. We will review classical topics like Lagrangian mechanics and Hamilton’s Principle of Least Action, as well as modern computational methods like discrete mechanics and fast linear-time algorithms for dynamics simulation. A particular focus of the course will be rigorous treatments of 3D rotations and non-smooth contact interactions (impacts and friction) that are so prevalent in robotics applications. We will use numerous case studies to explore these topics, including quadrotors, fixed-wing aircraft, wheeled vehicles, quadrupeds, humanoids, and manipulators. Homework assignments will focus on practical implementation of algorithms and a course project will encourage students to apply simulation methods to their own research.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://github.com/Optimal-Control-16-745" rel="external nofollow noopener" target="_blank">16-745 Optimal Control and Reinforcement Learning</a></b> (Spring 2022)
+        <b>
+            
+                <a href="https://github.com/Optimal-Control-16-745" rel="external nofollow noopener" target="_blank">16-745 Optimal Control and Reinforcement Learning</a>
+            
+        </b>
+             (Spring 2022)
         <br>
         
             
@@ -1838,10 +1985,6 @@ available lectures.</p>
         
         <br>
         <br>
-        This is a course about how to make robots move through and interact with their environment with speed, efficiency, and robustness. We will survey a broad range of topics from nonlinear dynamics, linear systems theory, classical optimal control, numerical optimization, state estimation, system identification, and reinforcement learning. The goal is to provide students with hands-on experience applying each of these ideas to a variety of robotic systems so that they can use them in their own research.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLZnJoM76RM6Iaf59ICcU9-DzztGZvK_52" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1849,13 +1992,21 @@ available lectures.</p>
             </div>
         
         
+        <br>
+        This is a course about how to make robots move through and interact with their environment with speed, efficiency, and robustness. We will survey a broad range of topics from nonlinear dynamics, linear systems theory, classical optimal control, numerical optimization, state estimation, system identification, and reinforcement learning. The goal is to provide students with hands-on experience applying each of these ideas to a variety of robotic systems so that they can use them in their own research.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://www.ri.cmu.edu/ri-seminar-series/" rel="external nofollow noopener" target="_blank">Robotics Institute Seminar Series</a></b> (Ongoing)
+        <b>
+            
+                <a href="https://www.ri.cmu.edu/ri-seminar-series/" rel="external nofollow noopener" target="_blank">Robotics Institute Seminar Series</a>
+            
+        </b>
+             (Ongoing)
         <br>
         
         
@@ -1864,10 +2015,6 @@ available lectures.</p>
         
         <br>
         <br>
-        Robotics Seminar series hosted by Carnegie Mellon University's Robotics Institute.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLCFD85BC79FE703DF" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1875,6 +2022,9 @@ available lectures.</p>
             </div>
         
         
+        <br>
+        Robotics Seminar series hosted by Carnegie Mellon University's Robotics Institute.
+
     </td>
 </tr>
 
@@ -1892,7 +2042,6 @@ He coaches the USA IMO team and is well-loved by his students.</p>
     <thead>
         <tr>
             <th>Course Name</th>
-            <th>Lecture Videos</th>
         </tr>
     </thead>
 
@@ -1901,7 +2050,12 @@ He coaches the USA IMO team and is well-loved by his students.</p>
   
   <tr>
     <td>
-        <b><a href="https://www.math.cmu.edu/~ploh/2021-228.shtml" rel="external nofollow noopener" target="_blank">21-228 Discrete Mathematics Computer Graphics</a></b> (Sping 2021)
+        <b>
+            
+                <a href="https://www.math.cmu.edu/~ploh/2021-228.shtml" rel="external nofollow noopener" target="_blank">21-228 Discrete Mathematics Computer Graphics</a>
+            
+        </b>
+             (Sping 2021)
         <br>
         
             
@@ -1921,10 +2075,6 @@ He coaches the USA IMO team and is well-loved by his students.</p>
         
         <br>
         <br>
-        Combinatorics, which concerns the study of discrete structures such as sets and networks, is as ancient as humanity's ability to count. Yet although in the beginning, combinatorial problems were solved by pure ingenuity, today that alone is not enough. A rich variety of powerful methods have been developed, often drawing inspiration from other fields such as probability, analysis, algorithms, and even algebra and topology. <br> <br> This course provides a general introduction to this beautiful subject. Students will learn both classical methods for clever counting, as well as how to apply more modern methods to analyze recursions and sequences. Students will also learn fundamental techniques in graph theory. Throughout the course, students will encounter novel challenges that blur the lines between combinatorics and other subjects, such as number theory, probability, and geometry, so that they develop the skills to creatively combine seeming disparate areas of mathematics. <br> <br> This course is structured around challenge. Lecture topics are hand-picked to reflect the rather advanced ability level of the general CMU student, and consequently, much of the curriculum sequence is original. Homework and exam problems are particularly difficult, and require creative problem-solving rather than application of learned techniques. To encourage students to truly develop these skills, collaboration is encouraged on homework, and exams (which are non-collaborative) will be open-notes.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLgTkKBA6LRqYuuQ-LboerRblBoD_q_eUM" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1932,13 +2082,21 @@ He coaches the USA IMO team and is well-loved by his students.</p>
             </div>
         
         Note that videos in the playlist are in reverse chronological order.
+        <br>
+        Combinatorics, which concerns the study of discrete structures such as sets and networks, is as ancient as humanity's ability to count. Yet although in the beginning, combinatorial problems were solved by pure ingenuity, today that alone is not enough. A rich variety of powerful methods have been developed, often drawing inspiration from other fields such as probability, analysis, algorithms, and even algebra and topology. <br> <br> This course provides a general introduction to this beautiful subject. Students will learn both classical methods for clever counting, as well as how to apply more modern methods to analyze recursions and sequences. Students will also learn fundamental techniques in graph theory. Throughout the course, students will encounter novel challenges that blur the lines between combinatorics and other subjects, such as number theory, probability, and geometry, so that they develop the skills to creatively combine seeming disparate areas of mathematics. <br> <br> This course is structured around challenge. Lecture topics are hand-picked to reflect the rather advanced ability level of the general CMU student, and consequently, much of the curriculum sequence is original. Homework and exam problems are particularly difficult, and require creative problem-solving rather than application of learned techniques. To encourage students to truly develop these skills, collaboration is encouraged on homework, and exams (which are non-collaborative) will be open-notes.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://www.math.cmu.edu/~ploh/2022-738.shtml" rel="external nofollow noopener" target="_blank">21-738 Extremal Combinatorics</a></b> (Spring 2022)
+        <b>
+            
+                <a href="https://www.math.cmu.edu/~ploh/2022-738.shtml" rel="external nofollow noopener" target="_blank">21-738 Extremal Combinatorics</a>
+            
+        </b>
+             (Spring 2022)
         <br>
         
             
@@ -1958,10 +2116,6 @@ He coaches the USA IMO team and is well-loved by his students.</p>
         
         <br>
         <br>
-        This is one of the core graduate courses in advanced combinatorial methods, for the Algorithms, Combinatorics, and Optimization program at CMU. As such, it will be a rigorous and challenging introduction to extremal combinatorics, aimed to provide the necessary background for cutting-edge research in this area. Typical problems concern the maximum or minimum values attained by common graph parameters over certain interesting families of combinatorial objects.   <br> <br> Extremal results are not only interesting in their own right, but are also useful in applications because sometimes one can already draw valuable conclusions from the combinatorial basis of a problem with deeper mathematical structure. In that case, the most easily accessible graph-theoretical properties are often the values of the graph parameters, such as the number of edges, diameter, size of the largest set of pairwise non-adjacent vertices, etc.  It is therefore useful to understand what other properties are already implied once certain graph parameters lie in certain ranges.
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PLgTkKBA6LRqaGKITvQS1QuIBoEbOVwFTm" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -1969,13 +2123,21 @@ He coaches the USA IMO team and is well-loved by his students.</p>
             </div>
         
         Note that videos in the playlist are in reverse chronological order.
+        <br>
+        This is one of the core graduate courses in advanced combinatorial methods, for the Algorithms, Combinatorics, and Optimization program at CMU. As such, it will be a rigorous and challenging introduction to extremal combinatorics, aimed to provide the necessary background for cutting-edge research in this area. Typical problems concern the maximum or minimum values attained by common graph parameters over certain interesting families of combinatorial objects.   <br> <br> Extremal results are not only interesting in their own right, but are also useful in applications because sometimes one can already draw valuable conclusions from the combinatorial basis of a problem with deeper mathematical structure. In that case, the most easily accessible graph-theoretical properties are often the values of the graph parameters, such as the number of edges, diameter, size of the largest set of pairwise non-adjacent vertices, etc.  It is therefore useful to understand what other properties are already implied once certain graph parameters lie in certain ranges.
+
     </td>
 </tr>
 
   
   <tr>
     <td>
-        <b><a href="https://www.stat.cmu.edu/~larry/=stat705/" rel="external nofollow noopener" target="_blank">36-705 Intermediate Statistics</a></b> (Fall 2016)
+        <b>
+            
+                <a href="https://www.stat.cmu.edu/~larry/=stat705/" rel="external nofollow noopener" target="_blank">36-705 Intermediate Statistics</a>
+            
+        </b>
+             (Fall 2016)
         <br>
         
             
@@ -1995,10 +2157,6 @@ He coaches the USA IMO team and is well-loved by his students.</p>
         
         <br>
         <br>
-        This course covers the fundamentals of theoretical statistics. Topics include: probability inequalities, point and interval estimation, minimax theory, hypothesis testing, data reduction, convergence concepts, Bayesian inference, nonparametric statistics, bootstrap resampling, VC dimension, prediction and model selection. 
-
-    </td>
-    <td>
         
             <div class="embed-container">
                 <iframe src="https://www.youtube.com/embed/videoseries?list=PL_Ig1a5kxu55KBWM3Su6-K352gQJcmEZd" width="700" height="480" frameborder="0" allowfullscreen="true">
@@ -2006,6 +2164,9 @@ He coaches the USA IMO team and is well-loved by his students.</p>
             </div>
         
         
+        <br>
+        This course covers the fundamentals of theoretical statistics. Topics include: probability inequalities, point and interval estimation, minimax theory, hypothesis testing, data reduction, convergence concepts, Bayesian inference, nonparametric statistics, bootstrap resampling, VC dimension, prediction and model selection. 
+
     </td>
 </tr>
 
@@ -2051,8 +2212,8 @@ He coaches the USA IMO team and is well-loved by his students.</p>
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2023 Fan Pu  Zeng. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: June 13, 2023.
+        © Copyright 2024 Fan Pu  Zeng. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
+Last updated: July 13, 2024.
       </div>
     </footer>
 
@@ -2090,7 +2251,6 @@ Last updated: June 13, 2023.
 
     
   <script async src="https://d1bxh8uas1mnw7.cloudfront.net/assets/embed.js"></script>
-  <script async src="https://badge.dimensions.ai/badge.js"></script>
 
     <!-- MathJax -->
   <script type="text/javascript">
@@ -2110,14 +2270,7 @@ Last updated: June 13, 2023.
   <script defer type="text/javascript" id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@3.2.0/es5/tex-mml-chtml.js"></script>
   <script defer src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-S3VHEYH05S"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ window.dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-S3VHEYH05S');
-  </script>
+    
     
 
 <!-- Scrolling Progress Bar -->
