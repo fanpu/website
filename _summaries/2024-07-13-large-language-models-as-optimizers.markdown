@@ -5,7 +5,7 @@ giscus_comments: true
 bib_id: 2309.03409v3
 ---
 
-### Three Important Things
+### Four Important Things
 
 #### 1. OPRO Framework
 
@@ -13,7 +13,7 @@ The paper introduces the Optimization by PROmpting (OPRO)
 framework to make use of LLMs as optimizers.
 
 This works as follows. The user first comes up with a meta-prompt,
-which defines the problem of optimizing for the prompt that we actually care about. 
+which defines the problem of optimizing for the prompt that we actually care about.
 
 The example below shows a meta-prompt for optimizing for a CoT-style prompt:
 
@@ -51,7 +51,7 @@ Write your new text that is different from the old ones and has a score as high 
 text in square brackets.
 ```
 
-Once the LLM produces a new solution, it can then be evaluated, and the 
+Once the LLM produces a new solution, it can then be evaluated, and the
 solution-score pairs added back into the meta-prompt, allowing the next iteration to learn from previous trajectories.
 
 This loop of optimization continues until the LLM plateaus in the scores
@@ -65,10 +65,82 @@ Overall, the OPRO optimization loop looks like this:
     class="z-depth-1"
 %}
 
-#### 2. Bar
+In practice, they sort the past solution-score pairs in ascending order
+in the meta-prompt so it can perform in-context learning to improve future
+trajectories. This is probably due to the well-known recency bias in ICL,
+where it has a higher probability of outputting things similar to the last
+few demonstrations.
 
-#### 3. Baz
+#### 2. Optimization Challenges
+
+There can be optimization instability and high variance at the start when
+solutions are generally low-quality. They mitigated this by generating multiple
+solutions per step, which increases the probability of getting at least one
+decent solution.
+
+They also noted how temperature can be used to manage the
+exploration-exploitation trade-off: using low temperatures for exploitation, and
+higher temperatures for exploration.
+
+#### 3. Applications to Classical Optimization
+
+They applied OPRO to the classical optimization problems of regression and traveling salesman problem (TSP).
+
+For regression, the difficulty is varied by controlling how far the initial
+proposed weight and bias coefficients are from the true values, and we note
+the unsurprising trend that starting from a poorer initialization resulted in more
+steps for convergence.
+
+{% include figure.html
+    path="/assets/img/summaries/opro_regression.webp"
+    width="600px"
+    class="z-depth-1"
+%}
+
+In TSP, the difficulty is varied by increasing the number of stops $$n$$,
+and the LLM fails to find the optimal solution for $$n > 10$$.
+
+{% include figure.html
+    path="/assets/img/summaries/opro_tsp.webp"
+    width="600px"
+    class="z-depth-1"
+%}
+
+#### 4. Prompt Optimization
+
+The authors ran OPRO to optimize for prompts on GSM8K, and found that the top performing
+ones were different but semantically similar to the popular "Let's think step-by-step" 0-shot CoT prompt:
+
+{% include figure.html
+    path="/assets/img/summaries/opro_prompts.webp"
+    width="600px"
+    class="z-depth-1"
+%}
+
+They also found that their optimized prompts outperforms "Let's think
+step-by-step" on the Big Bench Hard (BBH) dataset:
+
+{% include figure.html
+    path="/assets/img/summaries/opro_improvements.webp"
+    width="400px"
+    class="z-depth-1"
+%}
 
 ### Most Glaring Deficiency
 
+The paper addressed many questions I had about its design choices in its
+ablation section, such as ordering of the previous solution-score pairs and
+comparisons with evolutionary techniques.
+
+One idea I had that was not addressed was the use of an "exploration-exploitation
+scheduler" to anneal down the temperature as better candidate solutions were
+found. Instead, a fixed temperature of 1.0 was used for their experiments.
+This is similar to how $$\epsilon$$ is decreased over time in $$\epsilon$$-greedy
+RL algorithms to encourage initial exploration, and then eventually preferring
+exploitation.
+
 ### Conclusions for Future Work
+
+This paper provides a simple and practical method of optimizing prompts for LLM
+practitioners. I believe the general framework will be very impactful for years
+to come due to the universality of the approach.
