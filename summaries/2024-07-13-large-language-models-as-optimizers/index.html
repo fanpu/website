@@ -459,7 +459,7 @@ Big-Bench Hard tasks. Code at https://github.com/google-deepmind/opro.</p>
   <article class="post-content">
     
     <div id="markdown-content">
-      <h3 id="three-important-things">Three Important Things</h3>
+      <h3 id="four-important-things">Four Important Things</h3>
 
 <h4 id="1-opro-framework">1. OPRO Framework</h4>
 
@@ -504,7 +504,7 @@ Write your new text that is different from the old ones and has a score as high 
 text in square brackets.
 </code></pre></div></div>
 
-<p>Once the LLM produces a new solution, it can then be evaluated, and the 
+<p>Once the LLM produces a new solution, it can then be evaluated, and the
 solution-score pairs added back into the meta-prompt, allowing the next iteration to learn from previous trajectories.</p>
 
 <p>This loop of optimization continues until the LLM plateaus in the scores
@@ -522,13 +522,101 @@ of the proposed solutions, or the number of optimization steps is reached.</p>
   </picture>
 </figure>
 
-<h4 id="2-bar">2. Bar</h4>
+<p>In practice, they sort the past solution-score pairs in ascending order
+in the meta-prompt so it can perform in-context learning to improve future
+trajectories. This is probably due to the well-known recency bias in ICL,
+where it has a higher probability of outputting things similar to the last
+few demonstrations.</p>
 
-<h4 id="3-baz">3. Baz</h4>
+<h4 id="2-optimization-challenges">2. Optimization Challenges</h4>
+
+<p>There can be optimization instability and high variance at the start when
+solutions are generally low-quality. They mitigated this by generating multiple
+solutions per step, which increases the probability of getting at least one
+decent solution.</p>
+
+<p>They also noted how temperature can be used to manage the
+exploration-exploitation trade-off: using low temperatures for exploitation, and
+higher temperatures for exploration.</p>
+
+<h4 id="3-applications-to-classical-optimization">3. Applications to Classical Optimization</h4>
+
+<p>They applied OPRO to the classical optimization problems of regression and traveling salesman problem (TSP).</p>
+
+<p>For regression, the difficulty is varied by controlling how far the initial
+proposed weight and bias coefficients are from the true values, and we note
+the unsurprising trend that starting from a poorer initialization resulted in more
+steps for convergence.</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/summaries/opro_regression.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+</figure>
+
+<p>In TSP, the difficulty is varied by increasing the number of stops \(n\),
+and the LLM fails to find the optimal solution for \(n &gt; 10\).</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/summaries/opro_tsp.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+</figure>
+
+<h4 id="4-prompt-optimization">4. Prompt Optimization</h4>
+
+<p>The authors ran OPRO to optimize for prompts on GSM8K, and found that the top performing
+ones were different but semantically similar to the popular “Let’s think step-by-step” 0-shot CoT prompt:</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/summaries/opro_prompts.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+</figure>
+
+<p>They also found that their optimized prompts outperforms “Let’s think
+step-by-step” on the Big Bench Hard (BBH) dataset:</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/summaries/opro_improvements.webp" class="z-depth-1 center" width="400px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+</figure>
 
 <h3 id="most-glaring-deficiency">Most Glaring Deficiency</h3>
 
+<p>The paper addressed many questions I had about its design choices in its
+ablation section, such as ordering of the previous solution-score pairs and
+comparisons with evolutionary techniques.</p>
+
+<p>One idea I had that was not addressed was the use of an “exploration-exploitation
+scheduler” to anneal down the temperature as better candidate solutions were
+found. Instead, a fixed temperature of 1.0 was used for their experiments.
+This is similar to how \(\epsilon\) is decreased over time in \(\epsilon\)-greedy
+RL algorithms to encourage initial exploration, and then eventually preferring
+exploitation.</p>
+
 <h3 id="conclusions-for-future-work">Conclusions for Future Work</h3>
+
+<p>This paper provides a simple and practical method of optimizing prompts for LLM
+practitioners. I believe the general framework will be very impactful for years
+to come due to the universality of the approach.</p>
 
     </div>
   </article>
@@ -572,7 +660,7 @@ of the proposed solutions, or the number of optimization steps is reached.</p>
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2024 Fan Pu  Zeng. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: July 13, 2024.
+Last updated: July 21, 2024.
       </div>
     </footer>
 
