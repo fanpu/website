@@ -30,5 +30,3 @@ group :other_plugins do
 end
 
 gem "jekyll-diagrams", "~> 0.10.0"
-# Hack to get around digitalocean errors
-gem 'ffi', '~> 1.9', '>= 1.9.10'
