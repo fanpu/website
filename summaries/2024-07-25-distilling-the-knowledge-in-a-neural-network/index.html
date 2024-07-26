@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Language Models are Unsupervised Multitask Learners (GPT-2) | Fan Pu  Zeng</title>
+    <title>Distilling the Knowledge in a Neural Network | Fan Pu  Zeng</title>
     <meta name="author" content="Fan Pu  Zeng">
     <meta name="description" content="Homepage
 ">
@@ -39,14 +39,14 @@
     <link rel="shortcut icon" href="/assets/img/favicon_new.ico">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://fanpu.io/summaries/2023-08-10-language-models-are-unsupervised-multitask-learners/">
+    <link rel="canonical" href="https://fanpu.io/summaries/2024-07-25-distilling-the-knowledge-in-a-neural-network/">
     <!-- Dark Mode -->
     
 
     <!-- Twitter cards -->
     <meta name="twitter:site" content="@FanPu_Zeng">
     <meta name="twitter:creator" content="@">
-    <meta name="og:title" content="Language Models are Unsupervised Multitask Learners (GPT-2)">
+    <meta name="og:title" content="Distilling the Knowledge in a Neural Network">
 
     
     <meta name="twitter:card" content="summary">
@@ -368,37 +368,24 @@
 <!-- _layouts/custom_bib.html -->
       <div class="row no-count">
         <!-- Entry bib key -->
-        <div id="Radford2019LanguageMA" class="col-sm-12">
+        <div id="1503.02531v1" class="col-sm-12">
         <!-- Title -->
         <div class="title"><h2>
-            <a href="https://api.semanticscholar.org/CorpusID:160025533" rel="external nofollow noopener" target="_blank">
-                Language Models are Unsupervised Multitask Learners
+            <a href="http://arxiv.org/abs/1503.02531v1" rel="external nofollow noopener" target="_blank">
+                Distilling the Knowledge in a Neural Network
             </a>
           </h2></div>
         <!-- Author -->
         <div class="author">
         
 
-        Alec Radford, Jeff Wu, Rewon Child, and
-          <span class="more-authors" title="click to view 3 more authors" onclick="
-                var element = $(this);
-                element.attr('title', '');
-                var more_authors_text = element.text() == '3 more authors' ? 'David Luan, Dario Amodei, Ilya Sutskever' : '3 more authors';
-                var cursorPosition = 0;
-                var textAdder = setInterval(function(){
-                  element.text(more_authors_text.substring(0, cursorPosition + 1));
-                  if (++cursorPosition == more_authors_text.length){
-                    clearInterval(textAdder);
-                  }
-              }, '10');
-              ">3 more authors</span>
-</div>
+        Geoffrey Hinton, Oriol Vinyals, and Jeff Dean</div>
 
         <!-- Journal/Book title and date -->
         
         
         <div class="periodical">
-          <em>In </em>, Apr 2019
+          <em></em> Mar 2015
         </div>
         <div class="periodical">
           
@@ -408,43 +395,47 @@
           <div class="links">
           <!--
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> -->
-            <a href="https://api.semanticscholar.org/CorpusID:160025533" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="http://arxiv.org/abs/1503.02531v1" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
           <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+            
+            <a href="https://arxiv.org/pdf/1503.02531v1.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
           <!-- -->
           </div>
           
           <div class="badges">
-            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right"></span>
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-arxiv-id="1503.02531"></span>
           </div>
 
           <!-- Hidden abstract block -->
           <h3>Paper Abstract</h3>
           <div class="abstract">
-            <p>Natural language processing tasks, such as question answering,
-              machine translation, reading comprehension, and summarization, are typically
-              approached with supervised learning on taskspecific datasets. We demonstrate
-              that language models begin to learn these tasks without any explicit
-              supervision when trained on a new dataset of millions of webpages called
-              WebText. When conditioned on a document plus questions, the answers generated
-              by the language model reach 55 F1 on the CoQA dataset matching or exceeding
-              the performance of 3 out of 4 baseline systems without using the 127,000+
-              training examples. The capacity of the language model is essential to the
-              success of zero-shot task transfer and increasing it improves performance in a
-              log-linear fashion across tasks. Our largest model, GPT-2, is a 1.5B parameter
-              Transformer that achieves state of the art results on 7 out of 8 tested
-              language modeling datasets in a zero-shot setting but still underfits WebText.
-              Samples from the model reflect these improvements and contain coherent
-              paragraphs of text. These findings suggest a promising path towards building
-              language processing systems which learn to perform tasks from their naturally
-              occurring demonstrations.</p>
+            <p>A very simple way to improve the performance of almost any machine learning
+algorithm is to train many different models on the same data and then to
+average their predictions. Unfortunately, making predictions using a whole
+ensemble of models is cumbersome and may be too computationally expensive to
+allow deployment to a large number of users, especially if the individual
+models are large neural nets. Caruana and his collaborators have shown that it
+is possible to compress the knowledge in an ensemble into a single model which
+is much easier to deploy and we develop this approach further using a different
+compression technique. We achieve some surprising results on MNIST and we show
+that we can significantly improve the acoustic model of a heavily used
+commercial system by distilling the knowledge in an ensemble of models into a
+single model. We also introduce a new type of ensemble composed of one or more
+full models and many specialist models which learn to distinguish fine-grained
+classes that the full models confuse. Unlike a mixture of experts, these
+specialist models can be trained rapidly and in parallel.</p>
           </div>
 <!-- Hidden bibtex block -->
           <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@inproceedings</span><span class="p">{</span><span class="nl">Radford2019LanguageMA</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Language Models are Unsupervised Multitask Learners}</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Radford, Alec and Wu, Jeff and Child, Rewon and Luan, David and Amodei, Dario and Sutskever, Ilya}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2019}</span><span class="p">,</span>
-  <span class="na">url</span> <span class="p">=</span> <span class="s">{https://api.semanticscholar.org/CorpusID:160025533}</span>
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">1503.02531v1</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Hinton, Geoffrey and Vinyals, Oriol and Dean, Jeff}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Distilling the Knowledge in a Neural Network}</span><span class="p">,</span>
+  <span class="na">eprint</span> <span class="p">=</span> <span class="s">{1503.02531v1}</span><span class="p">,</span>
+  <span class="na">archiveprefix</span> <span class="p">=</span> <span class="s">{arXiv}</span><span class="p">,</span>
+  <span class="na">primaryclass</span> <span class="p">=</span> <span class="s">{stat.ML}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2015}</span><span class="p">,</span>
+  <span class="na">month</span> <span class="p">=</span> <span class="nv">mar</span><span class="p">,</span>
+  <span class="na">eprintnover</span> <span class="p">=</span> <span class="s">{1503.02531}</span>
 <span class="p">}</span></code></pre></figure>
           </div>
         </div>
@@ -458,72 +449,96 @@
     <div id="markdown-content">
       <h3 id="three-important-things">Three Important Things</h3>
 
-<h4 id="1-webtext">1. WebText</h4>
-<p>Web scrapes like the Common Crawl suffer from many data quality issues, and also
-likely contain data used in the test set of various NLP evaluation tasks.
-Due to the difficulty of data filtering, the authors created a new dataset
-called WebText that scraped the content from all outbound links from Reddit,
-which acts as a filter for content that may be interesting to humans.</p>
+<h4 id="1-motivation">1. Motivation</h4>
 
-<p>They did not follow Wikipedia links to avoid overlaps with the Wikitext dataset.</p>
+<p>The paper opens with a really interesting analogy: insects begin with a larval
+form optimized for extracting energy and nutrients from the environment, before 
+metamorphosing into a completely adult form optimized for traveling and
+reproduction.</p>
 
-<h4 id="2-byte-pair-encoding-bpe">2. Byte Pair Encoding (BPE)</h4>
-<p>Many other language models at the time performed extensive pre-processing on the
-input, such as lower-casing and tokenization. This restricts the generality of
-the output that it can produce.</p>
+<p>In a similar vein, for machine learning models we have access to plentiful compute and time during the training, but become constrained by different
+considerations like latency during inference. 
+Given the different requirements and affordances of both phases, why should we
+expect to simply use the same model for both of them?</p>
 
-<p>On the other extreme, a possible approach is to use byte-level encoding, which
-allows the full range of UTF-8 bytes to be captured. However, this performed
-worse in practice than word-level embeddings, a behavior that was also
-replicated in the author’s experiments.</p>
+<p>To address this, the paper introduces the idea of distillation, to transfer
+the knowledge of a very large/cumbersome model (possibly an ensemble of models)
+to a smaller one.</p>
 
-<p>Instead, the authors use byte pair encoding (BPE), which starts with
-byte-level encodings before merging the more common byte pairs into
-a single token. A good explanation of BPE is given in this
-<a href="https://huggingface.co/learn/nlp-course/chapter6/5?fw=pt" rel="external nofollow noopener" target="_blank">HuggingFace tutorial</a>.</p>
+<h4 id="2-distillation">2. Distillation</h4>
 
-<p>The authors modified BPE such that instead of greedily merging characters that
-could result in sub-optimal tokens, they prevent merges across character
-categories, with the exception of spaces.</p>
+<p>There are several ways to approach distillation.</p>
 
-<h4 id="3-overlaps-between-training-and-test-data">3. Overlaps between Training and Test Data</h4>
-<p>The authors noted that the increasing sizes of the web crawls used for training
-large language models are directly responsible for small incremental sizes in
-improvements, due to overlaps between the crawled data and the test set.</p>
+<ol>
+  <li>A natural first approach would be to make the student model learn to predict
+the same class probabilities as the teacher model. These are known as “soft targets” (in contrast, “hard targets” are the ground-truth labels). Soft targets are “an effective way of communicating the regularities discovered by a model
+trained on all of the data to another model”.</li>
+  <li>In practice, the correct label usually dominates the others by
+orders of magnitude. But a lot of information about the learned function can be
+gleaned from the ratios of the other labels, which can provide information on
+how one label might be confused for another and allow the model to draw more
+conclusions.</li>
+</ol>
 
-<figure>
-  <picture>
-    
+<p>If we just use cross-entropy loss, these vital set of information will be lost
+as their relative values are tiny relative to the most confident prediction and
+don’t contribute much to the loss.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/summaries/gpt2-8-gram.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>To address this, the authors added a temperature parameter before the softmax,
+and increased the temperature to a suitably high level until the targets are “soft” enough. The same temperature is used when training the small model.
+The temperature is reset to 1 afterwards at test time.</p>
 
-  </picture>
-</figure>
+<p>Note that changing temperature also requires the gradient update of the 
+cross-entropy loss of the softmax predictions to be scaled appropriately by
+\((1/T^2)\) (via the chain rule).</p>
 
-<p>To investigate this further, they constructed a Bloom filter using 8-grams and
-sought to find overlaps between the test and training sets. The worst culprit
-that they found was 1BW, which has a 13.2% overlap between its train and test
-set.</p>
+<p>The paper shows that the gradient of the cross-entropy loss
+is approximately \(\frac{1}{NT^2}(z_i - v_i)\) using a first-order Taylor
+approximation, which holds when temperature is high. By integrating this,
+the loss is proportionate to \(\frac{(z_i - v_i)^2}{2}\), showing that 
+the loss function is essentially matching the logits.</p>
+
+<h4 id="3-ensembles-of-specialists">3. Ensembles of Specialists</h4>
+
+<p>One way they applied the idea of matching soft targets with temperature is as follows.</p>
+
+<p>Train time:</p>
+<ol>
+  <li>Train a big generalist model the normal way</li>
+  <li>Use the generalist model to identify clusters of labels by using the covariance matrix of its predictions</li>
+  <li>For each of these clusters, train a specialist model. The specialist model
+only learns to classify the things in its cluster, and all other labels
+are lumped into a “dustbin” class</li>
+</ol>
+
+<p>Test time:</p>
+<ol>
+  <li>Run generalist model on test case sample. Take the top \(n\) most probable
+classes, call this set \(k\)</li>
+  <li>Take all the specialist classes that can handle anything in \(k\).
+So each specialist class outputs its own logits. The goal is to optimize for the
+logits \(\mathbf{q}\) that minimizes over the KL between the logits of the generalist model
+and \(\mathbf{q}\)
+, as well as the logits between each of the specialist classes and \(\mathbf{q}\), i.e:
+ \(K L\left(\mathbf{p}^g, \mathbf{q}\right)+\sum_{m \in A_k} K L\left(\mathbf{p}^m, \mathbf{q}\right)\)</li>
+  <li>Take the most probable class in \(\mathbf{q}\) as the prediction</li>
+</ol>
 
 <h3 id="most-glaring-deficiency">Most Glaring Deficiency</h3>
-<p>There still exist significant overlaps between the WebText train and test data.
-It is worth attempting to de-duplicate such overlaps by removing passages that
-appear in the test set from the train set, though this would require a much more
-complicated hashing scheme than Bloom filters, which is not capable of
-identifying the source of collisions. However, this would still be very valuable to the ML
-research community by having a more objective and accurate standard.</p>
+
+<p>The paper did not (and acknowledged it did not) report on the results of
+actually distilling the outputs of the “cumbersome” ensemble of specialist models back into a small model, which felt like one of the main selling points
+that they were making.</p>
 
 <h3 id="conclusions-for-future-work">Conclusions for Future Work</h3>
-<p>Be aware of unintentional information leaks from training to test data. This is
-becoming increasingly unavoidable due to the increasing scale of training data
-that is scraped, and hence one should be wary about the source of minute performance
-gains with respect to the training set used.</p>
+
+<p>Distillation is now a pretty popular way to transfer the knowledge of larger/more cumbersome models into smaller ones, allowing for wins in latency and cost
+during live inference.</p>
 
     </div>
   </article>
 
-  <p class="post-meta">Written August 10, 2023</p>
+  <p class="post-meta">Written July 25, 2024</p>
 <div id="giscus_thread" style="max-width: 800px; margin: 0 auto;">
   <script>
     let giscusTheme = localStorage.getItem("theme");
