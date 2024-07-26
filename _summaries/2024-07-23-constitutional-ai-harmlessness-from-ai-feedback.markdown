@@ -16,7 +16,7 @@ It works in two stages.
 
 * **(Supervised stage) Critique -> Revision -> Supervised Learning**. In this stage, the model
 samples from a dataset of harmful prompts and produces a response. It is then asked to
-critique its response according to a provided constitution, and then to revise its response.
+critique its response according to a provided constitution and then to revise its response.
 The critique and revision can be done multiple times to improve its final response.
 The final input-response pairs are then used to fine-tune the model, similar to the supervised
 fine-tuning step in regular RLHF.
@@ -92,12 +92,11 @@ Here's a trace of the model performing several revisions:
 
 #### 2. Advantages
 
-Consitutional AI (CAI) is more interpretable than traditional RLHF on human-labelled
-harmlessness datasets since there is a clear outline of the rules that the model followed
+Consitutional AI (CAI) is more interpretable than traditional RLHF on human-labeled harmlessness datasets since there is a clear outline of the rules that the model followed
 when critiquing its response.
 
 In contrast, the size of RLHF datasets makes it infeasible for humans to vet manually
-and understand what are the principles guiding its decisions.
+and understand what are the principles guiding their decisions.
 
 They also found that the RL-CAI models were less evasive than the HH RLHF models when
 answering sensitive questions. This was an improvement from their previous model, where
@@ -108,27 +107,25 @@ a model that rewarded evasiveness.
 #### 3. RL-CAI Failure Modes and Solutions
 
 They found that RL-CAI (Constitutional AI) could result in Goodharting behavior
-which causes them to respond in very boilerplate-y ways or be overly accusatory/harsh
-in its response.
+which causes them to respond in very boilerplate-y ways or be overly accusatory/harsh in their response.
 
 They addressed this by:
-* Modifying the constitutional principles to encourage the model to prefer responses
-which are not overly-reactive
+* Modifying the constitutional principles to encourage the model to prefer responses that are not overly-reactive
 * Ensembling over different constitutions to improve the preference model
-* Preference labels: soft labels means taking the normalized log-probabilities of the model,
+* Preference labels: soft labels mean taking the normalized log-probabilities of the model,
 and hard labels mean binary 0-1 labels. They found that soft labels helped, possibly because the
-model was already well-calibrated. However they also found that using CoT prompts caused confidence to
+model was already well-calibrated. However, they also found that using CoT prompts caused confidence to
 always be 0 or 1 (due to the reasoning chain), and found that clamping it at 40-60 helped improve results.
 
 ### Most Glaring Deficiency
 
-The constitutions were relatively short and succint. I think they could have been made a
+The constitutions were relatively short and succinct. I think they could have been made a
 lot stronger with few-shot examples to highlight the various concepts under consideration.
 
 ### Conclusions for Future Work
 
 A constitutional approach is a scalable way of training models without relying on human
 supervision, paving the way for more scalable methods for aligning models in the future.
-The next obvious frontiers to extend this would be with helpfulness and instruction
+The next obvious frontiers to extend this would be helpfulness and instruction
 following fine-tuning.
 
