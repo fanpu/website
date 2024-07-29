@@ -1548,3 +1548,36 @@ Url           = {http://arxiv.org/abs/2112.01008v1},
 File          = {2112.01008v1.pdf},
 EprintNoVer   = {2112.01008}
 }
+
+@article{2202.06856v2,
+Author        = {Elan Rosenfeld and Pradeep Ravikumar and Andrej Risteski},
+Title         = {Domain-Adjusted Regression or: ERM May Already Learn Features Sufficient
+  for Out-of-Distribution Generalization},
+Eprint        = {2202.06856v2},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.LG},
+Abstract      = {A common explanation for the failure of deep networks to generalize
+out-of-distribution is that they fail to recover the "correct" features. We
+challenge this notion with a simple experiment which suggests that ERM already
+learns sufficient features and that the current bottleneck is not feature
+learning, but robust regression. Our findings also imply that given a small
+amount of data from the target distribution, retraining only the last linear
+layer will give excellent performance. We therefore argue that devising simpler
+methods for learning predictors on existing features is a promising direction
+for future research. Towards this end, we introduce Domain-Adjusted Regression
+(DARE), a convex objective for learning a linear predictor that is provably
+robust under a new model of distribution shift. Rather than learning one
+function, DARE performs a domain-specific adjustment to unify the domains in a
+canonical latent space and learns to predict in this space. Under a natural
+model, we prove that the DARE solution is the minimax-optimal predictor for a
+constrained set of test distributions. Further, we provide the first
+finite-environment convergence guarantee to the minimax risk, improving over
+existing analyses which only yield minimax predictors after an environment
+threshold. Evaluated on finetuned features, we find that DARE compares
+favorably to prior methods, consistently achieving equal or better performance.},
+Year          = {2022},
+Month         = {Feb},
+Url           = {http://arxiv.org/abs/2202.06856v2},
+File          = {2202.06856v2.pdf},
+EprintNoVer   = {2202.06856}
+}
