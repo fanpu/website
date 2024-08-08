@@ -1,0 +1,119 @@
+---
+title: "Notes on 'The Llama 3 Herd of Models'"
+layout: post
+tags: [machine-learning]
+cover: furano.webp
+cover_preview: furano.webp
+caption: Lavender Fields in Biei, Kamikawa Subprefecture, Hokkaido, Japan
+class: post-template
+author: fanpu
+toc:
+  sidebar: left
+giscus_comments: true
+description: >
+    Notes on the new Llama 3.1 technical report. It's a long paper, but one
+    that's well-written with lots of interesting technical details and 
+    design choices.
+published: false
+---
+
+# Introduction
+
+Introduces new set of models (8/70/405 B) that supports:
+- multilinguality
+- coding
+- reasoning
+- tool usage
+
+Largest model:
+- 405B parameters
+- 128k context window
+- Has instruction fine-tuned version
+- Pre-trained on 3.8 x $$10^{25}$$ FLOPS
+
+Also introduced Llama Guard 3 model for input/output safety.
+
+# Pre-training
+
+## Pre-Training Data
+
+### Data Cleaning
+
+Knowledge cutoff end of 2023. To ensure high-quality tokens, performed:
+de-duplication, data cleaning, removed domains known to contain large amounts of
+PII, adult content.
+
+Data cleaning:
+- extracts HTML content from web documents
+- done carefully
+for pages with math & code content to preserve structure
+- Markdown markers also removed
+
+De-duplication:
+- on the URL, duplication across documents, line-level de-duplication (common in boilerplate)
+
+Used heuristics to filter other low-quality documents: logs/error messages,
+other adult websites, websites with excessive numbers of outlier tokens
+
+Built a model-based classifier to sub-select high-quality tokens.
+
+Built domain-specific pipelines to extract code & math-relevant web pages,
+including pages containing math deduction, pages containing code interleaved
+with natural language.
+
+Used similar approaches as the above for other languages.
+
+### Data Mix
+
+This ensures they have the right proportion of different data sources.
+They ended up with:
+- 50% general knowledge
+- 25% math & reasoning
+- 17% code
+- 8% multilingual
+
+Knowledge classification: categorizes data to determine the data mix.
+Used this to downsample data over-represented on the web like arts & entertainment.
+
+Scaling laws for data mix: trained several small models on data mix & use that to predict the performance of large models on mix
+
+
+Overview
+- 15.6T multilingual tokens (compare 1.8T for Llama 2)
+- Use 8K token context window initially, followed by continued pre-training
+stage which increases supported context window to 128K tokens
+
+### Multi-modality
+
+#### Encoders 
+
+Separate encoders trained for images and speech.
+
+Image encoder:
+- Trained on image-text pairs
+
+Speech encoder:
+- Self-supervised learning via masking
+- Masked part reconstructed by discrete-token representation
+
+#### Adapters
+
+
+
+
+Architecture
+- Uses dense Transformer architecture instead of MoE for training stability
+
+Post-training
+- Supervised finetuning (SFT)
+- Rejection sampling (RS)
+- Direct preference optimization (DPO)
+- Did not use RLHF - less stable and harder to scale
+- Added new capabilities: tool-use
+- Strong improvements in coding & reasoning
+- Safety mitigations incorporated
+
+# General Overview
+
+## Pre-training
+
