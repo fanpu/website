@@ -428,6 +428,7 @@
 <h1 id="introduction">Introduction</h1>
 
 <p>Introduces new set of models (8/70/405 B) that supports:</p>
+
 <ul>
   <li>multilinguality</li>
   <li>coding</li>
@@ -436,6 +437,7 @@
 </ul>
 
 <p>Largest model:</p>
+
 <ul>
   <li>405B parameters</li>
   <li>128k context window</li>
@@ -456,6 +458,7 @@ de-duplication, data cleaning, removed domains known to contain large amounts of
 PII, adult content.</p>
 
 <p>Data cleaning:</p>
+
 <ul>
   <li>extracts HTML content from web documents</li>
   <li>done carefully
@@ -464,6 +467,7 @@ for pages with math &amp; code content to preserve structure</li>
 </ul>
 
 <p>De-duplication:</p>
+
 <ul>
   <li>on the URL, duplication across documents, line-level de-duplication (common in boilerplate)</li>
 </ul>
@@ -483,6 +487,7 @@ with natural language.</p>
 
 <p>This ensures they have the right proportion of different data sources.
 They ended up with:</p>
+
 <ul>
   <li>50% general knowledge</li>
   <li>25% math &amp; reasoning</li>
@@ -496,6 +501,7 @@ Used this to downsample data over-represented on the web like arts &amp; enterta
 <p>Scaling laws for data mix: trained several small models on data mix &amp; use that to predict the performance of large models on mix</p>
 
 <p>Overview</p>
+
 <ul>
   <li>15.6T multilingual tokens (compare 1.8T for Llama 2)</li>
   <li>Use 8K token context window initially, followed by continued pre-training
@@ -509,11 +515,13 @@ stage which increases supported context window to 128K tokens</li>
 <p>Separate encoders trained for images and speech.</p>
 
 <p>Image encoder:</p>
+
 <ul>
   <li>Trained on image-text pairs</li>
 </ul>
 
 <p>Speech encoder:</p>
+
 <ul>
   <li>Self-supervised learning via masking</li>
   <li>Masked part reconstructed by discrete-token representation</li>
@@ -533,6 +541,7 @@ Annealing here means increasingly upsampling these high-quality data over time.<
 <h2 id="model-architecture">Model Architecture</h2>
 
 <p>Architecture</p>
+
 <ul>
   <li>Uses dense Transformer architecture instead of MoE for training stability</li>
   <li>Similar to Llama and Llama 2, performance gains mostly
@@ -552,6 +561,7 @@ helpful for continued pre-training on long sequences</li>
 for understanding impact on downstream task performance.</p>
 
 <p>To find relationship with downstream task performance they did:</p>
+
 <ol>
   <li>Find correlation between compute-optimal model’s loss on downstream tasks and training FLOPs</li>
   <li>Find correlation between loss and downstream task accuracy,
@@ -568,6 +578,7 @@ for the final downstream performance of their models.</p>
 <h3 id="infrastructure-scaling-and-efficiency">Infrastructure, Scaling, and Efficiency</h3>
 
 <p>Compute:</p>
+
 <ul>
   <li>16K H100 GPUs, 700W TDP (thermal design power) with 80GB HBM3 (high bandwidth memory that allows for faster data transfer between CPU and GPU)</li>
   <li>Trained on Meta’s Grand Teton AI server platform, scheduling using MAST (Meta’s global-scale training scheduler)</li>
@@ -575,12 +586,14 @@ for the final downstream performance of their models.</p>
 </ul>
 
 <p>Storage:</p>
+
 <ul>
   <li>Tectonic, Meta’s distributed file system</li>
   <li>240 PB storage over 7500 servers, 2TB/s sustainable throughput, 7TB/s peak throughput</li>
 </ul>
 
 <p>Network:</p>
+
 <ul>
   <li>Llama 3 405B used RDMA over Converged Ethernet (RoCE) fabric</li>
   <li>Smaller models uses Nvidia Quantum2 Infiniband</li>
@@ -593,6 +606,7 @@ for the final downstream performance of their models.</p>
 optimizer states, gradients, and activations fit in HBM.</p>
 
 <p>4D parallelism:</p>
+
 <ul>
   <li>tensor parallelism</li>
   <li>pipeline parallelism</li>
@@ -615,6 +629,7 @@ of 38-43%</p>
 </ul>
 
 <p>466 job interruptions</p>
+
 <ul>
   <li>47 planned interruptions (i.e maintenance)</li>
   <li>419 unexpected: mostly GPU/host component failures,
@@ -624,12 +639,14 @@ by automation</li>
 </ul>
 
 <p>Debugging</p>
+
 <ul>
   <li>PyTorch’s built-in NCCL flight recorder helped diagnose issues quickly at scale</li>
   <li>Mixed use of NVLink and RoCE complicated things</li>
 </ul>
 
 <p>Others</p>
+
 <ul>
   <li>Higher mid-day temperatures impacted GPU dynamic voltage and frequency
 scaling, causing diurnal 1-2% throughput variation throughout the day</li>
@@ -640,6 +657,7 @@ of power consumption on the order of ~10s megawatts, stretching limits of power 
 <h2 id="training-recipe">Training Recipe</h2>
 
 <p>Initial pre-training:</p>
+
 <ul>
   <li>AdamW optimizer</li>
   <li>Linear warm up, cosine LR schedule</li>
@@ -652,6 +670,7 @@ to advance model knowledge cut-off</li>
 </ul>
 
 <p>Long context pre-training:</p>
+
 <ul>
   <li>To support 128K context window</li>
   <li>Don’t do long-context training earlier because of quadratic self-attention, too expensive</li>
@@ -659,6 +678,7 @@ to advance model knowledge cut-off</li>
 </ul>
 
 <p>Annealing:</p>
+
 <ul>
   <li>On final 40M tokens, linearly annealed LR to 0, kept 128K context window</li>
   <li>Upsampled data source of very high quality</li>
@@ -685,6 +705,7 @@ to advance model knowledge cut-off</li>
 </ul>
 
 <h3 id="reward-modeling">Reward Modeling</h3>
+
 <ul>
   <li>RM trained on top of pre-trained checkpoint</li>
   <li>Preference pairs of either (chosen, rejected) or (chosen, rejected, edited), where edited &gt; chosen &gt; rejected</li>
@@ -692,6 +713,7 @@ to advance model knowledge cut-off</li>
 </ul>
 
 <h3 id="supervised-finetuning">Supervised Finetuning</h3>
+
 <ul>
   <li>RM performs rejection sampling on human annotation prompts</li>
   <li>Fine-tune pre-trained LM on the model-generated samples that are accepted</li>
@@ -707,6 +729,7 @@ conforms better to distribution of policy model being optimized</li>
 </ul>
 
 <p>Modified DPO:</p>
+
 <ul>
   <li>Masked out formatting tokens (including header and termination tokens) in DPO loss, helps with stability. These tokens caused tail repetition or random termination tokens. Hypothesized due to these tokens being common in both chosen and rejected responses causes conflicting optimization objectives</li>
   <li>Added regularization with negative log-likelihood (NLL) loss</li>
@@ -715,6 +738,7 @@ conforms better to distribution of policy model being optimized</li>
 <h2 id="post-training-data">Post-training Data</h2>
 
 <h3 id="preference-data">Preference Data</h3>
+
 <ul>
   <li>Sample two responses from two different models for each user prompt, labelled by human annotators</li>
   <li>Annotators state strength of preference by 4 levels: significantly better, better, slightly better, marginally better</li>
@@ -725,6 +749,7 @@ conforms better to distribution of policy model being optimized</li>
 <h3 id="sft-data">SFT Data</h3>
 
 <p>Finetuning data contains:</p>
+
 <ul>
   <li>Prompts from human annotation collection with rejection-sampled (RS) responses</li>
   <li>Synthetic data targeting specific capabilities</li>
@@ -732,6 +757,7 @@ conforms better to distribution of policy model being optimized</li>
 </ul>
 
 <p>Datasets:</p>
+
 <ul>
   <li>General English</li>
   <li>Code</li>
@@ -742,6 +768,7 @@ conforms better to distribution of policy model being optimized</li>
 </ul>
 
 <p>Rejection sampling:</p>
+
 <ul>
   <li>Choose prompt from human annotation collection</li>
   <li>Sample 10-30 outputs from latest chat model policy</li>
@@ -755,12 +782,14 @@ conforms better to distribution of policy model being optimized</li>
 <p>Most of training data is model-generated, requires careful cleaning and quality control</p>
 
 <p>Data cleaning:</p>
+
 <ul>
   <li>Rule-based data removal or modification strategies</li>
   <li>Balance proportion of such samples in dataset</li>
 </ul>
 
 <p>Data pruning:</p>
+
 <ul>
   <li>Topic classification: Fine-tuned Llama 3 8B to a topic classifier</li>
   <li>Quality scoring: Use RM and Llama 3 checkpoint to rate content, keep examples marked as high quality by either RM or Llama. Both signals have high disagreement rates, and combining signals gives best recall on test set.</li>
@@ -774,6 +803,7 @@ quality score \(\times\) difficulty score, go through sorted examples by best an
 <h3 id="code">Code</h3>
 
 <p>Capabilities:</p>
+
 <ul>
   <li>Code generation</li>
   <li>Documentation</li>
@@ -784,6 +814,7 @@ quality score \(\times\) difficulty score, go through sorted examples by best an
 <p>Targeted languages: Python, Java, Javascript, C/C++, Typescript, Rust, PHP, HTML/CSS, SQL, bash/shell</p>
 
 <p>Improved capabilities via:</p>
+
 <ul>
   <li>Training a code expert</li>
   <li>Generate synthetic data for SFT</li>
@@ -792,18 +823,21 @@ quality score \(\times\) difficulty score, go through sorted examples by best an
 </ul>
 
 <p>Expert training:</p>
+
 <ul>
   <li>Train code expert to obtain high quality human annotations for code</li>
   <li>Approach similar to CodeLlama (scant on details, should probably check this paper)</li>
 </ul>
 
 <p>Synthetic data generation:</p>
+
 <ul>
   <li>Faced issues in code generation: following instructions, code syntax errors, incorrect code generation, difficulty in fixing bugs</li>
   <li>Use Llama 3 and code expert to generate synthetic 2.7M dialogs for SFT</li>
 </ul>
 
 <p>During RS, used code specific system prompts to improve:</p>
+
 <ul>
   <li>code readability</li>
   <li>documentation</li>
@@ -812,6 +846,7 @@ quality score \(\times\) difficulty score, go through sorted examples by best an
 </ul>
 
 <h4 id="synthetic-data-generation-execution-feedback">Synthetic data generation: execution feedback</h4>
+
 <ul>
   <li>Distillation to smaller models helped, but not for 405B on its
 own inputs</li>
@@ -819,8 +854,8 @@ own inputs</li>
     <ol>
       <li>Problem description generation: generate programming problem descriptions, use random code snippets as inspiration</li>
       <li>Solution generation: Prompt Llama 3 to solve problem, use CoT in comments, add programming guidelines in system prompt</li>
-      <li>Correctness analysis: use static analysis (parser and linters), 
-  and unit test generation (also by the model) and execution</li>
+      <li>Correctness analysis: use static analysis (parser and linters),
+and unit test generation (also by the model) and execution</li>
       <li>Error feedback and iterative self-correction: prompt model to revise solutions that fail, includes feedback from parser/linter/tester. Can modify code and unit test to accomodate new code. 20% of solutions that were incorrect could be self-corrected this way.</li>
       <li>Fine-tuning and iterative improvement: process iterated over multiple rounds, higher-quality synthetic data generated in each subsequent rounds</li>
     </ol>
@@ -850,8 +885,53 @@ own inputs</li>
 </ul>
 
 <h3 id="tool-use">Tool Use</h3>
+
 <p>Trained Llama 3 to use search engine (Brave), Python interpreter, Wolfram Alpha
 API.</p>
+
+<p>To train on tool use:</p>
+
+<ul>
+  <li>Start with training single-turn tool use, then tool use in dialog, and then multi-step tool use and data analysis</li>
+  <li>All synthetically generated: first synthetic user prompts which require
+calling out to tools, then the corresponding tool calls which are then executed,
+and then the final answer to user prompt</li>
+  <li>Multi-step tool use trained in a similar way synthetically</li>
+  <li>User prompts are based on a provided file, and ask to summarize the contents of
+the file, find and fix bugs, optimize a piece of code, perform data analysis or
+visualization</li>
+  <li>Augmented synthetic data with different system prompts to teach model to use tools
+only when activated</li>
+  <li>To avoid model using tools for simple queries, added dataset containing
+queries of simple math/reasoning questions with tool use activated but without
+using tools in response</li>
+</ul>
+
+<h3 id="factuality">Factuality</h3>
+
+<p>To train the model to guard against hallucinations, they used a knowledge probe to find out what the model knows, and to generate training data of refusals for the things it doesn’t:</p>
+
+<ol>
+  <li>Extract a data snippet from the pre-training data.</li>
+  <li>Generate a factual question about these snippets (context) by prompting Llama 3.</li>
+  <li>Sample responses from Llama 3 to the question.</li>
+  <li>Score the correctness of the generations using the original context as a reference and Llama 3 as a judge.</li>
+  <li>Score the informativeness of the generations using Llama 3 as a judge.</li>
+  <li>Generate a refusal for responses which are consistently informative and incorrect across the generations,
+using Llama 3.</li>
+</ol>
+
+<p>But because pre-training data is not always factually correct, they also did this for
+sensitive topics where contradictory/incorrect statements are prevalent</p>
+
+<h3 id="steerability">Steerability</h3>
+
+<p>Remainder to be continued…</p>
+
+<!--
+- Got human annotators to come up with different system prompts,
+
+-->
 
     </div>
   </article>
@@ -937,7 +1017,7 @@ API.</p>
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2024 Fan Pu  Zeng. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: August 09, 2024.
+Last updated: August 17, 2024.
       </div>
     </footer>
 
