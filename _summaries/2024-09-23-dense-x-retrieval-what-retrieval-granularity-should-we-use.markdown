@@ -38,7 +38,7 @@ using a set of 42k passages and the prompt below:
 
 They used the Recall@k metric to evaluate the performance of retrieval systems,
 where is the percentage of times the right answer was in one of the top
-$k$ returned entries.
+$$k$$ returned entries.
 
 {% include figure.html
     path="/assets/img/summaries/dense_x_results.webp"
