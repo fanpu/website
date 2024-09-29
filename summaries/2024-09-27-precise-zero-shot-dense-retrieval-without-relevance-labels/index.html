@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Dense X Retrieval: What Retrieval Granularity Should We Use? | Fan Pu  Zeng</title>
+    <title>Precise Zero-Shot Dense Retrieval without Relevance Labels (HyDE) | Fan Pu  Zeng</title>
     <meta name="author" content="Fan Pu  Zeng">
     <meta name="description" content="Homepage
 ">
@@ -39,14 +39,14 @@
     <link rel="shortcut icon" href="/assets/img/favicon_new.ico">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://fanpu.io/summaries/2024-09-28-dense-x-retrieval-what-retrieval-granularity-should-we-use/">
+    <link rel="canonical" href="https://fanpu.io/summaries/2024-09-27-precise-zero-shot-dense-retrieval-without-relevance-labels/">
     <!-- Dark Mode -->
     
 
     <!-- Twitter cards -->
     <meta name="twitter:site" content="@FanPu_Zeng">
     <meta name="twitter:creator" content="@">
-    <meta name="og:title" content="Dense X Retrieval: What Retrieval Granularity Should We Use?">
+    <meta name="og:title" content="Precise Zero-Shot Dense Retrieval without Relevance Labels (HyDE)">
 
     
     <meta name="twitter:card" content="summary">
@@ -368,22 +368,22 @@
 <!-- _layouts/custom_bib.html -->
       <div class="row no-count">
         <!-- Entry bib key -->
-        <div id="2312.06648v2" class="col-sm-12">
+        <div id="2212.10496v1" class="col-sm-12">
         <!-- Title -->
         <div class="title"><h2>
-            <a href="http://arxiv.org/abs/2312.06648v2" rel="external nofollow noopener" target="_blank">
-                Dense X Retrieval: What Retrieval Granularity Should We Use?
+            <a href="http://arxiv.org/abs/2212.10496v1" rel="external nofollow noopener" target="_blank">
+                Precise Zero-Shot Dense Retrieval without Relevance Labels
             </a>
           </h2></div>
         <!-- Author -->
         <div class="author">
         
 
-        Tong Chen, Hongwei Wang, Sihao Chen, and
-          <span class="more-authors" title="click to view 5 more authors" onclick="
+        Luyu Gao, Xueguang Ma, Jimmy Lin, and
+          <span class="more-authors" title="click to view 1 more author" onclick="
                 var element = $(this);
                 element.attr('title', '');
-                var more_authors_text = element.text() == '5 more authors' ? 'Wenhao Yu, Kaixin Ma, Xinran Zhao, Hongming Zhang, Dong Yu' : '5 more authors';
+                var more_authors_text = element.text() == '1 more author' ? 'Jamie Callan' : '1 more author';
                 var cursorPosition = 0;
                 var textAdder = setInterval(function(){
                   element.text(more_authors_text.substring(0, cursorPosition + 1));
@@ -391,14 +391,14 @@
                     clearInterval(textAdder);
                   }
               }, '10');
-              ">5 more authors</span>
+              ">1 more author</span>
 </div>
 
         <!-- Journal/Book title and date -->
         
         
         <div class="periodical">
-          <em></em> Dec 2023
+          <em></em> Dec 2022
         </div>
         <div class="periodical">
           
@@ -408,49 +408,49 @@
           <div class="links">
           <!--
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> -->
-            <a href="http://arxiv.org/abs/2312.06648v2" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="http://arxiv.org/abs/2212.10496v1" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
           <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
             
-            <a href="https://arxiv.org/pdf/2312.06648v2.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+            <a href="https://arxiv.org/pdf/2212.10496v1.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
           <!-- -->
           </div>
           
           <div class="badges">
-            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-arxiv-id="2312.06648"></span>
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-arxiv-id="2212.10496"></span>
           </div>
 
           <!-- Hidden abstract block -->
           <h3>Paper Abstract</h3>
           <div class="abstract">
-            <p>Dense retrieval has become a prominent method to obtain relevant context or
-world knowledge in open-domain NLP tasks. When we use a learned dense retriever
-on a retrieval corpus at inference time, an often-overlooked design choice is
-the retrieval unit in which the corpus is indexed, e.g. document, passage, or
-sentence. We discover that the retrieval unit choice significantly impacts the
-performance of both retrieval and downstream tasks. Distinct from the typical
-approach of using passages or sentences, we introduce a novel retrieval unit,
-proposition, for dense retrieval. Propositions are defined as atomic
-expressions within text, each encapsulating a distinct factoid and presented in
-a concise, self-contained natural language format. We conduct an empirical
-comparison of different retrieval granularity. Our results reveal that
-proposition-based retrieval significantly outperforms traditional passage or
-sentence-based methods in dense retrieval. Moreover, retrieval by proposition
-also enhances the performance of downstream QA tasks, since the retrieved texts
-are more condensed with question-relevant information, reducing the need for
-lengthy input tokens and minimizing the inclusion of extraneous, irrelevant
-information.</p>
+            <p>While dense retrieval has been shown effective and efficient across tasks and
+languages, it remains difficult to create effective fully zero-shot dense
+retrieval systems when no relevance label is available. In this paper, we
+recognize the difficulty of zero-shot learning and encoding relevance. Instead,
+we propose to pivot through Hypothetical Document Embeddings (HyDE). Given a
+query, HyDE first zero-shot instructs an instruction-following language model
+(e.g. InstructGPT) to generate a hypothetical document. The document captures
+relevance patterns but is unreal and may contain false details. Then, an
+unsupervised contrastively learned encoder (e.g. Contriever) encodes the
+document into an embedding vector. This vector identifies a neighborhood in the
+corpus embedding space, where similar real documents are retrieved based on
+vector similarity. This second step ground the generated document to the actual
+corpus, with the encoder’s dense bottleneck filtering out the incorrect
+details. Our experiments show that HyDE significantly outperforms the
+state-of-the-art unsupervised dense retriever Contriever and shows strong
+performance comparable to fine-tuned retrievers, across various tasks (e.g. web
+search, QA, fact verification) and languages (e.g. sw, ko, ja).</p>
           </div>
 <!-- Hidden bibtex block -->
           <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">2312.06648v2</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Chen, Tong and Wang, Hongwei and Chen, Sihao and Yu, Wenhao and Ma, Kaixin and Zhao, Xinran and Zhang, Hongming and Yu, Dong}</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Dense X Retrieval: What Retrieval Granularity Should We Use?}</span><span class="p">,</span>
-  <span class="na">eprint</span> <span class="p">=</span> <span class="s">{2312.06648v2}</span><span class="p">,</span>
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">2212.10496v1</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Gao, Luyu and Ma, Xueguang and Lin, Jimmy and Callan, Jamie}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{Precise Zero-Shot Dense Retrieval without Relevance Labels}</span><span class="p">,</span>
+  <span class="na">eprint</span> <span class="p">=</span> <span class="s">{2212.10496v1}</span><span class="p">,</span>
   <span class="na">archiveprefix</span> <span class="p">=</span> <span class="s">{arXiv}</span><span class="p">,</span>
-  <span class="na">primaryclass</span> <span class="p">=</span> <span class="s">{cs.CL}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
+  <span class="na">primaryclass</span> <span class="p">=</span> <span class="s">{cs.IR}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
   <span class="na">month</span> <span class="p">=</span> <span class="nv">dec</span><span class="p">,</span>
-  <span class="na">eprintnover</span> <span class="p">=</span> <span class="s">{2312.06648}</span>
+  <span class="na">eprintnover</span> <span class="p">=</span> <span class="s">{2212.10496}</span>
 <span class="p">}</span></code></pre></figure>
           </div>
         </div>
@@ -464,77 +464,88 @@ information.</p>
     <div id="markdown-content">
       <h3 id="three-important-things">Three Important Things</h3>
 
-<h4 id="1-what-retrieval-granularity-should-we-use">1. What Retrieval Granularity Should We Use?</h4>
+<h4 id="1-generative-retrieval-and-hyde">1. Generative Retrieval and HyDE</h4>
 
-<p>The paper finds that using the right retrieval granularity
-matters on improving downstream performance of RAG systems.</p>
+<p>Back in 2022 when this paper was written, people performed dense retrieval
+by using two encoders, \(\mathrm{enc}_q\) and
+\(\mathrm{enc}_d\) for the query and document respectively, projecting them into the same embedding space, and taking its dot product:</p>
 
-<p>For instance, one can consider granularities at the passage or sentence level.
-This paper proposes going further by using a proposition as a novel retrieval
-unit, where a proposition is defined as an atomic factoid that is contextualized
-and self-contained.</p>
+\[\operatorname{sim}(\mathbf{q}, \mathrm{d})=\left\langle\mathrm{enc}_q(\mathbf{q}), \mathrm{enc}_d(\mathbf{d})\right\rangle=\left\langle\mathbf{v}_{\mathbf{q}}, \mathbf{v}_{\mathbf{d}}\right\rangle\]
 
-<h4 id="2-factoidwiki">2. FactoidWiki</h4>
+<p>The problem with this approach is that optimizing for retrieval without the (query, document) supervised labels makes this an intractable problem.</p>
 
-<p>To test how their proposition-level approach compares to baseline approaches of
-using 100-word passages and sentences, they built the FactoidWiki dataset. How
-they build this is interesting because it informs how one might build a similar
-proposition-granularity dataset off their own data.</p>
+<p>Instead, their insight is to perform this search in document embedding space by
+using a LLM to generate a hypothetical document, and then applying the same
+document encoder on it to generate embeddings. Document-document similarity is
+now something that can be captured easily with unsupervised contrastive learning
+techniques.</p>
 
-<p>To do so, they fine-tuned a Flan-T5-large model on demonstrations of generating
-propositions based off a passage. These demonstrations were generated by GPT-4
-using a set of 42k passages and the prompt below:</p>
+<p>Since the documents generated are actually a probability distribution, we can take expectations:</p>
 
-<figure>
-  <picture>
-    
+\[\mathbb{E}\left[\mathbf{v}_{q_{i j}}\right]=\mathbb{E}\left[f\left(g\left(q_{i j}, \mathrm{INST}_i\right)\right)\right]\]
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/summaries/dense_x_prompt.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>In practice, what this means is we can sample \(N\) different hypothetical documents and take their average embeddings.</p>
 
-  </picture>
-</figure>
+<p>An example prompt for the FiQA dataset would be:</p>
 
-<h4 id="3-results">3. Results</h4>
-
-<p>They used the Recall@k metric to evaluate the performance of retrieval systems,
-where is the percentage of times the right answer was in one of the top
-$k$ returned entries.</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Please write a financial article passage to answer the question
+Question: [QUESTION]
+Passage:
+</code></pre></div></div>
 
 <figure>
   <picture>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/summaries/dense_x_results.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/summaries/hyde_overview.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 </figure>
 
-<p>Using embeddings at the proposition level provided a clear win on the
-non-finetuned retrievers, but in many cases performed worse than their passage
-and sentence counterparts when the retrievers were fine-tuned. They speculate
-that this is due fine-tuning being performed on the traditional passage-query
-pairs.</p>
+<h4 id="2-results">2. Results</h4>
 
-<p>They also separately conducted another experiment to find that proposition-level retrieval helps most when the target entity is not popular, and the performance gap narrows as the target entity becomes more common.</p>
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/summaries/hyde_results.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+</figure>
+
+<p>When relevance judgements (i.e labels) are not provided, HyDE performs much
+better than the non-dense BM25 baseline, and non-finetuned Contriever (it’s
+interesting that Contriever performs worse than BM25).</p>
+
+<p>When labels are provided, HyDE is no longer relevant as it doesn’t require
+labels, but we see that even then there are a few datasets where HyDE
+performance comes close to the strongest model.</p>
+
+<h4 id="3-usage-recommendation">3. Usage Recommendation</h4>
+
+<p>HyDE can work well as an initial prototype of a search system, offering
+better performance than other relevance-free models.</p>
+
+<p>However, as the search log grows, a supervised dense retriever can eventually be
+trained to replace HyDE.</p>
 
 <h3 id="most-glaring-deficiency">Most Glaring Deficiency</h3>
 
-<p>Would have been interesting to see how supervised dense retrievers fine-tuned on
-proposition level retrieval would perform</p>
+<p>There are probably techniques to improve the performance of HyDE further, by
+increasing the similarity of the hypothetical text to the retrieved documents if
+some labeled pairs are provided. This could capture things like style and
+format, and could be done as easily as few-shot prompting.</p>
 
 <h3 id="conclusions-for-future-work">Conclusions for Future Work</h3>
 
-<p>Retrieval by proposition wins out because it is self-contained and only contains
-the necessary relevant context. Similarly, we can think about improving the
-performance of related systems by only including the necessary and sufficient
-information.</p>
+<p>Don’t rule out using LLM-generated data as an intermediate step in a pipeline in creative ways!</p>
 
     </div>
   </article>
 
-  <p class="post-meta">Written September 28, 2024</p>
+  <p class="post-meta">Written September 27, 2024</p>
 <div id="giscus_thread" style="max-width: 800px; margin: 0 auto;">
   <script>
     let giscusTheme = localStorage.getItem("theme");
