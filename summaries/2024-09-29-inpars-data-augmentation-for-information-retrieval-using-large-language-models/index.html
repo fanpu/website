@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Understanding Deep Learning Requires Rethinking Generalization | Fan Pu  Zeng</title>
+    <title>InPars: Data Augmentation for Information Retrieval using Large Language Models | Fan Pu  Zeng</title>
     <meta name="author" content="Fan Pu  Zeng">
     <meta name="description" content="Homepage
 ">
@@ -39,14 +39,14 @@
     <link rel="shortcut icon" href="/assets/img/favicon_new.ico">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://fanpu.io/summaries/2023-09-10-understanding-deep-learning-requires-rethinking-generalization/">
+    <link rel="canonical" href="https://fanpu.io/summaries/2024-09-29-inpars-data-augmentation-for-information-retrieval-using-large-language-models/">
     <!-- Dark Mode -->
     
 
     <!-- Twitter cards -->
     <meta name="twitter:site" content="@FanPu_Zeng">
     <meta name="twitter:creator" content="@">
-    <meta name="og:title" content="Understanding Deep Learning Requires Rethinking Generalization">
+    <meta name="og:title" content="InPars: Data Augmentation for Information Retrieval using Large Language Models">
 
     
     <meta name="twitter:card" content="summary">
@@ -368,22 +368,23 @@
 <!-- _layouts/custom_bib.html -->
       <div class="row no-count">
         <!-- Entry bib key -->
-        <div id="1611.03530v2" class="col-sm-12">
+        <div id="2202.05144v1" class="col-sm-12">
         <!-- Title -->
         <div class="title"><h2>
-            <a href="http://arxiv.org/abs/1611.03530v2" rel="external nofollow noopener" target="_blank">
-                Understanding deep learning requires rethinking generalization
+            <a href="http://arxiv.org/abs/2202.05144v1" rel="external nofollow noopener" target="_blank">
+                InPars: Data Augmentation for Information Retrieval using Large Language
+  Models
             </a>
           </h2></div>
         <!-- Author -->
         <div class="author">
         
 
-        Chiyuan Zhang, Samy Bengio, Moritz Hardt, and
-          <span class="more-authors" title="click to view 2 more authors" onclick="
+        Luiz Bonifacio, Hugo Abonizio, Marzieh Fadaee, and
+          <span class="more-authors" title="click to view 1 more author" onclick="
                 var element = $(this);
                 element.attr('title', '');
-                var more_authors_text = element.text() == '2 more authors' ? 'Benjamin Recht, Oriol Vinyals' : '2 more authors';
+                var more_authors_text = element.text() == '1 more author' ? 'Rodrigo Nogueira' : '1 more author';
                 var cursorPosition = 0;
                 var textAdder = setInterval(function(){
                   element.text(more_authors_text.substring(0, cursorPosition + 1));
@@ -391,14 +392,14 @@
                     clearInterval(textAdder);
                   }
               }, '10');
-              ">2 more authors</span>
+              ">1 more author</span>
 </div>
 
         <!-- Journal/Book title and date -->
         
         
         <div class="periodical">
-          <em></em> Nov 2016
+          <em></em> Feb 2022
         </div>
         <div class="periodical">
           
@@ -408,48 +409,47 @@
           <div class="links">
           <!--
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> -->
-            <a href="http://arxiv.org/abs/1611.03530v2" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="http://arxiv.org/abs/2202.05144v1" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
           <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
             
-            <a href="https://arxiv.org/pdf/1611.03530v2.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+            <a href="https://arxiv.org/pdf/2202.05144v1.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
           <!-- -->
           </div>
           
           <div class="badges">
-            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-arxiv-id="1611.03530"></span>
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-arxiv-id="2202.05144"></span>
           </div>
 
           <!-- Hidden abstract block -->
           <h3>Paper Abstract</h3>
           <div class="abstract">
-            <p>Despite their massive size, successful deep artificial neural networks can
-                   exhibit a remarkably small difference between training and test performance.
-                   Conventional wisdom attributes small generalization error either to properties
-                   of the model family, or to the regularization techniques used during training.
-                   Through extensive systematic experiments, we show how these traditional
-                   approaches fail to explain why large neural networks generalize well in
-                   practice. Specifically, our experiments establish that state-of-the-art
-                   convolutional networks for image classification trained with stochastic
-                   gradient methods easily fit a random labeling of the training data. This
-                   phenomenon is qualitatively unaffected by explicit regularization, and occurs
-                   even if we replace the true images by completely unstructured random noise. We
-                   corroborate these experimental findings with a theoretical construction showing
-                   that simple depth two neural networks already have perfect finite sample
-                   expressivity as soon as the number of parameters exceeds the number of data
-                   points as it usually does in practice.
-                   We interpret our experimental findings by comparison with traditional models.</p>
+            <p>The information retrieval community has recently witnessed a revolution due
+to large pretrained transformer models. Another key ingredient for this
+revolution was the MS MARCO dataset, whose scale and diversity has enabled
+zero-shot transfer learning to various tasks. However, not all IR tasks and
+domains can benefit from one single dataset equally. Extensive research in
+various NLP tasks has shown that using domain-specific training data, as
+opposed to a general-purpose one, improves the performance of neural models. In
+this work, we harness the few-shot capabilities of large pretrained language
+models as synthetic data generators for IR tasks. We show that models finetuned
+solely on our unsupervised dataset outperform strong baselines such as BM25 as
+well as recently proposed self-supervised dense retrieval methods. Furthermore,
+retrievers finetuned on both supervised and our synthetic data achieve better
+zero-shot transfer than models finetuned only on supervised data. Code, models,
+and data are available at https://github.com/zetaalphavector/inpars .</p>
           </div>
 <!-- Hidden bibtex block -->
           <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">1611.03530v2</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Zhang, Chiyuan and Bengio, Samy and Hardt, Moritz and Recht, Benjamin and Vinyals, Oriol}</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Understanding deep learning requires rethinking generalization}</span><span class="p">,</span>
-  <span class="na">eprint</span> <span class="p">=</span> <span class="s">{1611.03530v2}</span><span class="p">,</span>
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">2202.05144v1</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Bonifacio, Luiz and Abonizio, Hugo and Fadaee, Marzieh and Nogueira, Rodrigo}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{InPars: Data Augmentation for Information Retrieval using Large Language
+    Models}</span><span class="p">,</span>
+  <span class="na">eprint</span> <span class="p">=</span> <span class="s">{2202.05144v1}</span><span class="p">,</span>
   <span class="na">archiveprefix</span> <span class="p">=</span> <span class="s">{arXiv}</span><span class="p">,</span>
-  <span class="na">primaryclass</span> <span class="p">=</span> <span class="s">{cs.LG}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2016}</span><span class="p">,</span>
-  <span class="na">month</span> <span class="p">=</span> <span class="nv">nov</span><span class="p">,</span>
-  <span class="na">eprintnover</span> <span class="p">=</span> <span class="s">{1611.03530}</span>
+  <span class="na">primaryclass</span> <span class="p">=</span> <span class="s">{cs.CL}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+  <span class="na">month</span> <span class="p">=</span> <span class="nv">feb</span><span class="p">,</span>
+  <span class="na">eprintnover</span> <span class="p">=</span> <span class="s">{2202.05144}</span>
 <span class="p">}</span></code></pre></figure>
           </div>
         </div>
@@ -461,155 +461,66 @@
   <article class="post-content">
     
     <div id="markdown-content">
-      <h3 id="three-important-things">Three Important Things</h3>
+      <p>LLMs can be used with high performance on IR tasks, yet they are not widely used
+because of its high cost and latency. For instance, re-ranking 1000 documents of
+250 tokens each would have costed 15 USD in Feb 2022.</p>
 
-<h4 id="1-deep-neural-networks-easily-fit-random-labels">1. Deep Neural Networks Easily Fit Random Labels</h4>
+<p>This paper proposes how LLMs can be used in IR by using it to generate synthetic
+data that can then be used to fine-tune IR models.</p>
 
-<p>It is an open problem as to why over-parameterized neural networks can generalize well
-even in the absence of regularization, as conventional wisdom would lead us to
-believe it should overfit to the training data.</p>
+<p>They call their technique InPars to generate queries for a given document,
+using the MS MARCO dataset. The MS MARCO dataset is a large dataset from
+anonymized Bing search queries that comprises 500k pairs of queries and
+relevant documents.</p>
 
-<p>To this end, people have applied classical learning theories like VC (Vapnik–Chervonenkis) dimension,
-Rademacher complexity, and uniform stability to argue that if the complexity of
-the network is bounded in some way, then it will generalize and not overfit.
-Specifically:</p>
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/summaries/inpars_prompt.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+</figure>
+
+<p>The vanilla approach is just few-shot prompting, while the GBQ (Good-Bad
+Question) apporach works as follows:</p>
 
 <ol>
-  <li>
-    <p>VC dimension: the VC dimension of a classifier is the largest number of points
- that it can classify correctly, for all possible assignments of their labels.
- So a classifier with VC dimension \(n\) can perfectly fit any labeling of \(n\) datapoints.</p>
-  </li>
-  <li>
-    <p>Rademacher complexity: the Rademacher complexity \(\hat{\mathfrak{R}}_n(\mathcal{H})\)
- on a hypothesis class \(\mathcal{H}\) on \(n\) datapoints \(x_1, \cdots, x_n\) is defined as</p>
-
-\[\hat{\mathfrak{R}}_n(\mathcal{H})=\mathbb{E}_\sigma\left[\sup _{h \in \mathcal{H}} \frac{1}{n} \sum_{i=1}^n \sigma_i h\left(x_i\right)\right],\]
-
-    <p>where \(\sigma\) is drawn according to an \(n\)-dimensional \(\{-1, +1\}\) Rademacher distribution,
- and we can think of the supremum \(h\) for each \(\sigma\) as the function in the function class
- that can best fit each \(h(x_i)\) to the labels \(\sigma_i\) such that the sum is maximized.
- In other words, it is the capacity of the function class in fitting the data to random labels.</p>
-
-    <p>Trivially, a Rademacher complexity of 1 given the \(n\) datapoints means the function class is large enough to fit all random labelings.</p>
-  </li>
-  <li>
-    <p>Uniform stability: uniform stability captures the notion that the predictions of a classifier does not change
- too much when only a single example is removed or perturbed. A classifier \(f\) is \(\beta\)-uniformly stable
- with respect to some loss \(\ell\) if for any two datasets \(S, S'\) that only differ in a training
- example, then the difference in their losses is bounded by \(\beta\) for any input-label pair \((x,y)\), we have:</p>
-
-\[|\ell(f_S(x), y) - \ell(f_{S'}(x), y)| &lt; \beta,\]
-
-    <p>where \(f_S\) and \(f_{S'}\) are the classifier trained on \(S\) and \(S'\) respectively.</p>
-  </li>
+  <li>The original query from the MS MARCO is now a “bad question”</li>
+  <li>An annotator manually writes a more complicated one that is more contextually
+aware, which is now a “good question”</li>
 </ol>
 
-<p>The authors found that standard neural network architectures like Inception V3 on popular
-benchmark datasets like CIFAR10 could fit random assignment of training labels, and also
-other forms of corruption of the data:</p>
+<p>Note that since the same few-shot examples can be used throughout to generate
+synthetic examples, this annotation is a one-time cost.</p>
 
-<figure>
-  <picture>
-    
+<p>The GBQ approach is cited in some other IR papers on generating synthetic data.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/summaries/rethinking-generalization-fit-random.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>Once many synthetic queries have been generated, they filtered it down to just the top \(k\)
+queries by query likelihood,</p>
 
-  </picture>
-</figure>
-
-<p>This shows that the VC dimension of the network is probably larger than the
-dataset, and that the Rademacher complexity is close to one. If their
-complexities are so large then any theory based on it to show some
-regularization property to help in demonstrating how it generalizes is
-essentially useless.</p>
-
-<p>Hence, alternative frameworks for thinking about generalization for large
-networks beyond standard learning theory concepts are required.</p>
-
-<h4 id="2-explicit-regularization-helps-but-is-not-necessary-for-generalization">2. Explicit Regularization Helps, But Is Not Necessary For Generalization</h4>
-
-<p>Since implicit regularization (if any) of the networks was clearly not enough to restrict
-its expressiveness to fit any random data, what if we introduced explicit regularization such as
-dropout, weight-decay, and batchnorm?</p>
-
-<p>Unfortunately, even with regularization the various popular architectures were still
-able to almost perfectly fit random labels:</p>
-
-<figure>
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/summaries/rethinking-generalization-explicit-reg.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-</figure>
-
-<p>Note that since CIFAR10 has 10 classes, random guessing gives 10%
-accuracy and hence fitting random labels predictably performed no better than
-random guessing.</p>
-
-<p>In addition, even in the absence of any explicit regularization, it could also generalize well
-and have test accuracy almost on-par to when explicit regularization was enabled.</p>
-
-<p>This shows that explicit regularization can help, but is not essential for generalization.</p>
-
-<h4 id="3-finite-sample-expressivity">3. Finite-Sample Expressivity</h4>
-<p>The fact that all our popular neural networks can memorize training labels
-perfectly might feel a bit shocking or even depressing.</p>
-
-<p>It might then be worth asking just how big (or small) a neural network must
-be before it is capable of such memorizing.</p>
-
-<p>Traditionally, people answered this by attempting to find the function
-class that a neural network with a certain number of parameters can express.
-However, the authors take a different and much simpler approach by
-asking instead how large a neural network must be to memorize \(n\) samples.
-This led to their main theoretical result in the paper:</p>
-
-<div class="theorem">
-    <div class="theorem-title">Theorem
-        
-        
-            (Neural Networks Of Size Linear To Sample Size Sufficient For Memorization)
-        
-    </div>
-    <div class="theorem-contents">
-        
-    There exists a two-layer neural network with ReLU activations and \(2n+d\) weights that
-    can represent any function on a sample of size \(n\) in \(d\) dimensions.
-    </div>
-</div>
+\[p_q=\frac{1}{|q|} \sum_{i=1}^{|q|} \log p\left(q_i \mid t, d, q_{&lt;i}\right)\]
 
 <h3 id="most-glaring-deficiency">Most Glaring Deficiency</h3>
-<p>In all honesty, I thought this was a very interesting and well-written paper
-considering the first author did it while interning at Google Brain (in contrast
-I feel that I accomplished nothing as cool or novel during my own internships).</p>
 
-<p>However, I must say that I would be surprised if no one realized that neural
-networks are capable of fitting random labels before this paper. I’m very
-positive that by the way of a programming bug or otherwise, someone should have
-already discovered this phenomenon way before, but probably did not
-think a lot about the ramifications of this fact.</p>
-
-<p>In addition, it might have been interesting to explore how removing known
-inductive bias that helps a particular problem domain may affect generalization.
-For instance, instead of using CNNs with strong inductive bias for visual data,
-it may have been interesting to see how the results would change if regular
-neural networks were used instead.</p>
+<p>In their results table, it was unclear whether they were using the vanilla or GBQ generated queries.
+The criteria for “Good Questions” for the GBQ prompts also feel pretty
+subjective, and there was no scientific comparison between the vanilla and GBQ
+approach (they only mentioned “Preliminary experiments demonstrate that GBQ
+leads to better performance than the Vanilla prompt when used in combination
+with in-domain input documents”).</p>
 
 <h3 id="conclusions-for-future-work">Conclusions for Future Work</h3>
-<p>Understanding generalization of over-parameterized models requires us to go
-beyond classical learning theory and explore alternative ways of studying the
-models, since these models are so over-parameterized and expressive that these
-theories would only ever be able to produce trivial bounds.</p>
+
+<p>Probably a pretty obvious paradigm these days, but training on synthetic data
+generated by LLMs can give good results as you can better control the structure
+and type of data that it generates to get exactly what you want.</p>
 
     </div>
   </article>
 
-  <p class="post-meta">Written September 10, 2023</p>
+  <p class="post-meta">Written September 29, 2024</p>
 <div id="giscus_thread" style="max-width: 800px; margin: 0 auto;">
   <script>
     let giscusTheme = localStorage.getItem("theme");

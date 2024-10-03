@@ -556,6 +556,9 @@ position of the relevant document changes.</p>
   <li>Put query both before and after context for decoder models</li>
   <li>As all models exhibit recency bias but small models don’t exhibit primacy
 bias, putting the most relevant context at the end may be helpful</li>
+  <li>Or use something like LostInTheMiddleRanker: i.e if the top 10 relevant
+documents are labelelled 1 through 10, it would order them <code class="language-plaintext highlighter-rouge">[1 3 5 7 9 10 8 6 4 2]</code>
+</li>
 </ol>
 
     </div>
@@ -600,7 +603,7 @@ bias, putting the most relevant context at the end may be helpful</li>
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2024 Fan Pu  Zeng. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: September 29, 2024.
+Last updated: October 03, 2024.
       </div>
     </footer>
 
