@@ -1789,3 +1789,90 @@ Url           = {http://arxiv.org/abs/2307.03172v3},
 File          = {2307.03172v3.pdf},
 EprintNoVer   = {2307.03172}
 }
+
+@article{2303.08559v2,
+Author        = {Yubo Ma and Yixin Cao and YongChing Hong and Aixin Sun},
+Title         = {Large Language Model Is Not a Good Few-shot Information Extractor, but a
+  Good Reranker for Hard Samples!},
+Eprint        = {2303.08559v2},
+DOI           = {10.18653/v1/2023.findings-emnlp.710},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CL},
+Abstract      = {Large Language Models (LLMs) have made remarkable strides in various tasks.
+Whether LLMs are competitive few-shot solvers for information extraction (IE)
+tasks, however, remains an open problem. In this work, we aim to provide a
+thorough answer to this question. Through extensive experiments on nine
+datasets across four IE tasks, we demonstrate that current advanced LLMs
+consistently exhibit inferior performance, higher latency, and increased budget
+requirements compared to fine-tuned SLMs under most settings. Therefore, we
+conclude that LLMs are not effective few-shot information extractors in
+general. Nonetheless, we illustrate that with appropriate prompting strategies,
+LLMs can effectively complement SLMs and tackle challenging samples that SLMs
+struggle with. And moreover, we propose an adaptive filter-then-rerank paradigm
+to combine the strengths of LLMs and SLMs. In this paradigm, SLMs serve as
+filters and LLMs serve as rerankers. By prompting LLMs to rerank a small
+portion of difficult samples identified by SLMs, our preliminary system
+consistently achieves promising improvements (2.4% F1-gain on average) on
+various IE tasks, with an acceptable time and cost investment.},
+Year          = {2023},
+Month         = {Mar},
+Url           = {http://arxiv.org/abs/2303.08559v2},
+File          = {2303.08559v2.pdf},
+EprintNoVer   = {2303.08559}
+}
+
+@article{2310.13243v1,
+Author        = {Shengyao Zhuang and Bing Liu and Bevan Koopman and Guido Zuccon},
+Title         = {Open-source Large Language Models are Strong Zero-shot Query Likelihood
+  Models for Document Ranking},
+Eprint        = {2310.13243v1},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.IR},
+Abstract      = {In the field of information retrieval, Query Likelihood Models (QLMs) rank
+documents based on the probability of generating the query given the content of
+a document. Recently, advanced large language models (LLMs) have emerged as
+effective QLMs, showcasing promising ranking capabilities. This paper focuses
+on investigating the genuine zero-shot ranking effectiveness of recent LLMs,
+which are solely pre-trained on unstructured text data without supervised
+instruction fine-tuning. Our findings reveal the robust zero-shot ranking
+ability of such LLMs, highlighting that additional instruction fine-tuning may
+hinder effectiveness unless a question generation task is present in the
+fine-tuning dataset. Furthermore, we introduce a novel state-of-the-art ranking
+system that integrates LLM-based QLMs with a hybrid zero-shot retriever,
+demonstrating exceptional effectiveness in both zero-shot and few-shot
+scenarios. We make our codebase publicly available at
+https://github.com/ielab/llm-qlm.},
+Year          = {2023},
+Month         = {Oct},
+Url           = {http://arxiv.org/abs/2310.13243v1},
+File          = {2310.13243v1.pdf},
+EprintNoVer   = {2310.13243}
+}
+
+@article{2202.05144v1,
+Author        = {Luiz Bonifacio and Hugo Abonizio and Marzieh Fadaee and Rodrigo Nogueira},
+Title         = {InPars: Data Augmentation for Information Retrieval using Large Language
+  Models},
+Eprint        = {2202.05144v1},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CL},
+Abstract      = {The information retrieval community has recently witnessed a revolution due
+to large pretrained transformer models. Another key ingredient for this
+revolution was the MS MARCO dataset, whose scale and diversity has enabled
+zero-shot transfer learning to various tasks. However, not all IR tasks and
+domains can benefit from one single dataset equally. Extensive research in
+various NLP tasks has shown that using domain-specific training data, as
+opposed to a general-purpose one, improves the performance of neural models. In
+this work, we harness the few-shot capabilities of large pretrained language
+models as synthetic data generators for IR tasks. We show that models finetuned
+solely on our unsupervised dataset outperform strong baselines such as BM25 as
+well as recently proposed self-supervised dense retrieval methods. Furthermore,
+retrievers finetuned on both supervised and our synthetic data achieve better
+zero-shot transfer than models finetuned only on supervised data. Code, models,
+and data are available at https://github.com/zetaalphavector/inpars .},
+Year          = {2022},
+Month         = {Feb},
+Url           = {http://arxiv.org/abs/2202.05144v1},
+File          = {2202.05144v1.pdf},
+EprintNoVer   = {2202.05144}
+}
