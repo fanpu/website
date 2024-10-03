@@ -36,7 +36,7 @@ They found a U-shaped curve across multiple models and retrieved document length
 In fact, it could even be possible that when the relevant document is in the middle, providing context is more harmful than not providing context at all:
 
 {% include figure.html
-    path="/assets/img/summaries/lost_in_the_middle_summary.webp"
+    path="/assets/img/summaries/lost-in-the-middle-summary.webp"
     width="300px"
     class="z-depth-1"
 %}
