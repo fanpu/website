@@ -77,3 +77,7 @@ format, and could be done as easily as few-shot prompting.
 ### Conclusions for Future Work
 
 Don't rule out using LLM-generated data as an intermediate step in a pipeline in creative ways!
+
+There's also a technique called reverse-HyDE, where synthetic content/metadata
+is generated for each of the documents to increase the chances that relevant
+queries will be close (embedding-wise) to it.
