@@ -86,3 +86,5 @@ position of the relevant document changes.
 1. Put query both before and after context for decoder models
 2. As all models exhibit recency bias but small models don't exhibit primacy
    bias, putting the most relevant context at the end may be helpful
+3. Or use something like LostInTheMiddleRanker: i.e if the top 10 relevant
+   documents are labelelled 1 through 10, it would order them `[1 3 5 7 9 10 8 6 4 2]`
