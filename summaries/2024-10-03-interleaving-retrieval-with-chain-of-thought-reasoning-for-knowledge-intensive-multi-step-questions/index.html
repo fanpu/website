@@ -465,17 +465,50 @@ data, and prompts are available at \urlhttps://github.com/stonybrooknlp/ircot</p
   <article class="post-content">
     
     <div id="markdown-content">
-      <h3 id="three-important-things">Three Important Things</h3>
+      <h3 id="two-important-things">Two Important Things</h3>
 
-<h4 id="1-foo">1. Foo</h4>
+<h4 id="1-interleaved-retrieval-guided-by-chain-of-thought">1. Interleaved Retrieval guided by Chain-of-Thought</h4>
 
-<h4 id="2-bar">2. Bar</h4>
+<p>Overall idea seems pretty similar to the 
+<a href="/summaries/2024-10-03-enhancing-retrieval-augmented-large-language-models-with-iterative-retrieval-generation-synergy/">Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Generation Synergy</a>
+paper, except that instead of having a pre-defined number of iterations, the CoT-guided LLM decides when to stop.</p>
 
-<h4 id="3-baz">3. Baz</h4>
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/summaries/ir_cot_workflow.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+</figure>
+
+<h4 id="2-results">2. Results</h4>
+
+<p>Unsurprisingly outperforms one-step retrievers and when
+no retrievers were used.</p>
+
+<figure>
+  <picture>
+    
+
+    <!-- Fallback to the original file -->
+    <img src="/assets/img/summaries/ir_cot_results.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+
+  </picture>
+</figure>
+
+<p>They also found that IRCoT’s CoT trace had fewer factual errors, and remains
+effective on smaller models (0.2B to 11B).</p>
 
 <h3 id="most-glaring-deficiency">Most Glaring Deficiency</h3>
 
+<p>Marginal novelty given other techniques like self-ask that came previously.</p>
+
 <h3 id="conclusions-for-future-work">Conclusions for Future Work</h3>
+
+<p>Could use a LLM to drive querying of RAG datastores guided by CoT to resolve
+complex queries.</p>
 
     </div>
   </article>

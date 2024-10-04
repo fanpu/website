@@ -10,7 +10,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Open-source Large Language Models are Strong Zero-shot Query Likelihood Models for Document Ranking | Fan Pu  Zeng</title>
+    <title>ASQA: Factoid Questions Meet Long-Form Answers | Fan Pu  Zeng</title>
     <meta name="author" content="Fan Pu  Zeng">
     <meta name="description" content="Homepage
 ">
@@ -39,14 +39,14 @@
     <link rel="shortcut icon" href="/assets/img/favicon_new.ico">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://fanpu.io/summaries/2024-09-29-open-source-large-language-models-are-strong-zero-shot-query-likelihood-models-for-document-ranking/">
+    <link rel="canonical" href="https://fanpu.io/summaries/2024-10-03-asqa-factoid-questions-meet-long-form-answers/">
     <!-- Dark Mode -->
     
 
     <!-- Twitter cards -->
     <meta name="twitter:site" content="@FanPu_Zeng">
     <meta name="twitter:creator" content="@">
-    <meta name="og:title" content="Open-source Large Language Models are Strong Zero-shot Query Likelihood Models for Document Ranking">
+    <meta name="og:title" content="ASQA: Factoid Questions Meet Long-Form Answers">
 
     
     <meta name="twitter:card" content="summary">
@@ -368,23 +368,22 @@
 <!-- _layouts/custom_bib.html -->
       <div class="row no-count">
         <!-- Entry bib key -->
-        <div id="2310.13243v1" class="col-sm-12">
+        <div id="2204.06092v2" class="col-sm-12">
         <!-- Title -->
         <div class="title"><h2>
-            <a href="http://arxiv.org/abs/2310.13243v1" rel="external nofollow noopener" target="_blank">
-                Open-source Large Language Models are Strong Zero-shot Query Likelihood
-  Models for Document Ranking
+            <a href="http://arxiv.org/abs/2204.06092v2" rel="external nofollow noopener" target="_blank">
+                ASQA: Factoid Questions Meet Long-Form Answers
             </a>
           </h2></div>
         <!-- Author -->
         <div class="author">
         
 
-        Shengyao Zhuang, Bing Liu, Bevan Koopman, and
+        Ivan Stelmakh, Yi Luan, Bhuwan Dhingra, and
           <span class="more-authors" title="click to view 1 more author" onclick="
                 var element = $(this);
                 element.attr('title', '');
-                var more_authors_text = element.text() == '1 more author' ? 'Guido Zuccon' : '1 more author';
+                var more_authors_text = element.text() == '1 more author' ? 'Ming-Wei Chang' : '1 more author';
                 var cursorPosition = 0;
                 var textAdder = setInterval(function(){
                   element.text(more_authors_text.substring(0, cursorPosition + 1));
@@ -399,7 +398,7 @@
         
         
         <div class="periodical">
-          <em></em> Oct 2023
+          <em></em> Apr 2022
         </div>
         <div class="periodical">
           
@@ -409,47 +408,51 @@
           <div class="links">
           <!--
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a> -->
-            <a href="http://arxiv.org/abs/2310.13243v1" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
+            <a href="http://arxiv.org/abs/2204.06092v2" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">arXiv</a>
           <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
             
-            <a href="https://arxiv.org/pdf/2310.13243v1.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+            <a href="https://arxiv.org/pdf/2204.06092v2.pdf" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
           <!-- -->
           </div>
           
           <div class="badges">
-            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-arxiv-id="2310.13243"></span>
+            <span class="altmetric-embed" data-hide-no-mentions="true" data-hide-less-than="15" data-badge-type="2" data-badge-popover="right" data-arxiv-id="2204.06092"></span>
           </div>
 
           <!-- Hidden abstract block -->
           <h3>Paper Abstract</h3>
           <div class="abstract">
-            <p>In the field of information retrieval, Query Likelihood Models (QLMs) rank
-documents based on the probability of generating the query given the content of
-a document. Recently, advanced large language models (LLMs) have emerged as
-effective QLMs, showcasing promising ranking capabilities. This paper focuses
-on investigating the genuine zero-shot ranking effectiveness of recent LLMs,
-which are solely pre-trained on unstructured text data without supervised
-instruction fine-tuning. Our findings reveal the robust zero-shot ranking
-ability of such LLMs, highlighting that additional instruction fine-tuning may
-hinder effectiveness unless a question generation task is present in the
-fine-tuning dataset. Furthermore, we introduce a novel state-of-the-art ranking
-system that integrates LLM-based QLMs with a hybrid zero-shot retriever,
-demonstrating exceptional effectiveness in both zero-shot and few-shot
-scenarios. We make our codebase publicly available at
-https://github.com/ielab/llm-qlm.</p>
+            <p>An abundance of datasets and availability of reliable evaluation metrics have
+resulted in strong progress in factoid question answering (QA). This progress,
+however, does not easily transfer to the task of long-form QA, where the goal
+is to answer questions that require in-depth explanations. The hurdles include
+(i) a lack of high-quality data, and (ii) the absence of a well-defined notion
+of the answer’s quality. In this work, we address these problems by (i)
+releasing a novel dataset and a task that we call ASQA (Answer Summaries for
+Questions which are Ambiguous); and (ii) proposing a reliable metric for
+measuring performance on ASQA. Our task focuses on factoid questions that are
+ambiguous, that is, have different correct answers depending on interpretation.
+Answers to ambiguous questions should synthesize factual information from
+multiple sources into a long-form summary that resolves the ambiguity. In
+contrast to existing long-form QA tasks (such as ELI5), ASQA admits a clear
+notion of correctness: a user faced with a good summary should be able to
+answer different interpretations of the original ambiguous question. We use
+this notion of correctness to define an automated metric of performance for
+ASQA. Our analysis demonstrates an agreement between this metric and human
+judgments, and reveals a considerable gap between human performance and strong
+baselines.</p>
           </div>
 <!-- Hidden bibtex block -->
           <div class="bibtex hidden">
-            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">2310.13243v1</span><span class="p">,</span>
-  <span class="na">author</span> <span class="p">=</span> <span class="s">{Zhuang, Shengyao and Liu, Bing and Koopman, Bevan and Zuccon, Guido}</span><span class="p">,</span>
-  <span class="na">title</span> <span class="p">=</span> <span class="s">{Open-source Large Language Models are Strong Zero-shot Query Likelihood
-    Models for Document Ranking}</span><span class="p">,</span>
-  <span class="na">eprint</span> <span class="p">=</span> <span class="s">{2310.13243v1}</span><span class="p">,</span>
+            <figure class="highlight"><pre><code class="language-bibtex" data-lang="bibtex"><span class="nc">@article</span><span class="p">{</span><span class="nl">2204.06092v2</span><span class="p">,</span>
+  <span class="na">author</span> <span class="p">=</span> <span class="s">{Stelmakh, Ivan and Luan, Yi and Dhingra, Bhuwan and Chang, Ming-Wei}</span><span class="p">,</span>
+  <span class="na">title</span> <span class="p">=</span> <span class="s">{ASQA: Factoid Questions Meet Long-Form Answers}</span><span class="p">,</span>
+  <span class="na">eprint</span> <span class="p">=</span> <span class="s">{2204.06092v2}</span><span class="p">,</span>
   <span class="na">archiveprefix</span> <span class="p">=</span> <span class="s">{arXiv}</span><span class="p">,</span>
-  <span class="na">primaryclass</span> <span class="p">=</span> <span class="s">{cs.IR}</span><span class="p">,</span>
-  <span class="na">year</span> <span class="p">=</span> <span class="s">{2023}</span><span class="p">,</span>
-  <span class="na">month</span> <span class="p">=</span> <span class="nv">oct</span><span class="p">,</span>
-  <span class="na">eprintnover</span> <span class="p">=</span> <span class="s">{2310.13243}</span>
+  <span class="na">primaryclass</span> <span class="p">=</span> <span class="s">{cs.CL}</span><span class="p">,</span>
+  <span class="na">year</span> <span class="p">=</span> <span class="s">{2022}</span><span class="p">,</span>
+  <span class="na">month</span> <span class="p">=</span> <span class="nv">apr</span><span class="p">,</span>
+  <span class="na">eprintnover</span> <span class="p">=</span> <span class="s">{2204.06092}</span>
 <span class="p">}</span></code></pre></figure>
           </div>
         </div>
@@ -461,70 +464,69 @@ https://github.com/ielab/llm-qlm.</p>
   <article class="post-content">
     
     <div id="markdown-content">
-      <h3 id="three-important-things">Three Important Things</h3>
+      <h3 id="two-important-things">Two Important Things</h3>
 
-<h4 id="1-query-likelihood-models">1. Query Likelihood Models</h4>
+<h4 id="1-answer-summaries-for-questions-which-are-ambiguous-asqa">1. Answer Summaries for Questions which are Ambiguous (ASQA)</h4>
 
-<p>Document ranking is usually performed by models fine-tuned on
-query-document datasets.</p>
+<p>Answering a long-form answer based off a set of relevant documents is
+essentially query-based multi-document summarization.
+Furthermore, such questions may be ambiguous.</p>
 
-<p>The paper proposes a new way of using LLMs to rank the relevance of documents
-for a supplied query. This is done by computing the probability of generating a
-query given a document, i.e its query likelihood:</p>
+<p>A good answer should address the ambiguity in the question, and synthesize all
+the valid short answers into a coherent long answer.
+For instance, the question <code class="language-plaintext highlighter-rouge">Who was the ruler of France in 1830</code> is ambiguous since there were two rulers.</p>
 
-\[S_{Q L M}(\boldsymbol{q}, d)=\frac{1}{|\boldsymbol{q}|} \sum_t \log \operatorname{LLM}\left(q_t \mid \boldsymbol{p}, d, \boldsymbol{q}_{&lt;t}\right),\]
+<p>They use the following desiderata for a good long answer:</p>
+<ul>
+  <li>Completeness. The long answer should contain all valid short answers.</li>
+  <li>Comprehensiveness. The long answer should address source of initial ambiguity, and map the relationship between the provided short answers</li>
+  <li>Fluency. Should be coherent and fluent</li>
+  <li>Attributability. Long answer should be grounded in provided documents</li>
+</ul>
 
-<p>i.e the perplexity of the query given the document \(d\) and the model and prompt \(\boldsymbol{p}\).</p>
+<p>They hired crowdworkers to annotate AmbigQA dataset to create the ASQA dataset
+that respects the above guidelines.</p>
 
-<p>The intuition is that the more relevant a query is to a document,
-the higher its query likelihood. They call this paradigm
-the query likelihood model (QLM).</p>
+<h4 id="2-evaluation-pipeline">2. Evaluation Pipeline</h4>
 
-<h4 id="2-extending-to-multi-shot-settings">2. Extending to Multi-shot Settings</h4>
+<p>They also came up with a new metric, the DR score for evaluating responses on their new ASQA dataset.</p>
 
-<p>The previous formulation is a zero-shot setting.
-To extend this to the multi-shot setting, they used 
-the Guided by Bad Questions template (see 
-<a href="/summaries/2024-09-29-inpars-data-augmentation-for-information-retrieval-using-large-language-models/">InPars: Data Augmentation for Information Retrieval using Large Language Models</a>).</p>
+<p>This DR score uses both the ROUGE score (measure of similarity between two texts based on overlapping n-grams)
+and they call disambiguation accuracy.</p>
 
-<p>In this template, 3 documents are provided, each accompanied by a bad and good
-question that pertains to it. This allows the model to learn what a good
-question should be.</p>
+<p>Disambiguation accuracy helps to address the many shortcomings of ROUGE (i.e semantically similar but syntactically different responses).
+It works by using an encoder model (Roberta) pre-trained on the SQUADv2 question
+answering dataset to generate the short answer based off of the long answer, and
+then computing the F1 score in terms of the set of tokens
+that appear (after normalizing it like removing irrelevant characters like
+punctuation).</p>
 
-<h4 id="3-results">3. Results</h4>
-
-<p>Zero-shot performance on pretrained-only models was surprisingly competitive.
-They also found that performance on instruction-tuned rerankers that did not
-contain question generation tasks were worse than zero-shot non-instruction
-tuned QLMs, indicating that instruction tuning could be harmful if the desired
-task was not reflected in its finetuning dataset.</p>
+<p>Overall workflow:</p>
 
 <figure>
   <picture>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/summaries/query_likelihood_model_results.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/summaries/asqa_workflow.webp" class="z-depth-1 center" width="600px" height="auto" style="object-fit: cover" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 </figure>
 
 <h3 id="most-glaring-deficiency">Most Glaring Deficiency</h3>
 
-<p>Prompt format for the QLM was somewhat arbitrary.  It’s also possible that the
-QLM may be sensitive to length, and there may be degenerate queries with low
-perplexity (i.e repeated phrases) but which are not actually relevant.</p>
+<p>I was really confused how they could use Roberta to generate text, since it’s an
+encoder-only model. Maybe they meant another model when they said SQUADv2 model.</p>
 
 <h3 id="conclusions-for-future-work">Conclusions for Future Work</h3>
 
-<p>Being able to compute a probability distribution allows you to sample from it.
-But sometimes, the values of the probability distribution itself could be
-useful!</p>
+<p>A good dataset should address the limitations of previous datasets that come
+before it, and with that, limitations in the evaluation techniques used.</p>
 
     </div>
   </article>
 
-  <p class="post-meta">Written September 29, 2024</p>
+  <p class="post-meta">Written October 3, 2024</p>
 <div id="giscus_thread" style="max-width: 800px; margin: 0 auto;">
   <script>
     let giscusTheme = localStorage.getItem("theme");
