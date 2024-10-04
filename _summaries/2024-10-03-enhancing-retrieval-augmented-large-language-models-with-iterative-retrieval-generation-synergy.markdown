@@ -10,7 +10,7 @@ bib_id: 2305.15294v2
 #### 1. Iterative Retrieval-Generation Synergy
 
 Instead of just retrieving context and generating a response for RAG just once,
-we can iteratively perform this process and give the LLM the opportunity to
+we can iteratively perform this pgocess and give the LLM the opportunity to
 retrieve more relevant information in the next iteration. This is because there
 may be a semantic gap between the original question and the context needed to
 answer it.

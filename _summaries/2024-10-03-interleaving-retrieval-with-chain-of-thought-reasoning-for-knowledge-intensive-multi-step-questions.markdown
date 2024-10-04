@@ -10,8 +10,7 @@ bib_id: 2212.10509v2
 #### 1. Interleaved Retrieval guided by Chain-of-Thought
 
 Overall idea seems pretty similar to the 
-[Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Generation Synergy]({% link _summaries/
-2024-10-03-enhancing-retrieval-augmented-large-language-models-with-iterative-retrieval-generation-synergy.markdown %})
+[Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Generation Synergy]({% link _summaries/2024-10-03-enhancing-retrieval-augmented-large-language-models-with-iterative-retrieval-generation-synergy.markdown %})
 paper, except that instead of having a pre-defined number of iterations, the CoT-guided LLM decides when to stop.
 
 {% include figure.html
@@ -26,7 +25,7 @@ Unsurprisingly outperforms one-step retrievers and when
 no retrievers were used.
 
 {% include figure.html
-    path="/assets/img/summaries/ir_cot_workflow.webp"
+    path="/assets/img/summaries/ir_cot_results.webp"
     width="600px"
     class="z-depth-1"
 %}
