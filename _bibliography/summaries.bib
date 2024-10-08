@@ -1976,3 +1976,71 @@ Url           = {http://arxiv.org/abs/2204.06092v2},
 File          = {2204.06092v2.pdf},
 EprintNoVer   = {2204.06092}
 }
+
+@article{2209.10063v3,
+Author        = {Wenhao Yu and Dan Iter and Shuohang Wang and Yichong Xu and Mingxuan Ju and Soumya Sanyal and Chenguang Zhu and Michael Zeng and Meng Jiang},
+Title         = {Generate rather than Retrieve: Large Language Models are Strong Context
+  Generators},
+Eprint        = {2209.10063v3},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CL},
+Abstract      = {Knowledge-intensive tasks, such as open-domain question answering (QA),
+require access to a large amount of world or domain knowledge. A common
+approach for knowledge-intensive tasks is to employ a retrieve-then-read
+pipeline that first retrieves a handful of relevant contextual documents from
+an external corpus such as Wikipedia and then predicts an answer conditioned on
+the retrieved documents. In this paper, we present a novel perspective for
+solving knowledge-intensive tasks by replacing document retrievers with large
+language model generators. We call our method generate-then-read (GenRead),
+which first prompts a large language model to generate contextutal documents
+based on a given question, and then reads the generated documents to produce
+the final answer. Furthermore, we propose a novel clustering-based prompting
+method that selects distinct prompts, resulting in the generated documents that
+cover different perspectives, leading to better recall over acceptable answers.
+We conduct extensive experiments on three different knowledge-intensive tasks,
+including open-domain QA, fact checking, and dialogue system. Notably, GenRead
+achieves 71.6 and 54.4 exact match scores on TriviaQA and WebQ, significantly
+outperforming the state-of-the-art retrieve-then-read pipeline DPR-FiD by +4.0
+and +3.9, without retrieving any documents from any external knowledge source.
+Lastly, we demonstrate the model performance can be further improved by
+combining retrieval and generation. Our code and generated documents can be
+found at https://github.com/wyu97/GenRead.},
+Year          = {2022},
+Month         = {Sep},
+Url           = {http://arxiv.org/abs/2209.10063v3},
+File          = {2209.10063v3.pdf},
+EprintNoVer   = {2209.10063}
+}
+
+@article{2112.09118v4,
+Author        = {Gautier Izacard and Mathilde Caron and Lucas Hosseini and Sebastian Riedel and Piotr Bojanowski and Armand Joulin and Edouard Grave},
+Title         = {Unsupervised Dense Information Retrieval with Contrastive Learning},
+Eprint        = {2112.09118v4},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.IR},
+Abstract      = {Recently, information retrieval has seen the emergence of dense retrievers,
+using neural networks, as an alternative to classical sparse methods based on
+term-frequency. These models have obtained state-of-the-art results on datasets
+and tasks where large training sets are available. However, they do not
+transfer well to new applications with no training data, and are outperformed
+by unsupervised term-frequency methods such as BM25. In this work, we explore
+the limits of contrastive learning as a way to train unsupervised dense
+retrievers and show that it leads to strong performance in various retrieval
+settings. On the BEIR benchmark our unsupervised model outperforms BM25 on 11
+out of 15 datasets for the Recall@100. When used as pre-training before
+fine-tuning, either on a few thousands in-domain examples or on the large
+MS~MARCO dataset, our contrastive model leads to improvements on the BEIR
+benchmark. Finally, we evaluate our approach for multi-lingual retrieval, where
+training data is even scarcer than for English, and show that our approach
+leads to strong unsupervised performance. Our model also exhibits strong
+cross-lingual transfer when fine-tuned on supervised English data only and
+evaluated on low resources language such as Swahili. We show that our
+unsupervised models can perform cross-lingual retrieval between different
+scripts, such as retrieving English documents from Arabic queries, which would
+not be possible with term matching methods.},
+Year          = {2021},
+Month         = {Dec},
+Url           = {http://arxiv.org/abs/2112.09118v4},
+File          = {2112.09118v4.pdf},
+EprintNoVer   = {2112.09118}
+}
