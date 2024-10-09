@@ -3,7 +3,6 @@ layout: summary
 title: "Unsupervised Dense Information Retrieval with Contrastive Learning"
 giscus_comments: true
 bib_id: 2112.09118v4
-published: false
 ---
 
 ### Three Important Things
@@ -63,7 +62,8 @@ $$\theta_k \leftarrow m \theta_k+(1-m) \theta_q$$
 
 #### 4. Results
 
-It's pretty good against BM25 on unsupervised tasks, and both of them are generally much better than other unsupervised dense methods:
+It's pretty good against BM25 on unsupervised tasks, and both of them are generally much better than other unsupervised dense methods. It was surprising to me just how strong
+BM25 is as a baseline.
 
 {% include figure.html
     path="/assets/img/summaries/contriever_results.webp"
@@ -71,8 +71,26 @@ It's pretty good against BM25 on unsupervised tasks, and both of them are genera
     class="z-depth-1"
 %}
 
-TODO: supervised evals
+In the supervised setting, they're also SOTA for some datasets, though
+I haven't had time to look into any of the other methods other than ColBERT.
++CE means that they added a cross encoder for re-ranking, which helps with
+nDCG scores as it is position-sensitive.
+
+{% include figure.html
+    path="/assets/img/summaries/contriever_supervised_results.webp"
+    width="600px"
+    class="z-depth-1"
+%}
 
 ### Most Glaring Deficiency
 
+Would be interesting to know if there's any kind of "scaling laws" if the data
+that it was trained in an unsupervised fashion was scaled up.
+
 ### Conclusions for Future Work
+
+Contriever is one of the most competitive & popular baselines for retrievers,
+and shows how unsupervised techniques have broad appeal.
+
+Not really the contribution of this paper, but I also thought the method of
+using momentum updates for the key network in MuCo was really cool.
