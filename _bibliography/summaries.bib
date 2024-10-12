@@ -2044,3 +2044,74 @@ Url           = {http://arxiv.org/abs/2112.09118v4},
 File          = {2112.09118v4.pdf},
 EprintNoVer   = {2112.09118}
 }
+
+@article{2403.09472v1,
+Author        = {Zhiqing Sun and Longhui Yu and Yikang Shen and Weiyang Liu and Yiming Yang and Sean Welleck and Chuang Gan},
+Title         = {Easy-to-Hard Generalization: Scalable Alignment Beyond Human Supervision},
+Eprint        = {2403.09472v1},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.LG},
+Abstract      = {Current AI alignment methodologies rely on human-provided demonstrations or
+judgments, and the learned capabilities of AI systems would be upper-bounded by
+human capabilities as a result. This raises a challenging research question:
+How can we keep improving the systems when their capabilities have surpassed
+the levels of humans? This paper answers this question in the context of
+tackling hard reasoning tasks (e.g., level 4-5 MATH problems) via learning from
+human annotations on easier tasks (e.g., level 1-3 MATH problems), which we
+term as \textit{easy-to-hard generalization}. Our key insight is that an
+evaluator (reward model) trained on supervisions for easier tasks can be
+effectively used for scoring candidate solutions of harder tasks and hence
+facilitating easy-to-hard generalization over different levels of tasks. Based
+on this insight, we propose a novel approach to scalable alignment, which
+firstly trains the process-supervised reward models on easy problems (e.g.,
+level 1-3), and then uses them to evaluate the performance of policy models on
+hard problems. We show that such \textit{easy-to-hard generalization from
+evaluators} can enable \textit{easy-to-hard generalizations in generators}
+either through re-ranking or reinforcement learning (RL). Notably, our
+process-supervised 7b RL model achieves an accuracy of 34.0\% on MATH500,
+despite only using human supervision on easy problems. Our approach suggests a
+promising path toward AI systems that advance beyond the frontier of human
+supervision.},
+Year          = {2024},
+Month         = {Mar},
+Url           = {http://arxiv.org/abs/2403.09472v1},
+File          = {2403.09472v1.pdf},
+EprintNoVer   = {2403.09472}
+}
+
+@article{2409.12917v2,
+Author        = {Aviral Kumar and Vincent Zhuang and Rishabh Agarwal and Yi Su and John D Co-Reyes and Avi Singh and Kate Baumli and Shariq Iqbal and Colton Bishop and Rebecca Roelofs and Lei M Zhang and Kay McKinney and Disha Shrivastava and Cosmin Paduraru and George Tucker and Doina Precup and Feryal Behbahani and Aleksandra Faust},
+Title         = {Training Language Models to Self-Correct via Reinforcement Learning},
+Eprint        = {2409.12917v2},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.LG},
+Abstract      = {Self-correction is a highly desirable capability of large language models
+(LLMs), yet it has consistently been found to be largely ineffective in modern
+LLMs. Current methods for training self-correction typically depend on either
+multiple models, a more advanced model, or additional forms of supervision. To
+address these shortcomings, we develop a multi-turn online reinforcement
+learning (RL) approach, SCoRe, that significantly improves an LLM's
+self-correction ability using entirely self-generated data. To build SCoRe, we
+first show that variants of supervised fine-tuning (SFT) on offline
+model-generated correction traces are often insufficient for instilling
+self-correction behavior. In particular, we observe that training via SFT falls
+prey to either a distribution mismatch between mistakes made by the
+data-collection policy and the model's own responses, or to behavior collapse,
+where learning implicitly prefers only a certain mode of correction behavior
+that is often not effective at self-correction on test problems. SCoRe
+addresses these challenges by training under the model's own distribution of
+self-generated correction traces and using appropriate regularization to steer
+the learning process into learning a self-correction behavior that is effective
+at test time as opposed to fitting high-reward responses for a given prompt.
+This regularization process includes an initial phase of multi-turn RL on a
+base model to generate a policy initialization that is less susceptible to
+collapse, followed by using a reward bonus to amplify self-correction. With
+Gemini 1.0 Pro and 1.5 Flash models, we find that SCoRe achieves
+state-of-the-art self-correction performance, improving the base models'
+self-correction by 15.6% and 9.1% respectively on MATH and HumanEval.},
+Year          = {2024},
+Month         = {Sep},
+Url           = {http://arxiv.org/abs/2409.12917v2},
+File          = {2409.12917v2.pdf},
+EprintNoVer   = {2409.12917}
+}
