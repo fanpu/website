@@ -3,7 +3,6 @@ layout: summary
 title: "Generate rather than Retrieve: Large Language Models are Strong Context Generators"
 giscus_comments: true
 bib_id: 2209.10063v3
-published: false
 ---
 
 #### 1. Generate-then-Read
