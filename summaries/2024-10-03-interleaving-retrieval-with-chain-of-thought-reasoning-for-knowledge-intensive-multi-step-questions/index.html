@@ -469,9 +469,31 @@ data, and prompts are available at \urlhttps://github.com/stonybrooknlp/ircot</p
 
 <h4 id="1-interleaved-retrieval-guided-by-chain-of-thought">1. Interleaved Retrieval guided by Chain-of-Thought</h4>
 
-<p>Overall idea seems pretty similar to the 
-<a href="/summaries/2024-10-03-enhancing-retrieval-augmented-large-language-models-with-iterative-retrieval-generation-synergy/">Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Generation Synergy</a>
-paper, except that instead of having a pre-defined number of iterations, the CoT-guided LLM decides when to stop.</p>
+<p>The paper’s insight is to use CoT to guide retrieval, and use the retrieved
+contents to then guide CoT again.</p>
+
+<p>This is done as follows:</p>
+
+<ul>
+  <li>Generate one sentence of CoT</li>
+  <li>Use CoT sentence to retrieve additional piece of context</li>
+  <li>Using new context, repeat the previous steps until answer is provided, or reached max number of steps</li>
+</ul>
+
+<p>The retrieved context is ordered randomly at each step. As the LLM may output
+multiple sentences of CoT each time, they just take one newly generated sentence
+and drop the rest.</p>
+
+<p>Here’s the overall structure of the prompt:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Wikipedia Title: &lt;Page Title&gt;
+&lt;Paragraph Text&gt;
+...
+Wikipedia Title: &lt;Page Title&gt;
+&lt;Paragraph Text&gt;
+Q: &lt;Question&gt;
+A: &lt;CoT-Sent-1&gt; ... &lt;CoT-Sent-n&gt;
+</code></pre></div></div>
 
 <figure>
   <picture>
@@ -552,7 +574,7 @@ complex queries.</p>
     <footer class="fixed-bottom">
       <div class="container mt-0">
         © Copyright 2024 Fan Pu  Zeng. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme.
-Last updated: October 15, 2024.
+Last updated: October 23, 2024.
       </div>
     </footer>
 
