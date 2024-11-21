@@ -71,15 +71,26 @@ forms since then. All banner pictures on the blog are taken by yours truly!
 
 ## Talks
 
-Slides for talks that I gave
-- ({% link
-  /assets/presentations/Superalignment.pdf %}), [Superalignment, or how to train models smarter than us](https://github.com/cslamber)
-  {: .course-item #course98212 }
+Slides for talks that I gave. You are free to share, adapt, and reuse these
+materials, provided that you give appropriate credit.
+
+- (2024-11-18) [A Statistical Approach to Language Model Evaluations]({% link
+  /assets/presentations/Statistics for Evals.pdf %})
+- (2024-10-08) [Advanced Retrieval Augmented Generation Techniques]({% link
+  /assets/presentations/Advanced Retrieval Augmented Generation.pdf %})
+- (2024-07-24) [Superalignment, or how to train models smarter than us]({% link
+  /assets/presentations/Superalignment.pdf %})
+- (2024-05-03) [Rotary Positional Embeddings (RoPE)]({% link
+  /assets/presentations/Rotary Positional Embeddings.pdf %})
+- (2024-04-30) [Parameter-Efficient Fine-Tuning]({% link
+  /assets/presentations/Parameter Efficient Fine-Tuning.pdf %})
+- (2024-03-01) [Understanding Transformers]({% link
+  /assets/presentations/Understanding Transformers.pdf %})
 
 
 ## Starred Blog Posts
 
-Some of my more popular posts
+Some of my more popular posts:
 
 **Technical Posts**
 
