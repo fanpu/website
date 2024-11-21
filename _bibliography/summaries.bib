@@ -2009,3 +2009,170 @@ Url           = {http://arxiv.org/abs/2405.14333v1},
 File          = {2405.14333v1.pdf},
 EprintNoVer   = {2405.14333}
 }
+
+@article{2209.10063v3,
+Author        = {Wenhao Yu and Dan Iter and Shuohang Wang and Yichong Xu and Mingxuan Ju and Soumya Sanyal and Chenguang Zhu and Michael Zeng and Meng Jiang},
+Title         = {Generate rather than Retrieve: Large Language Models are Strong Context
+  Generators},
+Eprint        = {2209.10063v3},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CL},
+Abstract      = {Knowledge-intensive tasks, such as open-domain question answering (QA),
+require access to a large amount of world or domain knowledge. A common
+approach for knowledge-intensive tasks is to employ a retrieve-then-read
+pipeline that first retrieves a handful of relevant contextual documents from
+an external corpus such as Wikipedia and then predicts an answer conditioned on
+the retrieved documents. In this paper, we present a novel perspective for
+solving knowledge-intensive tasks by replacing document retrievers with large
+language model generators. We call our method generate-then-read (GenRead),
+which first prompts a large language model to generate contextutal documents
+based on a given question, and then reads the generated documents to produce
+the final answer. Furthermore, we propose a novel clustering-based prompting
+method that selects distinct prompts, resulting in the generated documents that
+cover different perspectives, leading to better recall over acceptable answers.
+We conduct extensive experiments on three different knowledge-intensive tasks,
+including open-domain QA, fact checking, and dialogue system. Notably, GenRead
+achieves 71.6 and 54.4 exact match scores on TriviaQA and WebQ, significantly
+outperforming the state-of-the-art retrieve-then-read pipeline DPR-FiD by +4.0
+and +3.9, without retrieving any documents from any external knowledge source.
+Lastly, we demonstrate the model performance can be further improved by
+combining retrieval and generation. Our code and generated documents can be
+found at https://github.com/wyu97/GenRead.},
+Year          = {2022},
+Month         = {Sep},
+Url           = {http://arxiv.org/abs/2209.10063v3},
+File          = {2209.10063v3.pdf},
+EprintNoVer   = {2209.10063}
+}
+
+@article{2112.09118v4,
+Author        = {Gautier Izacard and Mathilde Caron and Lucas Hosseini and Sebastian Riedel and Piotr Bojanowski and Armand Joulin and Edouard Grave},
+Title         = {Unsupervised Dense Information Retrieval with Contrastive Learning},
+Eprint        = {2112.09118v4},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.IR},
+Abstract      = {Recently, information retrieval has seen the emergence of dense retrievers,
+using neural networks, as an alternative to classical sparse methods based on
+term-frequency. These models have obtained state-of-the-art results on datasets
+and tasks where large training sets are available. However, they do not
+transfer well to new applications with no training data, and are outperformed
+by unsupervised term-frequency methods such as BM25. In this work, we explore
+the limits of contrastive learning as a way to train unsupervised dense
+retrievers and show that it leads to strong performance in various retrieval
+settings. On the BEIR benchmark our unsupervised model outperforms BM25 on 11
+out of 15 datasets for the Recall@100. When used as pre-training before
+fine-tuning, either on a few thousands in-domain examples or on the large
+MS~MARCO dataset, our contrastive model leads to improvements on the BEIR
+benchmark. Finally, we evaluate our approach for multi-lingual retrieval, where
+training data is even scarcer than for English, and show that our approach
+leads to strong unsupervised performance. Our model also exhibits strong
+cross-lingual transfer when fine-tuned on supervised English data only and
+evaluated on low resources language such as Swahili. We show that our
+unsupervised models can perform cross-lingual retrieval between different
+scripts, such as retrieving English documents from Arabic queries, which would
+not be possible with term matching methods.},
+Year          = {2021},
+Month         = {Dec},
+Url           = {http://arxiv.org/abs/2112.09118v4},
+File          = {2112.09118v4.pdf},
+EprintNoVer   = {2112.09118}
+}
+
+@article{2403.09472v1,
+Author        = {Zhiqing Sun and Longhui Yu and Yikang Shen and Weiyang Liu and Yiming Yang and Sean Welleck and Chuang Gan},
+Title         = {Easy-to-Hard Generalization: Scalable Alignment Beyond Human Supervision},
+Eprint        = {2403.09472v1},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.LG},
+Abstract      = {Current AI alignment methodologies rely on human-provided demonstrations or
+judgments, and the learned capabilities of AI systems would be upper-bounded by
+human capabilities as a result. This raises a challenging research question:
+How can we keep improving the systems when their capabilities have surpassed
+the levels of humans? This paper answers this question in the context of
+tackling hard reasoning tasks (e.g., level 4-5 MATH problems) via learning from
+human annotations on easier tasks (e.g., level 1-3 MATH problems), which we
+term as \textit{easy-to-hard generalization}. Our key insight is that an
+evaluator (reward model) trained on supervisions for easier tasks can be
+effectively used for scoring candidate solutions of harder tasks and hence
+facilitating easy-to-hard generalization over different levels of tasks. Based
+on this insight, we propose a novel approach to scalable alignment, which
+firstly trains the process-supervised reward models on easy problems (e.g.,
+level 1-3), and then uses them to evaluate the performance of policy models on
+hard problems. We show that such \textit{easy-to-hard generalization from
+evaluators} can enable \textit{easy-to-hard generalizations in generators}
+either through re-ranking or reinforcement learning (RL). Notably, our
+process-supervised 7b RL model achieves an accuracy of 34.0\% on MATH500,
+despite only using human supervision on easy problems. Our approach suggests a
+promising path toward AI systems that advance beyond the frontier of human
+supervision.},
+Year          = {2024},
+Month         = {Mar},
+Url           = {http://arxiv.org/abs/2403.09472v1},
+File          = {2403.09472v1.pdf},
+EprintNoVer   = {2403.09472}
+}
+
+@article{2409.12917v2,
+Author        = {Aviral Kumar and Vincent Zhuang and Rishabh Agarwal and Yi Su and John D Co-Reyes and Avi Singh and Kate Baumli and Shariq Iqbal and Colton Bishop and Rebecca Roelofs and Lei M Zhang and Kay McKinney and Disha Shrivastava and Cosmin Paduraru and George Tucker and Doina Precup and Feryal Behbahani and Aleksandra Faust},
+Title         = {Training Language Models to Self-Correct via Reinforcement Learning},
+Eprint        = {2409.12917v2},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.LG},
+Abstract      = {Self-correction is a highly desirable capability of large language models
+(LLMs), yet it has consistently been found to be largely ineffective in modern
+LLMs. Current methods for training self-correction typically depend on either
+multiple models, a more advanced model, or additional forms of supervision. To
+address these shortcomings, we develop a multi-turn online reinforcement
+learning (RL) approach, SCoRe, that significantly improves an LLM's
+self-correction ability using entirely self-generated data. To build SCoRe, we
+first show that variants of supervised fine-tuning (SFT) on offline
+model-generated correction traces are often insufficient for instilling
+self-correction behavior. In particular, we observe that training via SFT falls
+prey to either a distribution mismatch between mistakes made by the
+data-collection policy and the model's own responses, or to behavior collapse,
+where learning implicitly prefers only a certain mode of correction behavior
+that is often not effective at self-correction on test problems. SCoRe
+addresses these challenges by training under the model's own distribution of
+self-generated correction traces and using appropriate regularization to steer
+the learning process into learning a self-correction behavior that is effective
+at test time as opposed to fitting high-reward responses for a given prompt.
+This regularization process includes an initial phase of multi-turn RL on a
+base model to generate a policy initialization that is less susceptible to
+collapse, followed by using a reward bonus to amplify self-correction. With
+Gemini 1.0 Pro and 1.5 Flash models, we find that SCoRe achieves
+state-of-the-art self-correction performance, improving the base models'
+self-correction by 15.6% and 9.1% respectively on MATH and HumanEval.},
+Year          = {2024},
+Month         = {Sep},
+Url           = {http://arxiv.org/abs/2409.12917v2},
+File          = {2409.12917v2.pdf},
+EprintNoVer   = {2409.12917}
+}
+
+@article{2309.15217v1,
+Author        = {Shahul Es and Jithin James and Luis Espinosa-Anke and Steven Schockaert},
+Title         = {RAGAS: Automated Evaluation of Retrieval Augmented Generation},
+Eprint        = {2309.15217v1},
+ArchivePrefix = {arXiv},
+PrimaryClass  = {cs.CL},
+Abstract      = {We introduce RAGAs (Retrieval Augmented Generation Assessment), a framework
+for reference-free evaluation of Retrieval Augmented Generation (RAG)
+pipelines. RAG systems are composed of a retrieval and an LLM based generation
+module, and provide LLMs with knowledge from a reference textual database,
+which enables them to act as a natural language layer between a user and
+textual databases, reducing the risk of hallucinations. Evaluating RAG
+architectures is, however, challenging because there are several dimensions to
+consider: the ability of the retrieval system to identify relevant and focused
+context passages, the ability of the LLM to exploit such passages in a faithful
+way, or the quality of the generation itself. With RAGAs, we put forward a
+suite of metrics which can be used to evaluate these different dimensions
+\textit{without having to rely on ground truth human annotations}. We posit
+that such a framework can crucially contribute to faster evaluation cycles of
+RAG architectures, which is especially important given the fast adoption of
+LLMs.},
+Year          = {2023},
+Month         = {Sep},
+Url           = {http://arxiv.org/abs/2309.15217v1},
+File          = {2309.15217v1.pdf},
+EprintNoVer   = {2309.15217}
+}

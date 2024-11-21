@@ -9,9 +9,30 @@ bib_id: 2212.10509v2
 
 #### 1. Interleaved Retrieval guided by Chain-of-Thought
 
-Overall idea seems pretty similar to the 
-[Enhancing Retrieval-Augmented Large Language Models with Iterative Retrieval-Generation Synergy]({% link _summaries/2024-10-03-enhancing-retrieval-augmented-large-language-models-with-iterative-retrieval-generation-synergy.markdown %})
-paper, except that instead of having a pre-defined number of iterations, the CoT-guided LLM decides when to stop.
+The paper's insight is to use CoT to guide retrieval, and use the retrieved
+contents to then guide CoT again.
+
+This is done as follows:
+
+- Generate one sentence of CoT
+- Use CoT sentence to retrieve additional piece of context
+- Using new context, repeat the previous steps until answer is provided, or reached max number of steps
+
+The retrieved context is ordered randomly at each step. As the LLM may output
+multiple sentences of CoT each time, they just take one newly generated sentence
+and drop the rest.
+
+Here's the overall structure of the prompt:
+
+```
+Wikipedia Title: <Page Title>
+<Paragraph Text>
+...
+Wikipedia Title: <Page Title>
+<Paragraph Text>
+Q: <Question>
+A: <CoT-Sent-1> ... <CoT-Sent-n>
+```
 
 {% include figure.html
     path="/assets/img/summaries/ir_cot_workflow.webp"
