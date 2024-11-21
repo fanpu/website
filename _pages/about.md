@@ -71,7 +71,8 @@ forms since then. All banner pictures on the blog are taken by yours truly!
 
 ## Talks
 
-Slides for talks that I gave. You are free to share, adapt, and reuse these
+Slides for talks on LLM-related topics that I gave.
+You are free to share, adapt, and reuse these
 materials, provided that you give appropriate credit.
 
 - (2024-11-18) [A Statistical Approach to Language Model Evaluations]({% link
