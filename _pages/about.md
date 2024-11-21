@@ -69,16 +69,24 @@ I have a Technician amateur radio license, with callsign
 This blog was originally started on 24 June 2018, although it has taken many
 forms since then. All banner pictures on the blog are taken by yours truly!
 
+## Talks
+
+Slides for talks that I gave
+- ({% link
+  /assets/presentations/Superalignment.pdf %}), [Superalignment, or how to train models smarter than us](https://github.com/cslamber)
+  {: .course-item #course98212 }
+
+
 ## Starred Blog Posts
 
-Some of my more popular posts that might be of interest:
+Some of my more popular posts
 
 **Technical Posts**
 
+- [Score-Based Diffusion Models]({% post_url 2023-06-07-score-based-diffusion-models %})
 - [(Paper Summary) Zero-shot Image-to-Image Translation]({% link _summaries/2023-10-22-zero-shot-image-to-image-translation.markdown %})
 - [(Paper Summary) The Implicit Bias of Gradient Descent on Separable Data]({% link _summaries/2023-09-09-the-implicit-bias-of-gradient-descent-on-separable-data.markdown %})
 - [A Unified Framework for High-Dimensional Analysis of M-Estimators with Decomposable Regularizers: A Guided Walkthrough]({% post_url 2023-07-14-high-dimensional-analysis-of-m-estimators %})
-- [Score-Based Diffusion Models]({% post_url 2023-06-07-score-based-diffusion-models %})
 - [The Delightful Consequences of the Graph Minor Theorem]({% post_url 2022-06-01-the-delightful-consequences-of-the-graph-minor-theorem %})
 - [Universal types, and your type checker doesn't suck as much as you think]({% post_url 2022-01-11-universal-types %})
 
