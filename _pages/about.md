@@ -6,7 +6,7 @@ subtitle: Software Engineer at <a href='https://www.janestreet.com/'>Jane Street
 
 profile:
   align: right
-  image: fjord.webp
+  image: untermyer.webp
   image_circular: false # crops the image to make it circular
   address: >
 
@@ -17,8 +17,17 @@ latest_posts: false # includes a list of the newest posts
 social: true # includes social icons at the bottom of the page
 ---
 
-Hello! I am Fan Pu, and I work with large language models
-and machine learning at [Jane Street](https://www.janestreet.com/).
+Hello! I am Fan Pu, and I help large language models have a good time at [Jane Street](https://www.janestreet.com/) on the AI Assistants team.
+
+Specifically, I work on fine-tuning LLMs to be proficient at writing OCaml,
+crafting evals for a variety of (mostly coding-related) tasks that we care
+about, and leading the development of several in-house RAG use cases, including
+for trading. 
+
+*Our team is hiring* - if this sounds interesting to you and you believe you are
+*a
+good fit, please shoot me an email!
+
 I recently graduated with a M.S (2023) and B.S (2022) in Computer
 Science from [Carnegie Mellon University](https://www.cmu.edu/).
 
@@ -33,36 +42,32 @@ Street](https://www.janestreet.com/), [Meta](https://about.meta.com/),
 Models](https://andrejristeski.github.io/10708-S23/) in the Spring 2023
 semester.
 
-My interests currently lie in large language models and deep learning theory.
-It is a really exciting time to be alive and I can't wait to see what the next
-few years will bring in ML. My eventual goal is to build a machine learning
-startup, for the betterment of <s>humanity</s> the world.
+My current academic interests lies in understanding reasoning in large language
+models and exploring the theoretical foundations of deep learning. Specifically,
+I am interested in the principles underlying generalization and the mechanisms
+contributing to the effectiveness of optimization algorithms.
 
-In my free time, I enjoy bouldering, K-pop dancing, running, reading and
+In my free time, I enjoy bouldering, K-pop dance, running, reading and
 learning new things, writing things for my blog, and watching anime. I used to
 do sprint canoe competitively. If I have an extended break I enjoy traveling,
 especially hiking and exploring the great outdoors. Most of the banner pictures
 on my blog posts were taken during these hikes. My favorite classroom in CMU is
 GHC 4303.
 
-I grew up in my hometown Singapore before moving to the US for college and work. I try
-to go back and visit once a year.
+I grew up in my hometown Singapore before moving to the US for college and work.
+I try to go back and visit once a year.
 
 Feel free to reach out to me at fzeng[at]alumni[dot]cmu[dot]edu. I am happy to
-chat and share any of my experiences.
-Unfortunately, I am unable to provide referrals for people that I have not
-worked with as I cannot give a strong recommendation.
+chat and provide advice.
 
-I have a Technician amateur radio license, and my callsign is
+Regrettably, I am unable to provide referrals for people that I have not
+directly collaborated with, as I cannot write you a meaningful recommendation.
+
+I have a Technician amateur radio license, with callsign 
 [KC3UFE](https://www.fccbulletin.com/callsign/?q=KC3UFE).
 
 This blog was originally started on 24 June 2018, although it has taken many
-forms since then. I write about things that I find interesting, and which might
-be helpful for other people, with the goal that people learn something
-new when they read them. I try to have my posts reviewed by
-friends who are knowledgeable in an area whenever possible to ensure that
-what is presented is factually accurate. Do let me know if you have any article
-suggestions. All banner pictures on the blog are taken by yours truly!
+forms since then. All banner pictures on the blog are taken by yours truly!
 
 ## Starred Blog Posts
 
