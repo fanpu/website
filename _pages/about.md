@@ -5,8 +5,8 @@ permalink: /
 subtitle: Software Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>. Currently located in New York, NY, USA.
 
 profile:
-  align: right
-  image: untermyer.webp
+  align: left
+  image: untermyer_closer.webp
   image_circular: false # crops the image to make it circular
   address: >
 
