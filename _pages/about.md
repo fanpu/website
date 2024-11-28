@@ -24,8 +24,8 @@ crafting evals for a variety of (mostly coding-related) tasks that we care
 about, and leading the development of several in-house RAG use cases, including
 for trading. 
 
-*Our team is hiring* - if this sounds interesting to you and you believe you are
-a good fit, please shoot me an email!
+*(2024-11-27) Our team is hiring* - if this work sounds interesting to you and
+you believe you are a good fit, please shoot me an email!
 
 I recently graduated with a M.S (2023) and B.S (2022) in Computer
 Science from [Carnegie Mellon University](https://www.cmu.edu/).
