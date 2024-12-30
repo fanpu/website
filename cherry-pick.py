@@ -1,5 +1,6 @@
 import subprocess
 import sys
+import os
 
 def run_command(command, capture_output=False):
     try:
@@ -27,6 +28,12 @@ def list_new_commits(upstream_branch):
     print(f"Found {len(commit_list)} new commits.")
     return commit_list
 
+def resolve_conflict():
+    print("Resolving conflict by keeping local changes for README.md...")
+    if os.path.exists("README.md"):
+        run_command("git checkout --ours README.md")
+        run_command("git add README.md")
+
 def cherry_pick_commits(commits):
     for commit in commits:
         print(f"Cherry-picking commit: {commit}")
@@ -37,8 +44,16 @@ def cherry_pick_commits(commits):
             run_command("git cherry-pick --skip")
             continue
 
-        if "conflict" in result:
-            print("Conflict detected. Please resolve the conflict, then run:")
+        try:
+            if "conflict" in result:
+                conflicts = run_command("git diff --name-only --diff-filter=U", capture_output=True).splitlines()
+                if len(conflicts) == 1 and "README.md" in conflicts:
+                    resolve_conflict()
+                    run_command("git cherry-pick --continue")
+                else:
+                    raise Exception("Complex conflict detected.")
+        except Exception as e:
+            print("Conflict detected. Please resolve manually and run:")
             print("  git cherry-pick --continue")
             print("Or abort the cherry-pick with:")
             print("  git cherry-pick --abort")
