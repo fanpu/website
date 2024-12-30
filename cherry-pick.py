@@ -6,8 +6,11 @@ def run_command(command, capture_output=False):
         result = subprocess.run(command, shell=True, check=True, text=True, capture_output=capture_output)
         return result.stdout.strip() if capture_output else None
     except subprocess.CalledProcessError as e:
-        print(f"Error: Command '{command}' failed with error: {e}")
-        sys.exit(1)
+        if "nothing to commit" in e.stderr or "cherry-pick is now empty" in e.stderr:
+            return "empty"  # Handle empty commits gracefully
+        else:
+            print(f"Error: Command '{command}' failed with error: {e}")
+            sys.exit(1)
 
 def list_new_commits(upstream_branch):
     print("Fetching upstream changes...")
@@ -27,9 +30,14 @@ def list_new_commits(upstream_branch):
 def cherry_pick_commits(commits):
     for commit in commits:
         print(f"Cherry-picking commit: {commit}")
-        try:
-            run_command(f"git cherry-pick {commit}")
-        except SystemExit:
+        result = run_command(f"git cherry-pick {commit}", capture_output=True)
+
+        if result == "empty":
+            print(f"Skipping empty commit: {commit}")
+            run_command("git cherry-pick --skip")
+            continue
+
+        if "conflict" in result:
             print("Conflict detected. Please resolve the conflict, then run:")
             print("  git cherry-pick --continue")
             print("Or abort the cherry-pick with:")
@@ -48,3 +56,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
