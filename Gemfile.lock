@@ -51,8 +51,11 @@ GEM
       loofah (>= 2.3.1, < 3)
       sax-machine (>= 1.0, < 2)
 <<<<<<< HEAD
+<<<<<<< HEAD
     ffi (1.17.0)
 =======
+=======
+>>>>>>> a3396b6c (Updated ffi, changed base docker image, added observer and ostruct (#2931))
     ffi (1.17.1-aarch64-linux-gnu)
     ffi (1.17.1-aarch64-linux-musl)
     ffi (1.17.1-arm-linux-gnu)
@@ -63,6 +66,9 @@ GEM
     ffi (1.17.1-x86_64-darwin)
     ffi (1.17.1-x86_64-linux-gnu)
     ffi (1.17.1-x86_64-linux-musl)
+<<<<<<< HEAD
+>>>>>>> a3396b6c (Updated ffi, changed base docker image, added observer and ostruct (#2931))
+=======
 >>>>>>> a3396b6c (Updated ffi, changed base docker image, added observer and ostruct (#2931))
     forwardable-extended (2.6.0)
     gemoji (4.1.0)
@@ -250,7 +256,10 @@ DEPENDENCIES
   jekyll-twitter-plugin
   jemoji
 <<<<<<< HEAD
+<<<<<<< HEAD
   mini_racer
+=======
+>>>>>>> a3396b6c (Updated ffi, changed base docker image, added observer and ostruct (#2931))
 =======
 >>>>>>> a3396b6c (Updated ffi, changed base docker image, added observer and ostruct (#2931))
   observer
