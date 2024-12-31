@@ -22,6 +22,7 @@ LABEL authors="Amir Pourmand,George Araújo" \
 # install system dependencies
 RUN apt-get update -y && \
     apt-get install -y --no-install-recommends \
+<<<<<<< HEAD
     build-essential \
     curl \
     git \
@@ -32,6 +33,18 @@ RUN apt-get update -y && \
     procps \
     python3-pip \
     zlib1g-dev && \
+=======
+        build-essential \
+        curl \
+        git \
+        imagemagick \
+        inotify-tools \
+        locales \
+        nodejs \
+        procps \
+        python3-pip \
+        zlib1g-dev && \
+>>>>>>> a3396b6c (Updated ffi, changed base docker image, added observer and ostruct (#2931))
     pip --no-cache-dir install --upgrade --break-system-packages nbconvert
 
 # clean up
