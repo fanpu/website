@@ -1,6 +1,8 @@
 github_users:
   - fanpu
 
+repo_description_lines_max: 2
+
 github_repos:
   - autolab/Autolab
   - autolab/Tango
