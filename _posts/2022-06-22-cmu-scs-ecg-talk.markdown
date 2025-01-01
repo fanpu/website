@@ -78,6 +78,7 @@ and sustain the winds of social change that is steering the world into a fairer
 and more equitable future. This is something that we cannot take for granted,
 or years of progress will be undone.
 
-For participants and other interested readers, the slides used in my sharing are given below. As always, I am happy to hear any feedback from readers!
+For participants and other interested readers, the slides used in my sharing are
+given below. 
 
-{% pdf "/assets/presentations/cmu-hci-alumni-sharing.pdf" no_link %}
+[CMU HCI Alumni Sharing]({% link /assets/presentations/cmu-hci-alumni-sharing.pdf %})
