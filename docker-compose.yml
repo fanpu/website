@@ -27,6 +27,7 @@ services:
     build: .
     ports:
       - 8080:8080
+      - 35729:35729
     volumes:
       - .:/srv/jekyll
 >>>>>>> 40af12bd56fd244d337b36447fe87d6b9f2aa518
