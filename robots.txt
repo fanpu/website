@@ -1,1 +1,1 @@
-User-agent: * Disallow: Sitemap: https://fanpu.github.io/sitemap.xml
+User-agent: * Disallow: Sitemap: https://fanpu.io/sitemap.xml
