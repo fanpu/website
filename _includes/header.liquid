@@ -8,12 +8,10 @@
             {% if site.first_name %}
               <span class="font-weight-bold">
                 {{- site.first_name -}}
-                &nbsp;</span
-              >
+              </span>
             {% endif %}
             {% if site.middle_name %}
               {{- site.middle_name -}}
-              &nbsp;
             {% endif %}
             {% if site.last_name %}
               {{- site.last_name -}}
@@ -113,8 +111,9 @@
             <!-- Toogle theme mode -->
             <li class="toggle-container">
               <button id="light-toggle" title="Change theme">
-                <i class="fa-solid fa-moon"></i>
-                <i class="fa-solid fa-sun"></i>
+                <i class="ti ti-sun-moon" id="light-toggle-system"></i>
+                <i class="ti ti-moon-filled" id="light-toggle-dark"></i>
+                <i class="ti ti-sun-filled" id="light-toggle-light"></i>
               </button>
             </li>
           {% endif %}
