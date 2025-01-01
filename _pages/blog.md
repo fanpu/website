@@ -104,11 +104,11 @@ pagination:
 
   <ul class="post-list">
 
-    {%- if page.pagination.enabled -%}
-      {%- assign postlist = paginator.posts -%}
-    {%- else -%}
-      {%- assign postlist = site.posts -%}
-    {%- endif -%}
+    {% if page.pagination.enabled %}
+      {% assign postlist = paginator.posts %}
+    {% else %}
+      {% assign postlist = site.posts %}
+    {% endif %}
 
     {% for post in postlist %}
 
@@ -151,10 +151,10 @@ pagination:
       <p>{{ post.description }}</p>
       <p class="post-meta">
         {{ read_time }} min read &nbsp; &middot; &nbsp;
-        {{ post.date | date: '%B %-d, %Y' }}
-        {%- if post.external_source %}
+        {{ post.date | date: '%B %d, %Y' }}
+        {% if post.external_source %}
         &nbsp; &middot; &nbsp; {{ post.external_source }}
-        {%- endif %}
+        {% endif %}
       </p>
       <p class="post-tags">
         <a href="{{ year | prepend: '/blog/' | prepend: site.baseurl}}">
@@ -186,7 +186,7 @@ pagination:
   </ul>
 
 {%- if page.pagination.enabled -%}
-{%- include pagination.html -%}
+{%- include pagination.liquid -%}
 {%- endif -%}
 
 </div>

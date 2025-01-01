@@ -33,7 +33,7 @@ layout: default
   <p class="post-meta">Written {{ page.date | date: "%B %-d, %Y" }}</p>
 
   {%- if site.giscus.repo and page.giscus_comments -%}
-    {% include giscus.html %}
+    {% include giscus.liquid %}
   {%- endif -%}
 </div>
 

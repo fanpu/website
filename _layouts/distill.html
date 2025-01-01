@@ -110,7 +110,7 @@
         {% include disqus.html %}
       {%- endif %}
       {%- if site.giscus.repo and page.giscus_comments -%}
-        {% include giscus.html %}
+        {% include giscus.liquid %}
       {%- endif -%}
 
     </div>

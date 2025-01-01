@@ -93,7 +93,7 @@ layout: default
     {% include disqus.html %}
   {%- endif %}
   {%- if site.giscus and page.giscus_comments -%}
-    {% include giscus.html %}
+    {% include giscus.liquid %}
   {%- endif -%}
 
 </div>

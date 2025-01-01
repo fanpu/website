@@ -172,7 +172,7 @@ Honestly if you're on Linux, you should be able to figure it out by yourself ðŸ˜
 
 On first startup, you should see this:
 
-{% include video.html 
+{% include video.liquid 
     path="/assets/img/posts/sdvx/sdvx-initial.webm"
     width="400px"
     class="z-depth-1"
@@ -242,7 +242,7 @@ and copy them into `./bin/songs`.
 
 The default skin works, but it is not very impressive:
 
-{% include video.html 
+{% include video.liquid 
     path="/assets/img/posts/sdvx/sdvx-default.webm"
     width="400px"
     class="z-depth-1"
@@ -272,7 +272,7 @@ Some examples of the different skins are shown below. I know, they're pretty!
 
 ### LiqidWave
 
-{% include video.html 
+{% include video.liquid 
     path="/assets/img/posts/sdvx/vivid.webm"
     width="400px"
     class="z-depth-1"
@@ -286,7 +286,7 @@ Errors](#common-errors) section below.
 
 ### ExperimentalGear
 
-{% include video.html 
+{% include video.liquid 
     path="/assets/img/posts/sdvx/experimental-gear.webm"
     width="400px"
     class="z-depth-1"
@@ -300,7 +300,7 @@ you can change it in `./bin/skins/ExperimentalGear/scripts/language/EN.lua`.
 
 ### Heavenly Express
 
-{% include video.html 
+{% include video.liquid 
     path="/assets/img/posts/sdvx/heavenly-express.webm"
     width="400px"
     class="z-depth-1"
@@ -319,7 +319,7 @@ As crews are very important for our psychological safety and well-being,
 fortunately we can just copy over the animations from other skins.
 In HeavenlyExpress, you can find it in `./bin/skins/HeavenlyExpress-1.3.0/textures/_shared/crew`. Similarly, in LiqidWave they are stored in `./bin/skins/LiqidWave-1.5.0/textures/_shared/crew`.
 
-{% include video.html 
+{% include video.liquid 
     path="/assets/img/posts/sdvx/rasis.webm"
     width="400px"
     class="z-depth-1"
