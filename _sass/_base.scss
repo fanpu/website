@@ -914,8 +914,8 @@ progress::-moz-progress-bar {
     font-size: medium;
     opacity: 0;
     position: absolute;
-    right: .5rem;
-    top: .5rem;
+    right: .2rem;
+    top: .2rem;
   }
 
   &:active .copy,
@@ -1043,4 +1043,17 @@ nav[data-toggle="toc"] {
     margin-bottom: 0;
     padding-top: 0.5rem;
   }
+}
+
+.unloaded {
+  display: none !important;
+}
+
+.medium-zoom-overlay,
+.medium-zoom-image--opened {
+  z-index: 999;
+}
+
+#toc-sidebar {
+  z-index: 1;
 }

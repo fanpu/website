@@ -70,7 +70,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 
 github_username: fanpu # your GitHub user name
 gitlab_username: # your GitLab user name
-twitter_username: FanPu_Zeng # your Twitter handle
+x_username: FanPu_Zeng # your Twitter handle
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 linkedin_username: zengfanpu # your LinkedIn user name
 telegram_username: # your Telegram user name
@@ -220,7 +220,6 @@ keep_files:
 # Plug-ins
 plugins:
   - jekyll-archives
-  - jekyll-diagrams
   - jekyll-email-protect
   - jekyll-feed
   - jekyll-get-json
@@ -350,6 +349,8 @@ external_links:
 # Responsive WebP Images
 # -----------------------------------------------------------------------------
 
+# MAKE SURE imagemagick is installed and on your PATH before enabling imagemagick. In a terminal, run:
+#   convert -version
 imagemagick:
   enabled: false # enables responsive images for your site (recommended, see https://github.com/alshedivat/al-folio/issues/537)
   widths:
@@ -363,9 +364,11 @@ imagemagick:
     - ".jpeg"
     - ".png"
     - ".tiff"
+    - ".gif"
     - ".avif"
   output_formats:
-    webp: "-resize 800x"
+    webp: "-quality 85"
+#    webp: "-resize 800x"
 
 # -----------------------------------------------------------------------------
 # Jekyll Diagrams
