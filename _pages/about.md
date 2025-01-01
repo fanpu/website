@@ -24,9 +24,8 @@ crafting evals for a variety of (mostly coding-related) tasks that we care
 about, and leading the development of several in-house RAG use cases, including
 for trading. 
 
-*Our team is hiring* - if this sounds interesting to you and you believe you are
-*a
-good fit, please shoot me an email!
+*(2024-11-27) Our team is hiring* - if this work sounds interesting to you and
+you believe you are a good fit, please shoot me an email!
 
 I recently graduated with a M.S (2023) and B.S (2022) in Computer
 Science from [Carnegie Mellon University](https://www.cmu.edu/).
@@ -69,16 +68,36 @@ I have a Technician amateur radio license, with callsign
 This blog was originally started on 24 June 2018, although it has taken many
 forms since then. All banner pictures on the blog are taken by yours truly!
 
+## Talks
+
+Slides for talks on LLM-related topics that I gave.
+You are free to share, adapt, and reuse these
+materials, provided that you give appropriate credit.
+
+- (2024-11-18) [A Statistical Approach to Language Model Evaluations]({% link
+  /assets/presentations/Statistics for Evals.pdf %})
+- (2024-10-08) [Advanced Retrieval Augmented Generation Techniques]({% link
+  /assets/presentations/Advanced Retrieval Augmented Generation.pdf %})
+- (2024-07-24) [Superalignment, or how to train models smarter than us]({% link
+  /assets/presentations/Superalignment.pdf %})
+- (2024-05-03) [Rotary Positional Embeddings (RoPE)]({% link
+  /assets/presentations/Rotary Positional Embeddings.pdf %})
+- (2024-04-30) [Parameter-Efficient Fine-Tuning]({% link
+  /assets/presentations/Parameter Efficient Fine-Tuning.pdf %})
+- (2024-03-01) [Understanding Transformers]({% link
+  /assets/presentations/Understanding Transformers.pdf %})
+
+
 ## Starred Blog Posts
 
-Some of my more popular posts that might be of interest:
+Some of my more popular posts:
 
 **Technical Posts**
 
+- [Score-Based Diffusion Models]({% post_url 2023-06-07-score-based-diffusion-models %})
 - [(Paper Summary) Zero-shot Image-to-Image Translation]({% link _summaries/2023-10-22-zero-shot-image-to-image-translation.markdown %})
 - [(Paper Summary) The Implicit Bias of Gradient Descent on Separable Data]({% link _summaries/2023-09-09-the-implicit-bias-of-gradient-descent-on-separable-data.markdown %})
 - [A Unified Framework for High-Dimensional Analysis of M-Estimators with Decomposable Regularizers: A Guided Walkthrough]({% post_url 2023-07-14-high-dimensional-analysis-of-m-estimators %})
-- [Score-Based Diffusion Models]({% post_url 2023-06-07-score-based-diffusion-models %})
 - [The Delightful Consequences of the Graph Minor Theorem]({% post_url 2022-06-01-the-delightful-consequences-of-the-graph-minor-theorem %})
 - [Universal types, and your type checker doesn't suck as much as you think]({% post_url 2022-01-11-universal-types %})
 
