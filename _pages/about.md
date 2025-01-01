@@ -2,13 +2,14 @@
 layout: about
 title: About
 permalink: /
-subtitle: Software Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>. Currently located in New York, NY, USA.
+subtitle: Software Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>
 
 profile:
   align: left
   image: untermyer_closer.webp
   image_circular: false # crops the image to make it circular
-  address: >
+  more_info: >
+    <p>New York, NY</p>
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -22,9 +23,9 @@ Hello! I am Fan Pu, and I help large language models have a good time at [Jane S
 Specifically, I work on fine-tuning LLMs to be proficient at writing OCaml,
 crafting evals for a variety of (mostly coding-related) tasks that we care
 about, and leading the development of several in-house RAG use cases, including
-for trading. 
+for trading.
 
-*(2024-11-27) Our team is hiring* - if this work sounds interesting to you and
+_(2024-11-27) Our team is hiring_ - if this work sounds interesting to you and
 you believe you are a good fit, please shoot me an email!
 
 I recently graduated with a M.S (2023) and B.S (2022) in Computer
@@ -62,7 +63,7 @@ chat and provide advice.
 Regrettably, I am unable to provide referrals for people that I have not
 directly collaborated with, as I cannot write you a meaningful recommendation.
 
-I have a Technician amateur radio license, with callsign 
+I have a Technician amateur radio license, with callsign
 [KC3UFE](https://www.fccbulletin.com/callsign/?q=KC3UFE).
 
 This blog was originally started on 24 June 2018, although it has taken many
@@ -86,7 +87,6 @@ materials, provided that you give appropriate credit.
   /assets/presentations/Parameter Efficient Fine-Tuning.pdf %})
 - (2024-03-01) [Understanding Transformers]({% link
   /assets/presentations/Understanding Transformers.pdf %})
-
 
 ## Starred Blog Posts
 
@@ -114,4 +114,4 @@ Some of my more popular posts:
 - [CMU 15-712 Advanced Operating Systems and Distributed Systems Course Review]({% post_url 2023-06-09-advanced-operating-systems-course-review %})
 - [CMU 15-441/641 Computer Networks Course Review]({% post_url 2022-08-15-cmu-computer-networks-review %})
 - [My Sharing at the Hwa Chong Undergrad Alumni Forum]({% post_url
-  2022-06-22-cmu-scs-ecg-talk %}), i.e. why study Computer Science at CMU
+    2022-06-22-cmu-scs-ecg-talk %}), i.e. why study Computer Science at CMU
