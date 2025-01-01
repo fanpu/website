@@ -373,6 +373,12 @@ footer.sticky-bottom {
   color: var(--global-text-color);
 }
 
+.table-cv-map {
+  background-color: transparent;
+  border: none;
+  color: var(--global-text-color);
+}
+
 // Repositories
 
 @media (min-width: 768px) {
@@ -551,7 +557,8 @@ footer.sticky-bottom {
       font-size: 1.5rem;
     }
   }
-  h2.year {
+
+  h2.bibliography {
     color: var(--global-divider-color);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
