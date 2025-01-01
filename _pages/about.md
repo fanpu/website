@@ -2,14 +2,13 @@
 layout: about
 title: About
 permalink: /
-subtitle: Software Engineer at <a href='https://www.janestreet.com/'>Jane Street</a>
+subtitle: Software Engineer at <a href='https://www.janestreet.com/'>Jane Street</a> based in New York
 
 profile:
   align: left
   image: untermyer_closer.webp
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>New York, NY</p>
 
 news: true # includes a list of news items
 selected_papers: false # includes a list of papers marked as "selected={true}"
@@ -25,10 +24,11 @@ crafting evals for a variety of (mostly coding-related) tasks that we care
 about, and leading the development of several in-house RAG use cases, including
 for trading.
 
-_(2024-11-27) Our team is hiring_ - if this work sounds interesting to you and
-you believe you are a good fit, please shoot me an email!
+_(2025-01-01) Our team is hiring_ - if this work sounds interesting to you and
+you have strong software engineering skills and a machine learning background,
+please shoot me an email!
 
-I recently graduated with a M.S (2023) and B.S (2022) in Computer
+I graduated with a B.S (2022) and M.S (2023) in Computer
 Science from [Carnegie Mellon University](https://www.cmu.edu/).
 
 At CMU, I was actively involved in the open-source programming assignment
