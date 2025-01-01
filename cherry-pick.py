@@ -30,8 +30,8 @@ def save_skipped_commits(skipped_commits):
 def get_unique_commits():
     """Get commits that exist in upstream/main but not in the current branch"""
     try:
-        # Get the list of commits that are in upstream/main but not in HEAD
-        cmd = ["git", "log", "HEAD..upstream/main", "--pretty=format:%H"]
+        # Get the list of commits that are in upstream/main but not in master
+        cmd = ["git", "log", "master..upstream/main", "--pretty=format:%H"]
         result = subprocess.run(cmd, capture_output=True, text=True, check=True)
         
         # Return commits in chronological order (oldest first)
@@ -56,12 +56,7 @@ def auto_resolve_conflicts():
     conflicted_files = get_conflicted_files()
     
     for file in conflicted_files:
-        if file == "README.md":
-            # Keep our version for README.md
-            subprocess.run(["git", "checkout", "--ours", file], check=True)
-            subprocess.run(["git", "add", file], check=True)
-            print(f"Auto-resolved {file} (kept our version)")
-        elif file in ["Dockerfile", "docker-compose.yml"]:
+        if file in ["Dockerfile", "docker-compose.yml"]:
             # Keep upstream version for Docker files
             subprocess.run(["git", "checkout", "--theirs", file], check=True)
             subprocess.run(["git", "add", file], check=True)
@@ -76,9 +71,41 @@ def is_commit_empty():
     except subprocess.CalledProcessError:
         return False
 
+def get_cherry_pick_in_progress():
+    """Check if there's a cherry-pick in progress and get the commit hash"""
+    try:
+        # Check for CHERRY_PICK_HEAD which exists during cherry-pick
+        cherry_pick_head = os.path.join(subprocess.check_output(["git", "rev-parse", "--git-dir"], text=True).strip(), "CHERRY_PICK_HEAD")
+        if os.path.exists(cherry_pick_head):
+            # Get the commit hash of the in-progress cherry-pick
+            return subprocess.check_output(["git", "rev-parse", "CHERRY_PICK_HEAD"], text=True).strip()
+        return None
+    except subprocess.CalledProcessError:
+        return None
+
 def cherry_pick_commits(commits):
     """Cherry-pick each commit in order until we hit a conflict"""
     skipped_commits = load_skipped_commits()  # Load previously skipped commits
+    
+    # Check if we're in the middle of a cherry-pick
+    current_pick = get_cherry_pick_in_progress()
+    if current_pick:
+        print(f"Resuming cherry-pick of commit: {current_pick}")
+        try:
+            if is_commit_empty():
+                print(f"Commit {current_pick} would be empty - skipping")
+                subprocess.run(["git", "cherry-pick", "--skip"], check=True)
+                skipped_commits.add(current_pick)
+                save_skipped_commits(skipped_commits)
+            else:
+                subprocess.run(["git", "cherry-pick", "--continue"], check=True)
+        except subprocess.CalledProcessError:
+            # Handle the error case
+            if is_commit_empty():
+                print("Cherry-pick --continue failed due to empty commit, using --skip")
+                subprocess.run(["git", "cherry-pick", "--skip"], check=True)
+                skipped_commits.add(current_pick)
+                save_skipped_commits(skipped_commits)
     
     for commit in commits:
         if commit in skipped_commits:
@@ -111,7 +138,9 @@ def cherry_pick_commits(commits):
                 print("\nTo resolve:")
                 print("1. Resolve the conflicts in the affected files")
                 print("2. Git add the resolved files")
-                print("3. Git cherry-pick --continue")
+                print("3. Run one of these commands:")
+                print("   - If there are changes: git cherry-pick --continue")
+                print("   - If no changes remain: git cherry-pick --skip")
                 print("   (or git cherry-pick --abort to stop)")
                 print("\nOnce resolved, run this script again to continue with remaining commits")
                 sys.exit(0)
@@ -124,8 +153,16 @@ def cherry_pick_commits(commits):
                     save_skipped_commits(skipped_commits)  # Save to disk
                 else:
                     # All conflicts were auto-resolved, continue cherry-picking
-                    subprocess.run(["git", "cherry-pick", "--continue"], check=True)
-                    print("All conflicts auto-resolved, continuing...")
+                    try:
+                        subprocess.run(["git", "cherry-pick", "--continue"], check=True)
+                        print("All conflicts auto-resolved, continuing...")
+                    except subprocess.CalledProcessError:
+                        # If continue fails due to empty commit, try skip
+                        if is_commit_empty():
+                            print("Cherry-pick --continue failed due to empty commit, using --skip instead")
+                            subprocess.run(["git", "cherry-pick", "--skip"], check=True)
+                            skipped_commits.add(commit)
+                            save_skipped_commits(skipped_commits)
                 continue
 
 def main():

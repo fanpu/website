@@ -14,3 +14,5 @@ public
 trackback
 input.txt
 output.txt
+.cherry-pick-skipped.json
+
