@@ -7,9 +7,9 @@
   <picture>
     {% if site.imagemagick.enabled %}
     {% for i in site.imagemagick.widths -%}
-      <source 
+      <source
         class="responsive-img-srcset"
-        media="(max-width: {{ i }}px)" 
+        media="(max-width: {{ i }}px)"
         srcset="{{ img_path | relative_url }}-{{ i }}.webp"
       />
     {% endfor -%}
@@ -17,7 +17,7 @@
 
     <!-- Fallback to the original file -->
     <img
-      src="{{ include.path | relative_url }}"
+      src="{% if include.cache_bust %}{{ include.path | relative_url | bust_file_cache }}{% else %}{{ include.path | relative_url }}{% endif %}"
       {% if include.class %}class="{{ include.class }} center"{% endif %}  
       {% if include.width %}width="{{ include.width }}"{% else %}width="auto"{% endif %} 
       {% if include.height %}height="{{ include.height }}"{% else %}height="auto"{% endif %} 
@@ -31,7 +31,6 @@
       style="object-fit: cover"
       onerror="this.onerror=null; $('.responsive-img-srcset').remove();"
     />
-
   </picture>
 
   {%- if include.caption -%}

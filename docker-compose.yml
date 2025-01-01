@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 version: "3"
 # this file uses prebuilt image in dockerhub
 services:
@@ -17,3 +18,14 @@ services:
       - 8080:8080
     volumes:
       - .:/srv/jekyll
+=======
+version: "3"
+# this file uses prebuilt image in dockerhub
+services:
+  jekyll:
+    image: amirpourmand/al-folio
+    ports:
+      - 8080:8080
+    volumes:
+      - .:/srv/jekyll
+>>>>>>> 40af12bd56fd244d337b36447fe87d6b9f2aa518
