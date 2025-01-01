@@ -30,5 +30,3 @@ group :other_plugins do
     gem 'observer' # used by jekyll-scholar
     gem 'ostruct' # used by jekyll-twitter-plugin
 end
-
-gem "jekyll-diagrams", "~> 0.10.0"
