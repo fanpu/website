@@ -37,7 +37,7 @@ and [Project SEKAI](https://projectsekai.fandom.com/wiki/Project_SEKAI_COLORFUL_
 When I visited Japan a few months ago in the summer, I discovered [Sound Voltex](https://p.eagate.573.jp/game/sdvx/sv/p/index.html), and instantly
 fell in love with its unique control system and beautiful flashy graphics:
 
-{% include figure.html 
+{% include figure.html
     path="/assets/img/posts/sdvx/sdvx_and_me.webp"
     width="400px"
     class="z-depth-1"
